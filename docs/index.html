@@ -67,6 +67,9 @@ th{color:var(--ink2);font-weight:600;background:var(--surface)}
 .controls input{flex:1;min-width:200px}
 tr.row{cursor:pointer}tr.row:hover{background:#f3f2ee}
 tr.detail td{background:#f6f5f1;padding:14px 16px}
+tr.detail td>.grid2{position:sticky;left:16px;width:min(1110px,calc(100vw - 90px));grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.ev a,tr.detail a{word-break:break-all}
+#tbl td{white-space:normal}
 .ev{margin:6px 0;padding-left:10px;border-left:3px solid var(--grid)}
 .ev q{color:var(--ink)}
 .ok{color:#006300}.bad{color:var(--crit)}.unk{color:var(--muted)}
