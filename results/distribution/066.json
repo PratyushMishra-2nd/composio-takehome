@@ -1,0 +1,13 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Neo4j Aura API uses per-customer OAuth2 client credentials. Each customer creates own in Aura console, tied to their user account. No vendor review, approval, listing, or install/user cap on that page. neo4j.com/docs/api/ gave 404, so answer rests on the Aura API auth page. Absence on one page, not proof no policy exists elsewhere.",
+    "url": "https://neo4j.com/docs/aura/api/authentication/",
+    "quote": "All tiers can create Aura API credentials.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

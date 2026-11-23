@@ -1,0 +1,13 @@
+{
+  "id": 72,
+  "app": "Airtable",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Airtable OAuth integration: developer only needs to set support email, privacy policy URL and terms of service URL on the management page. Then other users can authorize it. Docs describe no review, approval, verification or listing step, and no install or user cap. Personal access tokens are per-user, so each customer can also make their own. Caveat: the OAuth reference page was not read in full.",
+    "url": "https://airtable.com/developers/web/guides/oauth-integrations",
+    "quote": "This will enable other users to authorize your integration.",
+    "quote_status": "unreadable",
+    "quote_note": "page empty or JS-rendered"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 30,
+  "app": "Vonage",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Vonage uses per-account API key/secret (created on account signup) and per-customer Applications (application ID + private key, JWT). Each customer creates their own via dashboard or CLI. Docs read (authentication, application overview) mention no vendor review, approval, listing, or cap on unreviewed apps. Absence of gate is from silence on those two pages only; Application API reference, ToS and marketplace pages not checked. Per task rules, self-created per-customer credentials count as none.",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "When you create a Vonage account, an API key and secret will be created for you.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

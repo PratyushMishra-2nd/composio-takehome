@@ -1,0 +1,13 @@
+{
+  "id": 21,
+  "app": "Slack",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Slack lets any developer turn on \"unlisted distribution\" (Activate Public Distribution in Manage Distribution, after a self-serve checklist). Other workspaces can then install through an OAuth 2.0 flow, with no Slack review or approval. The docs state no install, user or server cap. Caveats: (1) docs say apps meant for commercial distribution \"should be submitted and approved for listing in the Slack Marketplace\". That is policy wording, not a technical block. (2) Some workspaces only allow Marketplace-listed apps, and some require admin approval. (3) Search results (unverified on the fetched page) say commercial unlisted apps get reduced rate limits on conversations.history and conversations.replies. (4) The Marketplace listing itself needs about 5 active installs first. Verdict is \"none\" for the hard vendor gate, but the commercial-policy and workspace-admin caveats apply.",
+    "url": "https://docs.slack.dev/app-management/distribution/",
+    "quote": "Installing your app on other workspaces means that you'll need to set up an OAuth 2.0 flow.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

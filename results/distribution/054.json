@@ -1,0 +1,13 @@
+{
+  "id": 54,
+  "app": "MrScraper",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Each customer creates own API token in dashboard (API Tokens > New Token) and sends it via x-api-token header. No vendor review, approval, verification or listing step found. No install/user/server cap for unreviewed apps stated. OAuth 2.1 appears only in the Scalekit integration page; no review step described there either. Marketplace is a catalog of prebuilt scrapers, not an app store. Docs are silent on app review, not explicit; subagent did not read /docs/api/overview.",
+    "url": "https://docs.mrscraper.com/docs/integrations/clawhub",
+    "quote": "Click **New Token**.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

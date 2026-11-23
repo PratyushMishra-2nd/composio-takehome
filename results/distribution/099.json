@@ -1,0 +1,13 @@
+{
+  "id": 99,
+  "app": "YouTube Transcript",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Self-serve auth: per-account API keys (Bearer) and OAuth 2.1 for Claude/ChatGPT MCP. Docs mention no app review, approval, listing, or install/user cap. Limits are per account (e.g. 200 req/min Starter Monthly), shared across keys and OAuth tokens. Claude/ChatGPT MCP guides not read.",
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "Authentication: OAuth 2.1 (Claude, ChatGPT) or an API key sent as a Bearer token (OpenAI Agent Builder and other clients).",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

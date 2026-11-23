@@ -1,0 +1,13 @@
+{
+  "id": 43,
+  "app": "BigCommerce",
+  "result": {
+    "gate": "review_required",
+    "install_cap": null,
+    "detail": "Draft apps install only on stores where the app owner's email is registered as store owner or user with Install Applications permission. Other stores need BigCommerce approval. Unlisted apps (direct link) go through the same review as published ones. Under-review apps are not available to other stores. No numeric install cap found. Merchant-created API accounts and tokens exist, but they are manual store-level credentials. They are not the app OAuth install flow, so the gate stays review_required for OAuth apps. Caveat: the quote and facts come from a subagent's fetch (I did not re-fetch). The /guide/development page returned 404, and developer.bigcommerce.com redirects to docs.bigcommerce.com.",
+    "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/types-of-apps",
+    "quote": "To make the app available to other stores, submit it for approval.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

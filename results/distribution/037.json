@@ -1,0 +1,13 @@
+{
+  "id": 37,
+  "app": "systeme.io",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Systeme.io public API uses per-account API keys. Each customer generates their own key under \"Public API keys\" in their dashboard and sends it in the X-API-Key header. Docs describe no OAuth, no app review or approval, no marketplace requirement and no install cap. The only numeric limit is 3 API keys per account, plus a shared rate limit. The developer docs say the API key is the only auth option for now. Both pages were read through a fetch subagent, not directly.",
+    "url": "https://developer.systeme.io/reference/api",
+    "quote": "To authenticate with the Systeme.io Public API, your only option right now is to attach your API key to the `X-API-Key` header of each request.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

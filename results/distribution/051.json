@@ -1,0 +1,13 @@
+{
+  "id": 51,
+  "app": "DataForSEO",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "DataForSEO uses only HTTP Basic auth with per-account API login and auto-generated API password. Each customer makes a free account and copies their own credentials from the dashboard. No OAuth, app review, listing or install cap in the docs. This counts as per-customer API keys, so no vendor gate.",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Create a free account with DataForSEO, then go to the API Access tab in the account dashboard to find your API login and password, which you’ll need to authenticate and use the DataForSEO APIs.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

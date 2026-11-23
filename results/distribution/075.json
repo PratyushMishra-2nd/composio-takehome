@@ -1,0 +1,13 @@
+{
+  "id": 75,
+  "app": "Asana",
+  "result": {
+    "gate": "review_required",
+    "install_cap": null,
+    "detail": "Asana publish page says submit for review needed to make OAuth app available to users in any workspace beyond own org/dev environment. Unsubmitted OAuth apps are for internal/testing. No install/user cap stated. Caveat: manage-distribution page offers \"Any workspace\" setting letting users from any workspace authorize via URL, with no review mentioned there, so docs conflict. Publish page is the explicit statement. Per-user Personal Access Tokens need no review (not an OAuth app path).",
+    "url": "https://developers.asana.com/docs/publish-your-app",
+    "quote": "Make your app available to users in any Asana workspace, beyond your own organization or development environment",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

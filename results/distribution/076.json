@@ -1,0 +1,13 @@
+{
+  "id": 76,
+  "app": "Monday.com",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Docs state no review, approval or listing gate on OAuth, and no install or user cap for unreviewed or draft apps. force_install_if_needed sends an admin from the OAuth flow to the app install page, then back to finish auth. The marketplace review process is described only as the route to marketplace approval, not as a requirement for other accounts to connect. The only restriction found: app_version_id (live or draft version) works for collaborators only. Personal API tokens are per user and each customer can create their own, which counts as none. Caveat: the docs are silent rather than explicit on unlisted-app installs, and a community thread says OAuth outside the dev org may need a Marketplace listing. I had a subagent read the pages, so I did not check the quote myself.",
+    "url": "https://developer.monday.com/apps/docs/oauth",
+    "quote": "Enables a seamless OAuth flow by automatically redirecting users to the app installation page if the app is not installed.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

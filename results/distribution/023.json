@@ -1,0 +1,13 @@
+{
+  "id": 23,
+  "app": "Zoho Cliq",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Cliq REST API uses OAuth. Any developer self-registers a client in Zoho API console (Add Client ID, Create); no review step in docs. Cliq extensions: once published, anyone with install link can install for their org. Review only needed for optional Zoho Marketplace listing via Partner Console. No install/user cap for unreviewed apps found. Caveat: marketing-guidelines terms page not checked; OAuth client-registration page 404'd, so no-review for OAuth is from silence.",
+    "url": "https://www.zoho.com/cliq/help/platform/cliq-extensions-publish.html",
+    "quote": "Once published, users with the extension installation link can install your extension for the organization.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

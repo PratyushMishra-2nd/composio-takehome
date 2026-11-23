@@ -1,0 +1,13 @@
+{
+  "id": 70,
+  "app": "Sentry",
+  "result": {
+    "gate": "review_required",
+    "install_cap": null,
+    "detail": "Sentry public integrations (OAuth) start unpublished. Unpublished = only creator org can see/install. Other orgs need integration published, which means submit via \"Publish\" and Sentry approval. No install cap stated. Workaround per notes: per-customer auth tokens (user auth tokens / internal integration tokens each customer creates) are no gate, but that is not an OAuth app.",
+    "url": "https://docs.sentry.io/organization/integrations/integration-platform/public-integration/",
+    "quote": "If your integration is still in an unpublished state, the only Sentry organization that will be able to see or install it will be the organization that created the integration.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

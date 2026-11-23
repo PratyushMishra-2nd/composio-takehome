@@ -1,0 +1,13 @@
+{
+  "id": 81,
+  "app": "Stripe",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "The Stripe API has no vendor gate. Each customer can create their own restricted API key. Connect OAuth and Connect Onboarding for Standard accounts also work with no Stripe review, and the pages read mention no install cap there. Stripe Apps is a separate path. A Marketplace listing needs Stripe review, but it is optional. Unreviewed external-test apps can be installed by other accounts, capped at 25 testers per app. Team-only apps skip review but reach only your own account. I did not fetch the restricted-key docs, so the restricted-key point rests on the per-customer-keys rule in the question. The Connect OAuth point rests on the OAuth page describing no review step.",
+    "url": "https://docs.stripe.com/stripe-apps/test-app",
+    "quote": "There is a limit of 25 testers per app. Limit the use of external tests for testing purposes only.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 55,
+  "app": "Apify",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Docs list two auth methods for integrations: OAuth 2.0 and personal API token each user generates in own account settings. No registration, verification, or approval gate before other customers connect. No install/user/server cap stated. The only review text is for publishing a listed integration (contact integrations@apify.com for review/validation), which reads as optional listing, not a connect gate. Caveat: the page links no OAuth app-registration docs, and only this one page was fetched (via subagent).",
+    "url": "https://docs.apify.com/integrations/integrate",
+    "quote": "Use OAuth 2.0 to allow users to authorize your integration without sharing their credentials.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

@@ -85,7 +85,10 @@ def main():
     import sys as _sys
     _sys.path.insert(0, str(ROOT / "agent"))
     from corrections import apply as apply_corrections
-    corrections = apply_corrections(apps, load_json("results/adjudication.json", {}))
+    dist_dir = ROOT / "results" / "distribution"
+    distribution = {int(f.stem): json.loads(f.read_text(encoding="utf-8"))["result"] for f in dist_dir.glob("[0-9][0-9][0-9].json")} if dist_dir.exists() else {}
+    gold_rows = {int(r["id"]): r for r in __import__("csv").DictReader(open(ROOT / "data" / "gold.csv", encoding="utf-8"))}
+    corrections = apply_corrections(apps, load_json("results/adjudication.json", {}), distribution, gold_rows)
 
     # official MCP: "confirmed" only with independent support
     def _mcp_confirmed(a):
@@ -95,6 +98,7 @@ def main():
         ev_ok = any(e["field"] == "mcp" and e.get("status") == "verified" and base and base in e["url"] for e in a["evidence"])
         return bool(reg) or (bool(base) and base in (a["mcp_url"] or "") and ev_ok)
     for a in apps:
+        a.setdefault("hand_checked", False)
         a["mcp_official_confirmed"] = a["mcp_official"] and _mcp_confirmed(a)
 
     # ---- patterns ----
@@ -166,6 +170,11 @@ def main():
         "changed_fields": sum(len(a["changed"]) for a in apps),
         "accuracy": acc,
         "agent_seconds_total": sum(a["seconds"] or 0 for a in apps),
+        "hand_checked": load_json("data/hand_check.json", None),
+        "quotes_substantive": (lambda q: {"verified": sum(1 for x in q if x["status"] == "verified" and len(x["quote"].split()) >= 6),
+                                          "total": len(q), "short_verified": sum(1 for x in q if x["status"] == "verified" and len(x["quote"].split()) < 6)})(
+            [x for c in vf.values() for x in c["quotes"]]),
+        "distribution_checked": len(distribution),
     }
     out = {"corrections": corrections, "generated": time.strftime("%Y-%m-%d %H:%M IST"), "patterns": patterns, "verification": verification, "apps": apps}
     (ROOT / "docs").mkdir(exist_ok=True)

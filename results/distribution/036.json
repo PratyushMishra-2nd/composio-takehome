@@ -1,0 +1,13 @@
+{
+  "id": 36,
+  "app": "Klaviyo",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Klaviyo OAuth apps can be shared by install URL with any customer without listing or review. Marketplace listing is optional. The only number in the docs is 5 active installs, and that is a requirement for marketplace submission, not a cap on unlisted apps. Customers can also make their own private API keys (Owner, Admin or Manager role). Caveat: user-scoped apps may need a customer admin to allowlist them. That is the customer's own admin, not a Klaviyo review. This comes from a subagent's reading of the page and the search snippets. I did not fetch the page myself.",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+    "quote": "Your app does not have to be listed to share and use your installation URL with customers.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

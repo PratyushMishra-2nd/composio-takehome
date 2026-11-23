@@ -1,0 +1,13 @@
+{
+  "id": 35,
+  "app": "Mailchimp",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Mailchimp docs describe self-serve OAuth 2 app registration (Registered Apps page, Register An App, Create) that gives a client_id and client_secret. Users then authorize it on behalf of their own accounts. The docs mention no review, approval or verification step and no install or user cap. The OAuth concepts page says OAuth 2 is required for a Marketplace listing, so listing is optional and separate from authorization. The docs are silent on gating rather than explicit that none exists, so confidence is moderate. Per-user API keys also work for a customer's own account.",
+    "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+    "quote": "This page walks through implementing OAuth 2 so your application can access the Marketing API on behalf of other Mailchimp users.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

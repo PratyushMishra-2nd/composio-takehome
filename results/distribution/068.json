@@ -1,0 +1,13 @@
+{
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Atlas customers create own API keys or service accounts (OAuth 2.0 client credentials) in own org. Org Owner needed to create. No vendor review, approval or listing step in docs. No cap on apps/installs stated on pages read. Delegated access for partner apps exists, off by default in existing orgs, but approval process not described. Not checked: separate rate-limit or org-limit pages.",
+    "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+    "quote": "To create a service account or API keys for an organization, you must have Organization Owner access to that organization.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

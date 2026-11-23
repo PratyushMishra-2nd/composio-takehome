@@ -228,5 +228,53 @@
     "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/25",
     "ok": true,
     "raw": null
+  },
+  "2": {
+    "app": "HubSpot",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/29",
+    "ok": true,
+    "raw": null
+  },
+  "4": {
+    "app": "Attio",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/27",
+    "ok": true,
+    "raw": null
+  },
+  "12": {
+    "app": "Intercom",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/26",
+    "ok": true,
+    "raw": null
+  },
+  "26": {
+    "app": "Discord",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/28",
+    "ok": true,
+    "raw": null
+  },
+  "41": {
+    "app": "Shopify",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/33",
+    "ok": true,
+    "raw": null
+  },
+  "43": {
+    "app": "BigCommerce",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/32",
+    "ok": true,
+    "raw": null
+  },
+  "70": {
+    "app": "Sentry",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/30",
+    "ok": true,
+    "raw": null
+  },
+  "75": {
+    "app": "Asana",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/31",
+    "ok": true,
+    "raw": null
   }
 }

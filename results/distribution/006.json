@@ -1,0 +1,13 @@
+{
+  "id": 6,
+  "app": "Podio",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Podio API key (client ID/secret) is self-service: sign in, open the API key tab in settings. OAuth2 server-side flow then shows any logged-in Podio user a consent screen. The only registration constraint is that redirect_uri must be on the domain given at registration. The docs I read (/authentication, /authentication/server_side, /api-key) say nothing about vendor review, approval, listing, or install/user caps. Podio terms and the scopes page were not checked, so this rests on the absence of any stated gate.",
+    "url": "https://developers.podio.com/api-key",
+    "quote": "You just have to sign in or sign up with Podio, and go to the API key tab in your settings.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

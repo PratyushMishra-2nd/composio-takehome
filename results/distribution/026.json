@@ -1,0 +1,13 @@
+{
+  "id": 26,
+  "app": "Discord",
+  "result": {
+    "gate": "install_cap",
+    "install_cap": 100,
+    "detail": "Any customer with Manage Server can add a public bot/app with no Discord review. Docs: \"If marked as public, anyone with your bot's URL can add it to guilds in which they have proper permissions.\" Verification is only needed at 100+ guilds: the gateway docs say verification is \"required for apps in 100+ guilds\", and the OAuth2 docs say \"Verified bots do not have a maximum number of guilds\". OAuth2 user scopes such as identify and guilds need no approval. Only partner-only scopes do. Caveats: the 100 figure comes from the gateway doc phrase and from search snippets of the support-dev verification article and the 2020 policy. I couldn't read the article (403). The newer privileged-intent review is keyed to reach (about 10,000 users), so verify the current rule in the Developer Portal. Docs moved to docs.discord.com. I did not re-read the page for the quote myself, so it comes from a subagent's excerpt.",
+    "url": "https://docs.discord.com/developers/events/gateway",
+    "quote": "For verified apps (required for apps in 100+ guilds), the intent must also be approved after the verification process to use the intent.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

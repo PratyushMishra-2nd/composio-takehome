@@ -47,15 +47,6 @@
    "reason": "Besides OAuth 2.0, Zoho Cliq lets each user generate static Webhook Tokens. These are passed as a zapikey query parameter on its api/v2 endpoints so third-party apps can post to channels and bots. That counts as a static key/token, which A missed."
   },
   {
-   "id": 24,
-   "app": "Lark (Larksuite)",
-   "field": "access",
-   "from": "self_serve_free",
-   "to": "partner_gated",
-   "source": "adjudication",
-   "reason": "A free custom app only works inside the tenant that built it. For users in other tenants to connect, you need a Store app, and Lark's docs say only accounts with ISV (service-provider) qualification can create one. That qualification is a partner application, which is a stricter gate than self_serve"
-  },
-  {
    "id": 42,
    "app": "WooCommerce",
    "field": "verdict",
@@ -83,31 +74,123 @@
    "reason": "Ecwid's dev-environment page says the API works only on paid-plan stores. A free test store needs a manual upgrade, which you get by emailing Ecwid. That is the \"paid plan\" limit the build_with_caveat definition describes, not self-serve build_now. Once the store is upgraded, a custom app's credenti"
   },
   {
-   "id": 51,
-   "app": "DataForSEO",
-   "field": "access",
-   "from": "self_serve_trial",
-   "to": "self_serve_free",
-   "source": "adjudication",
-   "reason": "Any registered user gets working credentials free, plus a free Sandbox for API testing. The $1 credit has no stated time limit, so it is free credit, not a time-limited trial. The $50 top-up is the cost of production usage, not the gate to getting credentials."
-  },
-  {
-   "id": 5,
-   "app": "Twenty",
-   "field": "verdict",
-   "from": "build_now",
-   "to": "build_with_caveat",
-   "source": "rule",
-   "reason": "Definition: build_now needs ongoing self-serve credentials; access=self_serve_trial is a caveat."
+   "id": 2,
+   "app": "HubSpot",
+   "field": "auth_methods",
+   "from": [
+    "oauth2",
+    "bearer_token",
+    "api_key"
+   ],
+   "to": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: Free developer account; public OAuth apps installable without marketplace listing; legacy private apps can't be created after 2026-10-26 — new builds use developer-platform apps (OAuth). Official remote MCP at mcp.hubspo"
   },
   {
    "id": 24,
    "app": "Lark (Larksuite)",
-   "field": "verdict",
-   "from": "build_with_caveat",
-   "to": "needs_outreach",
-   "source": "rule",
-   "reason": "Definition: partner_gated without a free developer sandbox => needs_outreach (sandbox: unknown)."
+   "field": "auth_methods",
+   "from": [
+    "oauth2",
+    "bearer_token",
+    "other"
+   ],
+   "to": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: Custom apps per tenant need tenant-admin approval for review-required scopes; multi-tenant store apps need Lark launch review; tenant_access_token from app id/secret sent as Bearer. Official MCP is Beta. Feishu (China) a"
+  },
+  {
+   "id": 24,
+   "app": "Lark (Larksuite)",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: Custom apps per tenant need tenant-admin approval for review-required scopes; multi-tenant store apps need Lark launch review; tenant_access_token from app id/secret sent as Bearer. Official MCP is Beta. Feishu (China) a"
+  },
+  {
+   "id": 74,
+   "app": "Jira",
+   "field": "auth_methods",
+   "from": [
+    "oauth2",
+    "basic",
+    "api_key"
+   ],
+   "to": [
+    "basic",
+    "oauth2"
+   ],
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: Cloud: OAuth 2.0 3LO or email+API token Basic; PATs only on Data Center"
+  },
+  {
+   "id": 79,
+   "app": "Smartsheet",
+   "field": "access",
+   "from": "paid_plan",
+   "to": "self_serve_trial",
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: API restricted to Business/Enterprise/AWM plans; 30-day free trial, no card; PAT sent as Bearer, or 3-legged OAuth."
+  },
+  {
+   "id": 81,
+   "app": "Stripe",
+   "field": "auth_methods",
+   "from": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+   ],
+   "to": [
+    "api_key",
+    "basic",
+    "oauth2"
+   ],
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: Secret key as Basic username or Bearer; OAuth via Stripe Connect/Stripe Apps; free test mode. From 2027-01-11 MCP stops accepting full-access secret keys — use agent API key or OAuth."
+  },
+  {
+   "id": 90,
+   "app": "PitchBook",
+   "field": "access",
+   "from": "partner_gated",
+   "to": "customer_account",
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: API is a paid add-on set up by Direct Data team for existing customers; no sandbox; official Premium MCP for PitchBook clients"
+  },
+  {
+   "id": 94,
+   "app": "Consensus",
+   "field": "auth_methods",
+   "from": [
+    "api_key",
+    "bearer_token"
+   ],
+   "to": [
+    "api_key"
+   ],
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: API key (sent as Bearer) included on paid plans only; OAuth exists only on the official MCP (mcp.consensus.app) not the REST API"
+  },
+  {
+   "id": 99,
+   "app": "YouTube Transcript",
+   "field": "auth_methods",
+   "from": [
+    "bearer_token"
+   ],
+   "to": [
+    "api_key"
+   ],
+   "source": "hand",
+   "reason": "Hand-checked against vendor docs: 100 free credits no card; API key sent as Bearer (could be labeled bearer_token); MCP uses OAuth"
   },
   {
    "id": 28,
@@ -164,6 +247,150 @@
    "reason": "Blocker text names a vendor review/approval before other users can connect; the gate field must say so."
   },
   {
+   "id": 2,
+   "app": "HubSpot",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://developers.hubspot.com/changelog/new-marketplace-distribution-app-install-limits: \"Starting on September 22nd, 2025, apps that are created or migrated to version 2025.2 are capped at 25 installs until they are listed on the\" (unreviewed apps capped at 25 installs)."
+  },
+  {
+   "id": 2,
+   "app": "HubSpot",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://developers.hubspot.com/changelog/new-marketplace-distribution-app-install-limits: \"Starting on September 22nd, 2025, apps that are created or migrated to version 2025.2 are capped at 25 installs until they are listed on the\" (unreviewed apps capped at 25 installs)."
+  },
+  {
+   "id": 4,
+   "app": "Attio",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.attio.com/share/the-publication-lifecycle: \"An unpublished app can be installed in up to 25 workspaces.\" (unreviewed apps capped at 25 installs)."
+  },
+  {
+   "id": 4,
+   "app": "Attio",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.attio.com/share/the-publication-lifecycle: \"An unpublished app can be installed in up to 25 workspaces.\" (unreviewed apps capped at 25 installs)."
+  },
+  {
+   "id": 12,
+   "app": "Intercom",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app: \"This means that the Intercom team must review and approve your app before it is available to install.\" (review required)."
+  },
+  {
+   "id": 12,
+   "app": "Intercom",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app: \"This means that the Intercom team must review and approve your app before it is available to install.\" (review required)."
+  },
+  {
+   "id": 26,
+   "app": "Discord",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.discord.com/developers/events/gateway: \"For verified apps (required for apps in 100+ guilds), the intent must also be approved after the verification process to use the intent.\" (unreviewed apps capped at 100 installs)."
+  },
+  {
+   "id": 26,
+   "app": "Discord",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.discord.com/developers/events/gateway: \"For verified apps (required for apps in 100+ guilds), the intent must also be approved after the verification process to use the intent.\" (unreviewed apps capped at 100 installs)."
+  },
+  {
+   "id": 41,
+   "app": "Shopify",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://shopify.dev/docs/apps/launch/distribution: \"Installed on a single Shopify store, on multiple stores that belong to the same Plus organization, or on development stores\" (review required)."
+  },
+  {
+   "id": 41,
+   "app": "Shopify",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://shopify.dev/docs/apps/launch/distribution: \"Installed on a single Shopify store, on multiple stores that belong to the same Plus organization, or on development stores\" (review required)."
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/types-of-apps: \"To make the app available to other stores, submit it for approval.\" (review required)."
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/types-of-apps: \"To make the app available to other stores, submit it for approval.\" (review required)."
+  },
+  {
+   "id": 70,
+   "app": "Sentry",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.sentry.io/organization/integrations/integration-platform/public-integration/: \"If your integration is still in an unpublished state, the only Sentry organization that will be able to see or install it will be the organization that created \" (review required)."
+  },
+  {
+   "id": 70,
+   "app": "Sentry",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://docs.sentry.io/organization/integrations/integration-platform/public-integration/: \"If your integration is still in an unpublished state, the only Sentry organization that will be able to see or install it will be the organization that created \" (review required)."
+  },
+  {
+   "id": 75,
+   "app": "Asana",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://developers.asana.com/docs/publish-your-app: \"Make your app available to users in any Asana workspace, beyond your own organization or development environment\" (review required)."
+  },
+  {
+   "id": 75,
+   "app": "Asana",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "distribution",
+   "reason": "Distribution check, quote confirmed on https://developers.asana.com/docs/publish-your-app: \"Make your app available to users in any Asana workspace, beyond your own organization or development environment\" (review required)."
+  },
+  {
    "id": 49,
    "app": "Amazon Selling Partner",
    "field": "evidence",
@@ -191,7 +418,7 @@
    "reason": "Composio's router matched 'mermaid_chart_mcp', which is Mermaid Chart (hosted SaaS), a different product from the open-source Mermaid CLI."
   }
  ],
- "generated": "2026-11-23 19:46 IST",
+ "generated": "2026-11-23 20:03 IST",
  "patterns": {
   "n": 100,
   "auth": [
@@ -200,20 +427,20 @@
     66
    ],
    [
-    "bearer_token",
-    56
+    "api_key",
+    55
    ],
    [
-    "api_key",
-    56
+    "bearer_token",
+    53
    ],
    [
     "basic",
-    16
+    17
    ],
    [
     "other",
-    8
+    7
    ],
    [
     "jwt",
@@ -238,45 +465,45 @@
   "access": [
    [
     "self_serve_free",
-    57
+    48
    ],
    [
     "admin_approval",
-    14
-   ],
-   [
-    "paid_plan",
-    9
+    23
    ],
    [
     "self_serve_trial",
-    8
+    10
    ],
    [
     "customer_account",
+    9
+   ],
+   [
+    "paid_plan",
     8
    ],
    [
-    "partner_gated",
-    3
+    "no_public_api",
+    1
    ],
    [
-    "no_public_api",
+    "partner_gated",
     1
    ]
   ],
   "verdict": [
    [
-    "build_now",
-    47
+    "build_with_caveat",
+    49
    ],
    [
-    "build_with_caveat",
-    41
+    "build_now",
+    40
    ],
    [
     "needs_outreach",
-    11
+    10
    ],
    [
     "not_buildable",
@@ -473,7 +700,7 @@
     "weak": false
    }
   ],
-  "tracker_issues": 25,
+  "tracker_issues": 33,
   "extras": {
    "n": 100,
    "webhooks_yes": 81,
@@ -484,19 +711,13 @@
    "spec_claimed": 64,
    "spec_confirmed": 51,
    "generatable_build_now": [
-    "HubSpot",
-    "Attio",
     "Zoho CRM",
-    "Intercom",
     "Slack",
     "Twilio",
     "Zoho Cliq",
-    "Discord",
     "Vonage",
     "Mailchimp",
     "Klaviyo",
-    "Shopify",
-    "BigCommerce",
     "DataForSEO",
     "Apify",
     "Firecrawl",
@@ -507,11 +728,9 @@
     "Supabase",
     "Neo4j",
     "MongoDB Atlas",
-    "Sentry",
     "Notion",
     "Linear",
     "Jira",
-    "Asana",
     "Monday.com",
     "ClickUp",
     "Stripe",
@@ -597,40 +816,37 @@
   },
   "by_category": {
    "CRM and Sales": {
-    "build_now": 6,
-    "_self_serve_free": 6,
+    "build_now": 5,
+    "_self_serve_free": 4,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 10,
-    "build_with_caveat": 3,
-    "_admin_approval": 1,
+    "build_with_caveat": 4,
+    "_admin_approval": 3,
     "_self_serve_trial": 2,
     "needs_outreach": 1,
     "_customer_account": 1
    },
    "Support and Helpdesk": {
-    "build_with_caveat": 7,
+    "build_with_caveat": 8,
     "_self_serve_trial": 3,
     "_n": 10,
     "_mcp": 9,
     "_oauth": 6,
-    "build_now": 1,
-    "_self_serve_free": 1,
+    "_admin_approval": 3,
     "_paid_plan": 2,
-    "_admin_approval": 2,
     "needs_outreach": 2,
     "_customer_account": 2
    },
    "Communications and Messaging": {
-    "build_now": 6,
-    "_self_serve_free": 7,
+    "build_now": 5,
+    "_self_serve_free": 6,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 6,
-    "needs_outreach": 2,
-    "_partner_gated": 1,
-    "build_with_caveat": 2,
-    "_admin_approval": 1,
+    "build_with_caveat": 4,
+    "_admin_approval": 3,
+    "needs_outreach": 1,
     "_customer_account": 1
    },
    "Marketing, Ads, Email and Social": {
@@ -644,47 +860,50 @@
     "_self_serve_trial": 1
    },
    "Ecommerce": {
-    "build_now": 5,
-    "_self_serve_free": 6,
+    "build_with_caveat": 6,
+    "_admin_approval": 4,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 9,
+    "build_now": 3,
+    "_self_serve_free": 4,
     "needs_outreach": 1,
     "_customer_account": 1,
-    "build_with_caveat": 4,
-    "_admin_approval": 2,
     "_paid_plan": 1
    },
    "Data, SEO and Scraping": {
     "build_now": 5,
-    "_self_serve_free": 6,
+    "_self_serve_trial": 1,
     "_n": 10,
     "_mcp": 9,
     "_oauth": 2,
     "build_with_caveat": 3,
     "_paid_plan": 2,
+    "_self_serve_free": 5,
     "not_buildable": 1,
     "_no_public_api": 1,
     "needs_outreach": 1,
     "_partner_gated": 1
    },
    "Developer, Infra and Data platforms": {
-    "build_now": 8,
+    "build_now": 7,
+    "_self_serve_free": 7,
+    "_n": 10,
+    "_mcp": 10,
+    "_oauth": 9,
+    "build_with_caveat": 3,
+    "_self_serve_trial": 2,
+    "_admin_approval": 1
+   },
+   "Productivity and Project Management": {
+    "build_now": 7,
     "_self_serve_free": 8,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 9,
-    "build_with_caveat": 2,
-    "_self_serve_trial": 2
-   },
-   "Productivity and Project Management": {
-    "build_now": 8,
-    "_self_serve_free": 9,
-    "_n": 10,
-    "_mcp": 10,
-    "_oauth": 9,
-    "build_with_caveat": 2,
-    "_paid_plan": 1
+    "build_with_caveat": 3,
+    "_admin_approval": 1,
+    "_self_serve_trial": 1
    },
    "Finance and Fintech": {
     "build_now": 2,
@@ -694,9 +913,8 @@
     "_oauth": 5,
     "build_with_caveat": 4,
     "needs_outreach": 4,
-    "_customer_account": 3,
-    "_admin_approval": 1,
-    "_partner_gated": 1
+    "_customer_account": 4,
+    "_admin_approval": 1
    },
    "AI, Research and Media-native": {
     "build_with_caveat": 7,
@@ -711,6 +929,13 @@
   },
   "blockers": [
    {
+    "id": 2,
+    "app": "HubSpot",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": ""
+   },
+   {
     "id": 3,
     "app": "Pipedrive",
     "verdict": "build_with_caveat",
@@ -718,10 +943,10 @@
     "blocker": "Public multi-tenant OAuth app needs Pipedrive Marketplace app approval for listing (private apps shareable by install link); sandbox-account request needed. API-token auth works immediately for single accounts."
    },
    {
-    "id": 5,
-    "app": "Twenty",
+    "id": 4,
+    "app": "Attio",
     "verdict": "build_with_caveat",
-    "access": "self_serve_trial",
+    "access": "admin_approval",
     "blocker": ""
    },
    {
@@ -744,6 +969,13 @@
     "verdict": "build_with_caveat",
     "access": "self_serve_trial",
     "blocker": "The trial account is time-limited. OAuth global-client setup is needed for multi-tenant use. API tokens are being phased out. No official, documented vendor MCP server was found."
+   },
+   {
+    "id": 12,
+    "app": "Intercom",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": ""
    },
    {
     "id": 13,
@@ -804,8 +1036,8 @@
    {
     "id": 24,
     "app": "Lark (Larksuite)",
-    "verdict": "needs_outreach",
-    "access": "partner_gated",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
     "blocker": "Per-tenant admin approval of scopes. Multi-tenant OAuth distribution needs a Store app with review. Separate Feishu (China) and Lark (international) domains."
    },
    {
@@ -814,6 +1046,13 @@
     "verdict": "build_with_caveat",
     "access": "self_serve_free",
     "blocker": "No OAuth2 for third-party apps; auth is per-user API key or app key + user/bot tokens, so end users must generate credentials manually. API-key surface is narrow."
+   },
+   {
+    "id": 26,
+    "app": "Discord",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": "Minor: some OAuth scopes need Discord approval; bot-centric model (bot must be invited to each guild); official MCP at docs.discord.com/mcp is docs-search only."
    },
    {
     "id": 28,
@@ -877,6 +1116,20 @@
     "verdict": "build_with_caveat",
     "access": "self_serve_trial",
     "blocker": "No permanent free tier: only a 60-day trial; users need paid plan long-term. API key auth only, no OAuth."
+   },
+   {
+    "id": 41,
+    "app": "Shopify",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": "Per-store OAuth app install; public distribution needs App Store review. Official MCP is dev-docs/schema focused, not store operations."
+   },
+   {
+    "id": 43,
+    "app": "BigCommerce",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": ""
    },
    {
     "id": 44,
@@ -963,6 +1216,20 @@
     "blocker": ""
    },
    {
+    "id": 70,
+    "app": "Sentry",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": ""
+   },
+   {
+    "id": 75,
+    "app": "Asana",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": ""
+   },
+   {
     "id": 78,
     "app": "Coda",
     "verdict": "build_with_caveat",
@@ -973,7 +1240,7 @@
     "id": 79,
     "app": "Smartsheet",
     "verdict": "build_with_caveat",
-    "access": "paid_plan",
+    "access": "self_serve_trial",
     "blocker": "API and MCP need a paid Business, Enterprise or AWM plan. The trial cannot generate tokens, so testing needs a paid account."
    },
    {
@@ -1029,7 +1296,7 @@
     "id": 90,
     "app": "PitchBook",
     "verdict": "needs_outreach",
-    "access": "partner_gated",
+    "access": "customer_account",
     "blocker": "No self-serve credentials. API needs a paid PitchBook contract plus an account-manager-issued key, so a developer cannot get working credentials without a sales relationship."
    },
    {
@@ -1211,7 +1478,7 @@
       "field": "access",
       "agent": "self_serve_trial",
       "human": "admin_approval",
-      "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta"
+      "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com). Official MCP at mcp.frontapp.com (OAuth 2.1), no dynamic client registration — needs developer app with MCP feature."
      },
      {
       "id": 15,
@@ -1255,15 +1522,7 @@
        "basic",
        "hmac_signature"
       ],
-      "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview"
-     },
-     {
-      "id": 51,
-      "app": "DataForSEO",
-      "field": "access",
-      "agent": "self_serve_trial",
-      "human": "self_serve_free",
-      "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial"
+      "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP. Official MCP is developer preview; since 11.3 runs via WordPress MCP Adapter plugin with WP username + Application Password (not REST keys)."
      },
      {
       "id": 60,
@@ -1271,7 +1530,7 @@
       "field": "access",
       "agent": "paid_plan",
       "human": "self_serve_free",
-      "note": "New developer platform/Public API (clay-api-key header) on all plans incl. free but low free limits; Tables and legacy enrichment API are Enterprise-only"
+      "note": "Public API (clay-api-key header) on all plans incl. free, but free limited to ~100 API results/30 days — test only; Tables and legacy enrichment API are Enterprise-only; official Clay MCP."
      },
      {
       "id": 64,
@@ -1286,7 +1545,15 @@
        "api_key",
        "bearer_token"
       ],
-      "note": "API tokens (Bearer) preferred; legacy Global API Key via X-Auth-Key/X-Auth-Email headers; third-party OAuth not generally self-serve"
+      "note": "API tokens (Bearer) preferred; legacy Global API Key (api_key) not recommended for new customers; third-party OAuth not generally self-serve."
+     },
+     {
+      "id": 79,
+      "app": "Smartsheet",
+      "field": "access",
+      "agent": "paid_plan",
+      "human": "self_serve_trial",
+      "note": "API restricted to Business/Enterprise/AWM plans; 30-day free trial, no card; PAT sent as Bearer, or 3-legged OAuth."
      },
      {
       "id": 90,
@@ -1344,7 +1611,7 @@
       "field": "access",
       "agent": "self_serve_free",
       "human": "admin_approval",
-      "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta",
+      "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com). Official MCP at mcp.frontapp.com (OAuth 2.1), no dynamic client registration — needs developer app with MCP feature.",
       "adjudication": {
        "ruling": "reference",
        "correct_value": "admin_approval",
@@ -1359,7 +1626,7 @@
       "field": "verdict",
       "agent": "build_now",
       "human": "build_with_caveat",
-      "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta",
+      "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com). Official MCP at mcp.frontapp.com (OAuth 2.1), no dynamic client registration — needs developer app with MCP feature.",
       "adjudication": {
        "ruling": "reference",
        "correct_value": "build_with_caveat",
@@ -1414,7 +1681,7 @@
       "field": "access",
       "agent": "self_serve_free",
       "human": "admin_approval",
-      "note": "Custom apps per tenant need tenant-admin approval; multi-tenant store apps need Lark launch review; tenant_access_token from app id/secret sent as Bearer",
+      "note": "Custom apps per tenant need tenant-admin approval for review-required scopes; multi-tenant store apps need Lark launch review; tenant_access_token from app id/secret sent as Bearer. Official MCP is Beta. Feishu (China) and Lark (intl) apps are separate.",
       "adjudication": {
        "ruling": "neither",
        "correct_value": "partner_gated",
@@ -1429,7 +1696,7 @@
       "field": "verdict",
       "agent": "build_with_caveat",
       "human": "build_now",
-      "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview",
+      "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP. Official MCP is developer preview; since 11.3 runs via WordPress MCP Adapter plugin with WP username + Application Password (not REST keys).",
       "adjudication": {
        "ruling": "reference",
        "correct_value": "build_now",
@@ -1444,7 +1711,7 @@
       "field": "access",
       "agent": "self_serve_free",
       "human": "paid_plan",
-      "note": "Only paid stores can access API (free test-store upgrade on request); public app secret issued by Ecwid team on registration; only third-party MCPs",
+      "note": "Only paid-plan stores can access API (free test-store upgrade on request via support email); custom app with access tokens auto-created in app dashboard (self-serve); public apps use OAuth code exchange; only third-party MCPs.",
       "adjudication": {
        "ruling": "reference",
        "correct_value": "paid_plan",
@@ -1459,7 +1726,7 @@
       "field": "verdict",
       "agent": "build_now",
       "human": "build_with_caveat",
-      "note": "Only paid stores can access API (free test-store upgrade on request); public app secret issued by Ecwid team on registration; only third-party MCPs",
+      "note": "Only paid-plan stores can access API (free test-store upgrade on request via support email); custom app with access tokens auto-created in app dashboard (self-serve); public apps use OAuth code exchange; only third-party MCPs.",
       "adjudication": {
        "ruling": "reference",
        "correct_value": "build_with_caveat",
@@ -1469,19 +1736,13 @@
       }
      },
      {
-      "id": 51,
-      "app": "DataForSEO",
+      "id": 79,
+      "app": "Smartsheet",
       "field": "access",
-      "agent": "self_serve_trial",
-      "human": "self_serve_free",
-      "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial",
-      "adjudication": {
-       "ruling": "reference",
-       "correct_value": "self_serve_free",
-       "reason": "Any registered user gets working credentials free, plus a free Sandbox for API testing. The $1 credit has no stated time limit, so it is free credit, not a time-limited trial. The $50 top-up is the cost of production usage, not the gate to getting credentials.",
-       "url": "https://dataforseo.com/pricing",
-       "quote": "You can also test API integration for free using the DataForSEO Sandbox."
-      }
+      "agent": "paid_plan",
+      "human": "self_serve_trial",
+      "note": "API restricted to Business/Enterprise/AWM plans; 30-day free trial, no card; PAT sent as Bearer, or 3-legged OAuth.",
+      "adjudication": null
      },
      {
       "id": 90,
@@ -1504,13 +1765,66 @@
     "overall": 0.91,
     "agent_wrong": 9,
     "rulings": {
-     "reference": 8,
+     "reference": 7,
      "neither": 1,
+     "pending": 1,
      "both_defensible": 1
     }
    }
   },
-  "agent_seconds_total": 5684
+  "agent_seconds_total": 5684,
+  "hand_checked": {
+   "reviewer": "Pratyush Mishra",
+   "date": "2026-11-23",
+   "rows_checked": 20,
+   "method": "Each of the 20 reference rows checked by hand against the vendor's developer docs.",
+   "label_changes": [
+    {
+     "id": 51,
+     "app": "DataForSEO",
+     "field": "access",
+     "from": "self_serve_free",
+     "to": "self_serve_trial"
+    },
+    {
+     "id": 79,
+     "app": "Smartsheet",
+     "field": "access",
+     "from": "paid_plan",
+     "to": "self_serve_trial"
+    }
+   ],
+   "notes_updated": [
+    1,
+    2,
+    14,
+    24,
+    32,
+    42,
+    47,
+    51,
+    60,
+    62,
+    64,
+    79,
+    81
+   ],
+   "unchanged": [
+    15,
+    23,
+    39,
+    74,
+    90,
+    94,
+    99
+   ]
+  },
+  "quotes_substantive": {
+   "verified": 629,
+   "total": 698,
+   "short_verified": 48
+  },
+  "distribution_checked": 47
  },
  "apps": [
   {
@@ -1703,6 +2017,7 @@
     ]
    },
    "seconds": 37,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -1713,12 +2028,11 @@
    "hint": "hubspot.com",
    "description": "CRM platform for marketing, sales, service, content and operations, with a broad public API for CRM objects and more.",
    "auth_methods": [
-    "oauth2",
     "bearer_token",
-    "api_key"
+    "oauth2"
    ],
    "auth_detail": "OAuth2 for apps distributed to multiple accounts (required for marketplace). Static auth (service keys / legacy private-app bearer tokens) for a single account. Developer API key only for app settings such as webhooks. Standard hapikeys were retired in 2022. New legacy private apps cannot be created after 2026-10-26.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Developer account and OAuth app creation are free and self-serve. Free and Starter accounts have API rate limits, per the private apps page. Marketplace listing is optional and not needed for end users to connect. Doc pages I fetched say nothing on free-account or developer-account self-serve signup, so the free-signup claim comes from general knowledge, not a page quote. Access confidence is medium.",
    "api_types": [
     "rest",
@@ -1729,7 +2043,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://mcp.hubspot.com",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -1814,7 +2128,7 @@
      "HUBSPOT_READ_ALL_PROPERTIES_FOR_OBJECT_TYPE"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/29",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Webhooks v3 subscription API plus new v4 webhooks journal API (beta). Subscribe to CRM object events (create/update/delete etc.) per installed app.",
@@ -1873,6 +2187,7 @@
     "issues": []
    },
    "seconds": 57,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -2072,6 +2387,7 @@
    },
    "seconds": 85,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -2086,7 +2402,7 @@
     "bearer_token"
    ],
    "auth_detail": "OAuth 2.0 for multi-workspace apps; API key (access token) from app developer settings for single workspace. Both sent as Bearer token. Workspace-level OAuth tokens need workspace admin.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "API and webhooks and MCP are listed on every plan including Free (up to 3 users). Unpublished OAuth apps can be installed in up to 25 workspaces; a published/approved release is implied for wider distribution (details unverified). Workspace admin approves user scopes on install.",
    "api_types": [
     "rest"
@@ -2096,7 +2412,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://mcp.attio.com/mcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -2195,7 +2511,7 @@
      "ATTIO_FIND_RECORD"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/27",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "REST webhook subscriptions to Attio record/object/list/note/task etc. events; 25 req/s delivery cap per target URL, retries ~3 days.",
@@ -2252,6 +2568,7 @@
    },
    "seconds": 58,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -2277,7 +2594,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://docs.twenty.com/developers/extend/mcp",
-   "verdict": "build_with_caveat",
+   "verdict": "build_now",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -2438,6 +2755,7 @@
    },
    "seconds": 52,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -2618,6 +2936,7 @@
    },
    "seconds": 55,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -2807,6 +3126,7 @@
    },
    "seconds": 54,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -3006,6 +3326,7 @@
    },
    "seconds": 44,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -3171,6 +3492,7 @@
    },
    "seconds": 60,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -3355,6 +3677,7 @@
    },
    "seconds": 58,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -3540,6 +3863,7 @@
    },
    "seconds": 60,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -3553,7 +3877,7 @@
     "bearer_token"
    ],
    "auth_detail": "OAuth2 authorization-code flow is required for public apps that access other people's Intercom data (authorize at app.intercom.com/oauth, exchange code at api.intercom.io/auth/eagle/token). Private apps use a workspace access token sent as an Authorization: Bearer header.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Free development workspace via public developer signup lets a developer build and publish a public OAuth app. Dev workspaces are US-only, limited in features, and can't be converted to production. Private apps (access token) target a paid workspace, and the docs don't name a plan tier. The docs don't mention an app review gate for connecting public apps.",
    "api_types": [
     "rest"
@@ -3563,7 +3887,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://mcp.intercom.com/mcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -3659,7 +3983,7 @@
      "INTERCOM_UPDATE_CONTACT"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/26",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Webhook topics subscribed via Developer Hub (not via API) for workspace events",
@@ -3721,6 +4045,7 @@
    },
    "seconds": 40,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -3891,6 +4216,7 @@
    },
    "seconds": 90,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -4098,6 +4424,7 @@
     "issues": []
    },
    "seconds": 70,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": false
   },
@@ -4307,6 +4634,7 @@
     ]
    },
    "seconds": 36,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -4466,6 +4794,7 @@
    },
    "seconds": 71,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -4682,6 +5011,7 @@
    },
    "seconds": 43,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -4867,6 +5197,7 @@
    },
    "seconds": 82,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -5067,6 +5398,7 @@
    },
    "seconds": 88,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -5258,6 +5590,7 @@
    },
    "seconds": 123,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -5454,6 +5787,7 @@
    },
    "seconds": 42,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -5646,6 +5980,7 @@
    },
    "seconds": 53,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -5818,6 +6153,7 @@
     ]
    },
    "seconds": 50,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -5828,12 +6164,11 @@
    "hint": "open.larksuite.com",
    "description": "Enterprise collaboration suite (IM, calendar, docs, base, video meetings, approvals) with an Open Platform REST API for building bots and apps.",
    "auth_methods": [
-    "oauth2",
     "bearer_token",
-    "other"
+    "oauth2"
    ],
    "auth_detail": "App credentials (app_id + app_secret) exchanged at POST /open-apis/auth/v3/tenant_access_token/internal for a 2h tenant_access_token (custom app; Store apps use app_access_token and tenant_access_token via a separate endpoint). User identity: standard OAuth 2.0 authorization-code flow (RFC 6749) via /authen/v2/oauth/token returning user_access_token and refresh_token. All calls use Authorization: Bearer.",
-   "access": "partner_gated",
+   "access": "admin_approval",
    "access_detail": "Anyone can log in to the Lark Open Platform, create a custom app and get app_id/app_secret for their own tenant, free. Scopes must be approved by the tenant admin. Distributing a Store app to other tenants needs Lark app review and listing. Custom apps are limited to the tenant they were built in, so a multi-tenant product has to go through the Store app route.",
    "api_types": [
     "rest",
@@ -5845,7 +6180,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
-   "verdict": "needs_outreach",
+   "verdict": "build_with_caveat",
    "blocker": "Per-tenant admin approval of scopes. Multi-tenant OAuth distribution needs a Store app with review. Separate Feishu (China) and Lark (international) domains.",
    "confidence": {
     "auth": "high",
@@ -6028,6 +6363,7 @@
     ]
    },
    "seconds": 36,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": false
   },
@@ -6188,6 +6524,7 @@
    },
    "seconds": 53,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -6203,7 +6540,7 @@
     "basic"
    ],
    "auth_detail": "Bot token (Authorization: Bot <token>) from Developer Portal; OAuth2 authorization-code bearer tokens for user-delegated access; client_credentials grant (Basic client_id:secret) for bot owner token.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Free: create app in Developer Portal, get bot token and OAuth2 client credentials. Some OAuth2 scopes need Discord approval; bots in 100+ guilds need verification; privileged gateway intents (e.g. message content) need approval at scale.",
    "api_types": [
     "rest",
@@ -6214,7 +6551,7 @@
    "mcp_exists": true,
    "mcp_official": false,
    "mcp_url": "https://github.com/SaseQ/discord-mcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "Minor: some OAuth scopes need Discord approval; bot-centric model (bot must be invited to each guild); official MCP at docs.discord.com/mcp is docs-search only.",
    "confidence": {
     "auth": "high",
@@ -6301,7 +6638,7 @@
      "DISCORDBOT_BULK_DELETE_MESSAGES"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/28",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Webhook Events: configure a public Webhook Events URL; Discord POSTs events (APPLICATION_AUTHORIZED/DEAUTHORIZED, ENTITLEMENT_*, LOBBY_MESSAGE_*, GAME_DIRECT_MESSAGE_*). Message/guild events come via Gateway websocket, not webhooks.",
@@ -6358,6 +6695,7 @@
    },
    "seconds": 47,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -6558,6 +6896,7 @@
    },
    "seconds": 69,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -6734,6 +7073,7 @@
    },
    "seconds": 69,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -6935,6 +7275,7 @@
    },
    "seconds": 79,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -7125,6 +7466,7 @@
    },
    "seconds": 42,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -7315,6 +7657,7 @@
    },
    "seconds": 41,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -7497,6 +7840,7 @@
     "issues": []
    },
    "seconds": 41,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -7692,6 +8036,7 @@
    },
    "seconds": 57,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -7870,6 +8215,7 @@
    },
    "seconds": 50,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -8058,6 +8404,7 @@
    },
    "seconds": 44,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -8251,6 +8598,7 @@
    },
    "seconds": 51,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -8414,6 +8762,7 @@
    },
    "seconds": 53,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -8606,6 +8955,7 @@
    },
    "seconds": 75,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -8790,6 +9140,7 @@
     ]
    },
    "seconds": 42,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": false
   },
@@ -8966,6 +9317,7 @@
    },
    "seconds": 65,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -8980,7 +9332,7 @@
     "api_key"
    ],
    "auth_detail": "OAuth2 auth-code flow for public/custom apps built in Dev Dashboard (merchants approve scopes at install); Admin-created custom apps get a static Admin API access token sent in X-Shopify-Access-Token header; Storefront API uses its own tokens.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Free Dev Dashboard / Partner account plus a development store allows building and testing with real tokens. Custom apps on a single store are self-serve with merchant approval. Distributing public apps to arbitrary merchants requires Shopify App Store review; protected customer data scopes need extra approval. Not verified from a pricing page.",
    "api_types": [
     "graphql",
@@ -8991,7 +9343,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://shopify.dev/docs/apps/build/devmcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "Per-store OAuth app install; public distribution needs App Store review. Official MCP is dev-docs/schema focused, not store operations.",
    "confidence": {
     "auth": "high",
@@ -9076,7 +9428,7 @@
      "SHOPIFY_GET_PRODUCT"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/33",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Apps subscribe to webhook topics via shopify.app.toml or GraphQL Admin API; delivered to HTTPS, EventBridge, or Pub/Sub endpoints.",
@@ -9135,6 +9487,7 @@
    },
    "seconds": 31,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -9338,6 +9691,7 @@
     ]
    },
    "seconds": 51,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -9352,7 +9706,7 @@
     "bearer_token"
    ],
    "auth_detail": "Three OAuth-based API account types: store-level (merchant-created token, sent as X-Auth-Token), app-level (OAuth auth-code flow for apps installed from the app marketplace), account-level (works across stores). GraphQL Storefront API also uses customer-impersonation/storefront tokens.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Store-level credentials are created by any store admin in the control panel (Settings > Store-level API accounts). Developers can get free Partner sandbox stores. Building an app is self-serve in the Developer Portal. Listing in the public App Store needs approval, but a private or single-store connection does not.",
    "api_types": [
     "rest",
@@ -9364,7 +9718,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://docs.bigcommerce.com/_mcp/server",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -9447,7 +9801,7 @@
      "BIGCOMMERCE_LIST_ALL_CATEGORIES"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/32",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "POST /v3/hooks with scopes like store/order/updated; delivery via HTTPS, Google Pub/Sub, Amazon EventBridge",
@@ -9518,6 +9872,7 @@
    },
    "seconds": 56,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -9710,6 +10065,7 @@
    },
    "seconds": 61,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -9919,6 +10275,7 @@
    },
    "seconds": 43,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -10078,6 +10435,7 @@
    },
    "seconds": 40,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -10251,6 +10609,7 @@
     "issues": []
    },
    "seconds": 71,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": false
   },
@@ -10433,6 +10792,7 @@
    },
    "seconds": 72,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -10607,6 +10967,7 @@
    },
    "seconds": 53,
    "evidence_weak": true,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -10841,6 +11202,7 @@
    },
    "seconds": 69,
    "evidence_weak": true,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -10853,7 +11215,7 @@
     "basic"
    ],
    "auth_detail": "REST API accepts HTTP Basic only: API login plus an auto-generated API password (not the account password), sent in the Authorization header. OAuth 2.0 applies only to the HTTP MCP server transport, not the REST API.",
-   "access": "self_serve_free",
+   "access": "self_serve_trial",
    "access_detail": "Free signup gives a $1 trial credit. Full use needs a $50 minimum top-up. Pricing is pay-as-you-go with no subscription, and balance never expires. Treated as trial-gated, since real usage means a prepaid deposit.",
    "api_types": [
     "rest"
@@ -11013,6 +11375,7 @@
     "issues": []
    },
    "seconds": 86,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": false
   },
@@ -11177,6 +11540,7 @@
    },
    "seconds": 74,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -11375,6 +11739,7 @@
    },
    "seconds": 77,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -11554,6 +11919,7 @@
    },
    "seconds": 47,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -11782,6 +12148,7 @@
    },
    "seconds": 51,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -11958,6 +12325,7 @@
    },
    "seconds": 55,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -12133,6 +12501,7 @@
    },
    "seconds": 19,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -12305,6 +12674,7 @@
    },
    "seconds": 35,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -12468,6 +12838,7 @@
    },
    "seconds": 50,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -12641,6 +13012,7 @@
     "issues": []
    },
    "seconds": 51,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -12830,6 +13202,7 @@
    },
    "seconds": 50,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -13002,6 +13375,7 @@
     "issues": []
    },
    "seconds": 51,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -13168,6 +13542,7 @@
    },
    "seconds": 14,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -13356,6 +13731,7 @@
     ]
    },
    "seconds": 312,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -13563,6 +13939,7 @@
    },
    "seconds": 36,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -13755,6 +14132,7 @@
    },
    "seconds": 49,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -13936,6 +14314,7 @@
    },
    "seconds": 35,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -14104,6 +14483,7 @@
    },
    "seconds": 64,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -14315,6 +14695,7 @@
    },
    "seconds": 83,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -14329,7 +14710,7 @@
     "api_key"
    ],
    "auth_detail": "OAuth2 authorization code grant (with device flow and PKCE) for third-party apps. Bearer auth tokens come from internal integrations (org-scoped) or User settings > Personal Tokens, with scopes. Legacy API keys are still described, but deprecated.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Anyone can sign up and create internal integrations, personal tokens or OAuth apps. The docs pages checked do not say API access is plan-restricted. Sentry is known to have a free Developer plan, but I did not check the pricing page, so that part is not verified here.",
    "api_types": [
     "rest"
@@ -14339,7 +14720,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://mcp.sentry.dev/mcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -14447,7 +14828,7 @@
      "SENTRY_ACCESS_PROJECT_INFORMATION"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/30",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Integration Platform JSON webhooks for installation, event_alert, issue, metric_alert, error, comment, seer, preprod_artifact; HMAC-SHA256 signed",
@@ -14531,6 +14912,7 @@
    },
    "seconds": 35,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -14704,6 +15086,7 @@
    },
    "seconds": 31,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -14893,6 +15276,7 @@
    },
    "seconds": 33,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -15092,6 +15476,7 @@
    },
    "seconds": 45,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -15101,9 +15486,8 @@
    "hint": "developer.atlassian.com",
    "description": "Atlassian's issue and project tracking tool for software and business teams.",
    "auth_methods": [
-    "oauth2",
     "basic",
-    "api_key"
+    "oauth2"
    ],
    "auth_detail": "OAuth 2.0 (3LO) authorization code grant is recommended, with scopes, using an app made in the Atlassian developer console. Basic auth with email plus API token works for scripts and single-account use. Passwords are deprecated. Forge and Connect apps are separate options.",
    "access": "self_serve_free",
@@ -15272,6 +15656,7 @@
     "issues": []
    },
    "seconds": 52,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -15287,7 +15672,7 @@
     "other"
    ],
    "auth_detail": "OAuth 2.0 authorization code grant (recommended for multi-user apps; 1h access tokens + refresh, PKCE for native/localhost); Personal Access Token (bearer); Service Account token (Enterprise only); OpenID Connect for login.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Developer creates OAuth app or PAT in developer console (app.asana.com/0/my-apps). Review not required to obtain a token; App Directory review only for public listing. Free domains have API rate tier (150 req/min) vs paid 1,500/min. Free plan API access implied by rate-limit table, not stated outright.",
    "api_types": [
     "rest"
@@ -15297,7 +15682,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://mcp.asana.com/v2/mcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -15403,7 +15788,7 @@
      "ASANA_GET_MULTIPLE_PROJECTS"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/31",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "REST webhook subscriptions (POST /webhooks) on tasks, projects, etc. X-Hook-Secret handshake, X-Hook-Signature HMAC; events API polling also available",
@@ -15461,6 +15846,7 @@
    },
    "seconds": 43,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -15644,6 +16030,7 @@
    },
    "seconds": 62,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -15839,6 +16226,7 @@
    },
    "seconds": 32,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -16016,6 +16404,7 @@
    },
    "seconds": 64,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -16029,7 +16418,7 @@
     "bearer_token"
    ],
    "auth_detail": "OAuth 2.0 (3-legged) for apps registered in Developer Tools (client ID and secret). Personal API access token sent as a Bearer token for single-account use. Separate tokens for Gov and EU regions.",
-   "access": "paid_plan",
+   "access": "self_serve_trial",
    "access_detail": "API is restricted to Business, Enterprise, or Advanced Work Management plans (the help article lists only Business and Enterprise). The 30-day free trial cannot generate API tokens, and the Free plan closed to new users in Aug 2024. Developer Tools app registration for OAuth is self-serve, but the developer account needs a qualifying paid plan. I did not check whether a Developer Tools app can be registered without one.",
    "api_types": [
     "rest"
@@ -16196,6 +16585,7 @@
     ]
    },
    "seconds": 56,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -16360,6 +16750,7 @@
    },
    "seconds": 48,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -16370,7 +16761,7 @@
    "description": "Online payments platform: payments, billing, subscriptions, invoicing, payouts, Connect marketplaces, and more, exposed via API.",
    "auth_methods": [
     "api_key",
-    "bearer_token",
+    "basic",
     "oauth2"
    ],
    "auth_detail": "Secret/restricted API keys sent as Bearer or Basic auth for own account; OAuth (Connect, standard accounts) to act on connected users' accounts, though not recommended for new Connect platforms; Stripe Apps use OAuth too. MCP server uses OAuth or restricted API key.",
@@ -16562,6 +16953,7 @@
     "issues": []
    },
    "seconds": 39,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -16745,6 +17137,7 @@
    },
    "seconds": 48,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -16925,6 +17318,7 @@
    },
    "seconds": 76,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -17110,6 +17504,7 @@
    },
    "seconds": 73,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -17312,6 +17707,7 @@
    },
    "seconds": 71,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -17521,6 +17917,7 @@
    },
    "seconds": 69,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -17704,6 +18101,7 @@
    },
    "seconds": 76,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -17897,6 +18295,7 @@
    },
    "seconds": 47,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -18071,6 +18470,7 @@
    },
    "seconds": 55,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -18083,7 +18483,7 @@
     "api_key"
    ],
    "auth_detail": "Static API key sent as `Authorization: PB-Token <key>` header; no OAuth flow. Not a standard bearer token. Separate sandbox key exists.",
-   "access": "partner_gated",
+   "access": "customer_account",
    "access_detail": "API is a paid, contract-gated add-on with no free tier and no self-serve signup. Keys come from the PitchBook account manager or Direct Data team, or via Plugins & Apps for existing customers. Official docs are behind login (pitchbook.com/help returns 403 to bots).",
    "api_types": [
     "rest"
@@ -18229,6 +18629,7 @@
     ]
    },
    "seconds": 41,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -18429,6 +18830,7 @@
    },
    "seconds": 69,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -18629,6 +19031,7 @@
    },
    "seconds": 78,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -18798,6 +19201,7 @@
    },
    "seconds": 27,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -18807,8 +19211,7 @@
    "hint": "consensus.app (OAuth requested)",
    "description": "AI-powered scientific research search engine (consensus.app) that finds, summarizes and cites peer-reviewed papers, with a Consensus Meter.",
    "auth_methods": [
-    "api_key",
-    "bearer_token"
+    "api_key"
    ],
    "auth_detail": "REST API: org-scoped API key sent as Authorization: Bearer. OAuth 2.1 (Auth Code + PKCE, dynamic client registration) applies only to the MCP server, not the REST API, so oauth2 is dropped from REST auth methods.",
    "access": "paid_plan",
@@ -18983,6 +19386,7 @@
     ]
    },
    "seconds": 32,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -19143,6 +19547,7 @@
    },
    "seconds": 23,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -19320,6 +19725,7 @@
    },
    "seconds": 46,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -19536,6 +19942,7 @@
    },
    "seconds": 67,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   },
   {
@@ -19696,6 +20103,7 @@
    },
    "seconds": 40,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": false
   },
   {
@@ -19705,7 +20113,7 @@
    "hint": "transcriptapi.com",
    "description": "TranscriptAPI: REST API and hosted MCP server to fetch YouTube video transcripts, search videos, and browse channels and playlists.",
    "auth_methods": [
-    "bearer_token"
+    "api_key"
    ],
    "auth_detail": "REST API: API key sent as Authorization: Bearer header; keys come from the dashboard. OAuth 2.1 is offered only on the hosted MCP server (Claude/ChatGPT clients), not the REST API, so oauth2 is dropped from the REST auth methods.",
    "access": "self_serve_free",
@@ -19864,6 +20272,7 @@
     "issues": []
    },
    "seconds": 30,
+   "hand_checked": true,
    "evidence_weak": false,
    "mcp_official_confirmed": true
   },
@@ -20075,6 +20484,7 @@
    },
    "seconds": 68,
    "evidence_weak": false,
+   "hand_checked": false,
    "mcp_official_confirmed": true
   }
  ]

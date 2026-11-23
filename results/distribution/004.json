@@ -1,0 +1,13 @@
+{
+  "id": 4,
+  "app": "Attio",
+  "result": {
+    "gate": "install_cap",
+    "install_cap": 25,
+    "detail": "Unpublished Attio OAuth apps can be installed by other workspaces via the standard OAuth flow, without review. Users see a warning that Attio has not approved the app. Installs are capped at 25 workspaces, counting both private invite links and OAuth installs. Submitting the app for Attio review removes the warning and the cap.",
+    "url": "https://docs.attio.com/share/the-publication-lifecycle",
+    "quote": "An unpublished app can be installed in up to 25 workspaces.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

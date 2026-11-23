@@ -1,0 +1,13 @@
+{
+  "id": 7,
+  "app": "Zoho CRM",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Zoho docs: register a \"server-based app\" in the API console and get a client ID and secret. Server-based apps are meant for multiple Zoho accounts, and users grant access via OAuth. I read the register-client, register-app and server-based-apps overview pages. None mention app review, verification, approval or a cap on users/installs/orgs. Marketplace listing is a separate, optional path. I did not find an explicit statement on unverified-app limits, so \"none\" rests on the absence of any documented gate.",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+    "quote": "Applications that are intended for use by multiple Zoho accounts.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

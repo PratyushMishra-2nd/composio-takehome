@@ -1,0 +1,13 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Reducto auth = per-customer API keys. Any customer makes own key in Studio under API Keys; all roles can create. No OAuth app, review, listing, or install cap found in docs. Not an explicit statement of \"no review\", but no gate exists in docs.",
+    "url": "https://docs.reducto.ai/studio-account",
+    "quote": "All roles can create API keys. Only Owners and Admins can edit or delete keys.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

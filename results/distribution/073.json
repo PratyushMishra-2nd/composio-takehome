@@ -1,0 +1,13 @@
+{
+  "id": 73,
+  "app": "Linear",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Linear's OAuth 2.0 docs describe a standard authorize flow (client_id, redirect_uri, scope, actor) with no vendor approval step. No install, user or workspace cap for unreviewed apps appears on any page read (only a token-count limit). Integration directory listing is optional and editorial. The agents page says to submit agents to the directory to make them available to other workspaces, but it doesn't say unlisted apps are blocked. The `admin` scope needs a workspace admin to install, but that is customer-side, not vendor review. Docs are ambiguous on unlisted agents, so integrations@linear.app could confirm.",
+    "url": "https://linear.app/developers/agents",
+    "quote": "You can build agents for internal use within your own workspace or for distribution to other organizations.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

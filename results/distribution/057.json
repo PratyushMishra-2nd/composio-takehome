@@ -1,0 +1,13 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "No vendor review/approval gate found. Customers self-create API keys in the control panel (admin account needed within their own account). MCP remote OAuth 2.1 uses open RFC 7591 dynamic client registration, so any client can register itself with no credential or review. No install/user/server cap for unreviewed apps stated in docs.",
+    "url": "https://docs.brightdata.com/products/mcp-server/remote/oauth.md",
+    "quote": "Registration is open, so no existing credential is needed.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

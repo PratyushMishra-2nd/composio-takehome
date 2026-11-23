@@ -1,0 +1,13 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Cloudflare has self-managed OAuth clients. Apps start `private`, so only members of the creating account can use them. To let any Cloudflare user authorize, the developer sets `public` visibility. That needs the developer to verify the client domain, which is a domain-ownership step. The docs I read describe no Cloudflare review, approval or listing step. They state no cap on installs, users or clients. Per-customer API tokens also work with no gate. Caveat: the docs don't say whether Cloudflare runs the domain verification or the developer does it automatically, so this is the closest thing to a gate. The docs say domain verification only confirms the owner controls the domain. Account admins can also block new public OAuth app authorizations for their own account.",
+    "url": "https://developers.cloudflare.com/changelog/post/2026-06-03-public-oauth-clients/",
+    "quote": "To make an application available to any Cloudflare user, complete the prerequisites for `public` visibility.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

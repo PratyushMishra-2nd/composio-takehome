@@ -1,0 +1,13 @@
+{
+  "id": 65,
+  "app": "Supabase",
+  "result": {
+    "gate": "unknown",
+    "install_cap": null,
+    "detail": "Supabase's OAuth integration guide has orgs create an OAuth app under the org settings \"OAuth Apps\" tab. It states no review/approval requirement and no install/user cap. Its only publish wording (\"Once you've published your OAuth App on Supabase...\") doesn't say how an app is published, who can see it, or whether unpublished apps can be authorized by other orgs. A search snippet from the partner addendum says marketplace distribution needs Supabase's written approval, but I didn't fetch it and it covers the partner program, not clearly the plain OAuth flow. Per-user personal access tokens for the Management API would count as none, but I didn't verify that on a fetched page.",
+    "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration",
+    "quote": "Once you've published your OAuth App on Supabase, you can use the OAuth 2.0 protocol",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "app": "HubSpot",
+  "result": {
+    "gate": "install_cap",
+    "install_cap": 25,
+    "detail": "Unlisted marketplace-distribution OAuth apps (Developer Platform 2025.2+) work for other customers but capped at 25 installs until Marketplace listing approved; cap removed on approval. Private OAuth distribution: 10 customers (100 for Solution Partners). Static-token private apps: one portal only. Per-customer private app tokens each customer makes themselves = no gate, but account-bound.",
+    "url": "https://developers.hubspot.com/changelog/new-marketplace-distribution-app-install-limits",
+    "quote": "Starting on September 22nd, 2025, apps that are created or migrated to version 2025.2 are capped at 25 installs until they are listed on the",
+    "quote_status": "verified",
+    "quote_note": "fuzzy 82%"
+  }
+}

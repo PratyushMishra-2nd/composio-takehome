@@ -1,0 +1,13 @@
+{
+  "id": 41,
+  "app": "Shopify",
+  "result": {
+    "gate": "review_required",
+    "install_cap": null,
+    "detail": "Shopify has two distribution methods. Public distribution works on many stores but needs Shopify approval (App Store registration). Custom distribution needs no approval but is limited to one store, stores in one Plus organization, or development stores. Unrelated customers therefore can't connect without Shopify review. Since 2026-11-20, custom apps installed on stores outside the developer's own organization also need an IP allowlist. No numeric install cap is stated. The distribution method can't be changed after selection. Admin-created custom apps are no longer available for new apps. I did not read the IP allowlist page. A subagent fetched the pages and I did not re-read them, so the quote comes from its report.",
+    "url": "https://shopify.dev/docs/apps/launch/distribution",
+    "quote": "Installed on a single Shopify store, on multiple stores that belong to the same Plus organization, or on development stores",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

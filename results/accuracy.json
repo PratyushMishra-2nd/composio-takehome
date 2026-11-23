@@ -18,7 +18,7 @@
         "field": "access",
         "agent": "self_serve_trial",
         "human": "admin_approval",
-        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta"
+        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com). Official MCP at mcp.frontapp.com (OAuth 2.1), no dynamic client registration — needs developer app with MCP feature."
       },
       {
         "id": 15,
@@ -62,15 +62,7 @@
           "basic",
           "hmac_signature"
         ],
-        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview"
-      },
-      {
-        "id": 51,
-        "app": "DataForSEO",
-        "field": "access",
-        "agent": "self_serve_trial",
-        "human": "self_serve_free",
-        "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial"
+        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP. Official MCP is developer preview; since 11.3 runs via WordPress MCP Adapter plugin with WP username + Application Password (not REST keys)."
       },
       {
         "id": 60,
@@ -78,7 +70,7 @@
         "field": "access",
         "agent": "paid_plan",
         "human": "self_serve_free",
-        "note": "New developer platform/Public API (clay-api-key header) on all plans incl. free but low free limits; Tables and legacy enrichment API are Enterprise-only"
+        "note": "Public API (clay-api-key header) on all plans incl. free, but free limited to ~100 API results/30 days — test only; Tables and legacy enrichment API are Enterprise-only; official Clay MCP."
       },
       {
         "id": 64,
@@ -93,7 +85,15 @@
           "api_key",
           "bearer_token"
         ],
-        "note": "API tokens (Bearer) preferred; legacy Global API Key via X-Auth-Key/X-Auth-Email headers; third-party OAuth not generally self-serve"
+        "note": "API tokens (Bearer) preferred; legacy Global API Key (api_key) not recommended for new customers; third-party OAuth not generally self-serve."
+      },
+      {
+        "id": 79,
+        "app": "Smartsheet",
+        "field": "access",
+        "agent": "paid_plan",
+        "human": "self_serve_trial",
+        "note": "API restricted to Business/Enterprise/AWM plans; 30-day free trial, no card; PAT sent as Bearer, or 3-legged OAuth."
       },
       {
         "id": 90,
@@ -151,7 +151,7 @@
         "field": "access",
         "agent": "self_serve_free",
         "human": "admin_approval",
-        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta",
+        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com). Official MCP at mcp.frontapp.com (OAuth 2.1), no dynamic client registration — needs developer app with MCP feature.",
         "adjudication": {
           "ruling": "reference",
           "correct_value": "admin_approval",
@@ -166,7 +166,7 @@
         "field": "verdict",
         "agent": "build_now",
         "human": "build_with_caveat",
-        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta",
+        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com). Official MCP at mcp.frontapp.com (OAuth 2.1), no dynamic client registration — needs developer app with MCP feature.",
         "adjudication": {
           "ruling": "reference",
           "correct_value": "build_with_caveat",
@@ -221,7 +221,7 @@
         "field": "access",
         "agent": "self_serve_free",
         "human": "admin_approval",
-        "note": "Custom apps per tenant need tenant-admin approval; multi-tenant store apps need Lark launch review; tenant_access_token from app id/secret sent as Bearer",
+        "note": "Custom apps per tenant need tenant-admin approval for review-required scopes; multi-tenant store apps need Lark launch review; tenant_access_token from app id/secret sent as Bearer. Official MCP is Beta. Feishu (China) and Lark (intl) apps are separate.",
         "adjudication": {
           "ruling": "neither",
           "correct_value": "partner_gated",
@@ -236,7 +236,7 @@
         "field": "verdict",
         "agent": "build_with_caveat",
         "human": "build_now",
-        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview",
+        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP. Official MCP is developer preview; since 11.3 runs via WordPress MCP Adapter plugin with WP username + Application Password (not REST keys).",
         "adjudication": {
           "ruling": "reference",
           "correct_value": "build_now",
@@ -251,7 +251,7 @@
         "field": "access",
         "agent": "self_serve_free",
         "human": "paid_plan",
-        "note": "Only paid stores can access API (free test-store upgrade on request); public app secret issued by Ecwid team on registration; only third-party MCPs",
+        "note": "Only paid-plan stores can access API (free test-store upgrade on request via support email); custom app with access tokens auto-created in app dashboard (self-serve); public apps use OAuth code exchange; only third-party MCPs.",
         "adjudication": {
           "ruling": "reference",
           "correct_value": "paid_plan",
@@ -266,7 +266,7 @@
         "field": "verdict",
         "agent": "build_now",
         "human": "build_with_caveat",
-        "note": "Only paid stores can access API (free test-store upgrade on request); public app secret issued by Ecwid team on registration; only third-party MCPs",
+        "note": "Only paid-plan stores can access API (free test-store upgrade on request via support email); custom app with access tokens auto-created in app dashboard (self-serve); public apps use OAuth code exchange; only third-party MCPs.",
         "adjudication": {
           "ruling": "reference",
           "correct_value": "build_with_caveat",
@@ -276,19 +276,13 @@
         }
       },
       {
-        "id": 51,
-        "app": "DataForSEO",
+        "id": 79,
+        "app": "Smartsheet",
         "field": "access",
-        "agent": "self_serve_trial",
-        "human": "self_serve_free",
-        "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial",
-        "adjudication": {
-          "ruling": "reference",
-          "correct_value": "self_serve_free",
-          "reason": "Any registered user gets working credentials free, plus a free Sandbox for API testing. The $1 credit has no stated time limit, so it is free credit, not a time-limited trial. The $50 top-up is the cost of production usage, not the gate to getting credentials.",
-          "url": "https://dataforseo.com/pricing",
-          "quote": "You can also test API integration for free using the DataForSEO Sandbox."
-        }
+        "agent": "paid_plan",
+        "human": "self_serve_trial",
+        "note": "API restricted to Business/Enterprise/AWM plans; 30-day free trial, no card; PAT sent as Bearer, or 3-legged OAuth.",
+        "adjudication": null
       },
       {
         "id": 90,
@@ -311,8 +305,9 @@
     "overall": 0.91,
     "agent_wrong": 9,
     "rulings": {
-      "reference": 8,
+      "reference": 7,
       "neither": 1,
+      "pending": 1,
       "both_defensible": 1
     }
   }

@@ -1,0 +1,13 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "result": {
+    "gate": "unknown",
+    "install_cap": null,
+    "detail": "Could not read official Fanbasis docs. fanbasis.com and docs paths returned 403 to fetch. The mirror commasdocs.com is JS-rendered and returned no content. The GitHub repo links returned 404. Search summaries only (not page text I read) say the public API uses an x-api-key header, and each customer creates keys under Settings > Developer > API Keys. That points to per-customer keys with no vendor review, which would be \"none\". I found no mention of app review or install caps. This is unverified, so I'm not marking it \"none\". No verbatim quote was read. Re-check with a browser at the Fanbasis developer docs.",
+    "url": "https://fanbasis.com",
+    "quote": "No verbatim quote available: official docs were unreachable (403/404/JS-rendered).",
+    "quote_status": "not_found",
+    "quote_note": "overlap 0%"
+  }
+}

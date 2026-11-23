@@ -33,7 +33,7 @@ data/apps.csv ──► agent/research.py ──► results/pass1/*.json
                   agent/verify_browser.py   browser-use loop: headless Chromium renders JS-heavy cited pages
                          │
                          ▼
-                  agent/score.py      (vs data/gold.csv: blind model reference on 20 apps, reviewed by the author)
+                  agent/score.py      (vs data/gold.csv: 20-app reference: drafted blind by a model, hand-checked by the author)
                   agent/adjudicate.py (third check rules on every remaining disagreement)
                          │
                          ▼
@@ -87,7 +87,7 @@ Results are cached per app, so a re-run only researches missing apps. Delete `re
 | `agent/research.py` | Research agent (parallel headless `claude -p` workers) |
 | `agent/verify.py` | Independent, non-LLM verification + re-research queue |
 | `agent/sample.py` | Picks the human sample: 2 per category, seed 42 |
-| `data/gold.csv`, `data/GOLD_GUIDE.md` | Blind reference check on the 20-app sample (independent model, never saw agent output), and the rules used |
+| `data/gold.csv`, `data/GOLD_GUIDE.md`, `data/hand_check.json` | 20-app reference set (drafted blind by an independent model, hand-checked by the author against vendor docs), its rules, and a record of the hand check's changes |
 | `agent/adjudicate.py` | Third check: rules on each remaining agent-vs-reference disagreement |
 | `agent/verify_browser.py` | Browser-use loop: renders unconfirmed cited pages in headless Chromium for the quote check |
 | `agent/make_submission.py` | One-page submission PDF, built from the same data as the page |
@@ -114,6 +114,6 @@ A "gate audit" loop (re-researching every self-serve app with a pointed prompt a
 
 ## Known limits
 
-- The quote check uses a plain HTTP fetch first, then a browser-use loop (`agent/verify_browser.py`, headless Chromium via Playwright) for pages the fetch couldn't read or match. That raised confirmed quotes from 639 to 677 of 698.
+- The quote check uses a plain HTTP fetch first, then a browser-use loop (`agent/verify_browser.py`, headless Chromium via Playwright) for pages the fetch couldn't read or match. That raised quotes found on the cited page to 677 of 698 (40 of them only after browser render). This checks presence, not whether the quote supports the claim.
 - The Composio catalog check uses semantic tool search: an app counts as a gap only after 3 phrasings fail to return a toolkit whose name matches. A gap is therefore "not found by the router", not proof of absence.
 - The access taxonomy was revised after pass 1 (`customer_account` was split out of `admin_approval`). Every pass 1 app in the old bucket was re-researched under the new definitions.

@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "result": {
+    "gate": "unknown",
+    "install_cap": null,
+    "detail": "Salesforce docs returned 403 to fetcher, so no page-verified quote. Search snippets: ECAs are closed by default, cross-org use needs Packageable distribution state (packaged ECA installed by customer admin). Whether AppExchange security review is mandatory is unconfirmed; one third-party page (Gong) says package definitions need not pass security review. No install/user cap found. Quote below comes from a search snippet of the blog, not verified on the page.",
+    "url": "https://developer.salesforce.com/blogs/2025/01/secure-your-org-with-external-client-apps",
+    "quote": "ECAs flip this model with a \"closed by default\" approach.",
+    "quote_status": "fetch_failed",
+    "quote_note": "HTTPError: HTTP Error 403: Forbidden"
+  }
+}

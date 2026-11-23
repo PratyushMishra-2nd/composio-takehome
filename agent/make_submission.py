@@ -52,7 +52,7 @@ steps = [("Research workers", "Headless Claude Code per app, web search + fetch,
          ("Browser-use loop", f"Headless Chromium renders JS-heavy docs: +{bv} quotes confirmed"),
          ("Composio catalog", f"COMPOSIO_SEARCH_TOOLS per app → {len(P['composio_gaps'])}-app gap backlog", True),
          ("Approval tracker", f"{P['tracker_issues']} GitHub issues via Composio GITHUB_CREATE_AN_ISSUE", True)]
-steps.append(("Corrections", f"{len(D.get('corrections', []))} recorded fixes: third-check rulings, own verdict rules on all 100, named human calls"))
+steps.append(("Corrections", f"{len(D.get('corrections', []))} recorded fixes: third-check rulings, own verdict rules, a distribution check, the hand check, named human calls"))
 steps.insert(4, ("Enrichment pass", f"Webhooks, sandbox, rate limits, SDKs, spec: {X['quotes'].get('verified', 0)}/{sum(X['quotes'].values())} quotes confirmed; specs downloaded + parsed"))
 shtml = "".join(f'<div class="st{" c" if len(s) > 2 else ""}"><b>{e(s[0])}</b><span>{e(s[1])}</span></div>' for s in steps)
 
@@ -101,7 +101,7 @@ code {{ font-family: Consolas, monospace; font-size: 7.6pt; background: #efeee9;
 <div class="top">
   <div class="k">Composio · AI Product Ops Intern · take-home · Pratyush Mishra</div>
   <h1>100 apps, one agent: what it takes to turn an app into an agent toolkit</h1>
-  <p>An agent pipeline researched auth, credential gates, API surface and MCP coverage for all 100 apps, citing a verbatim quote for every answer, then verified itself with non-LLM checks, a browser-use loop and a blind sample check, and opened the follow-up queue through Composio.</p>
+  <p>An agent pipeline researched auth, credential gates, API surface and MCP coverage for all 100 apps, citing a verbatim quote for every answer, then verified itself with non-LLM checks, a browser-use loop and a hand-checked 20-app sample, and opened the follow-up queue through Composio.</p>
   <div class="links"><a class="p" href="{LIVE}">Live case study ↗</a><a href="{REPO}">Source repo + README ↗</a><a href="{REPO}/issues">Approval tracker ({P['tracker_issues']} issues) ↗</a><a href="{LIVE}data.json">data.json for agents ↗</a></div>
 </div>
 <div class="wrap">
@@ -109,7 +109,7 @@ code {{ font-family: Consolas, monospace; font-size: 7.6pt; background: #efeee9;
     <div class="tile"><div class="v">{c.get('build_now', 0)}/100</div><div class="l">can ship as a toolkit today with self-serve credentials (upper bound)</div></div>
     <div class="tile"><div class="v">{len(P['composio_gaps'])} gaps</div><div class="l">not yet in Composio's catalog; {len(gaps_now)} buildable now (checked via Composio MCP)</div></div>
     <div class="tile"><div class="v">{pct(q1['verified'] / q1['total'])} → {pct(fq['verified'] / fq['total'])}</div><div class="l">cited quotes confirmed on the source page, pass 1 → after the verification loops</div></div>
-    <div class="tile"><div class="v">{pct(acc['pass1']['overall'])} → {pct(acc['final']['overall'])}</div><div class="l">field accuracy on a blind 20-app sample: flat overall; auth {pct(acc['pass1']['field_accuracy']['auth'])} → {pct(acc['final']['field_accuracy']['auth'])}, gate field stuck at {pct(acc['final']['field_accuracy']['access'])}</div></div>
+    <div class="tile"><div class="v">{pct(acc['pass1']['overall'])} → {pct(acc['final']['overall'])}</div><div class="l">field accuracy on a hand-checked 20-app sample: flat overall; auth {pct(acc['pass1']['field_accuracy']['auth'])} → {pct(acc['final']['field_accuracy']['auth'])}, gate field stuck at {pct(acc['final']['field_accuracy']['access'])}</div></div>
   </div>
   <div class="cols">
     <div><h2>The patterns</h2>{fhtml}</div>
@@ -126,7 +126,7 @@ code {{ font-family: Consolas, monospace; font-size: 7.6pt; background: #efeee9;
   </div>
   <h2>The agent</h2>
   <div class="steps">{shtml}</div>
-  <div class="human note"><b style="color:#0b0b0b">Where a human was needed:</b> defining the gate taxonomy (a <i>customer-only</i> gate was split out after pass 1), choosing which loops to keep, reviewing the 20-app reference set and each disagreement against the docs, and one OAuth click to connect GitHub to Composio. The agent never emails or contacts vendors on its own.</div>
+  <div class="human note"><b style="color:#0b0b0b">Where a human was needed:</b> defining the gate taxonomy (a <i>customer-only</i> gate was split out after pass 1), choosing which loops to keep, hand-checking the 20-app reference set against vendor docs (2 labels changed, 13 notes updated; the hand check is final for those apps), and one OAuth click to connect GitHub to Composio. The agent never emails or contacts vendors on its own.</div>
   <div class="foot"><span>Run one app: <code>python agent/research.py --pass try --ids 61</code> · full pipeline in the README</span><span>Data generated {e(D['generated'])}</span></div>
 </div></body></html>"""
 

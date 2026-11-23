@@ -1,0 +1,13 @@
+{
+  "id": 9,
+  "app": "Copper",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Each customer can self-generate API key in Copper web app (System settings > API Keys), no vendor gate. Docs state no install/user cap and no marketplace review. Caveat: the OAuth 2.0 path (preferred for partner integrations) needs app registration by contacting Copper partners. Docs describe no review criteria or caps, so per-customer API keys count as none.",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "To generate an API token, in the Copper web app go to System settings > API Keys and click the 'GENERATE API KEY' button.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

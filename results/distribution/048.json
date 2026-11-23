@@ -1,0 +1,13 @@
+{
+  "id": 48,
+  "app": "Gumroad",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Any creator self-registers an app in advanced settings, gets client_id/secret. Other users authorize via https://gumroad.com/oauth/authorize with redirect URI handler. No review, approval, or cap mentioned in the docs. Also, each customer can generate their own personal access token. The main /api page is JS-rendered, so I used the Help Center article.",
+    "url": "https://gumroad.com/help/article/280-create-application-api",
+    "quote": "To create an application for general use, you'll need to build a Redirect URI handler to generate access tokens for each of your users.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

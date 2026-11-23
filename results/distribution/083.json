@@ -1,0 +1,13 @@
+{
+  "id": 83,
+  "app": "Binance",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Binance Spot API (binance-docs.github.io redirects to developers.binance.com) uses per-customer API keys. Each user creates their own key in API Management, with no vendor review of the app and no stated cap on apps, installs or users. Other Binance products are gated: Binance Login OAuth is described as partner-only, and Link/Fast API requires KYB approval. Those are separate from the core REST API, which is what this question covers. The docs fetched show no review step for key-based access.",
+    "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+    "quote": "API keys can be created on the [API Management](https://www.binance.com/en/support/faq/360002502072) page of your Binance account.",
+    "quote_status": "verified",
+    "quote_note": "browser-rendered"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 77,
+  "app": "ClickUp",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "ClickUp docs tell developers to use OAuth for apps other people use. Users authorize one or more Workspaces. The docs list no review, approval, verification or listing step. They state no install or user cap. Only Workspace owners or admins can create the OAuth app. Personal tokens (pk_) are self-issued per customer. The docs don't explicitly say review is absent, so \"none\" rests on the lack of any gate in the docs. A second page (/docs/oauth-apps) returned 404, and a follow-up search found no review policy.",
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "For apps or integrations that other people use, use the OAuth flow, allowing users to authorize Workspaces for your app.",
+    "quote_status": "verified",
+    "quote_note": "fuzzy 76%"
+  }
+}

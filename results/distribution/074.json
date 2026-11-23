@@ -1,0 +1,13 @@
+{
+  "id": 74,
+  "app": "Jira",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "3LO app private by default. Developer toggles \"Enable sharing\" in Developer console, then sends Authorization URL to any user. Sharing does not need Marketplace listing. Unapproved apps only show warning to installing users (\"not yet been reviewed by Atlassian\"). Approval optional. Docs state no install/user cap. Page does not say warning blocks authorization.",
+    "url": "https://developer.atlassian.com/cloud/jira/software/oauth-2-3lo-apps/",
+    "quote": "Users trying to install an unapproved OAuth 2.0 integration are warned that the app has not yet been reviewed by Atlassian.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

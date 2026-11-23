@@ -1,10 +1,10 @@
 # Reference-set guide (20-app sample)
 
-The reference set in `gold.csv` was drafted blind by an independent model under these rules, then reviewed by the author against the vendor docs. It is a strong second opinion, not certified ground truth.
+The reference set in `gold.csv` was drafted blind by an independent model under these rules, then hand-checked by the author against the vendor docs (see `hand_check.json` for what changed).
 
 20 apps, 2 per category, picked by `agent/sample.py` with a fixed seed (42) so the sample is reproducible and not cherry-picked.
 
-Fill `data/gold.csv` (copy of `gold_template.csv`) **blind**: from the vendor's own docs, without opening `results/`. About 3 minutes per app.
+`data/gold.csv` was filled **blind** from the vendors' own docs, without opening `results/`.
 
 | Column | Allowed values |
 |---|---|
@@ -14,7 +14,6 @@ Fill `data/gold.csv` (copy of `gold_template.csv`) **blind**: from the vendor's 
 | mcp_official | `yes` / `no`: published by the vendor itself |
 | verdict | `build_now` · `build_with_caveat` · `needs_outreach` · `not_buildable` |
 | source_urls | docs pages you used, `;`-separated |
-| minutes | how long the app took you by hand (gives the "agent vs human time" number) |
 | notes | anything ambiguous |
 
 Rule for `access`: pick the **most restrictive gate** a developer hits before a toolkit can be used by end users. Example: Google Ads = needs a developer token approved by Google → `admin_approval`.

@@ -1,0 +1,13 @@
+{
+  "id": 71,
+  "app": "Notion",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Notion OAuth integrations (public = any workspace) can be authorized as soon as client credentials and redirect URI are configured. Marketplace submission or review is not required. Marketplace listing is separate and optional. The authorization and OAuth overview pages state no install or user cap and no review gate. Authorization is per user. Caveat: the public-integrations and marketplace-listing guides were not read.",
+    "url": "https://developers.notion.com/guides/get-started/authorization",
+    "quote": "You can start authorization as soon as you configure the integration’s client credentials and redirect URI; Marketplace submission or review is not required.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

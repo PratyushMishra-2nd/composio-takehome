@@ -1,0 +1,13 @@
+{
+  "id": 42,
+  "app": "WooCommerce",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "No vendor gate. Each store admin generates own Consumer Key/Secret in WooCommerce and pastes into app, or any app can use /wc-auth/v1/authorize so store user grants access by redirect. Docs mention no review, approval, listing requirement or install cap. Marketplace listing optional.",
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/#authentication",
+    "quote": "This endpoint can be used by any APP to allow users to generate API keys for your APP.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

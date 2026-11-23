@@ -1,0 +1,13 @@
+{
+  "id": 12,
+  "app": "Intercom",
+  "result": {
+    "gate": "review_required",
+    "install_cap": null,
+    "detail": "Public Intercom apps (for other workspaces) must be submitted for review by Intercom team. While pending, app stays private, usable only by creator and team. Other workspaces must auth via OAuth. After approval becomes public unlisted (no App Store listing needed). Private apps accessing only own workspace data need no review. No install cap documented.",
+    "url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app",
+    "quote": "This means that the Intercom team must review and approve your app before it is available to install.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

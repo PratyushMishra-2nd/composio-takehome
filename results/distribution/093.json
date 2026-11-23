@@ -1,0 +1,13 @@
+{
+  "id": 93,
+  "app": "Fathom",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Fathom OAuth app registration is self-serve. Developer registers at fathom.video/marketplace_applications/new, sets redirects, gets OAuth credentials in about 2 minutes. Docs list no approval step before other users can authorize, and no install or user cap. The only review language ties to promotion and marketplace visibility: \"eligible for promotion... subject to review\". Docs say 20+ users makes Fathom reach out about listing, which is not a cap. Per-customer API keys also work, but are scoped to the creating user. Docs are silent on whether unlisted apps get blocked, so the answer rests on the absence of any gate. Page text came via a subagent fetch, not read directly by me.",
+    "url": "https://developers.fathom.ai/oauth.md",
+    "quote": "Configure your redirects and receive your OAuth credentials. (2 mins)",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

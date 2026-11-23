@@ -1,0 +1,13 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Netlify OAuth2 apps self-registered in user settings (app.netlify.com/applications). Users authorize on their behalf. Personal access tokens also available. Docs show no vendor review, approval, verification, listing step, and no install/user cap. Only numeric limit is API rate limit (500 req/min). Part of page tail was read only as summary; OAuth app guide URL 404ed. Gate inferred from absence of any gate in docs.",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "If you’re making a public integration with Netlify for others to enjoy, you must use OAuth2.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

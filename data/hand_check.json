@@ -1,0 +1,46 @@
+{
+  "reviewer": "Pratyush Mishra",
+  "date": "2026-11-23",
+  "rows_checked": 20,
+  "method": "Each of the 20 reference rows checked by hand against the vendor's developer docs.",
+  "label_changes": [
+    {
+      "id": 51,
+      "app": "DataForSEO",
+      "field": "access",
+      "from": "self_serve_free",
+      "to": "self_serve_trial"
+    },
+    {
+      "id": 79,
+      "app": "Smartsheet",
+      "field": "access",
+      "from": "paid_plan",
+      "to": "self_serve_trial"
+    }
+  ],
+  "notes_updated": [
+    1,
+    2,
+    14,
+    24,
+    32,
+    42,
+    47,
+    51,
+    60,
+    62,
+    64,
+    79,
+    81
+  ],
+  "unchanged": [
+    15,
+    23,
+    39,
+    74,
+    90,
+    94,
+    99
+  ]
+}

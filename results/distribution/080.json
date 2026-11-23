@@ -1,0 +1,13 @@
+{
+  "id": 80,
+  "app": "Harvest",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Harvest docs: self-serve OAuth2 app registration in Harvest ID Developers section (name, redirect URL, multi-account, products). Users authorize via Authorization Code or Implicit flow. Personal Access Tokens also self-created. Docs mention no review, approval, listing, or install/user cap for unreviewed apps. Caveat: docs silent rather than explicit \"no review needed\"; Harvest ID developer terms not checked.",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "If you are interested in building integrations that other users can use, you will need to register an OAuth2 Application, also known as an OAuth2 Client.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

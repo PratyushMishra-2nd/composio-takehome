@@ -1,0 +1,13 @@
+{
+  "id": 27,
+  "app": "Telegram",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "No vendor gate. Anyone creates bot via @BotFather and gets token instantly. Client API: any user gets own api_id via \"API development tools\" form, no review. No user/install cap documented for unreviewed bots/apps. Only limits: one api_id per phone number, sample api_id unusable for released apps, abuse bans. Telegram Bot API docs also list no marketplace/verification requirement.",
+    "url": "https://core.telegram.org/bots#how-do-i-create-a-bot",
+    "quote": "To get started, message @BotFather on Telegram to register your bot and receive its authentication token.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

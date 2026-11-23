@@ -1,0 +1,13 @@
+{
+  "id": 61,
+  "app": "GitHub",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Docs set no GitHub review, verification or listing step before other users or orgs can authorize an OAuth App or install a public GitHub App. They set no install or user cap for unreviewed apps. The only limit is per user: ten tokens per user/application/scope combination, and ten tokens created per hour. Public GitHub Apps can be installed by other accounts. Marketplace is one optional way to share an app. The pages I read didn't cover org-level OAuth app restrictions, which are an approval by the customer's org, not by GitHub.",
+    "url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps",
+    "quote": "You can enable other users to authorize your OAuth app.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 56,
+  "app": "Firecrawl",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Firecrawl uses per-customer API keys (Bearer). Each customer creates own key in dashboard. Docs show no app review, verification, or install cap. Some requests work with no key. I found no OAuth app-approval flow in the docs I checked. I did not read every docs page, so this rests on the intro docs and the lack of any gate there.",
+    "url": "https://docs.firecrawl.dev/introduction.md",
+    "quote": "Add an [API key](https://www.firecrawl.dev/app/api-keys) when you need higher limits.",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}

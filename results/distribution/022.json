@@ -1,0 +1,13 @@
+{
+  "id": 22,
+  "app": "Twilio",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Twilio Connect Apps: any customer with an upgraded Twilio account can authorize a Connect App through the Connect button flow. Docs mention no vendor review, approval, listing or install cap. Twilio OAuth apps (Authorization Code) likewise redirect the user to sign in and approve access, with no review step. The Connect page links a \"Twilio Connect Limitations\" help article that I did not read, so it could hold restrictions. Per-customer API keys also work as an option.",
+    "url": "https://www.twilio.com/docs/iam/connect",
+    "quote": "In order for a customer to authorize your Connect App they must have previously created and upgraded Twilio account.",
+    "quote_status": "verified",
+    "quote_note": "fuzzy 75%"
+  }
+}

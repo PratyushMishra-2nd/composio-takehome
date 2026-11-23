@@ -1,0 +1,13 @@
+{
+  "id": 62,
+  "app": "Vercel",
+  "result": {
+    "gate": "none",
+    "install_cap": null,
+    "detail": "Vercel docs state no review gate and no install/user cap for unreviewed apps. Unlisted integrations get a Community badge and external users can install them via your site or the deploy button. Review (integrations@vercel.com) and the 500-install threshold apply only to Marketplace listing. Sign in with Vercel apps show users a consent page and mention no review gate. Caveat: one page says to share an integration once it is approved, so the wording is not fully unambiguous. Per-customer access tokens also need no vendor gate.",
+    "url": "https://vercel.com/docs/integrations/create-integration",
+    "quote": "it will be assigned the Community badge and be available for external users to download",
+    "quote_status": "verified",
+    "quote_note": ""
+  }
+}
