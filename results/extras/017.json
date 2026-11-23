@@ -1,0 +1,49 @@
+{
+  "id": 17,
+  "app": "Plain",
+  "seconds": 70,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook targets with event subscriptions, up to 25 per workspace; at-least-once delivery, ~12 retries over ~5 days; TypeScript webhooks SDK for signature verification. Targets managed in Plain app.",
+      "evidence": {
+        "url": "https://www.plain.com/docs/webhooks",
+        "quote": "Plain makes an `HTTP POST` request to this endpoint whenever an event you are interested in occurs."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "No free dev sandbox found. Only a 7-day free trial, no credit card. Demo workspaces exist but no self-serve path documented.",
+      "evidence": {
+        "url": "https://www.plain.com/pricing",
+        "quote": "Start today, no credit card required."
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not documented (no numeric quota; docs only mention 429 errors in SDK)",
+      "evidence": {
+        "url": "https://www.plain.com/docs/graphql/sdk",
+        "quote": "Queries: network, auth (401), forbidden (403), and rate limit (429) errors throw typed exceptions"
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript"
+      ],
+      "evidence": {
+        "url": "https://www.plain.com/docs/graphql/sdk",
+        "quote": "The `@team-plain/graphql` package provides a fully typed client for Plain's GraphQL API."
+      }
+    },
+    "openapi_spec": {
+      "available": "graphql_schema",
+      "url": "https://core-api.uk.plain.com/graphql/v1/schema.graphql",
+      "evidence": {
+        "url": "https://www.plain.com/docs/graphql/schema",
+        "quote": "If you need the schema programmatically for code generation or want to read it directly, view the raw GraphQL schema."
+      }
+    },
+    "confidence": "medium"
+  }
+}

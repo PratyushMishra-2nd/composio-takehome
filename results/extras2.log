@@ -1,0 +1,101 @@
+enriching 100 apps
+  #002 HubSpot: cached
+  #006 Podio: cached
+  #007 Zoho CRM: cached
+  #005 Twenty: cached
+  #009 Copper: cached
+  #003 Pipedrive: cached
+  #004 Attio: cached
+  #001 Salesforce: cached
+  #010 DealCloud: cached
+  #008 Close: cached
+  #013 Freshdesk: cached
+  #015 Pylon: cached
+  #016 LiveAgent: cached
+  #014 Front: cached
+  #018 Help Scout: cached
+  #019 Gorgias: cached
+  #020 Gladly: cached
+  #012 Intercom: cached
+  #021 Slack: cached
+  #022 Twilio: cached
+  #011 Zendesk: cached
+  #024 Lark (Larksuite): cached
+  #026 Discord: cached
+  #027 Telegram: cached
+  #028 WhatsApp Business: cached
+  #025 Pumble: cached
+  #017 Plain: cached
+  #031 Google Ads: ok
+  #030 Vonage: ok
+  #023 Zoho Cliq: ok
+  #029 Aircall: ok
+  #033 LinkedIn Ads: ok
+  #032 Meta Ads: ok
+  #034 GoHighLevel: ok
+  #035 Mailchimp: ok
+  #036 Klaviyo: ok
+  #037 systeme.io: ok
+  #039 Threads (Meta): ok
+  #038 Pinterest: ok
+  #040 SendGrid: ok
+  #041 Shopify: ok
+  #043 BigCommerce: ok
+  #042 WooCommerce: ok
+  #046 Squarespace: ok
+  #044 Salesforce Commerce Cloud: ok
+  #045 Magento (Adobe Commerce): ok
+  #048 Gumroad: ok
+  #049 Amazon Selling Partner: ok
+  #047 Ecwid: ok
+  #051 DataForSEO: ok
+  #052 SE Ranking: ok
+  #053 Ahrefs: ok
+  #054 MrScraper: ok
+  #055 Apify: ok
+  #056 Firecrawl: ok
+  #058 Sherlock: ok
+  #057 Bright Data: ok
+  #061 GitHub: cached
+  #050 fanbasis: ok
+  #060 Clay: ok
+  #059 Waterfall.io: ok
+  #064 Cloudflare: ok
+  #062 Vercel: ok
+  #065 Supabase: ok
+  #063 Netlify: ok
+  #067 Snowflake: ok
+  #066 Neo4j: ok
+  #068 MongoDB Atlas: ok
+  #069 Datadog: ok
+  #071 Notion: ok
+  #070 Sentry: ok
+  #073 Linear: ok
+  #072 Airtable: ok
+  #075 Asana: ok
+  #074 Jira: ok
+  #076 Monday.com: ok
+  #077 ClickUp: ok
+  #079 Smartsheet: ok
+  #081 Stripe: ok
+  #078 Coda: ok
+  #080 Harvest: ok
+  #082 Plaid: ok
+  #085 iPayX: ok
+  #083 Binance: ok
+  #084 Paygent Connect: ok
+  #086 QuickBooks: ok
+  #088 Brex: ok
+  #090 PitchBook: ok
+  #087 Xero: ok
+  #089 Ramp: ok
+  #091 NotebookLM: ok
+  #094 Consensus: ok
+  #093 Fathom: ok
+  #092 Otter AI: ok
+  #098 Mermaid CLI: ok
+  #097 higgsfield: ok
+  #095 Reducto: ok
+  #099 YouTube Transcript: ok
+  #096 Devin: ok
+  #100 Grain: ok

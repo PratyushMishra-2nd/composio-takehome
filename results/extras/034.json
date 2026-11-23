@@ -1,0 +1,50 @@
+{
+  "id": 34,
+  "app": "GoHighLevel",
+  "seconds": 49,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "OAuth marketplace apps subscribe to specific events and receive webhook POSTs at a configured URL",
+      "evidence": {
+        "url": "https://marketplace.gohighlevel.com/docs/webhook/WebhookIntegrationGuide",
+        "quote": "Ability to subscribe to specific events"
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "Developer account is created via the Marketplace; docs do not say it is free or mention a sandbox or test sub-account.",
+      "evidence": {
+        "url": "https://gohighlevelassist.freshdesk.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+        "quote": "You do not need to complete a manual developer signup form."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Burst 100 requests/10s and 200,000/day, per app per resource (location or company)",
+      "evidence": {
+        "url": "https://marketplace.gohighlevel.com/docs/other/rate-limits",
+        "quote": "Limits are counted per Marketplace app (client) per resource"
+      }
+    },
+    "sdks": {
+      "official": [
+        "php",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://gohighlevelassist.freshdesk.com/support/solutions/articles/155000007096-api-center-of-excellence-python-and-php-sdks",
+        "quote": "HighLevel's officially supported gohighlevel/api-client (PHP) and gohighlevel-api-client (Python) libraries"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/gohighlevel/highlevel-api-docs",
+      "evidence": {
+        "url": "https://github.com/gohighlevel/highlevel-api-docs",
+        "quote": "Markdown and OpenAPI-based documentation for easy readability and automation."
+      }
+    },
+    "confidence": "medium"
+  }
+}

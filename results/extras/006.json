@@ -1,0 +1,56 @@
+{
+  "id": 6,
+  "app": "Podio",
+  "seconds": 74,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Podio 'hooks' = webhooks; fire on item create/update/delete etc. per app, org, space; need verification before active.",
+      "evidence": {
+        "url": "https://developers.podio.com/doc/hooks",
+        "quote": "Hooks are webhooks that can call external sites when certain actions occur in Podio."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "No dedicated sandbox, but API usable on free Podio accounts at no extra charge within base rate limits; test in a free workspace.",
+      "evidence": {
+        "url": "https://developers.podio.com/index/faq",
+        "quote": "The Podio API is available to use for both paid and free Podio accounts."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "1,000 calls/hour general; 250/hour for rate-limited (resource-intensive) calls; per user per API key; 420 on exceed",
+      "evidence": {
+        "url": "https://developers.podio.com/index/limits",
+        "quote": "The general limit is 1,000 API calls per hour"
+      }
+    },
+    "sdks": {
+      "official": [
+        "php",
+        "ruby",
+        "dotnet",
+        "python",
+        "java",
+        "javascript",
+        "android",
+        "objective-c"
+      ],
+      "evidence": {
+        "url": "https://developers.podio.com/clients",
+        "quote": "Citrix does not maintain these libraries."
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://developers.podio.com/doc",
+        "quote": "No OpenAPI/Swagger spec mentioned on developers.podio.com pages checked (home, /doc, /clients, /index/faq, /index/limits, /doc/hooks)."
+      }
+    },
+    "confidence": "medium"
+  }
+}

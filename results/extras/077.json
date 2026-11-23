@@ -1,0 +1,47 @@
+{
+  "id": 77,
+  "app": "ClickUp",
+  "seconds": 32,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks subscribe to Workspace events; registered via Create Webhook endpoint.",
+      "evidence": {
+        "url": "https://developer.clickup.com/docs/webhooks",
+        "quote": "Webhooks allow you to subscribe to events in your Workspace."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox/test mode documented on authentication page; only personal API tokens for testing. ClickUp has a Free Forever plan, but docs do not describe it as a dev sandbox.",
+      "evidence": {
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "Use a personal API token for individual or testing purposes."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "100 req/min per token (Free Forever, Unlimited, Business); 1,000 Business Plus; 10,000 Enterprise; HTTP 429 on exceed",
+      "evidence": {
+        "url": "https://developer.clickup.com/docs/rate-limits",
+        "quote": "The ClickUp API applies rate limits per token."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://feedback.clickup.com/public-api/p/official-api-sdk-client",
+        "quote": "Official API SDK Client"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developer.clickup.com/openapi/clickup-api-v2-reference.json",
+      "evidence": {
+        "url": "https://developer.clickup.com/docs/open-api-spec",
+        "quote": "The raw OpenAPI specification for the ClickUp API is available for each version of our Public API."
+      }
+    },
+    "confidence": "medium"
+  }
+}

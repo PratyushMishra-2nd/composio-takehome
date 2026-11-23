@@ -1,0 +1,4104 @@
+{
+  "1": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.change_data_capture.meta/change_data_capture/cdc_intro.htm",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; no verbatim quote obtained.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "sandbox": {
+        "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; page title is 'Step One: Sign up for Salesforce Developer Edition'.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 19%"
+      },
+      "rate_limits": {
+        "url": "https://developer.salesforce.com/docs/platform/salesforce-app-limits-cheatsheet/guide/salesforce-app-limits-platform-api.html",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; figures come from a search-result summary of this page.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "sdks": {
+        "url": "https://developer.salesforce.com/docs/platform/mobile-sdk/guide/",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; SDK languages could not be confirmed.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://developer.salesforce.com/docs/platform/graphql/guide/",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; could not confirm a downloadable OpenAPI or GraphQL schema.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "webhooks",
+        "Quote for webhooks not found on https://developer.salesforce.com/docs/atlas.en-us.change_data_capture.meta/change_data_capture/cdc_intro.htm"
+      ],
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org"
+      ],
+      [
+        "quote_not_found",
+        "rate_limits",
+        "Quote for rate_limits not found on https://developer.salesforce.com/docs/platform/salesforce-app-limits-cheatsheet/guide/salesforce-app-limits-platform-api.html"
+      ],
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developer.salesforce.com/docs/platform/mobile-sdk/guide/"
+      ],
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://developer.salesforce.com/docs/platform/graphql/guide/"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "2": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.hubspot.com/docs/api/webhooks",
+        "quote": "The webhooks journal API enables third-party integrators to subscribe to real-time events, retrieve historical event data, and manage snapshots of CRM objects",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+        "quote": "You can create up to 10 test accounts to test apps and integrations without affecting any real HubSpot data.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.hubspot.com/docs/api/usage-details",
+        "quote": "each HubSpot account that installs your app is limited to 110 requests every 10 seconds.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://raw.githubusercontent.com/HubSpot/hubspot-api-nodejs/master/README.md",
+        "quote": "NodeJS v3 [HubSpot API](https://developers.hubspot.com/docs/api/overview) SDK(Client) files",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://raw.githubusercontent.com/HubSpot/HubSpot-public-api-spec-collection/main/README.md",
+        "quote": "This repository contains the Open API 3.0 schema for HubSpot's public APIs and is integrated with [HubSpot's Public API Postman Workspace]",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "3": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://pipedrive.readme.io/docs/guide-for-webhooks-v2",
+        "quote": "allow you to get programmatic notifications from Pipedrive about changes to your data as they happen.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+        "quote": "Perform testing in a risk-free environment",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+        "quote": "30,000 base tokens × subscription plan multiplier × number of seats (+ purchased API Token top-ups)",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "quote": "We offer two official Pipedrive API client libraries:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "quote": "Keep in mind that we'll occasionally update our OpenAPI 3 specification files, so you might need to re-import them from time to time.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "4": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.attio.com/rest-api/guides/webhooks",
+        "quote": "Webhooks allow you to subscribe to changes that happen in Attio",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://attio.com/platform/developers",
+        "quote": "Connect your GTM stack with the REST API, App SDK, or Attio MCP.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.attio.com/rest-api/guides/rate-limiting",
+        "quote": "Our rate limit across the whole API is 100 requests per second for read requests, 25 requests per second for write requests.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://attio.com/platform/developers",
+        "quote": "Extend Attio in TypeScript and React with the App SDK.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.attio.com/llms.txt",
+        "quote": "Access the OpenAPI specification for the Attio REST API",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "5": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.twenty.com/developers/extend/webhooks",
+        "quote": "Twenty sends an HTTP POST to your URL whenever a record is created, updated, or deleted.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Your workspace-specific API documentation is available under Settings → Developers → API after creating an API key.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Both REST and GraphQL support batching up to 60 records per request.",
+        "status": "verified",
+        "note": "fuzzy 89%"
+      },
+      "sdks": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "There is no static API reference for Twenty.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "There is no static API reference for Twenty.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "6": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.podio.com/doc/hooks",
+        "quote": "Hooks are webhooks that can call external sites when certain actions occur in Podio.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.podio.com/index/faq",
+        "quote": "The Podio API is available to use for both paid and free Podio accounts.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.podio.com/index/limits",
+        "quote": "The general limit is 1,000 API calls per hour",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.podio.com/clients",
+        "quote": "Citrix does not maintain these libraries.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.podio.com/doc",
+        "quote": "No OpenAPI/Swagger spec mentioned on developers.podio.com pages checked (home, /doc, /clients, /index/faq, /index/limits, /doc/hooks).",
+        "status": "not_found",
+        "note": "overlap 0%"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://developers.podio.com/doc"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "7": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/notifications/enable.html",
+        "quote": "To enable instant notifications of actions performed on a module.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://www.zoho.com/crm/developer/developer-edition.html",
+        "quote": "Zoho CRM's free developer edition is a fully-featured application environment",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+        "quote": "Each API call made will result in a reduction of 1 credit.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/zoho-crm-sdks.html",
+        "quote": "Zoho CRM offers a powerful suite of SDKs (Software Development Kits)",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/openapi-specification.html",
+        "quote": "The OpenAPI Specification for Zoho CRM APIs is hosted on GitHub:",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "8": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.close.com/api/resources/webhooks.md",
+        "quote": "Webhooks allow a subscription URL to be configured that we will POST event data to as it is added to the Event Log.",
+        "status": "verified",
+        "note": "fuzzy 95%"
+      },
+      "sandbox": {
+        "url": "https://developer.close.com/api/overview.md",
+        "quote": "We publish an OpenAPI spec at: https://api.close.com/api/openapi.json",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.close.com/api/overview/rate-limits.md",
+        "quote": "Rate limits are enforced per endpoint group.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.close.com/llms.txt",
+        "quote": "Community-built API client libraries for Python, PHP, Node.js, Ruby, Go, and C#.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.close.com/api/overview.md",
+        "quote": "We publish an OpenAPI spec at: https://api.close.com/api/openapi.json",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "9": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.copper.com/webhooks/overview.html",
+        "quote": "Register a URL that notifications will be sent to when a specific event type occurs.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.copper.com/",
+        "quote": "Our developer api can be found at `https://api.copper.com/developer_api/`",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.copper.com/introduction/requests.html",
+        "quote": "All API calls are limited to 180 requests per minute.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.copper.com/",
+        "quote": "To easily interact with the Copper Developer API, you may download our:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.copper.com/",
+        "quote": "To easily interact with the Copper Developer API, you may download our:",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "10": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://api.docs.dealcloud.com/docs/publications",
+        "quote": "The Publication APIs enable real-time or near real-time event consumption from the DealCloud system.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "Enabling API access through user group permissions and copying a key from the user profile",
+        "status": "not_found",
+        "note": "overlap 8%"
+      },
+      "rate_limits": {
+        "url": "https://api.docs.dealcloud.com/docs/limits",
+        "quote": "Limits are applied on an endpoint basis. When a rate limit is exceeded, an `HTTP 429` error will be triggered...",
+        "status": "verified",
+        "note": "fuzzy 94%"
+      },
+      "sdks": {
+        "url": "https://api.docs.dealcloud.com/sdk",
+        "quote": "The DealCloud SDK is available to simplify the process of building integrations with DealCloud.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://api.docs.dealcloud.com/docs",
+        "quote": "Postman can consume the Swagger/OpenAPI spec file exposed at",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://api.docs.dealcloud.com/docs/apikeys"
+      ]
+    ],
+    "spec_check": "fetch_failed",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "11": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.zendesk.com/documentation/webhooks/creating-and-monitoring-webhooks",
+        "quote": "Subscribe the webhook to one or more Zendesk events.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+        "quote": "You can try out the Zendesk platform with a free, 14-day trial account.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+        "quote": "If the rate limit is exceeded, the API responds with a 429 Too Many Requests status code.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.zendesk.com/api-reference/changelog/changelog/",
+        "quote": "Zendesk APIs and SDKs",
+        "status": "not_found",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.zendesk.com/api-reference/changelog/changelog/",
+        "quote": "Made the OpenAPI specifications for the Ticketing and Help Center APIs available as OAS file downloads.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developer.zendesk.com/api-reference/changelog/changelog/"
+      ]
+    ],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "12": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.intercom.com/docs/webhooks",
+        "quote": "Webhooks are a way that you can access real-time notifications about events that happen in your Intercom workspace.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+        "quote": "Development workspaces are free and intended for development purposes only.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.intercom.com/docs/references/2.18/rest-api/errors/rate-limiting",
+        "quote": "Private apps have a default rate limit of 10,000 API calls per minute per workspace",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://github.com/intercom",
+        "quote": "Node.js bindings for the Intercom API",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/intercom/Intercom-OpenAPI",
+        "quote": "An OpenAPI description for Intercom's REST API",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "13": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://support.freshdesk.com/en/support/solutions/articles/225430-what-are-webhooks-",
+        "quote": "Webhooks can be triggered via the automation rules that run on ticket creation",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+        "quote": "For every trial period the API limit is 50 per minute.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+        "quote": "The number of API calls you can make is based on your plan.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.freshdesk.com/api/",
+        "quote": "For all trial users, there is a default API limit of 50 calls/minute.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.freshdesk.com/api/",
+        "quote": "For all trial users, there is a default API limit of 50 calls/minute.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "14": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://dev.frontapp.com/docs/application-webhooks",
+        "quote": "Application webhooks are configured as features on the apps you create on the Developers page in Front.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "You must be a company admin to create or manage apps.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://dev.frontapp.com/docs/rate-limiting",
+        "quote": "By default, Front's API rate limit starts at 50 requests per minute and varies depending on your plan.",
+        "status": "verified",
+        "note": "fuzzy 93%"
+      },
+      "sdks": {
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "Utilizes the Plugin SDK.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/frontapp/front-api-specs",
+        "quote": "This repo provides Front Platform API schemas for public consumption.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "15": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/webhooks",
+        "quote": "Webhooks are user-defined HTTP callbacks that are triggered by specific events within Pylon.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+        "quote": "Receive webhooks for various events happening in Pylon.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/rate-limits",
+        "quote": "Pylon limits how many requests your organization can make to each API endpoint per minute.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/sdks",
+        "quote": "Official TypeScript, Python, and Go libraries for the Pylon API",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.usepylon.com/openapi.json",
+        "quote": "The URL `openapi.json` does not exist.",
+        "status": "fetch_failed",
+        "note": "HTTPError: HTTP Error 404: Not Found"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://docs.usepylon.com/pylon-docs/developer/api"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "16": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://support.liveagent.com/679034-Notification-postback-calls-to-external-applications-scripts",
+        "quote": "When creating a rule in your LiveAgent admin panel under Configuration->Automation->Rules you will have an option for action to make HTTP request to external URL",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://www.liveagent.com/pricing/",
+        "quote": "30-day free trial, no credit card",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://support.liveagent.com/217359-Request-rate-limits",
+        "quote": "API requests are limited to 180 per minute per API key.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://github.com/QualityUnit/LiveAgent-api-python",
+        "quote": "This Python package is automatically generated by the Swagger Codegen project:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://support.liveagent.com/094128-Swagger-API-descriptor",
+        "quote": "you can use the swagger (OpenAPI) API descriptor which can be found at the very top of the API v3 documentation",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "17": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://www.plain.com/docs/webhooks",
+        "quote": "Plain makes an `HTTP POST` request to this endpoint whenever an event you are interested in occurs.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://www.plain.com/pricing",
+        "quote": "Start today, no credit card required.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://www.plain.com/docs/graphql/sdk",
+        "quote": "Queries: network, auth (401), forbidden (403), and rate limit (429) errors throw typed exceptions",
+        "status": "verified",
+        "note": "fuzzy 91%"
+      },
+      "sdks": {
+        "url": "https://www.plain.com/docs/graphql/sdk",
+        "quote": "The `@team-plain/graphql` package provides a fully typed client for Plain's GraphQL API.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://www.plain.com/docs/graphql/schema",
+        "quote": "If you need the schema programmatically for code generation or want to read it directly, view the raw GraphQL schema.",
+        "status": "verified",
+        "note": "fuzzy 94%"
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "18": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.helpscout.com/webhooks/",
+        "quote": "Webhooks enable Help Scout to call a script on your server when one or more events have happened.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sandbox": {
+        "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limiting/",
+        "quote": "Your current rate limit depends on your plan.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "rate_limits": {
+        "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limiting/",
+        "quote": "Write requests (POST, PUT, DELETE, PATCH) count as 2 requests toward the rate limit.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sdks": {
+        "url": "https://developer.helpscout.com/mailbox-api/",
+        "quote": "Version 2.0 of our PHP SDK client has been updated to support Inbox API 2.0.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "openapi_spec": {
+        "url": "https://developer.helpscout.com/llms.txt",
+        "quote": "For detailed API documentation, examples, and interactive testing, visit https://developer.helpscout.com",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "19": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.gorgias.com/reference/create-integration.md",
+        "quote": "Events that will trigger the request to the external service.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal",
+        "quote": "Currently all new Sandbox accounts are Demo accounts by default.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.gorgias.com/reference/limitations.md",
+        "quote": "The Gorgias API is rate-limited using a leaky bucket algorithm, meaning that the number of requests you can make in a period of time is limited, but replenishes.",
+        "status": "verified",
+        "note": "fuzzy 84%"
+      },
+      "sdks": {
+        "url": "https://developers.gorgias.com/llms.txt",
+        "quote": "No SDK mentioned in the Gorgias developer docs index (llms.txt).",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://developers.gorgias.com/llms.txt",
+        "quote": "No downloadable spec URL listed; reference pages embed OpenAPI 3.1.0 inline (Gorgias REST API).",
+        "status": "not_found",
+        "note": "overlap 0%"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developers.gorgias.com/llms.txt"
+      ],
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://developers.gorgias.com/llms.txt"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "20": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Subscribe to 35+ event types including agent status changes, conversation lifecycle, customer profile updates, task events, and payment requests.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Sandbox: `https://{organization}.gladly.qa`",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Default: 10 requests/second per method (GET, POST, PUT, PATCH, DELETE)",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "[Chat Web SDK](https://developer.gladly.com/chat/): Embed chat in your website",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Machine-readable OpenAPI 3.0.1 spec (YAML, multi-file with $ref)",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "21": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.slack.dev/apis/events-api/",
+        "quote": "When you use the Events API, Slack calls you.",
+        "status": "verified",
+        "note": "fuzzy 83%"
+      },
+      "sandbox": {
+        "url": "https://docs.slack.dev/tools/developer-sandboxes/",
+        "quote": "Every developer enrolled in the Slack Developer Program is eligible to provision a basic sandbox.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.slack.dev/apis/web-api/rate-limits",
+        "quote": "Rate limit windows are per minute.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.slack.dev/tools.md",
+        "quote": "The Python Slack SDK, Node Slack SDK, and Java Slack SDK provide in-language wrappers for the platform without the Bolt framework layer.",
+        "status": "not_found",
+        "note": "overlap 11%"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/slackapi/slack-api-specs",
+        "quote": "slack_web_openapi_v2.json",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://docs.slack.dev/tools.md"
+      ]
+    ],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/slack.com/1.7.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "22": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://www.twilio.com/docs/usage/webhooks",
+        "quote": "When events occur in your app, you can also have Twilio send you webhooks.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://www.twilio.com/docs/iam/test-credentials",
+        "quote": "Twilio provides test credentials you can use to exercise parts of the REST API without incurring charges.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://www.twilio.com/docs/api/errors/45780",
+        "quote": "This warning occurs when your account sends too many concurrent requests for the Flex API operation you are calling.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://www.twilio.com/docs/libraries",
+        "quote": "Server-side SDKs make it easy for you to use Twilio's REST APIs, generate TwiML, and perform other common server-side programming tasks.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/twilio/twilio-oai",
+        "quote": "This repository contains [OpenAPI](https://www.openapis.org/) documents for [Twilio's API](https://docs.twilio.com).",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/twilio.com/api/1.42.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "23": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/bots/",
+        "quote": "A Webhook bot delegates all handler execution to your own external server.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://www.zoho.com/cliq/help/platform/getting-started-with-cliq-platform.html",
+        "quote": "Cliq provides a platform for building internal tools",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/errors/",
+        "quote": "Most Zoho Cliq APIs have rate limits of 15-20 requests per minute per user",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://www.zoho.com/cliq/help/platform/getting-started-with-cliq-platform.html",
+        "quote": "Deluge, which is the default programming environment supported by Cliq",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/bots/",
+        "quote": "Download Zoho Cliq OpenAPI Document",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://www.zoho.com/cliq/help/platform/getting-started-with-cliq-platform.html"
+      ]
+    ],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "24": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://open.larksuite.com/document/server-docs/event-subscription/overview-of-event-subscription",
+        "quote": "传统的 Webhook 模式，该方式需要你提供用于接收事件或回调消息的服务器公网地址。",
+        "status": "not_found",
+        "note": "browser-rendered"
+      },
+      "sandbox": {
+        "url": "https://open.larksuite.com/llms-docs/zh-CN/llms-home.txt",
+        "quote": "创建测试应用",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://open.larksuite.com/document/server-docs/getting-started/frequency-control.md",
+        "quote": "当前 API在每个应用、每个租户 1000 次/分钟、50 次/秒",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://open.larksuite.com/document/ukTMukTMukTM/uETO1YjLxkTN24SM5UjN.md",
+        "quote": "目前我们提供了Go、Python、Java、NodeJS 四种语言的 SDK。",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "# Lark Developer",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "webhooks",
+        "Quote for webhooks not found on https://open.larksuite.com/document/server-docs/event-subscription/overview-of-event-subscription"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "25": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://cake-com.github.io/pumble-node-sdk/triggers-reference.html",
+        "quote": "To subscribe to events, you have to add the event listeners in the main `App`. Events do not need to be acknowledged.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "Available on all plans",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://cake-com.github.io/pumble-node-sdk/rate-limits.html",
+        "quote": "Total App Requests: 3.000 total requests per minute window across your entire app.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://github.com/CAKE-com/pumble-node-sdk",
+        "quote": "Pumble SDK - A javascript framework to quickly build Pumble apps.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "The full list of available actions is available in the Swagger documentation.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "26": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.discord.com/developers/events/webhook-events",
+        "quote": "Webhook events are one-way events sent to your app over HTTP to notify you when an event occurred.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.discord.com/developers/developer-tools/game-sdk",
+        "quote": "Make sure any test account is added to the application's App Whitelist in the portal!",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.discord.com/developers/topics/rate-limits",
+        "quote": "All bots can make up to 50 requests per second to our API.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.discord.com/developers/developer-tools/community-resources",
+        "quote": "Discord does not maintain official SDKs.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/discord/discord-api-spec",
+        "quote": "This repository contains the public preview of the OpenAPI 3.1 specification for Discord's API.",
+        "status": "verified",
+        "note": "fuzzy 91%"
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "27": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://core.telegram.org/bots/api",
+        "quote": "Whenever there is an update for the bot, we will send an HTTPS POST request to the specified URL, containing a JSON-serialized Update.",
+        "status": "verified",
+        "note": "fuzzy 95%"
+      },
+      "sandbox": {
+        "url": "https://core.telegram.org/bots/features",
+        "quote": "Telegram also offers a dedicated test environment suitable for more advanced testing.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://core.telegram.org/bots/faq",
+        "quote": "For bulk notifications, bots are not able to broadcast more than about 30 messages per second, unless they enable paid broadcasts to increase the limit.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://core.telegram.org/tdlib",
+        "quote": "TDLib can be easily used with any programming language that is able to execute C functions. Additionally it already has native bindings to Java (using JNI) and C# (using C++/CLI).",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://core.telegram.org/bots/api",
+        "quote": "There are two mutually exclusive ways of receiving updates for your bot - the getUpdates method on one hand and webhooks on the other.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "source_disagrees",
+        "openapi_spec",
+        "APIs.guru lists an OpenAPI spec (https://api.apis.guru/v2/specs/telegram.org/5.0.0/openapi.json), agent said no."
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/telegram.org/5.0.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "28": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "Webhooks deliver JSON payloads to your server for message status updates, incoming messages, asynchronous error handling, and many other notification utilities.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "Test accounts and test phone numbers are useful for testing purposes, as they have relaxed messaging limits and don't require a payment method on file in order to send template messages.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "For the following endpoints, your app can make 200 requests per hour, per app, per Messaging account, by default.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "(Python wrapper), are available but are not maintained or endorsed by Meta.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "The official Postman collection lets you execute common API queries.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "29": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.aircall.io/api-references",
+        "quote": "We are also supporting **Webhooks**.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.aircall.io/",
+        "quote": "developer sandboxes",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.aircall.io/api-references",
+        "quote": "Aircall limits the number of requests to its Public API to **120 requests per minute** per company.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.aircall.io/docs/best-practices",
+        "quote": "Aircall's Public API is rate-limited to 120 requests per minute per API key or OAuth token.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://jentic.com/apis/aircall.io/aircall",
+        "quote": "Aircall does not publish an OpenAPI specification.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "30": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.vonage.com/en/getting-started/concepts/webhooks",
+        "quote": "Webhooks are also used to notify your application of events such as an incoming call or message.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.vonage.com/en/messages/concepts/messages-api-sandbox",
+        "quote": "The Messages API Sandbox is free to use.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.vonage.com/en/messages/technical-details",
+        "quote": "The default rate limit for requests to the Messages API is 75 requests per second per API key.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.vonage.com/en/tools",
+        "quote": "Quickly integrate Vonage APIs in your server-side applications.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.vonage.com/en/blog/openapi-makes-easier-integrations",
+        "quote": "You can also find all our specs in the `definitions/` folder of our [API Specifications GitHub repository]",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "fetch_failed",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/vonage.com/account/1.11.8/openapi.json",
+    "spec_confirmed": true
+  },
+  "31": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.google.com/google-ads/webhook/docs/overview",
+        "quote": "The webhook CRM solution lets you configure a URL path, which we then use to send all incoming lead data from the ad.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.google.com/google-ads/api/docs/best-practices/test-accounts",
+        "quote": "Test accounts don't affect your live ads or charge your account.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.google.com/google-ads/api/docs/best-practices/rate-limits",
+        "quote": "enforces rate limiting by queries per second (QPS) on both customer IDs and Google Cloud projects independently",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.google.com/google-ads/api/docs/client-libs",
+        "quote": "The following table lists the official client libraries and links to their setup guides, source repositories, packages, and code examples:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/googleapis/googleapis/tree/master/google/ads/googleads",
+        "quote": "This folder contains the protocol buffer definitions",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "source_disagrees",
+        "openapi_spec",
+        "APIs.guru lists an OpenAPI spec (https://api.apis.guru/v2/specs/google.com/v3/openapi.json), agent said no."
+      ]
+    ],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/google.com/v3/openapi.json",
+    "spec_confirmed": true
+  },
+  "32": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/ads-webhooks/ads-webhooks-overview",
+        "quote": "You subscribe your app to one or more `ad_account` fields, then connect the specific ad accounts you manage.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.facebook.com/documentation/development/create-an-app/marketing-api-use-cases",
+        "quote": "These ad accounts don't require a payment method and the ads you create won't run.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview/rate-limiting",
+        "quote": "Rate limiting is at the ad account level.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.facebook.com/docs/business-sdk",
+        "quote": "Java | Node.js | PHP | Python | Ruby",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/facebook/facebook-business-sdk-codegen",
+        "quote": "JSON schema representation of the Graph API endpoints.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "33": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://learn.microsoft.com/en-us/linkedin/shared/api-guide/webhook-validation",
+        "quote": "Webhooks allow you to receive real-time HTTP notifications for subscribed events.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-unversioned",
+        "quote": "Create : Access to create 1 test Ad Account through the API.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts/rate-limits",
+        "quote": "Rate limits specify the maximum number of API calls that can be made in a 24 hour period.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://github.com/linkedin-developers/linkedin-api-python-client",
+        "quote": "Official Python client library for LinkedIn APIs",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/linkedin-developers",
+        "quote": "LinkedIn API JavaScript Client Library",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-AutoSuggest/1.0/swagger.json",
+    "spec_confirmed": true
+  },
+  "34": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://marketplace.gohighlevel.com/docs/webhook/WebhookIntegrationGuide",
+        "quote": "Ability to subscribe to specific events",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://gohighlevelassist.freshdesk.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+        "quote": "You do not need to complete a manual developer signup form.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://marketplace.gohighlevel.com/docs/other/rate-limits",
+        "quote": "Limits are counted per Marketplace app (client) per resource",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://gohighlevelassist.freshdesk.com/support/solutions/articles/155000007096-api-center-of-excellence-python-and-php-sdks",
+        "quote": "HighLevel's officially supported gohighlevel/api-client (PHP) and gohighlevel-api-client (Python) libraries",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/gohighlevel/highlevel-api-docs",
+        "quote": "Markdown and OpenAPI-based documentation for easy readability and automation.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "35": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://mailchimp.com/developer/marketing/api/list-webhooks/",
+        "quote": "Create a new webhook for a specific list.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://mailchimp.com/pricing/",
+        "quote": "Under 250 contacts? It's free.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://mailchimp.com/developer/marketing/api-concepts/rate-limits-and-timeouts",
+        "quote": "The Marketing API has a limit of 10 simultaneous connections.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://github.com/mailchimp/mailchimp-client-lib-codegen",
+        "quote": "This tool is used to auto-generate and publish both Mailchimp Marketing and Transactional client libraries.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+        "quote": "We use the OpenAPI Specification (formerly known as Swagger) to describe each endpoint.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "36": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.klaviyo.com/en/reference/create_webhook",
+        "quote": "A list of topics to subscribe to.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.klaviyo.com/en/docs/getting-started",
+        "quote": "Create a sandbox account (optional)",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling",
+        "quote": "use a fixed-window rate limiting algorithm with two distinct windows: burst (1-second window) and steady (1-minute window).",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.klaviyo.com/en/docs/sdk-overview",
+        "quote": "Klaviyo offers SDKs in various languages (Python, PHP, Ruby, Node), with plans to support more in the near future.",
+        "status": "not_found",
+        "note": "overlap 6%"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/klaviyo/openapi",
+        "quote": "Versioned OpenAPI specs for the Klaviyo API.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://developers.klaviyo.com/en/docs/getting-started"
+      ],
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developers.klaviyo.com/en/docs/sdk-overview"
+      ]
+    ],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "37": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.systeme.io/docs/webhooks",
+        "quote": "Currently, users can create a maximum of 10 webhooks in one account.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+        "quote": "You can create up to 3 API keys per account.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "Our Public API implements a rate-limiting system to maintain service stability and availability for all users.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "To retrieve a list of contacts, you can use the JavaScript `fetch` function as shown in the following example:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.systeme.io/llms.txt",
+        "quote": "> Documentation for Systeme Public API",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "38": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.pinterest.com/docs/reference/manage-notifications.md",
+        "quote": "Email Contacts are notified of changes to your application or to the Pinterest API via email.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.pinterest.com/docs/developer-tools/sandbox/",
+        "quote": "Use Sandbox to test your integration with Pinterest API v5 without affecting your production data.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.pinterest.com/docs/reference/rate-limits.md",
+        "quote": "Standard access: 100 requests per second per user per app for all API requests",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.pinterest.com/docs/developer-tools/sdk.md",
+        "quote": "The Pinterest SDK currently offers a Python library",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.pinterest.com/llms.txt",
+        "quote": "Raw OpenAPI specification for the Pinterest API v5",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "39": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.facebook.com/documentation/threads/webhooks",
+        "quote": "Webhooks for Threads allow you to receive real-time notifications for the subscribed topics and fields.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.facebook.com/documentation/threads/get-started",
+        "quote": "Threads testers can grant your app these permissions at any time.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.facebook.com/documentation/threads/overview.md",
+        "quote": "Threads profiles are limited to 250 API-published posts within a rolling 24-hour period.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.facebook.com/documentation/threads/get-started/create-an-app",
+        "quote": "The open-source Threads API sample app",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://developers.facebook.com/documentation/threads/overview.md",
+        "quote": "Full documentation index for this product: https://developers.facebook.com/documentation/threads/llms.txt",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developers.facebook.com/documentation/threads/get-started/create-an-app"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "40": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://www.twilio.com/docs/sendgrid/for-developers/tracking-events/twilio-sendgrid-event-webhook-overview",
+        "quote": "The SendGrid Event Webhook sends email event data as SendGrid processes it.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+        "quote": "Free trial lets you send 100 emails/day for 60 days",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits",
+        "quote": "If you exceed that limit, the API returns an HTTP `429` (Too Many Requests) status code.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/libraries",
+        "quote": "SendGrid maintains the following official libraries for mail sending.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/twilio/sendgrid-oai",
+        "quote": "Files can be found in the json/ and yaml/ directories.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/sendgrid.com/1.0.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "41": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://shopify.dev/docs/apps/build/webhooks",
+        "quote": "it can subscribe to Shopify webhook topics as a mechanism for receiving near-real-time data about these events.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://shopify.dev/docs/apps/tools/development-stores",
+        "quote": "Dev stores are testing environments that you own and control.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://shopify.dev/docs/apps/build/apis/graphql-admin/rate-limits",
+        "quote": "Each combination of app and store is given a bucket size and restore rate based on the store's plan.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest",
+        "quote": "Use Shopify’s officially supported libraries to build fast, reliable apps",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://shopify.dev/docs/api/shopify-app-remix/v2/guide-graphql-types",
+        "quote": "schema: 'https://shopify.dev/admin-graphql-direct-proxy/2023-10'",
+        "status": "verified",
+        "note": "browser-rendered"
+      }
+    },
+    "issues": [],
+    "spec_check": "fetch_failed",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "42": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://woocommerce.com/document/webhooks/",
+        "quote": "A webhook is an event notification sent to a URL of your choice.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.woocommerce.com/docs/getting-started/",
+        "quote": "Studio starts the local site and gives you its URL.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://developer.woocommerce.com/docs/apis/store-api/rate-limiting/",
+        "quote": "A default maximum of 25 requests can be made within a 10-second time frame.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+        "quote": "Official libraries",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+        "quote": "Use /wp-json/wc/v3/ endpoints for all new integrations.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://developer.woocommerce.com/docs/getting-started/"
+      ],
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://developer.woocommerce.com/docs/apis/rest-api/"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "43": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.bigcommerce.com/docs/integrations/webhooks",
+        "quote": "Subscribe to BigCommerce store events and receive real-time callbacks; configure scopes, payloads, and retries.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "sandbox": {
+        "url": "https://docs.bigcommerce.com/docs/start/about/sandboxes",
+        "quote": "Sandbox stores are intended for developing and testing apps. They cannot process any live transactions.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.bigcommerce.com/docs/start/best-practices/api-rate-limits",
+        "quote": "Apps using OAuth are rate-limited based on a quota that's refreshed every 30 seconds.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sdks": {
+        "url": "https://docs.bigcommerce.com/developer/docs/overview/tools-and-sdks",
+        "quote": "Tools and SDKs page lists a Node API Client (node-bigcommerce) and the Checkout SDK.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/bigcommerce/api-specs",
+        "quote": "As of December 27, 2023, you can find all the public BigCommerce DevDocs at https://github.com/bigcommerce/docs!",
+        "status": "verified",
+        "note": "fuzzy 92%"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "webhooks",
+        "Quote for webhooks not found on https://docs.bigcommerce.com/docs/integrations/webhooks"
+      ],
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://docs.bigcommerce.com/developer/docs/overview/tools-and-sdks"
+      ]
+    ],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "44": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://github.com/SalesforceCommerceCloud/commerce-sdk",
+        "quote": "hooks for Commerce APIs",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+        "quote": "not verified: page blocked (HTTP 403)",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/throttle-rates.html",
+        "quote": "Load Shedding and Rate Limiting",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sdks": {
+        "url": "https://salesforcecommercecloud.github.io/commerce-sdk-isomorphic",
+        "quote": "This SDK provides a Browser & Node.js JavaScript client for calling B2C Commerce Shopper APIs",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/SalesforceCommerceCloud/commerce-sdk-isomorphic",
+        "quote": "The SDK is generated from the SCAPI OAS specs that the ECOM monorepo publishes.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html"
+      ]
+    ],
+    "spec_check": "fetch_failed",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "45": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.adobe.com/commerce/extensibility/webhooks/",
+        "quote": "Webhooks enable developers to configure synchronous logic to execute calls to external systems when an Adobe Commerce event triggers.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://partners.adobe.com/technologyprogram/experiencecloud/knowledgebase/7069a017937f4214257ff9ed0bba1032.html",
+        "quote": "Be in good standing in the Commerce Marketplace.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/rate-limiting",
+        "quote": "Rate limiting is disabled by default.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.adobe.com/commerce/extensibility/",
+        "quote": "Commerce SDKs and libraries provide reusable patterns for authentication, configuration, event handling, and Commerce integration, including the Admin UI SDK and OOPE modules.",
+        "status": "verified",
+        "note": "fuzzy 95%"
+      },
+      "openapi_spec": {
+        "url": "https://developer.adobe.com/commerce/webapi/graphql/",
+        "quote": "You can also use introspection queries to discover the schema programmatically.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://partners.adobe.com/technologyprogram/experiencecloud/knowledgebase/7069a017937f4214257ff9ed0bba1032.html"
+      ]
+    ],
+    "spec_check": "fetch_failed",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/adobe.com/aem/3.7.1-pre.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "46": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.squarespace.com/webhooks/overview",
+        "quote": "Instead of making repeated API calls, a client may subscribe to notifications from Squarespace for supported system events.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+        "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.squarespace.com/commerce-apis/rate-limits",
+        "quote": "Squarespace Commerce APIs employ a rate limit of 300 requests per minute",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.squarespace.com/commerce-apis/overview",
+        "quote": "Squarespace Commerce APIs employ a rate limit of 300 requests per minute",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://developers.squarespace.com/",
+        "quote": "Integrate our API docs directly into Claude or ChatGPT.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developers.squarespace.com/commerce-apis/overview"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "47": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.ecwid.com/build-apps/webhook-automations/learn-ecwid-webhooks/list-of-webhook-events",
+        "quote": "Webhooks are triggered by any changes in the store data, no matter their source.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+        "quote": "Email us to get a free plan upgrade for your test store.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.ecwid.com/api-reference",
+        "quote": "We accept up to 600 requests per minute per token.",
+        "status": "verified",
+        "note": "fuzzy 86%"
+      },
+      "sdks": {
+        "url": "https://docs.ecwid.com/llms.txt",
+        "quote": "[Community libraries](https://docs.ecwid.com/develop-apps/community-libraries.md)",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/Ecwid/ecwid-api-docs",
+        "quote": "The docs use Markdown syntax.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "48": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://www.mintlify.com/antiwork/gumroad/api/resource-subscriptions",
+        "quote": "Resource subscriptions allow you to receive webhook notifications when specific events occur in your Gumroad account.",
+        "status": "fetch_failed",
+        "note": "HTTPError: HTTP Error 410: Gone"
+      },
+      "sandbox": {
+        "url": "https://gumroad.com/ping",
+        "quote": "Ping",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "rate_limits": {
+        "url": "https://jentic.com/apis/gumroad.com/gumroad",
+        "quote": "Gumroad does not publish an OpenAPI specification.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://github.com/antiwork/gumroad-cli",
+        "quote": "CLI for the Gumroad API",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://jentic.com/apis/gumroad.com/gumroad",
+        "quote": "Gumroad does not publish an OpenAPI specification.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "49": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer-docs.amazon/sp-api-blog/docs/event-driven-architecture-in-selling-partner-api",
+        "quote": "Instead of polling for information, your application can receive information directly from Amazon",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer-docs.amazon/sp-api/docs/sp-api-sandbox",
+        "quote": "Use the SP-API sandbox to make test calls.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer-docs.amazon/sp-api/docs/usage-plans-and-rate-limits",
+        "quote": "The SP-API uses the token bucket algorithm to rate-limit requests to the API.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer-docs.amazon/sp-api/docs/sp-api-sdks",
+        "quote": "SP-API offers a collection of software development kits (SDKs) to connect with our APIs.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/amzn/selling-partner-api-models",
+        "quote": "This repository contains Swagger models for developers to use to create software that calls Selling Partner APIs.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "50": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://commasdocs.com/",
+        "quote": "A webhook is a message Commas sends to your server the moment something happens — like a payment succeeding or a subscription being canceled.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "sandbox": {
+        "url": "https://commasdocs.com/",
+        "quote": "Use your sandbox API key from the sandbox dashboard .",
+        "status": "not_found",
+        "note": "overlap 14%"
+      },
+      "rate_limits": {
+        "url": "https://commasdocs.com/",
+        "quote": "Rate limiting now applies to the checkout-sessions and customers endpoint groups at 10,000 authenticated requests per hour.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "sdks": {
+        "url": "https://commasdocs.com/",
+        "quote": "If you use the Embedded Checkout SDK , its environment value for test mode is the string 'sandbox' (never 'qa' ).",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://commasdocs.com/",
+        "quote": "Commas API Reference",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "webhooks",
+        "Quote for webhooks not found on https://commasdocs.com/"
+      ],
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://commasdocs.com/"
+      ],
+      [
+        "quote_not_found",
+        "rate_limits",
+        "Quote for rate_limits not found on https://commasdocs.com/"
+      ],
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://commasdocs.com/"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "51": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.dataforseo.com/v3/serp-overview/",
+        "quote": "Alternatively, you can specify `pingback_url` or `postback_url` when setting a task",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.dataforseo.com/v3/appendix-sandbox/",
+        "quote": "Sandbox is completely free for any registered user at DataForSEO.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.dataforseo.com/v3/serp-overview/",
+        "quote": "You can send up to 10000 POST and GET API calls per minute in total, with each POST call containing no more than 100 tasks.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://dataforseo.com/dev-starter-kit",
+        "quote": "Official Java client, generated from the same API specification.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://dataforseo.com/dev-starter-kit",
+        "quote": "One YAML for every endpoint — generate a client of your own.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "52": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://seranking.com/api/project/getting-started/",
+        "quote": "Any API method can be invoked no more than 5 times per second.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://seranking.com/api/rate-limits/",
+        "quote": "During the trial period, the Data API has a default rate limit of 1 request per second (RPS).",
+        "status": "verified",
+        "note": "fuzzy 93%"
+      },
+      "rate_limits": {
+        "url": "https://seranking.com/api/rate-limits/",
+        "quote": "During the trial period, the Data API has a default rate limit of 1 request per second (RPS).",
+        "status": "verified",
+        "note": "fuzzy 93%"
+      },
+      "sdks": {
+        "url": "https://github.com/seranking/openapi",
+        "quote": "Developers can use these specs to generate client libraries.",
+        "status": "verified",
+        "note": "fuzzy 83%"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/seranking/openapi",
+        "quote": "This repository contains OpenAPI specifications for the SE Ranking API.",
+        "status": "verified",
+        "note": "fuzzy 86%"
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "53": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "The complete OpenAPI specification for every tool is at [/openapi.json](/openapi.json).",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.ahrefs.com/api/docs/free-test-queries.md",
+        "quote": "Users on any paid plan can test Ahrefs API by running a limited set of free test queries.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.ahrefs.com/api/docs/introduction.md",
+        "quote": "Ahrefs API is limited to 60 requests per minute by default.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "The complete OpenAPI specification for every tool is at [/openapi.json](/openapi.json).",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "The complete OpenAPI specification for every tool is at [/openapi.json](/openapi.json).",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "54": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.mrscraper.com/docs/integrations/webhook",
+        "quote": "Webhooks let you automatically send HTTP requests to another API when specific events happen in your scraper — such as when a scrape starts, completes, or fails.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "The Free plan includes **100 tokens per month** with no credit card required.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "| **Concurrent Requests** | 10 | 100 | Custom |",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.mrscraper.com/docs/integrations/node",
+        "quote": "The official [`@mrscraper/sdk`](https://www.npmjs.com/package/@mrscraper/sdk) package is an async JavaScript and TypeScript client for the seven MrScraper services.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.mrscraper.com/docs/api/overview",
+        "quote": "No OpenAPI or Swagger download link found in the docs pages reviewed.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://docs.mrscraper.com/docs/api/overview"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "55": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.apify.com/platform/integrations/webhooks",
+        "quote": "Webhooks allow you to configure the Apify platform to perform an action when a certain system event occurs.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://apify.com/pricing",
+        "quote": "Enjoy $500 worth of free usage to build your own Actors and AI agents along with other benefits for 6 months.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "The global rate limit is set to 250 000 requests per minute.",
+        "status": "verified",
+        "note": "fuzzy 89%"
+      },
+      "sdks": {
+        "url": "https://docs.apify.com/api/client/js/",
+        "quote": "The Apify API client is the official library to access the Apify REST API from your JavaScript/TypeScript applications.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "Download OpenAPI",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "56": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.firecrawl.dev/webhooks/overview",
+        "quote": "Get notified the moment a crawl, batch scrape, extract, agent job, or monitor check starts, progresses, or finishes.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.firecrawl.dev/rate-limits",
+        "quote": "Sign up for a free API key to get 1,000 credits and higher rate limits at no cost",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.firecrawl.dev/rate-limits",
+        "quote": "Rate limits cap how many requests your team can make per minute, while concurrency limits cap how many jobs can run in parallel.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.firecrawl.dev/sdks/overview",
+        "quote": "Use an SDK to search, scrape, and interact with the web without managing raw HTTP requests.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.firecrawl.dev/api-reference/v2-openapi.json",
+        "quote": "\"openapi\": \"3.0.0\"",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "57": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.brightdata.com/products/scrapers/scrapers-library/data-delivery",
+        "quote": "Bright Data sends a `POST` request to that URL with the scraped data once the job completes.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier",
+        "quote": "Every new Bright Data account gets 5,000 free credits per month",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier",
+        "quote": "restricted to a default rate limit of 1,000 requests per minute across the SERP API, Web Unlocker API and Proxy products",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.brightdata.com/llms.txt",
+        "quote": "Python SDK: `pip install brightdata-sdk`.",
+        "status": "not_found",
+        "note": "overlap 33%"
+      },
+      "openapi_spec": {
+        "url": "https://docs.brightdata.com/llms.txt",
+        "quote": "REST endpoints for every product live under `/api-reference` on this docs site.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://docs.brightdata.com/llms.txt"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "58": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "Hunt down social media accounts by username across 400+ social networks",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sandbox": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "| `pipx install sherlock-project` | `pip` or [`uv`](https://docs.astral.sh/uv/) may be used in place of `pipx` |",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "rate_limits": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "Hunt down social media accounts by username across 400+ social networks",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sdks": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "| `docker run -it --rm sherlock/sherlock` |",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "--csv                 Create Comma-Separated Values (CSV) File.",
+        "status": "verified",
+        "note": "browser-rendered"
+      }
+    },
+    "issues": [
+      [
+        "source_disagrees",
+        "openapi_spec",
+        "APIs.guru lists an OpenAPI spec (https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json), agent said no."
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+    "spec_confirmed": true
+  },
+  "59": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.waterfall.io/v1/faq",
+        "quote": "Waterfall Prospector, Contact Enrichment, Phone Enrichment, and Company Enrichment accept a `webhook_url`.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.waterfall.io/v1/faq",
+        "quote": "API access is available by approval.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.waterfall.io/v1/faq",
+        "quote": "The default for Prospector, Search, Enrichment, Job Change, and Email Verification is 50 requests per 60 seconds.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.waterfall.io/llms.txt",
+        "quote": "create Waterfall API integration code in your own Python, JavaScript, or TypeScript project",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.waterfall.io/api_specs.yaml",
+        "quote": "openapi: \"3.1.0\"",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "60": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "Get notified when a routine run finishes, then verify and handle the delivery.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.clay.com/public-api/rate-limits.md",
+        "quote": "Limits may differ for specific workspaces. Contact Clay if you need higher limits.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.clay.com/public-api/rate-limits.md",
+        "quote": "When a request is rate limited, Clay returns `429` with a `Retry-After` header (seconds to wait).",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "Build with Clay from your coding agent, or call the Clay API from your own applications.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "[openapi](/openapi.json)",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "61": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.github.com/en/webhooks/about-webhooks",
+        "quote": "Webhooks let you subscribe to events happening in a software system and automatically receive a delivery of data to your server whenever those events occur.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.github.com/en/get-started/learning-about-github/githubs-plans",
+        "quote": "GitHub offers free and paid plans for storing and collaborating on code.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+        "quote": "The primary rate limit for unauthenticated requests is 60 requests per hour.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.github.com/en/rest/using-the-rest-api/libraries-for-the-rest-api",
+        "quote": "GitHub maintains official Octokit libraries for some languages.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.github.com/en/rest/about-the-rest-api/about-the-openapi-description-for-the-rest-api",
+        "quote": "GitHub's OpenAPI description of the REST API is publicly available.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+    "spec_confirmed": true
+  },
+  "62": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://vercel.com/docs/webhooks",
+        "quote": "A webhook is a trigger-based HTTP endpoint configured to receive HTTP POST requests through events.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://vercel.com/docs/plans/hobby",
+        "quote": "The Hobby plan is **free** and includes a generous set of features on a **per month** basis:",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://vercel.com/docs/rest-api/limits",
+        "quote": "Rate limits are hard limits that apply to the platform when performing actions that require a response from our API.",
+        "status": "verified",
+        "note": "fuzzy 94%"
+      },
+      "sdks": {
+        "url": "https://vercel.com/docs/rest-api/sdk",
+        "quote": "The @vercel/sdk is a type-safe Typescript SDK that allows you to access the resources and methods of the Vercel REST API.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://vercel.com/changelog/automatic-rest-api-documentation-with-openapi",
+        "quote": "Our REST API documentation is now automatically updated with changes to our API.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "fetch_failed",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/vercel.com/0.0.1/openapi.json",
+    "spec_confirmed": true
+  },
+  "63": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.netlify.com/deploy/deploy-notifications",
+        "quote": "This type of notification works as an outgoing webhook and allows you to send event information to an arbitrary URL using a POST request.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/",
+        "quote": "You'll never be charged for the Free plan, so it's ideal for smaller experiments that don't need a lot of resources, security, or monitoring.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "For example, you can deploy through the Netlify API up to 3 times per minute and up to 100 times per day.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://raw.githubusercontent.com/netlify/open-api/master/README.md",
+        "quote": "We have a fully featured JS/Node.js client that implements some of the same 'porcelain' methods that the go client does in addition to the open-api methods.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://raw.githubusercontent.com/netlify/open-api/master/README.md",
+        "quote": "The [`swagger.yml`](swagger.yml) file is the master copy of the Open API 2.0 definition.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/netlify.com/2.15.0/swagger.json",
+    "spec_confirmed": true
+  },
+  "64": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.cloudflare.com/notifications/get-started/configure-webhooks/",
+        "quote": "Webhooks let you deliver Cloudflare alerts to any service that accepts HTTP callbacks.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+        "quote": "By default, users have access to the Workers Free plan.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
+        "quote": "The global rate limit for the Cloudflare API is 1,200 requests per five minute period per user, and applies cumulatively regardless of whether the request is made via the dashboard, API key, or API token.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.cloudflare.com/fundamentals/api/reference/sdks/",
+        "quote": "Use Cloudflare API SDKs for Go, TypeScript, and Python to integrate Cloudflare services into your applications.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://raw.githubusercontent.com/cloudflare/api-schemas/main/README.md",
+        "quote": "This repository contains OpenAPI schemas for the Cloudflare API.",
+        "status": "unreadable",
+        "note": "page empty or JS-rendered"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developers.cloudflare.com/fundamentals/api/reference/sdks/"
+      ]
+    ],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "65": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://supabase.com/docs/guides/database/webhooks",
+        "quote": "Database Webhooks allow you to send real-time data from your database to another system whenever a table event occurs.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://supabase.com/pricing",
+        "quote": "You can create two projects, one for development and one for production — the Free Plan includes two free projects.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "Rate limits are applied to prevent abuse and ensure fair usage of the Management API.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://supabase.com/docs/guides/api/rest/client-libs",
+        "quote": "Some libraries are officially supported, and some are contributed by the community.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "OpenAPI Spec",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "66": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "A complete list of the available endpoints can be seen and tested in the API Specification.",
+        "status": "verified",
+        "note": "fuzzy 92%"
+      },
+      "sandbox": {
+        "url": "https://neo4j.com/docs/aura/getting-started/create-instance/",
+        "quote": "You can only create one Free instance per account.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "AuraDB Professional accounts with a billing method attached, AuraDB Business Critical, and AuraDB Virtual Dedicated Cloud get a rate limit of 125 requests per minute.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://neo4j.com/docs/getting-started/languages-guides/",
+        "quote": "This page lists the officially supported libraries and APIs that you can use to create an application .",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "A complete list of the available endpoints can be seen and tested in the API Specification .",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "67": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.snowflake.com/en/user-guide/notifications/webhook-notifications",
+        "quote": "Snowflake does not send webhook notifications to external systems other than the ones listed above.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+        "quote": "If you don’t upgrade before the trial period ends, the account is suspended and any unused free usage balance expires.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.snowflake.com/en/developer-guide/sql-api/handling-responses",
+        "quote": "Snowflake returns the HTTP response code 202 or 429 with a QueryStatus object.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.snowflake.com/en/developer-guide/drivers",
+        "quote": "Using languages such as Go, C#, JavaScript, and Python, you can write applications",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+        "quote": "You can access the Snowflake REST APIs OpenAPI specifications in the snowflake-rest-api-specs Git repository.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "68": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://www.mongodb.com/docs/atlas/tutorial/webhook-integration.md",
+        "quote": "You can configure Atlas to send alert notifications to a webhook endpoint as HTTP (HyperText Transport Protocol) POST requests for programmatic processing.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster.md",
+        "quote": "Free clusters never expire, and provide access to a [subset](https://www.mongodb.com/docs/atlas/reference/free-shared-limitations.md#std-label-atlas-free-tier) of Atlas features and functionality.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://www.mongodb.com/docs/atlas/api/api-rate-limit.md",
+        "quote": "Atlas uses the Token Bucket Algorithm to limit the number of requests it processes.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://raw.githubusercontent.com/mongodb/atlas-sdk-go/main/README.md",
+        "quote": "A Go SDK for the [MongoDB Atlas API](https://docs.atlas.mongodb.com/api/).",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://raw.githubusercontent.com/mongodb/openapi/main/README.md",
+        "quote": "This repository hosts the OpenAPI specification for the [Atlas Administration API (v2.0)](https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/).",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "69": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.datadoghq.com/integrations/webhooks/",
+        "quote": "It triggers a POST request to the URL you set with the following content in JSON format.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sandbox": {
+        "url": "https://docs.datadoghq.com/developers/integrations/",
+        "quote": "Request a dedicated Datadog sandbox account for development:",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "rate_limits": {
+        "url": "https://docs.datadoghq.com/api/latest/rate-limits/",
+        "quote": "The rate limit for event submission is `250,000` events per minute per organization.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "Or check out the libraries directly:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/DataDog/datadog-api-client-python",
+        "quote": "generated from Datadog's public OpenAPI specifications by internal tooling.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "70": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.sentry.io/integrations/integration-platform/webhooks/",
+        "quote": "Sentry uses JSON webhooks to get error notifications to your systems or services.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://sentry.io/pricing/",
+        "quote": "Start free on the Developer plan forever, or try Business for 14 days with no credit card.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://docs.sentry.io/api/ratelimits/",
+        "quote": "Sentry rate limits every API request made to prevent abuse and resource overuse.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.sentry.io/platforms/",
+        "quote": "Sentry provides official SDKs for all major platforms and frameworks.",
+        "status": "not_found",
+        "note": "overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/getsentry/sentry-api-schema",
+        "quote": "The official, auto-generated TypeScript client for Sentry's public REST API.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://sentry.io/pricing/"
+      ],
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://docs.sentry.io/platforms/"
+      ]
+    ],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "71": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.notion.com/reference/webhooks",
+        "quote": "Whenever a page or database changes, Notion sends a secure HTTP POST request to your webhook endpoint.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.notion.com/reference/workspace-block-limits",
+        "quote": "Paid workspaces and single-member Free workspaces have unlimited blocks.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.notion.com/reference/request-limits",
+        "quote": "Business and Enterprise | 600 requests per minute (an average of 10 per second)",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.notion.com/reference/intro",
+        "quote": "Use the [JavaScript SDK](https://github.com/makenotion/notion-sdk-js), curl, or any client that can send HTTPS requests.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.notion.com/llms.txt",
+        "quote": "- [openapi](/openapi.json)",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "72": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://airtable.com/developers/web/api/webhooks-overview",
+        "quote": "Webhooks are a user-configurable way to get programmatic notifications when data is changed in an Airtable base.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sandbox": {
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "Personal access tokens are used to authenticate requests to Airtable's API.",
+        "status": "verified",
+        "note": "browser-rendered fuzzy 88%"
+      },
+      "rate_limits": {
+        "url": "https://airtable.com/developers/web/api/rate-limits",
+        "quote": "The API is limited to 5 requests per second per base.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sdks": {
+        "url": "https://github.com/Airtable/airtable.js",
+        "quote": "The official Airtable JavaScript library.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://airtable.com/developers/web/api/introduction",
+        "quote": "The Airtable API can be used to integrate your data in Airtable with any external system.",
+        "status": "verified",
+        "note": "browser-rendered"
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "73": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://linear.app/developers/webhooks",
+        "quote": "Linear provides webhooks which allow you to receive HTTP push notifications whenever data is created, updated or removed.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://linear.app/pricing",
+        "quote": "Free for everyone",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://linear.app/developers/rate-limiting",
+        "quote": "When authenticated using an API key you can make up to 2,500 requests per hour.",
+        "status": "verified",
+        "note": "fuzzy 92%"
+      },
+      "sdks": {
+        "url": "https://linear.app/developers/sdk",
+        "quote": "It’s written in Typescript but can also be used in any Javascript environment.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://linear.app/developers/graphql",
+        "quote": "It supports introspection so you can query the whole schema.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "74": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/",
+        "quote": "You can use Jira webhooks to notify your app or web application when certain events occur in Jira.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.atlassian.com/platform/marketplace/getting-started/",
+        "quote": "we'll give you a free developer instance",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+        "quote": "When any limit is exceeded, Jira returns an HTTP `429 Too Many Requests` response.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.atlassian.com/platform/forge/",
+        "quote": "Forge can be used to build custom apps and integrations or apps distributed through the Atlassian Marketplace.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json",
+        "quote": "\"components\":{\"schemas\":{",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/atlassian.com/jira/1001.0.0-SNAPSHOT/openapi.json",
+    "spec_confirmed": true
+  },
+  "75": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.asana.com/docs/webhooks-guide",
+        "quote": "Webhook subscriptions can only be created by users who have access to the specific object (e.g., task).",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.asana.com/docs/developer-sandbox",
+        "quote": "A developer sandbox is a temporary Asana domain with limited users.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.asana.com/docs/rate-limits",
+        "quote": "Limits are based on minute-long windows and differ depending on whether the domain is free or paid",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.asana.com/docs/official-client-libraries",
+        "quote": "The official libraries available are listed below:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/Asana/openapi",
+        "quote": "This repository contains the OpenAPI Specification for Asana's APIs.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/asana.com/1.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "76": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.monday.com/api-reference/reference/webhooks",
+        "quote": "You can use it to subscribe to events on your boards and get notified by an HTTP or HTTPS post request",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.monday.com/api-reference/docs/developer-sandbox",
+        "quote": "Sign up for a free monday.com developer account to build and test apps and API integrations",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+        "quote": "Read and writes are limited to 5M complexity points per minute",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.monday.com/api-reference/docs/api-sdk",
+        "quote": "It is supported in Node.js and browser environments and uses the graphql-request client under the hood.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.monday.com/api-reference/docs/getting-started",
+        "quote": "If you are already familiar with the monday.com building blocks, you can explore our GraphQL schema",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "graphql_schema",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "77": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.clickup.com/docs/webhooks",
+        "quote": "Webhooks allow you to subscribe to events in your Workspace.",
+        "status": "verified",
+        "note": "fuzzy 86%"
+      },
+      "sandbox": {
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "Use a personal API token for individual or testing purposes.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.clickup.com/docs/rate-limits",
+        "quote": "The ClickUp API applies rate limits per token.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://feedback.clickup.com/public-api/p/official-api-sdk-client",
+        "quote": "Official API SDK Client",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.clickup.com/docs/open-api-spec",
+        "quote": "The raw OpenAPI specification for the ClickUp API is available for each version of our Public API.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/clickup.com/1.0.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "78": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://coda.io/apis/v1/openapi.yaml",
+        "quote": "This API allows you to trigger automations.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "Writing data (POST/PUT/PATCH): 10 requests per 6 seconds",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We do not currently support client libraries apart from Google Apps Script.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "In an effort to standardize our API and make it accessible, we offer an OpenAPI 3.0 specification:",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "79": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/webhooks",
+        "quote": "The webhooks deliver events in callbacks to target endpoints.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+        "quote": "The Smartsheet API is restricted to users on Business and Enterprise plans.",
+        "status": "verified",
+        "note": "browser-rendered fuzzy 89%"
+      },
+      "rate_limits": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/scalability-options",
+        "quote": "The general limit for most API requests is 300 requests per minute per API token.",
+        "status": "verified",
+        "note": "fuzzy 92%"
+      },
+      "sdks": {
+        "url": "https://developers.smartsheet.com/",
+        "quote": "https://github.com/smartsheet/smartsheet-python-sdk",
+        "status": "not_found",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+        "quote": "Smartsheet OpenAPI Reference",
+        "status": "verified",
+        "note": "browser-rendered"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://developers.smartsheet.com/"
+      ]
+    ],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "80": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://help.getharvest.com/api-v2/",
+        "quote": "Just need to add time tracking to your app? Check out the easy-to-use Harvest Button & Widget",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://support.getharvest.com/hc/en-us/articles/46885623687565-Continuing-on-the-Free-plan-after-your-trial-ends",
+        "quote": "Continuing on the Free plan after your trial ends",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "rate_limits": {
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+        "quote": "The rate limit for general API requests is 100 requests per 15 seconds.",
+        "status": "verified",
+        "note": "fuzzy 90%"
+      },
+      "sdks": {
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/code-samples/",
+        "quote": "Here are several examples of using the v2 API using some popular languages:",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/postman-collection/",
+        "quote": "We've created a collection in Postman that allows you to easily try out and experiment with various API requests.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "81": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.stripe.com/webhooks",
+        "quote": "After you register a webhook endpoint, Stripe pushes real-time data to it when events happen in your Stripe account.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.stripe.com/sandboxes",
+        "quote": "You can simulate payments and use test cards to test your integration without moving money.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.stripe.com/rate-limits",
+        "quote": "In general, rate limits are measured in API requests per second, per Stripe account.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.stripe.com/sdks",
+        "quote": "Stripe provides several SDKs and libraries to help you integrate with the Stripe APIs across different platforms and languages.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/stripe/openapi",
+        "quote": "This repository contains OpenAPI specifications for Stripe's API.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/stripe.com/2022-11-15/openapi.json",
+    "spec_confirmed": true
+  },
+  "82": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://plaid.com/docs/api/webhooks/",
+        "quote": "A webhook is an HTTP request used to provide push notifications.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://plaid.com/docs/sandbox/",
+        "quote": "The Plaid Sandbox is a free and fully-featured environment for application development and testing.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://plaid.com/docs/errors/rate-limit-exceeded/",
+        "quote": "Rate limits are based on fixed windows, not rolling periods.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://plaid.com/docs/api/libraries/",
+        "quote": "These client libraries are generated from our OpenAPI file.",
+        "status": "verified",
+        "note": "fuzzy 83%"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/plaid/plaid-openapi",
+        "quote": "Plaid uses the OpenAPI 3.0.0 specification to schematize our docs and to generate our supported client libraries.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/plaid.com/2020-09-14_1.334.0/openapi.json",
+    "spec_confirmed": true
+  },
+  "83": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.binance.com/docs/binance-pay/webhook-common",
+        "quote": "For Security Purpose, Binance will add signature for webhook notification.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sandbox": {
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/testnet/general-info",
+        "quote": "Please note that these are not real assets and can be used only on the Spot Test Network itself.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "rate_limits": {
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/limits",
+        "quote": "Requests fail with HTTP status code 429 when you exceed the request rate limit.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sdks": {
+        "url": "https://github.com/binance/binance-connector-python",
+        "quote": "Collection of auto-generated Python SDK for Binance APIs.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/binance/binance-api-swagger",
+        "quote": "Binance now offers a YAML collection file on Binance Public Spot API to help developers' consulting of each endpoint",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "84": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.nmi.com/reference/overview.md",
+        "quote": "Each endpoint can be subscribed to specific events that happen in the gateway.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.nmi.com/docs/getting-started",
+        "quote": "Registration with the EMV Sandbox environment is possible following commercial relationship with NMI.",
+        "status": "verified",
+        "note": "fuzzy 90%"
+      },
+      "rate_limits": {
+        "url": "https://docs.nmi.com/reference/rate-limiting.md",
+        "quote": "In order to ensure the platform is available for everyone, in very rare cases, some users may encounter rate limits.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.nmi.com/llms.txt",
+        "quote": "For new integrations, start with the Payment Component and NMI REST API guides, API reference, SDKs, and recipes.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.nmi.com/reference/postman-collection",
+        "quote": "Import the API Postman Collection to start integrating today.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "85": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found",
+        "status": "not_found",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found",
+        "status": "not_found",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found",
+        "status": "not_found",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found",
+        "status": "not_found",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found",
+        "status": "not_found",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "webhooks",
+        "Quote for webhooks not found on https://ipayx.ai/docs"
+      ],
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://ipayx.ai/docs"
+      ],
+      [
+        "quote_not_found",
+        "rate_limits",
+        "Quote for rate_limits not found on https://ipayx.ai/docs"
+      ],
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://ipayx.ai/docs"
+      ],
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://ipayx.ai/docs"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "86": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/webhooks",
+        "quote": "Webhooks automatically notify you whenever data changes in your end-user's QuickBooks Online company files.",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sandbox": {
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes",
+        "quote": "You get a sandbox company when you create your developer profile",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/learn/limits-and-throttles",
+        "quote": "500 requests per minute per realm ID",
+        "status": "verified",
+        "note": "browser-rendered"
+      },
+      "sdks": {
+        "url": "https://blogs.a.intuit.com/category/developer-tools/sdks/page/3",
+        "quote": "downloadable SDKs for .NET, Java, and PHP",
+        "status": "fetch_failed",
+        "note": "URLError: <urlopen error [Errno 11001] getaddrinfo failed>"
+      },
+      "openapi_spec": {
+        "url": "https://github.com/intuit/QuickBooks-V3-API-Spec",
+        "quote": "404 Not Found",
+        "status": "not_found",
+        "note": "browser-rendered"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes"
+      ],
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://github.com/intuit/QuickBooks-V3-API-Spec"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "87": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Webhooks",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Demo org only",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.xero.com/faq/limits",
+        "quote": "If you exceed either rate limit you will receive an HTTP 429 (too many requests) response.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://github.com/XeroAPI/xero-node",
+        "quote": "This SDK is one of a number of SDK’s that the Xero Developer team builds and maintains.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://github.com/XeroAPI/Xero-OpenAPI",
+        "quote": "This repository holds the official Xero OpenAPI descriptions.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/xero.com/xero-identity/2.9.4/openapi.json",
+    "spec_confirmed": true
+  },
+  "88": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developer.brex.com/guides/webhooks",
+        "quote": "Brex APIs offer webhooks to notify you in real-time when certain events happen in your account.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developer.brex.com/openapi/webhooks_api.md",
+        "quote": "Staging (Note: This is not a sandbox. It will not work with customer tokens.)",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developer.brex.com/guides/rate_limits",
+        "quote": "Exceeding a rate limit will result in an HTTP 429 (too many requests) response.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developer.brex.com/guides/quickstart",
+        "quote": "This guide assumes you are a Brex customer with admin access to your dashboard.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developer.brex.com/",
+        "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "89": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.ramp.com/llms-guides/webhooks.txt",
+        "quote": "Webhooks allow your application to receive real-time notifications about events that occur in your Ramp account.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.ramp.com/llms-guides/sandbox.txt",
+        "quote": "Need a test environment for development?",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.ramp.com/llms-guides/rate-limiting.txt",
+        "quote": "The standard Developer API limit is 200 requests per 10 seconds per source IP address.",
+        "status": "verified",
+        "note": "fuzzy 92%"
+      },
+      "sdks": {
+        "url": "https://docs.ramp.com/llms.txt",
+        "quote": "[OpenAPI spec](/openapi/developer-api.json) - Canonical OpenAPI schema.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.ramp.com/llms.txt",
+        "quote": "[OpenAPI spec](/openapi/developer-api.json) - Canonical OpenAPI schema.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "points_to_page",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "90": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "No webhooks. Real-time updates need polling.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://apis.io/providers/pitchbook/",
+        "quote": "Dry Run Mode",
+        "status": "not_found",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "Rate limits are not published. They are set per contract.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "None published",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://apis.io/providers/pitchbook/",
+        "quote": "Spec Presence",
+        "status": "not_found",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://apis.io/providers/pitchbook/"
+      ],
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://apis.io/providers/pitchbook/"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "91": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Pre-GA features are available \"as is\" and might have limited support.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "Users must be granted this role in order to access Gemini Notebook Enterprise (including for free-trial subscriptions).",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "Queries | 500 per user per day",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "gcloud auth print-access-token",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Pre-GA features are available \"as is\" and might have limited support.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "source_disagrees",
+        "openapi_spec",
+        "APIs.guru lists an OpenAPI spec (https://api.apis.guru/v2/specs/google.com/v3/openapi.json), agent said no."
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/google.com/v3/openapi.json",
+    "spec_confirmed": true
+  },
+  "92": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Page unreadable (HTTP 403); no verbatim quote available.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "sandbox": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Page unreadable (HTTP 403); no verbatim quote available.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "rate_limits": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Enterprise plan users are currently limited to 10 requests per second, and exceeding that returns a 429 response (search-tool paraphrase; page 403 to fetcher).",
+        "status": "not_found",
+        "note": "browser-rendered overlap 29%"
+      },
+      "sdks": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Page unreadable (HTTP 403); no official SDK found in search results.",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      },
+      "openapi_spec": {
+        "url": "https://otter.ai/api/docs/",
+        "quote": "Otter Voice Meeting Notes - Otter.ai",
+        "status": "not_found",
+        "note": "browser-rendered overlap 0%"
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "webhooks",
+        "Quote for webhooks not found on https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API"
+      ],
+      [
+        "quote_not_found",
+        "sandbox",
+        "Quote for sandbox not found on https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API"
+      ],
+      [
+        "quote_not_found",
+        "rate_limits",
+        "Quote for rate_limits not found on https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API"
+      ],
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API"
+      ],
+      [
+        "quote_not_found",
+        "openapi_spec",
+        "Quote for openapi_spec not found on https://otter.ai/api/docs/"
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "93": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://developers.fathom.ai/webhooks.md",
+        "quote": "You also have the option of creating and deleting webhooks with an API call.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://developers.fathom.ai/faq.md",
+        "quote": "Yes. API access—keys and webhooks— are included on all plans.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://developers.fathom.ai/api-overview.md",
+        "quote": "Currently, you are able to make a maximum of 60 calls to the API in a 60 second window.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.fathom.ai/sdks/index.md",
+        "quote": "Get started with Fathom using our official TypeScript and Python SDKs",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.fathom.ai/llms.txt",
+        "quote": "[openapi](/api-reference/openapi.yaml)",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "94": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Sent as `Authorization: Bearer <key>` on every request",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Free: anonymous and lightly authenticated access for evaluation and casual use",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "REST API limits depend on the organization plan; consult https://docs.consensus.app for the current per-plan request quotas.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://consensus.app/llms.txt",
+        "quote": "Access tiers: anonymous (limited), Free, Pro, Team, and Enterprise.",
+        "status": "not_found",
+        "note": "overlap 67%"
+      },
+      "openapi_spec": {
+        "url": "https://consensus.app/llms.txt",
+        "quote": "[OpenAPI spec](https://docs.consensus.app/openapi.json): machine-readable API contract.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "quote_not_found",
+        "sdks",
+        "Quote for sdks not found on https://consensus.app/llms.txt"
+      ]
+    ],
+    "spec_check": "fetch_failed",
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "95": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.reducto.ai/studio-account/index.md",
+        "quote": "Configure webhooks to receive notifications when jobs complete.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.reducto.ai/studio-account/index.md",
+        "quote": "Monthly and yearly plans are available.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.reducto.ai/reference/rate-limits/index.md",
+        "quote": "Edge rate limits apply to every request at the ingress and protect against accidental floods.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.reducto.ai/sdk/llms.txt",
+        "quote": "Go, Javascript, and Python",
+        "status": "unreadable",
+        "note": "page empty or JS-rendered"
+      },
+      "openapi_spec": {
+        "url": "https://docs.reducto.ai/openapi.json",
+        "quote": "Reducto API",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "96": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.devin.ai/api-reference/v3/automations/get-organizations-automations-schemas.md",
+        "quote": "Return all supported trigger event schemas, keyed by source then event name.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.devin.ai/admin/billing/self-serve.md",
+        "quote": "Compare Devin's Free, Pro, Max, and Teams self-serve plans",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.devin.ai/api-reference/overview.md",
+        "quote": "`429 Too Many Requests`: Rate limit exceeded",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.devin.ai/api-reference/terraform-provider.md",
+        "quote": "Manage Devin resources as infrastructure-as-code with the official Terraform provider",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.devin.ai/llms.txt",
+        "quote": "- [v3-openapi](/v3-openapi.json)",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "97": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://docs.higgsfield.ai/docs/how-to/webhooks.md",
+        "quote": "Higgsfield sends one or more HTTP `POST` deliveries after the request reaches `completed`, `failed`, or `nsfw`.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://docs.higgsfield.ai/docs/help/faq.md",
+        "quote": "The API runs on pay-as-you-go by default: you top up a balance and pay per generation.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://docs.higgsfield.ai/docs/concepts/rate-limits.md",
+        "quote": "The primary generation limit is concurrency: the number of requests that may be processing at the same time.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://docs.higgsfield.ai/docs/help/faq.md",
+        "quote": "We provide official Python and Node.js/TypeScript SDKs.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://docs.higgsfield.ai/openapi.json",
+        "quote": "HTTP 404 - no OpenAPI spec found at this path; FAQ does not mention OpenAPI.",
+        "status": "fetch_failed",
+        "note": "HTTPError: HTTP Error 404: Not Found"
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  },
+  "98": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "This is a command-line interface (CLI) for [mermaid](https://mermaid.js.org/).",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "npm install -g @mermaid-js/mermaid-cli",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "This is a command-line interface (CLI) for [mermaid](https://mermaid.js.org/).",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [
+      [
+        "source_disagrees",
+        "openapi_spec",
+        "APIs.guru lists an OpenAPI spec (https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json), agent said no."
+      ]
+    ],
+    "spec_check": null,
+    "apis_guru_spec": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+    "spec_confirmed": true
+  },
+  "99": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://transcriptapi.com/openapi.json",
+        "quote": "Rate limits: 200 requests per minute per key. Honor X-RateLimit headers and Retry-After on 429.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://transcriptapi.com/blog/transcriptapi-vs-youtube-transcript-io",
+        "quote": "100 free credits to try the API with no card required.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://transcriptapi.com/openapi.json",
+        "quote": "Rate limits: 200 requests per minute per key. Honor X-RateLimit headers and Retry-After on 429.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://transcriptapi.com/docs",
+        "quote": "Get Started",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://transcriptapi.com/openapi.json",
+        "quote": "YouTube Transcript API - Public",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": "openapi_document",
+    "apis_guru_spec": null,
+    "spec_confirmed": true
+  },
+  "100": {
+    "quotes": {
+      "webhooks": {
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Register a webhook URL in your integration and Grain will send a payload to that URL whenever a registered event occurs, for example, a new recording is processed, a recording's settings change, or a clip is created.",
+        "status": "verified",
+        "note": ""
+      },
+      "sandbox": {
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "No sandbox is available at this time.",
+        "status": "verified",
+        "note": ""
+      },
+      "rate_limits": {
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The API allows 300 requests per minute per token.",
+        "status": "verified",
+        "note": ""
+      },
+      "sdks": {
+        "url": "https://developers.grain.com/",
+        "quote": "A Personal Access Token (PAT) authenticates requests as you, with the same access you have in Grain.",
+        "status": "verified",
+        "note": ""
+      },
+      "openapi_spec": {
+        "url": "https://developers.grain.com/",
+        "quote": "A Personal Access Token (PAT) authenticates requests as you, with the same access you have in Grain.",
+        "status": "verified",
+        "note": ""
+      }
+    },
+    "issues": [],
+    "spec_check": null,
+    "apis_guru_spec": null,
+    "spec_confirmed": false
+  }
+}

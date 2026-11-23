@@ -1,0 +1,47 @@
+{
+  "id": 46,
+  "app": "Squarespace",
+  "seconds": 38,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook Subscriptions API (OAuth only, no API keys) for order/contact etc. topics; 48h retries; send-test-notification endpoint",
+      "evidence": {
+        "url": "https://developers.squarespace.com/webhooks/overview",
+        "quote": "Instead of making repeated API calls, a client may subscribe to notifications from Squarespace for supported system events."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox/test mode/free dev account found. Building a custom app needs a Squarespace Commerce Advanced plan (paid); OAuth client registration at account.squarespace.com/developer-apps. Only a send-test-notification webhook endpoint exists.",
+      "evidence": {
+        "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+        "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "300 requests/min (5 req/s) per Commerce API; 429 with 1-min cooldown; Create Order 100/hr per site with API key",
+      "evidence": {
+        "url": "https://developers.squarespace.com/commerce-apis/rate-limits",
+        "quote": "Squarespace Commerce APIs employ a rate limit of 300 requests per minute"
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developers.squarespace.com/commerce-apis/overview",
+        "quote": "Squarespace Commerce APIs employ a rate limit of 300 requests per minute"
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://developers.squarespace.com/",
+        "quote": "Integrate our API docs directly into Claude or ChatGPT."
+      }
+    },
+    "confidence": "medium"
+  }
+}

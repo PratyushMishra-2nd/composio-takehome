@@ -1,0 +1,52 @@
+{
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "seconds": 62,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Event subscriptions delivered via HTTP POST webhook to developer public server URL, or SDK long-connection (WebSocket). Retries at 15s, 5min, 1h, 6h; verification token + encrypt key supported.",
+      "evidence": {
+        "url": "https://open.larksuite.com/document/server-docs/event-subscription/overview-of-event-subscription",
+        "quote": "传统的 Webhook 模式，该方式需要你提供用于接收事件或回调消息的服务器公网地址。"
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No dedicated sandbox or test-tenant doc found in Lark docs index. Docs only cover creating test apps; Lark tenants can be created free, but no documented sandbox found.",
+      "evidence": {
+        "url": "https://open.larksuite.com/llms-docs/zh-CN/llms-home.txt",
+        "quote": "创建测试应用"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per API, per app, per tenant; tiers from 10/min to 100/s (e.g. 1000/min and 50/s); HTTP 429 code 99991400; custom bots 100/min, 5/s",
+      "evidence": {
+        "url": "https://open.larksuite.com/document/server-docs/getting-started/frequency-control.md",
+        "quote": "当前 API在每个应用、每个租户 1000 次/分钟、50 次/秒"
+      }
+    },
+    "sdks": {
+      "official": [
+        "go",
+        "python",
+        "java",
+        "node"
+      ],
+      "evidence": {
+        "url": "https://open.larksuite.com/document/ukTMukTMukTM/uETO1YjLxkTN24SM5UjN.md",
+        "quote": "目前我们提供了Go、Python、Java、NodeJS 四种语言的 SDK。"
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "# Lark Developer"
+      }
+    },
+    "confidence": "medium"
+  }
+}

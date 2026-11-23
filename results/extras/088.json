@@ -1,0 +1,47 @@
+{
+  "id": 88,
+  "app": "Brex",
+  "seconds": 38,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks API: register a URL, list/get/update webhooks under /v1/webhooks; signature verification and IP allowlist documented.",
+      "evidence": {
+        "url": "https://developer.brex.com/guides/webhooks",
+        "quote": "Brex APIs offer webhooks to notify you in real-time when certain events happen in your account."
+      }
+    },
+    "sandbox": {
+      "available": "no",
+      "detail": "No sandbox or free dev account found. Quickstart assumes existing Brex customer with admin dashboard access. A staging server exists but is explicitly not a sandbox and does not work with customer tokens.",
+      "evidence": {
+        "url": "https://developer.brex.com/openapi/webhooks_api.md",
+        "quote": "Staging (Note: This is not a sandbox. It will not work with customer tokens.)"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "1,000 requests per 60 seconds per Client ID and Brex account; HTTP 429 when exceeded",
+      "evidence": {
+        "url": "https://developer.brex.com/guides/rate_limits",
+        "quote": "Exceeding a rate limit will result in an HTTP 429 (too many requests) response."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.brex.com/guides/quickstart",
+        "quote": "This guide assumes you are a Brex customer with admin access to your dashboard."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developer.brex.com/_bundle/openapi/webhooks_api.yaml",
+      "evidence": {
+        "url": "https://developer.brex.com/",
+        "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification"
+      }
+    },
+    "confidence": "medium"
+  }
+}

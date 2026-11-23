@@ -1,0 +1,54 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "seconds": 35,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks integration sends POST with JSON to a URL on monitor alerts/events. Configured in the Datadog UI; no API found to subscribe to arbitrary event types.",
+      "evidence": {
+        "url": "https://docs.datadoghq.com/integrations/webhooks/",
+        "quote": "It triggers a POST request to the URL you set with the following content in JSON format."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "Dedicated sandbox account available on request via the Datadog Partner Network (Technology Partner track). Page does not say it is free.",
+      "evidence": {
+        "url": "https://docs.datadoghq.com/developers/integrations/",
+        "quote": "Request a dedicated Datadog sandbox account for development:"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Limits vary per endpoint, returned in X-RateLimit-* headers; 429 when limited; event submission 250,000/min per org; metric submission not rate limited",
+      "evidence": {
+        "url": "https://docs.datadoghq.com/api/latest/rate-limits/",
+        "quote": "The rate limit for event submission is `250,000` events per minute per organization."
+      }
+    },
+    "sdks": {
+      "official": [
+        "java",
+        "python",
+        "ruby",
+        "go",
+        "typescript",
+        "rust"
+      ],
+      "evidence": {
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "Or check out the libraries directly:"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/DataDog/datadog-api-client-python/blob/master/.generator/schemas/v1/openapi.yaml",
+      "evidence": {
+        "url": "https://github.com/DataDog/datadog-api-client-python",
+        "quote": "generated from Datadog's public OpenAPI specifications by internal tooling."
+      }
+    },
+    "confidence": "medium"
+  }
+}

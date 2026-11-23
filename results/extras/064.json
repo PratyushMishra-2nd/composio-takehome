@@ -1,0 +1,51 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "seconds": 18,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Notifications webhooks deliver alerts (e.g. health checks, DDoS, etc.) to HTTP endpoints; no general per-resource event subscription API",
+      "evidence": {
+        "url": "https://developers.cloudflare.com/notifications/get-started/configure-webhooks/",
+        "quote": "Webhooks let you deliver Cloudflare alerts to any service that accepts HTTP callbacks."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free plan / Workers Free plan accounts usable for testing; no dedicated sandbox env",
+      "evidence": {
+        "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+        "quote": "By default, users have access to the Workers Free plan."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "1,200 requests per 5 minutes per user (global)",
+      "evidence": {
+        "url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
+        "quote": "The global rate limit for the Cloudflare API is 1,200 requests per five minute period per user, and applies cumulatively regardless of whether the request is made via the dashboard, API key, or API token."
+      }
+    },
+    "sdks": {
+      "official": [
+        "go",
+        "typescript",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://developers.cloudflare.com/fundamentals/api/reference/sdks/",
+        "quote": "Use Cloudflare API SDKs for Go, TypeScript, and Python to integrate Cloudflare services into your applications."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/cloudflare/api-schemas",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/cloudflare/api-schemas/main/README.md",
+        "quote": "This repository contains OpenAPI schemas for the Cloudflare API."
+      }
+    },
+    "confidence": "medium"
+  }
+}

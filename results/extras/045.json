@@ -1,0 +1,49 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "seconds": 63,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Synchronous Commerce webhooks plus asynchronous Adobe I/O Events (e.g. plugin.magento.sales.api.order_management.place) for event-driven apps",
+      "evidence": {
+        "url": "https://developer.adobe.com/commerce/extensibility/webhooks/",
+        "quote": "Webhooks enable developers to configure synchronous logic to execute calls to external systems when an Adobe Commerce event triggers."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "No self-serve free sandbox found. Magento Open Source is free to self-host. An Adobe Commerce sandbox is given to Technology Partner Program members on request via support ticket.",
+      "evidence": {
+        "url": "https://partners.adobe.com/technologyprogram/experiencecloud/knowledgebase/7069a017937f4214257ff9ed0bba1032.html",
+        "quote": "Be in good standing in the Commerce Marketplace."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Only optional order-placement throttling, off by default: per-guest (IP) and per-customer request limits over 60/3600/86400s. No general REST/GraphQL limit documented.",
+      "evidence": {
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/rate-limiting",
+        "quote": "Rate limiting is disabled by default."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://developer.adobe.com/commerce/extensibility/",
+        "quote": "Commerce SDKs and libraries provide reusable patterns for authentication, configuration, event handling, and Commerce integration, including the Admin UI SDK and OOPE modules."
+      }
+    },
+    "openapi_spec": {
+      "available": "graphql_schema",
+      "url": "https://<commerce-server>/graphql (introspection); REST reference: https://adobe-commerce.redoc.ly",
+      "evidence": {
+        "url": "https://developer.adobe.com/commerce/webapi/graphql/",
+        "quote": "You can also use introspection queries to discover the schema programmatically."
+      }
+    },
+    "confidence": "medium"
+  }
+}

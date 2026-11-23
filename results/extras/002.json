@@ -1,0 +1,52 @@
+{
+  "id": 2,
+  "app": "HubSpot",
+  "seconds": 198,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks v3 subscription API plus new v4 webhooks journal API (beta). Subscribe to CRM object events (create/update/delete etc.) per installed app.",
+      "evidence": {
+        "url": "https://developers.hubspot.com/docs/api/webhooks",
+        "quote": "The webhooks journal API enables third-party integrators to subscribe to real-time events, retrieve historical event data, and manage snapshots of CRM objects"
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free developer test accounts (up to 10) with 90-day trial of many enterprise features; standard/CMS/development sandboxes also exist (paid tiers).",
+      "evidence": {
+        "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+        "quote": "You can create up to 10 test accounts to test apps and integrations without affecting any real HubSpot data."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Marketplace-app installs: 110 requests / 10 s per installed account, plus daily limits; rate-limit headers returned",
+      "evidence": {
+        "url": "https://developers.hubspot.com/docs/api/usage-details",
+        "quote": "each HubSpot account that installs your app is limited to 110 requests every 10 seconds."
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "python",
+        "php",
+        "ruby"
+      ],
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/HubSpot/hubspot-api-nodejs/master/README.md",
+        "quote": "NodeJS v3 [HubSpot API](https://developers.hubspot.com/docs/api/overview) SDK(Client) files"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://api.hubspot.com/public/api/spec/v1/specs",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/HubSpot/HubSpot-public-api-spec-collection/main/README.md",
+        "quote": "This repository contains the Open API 3.0 schema for HubSpot's public APIs and is integrated with [HubSpot's Public API Postman Workspace]"
+      }
+    },
+    "confidence": "medium"
+  }
+}

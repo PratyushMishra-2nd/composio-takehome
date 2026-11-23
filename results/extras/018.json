@@ -1,0 +1,49 @@
+{
+  "id": 18,
+  "app": "Help Scout",
+  "seconds": 64,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks via UI config and REST (POST /v2/webhooks creates a webhook subscription); events for conversations, tags, customers, satisfaction ratings.",
+      "evidence": {
+        "url": "https://developer.helpscout.com/webhooks/",
+        "quote": "Webhooks enable Help Scout to call a script on your server when one or more events have happened."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox or developer account found in docs. API access depends on paid plan; any trial is on pricing pages, not confirmed.",
+      "evidence": {
+        "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limiting/",
+        "quote": "Your current rate limit depends on your plan."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "200 req/min per account (plan-dependent); writes count as 2; 12 writes per 5s burst; 429 on throttle",
+      "evidence": {
+        "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limiting/",
+        "quote": "Write requests (POST, PUT, DELETE, PATCH) count as 2 requests toward the rate limit."
+      }
+    },
+    "sdks": {
+      "official": [
+        "php"
+      ],
+      "evidence": {
+        "url": "https://developer.helpscout.com/mailbox-api/",
+        "quote": "Version 2.0 of our PHP SDK client has been updated to support Inbox API 2.0."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://developer.helpscout.com/llms.txt",
+        "quote": "For detailed API documentation, examples, and interactive testing, visit https://developer.helpscout.com"
+      }
+    },
+    "confidence": "medium"
+  }
+}

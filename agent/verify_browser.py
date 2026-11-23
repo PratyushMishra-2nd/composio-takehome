@@ -6,6 +6,7 @@ Many docs sites are JS-rendered or bot-protected, so verify.py's plain fetch mar
 verify.py then re-checks those quotes against the rendered text.
 
 Usage: python agent/verify_browser.py && python agent/verify.py --pass final
+       python agent/verify_browser.py --extras && python agent/verify_extras.py
 """
 import asyncio, json, re
 from pathlib import Path
@@ -39,8 +40,14 @@ async def render(ctx, sem, url, out):
 
 
 async def main():
-    v = json.loads((ROOT / "results" / "verify_final.json").read_text(encoding="utf-8"))
-    urls = sorted({q["url"] for c in v.values() for q in c["quotes"] if q["status"] != "verified" and q["url"].startswith("http")})
+    import sys
+    if "--extras" in sys.argv:  # enrichment-field evidence
+        v = json.loads((ROOT / "results" / "verify_extras.json").read_text(encoding="utf-8"))
+        qs = [q for c in v.values() for q in c["quotes"].values()]
+    else:
+        v = json.loads((ROOT / "results" / "verify_final.json").read_text(encoding="utf-8"))
+        qs = [q for c in v.values() for q in c["quotes"]]
+    urls = sorted({q["url"] for q in qs if q["status"] != "verified" and q["url"].startswith("http")})
     BCACHE.mkdir(parents=True, exist_ok=True)
     todo = [u for u in urls if not key(u).exists()]
     print(f"{len(urls)} cited URLs not confirmed by plain fetch; rendering {len(todo)} in headless Chromium", flush=True)

@@ -1,0 +1,51 @@
+{
+  "id": 86,
+  "app": "QuickBooks",
+  "seconds": 39,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Dashboard-configured webhooks (endpoint URL, intuit-signature header) for entity change events on authorized QBO companies; moving to CloudEvents payload format.",
+      "evidence": {
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/webhooks",
+        "quote": "Webhooks automatically notify you whenever data changes in your end-user's QuickBooks Online company files."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Sandbox company created with free developer profile; up to 10 sandbox companies, each valid 2 years; non-commercial dev/testing.",
+      "evidence": {
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes",
+        "quote": "You get a sandbox company when you create your developer profile"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "500 requests/min per realm ID (sandbox and production); batch endpoint lower (40/min per realm+app per one page; 120/min per another); ~10 concurrent requests per realm",
+      "evidence": {
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/learn/limits-and-throttles",
+        "quote": "500 requests per minute per realm ID"
+      }
+    },
+    "sdks": {
+      "official": [
+        "dotnet",
+        "java",
+        "php"
+      ],
+      "evidence": {
+        "url": "https://blogs.a.intuit.com/category/developer-tools/sdks/page/3",
+        "quote": "downloadable SDKs for .NET, Java, and PHP"
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://github.com/intuit/QuickBooks-V3-API-Spec",
+        "quote": "404 Not Found"
+      }
+    },
+    "confidence": "low"
+  }
+}

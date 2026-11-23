@@ -1,0 +1,52 @@
+{
+  "id": 43,
+  "app": "BigCommerce",
+  "seconds": 53,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "POST /v3/hooks with scopes like store/order/updated; delivery via HTTPS, Google Pub/Sub, Amazon EventBridge",
+      "evidence": {
+        "url": "https://docs.bigcommerce.com/docs/integrations/webhooks",
+        "quote": "Subscribe to BigCommerce store events and receive real-time callbacks; configure scopes, payloads, and retries."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Partner Portal 'Partner Use Sandbox' stores for dev/testing (partner signup; price not stated); 15-day free trial also exists",
+      "evidence": {
+        "url": "https://docs.bigcommerce.com/docs/start/about/sandboxes",
+        "quote": "Sandbox stores are intended for developing and testing apps. They cannot process any live transactions."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "OAuth apps: quota refreshed every 30s; plan-based, e.g. 150/30s Core/Growth, 450/30s Scale; X-Rate-Limit headers",
+      "evidence": {
+        "url": "https://docs.bigcommerce.com/docs/start/best-practices/api-rate-limits",
+        "quote": "Apps using OAuth are rate-limited based on a quota that's refreshed every 30 seconds."
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "javascript (checkout-sdk-js)",
+        "php (legacy v2)",
+        "python (legacy v2)"
+      ],
+      "evidence": {
+        "url": "https://docs.bigcommerce.com/developer/docs/overview/tools-and-sdks",
+        "quote": "Tools and SDKs page lists a Node API Client (node-bigcommerce) and the Checkout SDK."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/bigcommerce/api-specs/tree/main/reference",
+      "evidence": {
+        "url": "https://github.com/bigcommerce/api-specs",
+        "quote": "As of December 27, 2023, you can find all the public BigCommerce DevDocs at https://github.com/bigcommerce/docs!"
+      }
+    },
+    "confidence": "medium"
+  }
+}

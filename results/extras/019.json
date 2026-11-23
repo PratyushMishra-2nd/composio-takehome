@@ -1,0 +1,47 @@
+{
+  "id": 19,
+  "app": "Gorgias",
+  "seconds": 55,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "HTTP integrations fire requests to external URL on ticket events (ticket_created, ticket_updated, ticket_message_created, ticket_status_updated, ticket_assignee_updated, etc.), HMAC-signed.",
+      "evidence": {
+        "url": "https://developers.gorgias.com/reference/create-integration.md",
+        "quote": "Events that will trigger the request to the external service."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "Sandbox via developer portal; needs draft app and approval; new sandboxes are Demo accounts, email techpartners to switch to Developer plan. Free not stated.",
+      "evidence": {
+        "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal",
+        "quote": "Currently all new Sandbox accounts are Demo accounts by default."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Leaky bucket: 40 req/20s (API key), 80 req/20s (OAuth2 apps); Enterprise uses 10s window; 429 + Retry-after",
+      "evidence": {
+        "url": "https://developers.gorgias.com/reference/limitations.md",
+        "quote": "The Gorgias API is rate-limited using a leaky bucket algorithm, meaning that the number of requests you can make in a period of time is limited, but replenishes."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developers.gorgias.com/llms.txt",
+        "quote": "No SDK mentioned in the Gorgias developer docs index (llms.txt)."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://developers.gorgias.com/llms.txt",
+        "quote": "No downloadable spec URL listed; reference pages embed OpenAPI 3.1.0 inline (Gorgias REST API)."
+      }
+    },
+    "confidence": "medium"
+  }
+}

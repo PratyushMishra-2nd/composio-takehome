@@ -1,0 +1,47 @@
+{
+  "id": 92,
+  "app": "Otter AI",
+  "seconds": 57,
+  "result": {
+    "webhooks": {
+      "available": "unknown",
+      "detail": "Could not verify. Otter.ai Public API help article returned 403 to fetcher. apis.io webhook claim was about TryOtter (different company), so ignored.",
+      "evidence": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Page unreadable (HTTP 403); no verbatim quote available."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox/test-mode docs found. Public API appears Enterprise-only; Basic free plan exists for the product but not as a dev sandbox.",
+      "evidence": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Page unreadable (HTTP 403); no verbatim quote available."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Public API: ~10 req/s for Enterprise users, 429 when exceeded (from search summary of help article, not read directly; MCP limits not documented)",
+      "evidence": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Enterprise plan users are currently limited to 10 requests per second, and exceeding that returns a 429 response (search-tool paraphrase; page 403 to fetcher)."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Page unreadable (HTTP 403); no official SDK found in search results."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://otter.ai/api/docs/",
+        "quote": "Otter Voice Meeting Notes - Otter.ai"
+      }
+    },
+    "confidence": "low"
+  }
+}

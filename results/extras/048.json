@@ -1,0 +1,47 @@
+{
+  "id": 48,
+  "app": "Gumroad",
+  "seconds": 40,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Resource subscriptions API (PUT to subscribe, DELETE by id, list) for sale, refund, dispute, cancellation and subscription events. Also 'Ping' endpoint set in Gumroad settings with a test-ping button.",
+      "evidence": {
+        "url": "https://www.mintlify.com/antiwork/gumroad/api/resource-subscriptions",
+        "quote": "Resource subscriptions allow you to receive webhook notifications when specific events occur in your Gumroad account."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox or test mode found in docs. Gumroad accounts are free to create, so a free account can test the API, and a test ping exists for webhooks. No dedicated sandbox documented.",
+      "evidence": {
+        "url": "https://gumroad.com/ping",
+        "quote": "Ping"
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not documented; no numeric limits published (429 on exceed, per third-party mirror)",
+      "evidence": {
+        "url": "https://jentic.com/apis/gumroad.com/gumroad",
+        "quote": "Gumroad does not publish an OpenAPI specification."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://github.com/antiwork/gumroad-cli",
+        "quote": "CLI for the Gumroad API"
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://jentic.com/apis/gumroad.com/gumroad",
+        "quote": "Gumroad does not publish an OpenAPI specification."
+      }
+    },
+    "confidence": "low"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": 30,
+  "app": "Vonage",
+  "seconds": 46,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Vonage POSTs webhooks to developer-configured URLs for inbound messages, message status/delivery receipts, voice answer/event callbacks.",
+      "evidence": {
+        "url": "https://developer.vonage.com/en/getting-started/concepts/webhooks",
+        "quote": "Webhooks are also used to notify your application of events such as an incoming call or message."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Messages API Sandbox free (WhatsApp, Viber, Messenger, Instagram), 100 msgs/month, 1 msg/s. Also free signup credit on new account.",
+      "evidence": {
+        "url": "https://developer.vonage.com/en/messages/concepts/messages-api-sandbox",
+        "quote": "The Messages API Sandbox is free to use."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Messages API: 75 req/s per API key default, raisable; 429 on exceed",
+      "evidence": {
+        "url": "https://developer.vonage.com/en/messages/technical-details",
+        "quote": "The default rate limit for requests to the Messages API is 75 requests per second per API key."
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "python",
+        "java",
+        "kotlin",
+        "ruby",
+        "php",
+        "dotnet"
+      ],
+      "evidence": {
+        "url": "https://developer.vonage.com/en/tools",
+        "quote": "Quickly integrate Vonage APIs in your server-side applications."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/nexmo/api-specification",
+      "evidence": {
+        "url": "https://developer.vonage.com/en/blog/openapi-makes-easier-integrations",
+        "quote": "You can also find all our specs in the `definitions/` folder of our [API Specifications GitHub repository]"
+      }
+    },
+    "confidence": "medium"
+  }
+}

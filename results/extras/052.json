@@ -1,0 +1,47 @@
+{
+  "id": 52,
+  "app": "SE Ranking",
+  "seconds": 43,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhook or event-subscription docs found on API getting-started or api.html pages; API is poll-based.",
+      "evidence": {
+        "url": "https://seranking.com/api/project/getting-started/",
+        "quote": "Any API method can be invoked no more than 5 times per second."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free trial account, no credit card required; Data API trial limited to 1 RPS. No separate sandbox/test mode found.",
+      "evidence": {
+        "url": "https://seranking.com/api/rate-limits/",
+        "quote": "During the trial period, the Data API has a default rate limit of 1 request per second (RPS)."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Data API 10 req/s per key; Project API 5 req/s per key; trial Data API 1 req/s; HTTP 429 when exceeded",
+      "evidence": {
+        "url": "https://seranking.com/api/rate-limits/",
+        "quote": "During the trial period, the Data API has a default rate limit of 1 request per second (RPS)."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://github.com/seranking/openapi",
+        "quote": "Developers can use these specs to generate client libraries."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/seranking/openapi/main/openapi/data-api.yaml",
+      "evidence": {
+        "url": "https://github.com/seranking/openapi",
+        "quote": "This repository contains OpenAPI specifications for the SE Ranking API."
+      }
+    },
+    "confidence": "medium"
+  }
+}

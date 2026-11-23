@@ -1,0 +1,51 @@
+{
+  "id": 27,
+  "app": "Telegram",
+  "seconds": 28,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Bot API setWebhook: Telegram POSTs JSON Update objects to bot's HTTPS URL; alternative to getUpdates polling.",
+      "evidence": {
+        "url": "https://core.telegram.org/bots/api",
+        "quote": "Whenever there is an update for the bot, we will send an HTTPS POST request to the specified URL, containing a JSON-serialized Update."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Bot API is free (create bot via BotFather). Separate dedicated test environment for advanced testing; flood limits not raised there.",
+      "evidence": {
+        "url": "https://core.telegram.org/bots/features",
+        "quote": "Telegram also offers a dedicated test environment suitable for more advanced testing."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "~30 messages/sec bulk broadcast per bot (paid broadcasts raise it); also per-chat limits",
+      "evidence": {
+        "url": "https://core.telegram.org/bots/faq",
+        "quote": "For bulk notifications, bots are not able to broadcast more than about 30 messages per second, unless they enable paid broadcasts to increase the limit."
+      }
+    },
+    "sdks": {
+      "official": [
+        "C/C++ (TDLib)",
+        "Java (TDLib JNI binding)",
+        "C# (TDLib C++/CLI binding)"
+      ],
+      "evidence": {
+        "url": "https://core.telegram.org/tdlib",
+        "quote": "TDLib can be easily used with any programming language that is able to execute C functions. Additionally it already has native bindings to Java (using JNI) and C# (using C++/CLI)."
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://core.telegram.org/bots/api",
+        "quote": "There are two mutually exclusive ways of receiving updates for your bot - the getUpdates method on one hand and webhooks on the other."
+      }
+    },
+    "confidence": "medium"
+  }
+}

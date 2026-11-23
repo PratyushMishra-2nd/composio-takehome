@@ -1,0 +1,52 @@
+{
+  "id": 55,
+  "app": "Apify",
+  "seconds": 49,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks fire on system events (Actor run/build created, succeeded, failed, timed out, aborted, resurrected). Configurable in Console or via API, incl. ad-hoc webhooks per run.",
+      "evidence": {
+        "url": "https://docs.apify.com/platform/integrations/webhooks",
+        "quote": "Webhooks allow you to configure the Apify platform to perform an action when a certain system event occurs."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free plan with free usage credits; sign up free, no card. No separate sandbox, but free account works for integration testing.",
+      "evidence": {
+        "url": "https://apify.com/pricing",
+        "quote": "Enjoy $500 worth of free usage to build your own Actors and AI agents along with other benefits for 6 months."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "250,000 req/min global per user; 60 req/sec per resource default (some endpoints higher); 429 on exceed",
+      "evidence": {
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "The global rate limit is set to 250 000 requests per minute."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript",
+        "python",
+        "go",
+        "php"
+      ],
+      "evidence": {
+        "url": "https://docs.apify.com/api/client/js/",
+        "quote": "The Apify API client is the official library to access the Apify REST API from your JavaScript/TypeScript applications."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.apify.com/api/openapi.json",
+      "evidence": {
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "Download OpenAPI"
+      }
+    },
+    "confidence": "medium"
+  }
+}

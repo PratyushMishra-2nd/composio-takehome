@@ -1,0 +1,53 @@
+{
+  "id": 36,
+  "app": "Klaviyo",
+  "seconds": 55,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks API: create/get/delete webhook subscriptions to event topics (scopes webhooks:read/webhooks:write).",
+      "evidence": {
+        "url": "https://developers.klaviyo.com/en/reference/create_webhook",
+        "quote": "A list of topics to subscribe to."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Getting-started guide has optional step to create a sandbox/test account; Klaviyo test accounts do not need paid plan (pricing not verified).",
+      "evidence": {
+        "url": "https://developers.klaviyo.com/en/docs/getting-started",
+        "quote": "Create a sandbox account (optional)"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-account fixed windows, burst 1s + steady 1min; tiers XS 1/s,15/m up to XL 350/s,3500/m; per-endpoint",
+      "evidence": {
+        "url": "https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling",
+        "quote": "use a fixed-window rate limiting algorithm with two distinct windows: burst (1-second window) and steady (1-minute window)."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "php",
+        "ruby",
+        "node",
+        "swift (iOS mobile)"
+      ],
+      "evidence": {
+        "url": "https://developers.klaviyo.com/en/docs/sdk-overview",
+        "quote": "Klaviyo offers SDKs in various languages (Python, PHP, Ruby, Node), with plans to support more in the near future."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/klaviyo/openapi/main/openapi/stable.json",
+      "evidence": {
+        "url": "https://github.com/klaviyo/openapi",
+        "quote": "Versioned OpenAPI specs for the Klaviyo API."
+      }
+    },
+    "confidence": "medium"
+  }
+}

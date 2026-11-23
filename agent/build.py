@@ -35,6 +35,9 @@ def main():
     acc = load_json("results/accuracy.json", None)
     cat = load_json("results/composio_catalog.json", {})
     issues = load_json("results/outreach_issues.json", {})
+    ex_dir = ROOT / "results" / "extras"
+    extras = {int(f.stem): json.loads(f.read_text(encoding="utf-8"))["result"] for f in ex_dir.glob("[0-9][0-9][0-9].json")} if ex_dir.exists() else {}
+    vx = load_json("results/verify_extras.json", {})
     human = load_json("results/human_review.json", {})
 
     apps = []
@@ -64,6 +67,17 @@ def main():
             "composio": {"in_catalog": cat.get(str(i), {}).get("in_composio"), "toolkits": cat.get(str(i), {}).get("matched_toolkits", []),
                          "tools": (cat.get(str(i), {}).get("primary_tools", []) + cat.get(str(i), {}).get("related_tools", []))[:6]},
             "tracker_issue": (issues.get(str(i)) or {}).get("url"),
+            "extras": (lambda x, v: x and {
+                "webhooks": x["webhooks"]["available"], "webhooks_detail": x["webhooks"]["detail"],
+                "sandbox": x["sandbox"]["available"], "sandbox_detail": x["sandbox"]["detail"],
+                "rate_limits": x["rate_limits"]["summary"] if x["rate_limits"]["documented"] else "not documented",
+                "sdks": x["sdks"]["official"],
+                "spec": x["openapi_spec"]["available"], "spec_url": x["openapi_spec"]["url"],
+                "spec_confirmed": (v or {}).get("spec_confirmed"), "spec_check": (v or {}).get("spec_check"),
+                "apis_guru_spec": (v or {}).get("apis_guru_spec"), "confidence": x["confidence"],
+                "evidence": [dict(q, field=f) for f, q in ((v or {}).get("quotes") or {k: dict(x[k]["evidence"], status="unchecked", note="") for k in ("webhooks", "sandbox", "rate_limits", "sdks", "openapi_spec")}).items()],
+                "issues": [{"type": t, "field": f, "msg": m} for t, f, m in (v or {}).get("issues", [])],
+            })(extras.get(i), vx.get(str(i))),
             "seconds": rec.get("seconds"),
         })
 
@@ -94,6 +108,23 @@ def main():
                           for a in sorted(apps, key=lambda a: ["build_now", "build_with_caveat", "needs_outreach", "not_buildable"].index(a["verdict"]))
                           if a["composio"]["in_catalog"] is False],
         "tracker_issues": sum(1 for a in apps if a["tracker_issue"]),
+        "extras": (lambda E: E and {
+            "n": len(E),
+            "webhooks_yes": sum(1 for a in E if a["extras"]["webhooks"] == "yes"),
+            "sandbox_free": sum(1 for a in E if a["extras"]["sandbox"] == "free"),
+            "sandbox_paid": sum(1 for a in E if a["extras"]["sandbox"] == "paid_or_on_request"),
+            "rate_documented": sum(1 for a in E if a["extras"]["rate_limits"] != "not documented"),
+            "sdk_any": sum(1 for a in E if a["extras"]["sdks"]),
+            "spec_claimed": sum(1 for a in E if a["extras"]["spec"] in ("openapi", "graphql_schema")),
+            "spec_confirmed": sum(1 for a in E if a["extras"]["spec_confirmed"]),
+            "generatable_build_now": [a["app"] for a in E if a["verdict"] == "build_now" and a["extras"]["spec"] in ("openapi", "graphql_schema")],
+            "no_webhooks": [a["app"] for a in E if a["extras"]["webhooks"] == "no"],
+            "quotes": dict(Counter(q["status"] for a in E for q in a["extras"]["evidence"])),
+            "by_category": {cat: {"webhooks": sum(1 for a in E if a["category"] == cat and a["extras"]["webhooks"] == "yes"),
+                                  "sandbox": sum(1 for a in E if a["category"] == cat and a["extras"]["sandbox"] == "free"),
+                                  "spec": sum(1 for a in E if a["category"] == cat and a["extras"]["spec"] in ("openapi", "graphql_schema"))}
+                            for cat in dict.fromkeys(a["category"] for a in E)},
+        })([a for a in apps if a["extras"]]),
         "by_category": {c: dict(v) for c, v in by_cat.items()},
         "blockers": [{"id": a["id"], "app": a["app"], "verdict": a["verdict"], "access": a["access"], "blocker": a["blocker"]}
                      for a in apps if a["verdict"] != "build_now"],
@@ -124,11 +155,14 @@ def main():
     with open(ROOT / "docs" / "apps.csv", "w", newline="", encoding="utf-8") as fh:
         w = _csv.writer(fh)
         w.writerow(["id", "app", "category", "description", "auth_methods", "access", "api_types", "api_breadth", "mcp_exists", "mcp_official",
-                    "mcp_url", "verdict", "blocker", "in_composio", "composio_toolkits", "tracker_issue", "evidence_urls"])
+                    "mcp_url", "verdict", "blocker", "in_composio", "composio_toolkits", "tracker_issue",
+                    "webhooks", "sandbox", "rate_limits", "official_sdks", "spec", "spec_url", "evidence_urls"])
         for a in apps:
             w.writerow([a["id"], a["app"], a["category"], a["description"], ";".join(a["auth_methods"]), a["access"], ";".join(a["api_types"]),
                         a["api_breadth"], a["mcp_exists"], a["mcp_official"], a["mcp_url"], a["verdict"], a["blocker"],
                         a["composio"]["in_catalog"], ";".join(a["composio"]["toolkits"]), a["tracker_issue"] or "",
+                        *((a["extras"]["webhooks"], a["extras"]["sandbox"], a["extras"]["rate_limits"], ";".join(a["extras"]["sdks"]),
+                           a["extras"]["spec"], a["extras"]["spec_url"]) if a["extras"] else ("",) * 6),
                         " ".join(sorted({e["url"] for e in a["evidence"]}))])
     (ROOT / "docs" / "data.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"docs/data.json: {n} apps, rechecked {len(p2)}, changed {verification['changed_apps']}")

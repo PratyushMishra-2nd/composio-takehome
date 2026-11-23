@@ -1,0 +1,50 @@
+{
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "seconds": 49,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks for subscribed events (e.g. Lead Form responses via Lead Notification Subscriptions API); only for apps with approved webhook use case. Ads reporting is pull-only.",
+      "evidence": {
+        "url": "https://learn.microsoft.com/en-us/linkedin/shared/api-guide/webhook-validation",
+        "quote": "Webhooks allow you to receive real-time HTTP notifications for subscribed events."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Development tier lets you create 1 test Ad Account via API; no separate sandbox environment documented. Real ad accounts must be made in Campaign Manager.",
+      "evidence": {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-unversioned",
+        "quote": "Create : Access to create 1 test Ad Account through the API."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-app and per-member daily (24h, reset midnight UTC) limits, 429 on exceed; standard values not published (see Developer Portal Analytics); ads reporting 45M metric values per 5 min",
+      "evidence": {
+        "url": "https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts/rate-limits",
+        "quote": "Rate limits specify the maximum number of API calls that can be made in a 24 hour period."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://github.com/linkedin-developers/linkedin-api-python-client",
+        "quote": "Official Python client library for LinkedIn APIs"
+      }
+    },
+    "openapi_spec": {
+      "available": "postman_only",
+      "url": "",
+      "evidence": {
+        "url": "https://github.com/linkedin-developers",
+        "quote": "LinkedIn API JavaScript Client Library"
+      }
+    },
+    "confidence": "medium"
+  }
+}

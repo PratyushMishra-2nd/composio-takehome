@@ -1,0 +1,47 @@
+{
+  "id": 91,
+  "app": "NotebookLM",
+  "seconds": 38,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhooks or event subscriptions in NotebookLM Enterprise API docs (v1alpha, Preview). Only notebook create/get/list/batchDelete/share and source methods.",
+      "evidence": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Pre-GA features are available \"as is\" and might have limited support."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "No sandbox or test mode documented. Product needs Gemini Enterprise/NotebookLM Enterprise license and a Google Cloud project; docs only mention free-trial subscriptions.",
+      "evidence": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "Users must be granted this role in order to access Gemini Notebook Enterprise (including for free-trial subscriptions)."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "No API QPS documented; product usage limits only: 500 queries/user/day, 500 notebooks/user, 300 sources/notebook",
+      "evidence": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "Queries | 500 per user per day"
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "gcloud auth print-access-token"
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Pre-GA features are available \"as is\" and might have limited support."
+      }
+    },
+    "confidence": "medium"
+  }
+}

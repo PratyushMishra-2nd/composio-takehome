@@ -1,0 +1,50 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "seconds": 46,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Outgoing webhooks (HTTP POST, JSON payload, optional JWS signature header) for 12 deploy events (started, succeeded, failed, deleted, locked, etc.); org-level webhooks also exist. Configured in UI; API-based hook creation not confirmed from these pages.",
+      "evidence": {
+        "url": "https://docs.netlify.com/deploy/deploy-notifications",
+        "quote": "This type of notification works as an outgoing webhook and allows you to send event information to an arbitrary URL using a POST request."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free plan (300 credits/month, hard limit, never charged) usable to test integrations.",
+      "evidence": {
+        "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/",
+        "quote": "You'll never be charged for the Free plan, so it's ideal for smaller experiments that don't need a lot of resources, security, or monitoring."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "500 requests/min for most requests; deploys via API 3/min and 100/day",
+      "evidence": {
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "For example, you can deploy through the Netlify API up to 3 times per minute and up to 100 times per day."
+      }
+    },
+    "sdks": {
+      "official": [
+        "go",
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/netlify/open-api/master/README.md",
+        "quote": "We have a fully featured JS/Node.js client that implements some of the same 'porcelain' methods that the go client does in addition to the open-api methods."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://open-api.netlify.com/swagger.json",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/netlify/open-api/master/README.md",
+        "quote": "The [`swagger.yml`](swagger.yml) file is the master copy of the Open API 2.0 definition."
+      }
+    },
+    "confidence": "high"
+  }
+}

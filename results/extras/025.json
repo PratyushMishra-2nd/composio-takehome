@@ -1,0 +1,50 @@
+{
+  "id": 25,
+  "app": "Pumble",
+  "seconds": 68,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Pumble apps (Node SDK) subscribe to events via in-app listeners: NEW_MESSAGE, UPDATED_MESSAGE, REACTION_ADDED, CHANNEL_CREATED/ARCHIVED/DELETED, WORKSPACE_USER_JOINED/UPDATED, user group events. Scope-gated. No generic webhook-URL subscription API found; incoming webhooks exist for posting messages only.",
+      "evidence": {
+        "url": "https://cake-com.github.io/pumble-node-sdk/triggers-reference.html",
+        "quote": "To subscribe to events, you have to add the event listeners in the main `App`. Events do not need to be acknowledged."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No dedicated sandbox or dev-workspace doc found. API-key add-on is stated as available on all plans, so a free workspace likely works for testing, but this was not confirmed on the vendor pages checked.",
+      "evidence": {
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "Available on all plans"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "3,000 req/min per app; 1,000 req/min per user; lower per-endpoint caps (e.g. send message 80/min per app+workspace); 429 with Retry-After",
+      "evidence": {
+        "url": "https://cake-com.github.io/pumble-node-sdk/rate-limits.html",
+        "quote": "Total App Requests: 3.000 total requests per minute window across your entire app."
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "typescript"
+      ],
+      "evidence": {
+        "url": "https://github.com/CAKE-com/pumble-node-sdk",
+        "quote": "Pumble SDK - A javascript framework to quickly build Pumble apps."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+      "evidence": {
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "The full list of available actions is available in the Swagger documentation."
+      }
+    },
+    "confidence": "medium"
+  }
+}

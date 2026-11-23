@@ -1,0 +1,50 @@
+{
+  "id": 93,
+  "app": "Fathom",
+  "seconds": 40,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks created in User Settings > API Access or via API (create/delete webhook endpoints); webhook payload docs and SDK verify helper exist; included on all plans.",
+      "evidence": {
+        "url": "https://developers.fathom.ai/webhooks.md",
+        "quote": "You also have the option of creating and deleting webhooks with an API call."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "No separate sandbox. API keys and webhooks are included on all plans (incl. free), so a free account can test integrations; webhook 'Send test payload' button exists.",
+      "evidence": {
+        "url": "https://developers.fathom.ai/faq.md",
+        "quote": "Yes. API access—keys and webhooks— are included on all plans."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "60 calls / 60 s per account; heavy requests (summary/transcript) 30 / 60 s (may drop to 5); 429 + Retry-After",
+      "evidence": {
+        "url": "https://developers.fathom.ai/api-overview.md",
+        "quote": "Currently, you are able to make a maximum of 60 calls to the API in a 60 second window."
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://developers.fathom.ai/sdks/index.md",
+        "quote": "Get started with Fathom using our official TypeScript and Python SDKs"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developers.fathom.ai/api-reference/openapi.yaml",
+      "evidence": {
+        "url": "https://developers.fathom.ai/llms.txt",
+        "quote": "[openapi](/api-reference/openapi.yaml)"
+      }
+    },
+    "confidence": "high"
+  }
+}

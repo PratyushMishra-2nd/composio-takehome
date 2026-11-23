@@ -1,0 +1,50 @@
+{
+  "id": 54,
+  "app": "MrScraper",
+  "seconds": 53,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Dashboard-configured webhooks (POST/PUT) for Scraping Started, Completed, Failed events",
+      "evidence": {
+        "url": "https://docs.mrscraper.com/docs/integrations/webhook",
+        "quote": "Webhooks let you automatically send HTTP requests to another API when specific events happen in your scraper — such as when a scrape starts, completes, or fails."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free plan, no credit card required; token allotment (docs conflict: 100 vs 1,000 tokens/month). No separate sandbox.",
+      "evidence": {
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "The Free plan includes **100 tokens per month** with no credit card required."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Concurrency-based: 10 concurrent requests Free, 100 Pro; 429 with Retry-After. No per-second figure.",
+      "evidence": {
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "| **Concurrent Requests** | 10 | 100 | Custom |"
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://docs.mrscraper.com/docs/integrations/node",
+        "quote": "The official [`@mrscraper/sdk`](https://www.npmjs.com/package/@mrscraper/sdk) package is an async JavaScript and TypeScript client for the seven MrScraper services."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://docs.mrscraper.com/docs/api/overview",
+        "quote": "No OpenAPI or Swagger download link found in the docs pages reviewed."
+      }
+    },
+    "confidence": "medium"
+  }
+}

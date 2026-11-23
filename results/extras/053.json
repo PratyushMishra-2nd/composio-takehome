@@ -1,0 +1,47 @@
+{
+  "id": 53,
+  "app": "Ahrefs",
+  "seconds": 52,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhook/event subscription found in Ahrefs API v3 docs; llms.txt index lists none (only MCP server, Looker Studio connector, Bot Analytics, Ahrefs Connect).",
+      "evidence": {
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "The complete OpenAPI specification for every tool is at [/openapi.json](/openapi.json)."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "No free dev account. Limited free test queries (no unit cost for ahrefs.com/wordcount.com targets, limit capped at 100) but need API key on a paid plan.",
+      "evidence": {
+        "url": "https://docs.ahrefs.com/api/docs/free-test-queries.md",
+        "quote": "Users on any paid plan can test Ahrefs API by running a limited set of free test queries."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "60 requests/min by default; HTTP 429 when exceeded; plus API unit costs (min 50 units per billable request)",
+      "evidence": {
+        "url": "https://docs.ahrefs.com/api/docs/introduction.md",
+        "quote": "Ahrefs API is limited to 60 requests per minute by default."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "The complete OpenAPI specification for every tool is at [/openapi.json](/openapi.json)."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.ahrefs.com/openapi.json",
+      "evidence": {
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "The complete OpenAPI specification for every tool is at [/openapi.json](/openapi.json)."
+      }
+    },
+    "confidence": "medium"
+  }
+}

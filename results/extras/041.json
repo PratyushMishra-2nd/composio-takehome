@@ -1,0 +1,51 @@
+{
+  "id": 41,
+  "app": "Shopify",
+  "seconds": 54,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Apps subscribe to webhook topics via shopify.app.toml or GraphQL Admin API; delivered to HTTPS, EventBridge, or Pub/Sub endpoints.",
+      "evidence": {
+        "url": "https://shopify.dev/docs/apps/build/webhooks",
+        "quote": "it can subscribe to Shopify webhook topics as a mechanism for receiving near-real-time data about these events."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free dev stores via Shopify Partner account (any plan, no charge, up to 250 per org).",
+      "evidence": {
+        "url": "https://shopify.dev/docs/apps/tools/development-stores",
+        "quote": "Dev stores are testing environments that you own and control."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "GraphQL Admin: cost-based leaky bucket per app+store; restore 100 pts/s Standard, 200 Advanced, 1000 Plus, 2000 Enterprise; max single query cost 1,000.",
+      "evidence": {
+        "url": "https://shopify.dev/docs/apps/build/apis/graphql-admin/rate-limits",
+        "quote": "Each combination of app and store is given a bucket size and restore rate based on the store's plan."
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "ruby",
+        "react-router"
+      ],
+      "evidence": {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest",
+        "quote": "Use Shopify’s officially supported libraries to build fast, reliable apps"
+      }
+    },
+    "openapi_spec": {
+      "available": "graphql_schema",
+      "url": "https://shopify.dev/admin-graphql-direct-proxy/2025-10",
+      "evidence": {
+        "url": "https://shopify.dev/docs/api/shopify-app-remix/v2/guide-graphql-types",
+        "quote": "schema: 'https://shopify.dev/admin-graphql-direct-proxy/2023-10'"
+      }
+    },
+    "confidence": "medium"
+  }
+}

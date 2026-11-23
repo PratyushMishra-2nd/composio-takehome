@@ -1,0 +1,53 @@
+{
+  "id": 84,
+  "app": "Paygent Connect",
+  "seconds": 54,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "NMI gateway (Paygent is NMI-powered; no Paygent-own docs found) lets merchants subscribe endpoints to gateway events (transaction, recurring, settlement, chargeback) via Merchant Portal > Settings > Webhooks.",
+      "evidence": {
+        "url": "https://docs.nmi.com/reference/overview.md",
+        "quote": "Each endpoint can be subscribed to specific events that happen in the gateway."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "Sandbox keys and EMV sandbox need commercial relationship with NMI; per-account Test Mode toggle exists in merchant portal (needs a merchant account). No free self-serve dev account found.",
+      "evidence": {
+        "url": "https://docs.nmi.com/docs/getting-started",
+        "quote": "Registration with the EMV Sandbox environment is possible following commercial relationship with NMI."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Rate limits exist but no numeric limit; Payment API returns response_code 301 'Rate limit exceeded', system-wide HTTP 429",
+      "evidence": {
+        "url": "https://docs.nmi.com/reference/rate-limiting.md",
+        "quote": "In order to ensure the platform is available for everyone, in very rare cases, some users may encounter rate limits."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript (Collect.js)",
+        "android",
+        "ios",
+        "windows",
+        "linux"
+      ],
+      "evidence": {
+        "url": "https://docs.nmi.com/llms.txt",
+        "quote": "For new integrations, start with the Payment Component and NMI REST API guides, API reference, SDKs, and recipes."
+      }
+    },
+    "openapi_spec": {
+      "available": "postman_only",
+      "url": "https://documenter.getpostman.com/view/30061216/2s9YknAhtm",
+      "evidence": {
+        "url": "https://docs.nmi.com/reference/postman-collection",
+        "quote": "Import the API Postman Collection to start integrating today."
+      }
+    },
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": 23,
+  "app": "Zoho Cliq",
+  "seconds": 57,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Incoming webhook endpoint per bot (POST /bots/{BOT_UNIQUE_NAME}/incoming); webhook-type bots delegate handler execution to an external server (outbound event delivery via bot handlers). No generic REST event-subscription API found.",
+      "evidence": {
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/bots/",
+        "quote": "A Webhook bot delegates all handler execution to your own external server."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "Cliq has a Free plan (pricing page) and the developer platform (Deluge bots, commands, extensions) is documented, but I could not verify in docs that the free tier includes API/developer-platform access or a dedicated sandbox. platform page returned 403 to fetch.",
+      "evidence": {
+        "url": "https://www.zoho.com/cliq/help/platform/getting-started-with-cliq-platform.html",
+        "quote": "Cliq provides a platform for building internal tools"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "~15-20 requests/min per authenticated user; 10-min lock on 429",
+      "evidence": {
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/errors/",
+        "quote": "Most Zoho Cliq APIs have rate limits of 15-20 requests per minute per user"
+      }
+    },
+    "sdks": {
+      "official": [
+        "java",
+        "node",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://www.zoho.com/cliq/help/platform/getting-started-with-cliq-platform.html",
+        "quote": "Deluge, which is the default programming environment supported by Cliq"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/openapi-all.zip",
+      "evidence": {
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/bots/",
+        "quote": "Download Zoho Cliq OpenAPI Document"
+      }
+    },
+    "confidence": "medium"
+  }
+}

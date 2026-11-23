@@ -1,0 +1,49 @@
+{
+  "id": 62,
+  "app": "Vercel",
+  "seconds": 59,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Team webhooks (up to 20 per team, Pro/Enterprise) for deployment, project, env var, feature flag, firewall events; JSON POST payload. Integration webhooks for billing events.",
+      "evidence": {
+        "url": "https://vercel.com/docs/webhooks",
+        "quote": "A webhook is a trigger-based HTTP endpoint configured to receive HTTP POST requests through events."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Hobby plan (no billing cycles, 100 deployments/day, 200 projects) usable to test integrations via API token. No separate sandbox/test mode.",
+      "evidence": {
+        "url": "https://vercel.com/docs/plans/hobby",
+        "quote": "The Hobby plan is **free** and includes a generous set of features on a **per month** basis:"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-action hard limits by plan, e.g. deployments/day Free 100, Pro 6000, Enterprise 24000; deploy hooks 60/hour/project",
+      "evidence": {
+        "url": "https://vercel.com/docs/rest-api/limits",
+        "quote": "Rate limits are hard limits that apply to the platform when performing actions that require a response from our API."
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript"
+      ],
+      "evidence": {
+        "url": "https://vercel.com/docs/rest-api/sdk",
+        "quote": "The @vercel/sdk is a type-safe Typescript SDK that allows you to access the resources and methods of the Vercel REST API."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://openapi.vercel.sh/openapi.yaml",
+      "evidence": {
+        "url": "https://vercel.com/changelog/automatic-rest-api-documentation-with-openapi",
+        "quote": "Our REST API documentation is now automatically updated with changes to our API."
+      }
+    },
+    "confidence": "medium"
+  }
+}

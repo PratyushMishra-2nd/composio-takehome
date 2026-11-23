@@ -1,0 +1,53 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "seconds": 45,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhook/event subscription found in Aura API docs or Aura docs (searched Aura API overview and AuraDB pages). Neo4j database has no native webhooks.",
+      "evidence": {
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "A complete list of the available endpoints can be seen and tested in the API Specification."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "AuraDB Free tier: one free instance per account, usable for testing; Pro trial also not billed.",
+      "evidence": {
+        "url": "https://neo4j.com/docs/aura/getting-started/create-instance/",
+        "quote": "You can only create one Free instance per account."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Aura API: 25 req/min (Free/trial), 125 req/min (paid); billing endpoints 10 req/day per org",
+      "evidence": {
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "AuraDB Professional accounts with a billing method attached, AuraDB Business Critical, and AuraDB Virtual Dedicated Cloud get a rate limit of 125 requests per minute."
+      }
+    },
+    "sdks": {
+      "official": [
+        "java",
+        "python",
+        "javascript",
+        "go",
+        "dotnet"
+      ],
+      "evidence": {
+        "url": "https://neo4j.com/docs/getting-started/languages-guides/",
+        "quote": "This page lists the officially supported libraries and APIs that you can use to create an application ."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://api.neo4j.io/v2beta1/spec.json",
+      "evidence": {
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "A complete list of the available endpoints can be seen and tested in the API Specification ."
+      }
+    },
+    "confidence": "medium"
+  }
+}

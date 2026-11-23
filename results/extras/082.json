@@ -1,0 +1,53 @@
+{
+  "id": 82,
+  "app": "Plaid",
+  "seconds": 34,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Developer sets webhook URL (e.g. via /link/token/create); Plaid POSTs push notifications for Items, transactions, etc. Retries up to 24h; fire_webhook in Sandbox.",
+      "evidence": {
+        "url": "https://plaid.com/docs/api/webhooks/",
+        "quote": "A webhook is an HTTP request used to provide push notifications."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Sandbox env with unlimited test Items, sandbox.plaid.com, test creds user_good/pass_good.",
+      "evidence": {
+        "url": "https://plaid.com/docs/sandbox/",
+        "quote": "The Plaid Sandbox is a free and fully-featured environment for application development and testing."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-endpoint limits per Item and per client, e.g. /transactions/sync 50/min per Item, 2,500/min per client; /accounts/balance/get 5/min per Item; fixed windows",
+      "evidence": {
+        "url": "https://plaid.com/docs/errors/rate-limit-exceeded/",
+        "quote": "Rate limits are based on fixed windows, not rolling periods."
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "python",
+        "ruby",
+        "java",
+        "go"
+      ],
+      "evidence": {
+        "url": "https://plaid.com/docs/api/libraries/",
+        "quote": "These client libraries are generated from our OpenAPI file."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/plaid/plaid-openapi/blob/master/2020-09-14.yml",
+      "evidence": {
+        "url": "https://github.com/plaid/plaid-openapi",
+        "quote": "Plaid uses the OpenAPI 3.0.0 specification to schematize our docs and to generate our supported client libraries."
+      }
+    },
+    "confidence": "high"
+  }
+}

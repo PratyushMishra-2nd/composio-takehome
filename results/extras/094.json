@@ -1,0 +1,47 @@
+{
+  "id": 94,
+  "app": "Consensus",
+  "seconds": 35,
+  "result": {
+    "webhooks": {
+      "available": "unknown",
+      "detail": "No webhooks or event subscriptions mentioned in Consensus llms.txt / llms-full.txt. docs.consensus.app returned 403 to automated fetch, so unverified.",
+      "evidence": {
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Sent as `Authorization: Bearer <key>` on every request"
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "Free plan exists (limited, for evaluation; MCP anonymous tier for trying). REST API keys are issued from an organization subscription page. No sandbox/test mode documented.",
+      "evidence": {
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Free: anonymous and lightly authenticated access for evaluation and casual use"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "REST limits per org plan (numbers on docs/pricing, not seen); 429 + Retry-After on exceed; MCP per-plan table (Free: 1 QPS per user)",
+      "evidence": {
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "REST API limits depend on the organization plan; consult https://docs.consensus.app for the current per-plan request quotas."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://consensus.app/llms.txt",
+        "quote": "Access tiers: anonymous (limited), Free, Pro, Team, and Enterprise."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.consensus.app/openapi.json",
+      "evidence": {
+        "url": "https://consensus.app/llms.txt",
+        "quote": "[OpenAPI spec](https://docs.consensus.app/openapi.json): machine-readable API contract."
+      }
+    },
+    "confidence": "medium"
+  }
+}

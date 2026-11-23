@@ -1,0 +1,49 @@
+{
+  "id": 76,
+  "app": "Monday.com",
+  "seconds": 42,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "GraphQL create_webhook mutation subscribes to board events; delivered via HTTP/HTTPS POST",
+      "evidence": {
+        "url": "https://developer.monday.com/api-reference/reference/webhooks",
+        "quote": "You can use it to subscribe to events on your boards and get notified by an HTTP or HTTPS post request"
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free monday.com developer account for building and testing apps and API integrations",
+      "evidence": {
+        "url": "https://developer.monday.com/api-reference/docs/developer-sandbox",
+        "quote": "Sign up for a free monday.com developer account to build and test apps and API integrations"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Complexity 5M pts/min (app token), 10M/min (personal token); daily calls 200 Free to 25,000 Enterprise; 1,000-5,000 queries/min by plan",
+      "evidence": {
+        "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+        "quote": "Read and writes are limited to 5M complexity points per minute"
+      }
+    },
+    "sdks": {
+      "official": [
+        "node"
+      ],
+      "evidence": {
+        "url": "https://developer.monday.com/api-reference/docs/api-sdk",
+        "quote": "It is supported in Node.js and browser environments and uses the graphql-request client under the hood."
+      }
+    },
+    "openapi_spec": {
+      "available": "graphql_schema",
+      "url": "https://api.monday.com/v2/get_schema",
+      "evidence": {
+        "url": "https://developer.monday.com/api-reference/docs/getting-started",
+        "quote": "If you are already familiar with the monday.com building blocks, you can explore our GraphQL schema"
+      }
+    },
+    "confidence": "medium"
+  }
+}

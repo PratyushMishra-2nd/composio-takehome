@@ -1,0 +1,53 @@
+{
+  "id": 32,
+  "app": "Meta Ads",
+  "seconds": 54,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Ads webhooks on ad_account object: subscribe app to ad_account fields, connect ad accounts; 88+ notification types (ad object, insights, effective_status changes).",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/ads-webhooks/ads-webhooks-overview",
+        "quote": "You subscribe your app to one or more `ad_account` fields, then connect the specific ad accounts you manage."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Sandbox Ad Account in app dashboard; no payment method, ads don't run, mock performance reports. Sandbox token valid ~2 months.",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/development/create-an-app/marketing-api-use-cases",
+        "quote": "These ad accounts don't require a payment method and the ads you create won't run."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per ad account, score-based: read=1, write=3 pts; max 60 (dev) / 9000 (full access), 300s decay. Plus BUC hourly quotas, 100 QPS on create/edit.",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview/rate-limiting",
+        "quote": "Rate limiting is at the ad account level."
+      }
+    },
+    "sdks": {
+      "official": [
+        "java",
+        "node",
+        "php",
+        "python",
+        "ruby"
+      ],
+      "evidence": {
+        "url": "https://developers.facebook.com/docs/business-sdk",
+        "quote": "Java | Node.js | PHP | Python | Ruby"
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://github.com/facebook/facebook-business-sdk-codegen",
+        "quote": "JSON schema representation of the Graph API endpoints."
+      }
+    },
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": 5,
+  "app": "Twenty",
+  "seconds": 54,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks created in Settings > Developers > Webhooks (UI); HTTP POST on record created/updated/deleted, all event types sent, HMAC SHA256 signature headers. No API-based subscription documented.",
+      "evidence": {
+        "url": "https://docs.twenty.com/developers/extend/webhooks",
+        "quote": "Twenty sends an HTTP POST to your URL whenever a record is created, updated, or deleted."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "Docs api and webhooks pages mention no sandbox, test mode or free dev account. Open-source self-hosting likely possible but not confirmed in the pages read.",
+      "evidence": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Your workspace-specific API documentation is available under Settings → Developers → API after creating an API key."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "100 requests per minute; batch size 60 records per call",
+      "evidence": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Both REST and GraphQL support batching up to 60 records per request."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "There is no static API reference for Twenty."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "There is no static API reference for Twenty."
+      }
+    },
+    "confidence": "medium"
+  }
+}

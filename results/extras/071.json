@@ -1,0 +1,49 @@
+{
+  "id": 71,
+  "app": "Notion",
+  "seconds": 27,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook subscriptions per connection (Webhooks tab); events like page.content_updated, database/page changes; HTTPS endpoint with verification",
+      "evidence": {
+        "url": "https://developers.notion.com/reference/webhooks",
+        "quote": "Whenever a page or database changes, Notion sends a secure HTTP POST request to your webhook endpoint."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "No dedicated sandbox, but Free Notion workspaces can create connections/tokens and use the API; single-member Free workspaces have unlimited blocks.",
+      "evidence": {
+        "url": "https://developers.notion.com/reference/workspace-block-limits",
+        "quote": "Paid workspaces and single-member Free workspaces have unlimited blocks."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per connection: 600 req/min (Business/Enterprise), 180 req/min (other plans); plus shared per-workspace limit; HTTP 429 + Retry-After",
+      "evidence": {
+        "url": "https://developers.notion.com/reference/request-limits",
+        "quote": "Business and Enterprise | 600 requests per minute (an average of 10 per second)"
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://developers.notion.com/reference/intro",
+        "quote": "Use the [JavaScript SDK](https://github.com/makenotion/notion-sdk-js), curl, or any client that can send HTTPS requests."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developers.notion.com/openapi.json",
+      "evidence": {
+        "url": "https://developers.notion.com/llms.txt",
+        "quote": "- [openapi](/openapi.json)"
+      }
+    },
+    "confidence": "medium"
+  }
+}

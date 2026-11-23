@@ -1,0 +1,55 @@
+{
+  "id": 67,
+  "app": "Snowflake",
+  "seconds": 40,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Outbound webhook notifications only via CREATE NOTIFICATION INTEGRATION TYPE=WEBHOOK to Slack, Teams, PagerDuty, Jira, ServiceNow; no generic event subscription API for developers.",
+      "evidence": {
+        "url": "https://docs.snowflake.com/en/user-guide/notifications/webhook-notifications",
+        "quote": "Snowflake does not send webhook notifications to external systems other than the ones listed above."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "30-day free trial account with free usage credits; no permanent free tier.",
+      "evidence": {
+        "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+        "quote": "If you don’t upgrade before the trial period ends, the account is suspended and any unused free usage balance expires."
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not documented in SQL API docs (only 429 for in-progress statement status)",
+      "evidence": {
+        "url": "https://docs.snowflake.com/en/developer-guide/sql-api/handling-responses",
+        "quote": "Snowflake returns the HTTP response code 202 or 429 with a QueryStatus object."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "go",
+        "java",
+        "node",
+        "dotnet",
+        "php",
+        "odbc"
+      ],
+      "evidence": {
+        "url": "https://docs.snowflake.com/en/developer-guide/drivers",
+        "quote": "Using languages such as Go, C#, JavaScript, and Python, you can write applications"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/snowflakedb/snowflake-rest-api-specs",
+      "evidence": {
+        "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+        "quote": "You can access the Snowflake REST APIs OpenAPI specifications in the snowflake-rest-api-specs Git repository."
+      }
+    },
+    "confidence": "medium"
+  }
+}

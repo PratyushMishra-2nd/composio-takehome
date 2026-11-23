@@ -1,0 +1,47 @@
+{
+  "id": 9,
+  "app": "Copper",
+  "seconds": 93,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "REST webhook subscriptions per entity/event; up to 100 active subscriptions per account; notification limits 600/min per account",
+      "evidence": {
+        "url": "https://developer.copper.com/webhooks/overview.html",
+        "quote": "Register a URL that notifications will be sent to when a specific event type occurs."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox or test environment in developer.copper.com docs; single production host api.copper.com/developer_api. Third-party sources mention a 14-day free trial, not vendor docs.",
+      "evidence": {
+        "url": "https://developer.copper.com/",
+        "quote": "Our developer api can be found at `https://api.copper.com/developer_api/`"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "180 requests/min (rolling window), bulk APIs 3 req/sec, 429 on exceed",
+      "evidence": {
+        "url": "https://developer.copper.com/introduction/requests.html",
+        "quote": "All API calls are limited to 180 requests per minute."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.copper.com/",
+        "quote": "To easily interact with the Copper Developer API, you may download our:"
+      }
+    },
+    "openapi_spec": {
+      "available": "postman_only",
+      "url": "https://developer.copper.com/download/copper_postman_collection.json",
+      "evidence": {
+        "url": "https://developer.copper.com/",
+        "quote": "To easily interact with the Copper Developer API, you may download our:"
+      }
+    },
+    "confidence": "medium"
+  }
+}

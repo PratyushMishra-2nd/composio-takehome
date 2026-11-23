@@ -1,0 +1,49 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "seconds": 206,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "REST webhook subscriptions (/public-api/webhook-subscriptions: list/create/delete) for payment, product, subscription, dispute and refund events, e.g. payment.succeeded",
+      "evidence": {
+        "url": "https://commasdocs.com/",
+        "quote": "A webhook is a message Commas sends to your server the moment something happens — like a payment succeeding or a subscription being canceled."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Separate sandbox dashboard (sandbox.commas.net), own accounts and API keys, base URL api-sandbox.commas.net, test cards, no real charges.",
+      "evidence": {
+        "url": "https://commasdocs.com/",
+        "quote": "Use your sandbox API key from the sandbox dashboard ."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "10,000 authenticated requests/hour on checkout-sessions and customers endpoint groups; 429 with Retry-After and X-RateLimit-* headers",
+      "evidence": {
+        "url": "https://commasdocs.com/",
+        "quote": "Rate limiting now applies to the checkout-sessions and customers endpoint groups at 10,000 authenticated requests per hour."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript/typescript (embedded checkout SDK, @fanbasis/checkout-sdk on npm)"
+      ],
+      "evidence": {
+        "url": "https://commasdocs.com/",
+        "quote": "If you use the Embedded Checkout SDK , its environment value for test mode is the string 'sandbox' (never 'qa' )."
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://commasdocs.com/",
+        "quote": "Commas API Reference"
+      }
+    },
+    "confidence": "medium"
+  }
+}

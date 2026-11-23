@@ -1,0 +1,49 @@
+{
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "seconds": 37,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Atlas sends alert notifications as HTTP POST to project webhook URL (X-MMS-Event alert.open/close/update/acknowledge/cancel/inform, optional HMAC secret via X-MMS-Signature). Alert events only, not general resource events.",
+      "evidence": {
+        "url": "https://www.mongodb.com/docs/atlas/tutorial/webhook-integration.md",
+        "quote": "You can configure Atlas to send alert notifications to a webhook endpoint as HTTP (HyperText Transport Protocol) POST requests for programmatic processing."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free clusters (formerly M0) never expire; can be created via UI, CLI or Admin API. Subset of features.",
+      "evidence": {
+        "url": "https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster.md",
+        "quote": "Free clusters never expire, and provide access to a [subset](https://www.mongodb.com/docs/atlas/reference/free-shared-limitations.md#std-label-atlas-free-tier) of Atlas features and functionality."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Token bucket per endpoint set and scope (org/project/user/IP); 429 RATE_LIMITED_TOKEN_BUCKET with Retry-After; limits vary per endpoint, queryable via rateLimits API, may change without notice",
+      "evidence": {
+        "url": "https://www.mongodb.com/docs/atlas/api/api-rate-limit.md",
+        "quote": "Atlas uses the Token Bucket Algorithm to limit the number of requests it processes."
+      }
+    },
+    "sdks": {
+      "official": [
+        "go"
+      ],
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/mongodb/atlas-sdk-go/main/README.md",
+        "quote": "A Go SDK for the [MongoDB Atlas API](https://docs.atlas.mongodb.com/api/)."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview.json",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/mongodb/openapi/main/README.md",
+        "quote": "This repository hosts the OpenAPI specification for the [Atlas Administration API (v2.0)](https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/)."
+      }
+    },
+    "confidence": "medium"
+  }
+}

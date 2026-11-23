@@ -1,0 +1,50 @@
+{
+  "id": 10,
+  "app": "DealCloud",
+  "seconds": 47,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No push webhooks found. Publication APIs give near real-time event consumption by polling a session; events retained 9 days. Could map to polling triggers.",
+      "evidence": {
+        "url": "https://api.docs.dealcloud.com/docs/publications",
+        "quote": "The Publication APIs enable real-time or near real-time event consumption from the DealCloud system."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox, test site or developer account mentioned in docs home, apikeys, limits, publications or sdk pages. API access needs an existing DealCloud site with admin-enabled API key.",
+      "evidence": {
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "Enabling API access through user group permissions and copying a key from the user profile"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-endpoint: Data/Schema/Management 5 req/s, auth 300/min, Publications 1000/s; HTTP 429 on excess",
+      "evidence": {
+        "url": "https://api.docs.dealcloud.com/docs/limits",
+        "quote": "Limits are applied on an endpoint basis. When a rate limit is exceeded, an `HTTP 429` error will be triggered..."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "c#"
+      ],
+      "evidence": {
+        "url": "https://api.docs.dealcloud.com/sdk",
+        "quote": "The DealCloud SDK is available to simplify the process of building integrations with DealCloud."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://{host}/swagger/current",
+      "evidence": {
+        "url": "https://api.docs.dealcloud.com/docs",
+        "quote": "Postman can consume the Swagger/OpenAPI spec file exposed at"
+      }
+    },
+    "confidence": "medium"
+  }
+}

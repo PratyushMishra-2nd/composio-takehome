@@ -1,0 +1,47 @@
+{
+  "id": 89,
+  "app": "Ramp",
+  "seconds": 52,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook subscriptions via POST /developer/v1/webhooks; signed (X-Ramp-Signature), verification challenge, event types per resource (bills, transactions, etc.), mock-event endpoint",
+      "evidence": {
+        "url": "https://docs.ramp.com/llms-guides/webhooks.txt",
+        "quote": "Webhooks allow your application to receive real-time notifications about events that occur in your Ramp account."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "Sandbox exists (demo.ramp.com UI, demo-api.ramp.com API) but access must be requested via a form; free status not stated in docs.",
+      "evidence": {
+        "url": "https://docs.ramp.com/llms-guides/sandbox.txt",
+        "quote": "Need a test environment for development?"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "200 requests / 10 s per source IP; token endpoint 100 POST / 10 s per IP; 429 and 60 s block",
+      "evidence": {
+        "url": "https://docs.ramp.com/llms-guides/rate-limiting.txt",
+        "quote": "The standard Developer API limit is 200 requests per 10 seconds per source IP address."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://docs.ramp.com/llms.txt",
+        "quote": "[OpenAPI spec](/openapi/developer-api.json) - Canonical OpenAPI schema."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.ramp.com/openapi/developer-api.json",
+      "evidence": {
+        "url": "https://docs.ramp.com/llms.txt",
+        "quote": "[OpenAPI spec](/openapi/developer-api.json) - Canonical OpenAPI schema."
+      }
+    },
+    "confidence": "medium"
+  }
+}

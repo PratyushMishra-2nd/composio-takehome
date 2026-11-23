@@ -1,0 +1,54 @@
+{
+  "id": 87,
+  "app": "Xero",
+  "seconds": 66,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Xero has webhooks (HTTPS endpoint pushed change notifications) and a published xero-webhooks.yaml spec. Doc body text did not render, so the evidence is the pricing-table row, not a sentence.",
+      "evidence": {
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Webhooks"
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Starter plan (No charge) and a free Xero demo company for development. The pricing table shows 'Demo org only' as a developer-tools row. The development-accounts page did not render.",
+      "evidence": {
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Demo org only"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "60 calls/min and 5,000/day per tenant, 5 concurrent, 10,000/min per app; HTTP 429 on exceed",
+      "evidence": {
+        "url": "https://developer.xero.com/faq/limits",
+        "quote": "If you exceed either rate limit you will receive an HTTP 429 (too many requests) response."
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "python",
+        "java",
+        "dotnet",
+        "ruby",
+        "php"
+      ],
+      "evidence": {
+        "url": "https://github.com/XeroAPI/xero-node",
+        "quote": "This SDK is one of a number of SDK’s that the Xero Developer team builds and maintains."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero_accounting.yaml",
+      "evidence": {
+        "url": "https://github.com/XeroAPI/Xero-OpenAPI",
+        "quote": "This repository holds the official Xero OpenAPI descriptions."
+      }
+    },
+    "confidence": "medium"
+  }
+}

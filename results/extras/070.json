@@ -1,0 +1,65 @@
+{
+  "id": 70,
+  "app": "Sentry",
+  "seconds": 35,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Integration Platform JSON webhooks for installation, event_alert, issue, metric_alert, error, comment, seer, preprod_artifact; HMAC-SHA256 signed",
+      "evidence": {
+        "url": "https://docs.sentry.io/integrations/integration-platform/webhooks/",
+        "quote": "Sentry uses JSON webhooks to get error notifications to your systems or services."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Developer plan (1 user, 5k errors) usable to create an org and test integrations; some API/third-party integration features may be limited on that plan",
+      "evidence": {
+        "url": "https://sentry.io/pricing/",
+        "quote": "Start free on the Developer plan forever, or try Business for 14 days with no credit card."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-endpoint requests-per-second (fixed window) plus concurrent-request limit; no default numbers; X-Sentry-Rate-Limit-* headers",
+      "evidence": {
+        "url": "https://docs.sentry.io/api/ratelimits/",
+        "quote": "Sentry rate limits every API request made to prevent abuse and resource overuse."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "javascript",
+        "typescript",
+        "go",
+        "java",
+        "kotlin",
+        "ruby",
+        "php",
+        "rust",
+        "dotnet",
+        "dart",
+        "elixir",
+        "swift",
+        "objective-c",
+        "c",
+        "c++",
+        "powershell"
+      ],
+      "evidence": {
+        "url": "https://docs.sentry.io/platforms/",
+        "quote": "Sentry provides official SDKs for all major platforms and frameworks."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/getsentry/sentry-api-schema/main/openapi-derefed.json",
+      "evidence": {
+        "url": "https://github.com/getsentry/sentry-api-schema",
+        "quote": "The official, auto-generated TypeScript client for Sentry's public REST API."
+      }
+    },
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "seconds": 67,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Per-job async webhooks (async.webhook on *_async endpoints), Studio webhook config, POST /configure_webhook; Svix-based setup recipe.",
+      "evidence": {
+        "url": "https://docs.reducto.ai/studio-account/index.md",
+        "quote": "Configure webhooks to receive notifications when jobs complete."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No free tier, trial, or test mode found on studio-account, FAQ, or llms.txt pages. Plans listed: Standard, Growth, Enterprise. Free credits may exist on pricing page, not verified.",
+      "evidence": {
+        "url": "https://docs.reducto.ai/studio-account/index.md",
+        "quote": "Monthly and yearly plans are available."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "1,000 req/s per API key on all endpoints (429 over limit); GET /job/{id} 300 req/s; plus per-plan page-concurrency caps",
+      "evidence": {
+        "url": "https://docs.reducto.ai/reference/rate-limits/index.md",
+        "quote": "Edge rate limits apply to every request at the ingress and protect against accidental floods."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "javascript",
+        "go"
+      ],
+      "evidence": {
+        "url": "https://docs.reducto.ai/sdk/llms.txt",
+        "quote": "Go, Javascript, and Python"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.reducto.ai/openapi.json",
+      "evidence": {
+        "url": "https://docs.reducto.ai/openapi.json",
+        "quote": "Reducto API"
+      }
+    },
+    "confidence": "medium"
+  }
+}

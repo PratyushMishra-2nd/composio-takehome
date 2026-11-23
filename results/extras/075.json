@@ -1,0 +1,50 @@
+{
+  "id": 75,
+  "app": "Asana",
+  "seconds": 37,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "REST webhook subscriptions (POST /webhooks) on tasks, projects, etc. X-Hook-Secret handshake, X-Hook-Signature HMAC; events API polling also available",
+      "evidence": {
+        "url": "https://developers.asana.com/docs/webhooks-guide",
+        "quote": "Webhook subscriptions can only be created by users who have access to the specific object (e.g., task)."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "Developer sandbox = temporary Asana domain with limited users; requested via form, provisioning up to a week, valid max one year. No self-serve free dev account found.",
+      "evidence": {
+        "url": "https://developers.asana.com/docs/developer-sandbox",
+        "quote": "A developer sandbox is a temporary Asana domain with limited users."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "150 req/min free domain, 1,500 req/min paid, per token; search 60/min; 50 concurrent GET, 15 concurrent writes; 429 + Retry-After",
+      "evidence": {
+        "url": "https://developers.asana.com/docs/rate-limits",
+        "quote": "Limits are based on minute-long windows and differ depending on whether the domain is free or paid"
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://developers.asana.com/docs/official-client-libraries",
+        "quote": "The official libraries available are listed below:"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml",
+      "evidence": {
+        "url": "https://github.com/Asana/openapi",
+        "quote": "This repository contains the OpenAPI Specification for Asana's APIs."
+      }
+    },
+    "confidence": "high"
+  }
+}

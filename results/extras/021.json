@@ -1,0 +1,52 @@
+{
+  "id": 21,
+  "app": "Slack",
+  "seconds": 44,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Events API: subscribe to event types per app; HTTP endpoint or Socket Mode; retries; scopes gate events",
+      "evidence": {
+        "url": "https://docs.slack.dev/apis/events-api/",
+        "quote": "When you use the Events API, Slack calls you."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Slack Developer Program; every enrolled dev can provision a basic Enterprise-org sandbox at no extra cost (extras need paid plan/payment method)",
+      "evidence": {
+        "url": "https://docs.slack.dev/tools/developer-sandboxes/",
+        "quote": "Every developer enrolled in the Slack Developer Program is eligible to provision a basic sandbox."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Web API 4 tiers, per method/workspace/app, per-minute windows (Tier1 1+/min to Tier4 100+/min); Events API 30k deliveries/workspace/hr",
+      "evidence": {
+        "url": "https://docs.slack.dev/apis/web-api/rate-limits",
+        "quote": "Rate limit windows are per minute."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "node",
+        "java",
+        "deno"
+      ],
+      "evidence": {
+        "url": "https://docs.slack.dev/tools.md",
+        "quote": "The Python Slack SDK, Node Slack SDK, and Java Slack SDK provide in-language wrappers for the platform without the Bolt framework layer."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/slackapi/slack-api-specs/master/web-api/slack_web_openapi_v2.json",
+      "evidence": {
+        "url": "https://github.com/slackapi/slack-api-specs",
+        "quote": "slack_web_openapi_v2.json"
+      }
+    },
+    "confidence": "medium"
+  }
+}

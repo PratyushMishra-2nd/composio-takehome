@@ -1,0 +1,49 @@
+{
+  "id": 38,
+  "app": "Pinterest",
+  "seconds": 57,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhook/event subscription found in Pinterest v5 docs. 'Subscribe for updates' page only covers email notices of app/API changes.",
+      "evidence": {
+        "url": "https://developers.pinterest.com/docs/reference/manage-notifications.md",
+        "quote": "Email Contacts are notified of changes to your application or to the Pinterest API via email."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Sandbox at api-sandbox.pinterest.com, usable with Trial or Standard access; needs sandbox token. Trial access is free to request.",
+      "evidence": {
+        "url": "https://developers.pinterest.com/docs/developer-tools/sandbox/",
+        "quote": "Use Sandbox to test your integration with Pinterest API v5 without affecting your production data."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Trial 1000 req/day; Standard 100 req/s per user per app; per-category limits",
+      "evidence": {
+        "url": "https://developers.pinterest.com/docs/reference/rate-limits.md",
+        "quote": "Standard access: 100 requests per second per user per app for all API requests"
+      }
+    },
+    "sdks": {
+      "official": [
+        "python"
+      ],
+      "evidence": {
+        "url": "https://developers.pinterest.com/docs/developer-tools/sdk.md",
+        "quote": "The Pinterest SDK currently offers a Python library"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/pinterest/api-description/main/v5/openapi.yaml",
+      "evidence": {
+        "url": "https://developers.pinterest.com/llms.txt",
+        "quote": "Raw OpenAPI specification for the Pinterest API v5"
+      }
+    },
+    "confidence": "medium"
+  }
+}

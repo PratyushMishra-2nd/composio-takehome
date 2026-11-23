@@ -1,0 +1,47 @@
+{
+  "id": 98,
+  "app": "Mermaid CLI",
+  "seconds": 12,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "Local CLI tool, no hosted service or API. No event subscriptions.",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "This is a command-line interface (CLI) for [mermaid](https://mermaid.js.org/)."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Open-source, free npm install / Docker image; runs locally, no account needed. No separate sandbox concept.",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "npm install -g @mermaid-js/mermaid-cli"
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not applicable; local CLI, no API rate limits",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output."
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "This is a command-line interface (CLI) for [mermaid](https://mermaid.js.org/)."
+      }
+    },
+    "confidence": "medium"
+  }
+}

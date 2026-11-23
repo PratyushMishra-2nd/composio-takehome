@@ -1,0 +1,49 @@
+{
+  "id": 72,
+  "app": "Airtable",
+  "seconds": 42,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks API: create/list/delete/toggle webhooks, ping to notification URL, list payloads, refresh. Webhooks from PAT/OAuth expire after 7 days unless refreshed.",
+      "evidence": {
+        "url": "https://airtable.com/developers/web/api/webhooks-overview",
+        "quote": "Webhooks are a user-configurable way to get programmatic notifications when data is changed in an Airtable base."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free plan account usable for testing; PATs available on all plans; free plan capped at ~1,000 API calls per workspace per month (from Airtable support article, not verbatim-quoted). No separate sandbox product found.",
+      "evidence": {
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "Personal access tokens are used to authenticate requests to Airtable's API."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "5 req/s per base; 50 req/s per user/service account across PATs; 429 then wait 30s",
+      "evidence": {
+        "url": "https://airtable.com/developers/web/api/rate-limits",
+        "quote": "The API is limited to 5 requests per second per base."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://github.com/Airtable/airtable.js",
+        "quote": "The official Airtable JavaScript library."
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://airtable.com/developers/web/api/introduction",
+        "quote": "The Airtable API can be used to integrate your data in Airtable with any external system."
+      }
+    },
+    "confidence": "medium"
+  }
+}

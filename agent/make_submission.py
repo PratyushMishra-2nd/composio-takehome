@@ -11,6 +11,8 @@ P, V, A = D["patterns"], D["verification"], D["apps"]
 acc = V["accuracy"]
 c, ac, au = dict(P["verdict"]), dict(P["access"]), dict(P["auth"])
 gaps_now = [g["app"] for g in P["composio_gaps"] if g["verdict"] == "build_now"]
+X = P.get("extras") or {}
+gen_gaps = [g for g in gaps_now if g in X.get("generatable_build_now", [])]
 LIVE = "https://pratyushmishra-2nd.github.io/composio-takehome/"
 REPO = "https://github.com/PratyushMishra-2nd/composio-takehome"
 e = html.escape
@@ -36,8 +38,11 @@ findings = [
      "Dev-infra and productivity are nearly all build-now."),
     (f"Toolkits need both auth modes: {P['both']} offer OAuth2 and a key",
      f"OAuth2 in {au.get('oauth2', 0)}, OAuth-only in {P['oauth_only']}; key-only apps ({P['key_only']}) cluster in data/SEO and AI-native tools."),
+    (f"{len(X['generatable_build_now'])} build-now apps publish a spec: generation candidates",
+     f"{X['spec_claimed']} publish OpenAPI/GraphQL ({X['spec_confirmed']} confirmed), {X['webhooks_yes']} have webhooks for triggers, {X['sandbox_free']} a free sandbox. "
+     f"AI-native tools are least ready ({X['by_category']['AI, Research and Media-native']['webhooks']}/10 webhooks)."),
     (f"For Composio: {len(P['composio_gaps'])} gaps, {len(gaps_now)} buildable now",
-     f"{P['composio_listed']}/100 already resolve to a toolkit via Composio MCP. Quick adds: {', '.join(gaps_now)}."),
+     f"{P['composio_listed']}/100 already have a toolkit (via Composio MCP). Quick adds: {', '.join(gaps_now)}; {len(gen_gaps)} have a spec ({', '.join(gen_gaps)})."),
 ]
 fhtml = "".join(f'<div class="f"><div class="n">{i}</div><div><b>{e(t)}</b><p>{e(d)}</p></div></div>' for i, (t, d) in enumerate(findings, 1))
 
@@ -47,6 +52,7 @@ steps = [("Research workers", "Headless Claude Code per app, web search + fetch,
          ("Browser-use loop", f"Headless Chromium renders JS-heavy docs: +{bv} quotes confirmed"),
          ("Composio catalog", "COMPOSIO_SEARCH_TOOLS per app → 19-app gap backlog", True),
          ("Approval tracker", f"{P['tracker_issues']} GitHub issues via Composio GITHUB_CREATE_AN_ISSUE", True)]
+steps.insert(4, ("Enrichment pass", f"Webhooks, sandbox, rate limits, SDKs, spec: {X['quotes'].get('verified', 0)}/{sum(X['quotes'].values())} quotes confirmed; specs downloaded + parsed"))
 shtml = "".join(f'<div class="st{" c" if len(s) > 2 else ""}"><b>{e(s[0])}</b><span>{e(s[1])}</span></div>' for s in steps)
 
 page = f"""<!doctype html><html><head><meta charset="utf-8"><style>
@@ -79,7 +85,7 @@ td.cat {{ width: 31mm; font-size: 7.8pt; color: #52514e; padding-right: 2mm }}
 .needs_outreach {{ background: #ec835a; color: #0b0b0b }} .not_buildable {{ background: #d03b3b }}
 .leg {{ display: flex; gap: 3mm; flex-wrap: wrap; font-size: 7.4pt; color: #52514e; margin-top: 1.5mm }}
 .leg i {{ display: inline-block; width: 2.4mm; height: 2.4mm; border-radius: 1px; margin-right: 1mm; vertical-align: -.2mm }}
-.steps {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2mm }}
+.steps {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.2mm }}
 .st {{ border: 1px solid #e1e0d9; border-radius: 6px; padding: 2.2mm 2.6mm; background: #fcfcfb }}
 .st.c {{ border: 1.5px solid #2a78d6; background: #f3f7fd }}
 .st b {{ display: block; font-size: 8.4pt }} .st span {{ color: #52514e; font-size: 7.6pt; line-height: 1.32; display: block; margin-top: .5mm }}

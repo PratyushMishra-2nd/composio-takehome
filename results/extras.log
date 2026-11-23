@@ -1,0 +1,45 @@
+enriching 100 apps
+  #001 Salesforce: ok
+  #005 Twenty: ok
+  #007 Zoho CRM: ok
+  #003 Pipedrive: ok
+  #006 Podio: ok
+  #004 Attio: ok
+  #010 DealCloud: ok
+  #008 Close: ok
+  #011 Zendesk: ok
+  #013 Freshdesk: ok
+  #012 Intercom: ok
+  #015 Pylon: ok
+  #009 Copper: ok
+  #014 Front: ok
+  #020 Gladly: ok
+  #016 LiveAgent: ok
+  #021 Slack: ok
+  #002 HubSpot: ok
+  #019 Gorgias: ok
+  #018 Help Scout: ok
+  #017 Plain: ok
+  #027 Telegram: ok
+  #022 Twilio: ok
+  #026 Discord: ok
+  #024 Lark (Larksuite): ok
+  #025 Pumble: ok
+  #028 WhatsApp Business: ok
+  #033 LinkedIn Ads: error
+  #023 Zoho Cliq: error
+  #030 Vonage: error
+  #034 GoHighLevel: error
+  #029 Aircall: error
+  #031 Google Ads: error
+  #032 Meta Ads: error
+  #035 Mailchimp: error
+  #036 Klaviyo: error
+  #037 systeme.io: error
+  #038 Pinterest: error
+  #039 Threads (Meta): error
+  #040 SendGrid: error
+  #041 Shopify: error
+  #042 WooCommerce: error
+  #044 Salesforce Commerce Cloud: error
+  #043 BigCommerce: error

@@ -1,0 +1,52 @@
+{
+  "id": 79,
+  "app": "Smartsheet",
+  "seconds": 34,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook subscriptions for plans and sheets (objects: sheet, row, column, cell, comment, discussion, attachment, user.seatType); event patterns like row.created, cell.updated; callbacks to target endpoint",
+      "evidence": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/webhooks",
+        "quote": "The webhooks deliver events in callbacks to target endpoints."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No free developer sandbox or trial found on developer portal. API restricted to Business and Enterprise plans. Developer tools registration exists for OAuth apps only.",
+      "evidence": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+        "quote": "The Smartsheet API is restricted to users on Business and Enterprise plans."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "300 requests/min per API token; 30/min for file attachment posts and cell history (10x multiplier); HTTP 429 on exceed",
+      "evidence": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/scalability-options",
+        "quote": "The general limit for most API requests is 300 requests per minute per API token."
+      }
+    },
+    "sdks": {
+      "official": [
+        "csharp",
+        "java",
+        "node",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://developers.smartsheet.com/",
+        "quote": "https://github.com/smartsheet/smartsheet-python-sdk"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developers.smartsheet.com/_bundle/api/smartsheet/openapi.yaml",
+      "evidence": {
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+        "quote": "Smartsheet OpenAPI Reference"
+      }
+    },
+    "confidence": "medium"
+  }
+}

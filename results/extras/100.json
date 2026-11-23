@@ -1,0 +1,47 @@
+{
+  "id": 100,
+  "app": "Grain",
+  "seconds": 39,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Register webhook URL; payload sent on events like new recording processed, recording settings change, clip created. Full event list in developers.grain.com hooks docs.",
+      "evidence": {
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Register a webhook URL in your integration and Grain will send a payload to that URL whenever a registered event occurs, for example, a new recording is processed, a recording's settings change, or a clip is created."
+      }
+    },
+    "sandbox": {
+      "available": "no",
+      "detail": "No sandbox. But personal access tokens available on every plan incl. Free, so free account usable for testing against own workspace. Workspace tokens need Business/Enterprise.",
+      "evidence": {
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "No sandbox is available at this time."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "300 requests/min per token; 429 beyond; rate limit headers returned",
+      "evidence": {
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The API allows 300 requests per minute per token."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developers.grain.com/",
+        "quote": "A Personal Access Token (PAT) authenticates requests as you, with the same access you have in Grain."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://developers.grain.com/",
+        "quote": "A Personal Access Token (PAT) authenticates requests as you, with the same access you have in Grain."
+      }
+    },
+    "confidence": "medium"
+  }
+}

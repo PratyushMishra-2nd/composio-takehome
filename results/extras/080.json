@@ -1,0 +1,47 @@
+{
+  "id": 80,
+  "app": "Harvest",
+  "seconds": 48,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhook or event subscription docs in Harvest API v2 docs (index, overview, Postman, code samples checked). Only third-party bridges (Zapier polling triggers).",
+      "evidence": {
+        "url": "https://help.getharvest.com/api-v2/",
+        "quote": "Just need to add time tracking to your app? Check out the easy-to-use Harvest Button & Widget"
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "No dedicated API sandbox. Free-forever Free plan (1 seat, 2 projects) plus 30-day no-card trial on paid plans; API access via personal access token in any account.",
+      "evidence": {
+        "url": "https://support.getharvest.com/hc/en-us/articles/46885623687565-Continuing-on-the-Free-plan-after-your-trial-ends",
+        "quote": "Continuing on the Free plan after your trial ends"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "100 requests per 15 seconds (general); Reports API 100 per 15 minutes; HTTP 429 + Retry-After",
+      "evidence": {
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+        "quote": "The rate limit for general API requests is 100 requests per 15 seconds."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/code-samples/",
+        "quote": "Here are several examples of using the v2 API using some popular languages:"
+      }
+    },
+    "openapi_spec": {
+      "available": "postman_only",
+      "url": "https://app.getpostman.com/run-collection/2e5a985c891bf967e26a",
+      "evidence": {
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/postman-collection/",
+        "quote": "We've created a collection in Postman that allows you to easily try out and experiment with various API requests."
+      }
+    },
+    "confidence": "medium"
+  }
+}

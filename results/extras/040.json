@@ -1,0 +1,55 @@
+{
+  "id": 40,
+  "app": "SendGrid",
+  "seconds": 50,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Event Webhook POSTs email events (deliverability + engagement) to developer URL; manageable via Webhooks API; signed webhooks/OAuth supported; retries up to 24h",
+      "evidence": {
+        "url": "https://www.twilio.com/docs/sendgrid/for-developers/tracking-events/twilio-sendgrid-event-webhook-overview",
+        "quote": "The SendGrid Event Webhook sends email event data as SendGrid processes it."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free trial (100 emails/day for 60 days, no credit card) plus mail_settings sandbox_mode to validate send requests without delivery. Sandbox mode only validates; no real events. Free tier status per pricing page is a trial, not permanent free plan.",
+      "evidence": {
+        "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+        "quote": "Free trial lets you send 100 emails/day for 60 days"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-endpoint fixed requests per refresh period; HTTP 429 when exceeded; X-RateLimit-* headers (e.g. Email Activity API 6 req/min per changelog)",
+      "evidence": {
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits",
+        "quote": "If you exceed that limit, the API returns an HTTP `429` (Too Many Requests) status code."
+      }
+    },
+    "sdks": {
+      "official": [
+        "csharp",
+        "go",
+        "java",
+        "nodejs",
+        "php",
+        "python",
+        "ruby"
+      ],
+      "evidence": {
+        "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/libraries",
+        "quote": "SendGrid maintains the following official libraries for mail sending."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/twilio/sendgrid-oai/tree/main/spec",
+      "evidence": {
+        "url": "https://github.com/twilio/sendgrid-oai",
+        "quote": "Files can be found in the json/ and yaml/ directories."
+      }
+    },
+    "confidence": "medium"
+  }
+}

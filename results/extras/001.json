@@ -1,0 +1,47 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "seconds": 46,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Unverified from page text (fetch 403). Salesforce has Change Data Capture and Platform Events via Pub/Sub API (gRPC), Streaming API, plus Outbound Messages; no plain REST webhook subscription.",
+      "evidence": {
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.change_data_capture.meta/change_data_capture/cdc_intro.htm",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; no verbatim quote obtained."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Developer Edition org via developer.salesforce.com/signup (per search result; inactive orgs may be ended after 45 days, 5 MB data storage, 15,000 API calls/24h per search summary).",
+      "evidence": {
+        "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; page title is 'Step One: Sign up for Salesforce Developer Edition'."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Daily per-org cap (base 100,000 + per-license allotment; Developer Edition 15,000/24h) and concurrent request limit (5 dev/trial, 25 production)",
+      "evidence": {
+        "url": "https://developer.salesforce.com/docs/platform/salesforce-app-limits-cheatsheet/guide/salesforce-app-limits-platform-api.html",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; figures come from a search-result summary of this page."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.salesforce.com/docs/platform/mobile-sdk/guide/",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; SDK languages could not be confirmed."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://developer.salesforce.com/docs/platform/graphql/guide/",
+        "quote": "NOT VERIFIED: page returned HTTP 403 to fetcher; could not confirm a downloadable OpenAPI or GraphQL schema."
+      }
+    },
+    "confidence": "low"
+  }
+}

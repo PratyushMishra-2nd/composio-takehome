@@ -1,0 +1,52 @@
+{
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "seconds": 61,
+  "result": {
+    "webhooks": {
+      "available": "unknown",
+      "detail": "Could not verify. developer.salesforce.com blocked fetches (403) and searches surfaced no SCAPI webhook or event-subscription docs. Only 'hooks' (server-side extension points) appear in the commerce-sdk README, which are not webhooks.",
+      "evidence": {
+        "url": "https://github.com/SalesforceCommerceCloud/commerce-sdk",
+        "quote": "hooks for Commerce APIs"
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "Could not verify. Salesforce docs returned 403. B2C Commerce sandboxes are typically provisioned under a paid realm contract, but that was not confirmed from docs.",
+      "evidence": {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+        "quote": "not verified: page blocked (HTTP 403)"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "SCAPI load shedding and rate limiting is documented. Per search snippets: SLAS about 24,000 req/min per tenant in production and 500 in non-production. Over-limit requests get HTTP 429. Overloaded systems return 503. Unverified against the page text.",
+      "evidence": {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/throttle-rates.html",
+        "quote": "Load Shedding and Rate Limiting"
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "evidence": {
+        "url": "https://salesforcecommercecloud.github.io/commerce-sdk-isomorphic",
+        "quote": "This SDK provides a Browser & Node.js JavaScript client for calling B2C Commerce Shopper APIs"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-schema-api.html",
+      "evidence": {
+        "url": "https://github.com/SalesforceCommerceCloud/commerce-sdk-isomorphic",
+        "quote": "The SDK is generated from the SCAPI OAS specs that the ECOM monorepo publishes."
+      }
+    },
+    "confidence": "low"
+  }
+}

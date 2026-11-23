@@ -1,0 +1,47 @@
+{
+  "id": 58,
+  "app": "Sherlock",
+  "seconds": 20,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "Sherlock is an open-source local CLI, no hosted API, so no event subscriptions or webhooks.",
+      "evidence": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "Hunt down social media accounts by username across 400+ social networks"
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free open-source CLI, install and run locally (pipx/Docker); no account or sandbox needed.",
+      "evidence": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "| `pipx install sherlock-project` | `pip` or [`uv`](https://docs.astral.sh/uv/) may be used in place of `pipx` |"
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not documented; no vendor API. Limits are per target site.",
+      "evidence": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "Hunt down social media accounts by username across 400+ social networks"
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "| `docker run -it --rm sherlock/sherlock` |"
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+        "quote": "--csv                 Create Comma-Separated Values (CSV) File."
+      }
+    },
+    "confidence": "medium"
+  }
+}

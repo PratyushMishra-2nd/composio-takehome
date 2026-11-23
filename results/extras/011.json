@@ -1,0 +1,47 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "seconds": 63,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks API (POST /api/v2/webhooks) subscribes to org, user, help center, community events; ticket events via trigger/automation-connected webhooks",
+      "evidence": {
+        "url": "https://developer.zendesk.com/documentation/webhooks/creating-and-monitoring-webhooks",
+        "quote": "Subscribe the webhook to one or more Zendesk events."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free 14-day trial account for developers; sponsored (non-expiring, up to 5 agents) accounts for Marketplace partners; customer devs use own sandboxes",
+      "evidence": {
+        "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+        "quote": "You can try out the Zendesk platform with a free, 14-day trial account."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-minute by plan: Team 200, Professional 400, Enterprise 700 (High Volume add-on 2500); 429 + Retry-After",
+      "evidence": {
+        "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+        "quote": "If the rate limit is exceeded, the API responds with a 429 Too Many Requests status code."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.zendesk.com/api-reference/changelog/changelog/",
+        "quote": "Zendesk APIs and SDKs"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developer.zendesk.com/zendesk/oas.yaml",
+      "evidence": {
+        "url": "https://developer.zendesk.com/api-reference/changelog/changelog/",
+        "quote": "Made the OpenAPI specifications for the Ticketing and Help Center APIs available as OAS file downloads."
+      }
+    },
+    "confidence": "medium"
+  }
+}

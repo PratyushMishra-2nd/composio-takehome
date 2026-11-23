@@ -1,0 +1,47 @@
+{
+  "id": 29,
+  "app": "Aircall",
+  "seconds": 61,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Aircall Public API supports webhooks with per-event subscriptions (e.g. call.created, conversation.created).",
+      "evidence": {
+        "url": "https://developers.aircall.io/api-references",
+        "quote": "We are also supporting **Webhooks**."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "Developer portal mentions developer sandboxes as a perk for partners/developers. No self-serve free sandbox steps found in the docs. Not verified verbatim.",
+      "evidence": {
+        "url": "https://developer.aircall.io/",
+        "quote": "developer sandboxes"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "120 requests/min per company (API key/OAuth token); exceeding blocks access for 60 seconds",
+      "evidence": {
+        "url": "https://developers.aircall.io/api-references",
+        "quote": "Aircall limits the number of requests to its Public API to **120 requests per minute** per company."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.aircall.io/docs/best-practices",
+        "quote": "Aircall's Public API is rate-limited to 120 requests per minute per API key or OAuth token."
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://jentic.com/apis/aircall.io/aircall",
+        "quote": "Aircall does not publish an OpenAPI specification."
+      }
+    },
+    "confidence": "low"
+  }
+}

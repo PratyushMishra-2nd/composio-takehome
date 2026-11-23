@@ -1,0 +1,47 @@
+{
+  "id": 90,
+  "app": "PitchBook",
+  "seconds": 38,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhooks per third-party review; polling or scheduled data feed delivery only. Vendor docs are behind login (403), so unconfirmed first-hand.",
+      "evidence": {
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "No webhooks. Real-time updates need polling."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "PitchBook FAQ reportedly says a test sandbox can be set up for developers. Needs separate key from account manager; API is contract-gated, no self-serve. Not verified on the vendor page (403).",
+      "evidence": {
+        "url": "https://apis.io/providers/pitchbook/",
+        "quote": "Dry Run Mode"
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not published; set per contract",
+      "evidence": {
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "Rate limits are not published. They are set per contract."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "None published"
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://apis.io/providers/pitchbook/",
+        "quote": "Spec Presence"
+      }
+    },
+    "confidence": "low"
+  }
+}

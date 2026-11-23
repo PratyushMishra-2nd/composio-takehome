@@ -1,0 +1,49 @@
+{
+  "id": 14,
+  "app": "Front",
+  "seconds": 48,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "App webhooks configured as app features; pick subscribed events (inbound_received, conversation_moved, outbound_sent, tag_added, assignee_changed, new_comment_added, etc). Also rule webhooks and application triggers.",
+      "evidence": {
+        "url": "https://dev.frontapp.com/docs/application-webhooks",
+        "quote": "Application webhooks are configured as features on the apps you create on the Developers page in Front."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox, test mode or free developer account wording found in Front dev docs. Apps are created inside an existing Front company by an admin; local testing via ngrok.",
+      "evidence": {
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "You must be a company admin to create or manage apps."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "50 req/min default (Starter), 100 Professional, 200 Enterprise; per company; extra burst guards on some endpoints",
+      "evidence": {
+        "url": "https://dev.frontapp.com/docs/rate-limiting",
+        "quote": "By default, Front's API rate limit starts at 50 requests per minute and varies depending on your plan."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "Utilizes the Plugin SDK."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/frontapp/front-api-specs/blob/main/core-api/core-api.json",
+      "evidence": {
+        "url": "https://github.com/frontapp/front-api-specs",
+        "quote": "This repo provides Front Platform API schemas for public consumption."
+      }
+    },
+    "confidence": "medium"
+  }
+}

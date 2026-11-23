@@ -1,0 +1,50 @@
+{
+  "id": 3,
+  "app": "Pipedrive",
+  "seconds": 61,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "REST webhooks v2 via API or UI; subscribe to event/object changes, HTTP notification to your endpoint; app-specific webhooks for Marketplace apps",
+      "evidence": {
+        "url": "https://pipedrive.readme.io/docs/guide-for-webhooks-v2",
+        "quote": "allow you to get programmatic notifications from Pipedrive about changes to your data as they happen."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free developer sandbox account; inactive ones are deleted, keep by creating an app/publishing/making private app live",
+      "evidence": {
+        "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+        "quote": "Perform testing in a risk-free environment"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Token-based daily budget (30,000 base tokens × plan multiplier × seats) plus per-user burst limit in rolling 2-second window",
+      "evidence": {
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+        "quote": "30,000 base tokens × subscription plan multiplier × number of seats (+ purchased API Token top-ups)"
+      }
+    },
+    "sdks": {
+      "official": [
+        "node",
+        "php"
+      ],
+      "evidence": {
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "quote": "We offer two official Pipedrive API client libraries:"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developers.pipedrive.com/docs/api/v1/openapi.yaml",
+      "evidence": {
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "quote": "Keep in mind that we'll occasionally update our OpenAPI 3 specification files, so you might need to re-import them from time to time."
+      }
+    },
+    "confidence": "high"
+  }
+}

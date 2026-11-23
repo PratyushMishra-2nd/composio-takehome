@@ -1,0 +1,47 @@
+{
+  "id": 39,
+  "app": "Threads (Meta)",
+  "seconds": 51,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Threads webhooks: Moderate topic (replies, delete) and Interaction topic (mentions, publish)",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/threads/webhooks",
+        "quote": "Webhooks for Threads allow you to receive real-time notifications for the subscribed topics and fields."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "No separate sandbox. Free Meta developer app; add Threads Testers via App roles to test without App Review.",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/threads/get-started",
+        "quote": "Threads testers can grant your app these permissions at any time."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Calls per 24h = 4800 x impressions (min 10); 250 posts, 1,000 replies, 100 deletions per rolling 24h",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/threads/overview.md",
+        "quote": "Threads profiles are limited to 250 API-published posts within a rolling 24-hour period."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/threads/get-started/create-an-app",
+        "quote": "The open-source Threads API sample app"
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/threads/overview.md",
+        "quote": "Full documentation index for this product: https://developers.facebook.com/documentation/threads/llms.txt"
+      }
+    },
+    "confidence": "medium"
+  }
+}

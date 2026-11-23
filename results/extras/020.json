@@ -1,0 +1,47 @@
+{
+  "id": 20,
+  "app": "Gladly",
+  "seconds": 36,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks API: subscribe to 35+ event types (agent status, conversation lifecycle, customer profile, tasks, payment requests); POST notifications",
+      "evidence": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Subscribe to 35+ event types including agent status changes, conversation lifecycle, customer profile updates, task events, and payment requests."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "Sandbox host https://{organization}.gladly.qa exists, but tied to a customer org; no public free signup found",
+      "evidence": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Sandbox: `https://{organization}.gladly.qa`"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "10 req/s per HTTP method; Reports API 10 req/min, 2 concurrent per org",
+      "evidence": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Default: 10 requests/second per method (GET, POST, PUT, PATCH, DELETE)"
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "[Chat Web SDK](https://developer.gladly.com/chat/): Embed chat in your website"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developer.gladly.com/rest/openapi/openapi.yaml",
+      "evidence": {
+        "url": "https://developer.gladly.com/llms.txt",
+        "quote": "Machine-readable OpenAPI 3.0.1 spec (YAML, multi-file with $ref)"
+      }
+    },
+    "confidence": "medium"
+  }
+}

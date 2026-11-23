@@ -1,0 +1,47 @@
+{
+  "id": 74,
+  "app": "Jira",
+  "seconds": 44,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Jira Cloud webhooks over HTTPS; many events (jira:issue_created, sprint_started, etc.)",
+      "evidence": {
+        "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/",
+        "quote": "You can use Jira webhooks to notify your app or web application when certain events occur in Jira."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Atlassian Cloud developer instance (Jira Software 5 users, Confluence 5, JSM 1 agent) for dev/testing only",
+      "evidence": {
+        "url": "https://developer.atlassian.com/platform/marketplace/getting-started/",
+        "quote": "we'll give you a free developer instance"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Points-based quota model plus per-second burst limit per endpoint (defaults ~100 rps GET/POST, 50 PUT/DELETE); 429 on excess",
+      "evidence": {
+        "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+        "quote": "When any limit is exceeded, Jira returns an HTTP `429 Too Many Requests` response."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.atlassian.com/platform/forge/",
+        "quote": "Forge can be used to build custom apps and integrations or apps distributed through the Atlassian Marketplace."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json",
+      "evidence": {
+        "url": "https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json",
+        "quote": "\"components\":{\"schemas\":{"
+      }
+    },
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "seconds": 58,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Notifications API: create destination (Amazon EventBridge or SQS), subscribe to notification types (ORDER_CHANGE, ANY_OFFER_CHANGED, etc.). Push via AWS queues, not HTTP webhooks.",
+      "evidence": {
+        "url": "https://developer-docs.amazon/sp-api-blog/docs/event-driven-architecture-in-selling-partner-api",
+        "quote": "Instead of polling for information, your application can receive information directly from Amazon"
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Static (mock) and dynamic sandbox endpoints; register a sandbox application. Page states no price. Sandbox throttle 5 req/s, burst 15. Needs SP-API developer registration.",
+      "evidence": {
+        "url": "https://developer-docs.amazon/sp-api/docs/sp-api-sandbox",
+        "quote": "Use the SP-API sandbox to make test calls."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Token bucket per operation per seller+app pair; per-operation rate/burst in API reference; standard (static) and dynamic plans; 429 on throttle",
+      "evidence": {
+        "url": "https://developer-docs.amazon/sp-api/docs/usage-plans-and-rate-limits",
+        "quote": "The SP-API uses the token bucket algorithm to rate-limit requests to the API."
+      }
+    },
+    "sdks": {
+      "official": [
+        "java",
+        "csharp",
+        "javascript",
+        "php",
+        "python"
+      ],
+      "evidence": {
+        "url": "https://developer-docs.amazon/sp-api/docs/sp-api-sdks",
+        "quote": "SP-API offers a collection of software development kits (SDKs) to connect with our APIs."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/amzn/selling-partner-api-models/tree/main/models",
+      "evidence": {
+        "url": "https://github.com/amzn/selling-partner-api-models",
+        "quote": "This repository contains Swagger models for developers to use to create software that calls Selling Partner APIs."
+      }
+    },
+    "confidence": "medium"
+  }
+}

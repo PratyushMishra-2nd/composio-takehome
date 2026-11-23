@@ -1,0 +1,47 @@
+{
+  "id": 8,
+  "app": "Close",
+  "seconds": 56,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook subscriptions via API; trigger on object type + action events from the Event Log, with filters and HMAC signatures",
+      "evidence": {
+        "url": "https://developer.close.com/api/resources/webhooks.md",
+        "quote": "Webhooks allow a subscription URL to be configured that we will POST event data to as it is added to the Event Log."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox, test mode or free developer account found in Close developer docs checked (overview, llms.txt). Trial availability unconfirmed.",
+      "evidence": {
+        "url": "https://developer.close.com/api/overview.md",
+        "quote": "We publish an OpenAPI spec at: https://api.close.com/api/openapi.json"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per endpoint group, per API key; org limit is 3x a key's limit; 429 responses give rate_reset seconds",
+      "evidence": {
+        "url": "https://developer.close.com/api/overview/rate-limits.md",
+        "quote": "Rate limits are enforced per endpoint group."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.close.com/llms.txt",
+        "quote": "Community-built API client libraries for Python, PHP, Node.js, Ruby, Go, and C#."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developer.close.com/openapi.json",
+      "evidence": {
+        "url": "https://developer.close.com/api/overview.md",
+        "quote": "We publish an OpenAPI spec at: https://api.close.com/api/openapi.json"
+      }
+    },
+    "confidence": "medium"
+  }
+}

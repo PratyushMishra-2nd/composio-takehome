@@ -1,0 +1,53 @@
+{
+  "id": 83,
+  "app": "Binance",
+  "seconds": 55,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhooks for Spot API. Event push via WebSocket user data stream (userDataStream.subscribe). Webhooks exist only for Binance Pay Merchant, a separate product.",
+      "evidence": {
+        "url": "https://developers.binance.com/docs/binance-pay/webhook-common",
+        "quote": "For Security Purpose, Binance will add signature for webhook notification."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Spot Test Network (testnet.binance.vision) with virtual funds, free API keys via GitHub login; periodically reset.",
+      "evidence": {
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/testnet/general-info",
+        "quote": "Please note that these are not real assets and can be used only on the Spot Test Network itself."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-IP request weight limit (about 6000/min per search snippet), plus separate order-count limits; 429 then 418 IP ban",
+      "evidence": {
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/limits",
+        "quote": "Requests fail with HTTP status code 429 when you exceed the request rate limit."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "javascript",
+        "java",
+        "rust",
+        "go"
+      ],
+      "evidence": {
+        "url": "https://github.com/binance/binance-connector-python",
+        "quote": "Collection of auto-generated Python SDK for Binance APIs."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/binance/binance-api-swagger/blob/master/spot_api.yaml",
+      "evidence": {
+        "url": "https://github.com/binance/binance-api-swagger",
+        "quote": "Binance now offers a YAML collection file on Binance Public Spot API to help developers' consulting of each endpoint"
+      }
+    },
+    "confidence": "medium"
+  }
+}

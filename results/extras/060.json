@@ -1,0 +1,47 @@
+{
+  "id": 60,
+  "app": "Clay",
+  "seconds": 45,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Registered webhooks notify when a routine run finishes (signed deliveries, webhook_id on run requests). No general event-subscription catalog; also inbound table webhooks.",
+      "evidence": {
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "Get notified when a routine run finishes, then verify and handle the delivery."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox or free-dev-account page in developers.clay.com llms.txt index. Public API access likely tied to a Clay workspace/plan; not confirmed free.",
+      "evidence": {
+        "url": "https://developers.clay.com/public-api/rate-limits.md",
+        "quote": "Limits may differ for specific workspaces. Contact Clay if you need higher limits."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "300 requests/min per workspace (~5/s), shared across API keys; 429 with Retry-After; some endpoints have own limits",
+      "evidence": {
+        "url": "https://developers.clay.com/public-api/rate-limits.md",
+        "quote": "When a request is rate limited, Clay returns `429` with a `Retry-After` header (seconds to wait)."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "Build with Clay from your coding agent, or call the Clay API from your own applications."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://developers.clay.com/openapi.json",
+      "evidence": {
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "[openapi](/openapi.json)"
+      }
+    },
+    "confidence": "medium"
+  }
+}

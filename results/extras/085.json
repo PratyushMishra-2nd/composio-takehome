@@ -1,0 +1,47 @@
+{
+  "id": 85,
+  "app": "iPayX",
+  "seconds": 29,
+  "result": {
+    "webhooks": {
+      "available": "unknown",
+      "detail": "No iPayX developer docs found. https://ipayx.ai/docs returns a 404 'Page not found' page.",
+      "evidence": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found"
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox or test mode documentation found; docs URL is 404.",
+      "evidence": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found"
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not documented",
+      "evidence": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found"
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found"
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://ipayx.ai/docs",
+        "quote": "Oops! Page not found"
+      }
+    },
+    "confidence": "low"
+  }
+}

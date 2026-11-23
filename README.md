@@ -2,7 +2,7 @@
 
 Composio AI Product Ops Intern take-home. **Live case study:** https://pratyushmishra-2nd.github.io/composio-takehome/
 
-For each of 100 apps, an agent researches: what the app does, auth methods, the gate to working credentials (self-serve / trial / paid / app review / customer-only / partner), API surface, existing MCP servers, and a buildability verdict with the main blocker. Every answer carries a verbatim quote and the URL it came from. The page leads with the patterns, then the full matrix, the agent and the accuracy story.
+For each of 100 apps, an agent researches what the app does, auth methods, the gate to working credentials (self-serve / trial / paid / app review / customer-only / partner), API surface, existing MCP servers, and a buildability verdict with the main blocker. A separate enrichment pass adds webhooks (triggers), free sandbox, rate limits, official SDKs and machine-readable specs. Every answer carries a verbatim quote and the URL it came from. The page leads with the patterns, then the full matrix, the agent and the accuracy story.
 
 ## How it works
 
@@ -70,6 +70,8 @@ python agent/verify.py   --pass final
 python agent/verify_browser.py && python agent/verify.py --pass final   # browser-use loop: render JS-heavy cited pages in headless Chromium
 python agent/score.py                                 # accuracy vs the blind sample check
 python agent/adjudicate.py && python agent/score.py   # third check on disagreements
+python agent/enrich.py --workers 4                    # extra fields: webhooks, sandbox, rate limits, SDKs, OpenAPI/GraphQL spec
+python agent/verify_extras.py && python agent/verify_browser.py --extras && python agent/verify_extras.py
 python agent/composio_catalog.py --all                # Composio coverage via MCP -> results/composio_catalog.json
 python agent/outreach.py --dry-run                    # preview approval-tracker issues; drop --dry-run to create them
 python agent/build.py                                 # docs/data.json
@@ -92,6 +94,7 @@ Results are cached per app, so a re-run only researches missing apps. Delete `re
 | `agent/verify_browser.py` | Browser-use loop: renders unconfirmed cited pages in headless Chromium for the quote check |
 | `agent/make_submission.py` | One-page submission PDF, built from the same data as the page |
 | `agent/score.py` | Field-level accuracy of pass 1 and final vs the reference set, plus adjudicated accuracy |
+| `agent/enrich.py`, `agent/verify_extras.py` | Enrichment pass (webhooks, free sandbox, rate limits, official SDKs, machine-readable spec) and its checks: quote check plus downloading and parsing each spec URL |
 | `agent/composio_mcp.py` | Minimal client for Composio's MCP server |
 | `agent/composio_catalog.py` | Which of the 100 apps already have a Composio toolkit (gap backlog) |
 | `agent/outreach.py` | Opens one GitHub issue per gated app via Composio (approval tracker) |

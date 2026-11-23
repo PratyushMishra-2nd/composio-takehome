@@ -1,0 +1,47 @@
+{
+  "id": 28,
+  "app": "WhatsApp Business",
+  "seconds": 68,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks for incoming messages, delivery status updates, errors; subscribe per WABA via app webhook config",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "Webhooks deliver JSON payloads to your server for message status updates, incoming messages, asynchronous error handling, and many other notification utilities."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Test WhatsApp account, test business phone number auto-created with Cloud API get-started; no payment method needed for template messages; relaxed limits. Also a calling sandbox account.",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "Test accounts and test phone numbers are useful for testing purposes, as they have relaxed messaging limits and don't require a payment method on file in order to send template messages."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "200 req/hr per app per Messaging account default (5000/hr for active accounts with a registered number); messaging throughput 80 msg/s per phone number by default (up to 1000)",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "For the following endpoints, your app can make 200 requests per hour, per app, per Messaging account, by default."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "(Python wrapper), are available but are not maintained or endorsed by Meta."
+      }
+    },
+    "openapi_spec": {
+      "available": "postman_only",
+      "url": "https://www.postman.com/meta/whatsapp-business-platform/",
+      "evidence": {
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+        "quote": "The official Postman collection lets you execute common API queries."
+      }
+    },
+    "confidence": "medium"
+  }
+}

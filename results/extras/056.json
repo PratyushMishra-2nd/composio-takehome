@@ -1,0 +1,58 @@
+{
+  "id": 56,
+  "app": "Firecrawl",
+  "seconds": 37,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Per-request webhook object (url + optional events) for crawl, batch scrape, extract, agent, monitor events; 2xx within 10s, 3 retries",
+      "evidence": {
+        "url": "https://docs.firecrawl.dev/webhooks/overview",
+        "quote": "Get notified the moment a crawl, batch scrape, extract, agent job, or monitor check starts, progresses, or finishes."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free plan with 1,000 credits; also keyless free usage capped per IP/day for Search, Scrape, Parse",
+      "evidence": {
+        "url": "https://docs.firecrawl.dev/rate-limits",
+        "quote": "Sign up for a free API key to get 1,000 credits and higher rate limits at no cost"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-minute per-team limits by plan plus concurrency caps; Free: /scrape 10, /map 10, /crawl 2, /search 10, /agent 2 per min; 2 concurrent browsers; 429 on exceed",
+      "evidence": {
+        "url": "https://docs.firecrawl.dev/rate-limits",
+        "quote": "Rate limits cap how many requests your team can make per minute, while concurrency limits cap how many jobs can run in parallel."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "node",
+        "go",
+        "java",
+        "ruby",
+        "rust",
+        "dotnet",
+        "php",
+        "elixir",
+        "cli"
+      ],
+      "evidence": {
+        "url": "https://docs.firecrawl.dev/sdks/overview",
+        "quote": "Use an SDK to search, scrape, and interact with the web without managing raw HTTP requests."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.firecrawl.dev/api-reference/v2-openapi.json",
+      "evidence": {
+        "url": "https://docs.firecrawl.dev/api-reference/v2-openapi.json",
+        "quote": "\"openapi\": \"3.0.0\""
+      }
+    },
+    "confidence": "high"
+  }
+}

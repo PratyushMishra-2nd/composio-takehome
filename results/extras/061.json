@@ -1,0 +1,51 @@
+{
+  "id": 61,
+  "app": "GitHub",
+  "seconds": 43,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Repo/org/app webhooks and GitHub App webhooks subscribe to many event types (push, pull_request, issues, etc.) delivered via HTTP POST.",
+      "evidence": {
+        "url": "https://docs.github.com/en/webhooks/about-webhooks",
+        "quote": "Webhooks let you subscribe to events happening in a software system and automatically receive a delivery of data to your server whenever those events occur."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free GitHub account (GitHub Free) works for testing; create free test repos/orgs/apps. No separate sandbox needed.",
+      "evidence": {
+        "url": "https://docs.github.com/en/get-started/learning-about-github/githubs-plans",
+        "quote": "GitHub offers free and paid plans for storing and collaborating on code."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "REST primary limit: 60 req/hr unauthenticated; 5,000 req/hr authenticated users (higher for apps/Enterprise); plus secondary limits; GraphQL separate point-based limit",
+      "evidence": {
+        "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+        "quote": "The primary rate limit for unauthenticated requests is 60 requests per hour."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript",
+        "ruby",
+        "dotnet"
+      ],
+      "evidence": {
+        "url": "https://docs.github.com/en/rest/using-the-rest-api/libraries-for-the-rest-api",
+        "quote": "GitHub maintains official Octokit libraries for some languages."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/github/rest-api-description",
+      "evidence": {
+        "url": "https://docs.github.com/en/rest/about-the-rest-api/about-the-openapi-description-for-the-rest-api",
+        "quote": "GitHub's OpenAPI description of the REST API is publicly available."
+      }
+    },
+    "confidence": "high"
+  }
+}

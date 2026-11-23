@@ -1,0 +1,47 @@
+{
+  "id": 59,
+  "app": "Waterfall.io",
+  "seconds": 54,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Prospector, Contact/Phone/Company Enrichment accept webhook_url; Waterfall POSTs the Finder payload on completion. Per-request callback, not event subscriptions.",
+      "evidence": {
+        "url": "https://docs.waterfall.io/v1/faq",
+        "quote": "Waterfall Prospector, Contact Enrichment, Phone Enrichment, and Company Enrichment accept a `webhook_url`."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "No sandbox, test mode or free tier found in docs. API access by approval; request key via work email or book a call.",
+      "evidence": {
+        "url": "https://docs.waterfall.io/v1/faq",
+        "quote": "API access is available by approval."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "50 requests per 60 seconds default (Prospector, Search, Enrichment, Job Change, Email Verification); none for Account Reporter",
+      "evidence": {
+        "url": "https://docs.waterfall.io/v1/faq",
+        "quote": "The default for Prospector, Search, Enrichment, Job Change, and Email Verification is 50 requests per 60 seconds."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://docs.waterfall.io/llms.txt",
+        "quote": "create Waterfall API integration code in your own Python, JavaScript, or TypeScript project"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.waterfall.io/api_specs.yaml",
+      "evidence": {
+        "url": "https://docs.waterfall.io/api_specs.yaml",
+        "quote": "openapi: \"3.1.0\""
+      }
+    },
+    "confidence": "medium"
+  }
+}

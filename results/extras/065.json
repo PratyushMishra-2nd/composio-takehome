@@ -1,0 +1,53 @@
+{
+  "id": 65,
+  "app": "Supabase",
+  "seconds": 34,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Database Webhooks fire on table INSERT/UPDATE/DELETE (HTTP POST/GET via pg_net). Platform Webhooks (org/project events via Management API) are early-access only.",
+      "evidence": {
+        "url": "https://supabase.com/docs/guides/database/webhooks",
+        "quote": "Database Webhooks allow you to send real-time data from your database to another system whenever a table event occurs."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free Plan includes two free projects, usable for testing integrations. Free projects pause after 1 week of inactivity.",
+      "evidence": {
+        "url": "https://supabase.com/pricing",
+        "quote": "You can create two projects, one for development and one for production — the Free Plan includes two free projects."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Management API: 120 requests/min per user, per project or org, per endpoint; 429 when exceeded. Some analytics endpoints 30/min.",
+      "evidence": {
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "Rate limits are applied to prevent abuse and ensure fair usage of the Management API."
+      }
+    },
+    "sdks": {
+      "official": [
+        "javascript/typescript",
+        "dart/flutter",
+        "swift",
+        "python",
+        "c#"
+      ],
+      "evidence": {
+        "url": "https://supabase.com/docs/guides/api/rest/client-libs",
+        "quote": "Some libraries are officially supported, and some are contributed by the community."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://api.supabase.com/api/v1-json",
+      "evidence": {
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "OpenAPI Spec"
+      }
+    },
+    "confidence": "high"
+  }
+}

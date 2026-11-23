@@ -1,0 +1,57 @@
+{
+  "id": 7,
+  "app": "Zoho CRM",
+  "seconds": 54,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Notifications API (POST /crm/v8/actions/watch): subscribe to module events (create/edit/delete/all) with notify_url, channel expiry, optional field conditions. Also workflow-rule webhook actions.",
+      "evidence": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/notifications/enable.html",
+        "quote": "To enable instant notifications of actions performed on a module."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free full-featured Developer Edition account; CRM sandbox also exists (isolated from production, in paid editions).",
+      "evidence": {
+        "url": "https://www.zoho.com/crm/developer/developer-edition.html",
+        "quote": "Zoho CRM's free developer edition is a fully-featured application environment"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Credit-based, 24h rolling: Free 5,000/day; Professional 50k+500/user; Enterprise 50k+1000/user. Concurrency 5-25 per org by edition; sub-concurrency 10 for heavy calls.",
+      "evidence": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+        "quote": "Each API call made will result in a reduction of 1 credit."
+      }
+    },
+    "sdks": {
+      "official": [
+        "php",
+        "node",
+        "java",
+        "csharp",
+        "python",
+        "ruby",
+        "typescript",
+        "scala",
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/zoho-crm-sdks.html",
+        "quote": "Zoho CRM offers a powerful suite of SDKs (Software Development Kits)"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/zoho/crm-oas",
+      "evidence": {
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/openapi-specification.html",
+        "quote": "The OpenAPI Specification for Zoho CRM APIs is hosted on GitHub:"
+      }
+    },
+    "confidence": "high"
+  }
+}

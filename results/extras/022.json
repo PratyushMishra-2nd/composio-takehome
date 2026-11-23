@@ -1,0 +1,55 @@
+{
+  "id": 22,
+  "app": "Twilio",
+  "seconds": 58,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Twilio sends webhooks for incoming messages/calls, status callbacks, and runtime events (billing thresholds, errors) via webhook pipelines; Webhooks configuration API exists.",
+      "evidence": {
+        "url": "https://www.twilio.com/docs/usage/webhooks",
+        "quote": "When events occur in your app, you can also have Twilio send you webhooks."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Free test credentials (magic numbers; cover buying numbers, SMS, calls, Lookup; other resources 403; no status callbacks). Free trial account also exists, no credit card (per search summary), verified numbers only.",
+      "evidence": {
+        "url": "https://www.twilio.com/docs/iam/test-credentials",
+        "quote": "Twilio provides test credentials you can use to exercise parts of the REST API without incurring charges."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-product limits, no single global one: e.g. voice default 1 call/sec (queued), Proxy 30 RPS/endpoint, Video 80 read/20 write RPS, Flex Interactions 20 RPS; HTTP 429 on excess",
+      "evidence": {
+        "url": "https://www.twilio.com/docs/api/errors/45780",
+        "quote": "This warning occurs when your account sends too many concurrent requests for the Flex API operation you are calling."
+      }
+    },
+    "sdks": {
+      "official": [
+        "csharp",
+        "java",
+        "node",
+        "php",
+        "python",
+        "ruby",
+        "go"
+      ],
+      "evidence": {
+        "url": "https://www.twilio.com/docs/libraries",
+        "quote": "Server-side SDKs make it easy for you to use Twilio's REST APIs, generate TwiML, and perform other common server-side programming tasks."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/twilio/twilio-oai",
+      "evidence": {
+        "url": "https://github.com/twilio/twilio-oai",
+        "quote": "This repository contains [OpenAPI](https://www.openapis.org/) documents for [Twilio's API](https://docs.twilio.com)."
+      }
+    },
+    "confidence": "medium"
+  }
+}

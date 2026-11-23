@@ -1,0 +1,53 @@
+{
+  "id": 51,
+  "app": "DataForSEO",
+  "seconds": 44,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Callback style: set pingback_url (notify on task completion) or postback_url (POST results to your server) per task. No event-subscription management API.",
+      "evidence": {
+        "url": "https://docs.dataforseo.com/v3/serp-overview/",
+        "quote": "Alternatively, you can specify `pingback_url` or `postback_url` when setting a task"
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Sandbox free for any registered user. Returns dummy data only. Same rate limits as production.",
+      "evidence": {
+        "url": "https://docs.dataforseo.com/v3/appendix-sandbox/",
+        "quote": "Sandbox is completely free for any registered user at DataForSEO."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "10000 API calls/min total, max 100 tasks per POST (live: 1 task per POST); some APIs stricter (e.g. Google Ads live 12/min)",
+      "evidence": {
+        "url": "https://docs.dataforseo.com/v3/serp-overview/",
+        "quote": "You can send up to 10000 POST and GET API calls per minute in total, with each POST call containing no more than 100 tasks."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "typescript",
+        "java",
+        "php",
+        "csharp"
+      ],
+      "evidence": {
+        "url": "https://dataforseo.com/dev-starter-kit",
+        "quote": "Official Java client, generated from the same API specification."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://github.com/dataforseo/OpenApiDocumentation/blob/master/openapi_specification.yaml",
+      "evidence": {
+        "url": "https://dataforseo.com/dev-starter-kit",
+        "quote": "One YAML for every endpoint — generate a client of your own."
+      }
+    },
+    "confidence": "medium"
+  }
+}

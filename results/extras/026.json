@@ -1,0 +1,49 @@
+{
+  "id": 26,
+  "app": "Discord",
+  "seconds": 46,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook Events: configure a public Webhook Events URL; Discord POSTs events (APPLICATION_AUTHORIZED/DEAUTHORIZED, ENTITLEMENT_*, LOBBY_MESSAGE_*, GAME_DIRECT_MESSAGE_*). Message/guild events come via Gateway websocket, not webhooks.",
+      "evidence": {
+        "url": "https://docs.discord.com/developers/events/webhook-events",
+        "quote": "Webhook events are one-way events sent to your app over HTTP to notify you when an event occurred."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Anyone can create an application/bot in the Developer Portal and test in own servers or with whitelisted test accounts. Pricing not stated on fetched pages; free is general knowledge, no formal sandbox.",
+      "evidence": {
+        "url": "https://docs.discord.com/developers/developer-tools/game-sdk",
+        "quote": "Make sure any test account is added to the application's App Whitelist in the portal!"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "50 requests/sec global per bot, plus per-route limits via X-RateLimit headers",
+      "evidence": {
+        "url": "https://docs.discord.com/developers/topics/rate-limits",
+        "quote": "All bots can make up to 50 requests per second to our API."
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript (Embedded App SDK for Activities only; Game SDK archived; no official REST/bot client libs)"
+      ],
+      "evidence": {
+        "url": "https://docs.discord.com/developers/developer-tools/community-resources",
+        "quote": "Discord does not maintain official SDKs."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://raw.githubusercontent.com/discord/discord-api-spec/main/specs/openapi.json",
+      "evidence": {
+        "url": "https://github.com/discord/discord-api-spec",
+        "quote": "This repository contains the public preview of the OpenAPI 3.1 specification for Discord's API."
+      }
+    },
+    "confidence": "medium"
+  }
+}

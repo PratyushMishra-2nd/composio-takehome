@@ -1,0 +1,54 @@
+{
+  "id": 31,
+  "app": "Google Ads",
+  "seconds": 44,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Only Google Ads lead form webhook (CRM) pushes lead data to your URL. No general event/change subscriptions in Google Ads API; polling (search/change events) needed.",
+      "evidence": {
+        "url": "https://developers.google.com/google-ads/webhook/docs/overview",
+        "quote": "The webhook CRM solution lets you configure a URL path, which we then use to send all incoming lead data from the ad."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Test accounts: free, don't affect live ads or charge; need a manager account and developer token (test accounts work with test-level token). Deleted after 1 year inactive.",
+      "evidence": {
+        "url": "https://developers.google.com/google-ads/api/docs/best-practices/test-accounts",
+        "quote": "Test accounts don't affect your live ads or charge your account."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "QPS limits per customer ID and per Cloud project; exact value varies with server load; exceeded -> RESOURCE_TEMPORARILY_EXHAUSTED",
+      "evidence": {
+        "url": "https://developers.google.com/google-ads/api/docs/best-practices/rate-limits",
+        "quote": "enforces rate limiting by queries per second (QPS) on both customer IDs and Google Cloud projects independently"
+      }
+    },
+    "sdks": {
+      "official": [
+        "java",
+        "dotnet",
+        "php",
+        "python",
+        "ruby",
+        "perl"
+      ],
+      "evidence": {
+        "url": "https://developers.google.com/google-ads/api/docs/client-libs",
+        "quote": "The following table lists the official client libraries and links to their setup guides, source repositories, packages, and code examples:"
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "https://github.com/googleapis/googleapis/tree/master/google/ads/googleads",
+      "evidence": {
+        "url": "https://github.com/googleapis/googleapis/tree/master/google/ads/googleads",
+        "quote": "This folder contains the protocol buffer definitions"
+      }
+    },
+    "confidence": "medium"
+  }
+}

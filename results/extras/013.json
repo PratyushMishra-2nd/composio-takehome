@@ -1,0 +1,47 @@
+{
+  "id": 13,
+  "app": "Freshdesk",
+  "seconds": 57,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks only as an action inside automation rules (ticket create/update), not a REST subscription API; Growth/Pro/Enterprise plans. Marketplace apps can also register external-event webhooks.",
+      "evidence": {
+        "url": "https://support.freshdesk.com/en/support/solutions/articles/225430-what-are-webhooks-",
+        "quote": "Webhooks can be triggered via the automation rules that run on ticket creation"
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No free dev sandbox or dev account documented in pages read. Only a time-limited trial (50 calls/min API limit). Freshdesk sandbox appears to be a paid-plan feature but not confirmed.",
+      "evidence": {
+        "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+        "quote": "For every trial period the API limit is 50 per minute."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-minute, per account, by plan: Growth 100, Pro 400, Enterprise 700; trial 50; lower per-endpoint caps (e.g. ticket create 50 on Growth)",
+      "evidence": {
+        "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+        "quote": "The number of API calls you can make is based on your plan."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.freshdesk.com/api/",
+        "quote": "For all trial users, there is a default API limit of 50 calls/minute."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://developer.freshdesk.com/api/",
+        "quote": "For all trial users, there is a default API limit of 50 calls/minute."
+      }
+    },
+    "confidence": "low"
+  }
+}

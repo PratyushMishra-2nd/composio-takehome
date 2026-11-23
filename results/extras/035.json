@@ -1,0 +1,59 @@
+{
+  "id": 35,
+  "app": "Mailchimp",
+  "seconds": 49,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "List webhooks via REST (create/list per audience): fire on subscribe, unsubscribe, profile, cleaned, upemail, campaign events. Also batch webhooks.",
+      "evidence": {
+        "url": "https://mailchimp.com/developer/marketing/api/list-webhooks/",
+        "quote": "Create a new webhook for a specific list."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "No dedicated sandbox/test mode found. Free Mailchimp plan (250 contacts) usable to test integrations.",
+      "evidence": {
+        "url": "https://mailchimp.com/pricing/",
+        "quote": "Under 250 contacts? It's free."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "10 simultaneous connections per user; 429 when exceeded; 120s timeout",
+      "evidence": {
+        "url": "https://mailchimp.com/developer/marketing/api-concepts/rate-limits-and-timeouts",
+        "quote": "The Marketing API has a limit of 10 simultaneous connections."
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript",
+        "python",
+        "go",
+        "java",
+        "csharp",
+        "php",
+        "ruby",
+        "swift",
+        "rust",
+        "ios",
+        "android"
+      ],
+      "evidence": {
+        "url": "https://github.com/mailchimp/mailchimp-client-lib-codegen",
+        "quote": "This tool is used to auto-generate and publish both Mailchimp Marketing and Transactional client libraries."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://api.mailchimp.com/schema/openapi/OpenAPI.json?expand",
+      "evidence": {
+        "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+        "quote": "We use the OpenAPI Specification (formerly known as Swagger) to describe each endpoint."
+      }
+    },
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": 4,
+  "app": "Attio",
+  "seconds": 80,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "REST webhook subscriptions to Attio record/object/list/note/task etc. events; 25 req/s delivery cap per target URL, retries ~3 days.",
+      "evidence": {
+        "url": "https://docs.attio.com/rest-api/guides/webhooks",
+        "quote": "Webhooks allow you to subscribe to changes that happen in Attio"
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox/test-mode page found in docs, llms.txt index, or developer platform page. A developer console exists at build.attio.com (unverified); Attio has a free plan but docs do not document a dedicated sandbox.",
+      "evidence": {
+        "url": "https://attio.com/platform/developers",
+        "quote": "Connect your GTM stack with the REST API, App SDK, or Attio MCP."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "100 req/s reads, 25 req/s writes; 429 with Retry-After",
+      "evidence": {
+        "url": "https://docs.attio.com/rest-api/guides/rate-limiting",
+        "quote": "Our rate limit across the whole API is 100 requests per second for read requests, 25 requests per second for write requests."
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript"
+      ],
+      "evidence": {
+        "url": "https://attio.com/platform/developers",
+        "quote": "Extend Attio in TypeScript and React with the App SDK."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://api.attio.com/openapi/api",
+      "evidence": {
+        "url": "https://docs.attio.com/llms.txt",
+        "quote": "Access the OpenAPI specification for the Attio REST API"
+      }
+    },
+    "confidence": "medium"
+  }
+}

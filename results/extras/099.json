@@ -1,0 +1,47 @@
+{
+  "id": 99,
+  "app": "YouTube Transcript",
+  "seconds": 43,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No webhooks or event subscriptions in docs, blog or OpenAPI spec; REST polling plus MCP server only.",
+      "evidence": {
+        "url": "https://transcriptapi.com/openapi.json",
+        "quote": "Rate limits: 200 requests per minute per key. Honor X-RateLimit headers and Retry-After on 429."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "100 free credits on signup, no card required; free API key from dashboard. No separate sandbox.",
+      "evidence": {
+        "url": "https://transcriptapi.com/blog/transcriptapi-vs-youtube-transcript-io",
+        "quote": "100 free credits to try the API with no card required."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "200 requests/min per key (homepage: 200 RPM monthly, 300 RPM annual); 429 with Retry-After",
+      "evidence": {
+        "url": "https://transcriptapi.com/openapi.json",
+        "quote": "Rate limits: 200 requests per minute per key. Honor X-RateLimit headers and Retry-After on 429."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://transcriptapi.com/docs",
+        "quote": "Get Started"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://transcriptapi.com/openapi.json",
+      "evidence": {
+        "url": "https://transcriptapi.com/openapi.json",
+        "quote": "YouTube Transcript API - Public"
+      }
+    },
+    "confidence": "medium"
+  }
+}

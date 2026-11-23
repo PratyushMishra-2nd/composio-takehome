@@ -1,0 +1,51 @@
+{
+  "id": 15,
+  "app": "Pylon",
+  "seconds": 45,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks created in UI (Settings > Integrations & dev > Webhooks), fired by triggers/macros; no subscribe API or event list found.",
+      "evidence": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/webhooks",
+        "quote": "Webhooks are user-defined HTTP callbacks that are triggered by specific events within Pylon."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox, test mode, or free developer account mentioned in API, webhooks, auth, rate-limit, SDK docs. Pricing page not checked.",
+      "evidence": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+        "quote": "Receive webhooks for various events happening in Pylon."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Per-org, per-endpoint per minute; tiers of 30, 120, or 300 req/min; 429 rate_limited on excess",
+      "evidence": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/rate-limits",
+        "quote": "Pylon limits how many requests your organization can make to each API endpoint per minute."
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript",
+        "python",
+        "go"
+      ],
+      "evidence": {
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/sdks",
+        "quote": "Official TypeScript, Python, and Go libraries for the Pylon API"
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://docs.usepylon.com/openapi.json",
+        "quote": "The URL `openapi.json` does not exist."
+      }
+    },
+    "confidence": "medium"
+  }
+}

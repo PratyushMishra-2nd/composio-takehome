@@ -1,0 +1,47 @@
+{
+  "id": 96,
+  "app": "Devin",
+  "seconds": 74,
+  "result": {
+    "webhooks": {
+      "available": "unknown",
+      "detail": "No outbound webhook/event-subscription API found. Automations accept webhook/Slack/GitHub/Linear triggers (inbound to Devin), trigger schemas via API; not a subscribe-to-Devin-events API.",
+      "evidence": {
+        "url": "https://docs.devin.ai/api-reference/v3/automations/get-organizations-automations-schemas.md",
+        "quote": "Return all supported trigger event schemas, keyed by source then event name."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No API sandbox or test mode documented. A Free self-serve plan exists (details not verified); API v3 uses service users, likely needs paid/enterprise.",
+      "evidence": {
+        "url": "https://docs.devin.ai/admin/billing/self-serve.md",
+        "quote": "Compare Devin's Free, Pro, Max, and Teams self-serve plans"
+      }
+    },
+    "rate_limits": {
+      "documented": false,
+      "summary": "not documented numerically; only 429 error mentioned",
+      "evidence": {
+        "url": "https://docs.devin.ai/api-reference/overview.md",
+        "quote": "`429 Too Many Requests`: Rate limit exceeded"
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://docs.devin.ai/api-reference/terraform-provider.md",
+        "quote": "Manage Devin resources as infrastructure-as-code with the official Terraform provider"
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://docs.devin.ai/v3-openapi.json",
+      "evidence": {
+        "url": "https://docs.devin.ai/llms.txt",
+        "quote": "- [v3-openapi](/v3-openapi.json)"
+      }
+    },
+    "confidence": "medium"
+  }
+}

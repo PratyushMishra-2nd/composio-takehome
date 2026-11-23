@@ -1,0 +1,50 @@
+{
+  "id": 73,
+  "app": "Linear",
+  "seconds": 26,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "HTTP push webhooks for create/update/remove on Issues, Comments, Projects, Cycles, Documents, Initiatives, Users, etc.; plus Issue SLA and OAuthApp revoked events. Admin or admin-scope OAuth required.",
+      "evidence": {
+        "url": "https://linear.app/developers/webhooks",
+        "quote": "Linear provides webhooks which allow you to receive HTTP push notifications whenever data is created, updated or removed."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "No dedicated sandbox, but Free plan workspace includes API and webhook access, usable for testing integrations.",
+      "evidence": {
+        "url": "https://linear.app/pricing",
+        "quote": "Free for everyone"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "API key 2,500 req/hr per user; OAuth app 5,000 req/hr; complexity cap 10,000 pts/query (3M/hr API key); 429 + Retry-After",
+      "evidence": {
+        "url": "https://linear.app/developers/rate-limiting",
+        "quote": "When authenticated using an API key you can make up to 2,500 requests per hour."
+      }
+    },
+    "sdks": {
+      "official": [
+        "typescript",
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://linear.app/developers/sdk",
+        "quote": "It’s written in Typescript but can also be used in any Javascript environment."
+      }
+    },
+    "openapi_spec": {
+      "available": "graphql_schema",
+      "url": "https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql",
+      "evidence": {
+        "url": "https://linear.app/developers/graphql",
+        "quote": "It supports introspection so you can query the whole schema."
+      }
+    },
+    "confidence": "high"
+  }
+}

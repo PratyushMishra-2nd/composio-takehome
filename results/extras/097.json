@@ -1,0 +1,51 @@
+{
+  "id": 97,
+  "app": "higgsfield",
+  "seconds": 36,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook POST deliveries on terminal generation status (completed, failed, nsfw); retried up to 2h. Per-request webhook config, not general event subscriptions.",
+      "evidence": {
+        "url": "https://docs.higgsfield.ai/docs/how-to/webhooks.md",
+        "quote": "Higgsfield sends one or more HTTP `POST` deliveries after the request reaches `completed`, `failed`, or `nsfw`."
+      }
+    },
+    "sandbox": {
+      "available": "no",
+      "detail": "No free tier, sandbox or test mode found in FAQ; API is pay-as-you-go with top-up balance via console.higgsfield.ai. Failed requests not charged.",
+      "evidence": {
+        "url": "https://docs.higgsfield.ai/docs/help/faq.md",
+        "quote": "The API runs on pay-as-you-go by default: you top up a balance and pay per generation."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Concurrency-based limit per account/model; queue limit is a multiple of concurrency; no default numbers published, see dashboard",
+      "evidence": {
+        "url": "https://docs.higgsfield.ai/docs/concepts/rate-limits.md",
+        "quote": "The primary generation limit is concurrency: the number of requests that may be processing at the same time."
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "node",
+        "typescript"
+      ],
+      "evidence": {
+        "url": "https://docs.higgsfield.ai/docs/help/faq.md",
+        "quote": "We provide official Python and Node.js/TypeScript SDKs."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://docs.higgsfield.ai/openapi.json",
+        "quote": "HTTP 404 - no OpenAPI spec found at this path; FAQ does not mention OpenAPI."
+      }
+    },
+    "confidence": "medium"
+  }
+}

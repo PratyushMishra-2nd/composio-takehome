@@ -1,0 +1,50 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "seconds": 45,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Scraper API async jobs POST results to a webhook endpoint URL on completion; Web Unlocker and SERP async also support webhook_url notifications.",
+      "evidence": {
+        "url": "https://docs.brightdata.com/products/scrapers/scrapers-library/data-delivery",
+        "quote": "Bright Data sends a `POST` request to that URL with the scraped data once the job completes."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "Every new account gets 5,000 free credits per month (shared across Web Unlocker, SERP, Web Scraper API, Scraper Studio), usable for testing.",
+      "evidence": {
+        "url": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier",
+        "quote": "Every new Bright Data account gets 5,000 free credits per month"
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Unfunded accounts: 1,000 req/min (SERP, Web Unlocker, Proxy); Scraper API: 25 HTTP 429s per IP in 5 min triggers 1-hour IP block",
+      "evidence": {
+        "url": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier",
+        "quote": "restricted to a default rate limit of 1,000 requests per minute across the SERP API, Web Unlocker API and Proxy products"
+      }
+    },
+    "sdks": {
+      "official": [
+        "python",
+        "javascript"
+      ],
+      "evidence": {
+        "url": "https://docs.brightdata.com/llms.txt",
+        "quote": "Python SDK: `pip install brightdata-sdk`."
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://docs.brightdata.com/llms.txt",
+        "quote": "REST endpoints for every product live under `/api-reference` on this docs site."
+      }
+    },
+    "confidence": "medium"
+  }
+}

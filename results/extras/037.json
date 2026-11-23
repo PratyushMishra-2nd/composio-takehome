@@ -1,0 +1,47 @@
+{
+  "id": 37,
+  "app": "systeme.io",
+  "seconds": 52,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhook subscriptions (UI and public API) for 6 events: CONTACT_CREATED, CONTACT_TAG_ADDED, CONTACT_TAG_REMOVED, CONTACT_OPT_IN, SALE_NEW, SALE_CANCELED. HMAC-SHA256 signature, up to 12 retries, max 10 webhooks per account.",
+      "evidence": {
+        "url": "https://developer.systeme.io/docs/webhooks",
+        "quote": "Currently, users can create a maximum of 10 webhooks in one account."
+      }
+    },
+    "sandbox": {
+      "available": "unknown",
+      "detail": "No sandbox or test mode in the docs read. Free plan and pricing were not checked. API keys are created in Settings (max 3 per account).",
+      "evidence": {
+        "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+        "quote": "You can create up to 3 API keys per account."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Rate limiting documented (X-RateLimit-Limit/Remaining/Refill headers, 429 + Retry-After); no numeric quota published",
+      "evidence": {
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "Our Public API implements a rate-limiting system to maintain service stability and availability for all users."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "To retrieve a list of contacts, you can use the JavaScript `fetch` function as shown in the following example:"
+      }
+    },
+    "openapi_spec": {
+      "available": "unknown",
+      "url": "",
+      "evidence": {
+        "url": "https://developer.systeme.io/llms.txt",
+        "quote": "> Documentation for Systeme Public API"
+      }
+    },
+    "confidence": "medium"
+  }
+}

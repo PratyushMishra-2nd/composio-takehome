@@ -1,0 +1,49 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "seconds": 52,
+  "result": {
+    "webhooks": {
+      "available": "no",
+      "detail": "No event-subscription/webhook API in reference. Only inbound automation trigger endpoint (POST /docs/{docId}/hooks/automation/{ruleId}) to fire a doc automation; no outbound events.",
+      "evidence": {
+        "url": "https://coda.io/apis/v1/openapi.yaml",
+        "quote": "This API allows you to trigger automations."
+      }
+    },
+    "sandbox": {
+      "available": "free",
+      "detail": "API available in free workspaces at no charge; sign up free and make an API token. No separate sandbox. createDoc needs Doc Maker/Admin role.",
+      "evidence": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "Reads 100 req/6s; writes 10 req/6s; doc content writes 5 req/10s; listing docs 4 req/6s; HTTP 429 on exceed",
+      "evidence": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "Writing data (POST/PUT/PATCH): 10 requests per 6 seconds"
+      }
+    },
+    "sdks": {
+      "official": [
+        "google-apps-script"
+      ],
+      "evidence": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We do not currently support client libraries apart from Google Apps Script."
+      }
+    },
+    "openapi_spec": {
+      "available": "openapi",
+      "url": "https://coda.io/apis/v1/openapi.yaml",
+      "evidence": {
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "In an effort to standardize our API and make it accessible, we offer an OpenAPI 3.0 specification:"
+      }
+    },
+    "confidence": "medium"
+  }
+}

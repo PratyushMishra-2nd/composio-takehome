@@ -1,0 +1,47 @@
+{
+  "id": 47,
+  "app": "Ecwid",
+  "seconds": 85,
+  "result": {
+    "webhooks": {
+      "available": "yes",
+      "detail": "Webhooks fire on store data changes (order.created, product.updated, customer.created, application.installed, etc.), each gated by an access scope; single webhook URL per app, signature header, 24h retries.",
+      "evidence": {
+        "url": "https://docs.ecwid.com/build-apps/webhook-automations/learn-ecwid-webhooks/list-of-webhook-events",
+        "quote": "Webhooks are triggered by any changes in the store data, no matter their source."
+      }
+    },
+    "sandbox": {
+      "available": "paid_or_on_request",
+      "detail": "API only works on paid plans. No self-serve free sandbox; developers email support to get a free plan upgrade for a test store.",
+      "evidence": {
+        "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+        "quote": "Email us to get a free plan upgrade for your test store."
+      }
+    },
+    "rate_limits": {
+      "documented": true,
+      "summary": "600 requests/min per token; HTTP 429 with Retry-After header when exceeded",
+      "evidence": {
+        "url": "https://docs.ecwid.com/api-reference",
+        "quote": "We accept up to 600 requests per minute per token."
+      }
+    },
+    "sdks": {
+      "official": [],
+      "evidence": {
+        "url": "https://docs.ecwid.com/llms.txt",
+        "quote": "[Community libraries](https://docs.ecwid.com/develop-apps/community-libraries.md)"
+      }
+    },
+    "openapi_spec": {
+      "available": "no",
+      "url": "",
+      "evidence": {
+        "url": "https://github.com/Ecwid/ecwid-api-docs",
+        "quote": "The docs use Markdown syntax."
+      }
+    },
+    "confidence": "medium"
+  }
+}
