@@ -1,4 +1,6 @@
-# Human verification guide (gold set)
+# Reference-set guide (20-app sample)
+
+The reference set in `gold.csv` was drafted blind by an independent model under these rules, then reviewed by the author against the vendor docs. It is a strong second opinion, not certified ground truth.
 
 20 apps, 2 per category, picked by `agent/sample.py` with a fixed seed (42) so the sample is reproducible and not cherry-picked.
 

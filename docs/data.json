@@ -1,11 +1,203 @@
 {
- "generated": "2026-11-23 19:35 IST",
+ "corrections": [
+  {
+   "id": 14,
+   "app": "Front",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "adjudication",
+   "reason": "A free developer account lets anyone build, but apps stay private to the Front instance that created them. Letting other customers connect one requires publishing it, which means Front tests it and may also run a security or legal review. That is the vendor-review gate the admin_approval definition "
+  },
+  {
+   "id": 14,
+   "app": "Front",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "adjudication",
+   "reason": "Front gives a free developer account, and an admin can create API tokens and private apps with no review, so it is buildable. But an agent toolkit used by other customers must be a published OAuth app, and publishing goes through Front's testing and approval. The schema lists \"app review for public "
+  },
+  {
+   "id": 15,
+   "app": "Pylon",
+   "field": "auth_methods",
+   "from": [
+    "bearer_token",
+    "oauth2"
+   ],
+   "to": [
+    "bearer_token"
+   ],
+   "source": "adjudication",
+   "reason": "Pylon's public REST API authentication page documents only admin-created Bearer API tokens and never mentions OAuth. OAuth 2.0 appears only on the hosted MCP server page, which is a separate integration rather than the public API, and A's own note admits this."
+  },
+  {
+   "id": 23,
+   "app": "Zoho Cliq",
+   "field": "auth_methods",
+   "from": [
+    "oauth2"
+   ],
+   "to": [
+    "api_key",
+    "oauth2"
+   ],
+   "source": "adjudication",
+   "reason": "Besides OAuth 2.0, Zoho Cliq lets each user generate static Webhook Tokens. These are passed as a zapikey query parameter on its api/v2 endpoints so third-party apps can post to channels and bots. That counts as a static key/token, which A missed."
+  },
+  {
+   "id": 24,
+   "app": "Lark (Larksuite)",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "partner_gated",
+   "source": "adjudication",
+   "reason": "A free custom app only works inside the tenant that built it. For users in other tenants to connect, you need a Store app, and Lark's docs say only accounts with ISV (service-provider) qualification can create one. That qualification is a partner application, which is a stricter gate than self_serve"
+  },
+  {
+   "id": 42,
+   "app": "WooCommerce",
+   "field": "verdict",
+   "from": "build_with_caveat",
+   "to": "build_now",
+   "source": "adjudication",
+   "reason": "Store admins generate the consumer key and secret themselves in WP admin, with no partner program, app review or paid plan, and anyone can stand up a free self-hosted test store. None of the build_with_caveat triggers apply: the REST API is broad. A's reasons are real friction (no OAuth2, a per-stor"
+  },
+  {
+   "id": 47,
+   "app": "Ecwid",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "paid_plan",
+   "source": "adjudication",
+   "reason": "Ecwid's dev-environment docs say API access requires a paid store plan. A developer can get a free upgrade only by emailing support, so working keys are not self-serve free. A missed this because it did not check plan requirements."
+  },
+  {
+   "id": 47,
+   "app": "Ecwid",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "adjudication",
+   "reason": "Ecwid's dev-environment page says the API works only on paid-plan stores. A free test store needs a manual upgrade, which you get by emailing Ecwid. That is the \"paid plan\" limit the build_with_caveat definition describes, not self-serve build_now. Once the store is upgraded, a custom app's credenti"
+  },
+  {
+   "id": 51,
+   "app": "DataForSEO",
+   "field": "access",
+   "from": "self_serve_trial",
+   "to": "self_serve_free",
+   "source": "adjudication",
+   "reason": "Any registered user gets working credentials free, plus a free Sandbox for API testing. The $1 credit has no stated time limit, so it is free credit, not a time-limited trial. The $50 top-up is the cost of production usage, not the gate to getting credentials."
+  },
+  {
+   "id": 5,
+   "app": "Twenty",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "rule",
+   "reason": "Definition: build_now needs ongoing self-serve credentials; access=self_serve_trial is a caveat."
+  },
+  {
+   "id": 24,
+   "app": "Lark (Larksuite)",
+   "field": "verdict",
+   "from": "build_with_caveat",
+   "to": "needs_outreach",
+   "source": "rule",
+   "reason": "Definition: partner_gated without a free developer sandbox => needs_outreach (sandbox: unknown)."
+  },
+  {
+   "id": 28,
+   "app": "WhatsApp Business",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "rule",
+   "reason": "Blocker text names a vendor review/approval before other users can connect; the gate field must say so."
+  },
+  {
+   "id": 69,
+   "app": "Datadog",
+   "field": "verdict",
+   "from": "build_now",
+   "to": "build_with_caveat",
+   "source": "rule",
+   "reason": "Definition: build_now needs ongoing self-serve credentials; access=self_serve_trial is a caveat."
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect",
+   "field": "verdict",
+   "from": "build_with_caveat",
+   "to": "needs_outreach",
+   "source": "rule",
+   "reason": "Definition: customer_account without a free developer sandbox => needs_outreach (sandbox: paid_or_on_request)."
+  },
+  {
+   "id": 86,
+   "app": "QuickBooks",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "rule",
+   "reason": "Blocker text names a vendor review/approval before other users can connect; the gate field must say so."
+  },
+  {
+   "id": 89,
+   "app": "Ramp",
+   "field": "verdict",
+   "from": "build_with_caveat",
+   "to": "needs_outreach",
+   "source": "rule",
+   "reason": "Definition: customer_account without a free developer sandbox => needs_outreach (sandbox: paid_or_on_request)."
+  },
+  {
+   "id": 100,
+   "app": "Grain",
+   "field": "access",
+   "from": "self_serve_free",
+   "to": "admin_approval",
+   "source": "rule",
+   "reason": "Blocker text names a vendor review/approval before other users can connect; the gate field must say so."
+  },
+  {
+   "id": 49,
+   "app": "Amazon Selling Partner",
+   "field": "evidence",
+   "from": "1/4 quotes confirmed",
+   "to": "flagged unverified",
+   "source": "rule",
+   "reason": "At most one cited quote could be confirmed on its page; excluded from headline quick-win lists."
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "evidence",
+   "from": "0/7 quotes confirmed",
+   "to": "flagged unverified",
+   "source": "rule",
+   "reason": "At most one cited quote could be confirmed on its page; excluded from headline quick-win lists."
+  },
+  {
+   "id": 98,
+   "app": "Mermaid CLI",
+   "field": "in Composio",
+   "from": true,
+   "to": false,
+   "source": "human",
+   "reason": "Composio's router matched 'mermaid_chart_mcp', which is Mermaid Chart (hosted SaaS), a different product from the open-source Mermaid CLI."
+  }
+ ],
+ "generated": "2026-11-23 19:46 IST",
  "patterns": {
   "n": 100,
   "auth": [
    [
     "oauth2",
-    67
+    66
    ],
    [
     "bearer_token",
@@ -13,7 +205,7 @@
    ],
    [
     "api_key",
-    55
+    56
    ],
    [
     "basic",
@@ -40,33 +232,33 @@
     1
    ]
   ],
-  "oauth_only": 10,
-  "key_only": 25,
+  "oauth_only": 9,
+  "key_only": 26,
   "both": 56,
   "access": [
    [
     "self_serve_free",
-    62
+    57
    ],
    [
     "admin_approval",
-    10
+    14
+   ],
+   [
+    "paid_plan",
+    9
    ],
    [
     "self_serve_trial",
-    9
+    8
    ],
    [
     "customer_account",
     8
    ],
    [
-    "paid_plan",
-    8
-   ],
-   [
     "partner_gated",
-    2
+    3
    ],
    [
     "no_public_api",
@@ -76,7 +268,7 @@
   "verdict": [
    [
     "build_now",
-    50
+    47
    ],
    [
     "build_with_caveat",
@@ -84,7 +276,7 @@
    ],
    [
     "needs_outreach",
-    8
+    11
    ],
    [
     "not_buildable",
@@ -93,7 +285,12 @@
   ],
   "mcp_any": 98,
   "mcp_official": 85,
-  "composio_listed": 81,
+  "composio_listed": 80,
+  "mcp_official_confirmed": 61,
+  "evidence_weak": [
+   "Amazon Selling Partner",
+   "fanbasis"
+  ],
   "composio_gaps": [
    {
     "id": 30,
@@ -101,7 +298,8 @@
     "category": "Communications and Messaging",
     "verdict": "build_now",
     "access": "self_serve_free",
-    "blocker": ""
+    "blocker": "",
+    "weak": false
    },
    {
     "id": 37,
@@ -109,15 +307,17 @@
     "category": "Marketing, Ads, Email and Social",
     "verdict": "build_now",
     "access": "self_serve_free",
-    "blocker": ""
+    "blocker": "",
+    "weak": false
    },
    {
-    "id": 47,
-    "app": "Ecwid",
+    "id": 42,
+    "app": "WooCommerce",
     "category": "Ecommerce",
     "verdict": "build_now",
     "access": "self_serve_free",
-    "blocker": ""
+    "blocker": "No OAuth2. Users must supply store URL plus consumer key/secret. Store must serve HTTPS for Basic auth. The official MCP is in developer preview, needs the MCP Adapter plugin, and authenticates with Application Passwords.",
+    "weak": false
    },
    {
     "id": 50,
@@ -125,7 +325,8 @@
     "category": "Ecommerce",
     "verdict": "build_now",
     "access": "self_serve_free",
-    "blocker": ""
+    "blocker": "",
+    "weak": true
    },
    {
     "id": 83,
@@ -133,7 +334,8 @@
     "category": "Finance and Fintech",
     "verdict": "build_now",
     "access": "self_serve_free",
-    "blocker": "Per-user key creation needs deposit plus identity verification. HMAC deprecated, so asymmetric signing (Ed25519/RSA) should be supported. Not OAuth, so users must paste keys."
+    "blocker": "Per-user key creation needs deposit plus identity verification. HMAC deprecated, so asymmetric signing (Ed25519/RSA) should be supported. Not OAuth, so users must paste keys.",
+    "weak": false
    },
    {
     "id": 95,
@@ -141,7 +343,8 @@
     "category": "AI, Research and Media-native",
     "verdict": "build_now",
     "access": "self_serve_free",
-    "blocker": ""
+    "blocker": "",
+    "weak": false
    },
    {
     "id": 16,
@@ -149,15 +352,8 @@
     "category": "Support and Helpdesk",
     "verdict": "build_with_caveat",
     "access": "self_serve_trial",
-    "blocker": "API key auth only, per-tenant base URL (user must supply domain + key); no permanent free tier (30-day trial, then paid). Full endpoint docs gated behind login to an account."
-   },
-   {
-    "id": 42,
-    "app": "WooCommerce",
-    "category": "Ecommerce",
-    "verdict": "build_with_caveat",
-    "access": "self_serve_free",
-    "blocker": "No OAuth2. Users must supply store URL plus consumer key/secret. Store must serve HTTPS for Basic auth. The official MCP is in developer preview, needs the MCP Adapter plugin, and authenticates with Application Passwords."
+    "blocker": "API key auth only, per-tenant base URL (user must supply domain + key); no permanent free tier (30-day trial, then paid). Full endpoint docs gated behind login to an account.",
+    "weak": false
    },
    {
     "id": 45,
@@ -165,7 +361,8 @@
     "category": "Ecommerce",
     "verdict": "build_with_caveat",
     "access": "self_serve_free",
-    "blocker": "Per-merchant instance with no central OAuth2 app registry. Self-hosted auth is OAuth 1.0a/HMAC or token-based, so it needs a custom base URL plus token. SaaS uses IMS. Adobe's official MCP servers are developer/docs tools, not store-data tools. Community MCP servers exist (StackOne, CData, Cequence)."
+    "blocker": "Per-merchant instance with no central OAuth2 app registry. Self-hosted auth is OAuth 1.0a/HMAC or token-based, so it needs a custom base URL plus token. SaaS uses IMS. Adobe's official MCP servers are developer/docs tools, not store-data tools. Community MCP servers exist (StackOne, CData, Cequence).",
+    "weak": false
    },
    {
     "id": 46,
@@ -173,7 +370,17 @@
     "category": "Ecommerce",
     "verdict": "build_with_caveat",
     "access": "admin_approval",
-    "blocker": "A public multi-tenant integration needs a Squarespace-reviewed OAuth client. The self-serve API-key path needs the paid Commerce Advanced plan and covers one site. The official MCP's Commerce tools are limited to Claude and ChatGPT."
+    "blocker": "A public multi-tenant integration needs a Squarespace-reviewed OAuth client. The self-serve API-key path needs the paid Commerce Advanced plan and covers one site. The official MCP's Commerce tools are limited to Claude and ChatGPT.",
+    "weak": false
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "category": "Ecommerce",
+    "verdict": "build_with_caveat",
+    "access": "paid_plan",
+    "blocker": "",
+    "weak": false
    },
    {
     "id": 49,
@@ -181,7 +388,8 @@
     "category": "Ecommerce",
     "verdict": "build_with_caveat",
     "access": "admin_approval",
-    "blocker": "Public multi-tenant use needs a developer profile approved by Amazon and app review. Credentials are not instant for end users, though private apps can self-authorize. Doc pages could not be fetched this run, so claims are unverified."
+    "blocker": "Public multi-tenant use needs a developer profile approved by Amazon and app review. Credentials are not instant for end users, though private apps can self-authorize. Doc pages could not be fetched this run, so claims are unverified.",
+    "weak": true
    },
    {
     "id": 52,
@@ -189,15 +397,8 @@
     "category": "Data, SEO and Scraping",
     "verdict": "build_with_caveat",
     "access": "paid_plan",
-    "blocker": "API needs a paid subscription or purchased credits; no free self-serve API tier. Official MCP already exists."
-   },
-   {
-    "id": 84,
-    "app": "Paygent Connect",
-    "category": "Finance and Fintech",
-    "verdict": "build_with_caveat",
-    "access": "customer_account",
-    "blocker": "No Paygent-specific developer docs found, so the NMI link is unverified. Live keys need a merchant account, and users must supply their own gateway host and key. Only an unofficial, read-only community MCP exists, built for NMI-family gateways."
+    "blocker": "API needs a paid subscription or purchased credits; no free self-serve API tier. Official MCP already exists.",
+    "weak": false
    },
    {
     "id": 85,
@@ -205,7 +406,17 @@
     "category": "Finance and Fintech",
     "verdict": "build_with_caveat",
     "access": "self_serve_free",
-    "blocker": "Narrow API (about 3-6 endpoints), tiny free quota, and inconsistent docs (endpoints, prices, MCP URL differ across pages). Self-serve keys exist, so buildable but low value."
+    "blocker": "Narrow API (about 3-6 endpoints), tiny free quota, and inconsistent docs (endpoints, prices, MCP URL differ across pages). Self-serve keys exist, so buildable but low value.",
+    "weak": false
+   },
+   {
+    "id": 98,
+    "app": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "verdict": "build_with_caveat",
+    "access": "self_serve_free",
+    "blocker": "No hosted API. It is a local CLI that needs Node and Chromium, so a toolkit would need a sandboxed runtime to render. Community MCP servers exist, but there is no official one.",
+    "weak": false
    },
    {
     "id": 10,
@@ -213,7 +424,8 @@
     "category": "CRM and Sales",
     "verdict": "needs_outreach",
     "access": "customer_account",
-    "blocker": "No self-serve signup or developer sandbox. API credentials exist only inside a licensed DealCloud customer site, so building and testing needs a customer or partner tenant."
+    "blocker": "No self-serve signup or developer sandbox. API credentials exist only inside a licensed DealCloud customer site, so building and testing needs a customer or partner tenant.",
+    "weak": false
    },
    {
     "id": 20,
@@ -221,7 +433,8 @@
     "category": "Support and Helpdesk",
     "verdict": "needs_outreach",
     "access": "customer_account",
-    "blocker": "No self-serve signup or sandbox. API tokens exist only inside an existing customer's Gladly tenant, so we would need a customer account or partner access first."
+    "blocker": "No self-serve signup or sandbox. API tokens exist only inside an existing customer's Gladly tenant, so we would need a customer account or partner access first.",
+    "weak": false
    },
    {
     "id": 44,
@@ -229,7 +442,8 @@
     "category": "Ecommerce",
     "verdict": "needs_outreach",
     "access": "customer_account",
-    "blocker": "No self-serve credentials: SLAS and Account Manager API clients require an existing B2C Commerce tenant/instance; Salesforce docs could not be fetched to confirm any free sandbox."
+    "blocker": "No self-serve credentials: SLAS and Account Manager API clients require an existing B2C Commerce tenant/instance; Salesforce docs could not be fetched to confirm any free sandbox.",
+    "weak": false
    },
    {
     "id": 59,
@@ -237,7 +451,17 @@
     "category": "Data, SEO and Scraping",
     "verdict": "needs_outreach",
     "access": "partner_gated",
-    "blocker": "Credentials are sales-gated: no self-serve key and no public pricing. Composio would need a partnership or test key before building."
+    "blocker": "Credentials are sales-gated: no self-serve key and no public pricing. Composio would need a partnership or test key before building.",
+    "weak": false
+   },
+   {
+    "id": 84,
+    "app": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "verdict": "needs_outreach",
+    "access": "customer_account",
+    "blocker": "No Paygent-specific developer docs found, so the NMI link is unverified. Live keys need a merchant account, and users must supply their own gateway host and key. Only an unofficial, read-only community MCP exists, built for NMI-family gateways.",
+    "weak": false
    },
    {
     "id": 58,
@@ -245,10 +469,11 @@
     "category": "Data, SEO and Scraping",
     "verdict": "not_buildable",
     "access": "no_public_api",
-    "blocker": "No hosted API or credentials; local CLI only. Needs sandbox execution or third-party wrapper; not a standard OAuth/API-key integration."
+    "blocker": "No hosted API or credentials; local CLI only. Needs sandbox execution or third-party wrapper; not a standard OAuth/API-key integration.",
+    "weak": false
    }
   ],
-  "tracker_issues": 20,
+  "tracker_issues": 25,
   "extras": {
    "n": 100,
    "webhooks_yes": 81,
@@ -263,7 +488,6 @@
     "Attio",
     "Zoho CRM",
     "Intercom",
-    "Front",
     "Slack",
     "Twilio",
     "Zoho Cliq",
@@ -283,7 +507,6 @@
     "Supabase",
     "Neo4j",
     "MongoDB Atlas",
-    "Datadog",
     "Sentry",
     "Notion",
     "Linear",
@@ -374,38 +597,40 @@
   },
   "by_category": {
    "CRM and Sales": {
-    "build_now": 7,
+    "build_now": 6,
     "_self_serve_free": 6,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 10,
-    "build_with_caveat": 2,
+    "build_with_caveat": 3,
     "_admin_approval": 1,
     "_self_serve_trial": 2,
     "needs_outreach": 1,
     "_customer_account": 1
    },
    "Support and Helpdesk": {
-    "build_with_caveat": 6,
+    "build_with_caveat": 7,
     "_self_serve_trial": 3,
     "_n": 10,
     "_mcp": 9,
-    "_oauth": 7,
-    "build_now": 2,
-    "_self_serve_free": 2,
+    "_oauth": 6,
+    "build_now": 1,
+    "_self_serve_free": 1,
     "_paid_plan": 2,
+    "_admin_approval": 2,
     "needs_outreach": 2,
-    "_customer_account": 2,
-    "_admin_approval": 1
+    "_customer_account": 2
    },
    "Communications and Messaging": {
     "build_now": 6,
-    "_self_serve_free": 9,
+    "_self_serve_free": 7,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 6,
-    "build_with_caveat": 3,
-    "needs_outreach": 1,
+    "needs_outreach": 2,
+    "_partner_gated": 1,
+    "build_with_caveat": 2,
+    "_admin_approval": 1,
     "_customer_account": 1
    },
    "Marketing, Ads, Email and Social": {
@@ -420,36 +645,36 @@
    },
    "Ecommerce": {
     "build_now": 5,
-    "_self_serve_free": 7,
+    "_self_serve_free": 6,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 9,
-    "build_with_caveat": 4,
     "needs_outreach": 1,
     "_customer_account": 1,
-    "_admin_approval": 2
+    "build_with_caveat": 4,
+    "_admin_approval": 2,
+    "_paid_plan": 1
    },
    "Data, SEO and Scraping": {
     "build_now": 5,
-    "_self_serve_trial": 1,
+    "_self_serve_free": 6,
     "_n": 10,
     "_mcp": 9,
     "_oauth": 2,
     "build_with_caveat": 3,
     "_paid_plan": 2,
-    "_self_serve_free": 5,
     "not_buildable": 1,
     "_no_public_api": 1,
     "needs_outreach": 1,
     "_partner_gated": 1
    },
    "Developer, Infra and Data platforms": {
-    "build_now": 9,
+    "build_now": 8,
     "_self_serve_free": 8,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 9,
-    "build_with_caveat": 1,
+    "build_with_caveat": 2,
     "_self_serve_trial": 2
    },
    "Productivity and Project Management": {
@@ -463,13 +688,14 @@
    },
    "Finance and Fintech": {
     "build_now": 2,
-    "_self_serve_free": 6,
+    "_self_serve_free": 5,
     "_n": 10,
     "_mcp": 10,
     "_oauth": 5,
-    "build_with_caveat": 6,
+    "build_with_caveat": 4,
+    "needs_outreach": 4,
     "_customer_account": 3,
-    "needs_outreach": 2,
+    "_admin_approval": 1,
     "_partner_gated": 1
    },
    "AI, Research and Media-native": {
@@ -479,7 +705,8 @@
     "_mcp": 10,
     "_oauth": 2,
     "build_now": 3,
-    "_self_serve_free": 7
+    "_self_serve_free": 6,
+    "_admin_approval": 1
    }
   },
   "blockers": [
@@ -489,6 +716,13 @@
     "verdict": "build_with_caveat",
     "access": "admin_approval",
     "blocker": "Public multi-tenant OAuth app needs Pipedrive Marketplace app approval for listing (private apps shareable by install link); sandbox-account request needed. API-token auth works immediately for single accounts."
+   },
+   {
+    "id": 5,
+    "app": "Twenty",
+    "verdict": "build_with_caveat",
+    "access": "self_serve_trial",
+    "blocker": ""
    },
    {
     "id": 8,
@@ -517,6 +751,13 @@
     "verdict": "build_with_caveat",
     "access": "paid_plan",
     "blocker": "Free plan has no API access; testing needs a paid plan or 14-day trial. API-key only (no OAuth), and the key is per-subdomain, so the user must supply their domain. Rate limits are low on Growth."
+   },
+   {
+    "id": 14,
+    "app": "Front",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": ""
    },
    {
     "id": 15,
@@ -563,8 +804,8 @@
    {
     "id": 24,
     "app": "Lark (Larksuite)",
-    "verdict": "build_with_caveat",
-    "access": "self_serve_free",
+    "verdict": "needs_outreach",
+    "access": "partner_gated",
     "blocker": "Per-tenant admin approval of scopes. Multi-tenant OAuth distribution needs a Store app with review. Separate Feishu (China) and Lark (international) domains."
    },
    {
@@ -578,7 +819,7 @@
     "id": 28,
     "app": "WhatsApp Business",
     "verdict": "build_with_caveat",
-    "access": "self_serve_free",
+    "access": "admin_approval",
     "blocker": "Multi-tenant end-user connect needs Meta App Review (Advanced access), business verification and Embedded Signup or Tech Provider setup. Single-account use with a system user token works now. Messaging is constrained by the 24-hour window and template approval."
    },
    {
@@ -638,13 +879,6 @@
     "blocker": "No permanent free tier: only a 60-day trial; users need paid plan long-term. API key auth only, no OAuth."
    },
    {
-    "id": 42,
-    "app": "WooCommerce",
-    "verdict": "build_with_caveat",
-    "access": "self_serve_free",
-    "blocker": "No OAuth2. Users must supply store URL plus consumer key/secret. Store must serve HTTPS for Basic auth. The official MCP is in developer preview, needs the MCP Adapter plugin, and authenticates with Application Passwords."
-   },
-   {
     "id": 44,
     "app": "Salesforce Commerce Cloud",
     "verdict": "needs_outreach",
@@ -664,6 +898,13 @@
     "verdict": "build_with_caveat",
     "access": "admin_approval",
     "blocker": "A public multi-tenant integration needs a Squarespace-reviewed OAuth client. The self-serve API-key path needs the paid Commerce Advanced plan and covers one site. The official MCP's Commerce tools are limited to Claude and ChatGPT."
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "verdict": "build_with_caveat",
+    "access": "paid_plan",
+    "blocker": ""
    },
    {
     "id": 49,
@@ -715,6 +956,13 @@
     "blocker": "Per-account base URL and per-account OAuth security integration (admin setup); trial lapses without paid account. Otherwise self-serve."
    },
    {
+    "id": 69,
+    "app": "Datadog",
+    "verdict": "build_with_caveat",
+    "access": "self_serve_trial",
+    "blocker": ""
+   },
+   {
     "id": 78,
     "app": "Coda",
     "verdict": "build_with_caveat",
@@ -738,7 +986,7 @@
    {
     "id": 84,
     "app": "Paygent Connect",
-    "verdict": "build_with_caveat",
+    "verdict": "needs_outreach",
     "access": "customer_account",
     "blocker": "No Paygent-specific developer docs found, so the NMI link is unverified. Live keys need a merchant account, and users must supply their own gateway host and key. Only an unofficial, read-only community MCP exists, built for NMI-family gateways."
    },
@@ -753,7 +1001,7 @@
     "id": 86,
     "app": "QuickBooks",
     "verdict": "build_with_caveat",
-    "access": "self_serve_free",
+    "access": "admin_approval",
     "blocker": "Production use against other users' live companies needs Intuit app review/assessment; refresh tokens rotate; redirect URIs must be https in production."
    },
    {
@@ -773,7 +1021,7 @@
    {
     "id": 89,
     "app": "Ramp",
-    "verdict": "build_with_caveat",
+    "verdict": "needs_outreach",
     "access": "customer_account",
     "blocker": "No public signup: credentials require a Ramp customer account with admin access (or sandbox request). Multi-tenant OAuth apps for other businesses need Ramp partner approval; some scopes plan- or partner-gated. Also, vendor-official MCP exists."
    },
@@ -830,7 +1078,7 @@
     "id": 100,
     "app": "Grain",
     "verdict": "build_with_caveat",
-    "access": "self_serve_free",
+    "access": "admin_approval",
     "blocker": "Server-side OAuth client credentials are requested manually from Grain; the workspace scope needs Grain verification; the workspace token needs a Business/Enterprise plan. PAT is self-serve on any plan."
    }
   ]
@@ -1348,11 +1596,6 @@
       "ai.smithery/kodey-ai-salesforce-mcp",
       "ai.smithery/kodey-ai-salesforce-mcp-kodey"
      ]
-    },
-    "composio": {
-     "slug": "salesforce",
-     "listed": true,
-     "title": "Salesforce MCP Server for AI Agents | Composio"
     }
    },
    "open_issues": [
@@ -1459,7 +1702,9 @@
      }
     ]
    },
-   "seconds": 37
+   "seconds": 37,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 2,
@@ -1548,11 +1793,6 @@
       "dev.wirecat/hubspot-cli",
       "dev.wirecat/hubspot-cli"
      ]
-    },
-    "composio": {
-     "slug": "hubspot",
-     "listed": true,
-     "title": "HubSpot MCP Server for AI Agents | Composio"
     }
    },
    "open_issues": [],
@@ -1632,7 +1872,9 @@
     ],
     "issues": []
    },
-   "seconds": 57
+   "seconds": 57,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 3,
@@ -1740,11 +1982,6 @@
       "io.github.Servosity/pipedrive-mcp",
       "io.github.Servosity/pipedrive-mcp"
      ]
-    },
-    "composio": {
-     "slug": "pipedrive",
-     "listed": true,
-     "title": "Pipedrive MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -1833,7 +2070,9 @@
     ],
     "issues": []
    },
-   "seconds": 85
+   "seconds": 85,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 4,
@@ -1935,11 +2174,6 @@
       "ai.smithery/kesslerio-attio-mcp-server",
       "ai.smithery/kesslerio-attio-mcp-server"
      ]
-    },
-    "composio": {
-     "slug": "attio",
-     "listed": true,
-     "title": "Attio MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -2016,7 +2250,9 @@
     ],
     "issues": []
    },
-   "seconds": 58
+   "seconds": 58,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 5,
@@ -2041,7 +2277,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://docs.twenty.com/developers/extend/mcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -2126,11 +2362,6 @@
       "io.usefulapi/twenty",
       "io.usefulapi/twenty"
      ]
-    },
-    "composio": {
-     "slug": "twenty",
-     "listed": true,
-     "title": "Twenty MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -2205,7 +2436,9 @@
     ],
     "issues": []
    },
-   "seconds": 52
+   "seconds": 52,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 6,
@@ -2294,11 +2527,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "podio",
-     "listed": true,
-     "title": "Podio MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -2388,7 +2616,9 @@
      }
     ]
    },
-   "seconds": 55
+   "seconds": 55,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 7,
@@ -2489,11 +2719,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "zohocrm",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -2580,7 +2805,9 @@
     ],
     "issues": []
    },
-   "seconds": 54
+   "seconds": 54,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 8,
@@ -2672,11 +2899,6 @@
       "city.close/close-api",
       "city.close/close-api"
      ]
-    },
-    "composio": {
-     "slug": "close",
-     "listed": true,
-     "title": "Close MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -2782,7 +3004,9 @@
     ],
     "issues": []
    },
-   "seconds": 44
+   "seconds": 44,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 9,
@@ -2869,11 +3093,6 @@
       "io.github.copperline-labs/rendex-mcp",
       "io.github.copperline-labs/rendex-mcp"
      ]
-    },
-    "composio": {
-     "slug": "copper",
-     "listed": true,
-     "title": "Copper MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -2950,7 +3169,9 @@
     ],
     "issues": []
    },
-   "seconds": 60
+   "seconds": 60,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 10,
@@ -3032,11 +3253,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "dealcloud",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -3137,7 +3353,9 @@
      }
     ]
    },
-   "seconds": 58
+   "seconds": 58,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 11,
@@ -3239,11 +3457,6 @@
       "dev.cotlet/zendesk",
       "io.github.fruggr/zendesk-mcp-server"
      ]
-    },
-    "composio": {
-     "slug": "zendesk",
-     "listed": true,
-     "title": "Zendesk MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -3325,7 +3538,9 @@
      }
     ]
    },
-   "seconds": 60
+   "seconds": 60,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 12,
@@ -3412,11 +3627,6 @@
       "io.github.iambashar/agent-intercom",
       "io.github.pipeworx-io/intercom"
      ]
-    },
-    "composio": {
-     "slug": "intercom",
-     "listed": true,
-     "title": "Intercom MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -3509,7 +3719,9 @@
     ],
     "issues": []
    },
-   "seconds": 40
+   "seconds": 40,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 13,
@@ -3603,11 +3815,6 @@
       "io.github.mindstone/mcp-server-freshdesk",
       "io.github.mindstone/mcp-server-freshdesk"
      ]
-    },
-    "composio": {
-     "slug": "freshdesk",
-     "listed": true,
-     "title": "Freshdesk MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -3682,7 +3889,9 @@
     ],
     "issues": []
    },
-   "seconds": 90
+   "seconds": 90,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 14,
@@ -3695,7 +3904,7 @@
     "bearer_token"
    ],
    "auth_detail": "Core REST API (api2.frontapp.com) takes Bearer tokens, obtained either from company-level API tokens (admin-created) or from OAuth2 authorization-code flow. OAuth2 applies to the Core API itself, not only MCP; it is required for public integrations. The MCP server separately uses OAuth 2.1 with no dynamic client registration.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Company admin creates API tokens or private OAuth apps in Settings > Developers with no plan requirement found in the docs. Private apps need no review. Publishing a public app to all customers goes through a submission and testing step, though Front says it approves the vast majority of submissions. A Front workspace is needed, and the pricing page was not confirmed to show API access per plan.",
    "api_types": [
     "rest"
@@ -3705,7 +3914,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://mcp.frontapp.com/mcp",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -3783,11 +3992,6 @@
       "ai.clize/storefront",
       "ai.clize/storefront"
      ]
-    },
-    "composio": {
-     "slug": "front",
-     "listed": false,
-     "title": "Collaboration &amp; Communication Toolkits - Composio"
     }
    },
    "open_issues": [
@@ -3838,7 +4042,7 @@
      "FRONT_LIST_CONVERSATION_MESSAGES"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/22",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "App webhooks configured as app features; pick subscribed events (inbound_received, conversation_moved, outbound_sent, tag_added, assignee_changed, new_comment_added, etc). Also rule webhooks and application triggers.",
@@ -3893,7 +4097,9 @@
     ],
     "issues": []
    },
-   "seconds": 70
+   "seconds": 70,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 15,
@@ -3902,8 +4108,7 @@
    "hint": "usepylon.com",
    "description": "B2B support platform (Slack/Teams/email shared channels, ticketing, account management, AI agents) with a REST API for issues, accounts, contacts.",
    "auth_methods": [
-    "bearer_token",
-    "oauth2"
+    "bearer_token"
    ],
    "auth_detail": "REST API: admin-created Bearer API token (non-expiring, role-scoped). OAuth2 exists only for the hosted MCP server (Member/Admin seat), not the public REST API.",
    "access": "customer_account",
@@ -3986,11 +4191,6 @@
       "io.github.JustinBeckwith/pylon-mcp",
       "io.pylonseo/pylon-seo"
      ]
-    },
-    "composio": {
-     "slug": "pylon",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -4106,7 +4306,9 @@
      }
     ]
    },
-   "seconds": 36
+   "seconds": 36,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 16,
@@ -4186,11 +4388,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "liveagent",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -4267,7 +4464,9 @@
     ],
     "issues": []
    },
-   "seconds": 71
+   "seconds": 71,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 17,
@@ -4371,11 +4570,6 @@
       "ai.smithery/plainyogurt21-sec-edgar-mcp",
       "app.vercel.automaton-tx-explainer/base-tools"
      ]
-    },
-    "composio": {
-     "slug": "plain",
-     "listed": true,
-     "title": "Plain MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -4486,7 +4680,9 @@
     ],
     "issues": []
    },
-   "seconds": 43
+   "seconds": 43,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 18,
@@ -4582,11 +4778,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "helpscout",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -4674,7 +4865,9 @@
     ],
     "issues": []
    },
-   "seconds": 82
+   "seconds": 82,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 19,
@@ -4774,11 +4967,6 @@
       "dev.cotlet/gorgias",
       "dev.cotlet/gorgias"
      ]
-    },
-    "composio": {
-     "slug": "gorgias",
-     "listed": true,
-     "title": "Gorgias MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -4877,7 +5065,9 @@
      }
     ]
    },
-   "seconds": 88
+   "seconds": 88,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 20,
@@ -4963,11 +5153,6 @@
       "io.usefulapi/gladly",
       "io.usefulapi/gladly"
      ]
-    },
-    "composio": {
-     "slug": "gladly",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -5071,7 +5256,9 @@
     ],
     "issues": []
    },
-   "seconds": 123
+   "seconds": 123,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 21,
@@ -5180,11 +5367,6 @@
       "co.civai.nova/mcp-slack_android",
       "com.insightfulpipe/slack"
      ]
-    },
-    "composio": {
-     "slug": "slack",
-     "listed": true,
-     "title": "Slack MCP Server for AI Agents | Composio"
     }
    },
    "open_issues": [],
@@ -5270,7 +5452,9 @@
      }
     ]
    },
-   "seconds": 42
+   "seconds": 42,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 22,
@@ -5378,11 +5562,6 @@
       "io.github.mrfentmen/twilio-mcp-server",
       "io.github.mrfentmen/twilio-mcp-server"
      ]
-    },
-    "composio": {
-     "slug": "twilio",
-     "listed": true,
-     "title": "Twilio MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -5465,7 +5644,9 @@
     ],
     "issues": []
    },
-   "seconds": 53
+   "seconds": 53,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 23,
@@ -5474,6 +5655,7 @@
    "hint": "zoho.com/cliq",
    "description": "Zoho Cliq is a team chat and collaboration platform with channels, bots, and a developer platform.",
    "auth_methods": [
+    "api_key",
     "oauth2"
    ],
    "auth_detail": "OAuth 2.0 via Zoho API console client registration (Client ID/secret). Scopes use the format service_name.scope_name.operation_type, e.g. ZohoCliq.Messages.CREATE. Access tokens last 1 hour; refresh tokens are supported. Data-center-specific accounts.zoho.{dc} endpoints.",
@@ -5552,11 +5734,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "zohocliq",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -5640,7 +5817,9 @@
      }
     ]
    },
-   "seconds": 50
+   "seconds": 50,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 24,
@@ -5654,7 +5833,7 @@
     "other"
    ],
    "auth_detail": "App credentials (app_id + app_secret) exchanged at POST /open-apis/auth/v3/tenant_access_token/internal for a 2h tenant_access_token (custom app; Store apps use app_access_token and tenant_access_token via a separate endpoint). User identity: standard OAuth 2.0 authorization-code flow (RFC 6749) via /authen/v2/oauth/token returning user_access_token and refresh_token. All calls use Authorization: Bearer.",
-   "access": "self_serve_free",
+   "access": "partner_gated",
    "access_detail": "Anyone can log in to the Lark Open Platform, create a custom app and get app_id/app_secret for their own tenant, free. Scopes must be approved by the tenant admin. Distributing a Store app to other tenants needs Lark app review and listing. Custom apps are limited to the tenant they were built in, so a multi-tenant product has to go through the Store app route.",
    "api_types": [
     "rest",
@@ -5666,7 +5845,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
-   "verdict": "build_with_caveat",
+   "verdict": "needs_outreach",
    "blocker": "Per-tenant admin approval of scopes. Multi-tenant OAuth distribution needs a Store app with review. Separate Feishu (China) and Lark (international) domains.",
    "confidence": {
     "auth": "high",
@@ -5744,11 +5923,6 @@
       "com.cuelark/tools",
       "com.larkella/larkella"
      ]
-    },
-    "composio": {
-     "slug": "lark",
-     "listed": true,
-     "title": "Lark MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -5789,7 +5963,7 @@
      "LARK_DOCS_UPDATE_RECORDS"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/24",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Event subscriptions delivered via HTTP POST webhook to developer public server URL, or SDK long-connection (WebSocket). Retries at 15s, 5min, 1h, 6h; verification token + encrypt key supported.",
@@ -5853,7 +6027,9 @@
      }
     ]
    },
-   "seconds": 36
+   "seconds": 36,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 25,
@@ -5934,11 +6110,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "pumble",
-     "listed": true,
-     "title": "Pumble MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -6015,7 +6186,9 @@
     ],
     "issues": []
    },
-   "seconds": 53
+   "seconds": 53,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 26,
@@ -6105,11 +6278,6 @@
       "ai.smithery/sachicali-discordmcp-suite",
       "app.lasers.guildcontrol/discord"
      ]
-    },
-    "composio": {
-     "slug": "discord",
-     "listed": true,
-     "title": "Discord MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -6188,7 +6356,9 @@
     ],
     "issues": []
    },
-   "seconds": 47
+   "seconds": 47,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 27,
@@ -6302,11 +6472,6 @@
       "co.civai.nova/telegram-agent",
       "com.insightfulpipe/telegram"
      ]
-    },
-    "composio": {
-     "slug": "telegram",
-     "listed": true,
-     "title": "Telegram MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -6391,7 +6556,9 @@
      }
     ]
    },
-   "seconds": 69
+   "seconds": 69,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 28,
@@ -6404,7 +6571,7 @@
     "oauth2"
    ],
    "auth_detail": "Direct developers use a System User access token, sent as a Bearer token. Tech Providers get per-customer Business Integration System User tokens by implementing Embedded Signup (Facebook Login for Business) and exchanging the returned code. The REST API docs fetched never use the word \"OAuth\". The code exchange is the standard OAuth2 authorization-code pattern, so oauth2 is inferred. Short-lived User tokens come from Facebook Login or the dashboard. Meta's separate MCP server uses OAuth explicitly.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Anyone can register as a Meta developer, create an app and get a temporary token plus a test number for free. Production sending needs a business portfolio, a real phone number and permissions. Serving other businesses' accounts needs Advanced access via App Review and business verification, and Tech Provider status. I did not find business verification or pricing on the fetched get-started page. Meta charges per-message fees, which are not API-gated.",
    "api_types": [
     "rest"
@@ -6479,11 +6646,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "whatsappbusiness",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -6517,7 +6679,7 @@
      "WHATSAPP_SEND_MESSAGE"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/23",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Webhooks for incoming messages, delivery status updates, errors; subscribe per WABA via app webhook config",
@@ -6570,7 +6732,9 @@
     ],
     "issues": []
    },
-   "seconds": 69
+   "seconds": 69,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 29,
@@ -6672,11 +6836,6 @@
       "io.usefulapi/aircall",
       "io.usefulapi/aircall"
      ]
-    },
-    "composio": {
-     "slug": "aircall",
-     "listed": true,
-     "title": "Aircall MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -6774,7 +6933,9 @@
     ],
     "issues": []
    },
-   "seconds": 79
+   "seconds": 79,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 30,
@@ -6880,11 +7041,6 @@
      "sample": [
       "io.github.Vonage/vonage-documentation-mcp"
      ]
-    },
-    "composio": {
-     "slug": "vonage",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -6967,7 +7123,9 @@
     ],
     "issues": []
    },
-   "seconds": 42
+   "seconds": 42,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 31,
@@ -7066,11 +7224,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "googleads",
-     "listed": true,
-     "title": "Google Ads MCP Server for AI Agents | Composio"
     }
    },
    "open_issues": [],
@@ -7160,7 +7313,9 @@
      }
     ]
    },
-   "seconds": 41
+   "seconds": 41,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 32,
@@ -7255,11 +7410,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "metaads",
-     "listed": true,
-     "title": "Metaads MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -7346,7 +7496,9 @@
     ],
     "issues": []
    },
-   "seconds": 41
+   "seconds": 41,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 33,
@@ -7453,11 +7605,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "linkedinads",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -7543,7 +7690,9 @@
     ],
     "issues": []
    },
-   "seconds": 57
+   "seconds": 57,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 34,
@@ -7643,11 +7792,6 @@
       "dev.cotlet/gohighlevel",
       "dev.cotlet/gohighlevel"
      ]
-    },
-    "composio": {
-     "slug": "gohighlevel",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -7724,7 +7868,9 @@
     ],
     "issues": []
    },
-   "seconds": 50
+   "seconds": 50,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 35,
@@ -7804,11 +7950,6 @@
       "io.github.cyanheads/mailchimp-mcp-server",
       "io.github.cyanheads/mailchimp-mcp-server"
      ]
-    },
-    "composio": {
-     "slug": "mailchimp",
-     "listed": true,
-     "title": "Mailchimp MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -7915,7 +8056,9 @@
     ],
     "issues": []
    },
-   "seconds": 44
+   "seconds": 44,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 36,
@@ -8016,11 +8159,6 @@
       "io.github.mrfentmen/klaviyo-mcp",
       "io.github.pipeworx-io/klaviyo"
      ]
-    },
-    "composio": {
-     "slug": "klaviyo",
-     "listed": true,
-     "title": "Klaviyo MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -8111,7 +8249,9 @@
      }
     ]
    },
-   "seconds": 51
+   "seconds": 51,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 37,
@@ -8198,11 +8338,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "systemeio",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -8277,7 +8412,9 @@
     ],
     "issues": []
    },
-   "seconds": 53
+   "seconds": 53,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 38,
@@ -8385,11 +8522,6 @@
       "ai.agentapihub/telegram-discord-twitch-kick-medium-pinterest-mcp",
       "com.365pinterest/365-pinterest"
      ]
-    },
-    "composio": {
-     "slug": "pinterest",
-     "listed": true,
-     "title": "Pinterest MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -8472,7 +8604,9 @@
     ],
     "issues": []
    },
-   "seconds": 75
+   "seconds": 75,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 39,
@@ -8565,11 +8699,6 @@
       "com.mambabuilt/mcp-threads-keyword-search",
       "com.mambabuilt/mcp-threads-keyword-search"
      ]
-    },
-    "composio": {
-     "slug": "threads",
-     "listed": true,
-     "title": "Threads MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -8660,7 +8789,9 @@
      }
     ]
    },
-   "seconds": 42
+   "seconds": 42,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 40,
@@ -8746,11 +8877,6 @@
       "io.github.codespar/mcp-sendgrid",
       "io.github.codespar/mcp-sendgrid"
      ]
-    },
-    "composio": {
-     "slug": "sendgrid",
-     "listed": true,
-     "title": "Sendgrid MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -8838,7 +8964,9 @@
     ],
     "issues": []
    },
-   "seconds": 65
+   "seconds": 65,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 41,
@@ -8927,11 +9055,6 @@
       "app.bestappify/shopify-app-store",
       "com.b2bprofileapi/b2b-shopify-merchant-company-profile-mcp"
      ]
-    },
-    "composio": {
-     "slug": "shopify",
-     "listed": true,
-     "title": "Shopify MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -9010,7 +9133,9 @@
     ],
     "issues": []
    },
-   "seconds": 31
+   "seconds": 31,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 42,
@@ -9033,7 +9158,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://developer.woocommerce.com/docs/features/mcp/",
-   "verdict": "build_with_caveat",
+   "verdict": "build_now",
    "blocker": "No OAuth2. Users must supply store URL plus consumer key/secret. Store must serve HTTPS for Basic auth. The official MCP is in developer preview, needs the MCP Adapter plugin, and authenticates with Application Passwords.",
    "confidence": {
     "auth": "high",
@@ -9104,11 +9229,6 @@
       "dev.cotlet/woocommerce",
       "dev.cotlet/woocommerce"
      ]
-    },
-    "composio": {
-     "slug": "woocommerce",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -9217,7 +9337,9 @@
      }
     ]
    },
-   "seconds": 51
+   "seconds": 51,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 43,
@@ -9304,11 +9426,6 @@
       "io.github.mrfentmen/bigcommerce-mcp",
       "io.github.mrfentmen/bigcommerce-mcp"
      ]
-    },
-    "composio": {
-     "slug": "bigcommerce",
-     "listed": true,
-     "title": "BigCommerce MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -9399,7 +9516,9 @@
      }
     ]
    },
-   "seconds": 56
+   "seconds": 56,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 44,
@@ -9472,11 +9591,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "salesforcecommercecloud",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -9594,7 +9708,9 @@
      }
     ]
    },
-   "seconds": 61
+   "seconds": 61,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 45,
@@ -9697,11 +9813,6 @@
       "io.github.juan-cinto-infracommerce/magento-cloud",
       "io.github.juan-cinto-infracommerce/magento-cloud"
      ]
-    },
-    "composio": {
-     "slug": "magento",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -9806,7 +9917,9 @@
      }
     ]
    },
-   "seconds": 43
+   "seconds": 43,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 46,
@@ -9883,11 +9996,6 @@
       "io.github.mrfentmen/squarespace-mcp",
       "io.github.mrfentmen/squarespace-mcp"
      ]
-    },
-    "composio": {
-     "slug": "squarespace",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -9968,7 +10076,9 @@
      }
     ]
    },
-   "seconds": 40
+   "seconds": 40,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 47,
@@ -9981,7 +10091,7 @@
     "bearer_token"
    ],
    "auth_detail": "OAuth 2.0 authorization-code flow for public apps. Custom apps (own store) skip OAuth and use the secret_token/public_token that Ecwid generates. Tokens are sent as Authorization: Bearer and do not expire.",
-   "access": "self_serve_free",
+   "access": "paid_plan",
    "access_detail": "Anyone who creates an Ecwid store gets a custom app and both tokens. Ecwid creates the custom app the first time a user opens the app dashboard in Ecwid admin. No docs page I read requires a paid plan or approval for this, and I did not check Ecwid's pricing page. Publishing a public app to the App Market probably involves Ecwid review. I did not read the \"Launch apps\" pages, so that part is unverified. A custom app or sandbox store is enough to build against.",
    "api_types": [
     "rest"
@@ -9991,7 +10101,7 @@
    "mcp_exists": true,
    "mcp_official": false,
    "mcp_url": "https://glama.ai/mcp/connectors/io.usefulapi/ecwid",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "high",
@@ -10055,11 +10165,6 @@
       "io.usefulapi/ecwid",
       "io.usefulapi/ecwid"
      ]
-    },
-    "composio": {
-     "slug": "ecwid",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -10145,7 +10250,9 @@
     ],
     "issues": []
    },
-   "seconds": 71
+   "seconds": 71,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 48,
@@ -10239,11 +10346,6 @@
       "io.usefulapi/gumroad",
       "io.usefulapi/gumroad"
      ]
-    },
-    "composio": {
-     "slug": "gumroad",
-     "listed": true,
-     "title": "Gumroad MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -10329,7 +10431,9 @@
     ],
     "issues": []
    },
-   "seconds": 72
+   "seconds": 72,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 49,
@@ -10395,11 +10499,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "amazonsellingpartner",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -10506,7 +10605,9 @@
     ],
     "issues": []
    },
-   "seconds": 53
+   "seconds": 53,
+   "evidence_weak": true,
+   "mcp_official_confirmed": false
   },
   {
    "id": 50,
@@ -10594,11 +10695,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "fanbasis",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -10743,7 +10839,9 @@
      }
     ]
    },
-   "seconds": 69
+   "seconds": 69,
+   "evidence_weak": true,
+   "mcp_official_confirmed": false
   },
   {
    "id": 51,
@@ -10755,7 +10853,7 @@
     "basic"
    ],
    "auth_detail": "REST API accepts HTTP Basic only: API login plus an auto-generated API password (not the account password), sent in the Authorization header. OAuth 2.0 applies only to the HTTP MCP server transport, not the REST API.",
-   "access": "self_serve_trial",
+   "access": "self_serve_free",
    "access_detail": "Free signup gives a $1 trial credit. Full use needs a $50 minimum top-up. Pricing is pay-as-you-go with no subscription, and balance never expires. Treated as trial-gated, since real usage means a prepaid deposit.",
    "api_types": [
     "rest"
@@ -10834,11 +10932,6 @@
       "io.scalably/dataforseo-mcp",
       "io.scalably/dataforseo-mcp"
      ]
-    },
-    "composio": {
-     "slug": "dataforseo",
-     "listed": true,
-     "title": "Dataforseo MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -10919,7 +11012,9 @@
     ],
     "issues": []
    },
-   "seconds": 86
+   "seconds": 86,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 52,
@@ -11006,11 +11101,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "seranking",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -11085,7 +11175,9 @@
     ],
     "issues": []
    },
-   "seconds": 74
+   "seconds": 74,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 53,
@@ -11188,11 +11280,6 @@
       "com.mcparmory/ahrefs",
       "com.mcparmory/ahrefs"
      ]
-    },
-    "composio": {
-     "slug": "ahrefs",
-     "listed": true,
-     "title": "Ahrefs MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -11286,7 +11373,9 @@
     ],
     "issues": []
    },
-   "seconds": 77
+   "seconds": 77,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 54,
@@ -11380,11 +11469,6 @@
       "io.github.mrscraper-com/mrscraper-mcp",
       "io.github.mrscraper-com/mrscraper-mcp"
      ]
-    },
-    "composio": {
-     "slug": "mrscraper",
-     "listed": true,
-     "title": "MrScraper MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -11468,7 +11552,9 @@
      }
     ]
    },
-   "seconds": 47
+   "seconds": 47,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 55,
@@ -11613,11 +11699,6 @@
       "com.apify/apify-mcp-server",
       "com.apify/apify-mcp-server"
      ]
-    },
-    "composio": {
-     "slug": "apify",
-     "listed": true,
-     "title": "Apify MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -11699,7 +11780,9 @@
     ],
     "issues": []
    },
-   "seconds": 51
+   "seconds": 51,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 56,
@@ -11788,11 +11871,6 @@
       "io.github.Ansarii/firecrawl-stealth-mcp",
       "io.github.firecrawl/firecrawl-mcp-server"
      ]
-    },
-    "composio": {
-     "slug": "firecrawl",
-     "listed": true,
-     "title": "Firecrawl MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -11878,7 +11956,9 @@
     ],
     "issues": []
    },
-   "seconds": 55
+   "seconds": 55,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 57,
@@ -11946,11 +12026,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "brightdata",
-     "listed": true,
-     "title": "Brightdata MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -12056,7 +12131,9 @@
      }
     ]
    },
-   "seconds": 19
+   "seconds": 19,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 58,
@@ -12146,11 +12223,6 @@
       "io.github.FGC-Shreyansh-Chachaundiya/codesherlock-mcp-server",
       "io.github.FGC-Shreyansh-Chachaundiya/codesherlock-mcp-server"
      ]
-    },
-    "composio": {
-     "slug": "sherlock",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -12231,7 +12303,9 @@
      }
     ]
    },
-   "seconds": 35
+   "seconds": 35,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 59,
@@ -12318,11 +12392,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "waterfallio",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -12397,7 +12466,9 @@
     ],
     "issues": []
    },
-   "seconds": 50
+   "seconds": 50,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 60,
@@ -12483,11 +12554,6 @@
       "com.mambabuilt/mcp-clay-to-instantly-smartlead-push",
       "com.mambabuilt/mcp-clay-to-instantly-smartlead-push"
      ]
-    },
-    "composio": {
-     "slug": "clay",
-     "listed": true,
-     "title": "Clay MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -12574,7 +12640,9 @@
     ],
     "issues": []
    },
-   "seconds": 51
+   "seconds": 51,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 61,
@@ -12682,11 +12750,6 @@
       "ai.smithery/saidsef-mcp-github-pr-issue-analyser",
       "ai.smithery/smithery-ai-github"
      ]
-    },
-    "composio": {
-     "slug": "github",
-     "listed": true,
-     "title": "GitHub MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -12765,7 +12828,9 @@
     ],
     "issues": []
    },
-   "seconds": 50
+   "seconds": 50,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 62,
@@ -12860,11 +12925,6 @@
       "app.vercel.agentready-rho/agentready",
       "app.vercel.aididwhat/aididwhat"
      ]
-    },
-    "composio": {
-     "slug": "vercel",
-     "listed": true,
-     "title": "Vercel MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -12941,7 +13001,9 @@
     ],
     "issues": []
    },
-   "seconds": 51
+   "seconds": 51,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 63,
@@ -13027,11 +13089,6 @@
       "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
       "app.netlify.agent-kb-y83q/kb"
      ]
-    },
-    "composio": {
-     "slug": "netlify",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -13109,7 +13166,9 @@
     ],
     "issues": []
    },
-   "seconds": 14
+   "seconds": 14,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 64,
@@ -13199,11 +13258,6 @@
       "com.trycloudflare.annotated-lot-operational-tourism/kai-agi",
       "com.trycloudflare.barrier-sought-lbs-reader/quotes"
      ]
-    },
-    "composio": {
-     "slug": "cloudflare",
-     "listed": true,
-     "title": "Cloudflare MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -13301,7 +13355,9 @@
      }
     ]
    },
-   "seconds": 312
+   "seconds": 312,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 65,
@@ -13408,11 +13464,6 @@
       "ai.smithery/pinion05-supabase-mcp-lite",
       "ai.waystation/supabase"
      ]
-    },
-    "composio": {
-     "slug": "supabase",
-     "listed": true,
-     "title": "Supabase MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -13510,7 +13561,9 @@
     ],
     "issues": []
    },
-   "seconds": 36
+   "seconds": 36,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 66,
@@ -13612,11 +13665,6 @@
       "io.github.neo4j-contrib/gds-agent",
       "io.github.neo4j-contrib/gds-agent"
      ]
-    },
-    "composio": {
-     "slug": "neo4j",
-     "listed": true,
-     "title": "Neo4J MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -13705,7 +13753,9 @@
     ],
     "issues": []
    },
-   "seconds": 49
+   "seconds": 49,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 67,
@@ -13802,11 +13852,6 @@
       "io.github.nsphung/mcp-snowflake-server",
       "io.github.nsphung/mcp-snowflake-server"
      ]
-    },
-    "composio": {
-     "slug": "snowflake",
-     "listed": true,
-     "title": "Snowflake MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -13889,7 +13934,9 @@
     ],
     "issues": []
    },
-   "seconds": 35
+   "seconds": 35,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 68,
@@ -13977,11 +14024,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "mongodbatlas",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -14060,7 +14102,9 @@
     ],
     "issues": []
    },
-   "seconds": 64
+   "seconds": 64,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 69,
@@ -14084,7 +14128,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://docs.datadoghq.com/mcp_server/",
-   "verdict": "build_now",
+   "verdict": "build_with_caveat",
    "blocker": "",
    "confidence": {
     "auth": "medium",
@@ -14162,11 +14206,6 @@
       "io.github.us-all/datadog",
       "io.github.us-all/datadog"
      ]
-    },
-    "composio": {
-     "slug": "datadog",
-     "listed": true,
-     "title": "Datadog MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -14274,7 +14313,9 @@
     ],
     "issues": []
    },
-   "seconds": 83
+   "seconds": 83,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 70,
@@ -14383,11 +14424,6 @@
       "com.0xpi.sdsentry/sds-lookup",
       "com.0xpi.sdsentry/sds-lookup"
      ]
-    },
-    "composio": {
-     "slug": "sentry",
-     "listed": true,
-     "title": "Sentry MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -14493,7 +14529,9 @@
      }
     ]
    },
-   "seconds": 35
+   "seconds": 35,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 71,
@@ -14588,11 +14626,6 @@
       "com.foreverworks/notion",
       "com.insightfulpipe/notion"
      ]
-    },
-    "composio": {
-     "slug": "notion",
-     "listed": true,
-     "title": "Notion MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -14669,7 +14702,9 @@
     ],
     "issues": []
    },
-   "seconds": 31
+   "seconds": 31,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 72,
@@ -14779,11 +14814,6 @@
       "com.mcparmory/airtable",
       "com.mcparmory/airtable"
      ]
-    },
-    "composio": {
-     "slug": "airtable",
-     "listed": true,
-     "title": "Airtable MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -14861,7 +14891,9 @@
     ],
     "issues": []
    },
-   "seconds": 33
+   "seconds": 33,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 73,
@@ -14981,11 +15013,6 @@
       "co.civai.nova/mcp-linear",
       "dev.wirecat/linear-cli"
      ]
-    },
-    "composio": {
-     "slug": "linear",
-     "listed": true,
-     "title": "Linear MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -15063,7 +15090,9 @@
     ],
     "issues": []
    },
-   "seconds": 45
+   "seconds": 45,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 74,
@@ -15168,11 +15197,6 @@
       "io.github.EugeneNeverov/productops-jira",
       "io.github.EugeneNeverov/productops-jira"
      ]
-    },
-    "composio": {
-     "slug": "jira",
-     "listed": true,
-     "title": "Jira MCP Server for AI Agents | Composio"
     }
    },
    "open_issues": [],
@@ -15247,7 +15271,9 @@
     ],
     "issues": []
    },
-   "seconds": 52
+   "seconds": 52,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 75,
@@ -15356,11 +15382,6 @@
       "io.github.asanabrial/estigia",
       "io.github.asanabrial/leteo"
      ]
-    },
-    "composio": {
-     "slug": "asana",
-     "listed": true,
-     "title": "Asana MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -15438,7 +15459,9 @@
     ],
     "issues": []
    },
-   "seconds": 43
+   "seconds": 43,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 76,
@@ -15530,11 +15553,6 @@
      "sample": [
       "com.monday/monday.com"
      ]
-    },
-    "composio": {
-     "slug": "mondaycom",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -15624,7 +15642,9 @@
     ],
     "issues": []
    },
-   "seconds": 62
+   "seconds": 62,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 77,
@@ -15743,11 +15763,6 @@
       "io.github.KelvinCampelo/clickup-full-mcp",
       "io.github.KelvinCampelo/clickup-full-mcp"
      ]
-    },
-    "composio": {
-     "slug": "clickup",
-     "listed": true,
-     "title": "Clickup MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -15822,7 +15837,9 @@
     ],
     "issues": []
    },
-   "seconds": 32
+   "seconds": 32,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 78,
@@ -15908,11 +15925,6 @@
       "com.mcparmory/codacy",
       "com.mcparmory/codacy"
      ]
-    },
-    "composio": {
-     "slug": "coda",
-     "listed": true,
-     "title": "Coda MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -16002,7 +16014,9 @@
     ],
     "issues": []
    },
-   "seconds": 64
+   "seconds": 64,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 79,
@@ -16096,11 +16110,6 @@
       "io.github.christianclaudio/smartsheet-rm",
       "io.github.christianclaudio/smartsheet-rm"
      ]
-    },
-    "composio": {
-     "slug": "smartsheet",
-     "listed": true,
-     "title": "Smartsheet MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -16186,7 +16195,9 @@
      }
     ]
    },
-   "seconds": 56
+   "seconds": 56,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 80,
@@ -16273,11 +16284,6 @@
       "com.pixharvest/gov-contract-radar",
       "com.pixharvest/tariff-data"
      ]
-    },
-    "composio": {
-     "slug": "harvest",
-     "listed": true,
-     "title": "Harvest MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -16352,7 +16358,9 @@
     ],
     "issues": []
    },
-   "seconds": 48
+   "seconds": 48,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 81,
@@ -16450,11 +16458,6 @@
       "eu.nordicmcp/stripe",
       "io.github.CSOAI-ORG/meok-stripe-acp-checkout-mcp"
      ]
-    },
-    "composio": {
-     "slug": "stripe",
-     "listed": true,
-     "title": "Stripe MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -16558,7 +16561,9 @@
     ],
     "issues": []
    },
-   "seconds": 39
+   "seconds": 39,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 82,
@@ -16658,11 +16663,6 @@
       "io.github.pipeworx-io/plaid",
       "io.github.pipeworx-io/plaid"
      ]
-    },
-    "composio": {
-     "slug": "plaid",
-     "listed": true,
-     "title": "Plaid MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -16743,7 +16743,9 @@
     ],
     "issues": []
    },
-   "seconds": 48
+   "seconds": 48,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 83,
@@ -16838,11 +16840,6 @@
       "io.github.junct-bot/binance-mcp",
       "io.github.junct-bot/binance-mcp"
      ]
-    },
-    "composio": {
-     "slug": "binance",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -16926,7 +16923,9 @@
     ],
     "issues": []
    },
-   "seconds": 76
+   "seconds": 76,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 84,
@@ -16948,7 +16947,7 @@
    "mcp_exists": true,
    "mcp_official": false,
    "mcp_url": "https://enterprisedna.co/directories/mcp/praveendias1180-easypaydirect-mcp",
-   "verdict": "build_with_caveat",
+   "verdict": "needs_outreach",
    "blocker": "No Paygent-specific developer docs found, so the NMI link is unverified. Live keys need a merchant account, and users must supply their own gateway host and key. Only an unofficial, read-only community MCP exists, built for NMI-family gateways.",
    "confidence": {
     "auth": "high",
@@ -16992,11 +16991,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "paygentconnect",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -17114,7 +17108,9 @@
     ],
     "issues": []
    },
-   "seconds": 73
+   "seconds": 73,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 85,
@@ -17208,11 +17204,6 @@
       "io.github.iPAYX-Technologies/mcp-fx-audit",
       "io.github.iPAYX-Technologies/mcp-fx-audit"
      ]
-    },
-    "composio": {
-     "slug": "ipayx",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -17319,7 +17310,9 @@
      }
     ]
    },
-   "seconds": 71
+   "seconds": 71,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 86,
@@ -17331,7 +17324,7 @@
     "oauth2"
    ],
    "auth_detail": "OAuth 2.0 authorization-code flow against Intuit's authorization server for the Accounting REST API itself (the 'com.intuit.quickbooks.accounting' scope; bearer access token ~60 min, refresh token). Intuit's own oauth-jsclient/SDKs implement it for API calls, and the MCP server merely reuses the same OAuth2 app credentials. No per-user API keys.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "Free Intuit developer account gives app creation, development keys and sandbox companies. Production keys for use with other users' live companies require filling Intuit's app questionnaire/assessment (and a compliance review for listing on the App Store). Docs pages were JS-rendered, so this is not verbatim-confirmed.",
    "api_types": [
     "rest"
@@ -17426,11 +17419,6 @@
       "com.caribooks/quickbooks",
       "com.caribooks/quickbooks"
      ]
-    },
-    "composio": {
-     "slug": "quickbooks",
-     "listed": true,
-     "title": "QuickBooks MCP Server for AI Agents | Composio"
     }
    },
    "open_issues": [
@@ -17463,7 +17451,7 @@
      "QUICKBOOKS_QUERY_BILLS"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/21",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Dashboard-configured webhooks (endpoint URL, intuit-signature header) for entity change events on authorized QBO companies; moving to CloudEvents payload format.",
@@ -17531,7 +17519,9 @@
      }
     ]
    },
-   "seconds": 69
+   "seconds": 69,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 87,
@@ -17631,11 +17621,6 @@
       "com.pilot.meridian/xero-connector",
       "io.github.Servosity/xero-mcp"
      ]
-    },
-    "composio": {
-     "slug": "xero",
-     "listed": true,
-     "title": "Xero MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -17717,7 +17702,9 @@
     ],
     "issues": []
    },
-   "seconds": 76
+   "seconds": 76,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 88,
@@ -17818,11 +17805,6 @@
       "io.github.shuji-bonji/s1000d-brex-mcp",
       "io.github.shuji-bonji/s1000d-brex-mcp"
      ]
-    },
-    "composio": {
-     "slug": "brex",
-     "listed": true,
-     "title": "Brex MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -17913,7 +17895,9 @@
     ],
     "issues": []
    },
-   "seconds": 47
+   "seconds": 47,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 89,
@@ -17935,7 +17919,7 @@
    "mcp_exists": true,
    "mcp_official": true,
    "mcp_url": "https://mcp.ramp.com/mcp",
-   "verdict": "build_with_caveat",
+   "verdict": "needs_outreach",
    "blocker": "No public signup: credentials require a Ramp customer account with admin access (or sandbox request). Multi-tenant OAuth apps for other businesses need Ramp partner approval; some scopes plan- or partner-gated. Also, vendor-official MCP exists.",
    "confidence": {
     "auth": "high",
@@ -18006,11 +17990,6 @@
       "ai.adramp/google-ads",
       "com.mcparmory/ramp"
      ]
-    },
-    "composio": {
-     "slug": "ramp",
-     "listed": true,
-     "title": "Ramp MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -18090,7 +18069,9 @@
     ],
     "issues": []
    },
-   "seconds": 55
+   "seconds": 55,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 90,
@@ -18156,11 +18137,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "pitchbook",
-     "listed": true,
-     "title": "PitchBook MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -18252,7 +18228,9 @@
      }
     ]
    },
-   "seconds": 41
+   "seconds": 41,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 91,
@@ -18356,11 +18334,6 @@
       "io.github.Pantheon-Security/notebooklm-mcp-secure",
       "io.github.Pantheon-Security/notebooklm-mcp-secure"
      ]
-    },
-    "composio": {
-     "slug": "notebooklm",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -18454,7 +18427,9 @@
      }
     ]
    },
-   "seconds": 69
+   "seconds": 69,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 92,
@@ -18535,11 +18510,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "otterai",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -18657,7 +18627,9 @@
      }
     ]
    },
-   "seconds": 78
+   "seconds": 78,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 93,
@@ -18745,11 +18717,6 @@
       "ai.qompass/fathom",
       "dev.cotlet/fathom-video"
      ]
-    },
-    "composio": {
-     "slug": "fathom",
-     "listed": true,
-     "title": "Fathom MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -18829,7 +18796,9 @@
     ],
     "issues": []
    },
-   "seconds": 27
+   "seconds": 27,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 94,
@@ -18923,11 +18892,6 @@
       "com.tinab/consensus",
       "io.github.Evozim/consensus-voter-mcp"
      ]
-    },
-    "composio": {
-     "slug": "consensus",
-     "listed": true,
-     "title": "Consensus MCP Server | Composio"
     }
    },
    "open_issues": [],
@@ -19018,7 +18982,9 @@
      }
     ]
    },
-   "seconds": 32
+   "seconds": 32,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 95,
@@ -19086,11 +19052,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "reducto",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [
@@ -19180,7 +19141,9 @@
     ],
     "issues": []
    },
-   "seconds": 23
+   "seconds": 23,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 96,
@@ -19274,11 +19237,6 @@
       "io.github.DevInder1/tridentchain-security",
       "io.github.DevInder1/tridentchain-security"
      ]
-    },
-    "composio": {
-     "slug": "devin",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -19360,7 +19318,9 @@
     ],
     "issues": []
    },
-   "seconds": 46
+   "seconds": 46,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 97,
@@ -19472,11 +19432,6 @@
       "app.higgsfield.agentwares/marketplace",
       "app.higgsfield.mizan-bazar/mizan"
      ]
-    },
-    "composio": {
-     "slug": "higgsfield",
-     "listed": true,
-     "title": "Higgsfield MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -19579,7 +19534,9 @@
     ],
     "issues": []
    },
-   "seconds": 67
+   "seconds": 67,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 98,
@@ -19657,11 +19614,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "mermaidcli",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -19672,10 +19624,8 @@
    "changed": [],
    "human": null,
    "composio": {
-    "in_catalog": true,
-    "toolkits": [
-     "mermaid_chart_mcp"
-    ],
+    "in_catalog": false,
+    "toolkits": [],
     "tools": [
      "GLEIF_EXPORT_LEI_RECORDS",
      "GLEIF_GET_LEI_RECORD",
@@ -19744,7 +19694,9 @@
      }
     ]
    },
-   "seconds": 40
+   "seconds": 40,
+   "evidence_weak": false,
+   "mcp_official_confirmed": false
   },
   {
    "id": 99,
@@ -19824,11 +19776,6 @@
      "count": 0,
      "official": [],
      "sample": []
-    },
-    "composio": {
-     "slug": "youtubetranscript",
-     "listed": false,
-     "title": ""
     }
    },
    "open_issues": [],
@@ -19916,7 +19863,9 @@
     ],
     "issues": []
    },
-   "seconds": 30
+   "seconds": 30,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   },
   {
    "id": 100,
@@ -19929,7 +19878,7 @@
     "bearer_token"
    ],
    "auth_detail": "REST API v2: OAuth2 Authorization Code with required PKCE (client_id/secret requested manually; public clients such as MCP and native apps can use an HTTPS URL as client_id). Personal Access Token (any plan) and Workspace Access Token (admin only, Business/Enterprise), both sent as Authorization: Bearer plus a Public-Api-Version header. The `workspace` OAuth scope needs a client verified by Grain.",
-   "access": "self_serve_free",
+   "access": "admin_approval",
    "access_detail": "A PAT is available on every plan including Free, so a developer can self-serve it. For end-user connect via OAuth, confirmed docs: HTTPS-URL client_id for public clients with no approval needed; server-side clients need a client_id and secret requested manually (undocumented process). The workspace scope and the WAT need a Business/Enterprise plan, and the OAuth workspace scope also needs Grain verification. No sandbox.",
    "api_types": [
     "rest"
@@ -20038,11 +19987,6 @@
       "com.grain64.deskhand/deskhand",
       "com.grain64.deskhand/deskhand"
      ]
-    },
-    "composio": {
-     "slug": "grain",
-     "listed": true,
-     "title": "Grain MCP Server | Composio"
     }
    },
    "open_issues": [
@@ -20076,7 +20020,7 @@
      "GRAIN_LIST_REFERENCE_DATA"
     ]
    },
-   "tracker_issue": null,
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/25",
    "extras": {
     "webhooks": "yes",
     "webhooks_detail": "Register webhook URL; payload sent on events like new recording processed, recording settings change, clip created. Full event list in developers.grain.com hooks docs.",
@@ -20129,7 +20073,9 @@
     ],
     "issues": []
    },
-   "seconds": 68
+   "seconds": 68,
+   "evidence_weak": false,
+   "mcp_official_confirmed": true
   }
  ]
 }

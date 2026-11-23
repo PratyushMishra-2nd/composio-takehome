@@ -198,5 +198,35 @@
       "verdict:needs_outreach",
       "gate:partner_gated"
     ]
+  },
+  "14": {
+    "app": "Front",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/22",
+    "ok": true,
+    "raw": null
+  },
+  "24": {
+    "app": "Lark (Larksuite)",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/24",
+    "ok": true,
+    "raw": null
+  },
+  "28": {
+    "app": "WhatsApp Business",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/23",
+    "ok": true,
+    "raw": null
+  },
+  "86": {
+    "app": "QuickBooks",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/21",
+    "ok": true,
+    "raw": null
+  },
+  "100": {
+    "app": "Grain",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/25",
+    "ok": true,
+    "raw": null
   }
 }

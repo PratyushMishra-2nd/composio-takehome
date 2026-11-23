@@ -56,7 +56,7 @@ def main():
             **{k: r[k] for k in ("description", "auth_methods", "auth_detail", "access", "access_detail", "api_types",
                                  "api_breadth", "api_notes", "mcp_exists", "mcp_official", "mcp_url", "verdict", "blocker", "confidence")},
             "evidence": ver.get("quotes") or [dict(e, status="unchecked") for e in r["evidence"]],
-            "checks": {"apis_guru": ver.get("apis_guru"), "mcp_registry": ver.get("mcp_registry"), "composio": ver.get("composio")},
+            "checks": {"apis_guru": ver.get("apis_guru"), "mcp_registry": ver.get("mcp_registry")},
             "open_issues": [{"type": t, "field": f, "msg": m} for t, f, m in ver.get("issues", [])],
             "flagged_pass1": str(i) in redo or str(i) in redo2 or str(i) in redo3,
             "flag_reasons": "\n".join(x for x in (redo.get(str(i), ""), redo2.get(str(i), ""), redo3.get(str(i), "")) if x),
@@ -81,6 +81,22 @@ def main():
             "seconds": rec.get("seconds"),
         })
 
+    # ---- corrections (after verification; accuracy is measured before these) ----
+    import sys as _sys
+    _sys.path.insert(0, str(ROOT / "agent"))
+    from corrections import apply as apply_corrections
+    corrections = apply_corrections(apps, load_json("results/adjudication.json", {}))
+
+    # official MCP: "confirmed" only with independent support
+    def _mcp_confirmed(a):
+        reg = ((a["checks"].get("mcp_registry") or {}).get("official") or [])
+        dom = a["hint"].split()[0].lower().replace("https://", "").replace("http://", "").split("/")[0]
+        base = ".".join(dom.split(".")[-2:])
+        ev_ok = any(e["field"] == "mcp" and e.get("status") == "verified" and base and base in e["url"] for e in a["evidence"])
+        return bool(reg) or (bool(base) and base in (a["mcp_url"] or "") and ev_ok)
+    for a in apps:
+        a["mcp_official_confirmed"] = a["mcp_official"] and _mcp_confirmed(a)
+
     # ---- patterns ----
     n = len(apps)
     auth_c = Counter(m for a in apps for m in a["auth_methods"])
@@ -104,7 +120,9 @@ def main():
         "mcp_any": sum(a["mcp_exists"] for a in apps),
         "mcp_official": sum(a["mcp_official"] for a in apps),
         "composio_listed": sum(1 for a in apps if a["composio"]["in_catalog"]),
-        "composio_gaps": [{"id": a["id"], "app": a["app"], "category": a["category"], "verdict": a["verdict"], "access": a["access"], "blocker": a["blocker"]}
+        "mcp_official_confirmed": sum(1 for a in apps if a["mcp_official_confirmed"]),
+        "evidence_weak": [a["app"] for a in apps if a["evidence_weak"]],
+        "composio_gaps": [{"id": a["id"], "app": a["app"], "category": a["category"], "verdict": a["verdict"], "access": a["access"], "blocker": a["blocker"], "weak": a["evidence_weak"]}
                           for a in sorted(apps, key=lambda a: ["build_now", "build_with_caveat", "needs_outreach", "not_buildable"].index(a["verdict"]))
                           if a["composio"]["in_catalog"] is False],
         "tracker_issues": sum(1 for a in apps if a["tracker_issue"]),
@@ -149,7 +167,7 @@ def main():
         "accuracy": acc,
         "agent_seconds_total": sum(a["seconds"] or 0 for a in apps),
     }
-    out = {"generated": time.strftime("%Y-%m-%d %H:%M IST"), "patterns": patterns, "verification": verification, "apps": apps}
+    out = {"corrections": corrections, "generated": time.strftime("%Y-%m-%d %H:%M IST"), "patterns": patterns, "verification": verification, "apps": apps}
     (ROOT / "docs").mkdir(exist_ok=True)
     import csv as _csv
     with open(ROOT / "docs" / "apps.csv", "w", newline="", encoding="utf-8") as fh:

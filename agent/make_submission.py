@@ -10,7 +10,7 @@ D = json.loads((ROOT / "docs" / "data.json").read_text(encoding="utf-8"))
 P, V, A = D["patterns"], D["verification"], D["apps"]
 acc = V["accuracy"]
 c, ac, au = dict(P["verdict"]), dict(P["access"]), dict(P["auth"])
-gaps_now = [g["app"] for g in P["composio_gaps"] if g["verdict"] == "build_now"]
+gaps_now = [g["app"] for g in P["composio_gaps"] if g["verdict"] == "build_now" and not g.get("weak")]
 X = P.get("extras") or {}
 gen_gaps = [g for g in gaps_now if g in X.get("generatable_build_now", [])]
 LIVE = "https://pratyushmishra-2nd.github.io/composio-takehome/"
@@ -29,7 +29,7 @@ for cat in cats:
 
 findings = [
     (f"Half are easy wins: {c.get('build_now', 0)} of 100 can ship today",
-     f"{c.get('build_with_caveat', 0)} more with a caveat; only {c.get('needs_outreach', 0) + c.get('not_buildable', 0)} need outreach or have no usable API."),
+     f"{c.get('build_with_caveat', 0)} more with a caveat; {c.get('needs_outreach', 0) + c.get('not_buildable', 0)} need outreach or have no usable API. An upper bound: gate errors on the sample skewed permissive."),
     ("Most common blocker: money, then vendor review",
      f"{ac.get('self_serve_trial', 0) + ac.get('paid_plan', 0)} need a trial or paid plan, {ac.get('admin_approval', 0)} need vendor app review, "
      f"{ac.get('customer_account', 0)} are customer-only, {ac.get('partner_gated', 0)} need a partnership. Every app but one has a documented API."),
@@ -50,8 +50,9 @@ steps = [("Research workers", "Headless Claude Code per app, web search + fetch,
          ("Non-LLM verifier", "Quote re-fetch, APIs.guru specs, MCP registry, consistency rules"),
          ("Re-research", "Flagged apps re-run with the exact disputes, 2 rounds"),
          ("Browser-use loop", f"Headless Chromium renders JS-heavy docs: +{bv} quotes confirmed"),
-         ("Composio catalog", "COMPOSIO_SEARCH_TOOLS per app → 19-app gap backlog", True),
+         ("Composio catalog", f"COMPOSIO_SEARCH_TOOLS per app → {len(P['composio_gaps'])}-app gap backlog", True),
          ("Approval tracker", f"{P['tracker_issues']} GitHub issues via Composio GITHUB_CREATE_AN_ISSUE", True)]
+steps.append(("Corrections", f"{len(D.get('corrections', []))} recorded fixes: third-check rulings, own verdict rules on all 100, named human calls"))
 steps.insert(4, ("Enrichment pass", f"Webhooks, sandbox, rate limits, SDKs, spec: {X['quotes'].get('verified', 0)}/{sum(X['quotes'].values())} quotes confirmed; specs downloaded + parsed"))
 shtml = "".join(f'<div class="st{" c" if len(s) > 2 else ""}"><b>{e(s[0])}</b><span>{e(s[1])}</span></div>' for s in steps)
 
@@ -105,10 +106,10 @@ code {{ font-family: Consolas, monospace; font-size: 7.6pt; background: #efeee9;
 </div>
 <div class="wrap">
   <div class="tiles">
-    <div class="tile"><div class="v">{c.get('build_now', 0)}/100</div><div class="l">can ship as a toolkit today with self-serve credentials</div></div>
+    <div class="tile"><div class="v">{c.get('build_now', 0)}/100</div><div class="l">can ship as a toolkit today with self-serve credentials (upper bound)</div></div>
     <div class="tile"><div class="v">{len(P['composio_gaps'])} gaps</div><div class="l">not yet in Composio's catalog; {len(gaps_now)} buildable now (checked via Composio MCP)</div></div>
     <div class="tile"><div class="v">{pct(q1['verified'] / q1['total'])} → {pct(fq['verified'] / fq['total'])}</div><div class="l">cited quotes confirmed on the source page, pass 1 → after the verification loops</div></div>
-    <div class="tile"><div class="v">{pct(acc['pass1']['overall'])} → {pct(acc['final']['overall'])}</div><div class="l">field accuracy on a blind 20-app sample (auth {pct(acc['pass1']['field_accuracy']['auth'])} → {pct(acc['final']['field_accuracy']['auth'])})</div></div>
+    <div class="tile"><div class="v">{pct(acc['pass1']['overall'])} → {pct(acc['final']['overall'])}</div><div class="l">field accuracy on a blind 20-app sample: flat overall; auth {pct(acc['pass1']['field_accuracy']['auth'])} → {pct(acc['final']['field_accuracy']['auth'])}, gate field stuck at {pct(acc['final']['field_accuracy']['access'])}</div></div>
   </div>
   <div class="cols">
     <div><h2>The patterns</h2>{fhtml}</div>
@@ -117,10 +118,10 @@ code {{ font-family: Consolas, monospace; font-size: 7.6pt; background: #efeee9;
       <h2 style="margin-top:4.5mm">Verification, honestly</h2>
       <div class="acc">
         <div><div class="v">{fq['verified']}/{fq['total']}</div><div class="l">quotes confirmed ({bv} only after browser render)</div></div>
-        <div><div class="v">{pct(acc['adjudicated']['overall'])}</div><div class="l">sample accuracy after a third check on each disagreement</div></div>
+        <div><div class="v">{len(D.get('corrections', []))}</div><div class="l">corrections applied after verification, each listed with its source (accuracy measured before them)</div></div>
         <div><div class="v">{pct(V['experiment_gate_audit']['overall'])}</div><div class="l">a gate-audit loop that hurt accuracy: rolled back, kept as an experiment</div></div>
       </div>
-      <p class="note">Gate classification (trial vs paid vs app review) is the hardest field; every remaining miss is listed on the live page.</p>
+      <p class="note">Gate classification (trial vs paid vs app review) is the hardest field. Official MCP: {P['mcp_official']} claimed, {P['mcp_official_confirmed']} independently confirmed. Every miss and correction is listed on the live page.</p>
     </div>
   </div>
   <h2>The agent</h2>

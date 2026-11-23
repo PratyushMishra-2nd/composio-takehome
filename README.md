@@ -30,11 +30,10 @@ data/apps.csv ──► agent/research.py ──► results/pass1/*.json
                   agent/research.py --pass pass3 --redo …   (round 2, 52 apps)
                          │
                          ▼
-                  gate audit: every self-serve app re-checked for public-app review / ISV status / paid plan
-                  agent/research.py --pass pass4 --redo results/redo_gate_audit.json
+                  agent/verify_browser.py   browser-use loop: headless Chromium renders JS-heavy cited pages
                          │
                          ▼
-                  agent/score.py      (vs data/gold.csv: blind independent check on 20 apps)
+                  agent/score.py      (vs data/gold.csv: blind model reference on 20 apps, reviewed by the author)
                   agent/adjudicate.py (third check rules on every remaining disagreement)
                          │
                          ▼
@@ -49,7 +48,7 @@ data/apps.csv ──► agent/research.py ──► results/pass1/*.json
 
 ## Run it
 
-Requirements: Python 3.10+, `pip install playwright && playwright install chromium` (browser-use loop and PDF), the [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) logged in (`claude` on PATH), and for the Composio steps a Composio key in `.env`:
+Requirements: Python 3.10+, `pip install -r requirements.txt && playwright install chromium` (browser-use loop and PDF), the [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) logged in (`claude` on PATH), and for the Composio steps a Composio key in `.env`:
 
 ```
 COMPOSIO_API_KEY=ck_...      # composio.dev dashboard; used as Bearer token for https://connect.composio.dev/mcp
@@ -65,7 +64,6 @@ python agent/research.py --pass pass2 --redo results/redo_pass1.json
 python agent/verify.py   --pass final                 # round 2 checks -> results/redo_final.json
 cp results/redo_final.json results/redo_pass2.json && cp results/verify_final.json results/verify_round2.json
 python agent/research.py --pass pass3 --redo results/redo_pass2.json
-python agent/research.py --pass pass4 --redo results/redo_gate_audit.json   # gate audit (list built from self-serve apps)
 python agent/verify.py   --pass final
 python agent/verify_browser.py && python agent/verify.py --pass final   # browser-use loop: render JS-heavy cited pages in headless Chromium
 python agent/score.py                                 # accuracy vs the blind sample check
@@ -74,7 +72,7 @@ python agent/enrich.py --workers 4                    # extra fields: webhooks, 
 python agent/verify_extras.py && python agent/verify_browser.py --extras && python agent/verify_extras.py
 python agent/composio_catalog.py --all                # Composio coverage via MCP -> results/composio_catalog.json
 python agent/outreach.py --dry-run                    # preview approval-tracker issues; drop --dry-run to create them
-python agent/build.py                                 # docs/data.json
+python agent/build.py                                 # applies agent/corrections.py, writes docs/data.json + apps.csv
 python -m http.server -d docs 8000                    # open http://localhost:8000
 ```
 
@@ -105,6 +103,14 @@ Results are cached per app, so a re-run only researches missing apps. Delete `re
 
 - **Used:** the catalog check, which asks Composio's tool router for every app, and the approval tracker, which creates GitHub issues through Composio's GitHub toolkit. Both go through Composio's MCP server.
 - **Not used:** the research workers search the web with Claude Code's built-in WebSearch/WebFetch. Routing them through Composio's search toolkits (Exa/Tavily/Firecrawl) is a one-line `--mcp-config` change, but it would have meant re-running all 100 apps against the starter credit inside the 8-hour window.
+
+## Rolled-back experiment
+
+A "gate audit" loop (re-researching every self-serve app with a pointed prompt about app review and paid plans) lowered sample accuracy from 90% to 85%, so it was rolled back. Its output is kept in `results/experiment_gate_audit/` and is not part of the pipeline.
+
+## Corrections after verification
+
+`agent/corrections.py` applies, and records, three kinds of change after verification: third-check rulings on sample disagreements, the project's own verdict rules enforced on all 100 apps, and named human judgment calls. Accuracy is measured before these corrections. Every change is listed on the page.
 
 ## Known limits
 
