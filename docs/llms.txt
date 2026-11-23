@@ -1,0 +1,16 @@
+# 100 apps → agent toolkits (Composio take-home, Pratyush Mishra)
+
+> Research matrix for 100 SaaS apps: auth methods, gate to working credentials, API surface, MCP coverage, buildability verdict, Composio catalog status, each backed by verbatim quotes from vendor docs. Produced by an agent pipeline with non-LLM, browser-use and sample-based verification.
+
+## Data
+- [data.json](https://pratyushmishra-2nd.github.io/composio-takehome/data.json): everything: per-app fields, evidence (url, quote, verification status), independent checks, patterns, accuracy
+- [apps.csv](https://pratyushmishra-2nd.github.io/composio-takehome/apps.csv): one row per app, flat
+- [Approval tracker](https://github.com/PratyushMishra-2nd/composio-takehome/issues): one GitHub issue per gated app, opened via Composio MCP
+
+## Field values
+- access: self_serve_free | self_serve_trial | paid_plan | admin_approval (vendor reviews the app before others can connect) | customer_account (credentials only inside an existing customer account) | partner_gated | no_public_api
+- verdict: build_now | build_with_caveat | needs_outreach | not_buildable
+- evidence[].status: verified (quote found on the cited page, by plain fetch or browser render) | not_found | unreadable | fetch_failed
+
+## Code
+- [Repo and README](https://github.com/PratyushMishra-2nd/composio-takehome)

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23 18:16 IST",
+ "generated": "2026-11-23 18:28 IST",
  "patterns": {
   "n": 100,
   "auth": [
@@ -722,11 +722,12 @@
   },
   "final_quotes": {
    "total": 698,
-   "verified": 639,
-   "not_found": 38,
-   "unreadable": 11,
-   "fetch_failed": 10
+   "verified": 677,
+   "not_found": 20,
+   "unreadable": 1,
+   "fetch_failed": 0
   },
+  "browser_verified": 40,
   "pass1_flagged": 47,
   "round2_flagged": 52,
   "round2_issue_types": [
@@ -792,12 +793,12 @@
   ],
   "final_open_issues": [
    [
-    "quote_not_found",
-    26
+    "unsupported_claim",
+    19
    ],
    [
-    "unsupported_claim",
-    22
+    "quote_not_found",
+    13
    ],
    [
     "low_confidence",
@@ -1180,36 +1181,36 @@
      "field": "auth",
      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
      "quote": "After reviewing and selecting an OAuth authorization flow, apply it to your external client app or connected app.",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "auth",
      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
      "quote": "Creating connected apps is restricted as of Spring '26. You can continue to use existing connected apps during and after Spring '26.",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered fuzzy 74%"
     },
     {
      "field": "api",
      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
      "quote": "For details about each supported flow, see OAuth Authorization Flows in Salesforce Help.",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide",
      "quote": "hosted servers are intended only for customers with Flex Credits and you may be billed for server usage.",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered fuzzy 93%"
     },
     {
      "field": "mcp",
      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide",
      "quote": "Salesforce Hosted MCP Servers",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered"
     }
    ],
    "checks": {
@@ -1232,11 +1233,6 @@
     }
    },
    "open_issues": [
-    {
-     "type": "unsupported_claim",
-     "field": "auth",
-     "msg": "OAuth2 is claimed but no verified auth quote mentions OAuth. Cite the REST API's own OAuth docs, or drop OAuth2 if only the MCP server (or another product) uses it."
-    },
     {
      "type": "low_confidence",
      "field": "access",
@@ -2500,8 +2496,8 @@
      "field": "api",
      "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
      "quote": "You can use the Support API with tickets, users, organizations, custom objects, and manage ticket workflows.",
-     "status": "not_found",
-     "note": "overlap 69%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
@@ -3421,22 +3417,22 @@
      "field": "auth",
      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "auth",
      "url": "https://developer.helpscout.com/docs-api/",
      "quote": "The API key is passed via HTTP Basic Authentication and goes in the username field.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
      "quote": "Create one by navigating to Your Profile > My apps and click Create My App.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
@@ -3449,8 +3445,8 @@
      "field": "api",
      "url": "https://developer.helpscout.com/mailbox-api/",
      "quote": "This is an HTTPS-only API, with OAuth 2 authentication and CORS support running at:",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
@@ -3487,28 +3483,7 @@
      "title": ""
     }
    },
-   "open_issues": [
-    {
-     "type": "quote_not_found",
-     "field": "auth",
-     "msg": "Quote for auth not found on https://developer.helpscout.com/mailbox-api/overview/authentication: \"This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flo\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "auth",
-     "msg": "Quote for auth not found on https://developer.helpscout.com/docs-api/: \"The API key is passed via HTTP Basic Authentication and goes in the username field.\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "access",
-     "msg": "Quote for access not found on https://developer.helpscout.com/mailbox-api/overview/authentication: \"Create one by navigating to Your Profile > My apps and click Create My App.\""
-    },
-    {
-     "type": "unsupported_claim",
-     "field": "auth",
-     "msg": "OAuth2 is claimed but no verified auth quote mentions OAuth. Cite the REST API's own OAuth docs, or drop OAuth2 if only the MCP server (or another product) uses it."
-    }
-   ],
+   "open_issues": [],
    "flagged_pass1": true,
    "flag_reasons": "- [low_confidence] (access) Agent marked access as low confidence.\n- [quote_not_found] (auth) Quote for auth not found on https://developer.helpscout.com/mailbox-api/overview/authentication: \"This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flo\"\n- [quote_not_found] (auth) Quote for auth not found on https://developer.helpscout.com/docs-api/: \"The API key is passed via HTTP Basic Authentication and goes in the username field.\"\n- [quote_not_found] (access) Quote for access not found on https://developer.helpscout.com/mailbox-api/overview/authentication: \"Create one by navigating to Your Profile > My apps and click Create My App.\"\n- [unsupported_claim] (auth) OAuth2 is claimed but no verified auth quote mentions OAuth. Cite the REST API's own OAuth docs, or drop OAuth2 if only the MCP server (or another product) uses it.",
    "rounds": 3,
@@ -6244,8 +6219,8 @@
      "field": "mcp",
      "url": "https://github.com/baguskto/threads-mcp",
      "quote": "Presented as a comprehensive server for Meta's Threads API, with analytics and content management.",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 404: Not Found"
+     "status": "not_found",
+     "note": "browser-rendered overlap 0%"
     }
    ],
    "checks": {
@@ -6268,6 +6243,11 @@
     }
    },
    "open_issues": [
+    {
+     "type": "quote_not_found",
+     "field": "mcp",
+     "msg": "Quote for mcp not found on https://github.com/baguskto/threads-mcp: \"Presented as a comprehensive server for Meta's Threads API, with analytics and content management.\""
+    },
     {
      "type": "low_confidence",
      "field": "mcp",
@@ -6356,8 +6336,8 @@
      "field": "mcp",
      "url": "https://mcpservers.org/servers/neschadin/sendgrid-mcp",
      "quote": "not affiliated with, endorsed by, or sponsored by Twilio SendGrid",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered"
     }
    ],
    "checks": {
@@ -6950,8 +6930,8 @@
      "field": "auth",
      "url": "https://developer.adobe.com/commerce/webapi/rest/",
      "quote": "Third-party applications authenticate with OAuth 1.0a.",
-     "status": "not_found",
-     "note": "overlap 67%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "auth",
@@ -6971,8 +6951,8 @@
      "field": "access",
      "url": "https://developer.adobe.com/commerce/webapi/rest/",
      "quote": "Mobile applications authenticate using tokens.",
-     "status": "not_found",
-     "note": "overlap 50%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "api",
@@ -7022,21 +7002,6 @@
     }
    },
    "open_issues": [
-    {
-     "type": "quote_not_found",
-     "field": "auth",
-     "msg": "Quote for auth not found on https://developer.adobe.com/commerce/webapi/rest/: \"Third-party applications authenticate with OAuth 1.0a.\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "access",
-     "msg": "Quote for access not found on https://developer.adobe.com/commerce/webapi/rest/: \"Mobile applications authenticate using tokens.\""
-    },
-    {
-     "type": "unsupported_claim",
-     "field": "auth",
-     "msg": "OAuth2 is claimed but no verified auth quote mentions OAuth. Cite the REST API's own OAuth docs, or drop OAuth2 if only the MCP server (or another product) uses it."
-    },
     {
      "type": "unsupported_claim",
      "field": "auth",
@@ -10072,8 +10037,8 @@
      "field": "access",
      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
      "quote": "Navigate to Organization settings, then click the API keys or Client Tokens tab.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
@@ -10086,22 +10051,22 @@
      "field": "api",
      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
      "quote": "Application keys, in conjunction with your organization's API key, give users access to Datadog's programmatic API.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
      "url": "https://docs.datadoghq.com/mcp_server/",
      "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
      "url": "https://docs.datadoghq.com/mcp_server/",
      "quote": "The MCP Server has a fair-use burst limit of 50 tool calls per 10 seconds.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     }
    ],
    "checks": {
@@ -10128,21 +10093,6 @@
      "type": "quote_not_found",
      "field": "auth",
      "msg": "Quote for auth not found on https://docs.datadoghq.com/extend/authorization/oauth2_in_datadog/: \"Learn about how Datadog uses OAuth 2.0.\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "access",
-     "msg": "Quote for access not found on https://docs.datadoghq.com/account_management/api-app-keys/: \"Navigate to Organization settings, then click the API keys or Client Tokens tab.\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "mcp",
-     "msg": "Quote for mcp not found on https://docs.datadoghq.com/mcp_server/: \"The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "mcp",
-     "msg": "Quote for mcp not found on https://docs.datadoghq.com/mcp_server/: \"The MCP Server has a fair-use burst limit of 50 tool calls per 10 seconds.\""
     },
     {
      "type": "unsupported_claim",
@@ -11310,8 +11260,8 @@
      "field": "auth",
      "url": "https://docs.superhuman.com/developers/apis/v1",
      "quote": "headers = {'Authorization': 'Bearer <your API token>'}",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "auth",
@@ -11368,13 +11318,7 @@
      "title": "Coda MCP Server | Composio"
     }
    },
-   "open_issues": [
-    {
-     "type": "quote_not_found",
-     "field": "auth",
-     "msg": "Quote for auth not found on https://docs.superhuman.com/developers/apis/v1: \"headers = {'Authorization': 'Bearer <your API token>'}\""
-    }
-   ],
+   "open_issues": [],
    "flagged_pass1": true,
    "flag_reasons": "- [quote_not_found] (auth) Quote for auth not found on https://docs.superhuman.com/developers/apis/v1: \"headers = {'Authorization': 'Bearer <your API token>'}\"\n- [unsupported_claim] (auth) OAuth2 is claimed but no verified auth quote mentions OAuth. Cite the REST API's own OAuth docs, or drop OAuth2 if only the MCP server (or another product) uses it.",
    "rounds": 3,
@@ -11457,8 +11401,8 @@
      "field": "access",
      "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
      "quote": "The Smartsheet API is restricted to users on Business and Enterprise plans",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
@@ -11471,8 +11415,8 @@
      "field": "api",
      "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
      "quote": "Welcome to the OpenAPI reference documentation for the Smartsheet API!",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
@@ -11599,8 +11543,8 @@
      "field": "mcp",
      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
      "quote": "Run a time report for a date range, grouped by project, by client, or by person. Each total is split into billable and non-billable hours.",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered fuzzy 95%"
     }
    ],
    "checks": {
@@ -11952,50 +11896,50 @@
      "field": "auth",
      "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
      "quote": "We recommend to use Ed25519 API keys as it should provide the best performance and security out of all supported key types.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "auth",
      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
      "quote": "We support HMAC, RSA, and Ed25519 keys. For more information, please see API Key types.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
      "quote": "API keys can be created on the API Management page of your Binance account.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
      "quote": "By default, an API key cannot `TRADE`. You need to enable trading in API Management first.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered fuzzy 79%"
     },
     {
      "field": "api",
      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
      "quote": "The limits on the API are based on the IPs, not the API keys.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
      "url": "https://developers.binance.com/en/docs/agent-native/overview",
      "quote": "Connect AI agents and coding assistants over the Model Context Protocol — for trading or for documentation lookup.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
      "url": "https://developers.binance.com/en/docs/agent-native/mcp-server",
      "quote": "Connect your AI agent to Binance with a single URL.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "not_found",
+     "note": "browser-rendered overlap 43%"
     }
    ],
    "checks": {
@@ -12017,7 +11961,13 @@
      "title": ""
     }
    },
-   "open_issues": [],
+   "open_issues": [
+    {
+     "type": "quote_not_found",
+     "field": "mcp",
+     "msg": "Quote for mcp not found on https://developers.binance.com/en/docs/agent-native/mcp-server: \"Connect your AI agent to Binance with a single URL.\""
+    }
+   ],
    "flagged_pass1": false,
    "flag_reasons": "",
    "rounds": 1,
@@ -12201,50 +12151,50 @@
      "field": "description",
      "url": "https://www.ipayx.ai/docs/api",
      "quote": "The forensic FX audit engine that powers iPayX.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "auth",
      "url": "https://www.ipayx.ai/docs/api",
      "quote": "Every request requires a Bearer token in the",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
      "url": "https://www.ipayx.ai/pricing",
      "quote": "100 audits. Never expire. Use them at your own pace.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "access",
      "url": "https://www.ipayx.ai/pricing",
      "quote": "Unlimited audits. For teams running audits every week.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "api",
      "url": "https://www.ipayx.ai/docs/api",
      "quote": "Live mid-market rates from Twelve Data.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
      "url": "https://www.ipayx.ai/docs/mcp-server",
      "quote": "Score any FX transaction 1-10 with a qualitative verdict.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
      "url": "https://www.ipayx.ai/docs/mcp-server",
      "quote": "Fetch the live mid-market reference rate for a currency pair.",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     }
    ],
    "checks": {
@@ -12265,33 +12215,7 @@
      "title": ""
     }
    },
-   "open_issues": [
-    {
-     "type": "quote_not_found",
-     "field": "auth",
-     "msg": "Quote for auth not found on https://www.ipayx.ai/docs/api: \"Every request requires a Bearer token in the\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "access",
-     "msg": "Quote for access not found on https://www.ipayx.ai/pricing: \"100 audits. Never expire. Use them at your own pace.\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "access",
-     "msg": "Quote for access not found on https://www.ipayx.ai/pricing: \"Unlimited audits. For teams running audits every week.\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "mcp",
-     "msg": "Quote for mcp not found on https://www.ipayx.ai/docs/mcp-server: \"Score any FX transaction 1-10 with a qualitative verdict.\""
-    },
-    {
-     "type": "quote_not_found",
-     "field": "mcp",
-     "msg": "Quote for mcp not found on https://www.ipayx.ai/docs/mcp-server: \"Fetch the live mid-market reference rate for a currency pair.\""
-    }
-   ],
+   "open_issues": [],
    "flagged_pass1": true,
    "flag_reasons": "- [quote_not_found] (auth) Quote for auth not found on https://www.ipayx.ai/docs/api: \"Every request requires a Bearer token in the `Authorization` header. Keys start with `ipx_live_`.\"\n- [quote_not_found] (access) Quote for access not found on https://www.ipayx.ai/developers: \"Access your dashboard and generate your production API key.\"\n- [quote_not_found] (mcp) Quote for mcp not found on https://www.ipayx.ai/developers: \"Officially listed on the MCP Registry (v1.4.0)\"\n- [low_confidence] (access) Agent marked access as low confidence.\n- [quote_not_found] (auth) Quote for auth not found on https://www.ipayx.ai/developers: \"Authenticate using a Bearer token from your backend.\"\n- [quote_not_found] (access) Quote for access not found on https://www.ipayx.ai/pricing: \"You have 3 free audits.\"\n- [quote_not_found] (access) Quote for access not found on https://www.ipayx.ai/developers: \"Generate and manage your key in the Dashboard.\"\n- [quote_not_found] (mcp) Quote for mcp not found on https://www.ipayx.ai/developers: \"MCP-native FX audit engine.\"\n- [low_confidence] (access) Agent marked access as low confidence.",
    "rounds": 3,
@@ -12660,8 +12584,8 @@
      "field": "api",
      "url": "https://developer.brex.com/openapi/team_api",
      "quote": "The team API lets you manage users, departments, locations, and cards.",
-     "status": "unreadable",
-     "note": "page empty or JS-rendered"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "mcp",
@@ -12914,8 +12838,8 @@
      "field": "mcp",
      "url": "https://pitchbook.com/help/getting-started-with-pitchbook-premium-connector",
      "quote": "built on MCP server technology",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered"
     }
    ],
    "checks": {
@@ -12999,8 +12923,8 @@
      "field": "auth",
      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
      "quote": "-H \"Authorization:Bearer $(gcloud auth print-access-token)\"",
-     "status": "not_found",
-     "note": "overlap 0%"
+     "status": "verified",
+     "note": "browser-rendered"
     },
     {
      "field": "auth",
@@ -13068,13 +12992,7 @@
      "title": ""
     }
    },
-   "open_issues": [
-    {
-     "type": "quote_not_found",
-     "field": "auth",
-     "msg": "Quote for auth not found on https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks: \"-H \"Authorization:Bearer $(gcloud auth print-access-token)\"\""
-    }
-   ],
+   "open_issues": [],
    "flagged_pass1": true,
    "flag_reasons": "- [unsupported_claim] (auth) OAuth2 is claimed but no verified auth quote mentions OAuth. Cite the REST API's own OAuth docs, or drop OAuth2 if only the MCP server (or another product) uses it.",
    "rounds": 2,
@@ -13941,8 +13859,8 @@
      "field": "mcp",
      "url": "https://mcpservers.org/servers/tci-nebula/mermaid-mcp",
      "quote": "Mermaid Render",
-     "status": "fetch_failed",
-     "note": "HTTPError: HTTP Error 403: Forbidden"
+     "status": "verified",
+     "note": "browser-rendered"
     }
    ],
    "checks": {

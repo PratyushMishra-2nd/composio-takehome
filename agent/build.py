@@ -102,6 +102,7 @@ def main():
     verification = {
         "pass1_quotes": quote_stats(v1),
         "final_quotes": quote_stats(vf) if vf else None,
+        "browser_verified": sum(1 for c in vf.values() for q in c["quotes"] if q.get("note", "").startswith("browser")),
         "pass1_flagged": len(redo),
         "round2_flagged": len(redo2),
         "round2_issue_types": Counter(t for c in load_json("results/verify_round2.json", {}).values() for t, _, _ in c["issues"]).most_common(),
@@ -119,6 +120,16 @@ def main():
     }
     out = {"generated": time.strftime("%Y-%m-%d %H:%M IST"), "patterns": patterns, "verification": verification, "apps": apps}
     (ROOT / "docs").mkdir(exist_ok=True)
+    import csv as _csv
+    with open(ROOT / "docs" / "apps.csv", "w", newline="", encoding="utf-8") as fh:
+        w = _csv.writer(fh)
+        w.writerow(["id", "app", "category", "description", "auth_methods", "access", "api_types", "api_breadth", "mcp_exists", "mcp_official",
+                    "mcp_url", "verdict", "blocker", "in_composio", "composio_toolkits", "tracker_issue", "evidence_urls"])
+        for a in apps:
+            w.writerow([a["id"], a["app"], a["category"], a["description"], ";".join(a["auth_methods"]), a["access"], ";".join(a["api_types"]),
+                        a["api_breadth"], a["mcp_exists"], a["mcp_official"], a["mcp_url"], a["verdict"], a["blocker"],
+                        a["composio"]["in_catalog"], ";".join(a["composio"]["toolkits"]), a["tracker_issue"] or "",
+                        " ".join(sorted({e["url"] for e in a["evidence"]}))])
     (ROOT / "docs" / "data.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"docs/data.json: {n} apps, rechecked {len(p2)}, changed {verification['changed_apps']}")
     print("auth", auth_c.most_common()); print("access", access_c.most_common()); print("verdict", verdict_c.most_common())

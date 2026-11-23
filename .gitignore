@@ -4,3 +4,5 @@ results/try/
 __pycache__/
 *.err.txt
 .env
+results/cache_browser/
+submission/preview.png

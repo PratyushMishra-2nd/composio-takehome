@@ -46,23 +46,43 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
-def quote_on_page(quote, url):
-    body = fetch(url)
-    if body.startswith("__FETCH_FAILED__"):
-        return "fetch_failed", body[17:120]
-    page, q = norm(body), norm(quote)
-    if len(page) < 400:
-        return "unreadable", "page empty or JS-rendered"
+def _match(page, q):
     if q and q in page:
         return "verified", ""
     words = q.split()
     if len(words) < 5:
-        return ("verified", "") if q in page else ("not_found", "")
+        return "not_found", ""
     grams = [" ".join(words[i:i + 4]) for i in range(len(words) - 3)]
     hit = sum(g in page for g in grams) / len(grams)
     if hit >= 0.7:
         return "verified", f"fuzzy {hit:.0%}"
     return "not_found", f"overlap {hit:.0%}"
+
+
+def browser_text(url):
+    """Text rendered by headless Chromium (verify_browser.py), if that loop has run for this URL."""
+    p = ROOT / "results" / "cache_browser" / (re.sub(r"[^a-zA-Z0-9]+", "_", url)[:180] + ".txt")
+    return p.read_text(encoding="utf-8") if p.exists() else None
+
+
+def quote_on_page(quote, url):
+    body = fetch(url)
+    q = norm(quote)
+    if body.startswith("__FETCH_FAILED__"):
+        st, note = "fetch_failed", body[17:120]
+    elif len(norm(body)) < 400:
+        st, note = "unreadable", "page empty or JS-rendered"
+    else:
+        st, note = _match(norm(body), q)
+    if st != "verified":  # second opinion from the browser-rendered page
+        bt = browser_text(url)
+        if bt and len(bt) > 400:
+            bst, bnote = _match(norm(bt), q)
+            if bst == "verified":
+                return "verified", ("browser-rendered " + bnote).strip()
+            if st in ("fetch_failed", "unreadable"):
+                return "not_found", ("browser-rendered " + bnote).strip()
+    return st, note
 
 
 # ---------- APIs.guru ----------
