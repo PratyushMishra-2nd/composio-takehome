@@ -17,7 +17,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--page);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:var(--s1)}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 22px 80px}
+.wrap{max-width:1300px;margin:0 auto;padding:28px 22px 80px}
 header h1{font-size:30px;line-height:1.2;margin:0 0 8px;letter-spacing:-.01em}
 header p.lede{color:var(--ink2);font-size:17px;margin:0 0 6px;max-width:860px}
 .meta{color:var(--muted);font-size:13px}
@@ -54,6 +54,7 @@ th,td{padding:7px 8px;border-bottom:1px solid var(--grid);text-align:left;vertic
 th{color:var(--ink2);font-weight:600;background:var(--surface)}
 #tbl{font-size:12.5px}
 #tbl td:nth-child(2){min-width:130px}
+#tbl td .clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;max-width:240px}
 .matrix td,.matrix th{text-align:center}
 .matrix td:first-child,.matrix th:first-child{text-align:left}
 .cell{border-radius:4px;padding:4px 0;font-variant-numeric:tabular-nums}
@@ -264,7 +265,7 @@ fetch('data.json').then(r=>r.json()).then(D=>{
     const rows=A.filter(a=>(!fc||a.category===fc)&&(!fv||a.verdict===fv)&&(!fa||a.access===fa)&&(!q||JSON.stringify([a.app,a.category,a.blocker,a.description]).toLowerCase().includes(q)));
     $('#tbl').innerHTML='<tr><th>#</th><th>App</th><th>Auth</th><th>Gate</th><th>API</th><th>MCP</th><th>Verdict</th><th>Composio</th><th title="Webhooks / event subscriptions">Triggers</th><th title="Free developer sandbox or test mode">Sandbox</th><th title="Machine-readable OpenAPI / GraphQL spec">Spec</th><th>Main blocker</th><th>Checks</th></tr>'+
       rows.map(a=>{const ver=a.evidence.filter(e=>e.status==='verified').length;
-        return `<tr class="row" data-id="${a.id}"><td>${a.id}</td><td><b>${esc(a.app)}</b>${a.evidence_weak?' <span class="tag">unverified</span>':''}<br><span class="note">${esc(a.category)}</span></td><td>${a.auth_methods.map(x=>`<span class="tag">${AUL[x]}</span>`).join('')}</td><td>${AL[a.access]}</td><td>${a.api_types.join('/')} · ${a.api_breadth}</td><td>${a.mcp_exists?(a.mcp_official?'official':'community'):'—'}</td><td><span class="pill v-${a.verdict}">${VL[a.verdict]}</span></td><td>${a.composio.in_catalog?'listed':'<b>gap</b>'}${a.tracker_issue?` · <a href="${a.tracker_issue}" target="_blank" rel="noopener" onclick="event.stopPropagation()">tracker</a>`:''}</td>${(x=>x?`<td>${x.webhooks==='yes'?'yes':x.webhooks==='no'?'no':'?'}</td><td>${{free:'free',paid_or_on_request:'paid / ask',no:'no',unknown:'?'}[x.sandbox]}</td><td>${{openapi:'OpenAPI',graphql_schema:'GraphQL',postman_only:'Postman',no:'—',unknown:'?'}[x.spec]}${x.spec_confirmed?' ✓':''}</td>`:'<td>·</td><td>·</td><td>·</td>')(a.extras)}<td>${esc(a.blocker||'—')}</td><td title="quotes verified on page / cited">${ver}/${a.evidence.length}${a.changed.length?' · fixed':''}${a.open_issues.length?' · ⚠':''}</td></tr>`}).join('');
+        return `<tr class="row" data-id="${a.id}"><td>${a.id}</td><td><b>${esc(a.app)}</b>${a.evidence_weak?' <span class="tag">unverified</span>':''}<br><span class="note">${esc(a.category)}</span></td><td>${a.auth_methods.map(x=>`<span class="tag">${AUL[x]}</span>`).join('')}</td><td>${AL[a.access]}</td><td>${a.api_types.join('/')} · ${a.api_breadth}</td><td>${a.mcp_exists?(a.mcp_official?'official':'community'):'—'}</td><td><span class="pill v-${a.verdict}">${VL[a.verdict]}</span></td><td>${a.composio.in_catalog?'listed':'<b>gap</b>'}${a.tracker_issue?` · <a href="${a.tracker_issue}" target="_blank" rel="noopener" onclick="event.stopPropagation()">tracker</a>`:''}</td>${(x=>x?`<td>${x.webhooks==='yes'?'yes':x.webhooks==='no'?'no':'?'}</td><td>${{free:'free',paid_or_on_request:'paid / ask',no:'no',unknown:'?'}[x.sandbox]}</td><td>${{openapi:'OpenAPI',graphql_schema:'GraphQL',postman_only:'Postman',no:'—',unknown:'?'}[x.spec]}${x.spec_confirmed?' ✓':''}</td>`:'<td>·</td><td>·</td><td>·</td>')(a.extras)}<td><span class="clamp" title="${esc(a.blocker||'')}">${esc(a.blocker||'—')}</span></td><td title="quotes verified on page / cited">${ver}/${a.evidence.length}${a.changed.length?' · fixed':''}${a.open_issues.length?' · ⚠':''}</td></tr>`}).join('');
     $('#count').textContent=`${rows.length} of ${n} apps shown. Checks = quotes found on the cited page / quotes cited; "fixed" = corrected by the verification loop; ⚠ = an automatic check still disagrees.`;
     document.querySelectorAll('tr.row').forEach(tr=>tr.onclick=()=>{const nx=tr.nextElementSibling;if(nx&&nx.classList.contains('detail')){nx.remove();return}
       const a=A.find(x=>x.id==tr.dataset.id);tr.insertAdjacentHTML('afterend',`<tr class="detail"><td colspan="13">${detail(a)}</td></tr>`)});
