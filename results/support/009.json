@@ -1,0 +1,49 @@
+{
+  "id": 9,
+  "app": "Copper",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0.",
+      "verdict": "supports",
+      "why": "States two access methods: API keys and OAuth2.0."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.copper.com/introduction/oauth/index.html",
+      "quote": "To use OAuth2.0 with Copper, you must first register your application.",
+      "verdict": "partial",
+      "why": "Shows OAuth2 needs registration, but not that it is an auth method or the email process."
+    },
+    {
+      "field": "access",
+      "url": "https://support.copper.com/en/articles/8823347-generating-an-api-key",
+      "quote": "Only Admin users are able to generate API Keys.",
+      "verdict": "partial",
+      "why": "Admin-only key generation is consistent with the claim, but says nothing about self-serve or free access."
+    },
+    {
+      "field": "access",
+      "url": "https://www.copper.com/pricing",
+      "quote": "Start free, no credit card required.",
+      "verdict": "partial",
+      "why": "Free trial with no card is related, but not a statement about API access being free or self-serve."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.copper.com/introduction/requests.html",
+      "quote": "All API calls are limited to 180 requests per minute.",
+      "verdict": "no",
+      "why": "Only a rate limit. Says nothing about REST or broad API coverage."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.copper.com/mcp",
+      "quote": "Yes. Copper is launching an official MCP server, built and hosted by Copper. The beta launches in November 2026.",
+      "verdict": "no",
+      "why": "Says MCP is official and Copper-hosted, contradicting vendor-official False. Beta timing is not in the claim."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 21,
+  "app": "Slack",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://docs.slack.dev/apis/web-api/",
+      "quote": "The Slack Web API is an interface for querying information from and enacting change in a Slack workspace.",
+      "verdict": "partial",
+      "why": "Describes Web API as interface; no messaging, channels or DMs mentioned."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.slack.dev/authentication/installing-with-oauth",
+      "quote": "Slack apps are installed with a v2 OAuth 2.0 flow.",
+      "verdict": "partial",
+      "why": "Shows OAuth 2.0 install flow only; no bot/user tokens, PKCE, or other methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.slack.dev/authentication/tokens",
+      "quote": "User tokens allow you to work directly on behalf of users when necessary.",
+      "verdict": "partial",
+      "why": "Confirms user tokens exist; says nothing about bearer_token category or xoxb/xoxp details."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.slack.dev/authentication/installing-with-oauth",
+      "quote": "OAuth allows a user in any Slack workspace to install your app.",
+      "verdict": "partial",
+      "why": "Confirms any workspace user can install via OAuth; no free-creation or self-serve gate."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.slack.dev/ai/slack-mcp-server",
+      "quote": "Only apps published in the Slack Marketplace and internal apps can use MCP at this time; unlisted apps are prohibited from using MCP.",
+      "verdict": "partial",
+      "why": "Says Marketplace/internal apps only for MCP; no free-tier or Web API claim."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.slack.dev/apis/web-api/",
+      "quote": "The Web API is a collection of HTTP RPC-style methods , all with URLs in the form https://slack.com/api/METHOD_FAMILY.method .",
+      "verdict": "partial",
+      "why": "States Web API is HTTP RPC-style; nothing on websocket, Socket Mode or breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.slack.dev/ai/slack-mcp-server",
+      "quote": "With the Slack MCP server, your integrated apps can search channels, send messages, and perform other Slack actions through MCP clients.",
+      "verdict": "partial",
+      "why": "Shows Slack MCP server exists; URL and vendor-official status not in quote."
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.slack.dev/ai/slack-mcp-server",
+      "quote": "Workspace admins can approve and manage all MCP client integrations, keeping your Slack data safe.",
+      "verdict": "no",
+      "why": "Admin approval of MCP integrations; says nothing about verdict or build_now blocker."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": 10,
+  "app": "DealCloud",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token",
+      "verdict": "partial",
+      "why": "Shows OAuth2 client credentials only; api_key method not stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "quote": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the flow.",
+      "verdict": "no",
+      "why": "Token expiry detail; says nothing about auth methods oauth2 or api_key."
+    },
+    {
+      "field": "access",
+      "url": "https://api.docs.dealcloud.com/docs/",
+      "quote": "Each DealCloud site provides an interactive Swagger page for testing API calls.",
+      "verdict": "no",
+      "why": "Swagger testing page only; nothing on credentials or customer-account gating."
+    },
+    {
+      "field": "api",
+      "url": "https://api.docs.dealcloud.com/docs/",
+      "quote": "This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints.",
+      "verdict": "partial",
+      "why": "Confirms REST API overview; GraphQL and breadth not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://api.docs.dealcloud.com/mcp/authentication",
+      "quote": "DealCloud MCP uses OAuth to authenticate, letting AI assistants connect on behalf of an individual user.",
+      "verdict": "partial",
+      "why": "Shows a DealCloud MCP using OAuth; official status and URL not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://api.docs.dealcloud.com/mcp/tools",
+      "quote": "To enable write tools, go to **Tools > MCP Servers**, edit the MCP Server, and turn on the **Enable Write Tools** toggle.",
+      "verdict": "partial",
+      "why": "Implies an MCP server with settings exists; official status and URL not stated."
+    }
+  ]
+}

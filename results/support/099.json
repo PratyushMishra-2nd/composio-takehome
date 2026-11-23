@@ -1,0 +1,49 @@
+{
+  "id": 99,
+  "app": "YouTube Transcript",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://transcriptapi.com/docs/llms-small.txt",
+      "quote": "The API uses Bearer token authentication. Include your API key in the `Authorization` header of every request:",
+      "verdict": "supports",
+      "why": "Quote states API key sent as Bearer token in Authorization header."
+    },
+    {
+      "field": "auth",
+      "url": "https://transcriptapi.com/docs/mcp/",
+      "quote": "Authentication: OAuth 2.1 (Claude, ChatGPT) or an API key sent as a Bearer token (OpenAI Agent Builder and other clients).",
+      "verdict": "partial",
+      "why": "Says API key as Bearer token, but for unnamed clients, not the public REST API; also mentions OAuth."
+    },
+    {
+      "field": "access",
+      "url": "https://transcriptapi.com/pricing",
+      "quote": "You can start for free: new accounts get 100 free credits, no card required, and one transcript costs one credit.",
+      "verdict": "supports",
+      "why": "States new accounts get 100 free credits with no card required."
+    },
+    {
+      "field": "api",
+      "url": "https://transcriptapi.com/docs/llms-small.txt",
+      "quote": "All API requests are made to: https://transcriptapi.com/api/v2",
+      "verdict": "partial",
+      "why": "Gives only the base URL; endpoints, metering and Swagger are not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://transcriptapi.com/pricing",
+      "quote": "Yes. TranscriptAPI runs an MCP server at https://transcriptapi.com/mcp.",
+      "verdict": "supports",
+      "why": "States the vendor runs an MCP server at the given URL; official status is implied."
+    },
+    {
+      "field": "description",
+      "url": "https://transcriptapi.com/docs/llms-small.txt",
+      "quote": "Extract YouTube video transcripts with a simple API call or through Model Context Protocol",
+      "verdict": "partial",
+      "why": "Covers transcripts and REST/MCP access; search, channel and playlist browsing are not mentioned."
+    }
+  ]
+}

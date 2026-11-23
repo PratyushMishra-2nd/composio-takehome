@@ -1,0 +1,42 @@
+{
+  "id": 35,
+  "app": "Mailchimp",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication/oauth-2",
+      "quote": "Mailchimp implements the standard authorization code flow",
+      "verdict": "partial",
+      "why": "Names authorization code flow only; api_key and token details not stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+      "quote": "An API key authenticates requests against your own Mailchimp account.",
+      "verdict": "partial",
+      "why": "Covers api_key for own account only; oauth2 part not supported."
+    },
+    {
+      "field": "access",
+      "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication/oauth-2",
+      "quote": "Mailchimp access tokens have no expiry, so there is no refresh_token",
+      "verdict": "no",
+      "why": "Quote on token expiry and refresh_token; claim is about free-plan access to keys/apps."
+    },
+    {
+      "field": "api",
+      "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "quote": "https://api.mailchimp.com/3.0/",
+      "verdict": "partial",
+      "why": "Gives v3.0 base URL only; REST breadth and SDKs not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md",
+      "quote": "This searches documentation, not your Mailchimp account.",
+      "verdict": "partial",
+      "why": "Says a docs-search tool exists; no existence or vendor-official confirmation, and URL absent."
+    }
+  ]
+}

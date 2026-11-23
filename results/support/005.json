@@ -1,0 +1,70 @@
+{
+  "id": 5,
+  "app": "Twenty",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.twenty.com/developers/extend/mcp",
+      "quote": "You have two ways to authenticate your MCP client: **OAuth** (recommended) or **API Key**.",
+      "verdict": "partial",
+      "why": "Names OAuth and API key only. No bearer_token or PKCE detail."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.twenty.com/developers/extend/oauth.md",
+      "quote": "Clients are registered dynamically via RFC 7591 — no manual setup in a dashboard.",
+      "verdict": "supports",
+      "why": "States dynamic RFC 7591 registration with no dashboard setup. Key part matches."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+      "quote": "Create an API key in Settings → Developers → API → + Create key.",
+      "verdict": "supports",
+      "why": "Gives the API key location, Settings → Developers → API. Matches claim's key part."
+    },
+    {
+      "field": "access",
+      "url": "https://twenty.com/pricing",
+      "quote": "Sign up for Cloud in under a minute and start your 30-day trial.",
+      "verdict": "supports",
+      "why": "Sign up and start 30-day trial. Self-serve trial stated. No card detail."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans",
+      "quote": "Host Twenty on your own infrastructure at no cost:",
+      "verdict": "partial",
+      "why": "Self-host free only. Says nothing about credentials or trial gate."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+      "quote": "Both are available as REST and GraphQL.",
+      "verdict": "partial",
+      "why": "Confirms REST and GraphQL. Breadth, CRUD scope, batch limits not shown."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+      "quote": "This is how you programmatically change your data model.",
+      "verdict": "partial",
+      "why": "Data model change mention is related to Metadata API. Doesn't name REST or GraphQL."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.twenty.com/developers/extend/mcp",
+      "quote": "Use your **workspace URL** (the URL you use to access Twenty) as the MCP endpoint.",
+      "verdict": "partial",
+      "why": "Workspace URL as MCP endpoint shows MCP exists. Vendor-official and exact URL not stated."
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.twenty.com/developers/extend/oauth.md",
+      "quote": "Request scopes as a space-separated string: scope=api profile",
+      "verdict": "no",
+      "why": "OAuth scope syntax fragment. Nothing about verdict or build_now."
+    }
+  ]
+}

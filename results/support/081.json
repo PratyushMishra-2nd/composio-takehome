@@ -1,0 +1,49 @@
+{
+  "id": 81,
+  "app": "Stripe",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "mcp",
+      "url": "https://docs.stripe.com/mcp",
+      "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API and search the Stripe knowledge base, including documentation and support articles.",
+      "verdict": "partial",
+      "why": "Quote states MCP server exists; vendor-official only implied by 'The Stripe', not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.stripe.com/mcp",
+      "quote": "Use OAuth for interactive MCP clients.",
+      "verdict": "partial",
+      "why": "Shows OAuth for MCP clients only; no mention of restricted key or existence."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.stripe.com/api/authentication",
+      "quote": "The Stripe API uses API keys to authenticate requests.",
+      "verdict": "partial",
+      "why": "Supports api_key method only; claim lists basic and oauth2 too."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.stripe.com/connect/oauth-standard-accounts",
+      "quote": "Use the OAuth connection flow to allow a Stripe user to connect to your platform.",
+      "verdict": "partial",
+      "why": "Supports OAuth connection flow only; other methods and Connect caveats not covered."
+    },
+    {
+      "field": "access",
+      "url": "https://stripe.com/pricing",
+      "quote": "Stripe does not charge setup fees, monthly fees, or any other hidden fees like closure fees.",
+      "verdict": "partial",
+      "why": "Says no setup/monthly fees; related pricing, but not free self-serve test keys or verification gate."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.stripe.com/api/authentication",
+      "quote": "The Stripe API uses API keys to authenticate requests.",
+      "verdict": "no",
+      "why": "Quote is about API key authentication; says nothing about REST, SDKs, or API breadth."
+    }
+  ]
+}

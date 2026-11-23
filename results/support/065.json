@@ -1,0 +1,42 @@
+{
+  "id": 65,
+  "app": "Supabase",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access to their account without requiring their credentials.",
+      "verdict": "partial",
+      "why": "Quote covers only OAuth2 tokens; bearer_token and api_key not mentioned."
+    },
+    {
+      "field": "auth",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API.",
+      "verdict": "partial",
+      "why": "States PATs are manual, custom-expiry Management API tokens; no api_key or OAuth2 coverage."
+    },
+    {
+      "field": "access",
+      "url": "https://supabase.com/pricing",
+      "quote": "Start building for free, collaborate with your team, then scale to millions of users",
+      "verdict": "partial",
+      "why": "Generic free-start marketing; no mention of PAT or OAuth app registration or self-serve access."
+    },
+    {
+      "field": "api",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "Manage your Supabase organizations and projects programmatically.",
+      "verdict": "partial",
+      "why": "Says Management API covers orgs and projects; no REST or GraphQL, no breadth detail."
+    },
+    {
+      "field": "mcp",
+      "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+      "quote": "Connect your AI tools to Supabase using MCP",
+      "verdict": "partial",
+      "why": "Implies a Supabase MCP for AI tools; URL and vendor-official status not in quote."
+    }
+  ]
+}

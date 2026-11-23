@@ -1,0 +1,63 @@
+{
+  "id": 22,
+  "app": "Twilio",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://www.twilio.com/docs/iam/api-keys",
+      "quote": "API keys are the preferred way to authenticate with Twilio's REST APIs.",
+      "verdict": "partial",
+      "why": "Says API keys preferred; supports api_key only, not basic or legacy auth."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+      "quote": "Use your API key SID as the username and your API key secret as the password.",
+      "verdict": "partial",
+      "why": "Shows basic auth with API key SID/secret; no mention of other methods or the list."
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/docs/usage/trials",
+      "quote": "You can sign up for a Twilio free trial account without a credit card.",
+      "verdict": "supports",
+      "why": "States free signup without credit card, the key part of the gate claim."
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/docs/usage/trials",
+      "quote": "Each account can verify up to 5 recipients.",
+      "verdict": "partial",
+      "why": "States the 5-recipient verification limit only; no signup, credential, or access-gate info."
+    },
+    {
+      "field": "api",
+      "url": "https://www.twilio.com/docs/usage/api",
+      "quote": "each product corresponds to an API.",
+      "verdict": "partial",
+      "why": "Says each product has an API; no mention of REST vs SDK, breadth, or specific products."
+    },
+    {
+      "field": "description",
+      "url": "https://www.twilio.com/docs",
+      "quote": "Twilio APIs give you flexibility, global reach, and reliable deliverability to connect with customers anywhere.",
+      "verdict": "partial",
+      "why": "Generic marketing on flexibility and reach; does not name messaging, voice, verification, or Flex."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.twilio.com/docs/mcp",
+      "quote": "No Account SID, API key, or other credential is required or accepted.",
+      "verdict": "partial",
+      "why": "Says MCP needs no credentials; does not show existence or vendor-official status or the URL."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.twilio.com/docs/mcp",
+      "quote": "exposes two tools that work together in a search-then-retrieve workflow",
+      "verdict": "partial",
+      "why": "Describes MCP tool workflow; does not show existence, vendor-official status, or the URL."
+    }
+  ]
+}

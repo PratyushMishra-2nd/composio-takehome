@@ -1,0 +1,49 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "headers = {'Authorization': 'Bearer <your API token>'}",
+      "verdict": "supports",
+      "why": "Quote shows Bearer token Authorization header, the claimed auth method."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "401 The API token is invalid or has expired.",
+      "verdict": "no",
+      "why": "401 invalid-token error text; says nothing about auth method."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+      "verdict": "partial",
+      "why": "Quote says free for all users; says nothing on self-serve token generation or roles."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "This API uses a base path of `https://coda.io/apis/v1`.",
+      "verdict": "partial",
+      "why": "Quote gives base path only; breadth and rate limits unverified."
+    },
+    {
+      "field": "mcp",
+      "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+      "quote": "Under the hood, Superhuman Docs runs an MCP server built on the open Model Context Protocol standard, giving AI clients tools to work directly in your docs.",
+      "verdict": "supports",
+      "why": "Quote says Superhuman Docs runs an MCP server, so exists and vendor-official."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/orellazri/coda-mcp",
+      "quote": "This MCP server is not developed or maintained by Coda; it's a community-built project.",
+      "verdict": "no",
+      "why": "Quote says server is community-built, not maintained by Coda; contradicts vendor-official: True."
+    }
+  ]
+}

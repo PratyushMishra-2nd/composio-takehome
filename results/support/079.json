@@ -1,0 +1,56 @@
+{
+  "id": 79,
+  "app": "Smartsheet",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+      "quote": "OAuth 2.0 (OAuth) provides a way for your app users to grant limited access to their Smartsheet resources.",
+      "verdict": "partial",
+      "why": "Quote states OAuth 2.0 grants limited access; no bearer_token, no client ID/secret detail."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+      "quote": "Apply your API access token in the Security tab by selecting the Bearer Token value field",
+      "verdict": "partial",
+      "why": "Shows personal token in Bearer Token field; no oauth2, Gov/EU tokens."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+      "quote": "The Smartsheet API is restricted to users on Business and Enterprise plans",
+      "verdict": "partial",
+      "why": "Plan restriction stated; no trial exclusion, no self_serve_trial detail, no Advanced Work Management."
+    },
+    {
+      "field": "access",
+      "url": "https://help.smartsheet.com/articles/529590-smartsheet-free-trial-faqs",
+      "quote": "You can't generate API access tokens.",
+      "verdict": "partial",
+      "why": "Says tokens can't be generated; unqualified, no trial mention. Consistent, not sufficient alone."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+      "quote": "Welcome to the OpenAPI reference documentation for the Smartsheet API!",
+      "verdict": "no",
+      "why": "Page title fragment only; no endpoint, breadth, or SDK content."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "quote": "The Smartsheet MCP server bridges the gap between Smartsheet and AI models, allowing you to:",
+      "verdict": "partial",
+      "why": "Shows MCP server exists and its purpose; no vendor-official or URL confirmation."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+      "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+      "verdict": "partial",
+      "why": "Plan requirement for MCP; consistent with gate, but does not show existence or official status."
+    }
+  ]
+}

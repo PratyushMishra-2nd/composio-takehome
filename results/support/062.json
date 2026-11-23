@@ -1,0 +1,49 @@
+{
+  "id": 62,
+  "app": "Vercel",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://vercel.com/docs/rest-api/getting-started",
+      "quote": "Confirm that `VERCEL_TOKEN` is set and the header uses `Authorization: Bearer <token>`.",
+      "verdict": "partial",
+      "why": "Shows bearer header use only; nothing on oauth2 method."
+    },
+    {
+      "field": "auth",
+      "url": "https://vercel.com/docs/sign-in-with-vercel",
+      "quote": "Vercel's IdP uses the OAuth 2.0 authorization framework, a widely adopted industry standard for securing and delegating access to resources on behalf of users.",
+      "verdict": "partial",
+      "why": "Says Vercel uses OAuth 2.0 framework; no list of auth methods."
+    },
+    {
+      "field": "access",
+      "url": "https://vercel.com/docs/sign-in-with-vercel",
+      "quote": "For users to be able to use Sign in with Vercel in your application, they must have a Vercel account.",
+      "verdict": "partial",
+      "why": "Says Sign in with Vercel needs an account; no token creation or free-tier gate."
+    },
+    {
+      "field": "api",
+      "url": "https://vercel.com/docs/rest-api/getting-started",
+      "quote": "Use a Vercel access token to call the Vercel REST API with `curl`, then make the same request with `@vercel/sdk`.",
+      "verdict": "partial",
+      "why": "Shows REST and SDK usage; says nothing on sdk_only or breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+      "quote": "Vercel MCP is Vercel's official MCP server. It's a remote MCP with OAuth that gives AI tools secure access to your Vercel projects available at:",
+      "verdict": "supports",
+      "why": "States it is Vercel's official, remote, OAuth MCP server; URL not in quote."
+    },
+    {
+      "field": "mcp",
+      "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+      "quote": "Vercel MCP is available on all plans and your use is subject to Vercel's AI Product Terms.",
+      "verdict": "partial",
+      "why": "Says available on all plans; does not state existence or official status."
+    }
+  ]
+}

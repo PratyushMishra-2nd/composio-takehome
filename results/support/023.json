@@ -1,0 +1,56 @@
+{
+  "id": 23,
+  "app": "Zoho Cliq",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "quote": "The first step in using OAuth authentication is registering your app with the Zoho API console.",
+      "verdict": "partial",
+      "why": "Says OAuth starts with registering app; no api_key, scopes, token or DC details."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "quote": "Once you register your client, you will get a Client ID and Client secret for your application.",
+      "verdict": "partial",
+      "why": "Confirms Client ID and secret issued; rest of claim (methods, scopes, tokens) unsupported."
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "quote": "Once you register your client, you will get a Client ID and Client secret for your application.",
+      "verdict": "partial",
+      "why": "Registration and credentials supported; no mention of free plan or no restriction."
+    },
+    {
+      "field": "api",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+      "quote": "v3 introduces CRUD API endpoints for bots, slash commands, message actions, widgets, schedulers, and more, which were not available in v2.",
+      "verdict": "partial",
+      "why": "Shows v3 adds CRUD endpoints for some resources; no URL, v2 status, or full coverage list."
+    },
+    {
+      "field": "api",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+      "quote": "The latest version, v3, is the recommended choice for all new workflows, automations, and integrations.",
+      "verdict": "partial",
+      "why": "Says v3 is recommended and latest; no URL, breadth, or v2 availability."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+      "quote": "Any AI model or agent can use our official MCP server to access your Cliq data and do:",
+      "verdict": "supports",
+      "why": "States an official MCP server exists for Cliq data; URL not shown but core claim stated."
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+      "quote": "Zoho Cliq's REST API is designed based on RESTful architecture principles, enabling seamless communication between your applications and Zoho Cliq.",
+      "verdict": "no",
+      "why": "Describes RESTful design only; says nothing about a build_now verdict or blockers."
+    }
+  ]
+}

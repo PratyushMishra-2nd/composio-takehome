@@ -1,0 +1,63 @@
+{
+  "id": 91,
+  "app": "NotebookLM",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "Gemini Notebook Enterprise is a powerful tool for generating insights and summaries from your documents.",
+      "verdict": "supports",
+      "why": "Quote states it generates insights and summaries from documents; key part matches."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "-H \"Authorization:Bearer $(gcloud auth print-access-token)\"",
+      "verdict": "supports",
+      "why": "Quote shows Bearer token header from gcloud access token; matches bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "Grant the Cloud NotebookLM User role (`roles/discoveryengine.notebookLmUser`) to your user account.",
+      "verdict": "partial",
+      "why": "Role grant is related setup, but does not state the auth method itself."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+      "quote": "A subscription contains at least 15 licenses and can contain up to 5,000 licenses.",
+      "verdict": "partial",
+      "why": "License minimum and maximum imply subscription, but not paid gating of API credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+      "quote": "The paid tier: You can buy a monthly subscription or a year-long subscription.",
+      "verdict": "partial",
+      "why": "States paid monthly/annual tier exists; does not say it gates working credentials."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "Pre-GA features are available \"as is\" and might have limited support.",
+      "verdict": "no",
+      "why": "Only pre-GA support caveat; nothing on REST endpoints, regions, or breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+      "quote": "This MCP and CLI use **internal APIs** that:",
+      "verdict": "partial",
+      "why": "Implies unofficial internal-API tool; does not name repo or confirm existence."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+      "quote": "Use at your own risk for personal/experimental purposes.",
+      "verdict": "no",
+      "why": "Risk disclaimer only; no existence or vendor-official status stated."
+    }
+  ]
+}

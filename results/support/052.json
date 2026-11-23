@@ -1,0 +1,49 @@
+{
+  "id": 52,
+  "app": "SE Ranking",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "Include an `Authorization` header in your request, with the value `Token YOUR_API_KEY`.",
+      "verdict": "supports",
+      "why": "Quote states Authorization header with Token API key, matching the claimed key-in-header method."
+    },
+    {
+      "field": "auth",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "A single API key authenticates every endpoint across the Data API and the Project API.",
+      "verdict": "supports",
+      "why": "Quote says one API key authenticates Data and Project API endpoints, matching the claim's key part."
+    },
+    {
+      "field": "access",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "every current subscription plan includes a monthly credit allowance.",
+      "verdict": "partial",
+      "why": "Quote shows plans include credit allowance, but not that a subscription gates working credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "Credit packs that never expire. From $50 for 250,000 credits, with no limit on how many you buy.",
+      "verdict": "partial",
+      "why": "Quote supports the credit-pack purchase detail only; says nothing about the paid-plan gate."
+    },
+    {
+      "field": "mcp",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "This transport uses OAuth 2.1 with dynamic client registration for authentication",
+      "verdict": "partial",
+      "why": "Quote is about MCP OAuth transport, related but does not show server exists or is vendor-official."
+    },
+    {
+      "field": "mcp",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "API access lives with the master account, not with sub-accounts.",
+      "verdict": "no",
+      "why": "Quote is about master vs sub-account API access; nothing about MCP server existence or official status."
+    }
+  ]
+}

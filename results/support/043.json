@@ -1,0 +1,49 @@
+{
+  "id": 43,
+  "app": "BigCommerce",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
+      "quote": "BigCommerce offers three types of OAuth-based API accounts to developers who wish to use BigCommerce's REST APIs: store-level credentials, app-level credentials, and account-level credentials.",
+      "verdict": "partial",
+      "why": "Quote confirms OAuth-based API accounts; bearer_token is not mentioned."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
+      "quote": "Merchants generate single-store API credentials when they create API accounts in their store control panel, in the Settings > Store-level API accounts menu.",
+      "verdict": "no",
+      "why": "Quote says merchants generate credentials in the control panel; says nothing about approval."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.bigcommerce.com/docs/start/about/sandboxes",
+      "quote": "Sandbox stores are intended for developing and testing apps. They cannot process any live transactions.",
+      "verdict": "no",
+      "why": "Quote is about sandbox stores not processing live transactions; unrelated to credential gating."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
+      "quote": "To create an account-level API account visit the account control panel or the store control panel for a member store at Settings > Account-level API accounts.",
+      "verdict": "no",
+      "why": "Quote only describes where to create account-level API accounts; no REST/GraphQL/webhook breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.bigcommerce.com/developer/docs/ai-agent-setup",
+      "quote": "The docs site exposes a Model Context Protocol (MCP) server that AI tools can search and reference.",
+      "verdict": "supports",
+      "why": "Docs site exposes an MCP server, stated by the vendor's own docs, so existence and official status hold. URL not in quote."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.bigcommerce.com/developer/docs/ai-agent-setup",
+      "quote": "If you're looking for an MCP server that interacts with your storefront, see the BigCommerce MCP Server.",
+      "verdict": "partial",
+      "why": "Confirms a vendor-named BigCommerce MCP Server exists, but it is a storefront server, not clearly the docs server."
+    }
+  ]
+}

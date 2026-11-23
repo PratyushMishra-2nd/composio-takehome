@@ -1,0 +1,42 @@
+{
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "mcp",
+      "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+      "quote": "The B2C MCP server connects your AI assistant to Salesforce B2C Commerce tools, documentation, and workflow skills.",
+      "verdict": "partial",
+      "why": "States B2C MCP server exists; vendor-official status not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://cdn.jsdelivr.net/npm/@salesforce/b2c-dx-mcp@3.15.0/README.md",
+      "quote": "Connect your AI assistant to Salesforce B2C Commerce tools, documentation, and workflow skills.",
+      "verdict": "partial",
+      "why": "Fragment/instruction; implies a connecting server but doesn't state it exists."
+    },
+    {
+      "field": "auth",
+      "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+      "quote": "Shopper APIs run as a guest shopper with your SLAS client.",
+      "verdict": "partial",
+      "why": "Mentions SLAS guest shopper login; never says OAuth2 or auth method list."
+    },
+    {
+      "field": "access",
+      "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+      "quote": "Deploying code and reading logs need only your instance hostname",
+      "verdict": "no",
+      "why": "Quote is about deploy/log access needing hostname, not credential gating."
+    },
+    {
+      "field": "api",
+      "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+      "quote": "nearly 600 Salesforce Commerce API operations",
+      "verdict": "supports",
+      "why": "Directly states nearly 600 operations, which supports the broad-API claim; REST/OCAPI not shown."
+    }
+  ]
+}

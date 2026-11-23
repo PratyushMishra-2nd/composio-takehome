@@ -1,0 +1,63 @@
+{
+  "id": 75,
+  "app": "Asana",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.asana.com/docs/oauth",
+      "quote": "Asana supports the authorization code grant flow",
+      "verdict": "supports",
+      "why": "Directly names OAuth 2.0 authorization code grant, the oauth2 method."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.asana.com/docs/oauth",
+      "quote": "Asana uses OAuth 2.0 for secure user authorization.",
+      "verdict": "supports",
+      "why": "States Asana uses OAuth 2.0, which is the oauth2 method in the claim."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.asana.com/docs/authentication",
+      "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API.",
+      "verdict": "partial",
+      "why": "Says PAT is the simplest auth route; never says bearer or lists it as a method."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.asana.com/docs/publish-your-app",
+      "quote": "Submitting your app for review is not required to obtain a token.",
+      "verdict": "no",
+      "why": "Says review is not required, which contradicts the admin_approval gate claim."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.asana.com/docs/rate-limits",
+      "quote": "Limits are based on minute-long windows and differ depending on whether the domain is free or paid",
+      "verdict": "no",
+      "why": "About rate-limit window length; says nothing about credential gating or approval."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.asana.com/docs/overview",
+      "quote": "Asana apps use features like our rest API, app components, and webhooks.",
+      "verdict": "partial",
+      "why": "Lists REST API among app features; does not establish REST as primary or breadth of API."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "quote": "The Asana MCP V2 server is available at: `https://mcp.asana.com/v2/mcp`.",
+      "verdict": "supports",
+      "why": "Gives the MCP V2 server URL and says it is available, so it exists."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "quote": "This server requires authentication with your Asana account.",
+      "verdict": "partial",
+      "why": "Says server needs Asana auth; related to the MCP server but does not establish existence, official status or URL."
+    }
+  ]
+}

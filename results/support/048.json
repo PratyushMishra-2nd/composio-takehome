@@ -1,0 +1,56 @@
+{
+  "id": 48,
+  "app": "Gumroad",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.n8n.io/integrations/credentials/gumroad",
+      "quote": "Create an application to generate an access token.",
+      "verdict": "partial",
+      "why": "Mentions access token only; no OAuth2 or bearer-token method named."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.n8n.io/integrations/credentials/gumroad",
+      "quote": "Gumroad generates an **Application ID** and **Application Secret**.",
+      "verdict": "partial",
+      "why": "Shows app ID/secret credentials; doesn't name oauth2 or bearer_token."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.n8n.io/integrations/credentials/gumroad",
+      "quote": "Create an application to generate an access token.",
+      "verdict": "partial",
+      "why": "Self-serve app creation shown; no mention of free, no fee, or no review."
+    },
+    {
+      "field": "api",
+      "url": "https://nango.dev/docs/integrations/all/gumroad.md",
+      "quote": "[Web API docs (their REST API)](https://app.gumroad.com/api#api-methods)",
+      "verdict": "no",
+      "why": "Link label only; no endpoint list, breadth, or REST detail."
+    },
+    {
+      "field": "mcp",
+      "url": "https://gumroad.com/mcp",
+      "quote": "Every assistant connects to its own URL and asks for OAuth access to your Gumroad account.",
+      "verdict": "partial",
+      "why": "Implies assistant connection URL with OAuth; no MCP name, URL, or vendor-official statement."
+    },
+    {
+      "field": "mcp",
+      "url": "https://gumroad.com/mcp",
+      "quote": "Model Context Protocol (MCP) lets your AI assistant work with your store.",
+      "verdict": "partial",
+      "why": "States MCP lets assistant work with store; vendor-official and URL not shown."
+    },
+    {
+      "field": "verdict",
+      "url": "https://gumroad.com/mcp",
+      "quote": "Available now in Claude's connector directory.",
+      "verdict": "partial",
+      "why": "Says connector available in Claude directory; no verdict or build_now judgment stated."
+    }
+  ]
+}

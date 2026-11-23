@@ -1,0 +1,56 @@
+{
+  "id": 28,
+  "app": "WhatsApp Business",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens.md",
+      "quote": "If you are a direct developer, meaning only you or your business accesses your own data, use a System User access token.",
+      "verdict": "partial",
+      "why": "Says direct developers use a System User token; implies bearer but never names bearer_token or oauth2."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens.md",
+      "quote": "you must implement Embedded Signup (configured with Facebook Login for Businesses)",
+      "verdict": "partial",
+      "why": "Describes Tech Provider Embedded Signup; related to the auth flow but names no auth method."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started.md",
+      "quote": "Click Generate access token to generate a temporary access token to send a test message.",
+      "verdict": "no",
+      "why": "Describes generating a temporary test token; says nothing about an admin approval gate."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started.md",
+      "quote": "If not yet registered, visit the developer registration page and follow the prompts.",
+      "verdict": "no",
+      "why": "Self-serve registration prompt; if anything implies no approval gate, contrary to admin_approval."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started.md",
+      "quote": "This connection allows your app to access the WhatsApp Cloud API and send messages on behalf of your business.",
+      "verdict": "partial",
+      "why": "Confirms API access to send messages; does not state REST or breadth of coverage."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+      "quote": "This release is built for development and testing workflows, not production sending at scale.",
+      "verdict": "no",
+      "why": "Describes release scope (dev/testing, not production). Does not show MCP server exists or is vendor-official."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+      "quote": "Meta developer account sign-in (OAuth)",
+      "verdict": "partial",
+      "why": "Shows the MCP server uses OAuth sign-in; supports that detail, not existence or vendor-official status."
+    }
+  ]
+}

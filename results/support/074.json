@@ -1,0 +1,56 @@
+{
+  "id": 74,
+  "app": "Jira",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/security-for-other-integrations/",
+      "quote": "This is the recommended method.",
+      "verdict": "no",
+      "why": "Fragment only; says a method is recommended but names no auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/security-for-other-integrations/",
+      "quote": "Basic authentication uses an API token to authenticate the client.",
+      "verdict": "partial",
+      "why": "Describes basic auth with API token; consistent, but covers only basic, not oauth2."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/security-for-other-integrations/",
+      "quote": "Authorization for OAuth 2.0 authorization code grants is implemented via scopes.",
+      "verdict": "partial",
+      "why": "Mentions OAuth 2.0 scopes; related to oauth2 but not sufficient alone."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "quote": "Basic auth requires API tokens.",
+      "verdict": "partial",
+      "why": "Basic auth needs API tokens; related to credentials, but says nothing about free self-serve access."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "quote": "The Jira REST API is protected by the same restrictions that apply in the standard Jira web interface.",
+      "verdict": "no",
+      "why": "About REST API access restrictions; says nothing on endpoint breadth or API types."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+      "quote": "The server initiates a secure OAuth 2.1 authorization flow (or accepts an API token for headless authentication).",
+      "verdict": "partial",
+      "why": "Describes an OAuth 2.1 MCP flow, implying a server exists; not vendor-official or the URL."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+      "quote": "Some tools consume Rovo credits.",
+      "verdict": "no",
+      "why": "About Rovo credit billing for tools; does not show the server exists or is vendor-official."
+    }
+  ]
+}

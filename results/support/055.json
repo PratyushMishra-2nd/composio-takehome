@@ -1,0 +1,56 @@
+{
+  "id": 55,
+  "app": "Apify",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.apify.com/api/v2",
+      "quote": "Add the token to your request's Authorization header as Bearer <token>.",
+      "verdict": "partial",
+      "why": "Confirms bearer header auth only; no api_key method or full list."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.apify.com/api/v2",
+      "quote": "You can create an API token on the Integrations page in the Apify Console.",
+      "verdict": "partial",
+      "why": "Confirms personal API token from Integrations page; not the full auth list."
+    },
+    {
+      "field": "access",
+      "url": "https://apify.com/pricing",
+      "quote": "No credit card is required.",
+      "verdict": "partial",
+      "why": "No credit card needed hints at self-serve; no free plan or token-creation claim."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.apify.com/api/v2",
+      "quote": "The API is organized around RESTful HTTP endpoints.",
+      "verdict": "partial",
+      "why": "Confirms REST endpoints only; no SDKs, breadth, or rate limits."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.apify.com/api/v2",
+      "quote": "You can download the complete OpenAPI schema of Apify API in the YAML or JSON formats.",
+      "verdict": "partial",
+      "why": "Confirms full OpenAPI schema in YAML/JSON; rest of claim unsupported."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.apify.com/platform/integrations/mcp",
+      "quote": "The Apify MCP server is an open-source project.",
+      "verdict": "partial",
+      "why": "Says open-source, not vendor-official; no mention of the mcp.apify.com URL."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.apify.com/platform/integrations/mcp",
+      "quote": "On first connection, your browser opens so you can sign in to Apify and approve access.",
+      "verdict": "partial",
+      "why": "Shows Apify sign-in for MCP connection; does not state server exists or is official."
+    }
+  ]
+}

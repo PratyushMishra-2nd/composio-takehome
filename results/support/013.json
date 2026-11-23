@@ -1,0 +1,56 @@
+{
+  "id": 13,
+  "app": "Freshdesk",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://github.com/effytech/freshdesk_mcp",
+      "quote": "MCP server created for Freshdesk, allowing AI models to interact with Freshdesk modules.",
+      "verdict": "no",
+      "why": "Quote describes an MCP server for AI models; no cloud helpdesk, Freshworks, or ticketing content."
+    },
+    {
+      "field": "auth",
+      "url": "https://support.freshdesk.com/support/solutions/articles/50000014407-mcp-integration-frequently-asked-questions-faq-",
+      "quote": "Freshdesk MCP uses API key authentication.",
+      "verdict": "partial",
+      "why": "States API key auth only; no Basic-username detail or OAuth absence."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "Only SSL calls (HTTPS) will be allowed.",
+      "verdict": "partial",
+      "why": "Confirms HTTPS-only; says nothing on REST v2, resources, or 429 limits."
+    },
+    {
+      "field": "access",
+      "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+      "quote": "For every trial period the API limit is 50 per minute.",
+      "verdict": "partial",
+      "why": "Gives trial 50/min figure; does not state Free plan lacks API access."
+    },
+    {
+      "field": "access",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "When you sign up, you instantly get access to our Enterprise plan for 14 days.",
+      "verdict": "partial",
+      "why": "Confirms 14-day Enterprise trial; no paid-tier gate or Free-plan-zero detail."
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.freshdesk.com/support/solutions/articles/50000014407-mcp-integration-frequently-asked-questions-faq-",
+      "quote": "MCP is supported only in Freshdesk 2021 and Freshdesk Unified Omni 2026.",
+      "verdict": "partial",
+      "why": "Says MCP supported in specific Freshdesk versions; no vendor-official or server-exists confirmation beyond that."
+    },
+    {
+      "field": "verdict",
+      "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+      "quote": "The number of API calls you can make is based on your plan.",
+      "verdict": "partial",
+      "why": "Says API calls depend on plan; the blocker, API-key, and subdomain verdict are not stated."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": 16,
+  "app": "LiveAgent",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://support.liveagent.com/741982-API-key",
+      "quote": "Your API key has to be set in header of your requests:",
+      "verdict": "partial",
+      "why": "Shows API key sent in request header. Doesn't say it's the only or public API auth method."
+    },
+    {
+      "field": "api",
+      "url": "https://support.liveagent.com/567924-Documentation",
+      "quote": "You can find whole LiveAgent API documentation within your LiveAgent account:",
+      "verdict": "partial",
+      "why": "Says API docs live in the account. Says nothing on breadth, objects, client, or rate limits."
+    },
+    {
+      "field": "access",
+      "url": "https://www.liveagent.com/pricing/",
+      "quote": "Yes. Every plan starts with a 30-day free trial, and no credit card is required.",
+      "verdict": "partial",
+      "why": "States 30-day free trial, no card. Doesn't address API key access or paid-plan gating."
+    },
+    {
+      "field": "access",
+      "url": "https://www.liveagent.com/pricing/",
+      "quote": "Let third-party apps retrieve and push data and manage tickets from outside LiveAgent.",
+      "verdict": "no",
+      "why": "Describes API purpose only. Says nothing about trial or credential gating."
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+      "quote": "There are two ways to authenticate your MCP client",
+      "verdict": "no",
+      "why": "Fragment saying two auth ways exist. No MCP server existence or vendor claim."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/QualityUnit/liveagent-mcp-server",
+      "quote": "An MCP (Model Context Protocol) server that provides access to LiveAgent API functionality,",
+      "verdict": "supports",
+      "why": "States LiveAgent provides an MCP server for its API. Key part of claim matches."
+    }
+  ]
+}

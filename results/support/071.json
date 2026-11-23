@@ -1,0 +1,49 @@
+{
+  "id": 71,
+  "app": "Notion",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.notion.com/docs/authorization",
+      "quote": "Authenticate Notion API requests with personal access tokens, internal connection tokens, or OAuth integration OAuth flows.",
+      "verdict": "partial",
+      "why": "Quote names PATs, internal tokens, OAuth; no oauth2 label or Bearer header."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.notion.com/guides/connections-and-tokens/public-integrations/overview.md",
+      "quote": "You can create and use a public connection without listing it.",
+      "verdict": "partial",
+      "why": "Says public connection needs no listing; nothing on free access or self-serve gate."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.notion.com/guides/connections-and-tokens/public-integrations/overview.md",
+      "quote": "A public integration is an OAuth integration that users can install in any Notion workspace.",
+      "verdict": "partial",
+      "why": "Public OAuth installable in any workspace; no mention of free or self-serve access."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.notion.com/reference/intro",
+      "quote": "Send requests over HTTPS to `https://api.notion.com`.",
+      "verdict": "partial",
+      "why": "Gives base URL only; nothing on REST breadth, versioning, SDK, or sdk_only."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp.md",
+      "quote": "The remote server URL is `https://mcp.notion.com/mcp`.",
+      "verdict": "partial",
+      "why": "Gives the MCP URL and implies a remote server; vendor-official not shown."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.notion.com/docs/getting-started",
+      "quote": "Use a public integration so users in any workspace can authorize your app through OAuth.",
+      "verdict": "partial",
+      "why": "Advice to use a public integration; not a build_now verdict or blocker statement."
+    }
+  ]
+}

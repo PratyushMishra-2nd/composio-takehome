@@ -1,0 +1,49 @@
+{
+  "id": 53,
+  "app": "Ahrefs",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.ahrefs.com/llms.txt",
+      "quote": "send your API key as a bearer token in the Authorization: Bearer <API_KEY> header.",
+      "verdict": "partial",
+      "why": "Quote states bearer API key auth; says nothing on oauth2 or the full method list."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.ahrefs.com/ahrefs-connect/docs/oauth-guide.md",
+      "quote": "Ahrefs Connect uses OAuth 2.0 Authorization Code Flow with Proof Key for Code Exchange (PKCE).",
+      "verdict": "partial",
+      "why": "Quote states the OAuth 2.0 PKCE flow only; api_key and bearer not covered."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ahrefs.com/ahrefs-connect/docs/approval-process.md",
+      "quote": "When your integration is ready, you'll need to submit it for verification before it can go live.",
+      "verdict": "no",
+      "why": "Quote concerns verification before go-live; says nothing about a paid plan gate."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+      "quote": "The remote MCP server is available on paid plans starting from Lite.",
+      "verdict": "partial",
+      "why": "Paid-plan requirement stated, but only for the remote MCP server, not API credentials."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.ahrefs.com/llms.txt",
+      "quote": "Ahrefs API v3 gives programmatic access to Ahrefs' SEO, marketing, and AI-search data",
+      "verdict": "partial",
+      "why": "Quote says broad SEO/marketing/AI-search data access; does not mention REST or base URL."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+      "quote": "The external MCP server is not a general-purpose programmatic API.",
+      "verdict": "partial",
+      "why": "Quote implies an external MCP server exists; no URL and no vendor-official statement."
+    }
+  ]
+}

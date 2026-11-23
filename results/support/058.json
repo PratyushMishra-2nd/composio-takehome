@@ -1,0 +1,49 @@
+{
+  "id": 58,
+  "app": "Sherlock",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "Hunt down social media accounts by username across social networks",
+      "verdict": "partial",
+      "why": "Quote gives hunt-by-username across networks; omits Python CLI and 400+ sites."
+    },
+    {
+      "field": "auth",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "pipx install sherlock-project",
+      "verdict": "no",
+      "why": "Install command only; says nothing about authentication or API."
+    },
+    {
+      "field": "access",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "MIT © Sherlock Project",
+      "verdict": "no",
+      "why": "License line only; says nothing about hosted API or credentials."
+    },
+    {
+      "field": "api",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "sherlock user1 user2 user3",
+      "verdict": "partial",
+      "why": "Shows CLI usage syntax; does not state absence of network API or other claimed options."
+    },
+    {
+      "field": "mcp",
+      "url": "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp",
+      "quote": "Sherlock MCP Server",
+      "verdict": "no",
+      "why": "Bare title fragment; does not show existence, vendor status, or URL."
+    },
+    {
+      "field": "verdict",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "Accounts found will be stored in an individual text file with the corresponding username (e.g `user123.txt`).",
+      "verdict": "no",
+      "why": "Describes output file storage; says nothing about API, credentials, or buildability verdict."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": 98,
+  "app": "Mermaid CLI",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+      "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+      "verdict": "supports",
+      "why": "Quote states the key claim: input definition file rendered to SVG/PNG/PDF."
+    },
+    {
+      "field": "auth",
+      "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+      "quote": "This is a command-line interface (CLI) for mermaid.",
+      "verdict": "partial",
+      "why": "Says it is a CLI, consistent with local use, but says nothing about auth, accounts, keys or license."
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+      "quote": "npm install -g @mermaid-js/mermaid-cli",
+      "verdict": "partial",
+      "why": "npm install command is consistent with a free npm package, but no mention of free, no signup, or Puppeteer."
+    },
+    {
+      "field": "api",
+      "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+      "quote": "It's possible to call `mermaid-cli` via a Node.JS API.",
+      "verdict": "partial",
+      "why": "Confirms a Node.js API exists, which is one part of the claim; does not address the no-REST, CLI-focus or breadth details."
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcpservers.org/servers/tci-nebula/mermaid-mcp",
+      "quote": "Mermaid Render",
+      "verdict": "no",
+      "why": "Just a title fragment; says nothing about an MCP server, its vendor, or its URL."
+    }
+  ]
+}

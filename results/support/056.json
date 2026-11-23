@@ -1,0 +1,49 @@
+{
+  "id": 56,
+  "app": "Firecrawl",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://docs.firecrawl.dev/introduction",
+      "quote": "Firecrawl is the context API for AI agents. Search, scrape, and interact with the live web to get clean Markdown or structured data.",
+      "verdict": "supports",
+      "why": "Quote states context API for agents, search/scrape/interact, clean Markdown or structured data."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "The header should contain `Bearer fc-123456789`, where `fc-123456789` represents your API Key.",
+      "verdict": "partial",
+      "why": "Quote covers only the Bearer API key part, not the full list of auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "To let users connect their own Firecrawl account to your app instead, use OAuth for apps.",
+      "verdict": "partial",
+      "why": "Quote states OAuth lets users connect their own account, but not the full auth method list."
+    },
+    {
+      "field": "access",
+      "url": "https://www.firecrawl.dev/pricing",
+      "quote": "Firecrawl gives you 1,000 free credits every month, which covers about 1,000 pages, and no card is required.",
+      "verdict": "partial",
+      "why": "Quote gives free credits and no card needed; does not mention self-serve credential gating or key issuance."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "Map\" (\"Get a complete list of URLs from any website quickly and reliably.",
+      "verdict": "no",
+      "why": "Quote is a fragment describing only the Map endpoint; says nothing on REST, SDKs, or overall API breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "quote": "Official Firecrawl MCP server, the context API for AI agents",
+      "verdict": "supports",
+      "why": "Quote says official Firecrawl MCP server exists; repo URL not shown but key part is stated."
+    }
+  ]
+}

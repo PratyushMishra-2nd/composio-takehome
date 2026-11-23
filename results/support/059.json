@@ -1,0 +1,56 @@
+{
+  "id": 59,
+  "app": "Waterfall.io",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://docs.waterfall.io/llms.txt",
+      "quote": "One GTM API to find prospects, enrich contacts and companies, verify emails, and check job changes.",
+      "verdict": "partial",
+      "why": "Quote covers prospecting, enrichment, email verify, job checks. Omits 30+ providers and phone enrichment."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.waterfall.io/v1/authentication.md",
+      "quote": "Authenticate data and account API requests with your Waterfall API key in the `x-api-key` header.",
+      "verdict": "supports",
+      "why": "Quote states API key sent in x-api-key header. Matches the key part of the claim."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.waterfall.io/v1/authentication.md",
+      "quote": "[Contact the team](mailto:support@waterfall.io) for API access and pricing.",
+      "verdict": "partial",
+      "why": "Contact-team-for-access and pricing is consistent with gating. Doesn't state partner_gated or review or benchmark."
+    },
+    {
+      "field": "access",
+      "url": "https://www.waterfall.io/pricing",
+      "quote": "Commitments and minimums are set at contract and depend on volume and term",
+      "verdict": "partial",
+      "why": "Custom contract pricing with volume terms matches the pricing detail only, not the gate."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.waterfall.io/",
+      "quote": "The Waterfall API is available at `https://api.waterfall.io`.",
+      "verdict": "partial",
+      "why": "Base URL matches. Nothing about the 13 endpoint groups, async flow, or Preview."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.waterfall.io/",
+      "quote": "For **async** APIs, the launcher returns a `job_id`.",
+      "verdict": "partial",
+      "why": "Async job_id launch matches one sub-point. Fetch, webhook, and endpoint count not covered."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.waterfall.io/llms.txt",
+      "quote": "Run contact and company lookups with an agent, or build Waterfall into your application using the official API skills.",
+      "verdict": "no",
+      "why": "Quote mentions agents and official API skills. Says nothing about an MCP server existing or not."
+    }
+  ]
+}

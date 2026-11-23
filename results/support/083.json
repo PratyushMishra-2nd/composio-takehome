@@ -1,0 +1,49 @@
+{
+  "id": 83,
+  "app": "Binance",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+      "quote": "We recommend to use Ed25519 API keys as it should provide the best performance and security out of all supported key types.",
+      "verdict": "partial",
+      "why": "Ed25519 recommendation is related key-type info, but not auth methods, header, or HMAC deprecation."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+      "quote": "We support HMAC, RSA, and Ed25519 keys. For more information, please see API Key types.",
+      "verdict": "partial",
+      "why": "Lists supported key types only; no auth methods, header, or recommendation stated."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+      "quote": "API keys can be created on the API Management page of your Binance account.",
+      "verdict": "partial",
+      "why": "Says keys are created on API Management page; no free-tier, 2FA, or deposit details."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+      "quote": "By default, an API key cannot `TRADE`. You need to enable trading in API Management first.",
+      "verdict": "partial",
+      "why": "Trading disabled by default matches one detail; no key-creation or testnet gate stated."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+      "quote": "The limits on the API are based on the IPs, not the API keys.",
+      "verdict": "partial",
+      "why": "Confirms rate limits are per IP; nothing on REST, WebSocket, or product breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.binance.com/en/docs/agent-native/overview",
+      "quote": "Connect AI agents and coding assistants over the Model Context Protocol — for trading or for documentation lookup.",
+      "verdict": "partial",
+      "why": "Describes MCP for agents; no vendor-official status or agent.binance.com URL shown."
+    }
+  ]
+}

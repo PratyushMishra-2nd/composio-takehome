@@ -13,6 +13,8 @@ import re
 
 HUMAN = [
     # (app id, field, new value, reason)
+    (9, "mcp_exists", False, "copper.com/mcp is Copper's own server but marked 'coming soon' (waitlist); not live, so not counted as an existing MCP server."),
+    (9, "mcp_official", False, "Announced official server, not yet live (see mcp_exists)."),
     (98, "composio_in_catalog", False,
      "Composio's router matched 'mermaid_chart_mcp', which is Mermaid Chart (hosted SaaS), a different product from the open-source Mermaid CLI."),
 ]
@@ -76,6 +78,8 @@ def apply(apps, adjudication, distribution=None, gold=None):
         if a["access"] in ("customer_account", "partner_gated") and sandbox != "free" and a["verdict"] in ("build_now", "build_with_caveat"):
             setf(a, "verdict", "needs_outreach", "rule", f"Definition: {a['access']} without a free developer sandbox => needs_outreach (sandbox: {sandbox}).")
         free_path = "self-host" in (a["access_detail"] or "").lower() and "free" in (a["access_detail"] or "").lower()
+        if a["access"] == "self_serve_trial" and free_path:
+            setf(a, "access", "self_serve_free", "rule", "Cloud is trial-only, but a free self-hosted path gives ongoing self-serve credentials.")
         if a["access"] in ("self_serve_trial", "paid_plan", "admin_approval") and a["verdict"] == "build_now" and not free_path:
             setf(a, "verdict", "build_with_caveat", "rule", f"Definition: build_now needs ongoing self-serve credentials; access={a['access']} is a caveat.")
         if a["access"] == "self_serve_free" and a["verdict"] == "build_with_caveat" and not blk.strip():
@@ -105,6 +109,9 @@ def apply(apps, adjudication, distribution=None, gold=None):
     # 4. human judgment calls
     for i, field, new, reason in HUMAN:
         a = by_id[i]
+        if field in ("mcp_exists", "mcp_official"):
+            setf(a, field, new, "human", reason)
+            continue
         if field == "composio_in_catalog":
             if a["composio"]["in_catalog"] != new:
                 changes.append({"id": i, "app": a["app"], "field": "in Composio", "from": a["composio"]["in_catalog"], "to": new, "source": "human", "reason": reason})

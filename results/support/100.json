@@ -1,0 +1,84 @@
+{
+  "id": 100,
+  "app": "Grain",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://developers.grain.com/",
+      "quote": "The Grain API lets you read and manage recordings, highlights, uploads, and more.",
+      "verdict": "partial",
+      "why": "Quote covers recordings, highlights, uploads. No transcripts, webhooks, or 'meeting recorder' wording."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.grain.com/authentication.html",
+      "quote": "The API supports a standard OAuth2 Authorization Code flow, including the PKCE extension",
+      "verdict": "partial",
+      "why": "Supports oauth2 only. No bearer_token mention."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.grain.com/authentication.html",
+      "quote": "At least one redirect URI is required to register a new client.",
+      "verdict": "no",
+      "why": "Redirect URI registration rule. Says nothing about auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.grain.com/authentication.html",
+      "quote": "Public clients, such as MCP clients and native apps, can skip Step 1 by using an HTTPS URL as their client_id.",
+      "verdict": "partial",
+      "why": "HTTPS client_id skip for public clients. Detail only, not the method list."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.grain.com/authentication.html",
+      "quote": "The `workspace` scope is only available to clients verified by Grain.",
+      "verdict": "partial",
+      "why": "Workspace scope verification gate. Not admin approval, and only for one scope."
+    },
+    {
+      "field": "access",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Available on every plan, including Free.",
+      "verdict": "no",
+      "why": "Says PAT available on all plans. Cuts against an admin-approval gate."
+    },
+    {
+      "field": "access",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Requires admin access to generate and is available on Business and Enterprise plans.",
+      "verdict": "partial",
+      "why": "Admin access plus Business/Enterprise gate. Covers only the WAT, not all credentials."
+    },
+    {
+      "field": "api",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "The Grain API lets developers read meeting data, manage recordings, and receive real-time events",
+      "verdict": "partial",
+      "why": "Generic capability blurb. No REST, no breadth list, no version details."
+    },
+    {
+      "field": "api",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "The API allows 300 requests per minute per token.",
+      "verdict": "partial",
+      "why": "Supports the 300/min rate limit only. Per-token scope matches."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.grain.com/mcp/claude-setup.html",
+      "quote": "Integration URL: https://api.grain.com/_/mcp",
+      "verdict": "partial",
+      "why": "Exact integration URL shown. Vendor-official status not shown in quote."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.grain.com/mcp/claude-setup.html",
+      "quote": "Any MCP client that can send custom headers can connect with a Personal Access Token instead of OAuth.",
+      "verdict": "partial",
+      "why": "Implies MCP client connections exist. Does not prove vendor-official or the URL."
+    }
+  ]
+}

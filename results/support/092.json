@@ -1,0 +1,49 @@
+{
+  "id": 92,
+  "app": "Otter AI",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+      "quote": "The API does not support OAuth at all; it uses a static Bearer key the user generates in the dashboard.",
+      "verdict": "supports",
+      "why": "States no OAuth and a static Bearer key from dashboard; matches the auth methods claim."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+      "quote": "There is no public API key for the MCP server, and no OAuth for the API.",
+      "verdict": "partial",
+      "why": "Says no MCP key and no API OAuth; consistent, but never names bearer_token or api_key."
+    },
+    {
+      "field": "access",
+      "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+      "quote": "The other is Enterprise-gated, key-based, and the only path that can push events.",
+      "verdict": "supports",
+      "why": "Says the REST path is Enterprise-gated and key-based; Enterprise is a paid gate."
+    },
+    {
+      "field": "access",
+      "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+      "quote": "Your users are on standard Otter plans, not only Enterprise.",
+      "verdict": "no",
+      "why": "Says users are on standard plans; about user base, not the credential gate."
+    },
+    {
+      "field": "api",
+      "url": "https://apis.io/apis/otter-ai/otter-ai-api/",
+      "quote": "The API uses bearer token authentication and supports Python, Node.js, and Java client libraries.",
+      "verdict": "no",
+      "why": "Covers bearer auth and client libraries only; says nothing on REST scope, endpoints, or breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+      "quote": "Otter runs a provider-hosted MCP server at mcp.otter.ai/mcp.",
+      "verdict": "supports",
+      "why": "States a provider-hosted MCP server at mcp.otter.ai/mcp; covers existence, URL, and vendor-official."
+    }
+  ]
+}

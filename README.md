@@ -72,6 +72,8 @@ python agent/enrich.py --workers 4                    # extra fields: webhooks, 
 python agent/verify_extras.py && python agent/verify_browser.py --extras && python agent/verify_extras.py
 python agent/composio_catalog.py --all                # Composio coverage via MCP -> results/composio_catalog.json
 python agent/outreach.py --dry-run                    # preview approval-tracker issues; drop --dry-run to create them
+python agent/distribution_check.py                    # vendor review / install caps on build-now apps (evidence-gated)
+python agent/support_check.py                         # does each found quote support its claim? (text-only judge)
 python agent/build.py                                 # applies agent/corrections.py, writes docs/data.json + apps.csv
 python -m http.server -d docs 8000                    # open http://localhost:8000
 ```
@@ -93,6 +95,9 @@ Results are cached per app, so a re-run only researches missing apps. Delete `re
 | `agent/make_submission.py` | One-page submission PDF, built from the same data as the page |
 | `agent/score.py` | Field-level accuracy of pass 1 and final vs the reference set, plus adjudicated accuracy |
 | `agent/enrich.py`, `agent/verify_extras.py` | Enrichment pass (webhooks, free sandbox, rate limits, official SDKs, machine-readable spec) and its checks: quote check plus downloading and parsing each spec URL |
+| `agent/distribution_check.py` | Asks every build-now app whether vendor review or an install cap gates other customers; applied only when its quote is confirmed |
+| `agent/support_check.py` | Text-only judge: does each found quote support, partly support, or not support its claim |
+| `agent/sync_tracker.py` | Rewrites tracker issue bodies and labels from the final data |
 | `agent/composio_mcp.py` | Minimal client for Composio's MCP server |
 | `agent/composio_catalog.py` | Which of the 100 apps already have a Composio toolkit (gap backlog) |
 | `agent/outreach.py` | Opens one GitHub issue per gated app via Composio (approval tracker) |

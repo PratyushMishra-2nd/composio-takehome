@@ -1,0 +1,49 @@
+{
+  "id": 8,
+  "app": "Close",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.close.com/api/overview/oauth-authentication",
+      "quote": "To implement authentication with OAuth 2.0, you need to create an OAuth app to get your Client ID and Client Secret.",
+      "verdict": "partial",
+      "why": "Confirms OAuth 2.0 exists; does not list api_key, basic, or bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.close.com/topics/authentication/",
+      "quote": "API keys use HTTP Basic client side authentication.",
+      "verdict": "partial",
+      "why": "Confirms API key uses HTTP Basic; omits oauth2 and bearer_token."
+    },
+    {
+      "field": "access",
+      "url": "https://www.close.com/pricing",
+      "quote": "No. You can sign up, start a trial, pick a plan, and set up your team without talking to sales.",
+      "verdict": "supports",
+      "why": "States public self-serve signup and trial without sales contact."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.close.com/integrations/create-an-oauth-app",
+      "quote": "OAuth apps are Private by default, meaning only members of your own Close organization can authorize them.",
+      "verdict": "partial",
+      "why": "Says OAuth apps are private to own org; says nothing about trials or self-serve access."
+    },
+    {
+      "field": "api",
+      "url": "https://www.close.com/pricing",
+      "quote": "Yes. Close provides a REST API for building custom integrations",
+      "verdict": "partial",
+      "why": "Confirms a REST API for integrations; no coverage list or breadth stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.close.com/mcp",
+      "quote": "The MCP server URL is https://mcp.close.com/mcp and has \"HTTP Streamable\" and \"OAuth 2.0 Dynamic Client Registration (DCR)\" support.",
+      "verdict": "partial",
+      "why": "Shows an MCP server exists, but URL is mcp.close.com, not developer.close.com/mcp; vendor-official not stated."
+    }
+  ]
+}

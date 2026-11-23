@@ -97,6 +97,13 @@ def main():
         base = ".".join(dom.split(".")[-2:])
         ev_ok = any(e["field"] == "mcp" and e.get("status") == "verified" and base and base in e["url"] for e in a["evidence"])
         return bool(reg) or (bool(base) and base in (a["mcp_url"] or "") and ev_ok)
+    sup_dir = ROOT / "results" / "support"
+    support = {int(f.stem): json.loads(f.read_text(encoding="utf-8")).get("items", []) for f in sup_dir.glob("[0-9][0-9][0-9].json")} if sup_dir.exists() else {}
+    for a in apps:
+        items = support.get(a["id"], [])
+        a["support"] = items
+        sup = {it["field"] for it in items if it.get("verdict") in ("supports", "partial")}  # flag a field only if nothing even partly supports it
+        a["unsupported_fields"] = [f for f in ("auth", "access", "mcp") if f not in sup] if items or a["id"] in support else None
     for a in apps:
         a.setdefault("hand_checked", False)
         a["mcp_official_confirmed"] = a["mcp_official"] and _mcp_confirmed(a)
@@ -175,6 +182,11 @@ def main():
                                           "total": len(q), "short_verified": sum(1 for x in q if x["status"] == "verified" and len(x["quote"].split()) < 6)})(
             [x for c in vf.values() for x in c["quotes"]]),
         "distribution_checked": len(distribution),
+        "support": (lambda its: {"judged": len(its), "supports": sum(1 for x in its if x.get("verdict") == "supports"),
+                                  "partial": sum(1 for x in its if x.get("verdict") == "partial"), "no": sum(1 for x in its if x.get("verdict") == "no"),
+                                  "apps_all_core_supported": sum(1 for a in apps if a.get("unsupported_fields") == []),
+                                  "apps_judged": sum(1 for a in apps if a.get("unsupported_fields") is not None)})(
+            [x for a in apps for x in (a.get("support") or [])]),
     }
     out = {"corrections": corrections, "generated": time.strftime("%Y-%m-%d %H:%M IST"), "patterns": patterns, "verification": verification, "apps": apps}
     (ROOT / "docs").mkdir(exist_ok=True)

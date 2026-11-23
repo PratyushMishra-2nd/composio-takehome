@@ -1,0 +1,77 @@
+{
+  "id": 77,
+  "app": "ClickUp",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.clickup.com/docs/authentication.md",
+      "quote": "Authenticate to the ClickUp API using a personal token or OAuth.",
+      "verdict": "supports",
+      "why": "Names both personal token and OAuth as the two auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.clickup.com/docs/authentication.md",
+      "quote": "Only Workspace owners or admins can create OAuth apps.",
+      "verdict": "partial",
+      "why": "Only says who can create OAuth apps; no auth-method list."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.clickup.com/docs/rate-limits.md",
+      "quote": "| FreeForever | 100 |",
+      "verdict": "no",
+      "why": "Table fragment with rate limit only; nothing on self-serve access."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.clickup.com/docs/authentication.md",
+      "quote": "Use a personal API token for individual or testing purposes. Personal tokens begin with `pk_`.",
+      "verdict": "partial",
+      "why": "Personal token for individual use, pk_ prefix; no self-serve or free-plan claim."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.clickup.com/llms.txt",
+      "quote": "ClickUp API empowers you to create custom workflows, integrate seamlessly with your favorite tools, and scale your processes by mapping them directly to ClickUp.",
+      "verdict": "no",
+      "why": "Marketing sentence; says nothing about REST versions, OpenAPI, or endpoint breadth."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.clickup.com/llms.txt",
+      "quote": "[OpenAPI Specification](https://developer.clickup.com/docs/open-api-spec.md): Access and use the OpenAPI specification for the ClickUp API.",
+      "verdict": "partial",
+      "why": "Confirms OpenAPI spec exists; nothing on v2/v3, llms.txt, or breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://clickup.com/blog/how-to-use-clickup-mcp-server/",
+      "quote": "Official endpoint https://mcp.clickup.com/mcp",
+      "verdict": "supports",
+      "why": "States official endpoint URL, matching the MCP server claim."
+    },
+    {
+      "field": "mcp",
+      "url": "https://clickup.com/blog/how-to-use-clickup-mcp-server/",
+      "quote": "Authentication OAuth; API keys and personal access tokens aren’t supported",
+      "verdict": "partial",
+      "why": "Describes MCP auth; implies server exists but does not state existence or official status."
+    },
+    {
+      "field": "description",
+      "url": "https://developer.clickup.com/llms.txt",
+      "quote": "ClickUp API empowers you to create custom workflows, integrate seamlessly with your favorite tools, and scale your processes by mapping them directly to ClickUp.",
+      "verdict": "partial",
+      "why": "Describes API purpose, not the platform's tasks, docs, goals, or time tracking."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.clickup.com/docs/authentication.md",
+      "quote": "For apps or integrations that other people use, use the [OAuth flow](https://developer.clickup.com/docs/authentication#oauth-flow), allowing users to authorize Workspaces for your app.",
+      "verdict": "partial",
+      "why": "Recommends OAuth for multi-user apps; no build_now verdict or blocker stated."
+    }
+  ]
+}

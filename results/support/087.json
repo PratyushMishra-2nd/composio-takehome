@@ -1,0 +1,56 @@
+{
+  "id": 87,
+  "app": "Xero",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://raw.githubusercontent.com/XeroAPI/xero-node/master/README.md",
+      "quote": "All API requests go through Xero's OAuth2.0 gateway and require a valid `access_token` to be set on the `client` which appends the `access_token` [JWT](https://jwt.io/) to the header of each request.",
+      "verdict": "partial",
+      "why": "Says OAuth2 gateway and access_token needed; no PKCE, grant types, or 'no API keys'."
+    },
+    {
+      "field": "auth",
+      "url": "https://raw.githubusercontent.com/XeroAPI/xero-node/master/README.md",
+      "quote": "A custom connection uses OAuth2.0's [`client_credentials`](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) grant which eliminates the step of exchanging the temporary code for a token set.",
+      "verdict": "partial",
+      "why": "States client_credentials grant only; doesn't establish oauth2 as sole method or the other grants."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com/pricing",
+      "quote": "App pricing is a flat monthly fee based on plan and includes a set allotment of data consumption via the Xero APIs.",
+      "verdict": "no",
+      "why": "Pricing sentence about flat monthly fee; says nothing about free self-serve registration."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com/pricing",
+      "quote": "Connections (maximum) | 5 | 50 | 1000 | 10,000 | No Limit",
+      "verdict": "partial",
+      "why": "Connection limits per tier shown; no free tier or self-serve registration stated."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.xero.com/pricing",
+      "quote": "The XPM API allows third-party apps and developers to programmatically connect to and interact with the data and functionality within a Xero Practice Manager account.",
+      "verdict": "partial",
+      "why": "Describes XPM API only; supports one family, not REST breadth overall."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/XeroAPI/xero-mcp-server",
+      "quote": "This is a Model Context Protocol (MCP) server implementation for Xero.",
+      "verdict": "partial",
+      "why": "States it is an MCP server for Xero; vendor-official status not in quote."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/XeroAPI/xero-mcp-server",
+      "quote": "Xero OAuth2 authentication with custom connections",
+      "verdict": "no",
+      "why": "Fragment/feature title; does not state an MCP server exists."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": 96,
+  "app": "Devin",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "quote": "All API credentials use the `cog_` prefix format.",
+      "verdict": "partial",
+      "why": "Confirms cog_ credential prefix only; no bearer_token or api_key method stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "quote": "Personal Access Tokens (PATs) allow human users to authenticate programmatically under their own identity.",
+      "verdict": "partial",
+      "why": "Describes PAT identity behavior; doesn't name bearer_token or api_key methods."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "quote": "Service users are non-human accounts designed for API integrations.",
+      "verdict": "no",
+      "why": "Defines service users only; says nothing about plan gating or free self-serve access."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "quote": "Legacy API keys are deprecated. Use API v3 with service user authentication.",
+      "verdict": "partial",
+      "why": "Legacy keys deprecated and v3 named; no scopes, endpoints or breadth shown."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.devin.ai/api-reference/v3/usage-examples",
+      "quote": "This page provides code examples for common API use cases.",
+      "verdict": "no",
+      "why": "Generic page-intro fragment; says nothing about the claimed endpoints or versions."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+      "quote": "Set up the official Devin MCP server so external AI tools can manage sessions, playbooks, knowledge, and repository docs.",
+      "verdict": "supports",
+      "why": "States an official Devin MCP server exists for managing sessions and playbooks; URL not in quote."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+      "quote": "To use the Devin MCP server, you need a Devin API key:",
+      "verdict": "partial",
+      "why": "Implies a Devin MCP server exists and needs an API key; does not say official or give URL."
+    }
+  ]
+}

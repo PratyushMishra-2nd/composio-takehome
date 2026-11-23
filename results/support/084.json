@@ -1,0 +1,28 @@
+{
+  "id": 84,
+  "app": "Paygent Connect",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.nmi.com/docs/authentication",
+      "quote": "Authentication across our APIs is done via secure API keys.",
+      "verdict": "supports",
+      "why": "Quote states APIs authenticate via API keys, matching the api_key auth method."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.nmi.com/reference/testing-methods",
+      "quote": "Log in to guide.nmi.com to retrieve Sandbox Keys or access the Sandbox Partner and Merchant Portals.",
+      "verdict": "partial",
+      "why": "Quote shows login to guide.nmi.com for sandbox keys; says nothing about live keys or merchant accounts."
+    },
+    {
+      "field": "mcp",
+      "url": "https://enterprisedna.co/directories/mcp/praveendias1180-easypaydirect-mcp",
+      "quote": "Unofficial and not maintained by the gateway vendor.",
+      "verdict": "partial",
+      "why": "Quote supports vendor-official False only; no evidence the MCP server exists or the URL."
+    }
+  ]
+}

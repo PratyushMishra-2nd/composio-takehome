@@ -1,0 +1,56 @@
+{
+  "id": 15,
+  "app": "Pylon",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "quote": "The Pylon API uses Bearer authentication.",
+      "verdict": "supports",
+      "why": "States the public API uses Bearer authentication, matching bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "quote": "Only Admins can create and manage API tokens.",
+      "verdict": "partial",
+      "why": "Admin-only token creation is consistent with admin-created tokens but does not name Bearer."
+    },
+    {
+      "field": "access",
+      "url": "https://www.usepylon.com/pricing",
+      "quote": "Your sales representative will work with you on setting up the demo organization.",
+      "verdict": "partial",
+      "why": "Sales-rep demo setup hints at sales-provisioned trials, but does not state a paid or account gate."
+    },
+    {
+      "field": "access",
+      "url": "https://www.usepylon.com/pricing",
+      "quote": "Standard contracts are annual.",
+      "verdict": "partial",
+      "why": "Annual contracts relate to the paid-workspace gate but do not establish credential access on their own."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+      "quote": "Pylon's API can be used to programmatically access and take action on data within Pylon.",
+      "verdict": "partial",
+      "why": "Says the API accesses data generally; no REST, domains, SDKs or breadth stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.usepylon.com/articles/2407390554-connecting-to-the-pylon-mcp-server",
+      "quote": "The Pylon MCP server at https://mcp.usepylon.com provides AI tools access to your Pylon data.",
+      "verdict": "supports",
+      "why": "Names the Pylon MCP server at mcp.usepylon.com providing AI access to Pylon data; implies vendor-official."
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.usepylon.com/articles/2407390554-connecting-to-the-pylon-mcp-server",
+      "quote": "The Pylon MCP server only supports OAuth authentication. API key authentication is not currently available.",
+      "verdict": "partial",
+      "why": "Describes MCP auth as OAuth-only; consistent with the server existing, but does not state existence, URL or vendor-official."
+    }
+  ]
+}

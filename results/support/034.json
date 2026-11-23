@@ -1,0 +1,63 @@
+{
+  "id": 34,
+  "app": "GoHighLevel",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md",
+      "quote": "HighLevel supports the **Authorization Code Grant** flow with v2 APIs.",
+      "verdict": "partial",
+      "why": "Quote confirms OAuth2 Authorization Code Grant only; bearer_token not stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+      "quote": "Private Integrations, to put it simply, are static/fixed OAuth2 Access Tokens.",
+      "verdict": "partial",
+      "why": "Says Private Integrations are static OAuth2 tokens; related to bearer, but not a bearer_token statement."
+    },
+    {
+      "field": "access",
+      "url": "https://gohighlevelassist.freshdesk.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+      "quote": "Private apps are limited to 5 unique Agency installs.",
+      "verdict": "no",
+      "why": "Quote is about a 5-install cap; says nothing about admin approval gating credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md",
+      "quote": "Public Apps: Visible and installable by all users once approved.",
+      "verdict": "partial",
+      "why": "Mentions approval for Public Apps listing; not the gate to working credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+      "quote": "By default, all agency admins can create and manage Private Integrations.",
+      "verdict": "no",
+      "why": "Says agency admins can create Private Integrations by default; implies no approval gate."
+    },
+    {
+      "field": "api",
+      "url": "https://marketplace.gohighlevel.com/docs/",
+      "quote": "Complete REST API documentation for the HighLevel CRM platform.",
+      "verdict": "partial",
+      "why": "Says complete REST API docs; no versions, endpoints, or coverage list shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+      "quote": "Claude connects to `https://services.leadconnectorhq.com/mcp/anthropic/v2`.",
+      "verdict": "partial",
+      "why": "Shows an MCP endpoint on leadconnectorhq; existence supported, vendor-official and docs URL not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+      "quote": "There’s no key to create, paste, or rotate.",
+      "verdict": "no",
+      "why": "About no API key to manage; says nothing about MCP server existence or official status."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": 20,
+  "app": "Gladly",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://help.gladly.com/developer-tutorials/docs/authentication",
+      "quote": "Perhaps the most familiar authentication option, basic auth (as it is often called) requires an Agent to provide a username and password for a request.",
+      "verdict": "supports",
+      "why": "Quote names basic auth as an auth method requiring username and password."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "To create and use an API token, your user must have the API User permission.",
+      "verdict": "partial",
+      "why": "Confirms API User permission for tokens, but nothing on basic auth format or environments."
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md",
+      "quote": "API tokens are required to use Gladly APIs for security and authentication purposes.",
+      "verdict": "partial",
+      "why": "Says tokens are required for security; says nothing about who can get them or customer gating."
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md",
+      "quote": "The integration partner should provide the email address to be used with the integration's user account in Gladly.",
+      "verdict": "partial",
+      "why": "Shows a partner supplies the integration user's email; no mention of paying customers or sales-led access."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Download OpenAPI specification:",
+      "verdict": "no",
+      "why": "Section title fragment; no API version, scope, or endpoints shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Gladly API",
+      "verdict": "no",
+      "why": "Bare product name fragment; says nothing about an MCP server."
+    }
+  ]
+}

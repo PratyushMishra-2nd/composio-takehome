@@ -1,0 +1,56 @@
+{
+  "id": 94,
+  "app": "Consensus",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://consensus.app/llms-full.txt",
+      "quote": "Sent as `Authorization: Bearer <key>` on every request",
+      "verdict": "partial",
+      "why": "Quote says Bearer key on requests; supports bearer auth, not api_key method label alone."
+    },
+    {
+      "field": "auth",
+      "url": "https://consensus.app/llms-full.txt",
+      "quote": "Authorization Code flow with PKCE",
+      "verdict": "no",
+      "why": "Quote names Auth Code+PKCE flow; doesn't say REST uses api_key or drops oauth2."
+    },
+    {
+      "field": "access",
+      "url": "https://consensus.app/llms-full.txt",
+      "quote": "Issued from the organization subscription page at https://consensus.app/subscription/api/",
+      "verdict": "partial",
+      "why": "Keys issued from subscription page implies paid gating, but doesn't state paid-only access."
+    },
+    {
+      "field": "access",
+      "url": "https://consensus.app/llms-full.txt",
+      "quote": "Pricing and request quotas are scoped to organization subscriptions; see the docs for the current schema and limits.",
+      "verdict": "no",
+      "why": "Generic statement that pricing/quotas scope to subscriptions; no paid-gate for credentials stated."
+    },
+    {
+      "field": "api",
+      "url": "https://consensus.app/llms-full.txt",
+      "quote": "It exposes search, paper detail, synthesis, and the Consensus Meter as stable, versioned JSON endpoints with bearer-token authentication.",
+      "verdict": "supports",
+      "why": "Quote states search, paper detail, synthesis, Meter as versioned JSON endpoints; read-only implied, not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://consensus.app/llms-full.txt",
+      "quote": "OAuth-based authentication, dynamic client registration, streaming-friendly.",
+      "verdict": "no",
+      "why": "Quote describes OAuth and dynamic registration only; no MCP server existence or URL shown."
+    },
+    {
+      "field": "description",
+      "url": "https://consensus.app/llms-full.txt",
+      "quote": "Consensus is an AI-powered search engine for scientific research that helps users find, synthesize, and cite peer-reviewed papers.",
+      "verdict": "partial",
+      "why": "Quote covers AI search for papers, finding, synthesizing, citing; no Consensus Meter mention."
+    }
+  ]
+}

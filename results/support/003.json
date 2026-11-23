@@ -1,0 +1,70 @@
+{
+  "id": 3,
+  "app": "Pipedrive",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+      "quote": "Authorization via OAuth 2.0 is a well-known and stable way to get fine-grained access to an API.",
+      "verdict": "partial",
+      "why": "Says OAuth 2.0 is stable; no mention of api_key or public API auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+      "quote": "Using OAuth 2.0 is necessary for developing apps that are available in the Pipedrive Marketplace.",
+      "verdict": "partial",
+      "why": "States OAuth 2.0 needed for Marketplace apps; api_key method not covered."
+    },
+    {
+      "field": "auth",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "quote": "The API token must be provided in the x-api-token header for all requests, for example:",
+      "verdict": "partial",
+      "why": "Covers the x-api-token api_key method only; OAuth 2.0 not addressed."
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/marketplace-registering-the-app",
+      "quote": "To be published on the Marketplace, your app needs to pass our app approval process.",
+      "verdict": "partial",
+      "why": "Marketplace approval gate stated; no admin approval gate for credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/marketplace-app-approval-process",
+      "quote": "Submitting the app is unnecessary if it's only used internally.",
+      "verdict": "no",
+      "why": "Says internal apps skip submission review; does not show admin approval gating credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+      "quote": "Fill in the form here to get access to your developer sandbox account!",
+      "verdict": "partial",
+      "why": "Shows a self-serve sandbox signup form gate, not admin approval."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.pipedrive.com/docs/api/v1",
+      "quote": "This API uses a JSON format for output and is capable of handling CORS (Cross-Origin Resource Sharing) requests.",
+      "verdict": "partial",
+      "why": "Confirms JSON output only; REST, endpoint breadth, and OpenAPI not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+      "quote": "Pipedrive MCP is built and maintained by Pipedrive, requires no coding, and works with real-time CRM data.",
+      "verdict": "supports",
+      "why": "States Pipedrive builds and maintains the MCP, so vendor-official and existence are stated. URL not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "quote": "Pipedrive is an official connector in Claude and ChatGPT.",
+      "verdict": "partial",
+      "why": "Says official connector in Claude and ChatGPT; no MCP server or URL stated."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "Zendesk supports using OAuth access tokens to authenticate API requests.",
+      "verdict": "partial",
+      "why": "Quote confirms OAuth access tokens only; no api_key or basic, no deprecation."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "Basic authentication is used for API tokens.",
+      "verdict": "partial",
+      "why": "Confirms Basic auth for API tokens; omits oauth2, api_key, and deprecated label."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "If you plan on making an app, integration, or bot available to multiple Zendesk customers, you must use global OAuth access tokens to authenticate Zendesk API requests.",
+      "verdict": "partial",
+      "why": "Confirms global OAuth for multi-customer apps; only one detail of the auth-method claim."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.zendesk.com/documentation/",
+      "quote": "Try out the Sunshine Platform with a free, 14-day trial account.",
+      "verdict": "supports",
+      "why": "Free 14-day trial account directly states the self-serve trial gate."
+    },
+    {
+      "field": "access",
+      "url": "https://www.zendesk.com/register/",
+      "quote": "100% free. No credit card required.",
+      "verdict": "partial",
+      "why": "No credit card needed is consistent with the claim but doesn't state a trial."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+      "quote": "You can use the Support API with tickets, users, organizations, custom objects, and manage ticket workflows.",
+      "verdict": "partial",
+      "why": "Covers Support API only; the claim's other REST families and breadth are unsupported."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.zendesk.com/documentation/",
+      "quote": "Try out the Sunshine Platform with a free, 14-day trial account.",
+      "verdict": "no",
+      "why": "Quote is the free trial sentence; says nothing about an MCP server."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": 7,
+  "app": "Zoho CRM",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://www.zoho.com/crm/",
+      "quote": "Built with AI at its core, Zoho CRM supercharges your business to get ahead without the overhead.",
+      "verdict": "partial",
+      "why": "Says CRM and AI, but not sales, leads, deals or automation."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+      "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication.",
+      "verdict": "supports",
+      "why": "States Zoho CRM API uses OAuth 2.0 for authentication."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+      "quote": "Applications that does not have a redirect URL or a web UI, operating solely in the backend without requiring user interaction.",
+      "verdict": "partial",
+      "why": "Describes only the backend/self-client type, not the full oauth2 claim."
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+      "quote": "| Free Edition | 5000 credits | 5000 credits |",
+      "verdict": "partial",
+      "why": "Table row shows Free Edition credits; says nothing about self-serve credential registration."
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+      "quote": "The API limits for trial editions are the same as those of their corresponding paid editions.",
+      "verdict": "partial",
+      "why": "Trial limits match paid, but does not address the self-serve gate."
+    },
+    {
+      "field": "api",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "quote": "Perform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints.",
+      "verdict": "supports",
+      "why": "States REST endpoints with CRUD on modules; the broad-breadth detail is not covered."
+    },
+    {
+      "field": "api",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "quote": "Combine up to five API calls in a single request through this API.",
+      "verdict": "partial",
+      "why": "Confirms the Composite family (up to five calls) only, one piece of the claim."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+      "quote": "Connect your AI tools to Zoho CRM using the Model Context Protocol (MCP) to perform CRM operations using natural language.",
+      "verdict": "supports",
+      "why": "Zoho doc says it connects AI tools via MCP, implying an official MCP offering."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+      "quote": "When you invoke an MCP tool for the first time, the server initiates an OAuth flow.",
+      "verdict": "partial",
+      "why": "Implies an MCP server exists via its OAuth flow, but does not state it."
+    }
+  ]
+}

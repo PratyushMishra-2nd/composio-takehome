@@ -1,0 +1,49 @@
+{
+  "id": 26,
+  "app": "Discord",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions.md",
+      "quote": "When you create a bot user in the Developer Portal, Discord generates a **bot token**.",
+      "verdict": "partial",
+      "why": "Quote covers only bot token from Developer Portal; not oauth2, api_key, basic."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.discord.com/developers/reference.md",
+      "quote": "Using an OAuth2 bearer token gained through the [OAuth2 API](https://docs.discord.com/developers/topics/oauth2.md).",
+      "verdict": "partial",
+      "why": "Quote covers OAuth2 bearer tokens only; not the full method list."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.discord.com/developers/topics/oauth2.md",
+      "quote": "Some scopes require approval from Discord to use.",
+      "verdict": "partial",
+      "why": "Quote says some scopes need approval; no mention of verification or intents."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.discord.com/developers/topics/oauth2.md",
+      "quote": "Bot users are automatically added to all apps, and are authenticated using the bot token found in your [app's settings](https://discord.com/developers/applications).",
+      "verdict": "no",
+      "why": "Quote is about bot token auth; says nothing on REST/WebSocket or API breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/SaseQ/discord-mcp",
+      "quote": "A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server for the Discord API using [(JDA)](https://jda.wiki/),",
+      "verdict": "partial",
+      "why": "Quote shows a Discord MCP server exists; no vendor status or URL shown."
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.discord.com/developers/topics/oauth2.md",
+      "quote": "Verified bots](https://support-dev.discord.com/hc/en-us/articles/23926564536471-How-Do-I-Get-My-App-Verified) do not have a maximum number of guilds.",
+      "verdict": "no",
+      "why": "Quote is about verified bots having no guild cap; verdict not stated."
+    }
+  ]
+}

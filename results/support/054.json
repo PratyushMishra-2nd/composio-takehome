@@ -1,0 +1,56 @@
+{
+  "id": 54,
+  "app": "MrScraper",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.mrscraper.com/docs/api/authentication",
+      "quote": "Include your API token in the `x-api-token` HTTP header on every request.",
+      "verdict": "partial",
+      "why": "States x-api-token header only; no bearer method or OAuth exclusion."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.mrscraper.com/docs/api/authentication",
+      "quote": "authenticate using the standard RFC 6750 `Authorization` header with a Bearer token.",
+      "verdict": "partial",
+      "why": "Covers Bearer auth only; api_key and x-api-token not stated."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+      "quote": "The Free plan includes **100 tokens per month** with no credit card required.",
+      "verdict": "supports",
+      "why": "Free plan with no credit card; key gate part stated."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.mrscraper.com/docs/api/overview",
+      "quote": "Built on REST principles",
+      "verdict": "no",
+      "why": "Fragment saying REST only; no endpoints, breadth, or JSON."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "quote": "Use this exact URL, including the `/mcp` path.",
+      "verdict": "partial",
+      "why": "Implies an MCP URL with /mcp path; the full URL and official status not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "quote": "API keys remain supported for clients without OAuth.",
+      "verdict": "no",
+      "why": "Concerns API key vs OAuth auth; says nothing about MCP server existence."
+    },
+    {
+      "field": "description",
+      "url": "https://docs.mrscraper.com/llms.txt",
+      "quote": "just a URL and a prompt",
+      "verdict": "partial",
+      "why": "URL-and-prompt input matches; JSON/CSV output and other features not shown."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "access",
+      "url": "https://reducto.ai/pricing",
+      "quote": "Standard accounts include $150 in free credits.",
+      "verdict": "partial",
+      "why": "States $150 free credits for Standard; doesn't say self-serve or no sales contact needed."
+    },
+    {
+      "field": "access",
+      "url": "https://reducto.ai/pricing",
+      "quote": "Standard includes $150 of free usage, then list rates apply.",
+      "verdict": "partial",
+      "why": "Free usage then list rates implies pay-as-you-go, but self-serve access not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.reducto.ai/mcp-server/index.md",
+      "quote": "The Reducto MCP server connects AI agents directly to Reducto.",
+      "verdict": "supports",
+      "why": "Directly states Reducto MCP server connects AI agents to Reducto. Vendor-official implied."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.reducto.ai/llms.txt",
+      "quote": "[Reducto MCP Server](https://docs.reducto.ai/mcp-server/index.md) — Connect AI agents to Reducto via the Model Context Protocol.",
+      "verdict": "no",
+      "why": "Quote describes MCP server only; says nothing on REST endpoints, SDKs, or breadth."
+    }
+  ]
+}

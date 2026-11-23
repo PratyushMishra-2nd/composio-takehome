@@ -1,0 +1,63 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "The Aura API uses OAuth 2.0 for API authentication.",
+      "verdict": "partial",
+      "why": "Confirms OAuth 2.0 for Aura API; says nothing on basic or bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "Authentication to the token endpoint uses HTTP Basic Authentication, where the client ID and client secret are provided as the username and password, respectively.",
+      "verdict": "partial",
+      "why": "Describes Basic auth at token endpoint; matches one method, not the full list."
+    },
+    {
+      "field": "access",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "All tiers can create Aura API credentials.",
+      "verdict": "supports",
+      "why": "Directly says all tiers can create credentials, the self-serve gate."
+    },
+    {
+      "field": "access",
+      "url": "https://neo4j.com/pricing/",
+      "quote": "No credit card or other payment method required",
+      "verdict": "partial",
+      "why": "No card needed supports the free-tier part, not credential creation itself."
+    },
+    {
+      "field": "api",
+      "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+      "quote": "The Aura API allows you to programmatically perform actions on your Aura instances without the need to log in to the Console.",
+      "verdict": "partial",
+      "why": "Shows programmatic instance actions; does not establish REST or moderate breadth."
+    },
+    {
+      "field": "api",
+      "url": "https://neo4j.com/docs/query-api/current/",
+      "quote": "The Query API allows to execute Cypher statements against a Neo4j server through HTTP requests.",
+      "verdict": "partial",
+      "why": "Query API runs Cypher over HTTP; claim's key point is REST breadth, not Query API."
+    },
+    {
+      "field": "mcp",
+      "url": "https://neo4j.com/docs/mcp/current/authentication/",
+      "quote": "The bearer token is obtained from your identity provider and passed to Neo4j for authentication.",
+      "verdict": "no",
+      "why": "About bearer token from identity provider; says nothing on MCP server existence or vendor."
+    },
+    {
+      "field": "mcp",
+      "url": "https://neo4j.com/blog/genai/introducing-mcp-for-aura/",
+      "quote": "Authentication runs through the Aura Console using a human-in-the-loop OAuth redirect.",
+      "verdict": "no",
+      "why": "About Aura Console OAuth login flow; does not establish server existence or vendor-official status."
+    }
+  ]
+}

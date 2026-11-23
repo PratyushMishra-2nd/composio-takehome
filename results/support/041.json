@@ -1,0 +1,49 @@
+{
+  "id": 41,
+  "app": "Shopify",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://shopify.dev/docs/apps/build/authentication-authorization/legacy/admin-custom-apps",
+      "quote": "If you need a new app, use Dev Dashboard to create one with a proper OAuth flow.",
+      "verdict": "partial",
+      "why": "Mentions OAuth flow only; no bearer_token or api_key methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://shopify.dev/docs/api/usage/access-scopes",
+      "quote": "For a new app, declare the scopes it needs and deploy your app. Merchants approve the scopes when they install it.",
+      "verdict": "partial",
+      "why": "Covers OAuth scope approval at install; silent on bearer_token and api_key."
+    },
+    {
+      "field": "access",
+      "url": "https://shopify.dev/docs/api/usage/access-scopes",
+      "quote": "Shopify grants access scopes only to public or custom apps.",
+      "verdict": "partial",
+      "why": "Scope access limited to public/custom apps; no explicit admin approval gate stated."
+    },
+    {
+      "field": "api",
+      "url": "https://shopify.dev/docs/api/admin-rest",
+      "quote": "The REST Admin API is a legacy API as of October 1, 2024. Starting April 1, 2025, all new public apps must be built exclusively with the GraphQL Admin API.",
+      "verdict": "supports",
+      "why": "States REST Admin API legacy since Oct 1, 2024; GraphQL is the required path."
+    },
+    {
+      "field": "api",
+      "url": "https://shopify.dev/docs/api/admin-rest",
+      "quote": "Some newer platform features may only be available in GraphQL.",
+      "verdict": "partial",
+      "why": "Says some features may be GraphQL-only; claim says 'are', and hedge differs."
+    },
+    {
+      "field": "mcp",
+      "url": "https://shopify.dev/docs/apps/build/devmcp",
+      "quote": "The server runs locally and doesn't require authentication.",
+      "verdict": "partial",
+      "why": "Implies a local server exists, no auth needed; says nothing on vendor-official or the URL."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": 51,
+  "app": "DataForSEO",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.dataforseo.com/v3/auth/",
+      "quote": "Basic authentication is the only way to access DataForSEO API",
+      "verdict": "supports",
+      "why": "Quote states basic auth is the only way to access the API."
+    },
+    {
+      "field": "access",
+      "url": "https://dataforseo.com/pricing",
+      "quote": "Yes. The minimum account top-up is $50.",
+      "verdict": "partial",
+      "why": "Quote gives $50 minimum top-up only; no trial-gate statement."
+    },
+    {
+      "field": "access",
+      "url": "https://dataforseo.com/pricing",
+      "quote": "use your $1 trial credit available to new accounts",
+      "verdict": "partial",
+      "why": "Quote confirms $1 trial credit for new accounts; no gate claim."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.dataforseo.com/v3/",
+      "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service.",
+      "verdict": "partial",
+      "why": "Quote says REST is used; no breadth or API families listed."
+    },
+    {
+      "field": "mcp",
+      "url": "https://dataforseo.com/seo-mcp-server",
+      "quote": "The server is open source at github.com/dataforseo/mcp-server-typescript.",
+      "verdict": "partial",
+      "why": "Quote confirms open-source server at URL; vendor-official not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/dataforseo/mcp-server-typescript",
+      "quote": "MCP server and CLI for LLM agents to browse DataForSEO API documentation and make authenticated API requests.",
+      "verdict": "partial",
+      "why": "Quote describes an MCP server; does not say vendor-official."
+    },
+    {
+      "field": "verdict",
+      "url": "https://dataforseo.com/pricing",
+      "quote": "DataForSEO uses a pay-as-you-go pricing model with no subscriptions or recurring fees.",
+      "verdict": "no",
+      "why": "Pricing quote is unrelated to the build_now verdict or blocker."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": 85,
+  "app": "iPayX",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "The forensic FX audit engine that powers iPayX.",
+      "verdict": "partial",
+      "why": "Names the forensic FX audit engine but not FINTRAC, spread detection, or APIs."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "Every request requires a Bearer token in the",
+      "verdict": "no",
+      "why": "Truncated fragment; cannot show auth methods, key format, or webhook signing."
+    },
+    {
+      "field": "access",
+      "url": "https://www.ipayx.ai/pricing",
+      "quote": "100 audits. Never expire. Use them at your own pace.",
+      "verdict": "no",
+      "why": "Credit-pack expiry wording; says nothing about self-serve signup or free tier."
+    },
+    {
+      "field": "access",
+      "url": "https://www.ipayx.ai/pricing",
+      "quote": "Unlimited audits. For teams running audits every week.",
+      "verdict": "no",
+      "why": "Unlimited plan marketing line; does not address credential gating or free access."
+    },
+    {
+      "field": "api",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "Live mid-market rates from Twelve Data.",
+      "verdict": "no",
+      "why": "Names a data source (Twelve Data); says nothing about API type or endpoint breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "Score any FX transaction 1-10 with a qualitative verdict.",
+      "verdict": "partial",
+      "why": "Describes a scoring tool, related to MCP content, but not server existence or vendor-official status."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "Fetch the live mid-market reference rate for a currency pair.",
+      "verdict": "partial",
+      "why": "Describes a rate-fetch tool, related to MCP content, but not server existence or vendor-official status."
+    }
+  ]
+}

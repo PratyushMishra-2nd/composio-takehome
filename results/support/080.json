@@ -1,0 +1,49 @@
+{
+  "id": 80,
+  "app": "Harvest",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "quote": "The V2 API requires an access token to authenticate requests.",
+      "verdict": "partial",
+      "why": "Says V2 needs access token; doesn't name oauth2 or bearer_token methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "quote": "Implementing a full OAuth2 Authentication flow which allows other people to use your Harvest integrations.",
+      "verdict": "partial",
+      "why": "States OAuth2 flow for other users; bearer_token and PAT method not covered."
+    },
+    {
+      "field": "access",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "quote": "Personal Access Tokens have the `all` scope by default, so you have full access to all of your accounts.",
+      "verdict": "no",
+      "why": "Quote is about default token scope, not plan gate or self-serve creation."
+    },
+    {
+      "field": "api",
+      "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+      "quote": "The Harvest V2 API is a REST API that allows you to interact with your Harvest account programmatically.",
+      "verdict": "partial",
+      "why": "Confirms REST API for programmatic access; endpoint breadth and rate limits not shown."
+    },
+    {
+      "field": "api",
+      "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+      "quote": "The rate limit for general API requests is 100 requests per 15 seconds.",
+      "verdict": "partial",
+      "why": "States general 100 req/15s limit; reports limit and User-Agent not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "quote": "Run a time report for a date range, grouped by project, by client, or by person. Each total is split into billable and non-billable hours.",
+      "verdict": "no",
+      "why": "Quote describes a time report feature; says nothing about an MCP server or vendor status."
+    }
+  ]
+}

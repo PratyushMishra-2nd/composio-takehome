@@ -1,0 +1,70 @@
+{
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+      "quote": "The LinkedIn API uses OAuth 2.0 for member (user) authorization and API authentication.",
+      "verdict": "supports",
+      "why": "States LinkedIn API uses OAuth 2.0 for API authentication, matching oauth2 method."
+    },
+    {
+      "field": "auth",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+      "quote": "Not all APIs support Application Authorization. For example, Marketing APIs you must use Member Authorization explained above.",
+      "verdict": "partial",
+      "why": "Says Marketing APIs require Member Authorization; no oauth2 statement or 2-legged detail."
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+      "quote": "Visit your app's Product tab in the Developer Portal to apply for the Advertising API product.",
+      "verdict": "partial",
+      "why": "Shows where to apply for Advertising API; does not state approval gate."
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+      "quote": "LinkedIn reserves the right to review applications and select partners at its discretion and a partner might not be upgraded even if they meet these minimum requirements.",
+      "verdict": "supports",
+      "why": "LinkedIn reviews applications at its discretion; matches admin review gate."
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+      "quote": "All applications start with Development tier. You must apply separately to upgrade to the Standard tier.",
+      "verdict": "partial",
+      "why": "Confirms Development tier start and separate Standard upgrade application; no approval gate stated."
+    },
+    {
+      "field": "api",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+      "quote": "The platform offers APIs to create LinkedIn marketing campaigns, to report campaign performance, to manage leads, and to grow a company Page.",
+      "verdict": "partial",
+      "why": "Lists campaign, reporting, lead and Page APIs; no REST, versioning or breadth detail."
+    },
+    {
+      "field": "description",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+      "quote": "With Advertising APIs, streamline your campaign management, audience targeting, and track performance to optimize advertising efforts.",
+      "verdict": "supports",
+      "why": "Says Advertising APIs manage campaigns, audience targeting and track performance; leads not mentioned."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+      "quote": "MCP server for the LinkedIn Marketing API — campaigns, analytics, creatives, from any MCP client. MIT.",
+      "verdict": "partial",
+      "why": "Describes an MCP server for LinkedIn Marketing API under MIT; no URL or official status."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+      "quote": "There's no official LinkedIn MCP.",
+      "verdict": "supports",
+      "why": "Directly states no official LinkedIn MCP, matching vendor-official False; existence not covered."
+    }
+  ]
+}

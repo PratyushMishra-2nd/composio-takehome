@@ -1,0 +1,49 @@
+{
+  "id": 39,
+  "app": "Threads (Meta)",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol.",
+      "verdict": "supports",
+      "why": "Quote states auth is OAuth 2.0 user access tokens, matching oauth2 claim."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "Short-lived tokens that have not expired can be exchanged for long-lived access tokens, which are valid for 60 days.",
+      "verdict": "partial",
+      "why": "Describes token exchange to 60-day tokens, consistent with oauth2 but not naming the auth method."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "For app users without a role on your app to grant your app these permissions, each permission must first be approved through the App Review process, and your app must be published.",
+      "verdict": "supports",
+      "why": "Quote states non-role users need App Review approval and published app, the gate claimed."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "Threads testers can grant your app these permissions at any time.",
+      "verdict": "partial",
+      "why": "Testers granting permissions is the dev-mode role path; implies a gate but doesn't state approval requirement."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.facebook.com/docs/threads/overview",
+      "quote": "Threads profiles are limited to 250 API-published posts within a rolling 24-hour period.",
+      "verdict": "partial",
+      "why": "Consistent with the 250/24h limit detail; says nothing on REST style or breadth."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "`threads_manage_insights` — Required for making `GET` calls to insights endpoints.",
+      "verdict": "partial",
+      "why": "Scope note for insights GET calls; supports insights being in scope, not the overall REST breadth."
+    }
+  ]
+}

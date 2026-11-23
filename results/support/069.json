@@ -1,0 +1,56 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "quote": "Requests that read data require full access and also require an `application key`.",
+      "verdict": "partial",
+      "why": "Says read requests need application key; no list of auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "quote": "Requests that write data require reporting access and require an `API key`.",
+      "verdict": "partial",
+      "why": "Says write requests need API key; doesn't list auth methods or oauth2."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+      "quote": "Navigate to Organization settings, then click the API keys or Client Tokens tab.",
+      "verdict": "partial",
+      "why": "Shows self-serve key location in Org settings; says nothing about trial gating."
+    },
+    {
+      "field": "access",
+      "url": "https://www.datadoghq.com/pricing/",
+      "quote": "On the Free tier, you get up to five Basic hosts with 1-day metric retention, at no cost.",
+      "verdict": "partial",
+      "why": "States free tier limits and cost; doesn't say it yields working API keys."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+      "quote": "Application keys, in conjunction with your organization's API key, give users access to Datadog's programmatic API.",
+      "verdict": "partial",
+      "why": "Confirms REST API access via app and API keys; no breadth or regional URLs."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.datadoghq.com/mcp_server/",
+      "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents",
+      "verdict": "supports",
+      "why": "Directly states Datadog's own MCP Server exists. URL not in quote."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.datadoghq.com/mcp_server/",
+      "quote": "The MCP Server has a fair-use burst limit of 50 tool calls per 10 seconds.",
+      "verdict": "no",
+      "why": "Rate limit detail; says nothing about MCP existence or vendor status."
+    }
+  ]
+}

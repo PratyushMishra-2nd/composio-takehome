@@ -1,0 +1,49 @@
+{
+  "id": 60,
+  "app": "Clay",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.clay.com/public-api/authentication.md",
+      "quote": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header.",
+      "verdict": "supports",
+      "why": "Quote states API key required in header; key part of api_key auth claim."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.clay.com/public-api/quickstart.md",
+      "quote": "There are two ways to use Clay as a developer: install the agent plugin to build with Clay inside your coding agent, or call the Public API directly from your own applications and services.",
+      "verdict": "partial",
+      "why": "Quote names agent plugin and Public API as two ways; no resources, base URL or breadth."
+    },
+    {
+      "field": "description",
+      "url": "https://developers.clay.com/llms.txt",
+      "quote": "Find companies and people in Clay's proprietary GTM database.",
+      "verdict": "partial",
+      "why": "Quote mentions searching companies/people in GTM database; no platform description or other resources."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.clay.com/use-cases/agent-workflows.md",
+      "quote": "Use MCP to call Clay functions from a coding agent like Claude Code, Codex, or Cursor.",
+      "verdict": "supports",
+      "why": "Quote says use MCP to call Clay functions from coding agents; implies MCP server. Vendor-official not shown."
+    },
+    {
+      "field": "access",
+      "url": "https://university.clay.com/docs/clay-api-cli",
+      "quote": "The developer platform is available across all Clay plans, including free and trial plans.",
+      "verdict": "supports",
+      "why": "Quote directly states developer platform available on all plans, including free and trial."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.clay.com/public-api/rate-limits.md",
+      "quote": "The default limit is **300 requests per minute per workspace** (about 5 requests per second), shared across all API keys and OAuth credentials in the workspace.",
+      "verdict": "no",
+      "why": "Quote is a rate limit (300 req/min per workspace); says nothing about plan gating or self-serve access."
+    }
+  ]
+}

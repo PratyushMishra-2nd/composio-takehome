@@ -1,0 +1,70 @@
+{
+  "id": 72,
+  "app": "Airtable",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://airtable.com/developers/web/api/authentication.md",
+      "quote": "We currently support using personal access tokens and OAuth access tokens during the authentication process.",
+      "verdict": "partial",
+      "why": "Names PAT and OAuth tokens; no Bearer detail, no legacy-key or breadth info."
+    },
+    {
+      "field": "auth",
+      "url": "https://airtable.com/developers/web/api/authentication.md",
+      "quote": "Any integrations that allow other users to grant access to Airtable should use OAuth.",
+      "verdict": "partial",
+      "why": "Says OAuth for third-party access to other users; consistent, but not the full auth-method list."
+    },
+    {
+      "field": "access",
+      "url": "https://airtable.com/developers/web/guides/oauth-integrations.md",
+      "quote": "You can access the OAuth integrations panel at [/create/oauth](https://airtable.com/create/oauth).",
+      "verdict": "partial",
+      "why": "Points to the OAuth panel URL; implies self-serve access but not free, no review, or the requirements."
+    },
+    {
+      "field": "access",
+      "url": "https://airtable.com/developers/web/guides/oauth-integrations.md",
+      "quote": "Most properties are optional, but note that the Privacy policy URL and Terms of service URL must be provided before sharing your",
+      "verdict": "partial",
+      "why": "States privacy and ToS URLs are required before sharing; covers the key requirement, not 'only' or self-serve free."
+    },
+    {
+      "field": "api",
+      "url": "https://airtable.com/developers/web/api/introduction.md",
+      "quote": "The API closely follows REST",
+      "verdict": "partial",
+      "why": "Says the API follows REST; nothing on records, webhooks, admin endpoints or airtable.js."
+    },
+    {
+      "field": "api",
+      "url": "https://airtable.com/developers/web/api/rate-limits.md",
+      "quote": "The API is limited to 5 requests per second per base.",
+      "verdict": "partial",
+      "why": "States the 5 req/s per base limit, one part of the claim; rest of the API description unsupported."
+    },
+    {
+      "field": "mcp",
+      "url": "https://airtable.com/developers/agents/mcp/getting-started.md",
+      "quote": "The server is available to all users on all plans.",
+      "verdict": "partial",
+      "why": "Says the server is available to all users on all plans; no URL, existence, or vendor-official detail."
+    },
+    {
+      "field": "mcp",
+      "url": "https://airtable.com/developers/agents/mcp/getting-started.md",
+      "quote": "Server URL: https://mcp.airtable.com/mcp",
+      "verdict": "partial",
+      "why": "Gives the exact server URL, implying existence; vendor-official status not stated."
+    },
+    {
+      "field": "description",
+      "url": "https://airtable.com/developers/web/api/introduction.md",
+      "quote": "The Airtable API can be used to integrate your data in Airtable with any external system.",
+      "verdict": "no",
+      "why": "Describes API integration with external systems; says nothing about what Airtable is as a platform."
+    }
+  ]
+}

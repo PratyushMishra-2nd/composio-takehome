@@ -1,0 +1,42 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "If you’re making a public integration with Netlify for others to enjoy, you must use OAuth2.",
+      "verdict": "partial",
+      "why": "States OAuth2 required for public integrations; no bearer_token or method list."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "Authorization: Bearer <YOUR_PERSONAL_ACCESS_TOKEN>",
+      "verdict": "partial",
+      "why": "Shows Bearer header format only; no statement it's for own account/team use."
+    },
+    {
+      "field": "access",
+      "url": "https://www.netlify.com/pricing/",
+      "quote": "Build and deploy free forever.",
+      "verdict": "no",
+      "why": "Marketing slogan about free hosting; nothing on sign-up, tokens, or OAuth apps."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "Netlify uses OAuth2 for authentication",
+      "verdict": "no",
+      "why": "Says Netlify uses OAuth2 for auth; nothing on API breadth or endpoints."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+      "quote": "Connect to the Netlify MCP server to equip your agent with the best of Netlify expertise and the Netlify CLI.",
+      "verdict": "supports",
+      "why": "Directly states a Netlify MCP server exists. URL not shown, but key part is stated."
+    }
+  ]
+}

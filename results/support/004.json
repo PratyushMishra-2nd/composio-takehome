@@ -1,0 +1,63 @@
+{
+  "id": 4,
+  "app": "Attio",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+      "quote": "You should prefer the OAuth 2.0 flow if building an app for multiple workspaces.",
+      "verdict": "partial",
+      "why": "Quote covers OAuth for multi-workspace apps only; not api_key or bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+      "quote": "If you only need a token for a single workspace, you can generate an API key in the developer settings page of your apps.",
+      "verdict": "partial",
+      "why": "Quote covers single-workspace API key from developer settings; OAuth and bearer not stated."
+    },
+    {
+      "field": "access",
+      "url": "https://attio.com/pricing",
+      "quote": "Yes. The Free plan costs nothing for up to three users.",
+      "verdict": "no",
+      "why": "Quote is about Free plan pricing; says nothing about admin approval gating credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+      "quote": "An unpublished app can be installed in up to 25 workspaces.",
+      "verdict": "no",
+      "why": "Quote is about unpublished app install limit; no mention of admin approval."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.attio.com/rest-api/overview.md",
+      "quote": "Attio provides a public REST API which exchanges JSON over HTTPS.",
+      "verdict": "partial",
+      "why": "Quote confirms public REST API with JSON over HTTPS; breadth claim not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.attio.com/mcp/overview",
+      "quote": "Attio MCP is Attio's hosted MCP server that gives AI tools secure access to your Attio workspace.",
+      "verdict": "supports",
+      "why": "Quote states hosted MCP server from Attio, implying existence and vendor-official; URL not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.attio.com/mcp/overview",
+      "quote": "Attio MCP uses OAuth authentication, so you simply log in with your Attio account—no API keys required.",
+      "verdict": "partial",
+      "why": "Quote shows OAuth login for Attio MCP; implies server exists but URL and official status not stated."
+    },
+    {
+      "field": "description",
+      "url": "https://attio.com/",
+      "quote": "Attio is the platform that builds pipeline, advances deals, and grows accounts around the clock.",
+      "verdict": "partial",
+      "why": "Quote mentions pipeline, deals, accounts; does not say customizable, AI-native CRM."
+    }
+  ]
+}

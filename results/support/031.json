@@ -1,0 +1,63 @@
+{
+  "id": 31,
+  "app": "Google Ads",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://developers.google.com/google-ads/api/docs/start",
+      "quote": "You can build software that manages accounts from the customer level down to the keyword level.",
+      "verdict": "partial",
+      "why": "Quote covers account-to-keyword management only; no mention of assets or reporting."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "quote": "Just like other Google APIs, Google Ads API uses the OAuth 2.0 protocol for authentication and authorization.",
+      "verdict": "supports",
+      "why": "Quote directly states OAuth 2.0 used for authentication and authorization."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+      "quote": "Developer tokens were sunset on September 9, 2026.",
+      "verdict": "partial",
+      "why": "Quote states sunset date, but claim's main point is auth methods, which it doesn't address."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+      "quote": "After you've enabled Google Ads API, your Google Cloud project is granted Test access.",
+      "verdict": "partial",
+      "why": "Quote shows Test access granted; does not state admin_approval gate or other tiers."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+      "quote": "Completing brand verification for your Google Cloud project is a prerequisite to apply for Basic access level.",
+      "verdict": "partial",
+      "why": "Quote states brand verification prerequisite for Basic; not the admin_approval gate overall."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+      "quote": "If you need Standard access, you need a manual review.",
+      "verdict": "partial",
+      "why": "Quote states Standard needs manual review; the broader gate claim is not shown."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.google.com/google-ads/api/rest/overview",
+      "quote": "The Google Ads API can be called either using gRPC or REST.",
+      "verdict": "partial",
+      "why": "Quote supports REST/gRPC callability; breadth and sdk_only are not addressed."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/googleads/google-ads-mcp",
+      "quote": "The Google Ads MCP Server exposes MCP Tools and MCP Resources backed by the Google Ads API.",
+      "verdict": "partial",
+      "why": "Quote shows an MCP Server exists; vendor-official status and URL not stated."
+    }
+  ]
+}

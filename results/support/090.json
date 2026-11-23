@@ -1,0 +1,35 @@
+{
+  "id": 90,
+  "app": "PitchBook",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook",
+      "quote": "sent on every request as the `Authorization: PB-Token <key>` header",
+      "verdict": "supports",
+      "why": "Quote states key sent as PB-Token header each request. Matches key part; no-OAuth not stated."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook",
+      "quote": "API access is a paid, contract-gated add-on with no free tier",
+      "verdict": "supports",
+      "why": "Quote states paid, contract-gated, no free tier. Key part covered; key sourcing not stated."
+    },
+    {
+      "field": "api",
+      "url": "https://dlthub.com/context/source/pitchbook-api",
+      "quote": "a RESTful API",
+      "verdict": "no",
+      "why": "Fragment only says RESTful. Nothing on endpoints, credits, or breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://pitchbook.com/help/getting-started-with-pitchbook-premium-connector",
+      "quote": "built on MCP server technology",
+      "verdict": "partial",
+      "why": "Says built on MCP server tech, so server exists. Vendor-official and URL not stated."
+    }
+  ]
+}

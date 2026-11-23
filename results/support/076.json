@@ -1,0 +1,56 @@
+{
+  "id": 76,
+  "app": "Monday.com",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call.",
+      "verdict": "partial",
+      "why": "Quote states personal V2 API token auth only; oauth2 not mentioned."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.monday.com/apps/docs/oauth",
+      "quote": "The OAuth request URL is: `https://auth.monday.com/oauth2/authorize`.",
+      "verdict": "partial",
+      "why": "Gives OAuth authorize URL, related to oauth2 but not sufficient alone."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.monday.com/apps/docs/oauth",
+      "quote": "The HTTP verb in your request should be POST, and the token URL is `https://auth.monday.com/oauth2/token`.",
+      "verdict": "partial",
+      "why": "Gives POST token URL, consistent with oauth2 flow but not sufficient alone."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing.",
+      "verdict": "supports",
+      "why": "Quote directly says free developer account yields API token for testing."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+      "quote": "Our API uses the following endpoint: `https://api.monday.com/v2`.",
+      "verdict": "partial",
+      "why": "Quote gives the endpoint only; GraphQL, schema path and breadth not stated."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+      "quote": "Our GraphQL schema defines the structure of the available API data and contains all of the available queries and mutations.",
+      "verdict": "partial",
+      "why": "Says schema holds queries and mutations; no endpoint or breadth claim."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.monday.com/apps/docs/mondaycom-mcp-integration",
+      "quote": "You can also use the MCP server to build your own AI agents or integrate AI features into your apps.",
+      "verdict": "partial",
+      "why": "Implies a vendor MCP server exists; no GitHub URL or official status stated."
+    }
+  ]
+}

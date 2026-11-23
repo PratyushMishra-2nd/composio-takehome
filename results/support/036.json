@@ -1,0 +1,63 @@
+{
+  "id": 36,
+  "app": "Klaviyo",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+      "quote": "Your app must use OAuth in order to be considered for Klaviyo’s App Marketplace.",
+      "verdict": "partial",
+      "why": "Says OAuth required for marketplace; no api_key mention, not sufficient for both methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+      "quote": "For company-scoped apps, access tokens and refresh tokens grant access to a Klaviyo account.",
+      "verdict": "partial",
+      "why": "Describes OAuth token access scope; consistent with oauth2, doesn't list methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "Private keys will have the prefix pk_ followed by a longer alphanumeric string.",
+      "verdict": "partial",
+      "why": "States private key prefix pk_; supports api_key part only."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+      "quote": "Note that only owner, admin, and manager roles can create OAuth apps in Klaviyo.",
+      "verdict": "partial",
+      "why": "Only owner/admin/manager can create OAuth apps; says nothing about free plan access."
+    },
+    {
+      "field": "access",
+      "url": "https://www.klaviyo.com/pricing",
+      "quote": "500 emails per month to 250 active profiles",
+      "verdict": "partial",
+      "why": "Gives free-tier-style email/profile limits; does not explicitly say a free plan exists or grants API access."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "quote": "All new API endpoints are rate limited on a per-account basis",
+      "verdict": "no",
+      "why": "Rate-limit sentence; says nothing about REST style, pagination, or scope groups."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+      "quote": "The Klaviyo Model Context Protocol (MCP) server seamlessly integrates with Klaviyo’s APIs,",
+      "verdict": "supports",
+      "why": "Directly states Klaviyo's own MCP server exists; vendor-official implied by Klaviyo authorship."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+      "quote": "configure your MCP client for the remote-hosted server (recommended) or the local server",
+      "verdict": "partial",
+      "why": "Implies remote and local MCP servers exist; configuration instruction only, no vendor-official statement."
+    }
+  ]
+}

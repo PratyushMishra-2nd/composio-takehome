@@ -1,0 +1,49 @@
+{
+  "id": 47,
+  "app": "Ecwid",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "quote": "Ecwid uses OAuth 2.0 to provide secure access to the store data for public apps.",
+      "verdict": "partial",
+      "why": "Quote says OAuth 2.0 for public apps only. Nothing on bearer tokens, custom-app tokens, or no expiry."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "quote": "If you customize your own store, however, you can skip OAuth and easily get an access token for your store.",
+      "verdict": "partial",
+      "why": "Quote confirms custom stores skip OAuth. Doesn't cover bearer_token, token types, or non-expiry."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "quote": "After signing up with Ecwid and getting a custom app, you already have two tokens:",
+      "verdict": "partial",
+      "why": "Quote says signup yields two tokens. Consistent with no paid gate, but never mentions a paid plan."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ecwid.com/get-started/api-glossary",
+      "quote": "Ecwid creates one custom app for any user who visits the app dashboard in Ecwid admin for the first time.",
+      "verdict": "partial",
+      "why": "Quote says custom app created on first dashboard visit. Matches the detail, not the paid_plan gate."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.ecwid.com/api-reference",
+      "quote": "We accept up to 600 requests per minute per token.",
+      "verdict": "partial",
+      "why": "Quote states the 600 req/min per token limit only. Nothing on REST v3, endpoints, or breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://glama.ai/mcp/connectors/io.usefulapi/ecwid",
+      "quote": "Read store products, orders, customers, categories and coupons; adjust inventory and update orders.",
+      "verdict": "partial",
+      "why": "Quote lists connector capabilities, not MCP. Nothing on existence, vendor status, or the URL."
+    }
+  ]
+}

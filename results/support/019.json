@@ -1,0 +1,63 @@
+{
+  "id": 19,
+  "app": "Gorgias",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+      "quote": "Please remember that the API key authentication method can be used only for private apps.",
+      "verdict": "supports",
+      "why": "Quote states API key auth is limited to private apps, the claim's key restriction."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.gorgias.com/docs/oauth2-authentication-for-creating-apps-with-gorgias",
+      "quote": "it is required that the app is using OAuth2 for authentication.",
+      "verdict": "partial",
+      "why": "Says OAuth2 is required, but not that it's for public apps specifically."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.gorgias.com/docs/5-submit-app-for-review.md",
+      "quote": "Our tech partnership team will review your app to make sure it works properly and is aligned with our expectations.",
+      "verdict": "partial",
+      "why": "Partner team review is related, but not a gate to working credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://www.gorgias.com/pricing",
+      "quote": "No, you don't need to enter payment info to start the Gorgias trial (/signup).",
+      "verdict": "no",
+      "why": "Payment-info statement about trial; says nothing about approval gating credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal.md",
+      "quote": "Currently all new Sandbox accounts are Demo accounts by default.",
+      "verdict": "no",
+      "why": "Sandbox accounts defaulting to Demo; unrelated to admin approval gate."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.gorgias.com/reference/introduction",
+      "quote": "On this page, you'll find the complete REST API reference, examples, definitions of objects, and guides.",
+      "verdict": "partial",
+      "why": "Confirms a complete REST API reference exists; no endpoint or breadth list shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://updates.gorgias.com/publications/gorgias-mcp-is-now-in-open-beta",
+      "quote": "**Gorgias MCP is in open beta today**, a first-party server that plugs your workspace into Claude, ChatGPT, Cursor, and any MCP-compatible tool.",
+      "verdict": "supports",
+      "why": "States first-party Gorgias MCP server in open beta, plugging into AI tools."
+    },
+    {
+      "field": "mcp",
+      "url": "https://updates.gorgias.com/publications/gorgias-mcp-is-now-in-open-beta",
+      "quote": "Your Gorgias account. Any plan works. AI Agent is not required. Gorgias MCP is included at no extra cost.",
+      "verdict": "partial",
+      "why": "Mentions Gorgias MCP included at no cost; no official status or URL shown."
+    }
+  ]
+}

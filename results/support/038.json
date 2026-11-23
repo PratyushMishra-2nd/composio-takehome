@@ -1,0 +1,70 @@
+{
+  "id": 38,
+  "app": "Pinterest",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "quote": "Our implementation of grant types and access tokens follows OAuth 2.0 specifications.",
+      "verdict": "partial",
+      "why": "Says OAuth 2.0 implemented; nothing on bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "quote": "This grant type is designed for situations when the client (your app) is acting on its own behalf, not a user.",
+      "verdict": "partial",
+      "why": "Describes app-only grant only; no oauth2 overall or bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+      "quote": "Once your app is approved for Trial access you can generate a token to test the API without setting up the Oauth flow.",
+      "verdict": "partial",
+      "why": "Test token without OAuth flow; supports bearer side only, not full claim."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+      "quote": "Application requests are reviewed by Pinterest.",
+      "verdict": "supports",
+      "why": "Says Pinterest reviews app requests, which is the approval gate."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features.",
+      "verdict": "partial",
+      "why": "Approval yields Trial access; implies gate but does not state it."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "quote": "Your app must already be approved for Trial access and comply with our Developer Guidelines.",
+      "verdict": "partial",
+      "why": "Prerequisite for Standard access; not a statement of the approval gate."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "quote": "Prepare a video recording of your app completing an action using the Pinterest API.",
+      "verdict": "partial",
+      "why": "Demo video is part of Standard review; related to approval, not the gate itself."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "quote": "Pinterest API services are only available to authenticated and authorized users.",
+      "verdict": "no",
+      "why": "Authentication requirement only; says nothing about REST or API breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358.md",
+      "quote": "Pinterest is bringing its data and Ads capabilities directly into the AI tools teams already use.",
+      "verdict": "partial",
+      "why": "Suggests official AI-tool integration; never names an MCP server or the URL."
+    }
+  ]
+}

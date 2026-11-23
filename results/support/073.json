@@ -1,0 +1,77 @@
+{
+  "id": 73,
+  "app": "Linear",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://linear.app/developers/oauth-2-0-authentication",
+      "quote": "Linear supports OAuth2 authentication, which is recommended if you’re building applications to integrate with Linear.",
+      "verdict": "partial",
+      "why": "Quote confirms OAuth2 only; api_key and bearer_token not stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://linear.app/developers/graphql",
+      "quote": "The Linear API supports personal API keys and OAuth2 authentication.",
+      "verdict": "partial",
+      "why": "Quote names personal API keys and OAuth2; bearer_token not stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://linear.app/developers/oauth-2-0-authentication",
+      "quote": "Client-credentials tokens use the `app` actor, are valid for 30 days, and do not include a refresh token.",
+      "verdict": "partial",
+      "why": "Client-credentials token details; related to OAuth but not the listed auth methods."
+    },
+    {
+      "field": "access",
+      "url": "https://linear.app/docs/api-and-webhooks",
+      "quote": "Admins and permitted Members can create personal API keys from _Settings > Account > Security & Access._",
+      "verdict": "partial",
+      "why": "Shows who creates personal API keys in Settings; no free-tier gate stated."
+    },
+    {
+      "field": "access",
+      "url": "https://linear.app/pricing",
+      "quote": "API and webhook access | Included | Included | Included | Included",
+      "verdict": "partial",
+      "why": "Table row shows Included across plans; Free column not labelled in quote."
+    },
+    {
+      "field": "api",
+      "url": "https://linear.app/developers/graphql",
+      "quote": "To authenticate your requests, you need to pass the API key with header: `Authorization: <API_KEY>`",
+      "verdict": "no",
+      "why": "Quote is about API key header auth; says nothing on GraphQL endpoint, breadth or introspection."
+    },
+    {
+      "field": "api",
+      "url": "https://linear.app/docs/api-and-webhooks",
+      "quote": "Linear's GraphQL API and webhooks lets you extend Linear's functionality beyond what we provide out of the box.",
+      "verdict": "partial",
+      "why": "Confirms GraphQL API and webhooks exist; breadth of coverage not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://linear.app/docs/mcp",
+      "quote": "Read-write access is provided through `https://mcp.linear.app/mcp` by default.",
+      "verdict": "partial",
+      "why": "Quote gives the MCP URL and implies server exists; vendor-official not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://linear.app/docs/mcp",
+      "quote": "The interactive setup flow uses OAuth 2.1 with dynamic client registration.",
+      "verdict": "no",
+      "why": "Describes OAuth setup flow only; does not state MCP server exists or its URL."
+    },
+    {
+      "field": "verdict",
+      "url": "https://linear.app/pricing",
+      "quote": "Free for everyone",
+      "verdict": "no",
+      "why": "Pricing fragment; says nothing about build_now verdict or blocker."
+    }
+  ]
+}

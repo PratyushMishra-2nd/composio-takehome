@@ -1,0 +1,56 @@
+{
+  "id": 6,
+  "app": "Podio",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.podio.com/authentication",
+      "quote": "The Podio API uses the OAuth2 protocol for authentication.",
+      "verdict": "partial",
+      "why": "States OAuth2 is used; claim also lists api_key and other, which quote doesn't cover."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.podio.com/authentication",
+      "quote": "Your application is assigned a unique identifier, called \"Client ID\", together with a \"Client Secret\".",
+      "verdict": "partial",
+      "why": "Describes OAuth2 client ID/secret only; no mention of other methods or self-serve keys."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.podio.com/api-key",
+      "quote": "You just have to sign in or sign up with Podio, and go to the API key tab in your settings.",
+      "verdict": "supports",
+      "why": "Sign up, then get API key from settings tab: self-serve credential path stated."
+    },
+    {
+      "field": "access",
+      "url": "https://www.progress.com/podio/pricing",
+      "quote": "1000 calls per hour",
+      "verdict": "no",
+      "why": "Bare fragment about rate limit; no gate, free-plan, or credential claim shown."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.podio.com/doc",
+      "quote": "Our API is split up into different areas, that each contains a subset of methods grouped by functionality.",
+      "verdict": "partial",
+      "why": "Confirms API is split into functional areas; no REST, count of 43, or breadth detail."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide.md",
+      "quote": "The Podio MCP Server is currently in beta and is intended for evaluation and testing.",
+      "verdict": "partial",
+      "why": "Confirms a Podio MCP Server exists (beta); no URL, and official status only implied."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide.md",
+      "quote": "The server is live at https://mcp.podio.com",
+      "verdict": "partial",
+      "why": "Server is live at mcp.podio.com; claim URL adds /mcp path, quote lacks it."
+    }
+  ]
+}

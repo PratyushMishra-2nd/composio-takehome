@@ -1,0 +1,63 @@
+{
+  "id": 61,
+  "app": "GitHub",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "You can also create an OAuth token with an OAuth app to access the REST API.",
+      "verdict": "partial",
+      "why": "Mentions OAuth token for REST API only; other methods (PAT, JWT, GitHub App) not stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "You can create a personal access token, generate a token with a GitHub App",
+      "verdict": "partial",
+      "why": "Names PATs and GitHub App tokens; no OAuth2, JWT, or api_key mention."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.github.com/en/get-started/learning-about-github/githubs-plans",
+      "quote": "GitHub offers free and paid plans for storing and collaborating on code.",
+      "verdict": "no",
+      "why": "Speaks to plan pricing, not self-serve credential access or review gates."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps",
+      "quote": "If your GitHub App is **public**, other accounts can also install it.",
+      "verdict": "no",
+      "why": "About installing a public GitHub App by other accounts; not a credential gate."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api",
+      "quote": "You can use GitHub's API to build scripts and applications that automate processes",
+      "verdict": "partial",
+      "why": "States API use for automation; no REST/GraphQL, endpoint breadth, or limits."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.github.com/en/graphql/overview/about-the-graphql-api",
+      "quote": "The GitHub GraphQL API offers flexibility and the ability to define precisely the data you want to fetch.",
+      "verdict": "supports",
+      "why": "Directly states GraphQL API gives precise data fetching, the key claim part."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/github/github-mcp-server",
+      "quote": "The GitHub MCP Server connects AI tools directly to GitHub's platform.",
+      "verdict": "partial",
+      "why": "Describes an MCP server by GitHub; existence supported, but URL and official status not in quote."
+    },
+    {
+      "field": "description",
+      "url": "https://docs.github.com/en/get-started/start-your-journey/about-github-and-git",
+      "quote": "GitHub is a platform that supports your entire software development process",
+      "verdict": "partial",
+      "why": "Says platform supports software development process; no mention of Git hosting, issues/PRs, or CI."
+    }
+  ]
+}

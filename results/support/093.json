@@ -1,0 +1,49 @@
+{
+  "id": 93,
+  "app": "Fathom",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://developers.fathom.ai/mcp-docs.md",
+      "quote": "Fathom now offers an official MCP (Model Context Protocol) server, allowing you to connect your Fathom meeting data to AI assistants like ChatGPT, Claude, and more.",
+      "verdict": "partial",
+      "why": "Quote covers MCP server for AI assistants only; no recording, transcription, summarizing or Zoom/Meet/Teams."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.fathom.ai/api-overview.md",
+      "quote": "All REST API resources are authenticated with API keys generated via the Fathom website's settings area.",
+      "verdict": "partial",
+      "why": "Quote supports api_key auth only; oauth2 and bearer_token not mentioned."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.fathom.ai/faq.md",
+      "quote": "Use **OAuth** if you’re building an app that other Fathom users will install so they can connect their own accounts.",
+      "verdict": "supports",
+      "why": "Quote states OAuth is for apps other users install to connect their accounts."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.fathom.ai/faq.md",
+      "quote": "Yes. API access—keys and webhooks— are included on all plans. Generate a key in User Settings → API Access.",
+      "verdict": "supports",
+      "why": "Quote says keys and webhooks are on all plans; generate key in settings."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.fathom.ai/api-overview.md",
+      "quote": "This documentation describes Fathom's REST API.",
+      "verdict": "no",
+      "why": "Title-like fragment; no endpoints, base URL, rate limits or SDKs."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.fathom.ai/mcp-docs.md",
+      "quote": "**MCP server URL:** `https://api.fathom.ai/mcp`",
+      "verdict": "partial",
+      "why": "Quote gives MCP URL, so existence holds; vendor-official status not stated."
+    }
+  ]
+}

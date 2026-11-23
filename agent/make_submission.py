@@ -28,10 +28,10 @@ for cat in cats:
     rows += f'<tr><td class="cat">{e(cat)}</td><td><div class="bar">{segs}</div></td></tr>'
 
 findings = [
-    (f"Half are easy wins: {c.get('build_now', 0)} of 100 can ship today",
+    (f"Easy wins: {c.get('build_now', 0)} of 100 can ship today",
      f"{c.get('build_with_caveat', 0)} more with a caveat; {c.get('needs_outreach', 0) + c.get('not_buildable', 0)} need outreach or have no usable API. An upper bound: gate errors on the sample skewed permissive."),
-    ("Most common blocker: money, then vendor review",
-     f"{ac.get('self_serve_trial', 0) + ac.get('paid_plan', 0)} need a trial or paid plan, {ac.get('admin_approval', 0)} need vendor app review, "
+    ("Most common blocker: vendor review, then money",
+     f"{ac.get('admin_approval', 0)} need vendor app review or hit an install cap (HubSpot, Attio: 25), {ac.get('self_serve_trial', 0) + ac.get('paid_plan', 0)} need a trial or paid plan, "
      f"{ac.get('customer_account', 0)} are customer-only, {ac.get('partner_gated', 0)} need a partnership. Every app but one has a documented API."),
     ("Friction clusters in sales-led SaaS and ad platforms",
      "Support and finance tools are often customer-only (DealCloud, Gladly, Pylon, Brex, PitchBook); ads sit behind app review (Google, Meta, LinkedIn). "
@@ -117,7 +117,7 @@ code {{ font-family: Consolas, monospace; font-size: 7.6pt; background: #efeee9;
       <div class="leg"><span><i class="build_now"></i>build now</span><span><i class="build_with_caveat"></i>with caveat</span><span><i class="needs_outreach"></i>needs outreach</span><span><i class="not_buildable"></i>not buildable</span></div>
       <h2 style="margin-top:4.5mm">Verification, honestly</h2>
       <div class="acc">
-        <div><div class="v">{fq['verified']}/{fq['total']}</div><div class="l">quotes confirmed ({bv} only after browser render)</div></div>
+        <div><div class="v">{fq['verified']}/{fq['total']}</div><div class="l">quotes found on the page; {V['support']['supports'] + V['support']['partial']} at least partly support their claim</div></div>
         <div><div class="v">{len(D.get('corrections', []))}</div><div class="l">corrections applied after verification, each listed with its source (accuracy measured before them)</div></div>
         <div><div class="v">{pct(V['experiment_gate_audit']['overall'])}</div><div class="l">a gate-audit loop that hurt accuracy: rolled back, kept as an experiment</div></div>
       </div>

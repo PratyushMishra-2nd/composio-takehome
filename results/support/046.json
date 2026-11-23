@@ -1,0 +1,42 @@
+{
+  "id": 46,
+  "app": "Squarespace",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+      "quote": "Depending on your development needs, you can use a generated API key or start the OAuth process with Squarespace to become a registered OAuth client.",
+      "verdict": "supports",
+      "why": "Quote states both API key and OAuth methods are available."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+      "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site.",
+      "verdict": "no",
+      "why": "Quote is about Commerce Advanced plan for custom apps; says nothing on admin review."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.squarespace.com/oauth",
+      "quote": "We will review your registration and respond with `your_client_id` and `your_client_secret` as soon as possible.",
+      "verdict": "supports",
+      "why": "Squarespace reviews the registration and returns client_id and client_secret; that is the approval gate."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.squarespace.com/commerce-apis/overview",
+      "quote": "**Orders API:** Access order history for one-time purchases and subscription orders or import orders from third-party sales channels.",
+      "verdict": "partial",
+      "why": "Only shows Orders API importing orders; no info on REST breadth or the other APIs."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.squarespace.com/mcp/overview",
+      "quote": "The Squarespace MCP server is a remote server. There's nothing to install.",
+      "verdict": "partial",
+      "why": "Confirms a remote MCP server exists; URL and vendor-official status not stated."
+    }
+  ]
+}

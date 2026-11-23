@@ -1,0 +1,49 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "mcp",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+      "quote": "The Cloudflare API MCP server ↗︎ at https://mcp.cloudflare.com/mcp is the only MCP server you need to work with Cloudflare.",
+      "verdict": "supports",
+      "why": "States Cloudflare API MCP server is at the exact URL; vendor-stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "quote": "Cloudflare offers the following MCP servers.",
+      "verdict": "no",
+      "why": "Lead-in fragment; no URL, no server named."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+      "quote": "Add a token name to describe why or how the token is used.",
+      "verdict": "no",
+      "why": "Token naming tip; says nothing about auth methods."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.cloudflare.com/fundamentals/api/",
+      "quote": "Use the following resources to learn more about Cloudflare's REST API:",
+      "verdict": "partial",
+      "why": "Points to REST API resources; no endpoint count, GraphQL or OpenAPI detail."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.cloudflare.com/analytics/graphql-api/",
+      "quote": "GraphQL differs from a traditional API: it has one single endpoint:",
+      "verdict": "partial",
+      "why": "Generic GraphQL single-endpoint fact; no Cloudflare Analytics API stated."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+      "quote": "Anyone with this token can perform the authorized actions against the resources that the token has access to.",
+      "verdict": "no",
+      "why": "Token scope statement; says nothing about free self-serve sign-up."
+    }
+  ]
+}

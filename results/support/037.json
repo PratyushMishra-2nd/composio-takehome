@@ -1,0 +1,56 @@
+{
+  "id": 37,
+  "app": "systeme.io",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.systeme.io/reference/api",
+      "quote": "your only option right now is to attach your API key to the `X-API-Key` header of each request.",
+      "verdict": "supports",
+      "why": "Quote states API key in X-API-Key header is the only option, matching api_key auth."
+    },
+    {
+      "field": "access",
+      "url": "https://systeme.io/pricing",
+      "quote": "The free plan never expires and does not require a credit card.",
+      "verdict": "partial",
+      "why": "Free plan no expiry/no card is consistent with the gate, but key creation is not stated."
+    },
+    {
+      "field": "access",
+      "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+      "quote": "You can create up to **3 API keys** per account.",
+      "verdict": "partial",
+      "why": "Limit of 3 API keys per account is a detail only; doesn't establish the free self-serve gate."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.systeme.io/reference/api",
+      "quote": "manage contacts, tags, and a variety of other operations integral to our platform.",
+      "verdict": "partial",
+      "why": "Says it manages contacts, tags, other operations; no REST, breadth, URL or reference groups."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.systeme.io/docs/mcp-server",
+      "quote": "To authenticate with the MCP server, you must use your MCP key.",
+      "verdict": "partial",
+      "why": "Implies an MCP server exists; says nothing on vendor-official status or the URL."
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+      "quote": "This is an **initial release implementation** and does not yet support the recommended authentication method (OAuth).",
+      "verdict": "partial",
+      "why": "Confirms an initial-release MCP implementation exists; no vendor-official or URL stated."
+    },
+    {
+      "field": "description",
+      "url": "https://systeme.io/mcp",
+      "quote": "The MCP server is a powerful feature included in all systeme.io plans.",
+      "verdict": "no",
+      "why": "Quote is about MCP being in all plans; says nothing on the platform's features listed in the claim."
+    }
+  ]
+}

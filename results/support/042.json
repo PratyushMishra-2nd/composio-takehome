@@ -1,0 +1,56 @@
+{
+  "id": 42,
+  "app": "WooCommerce",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "WooCommerce (WC) 2.6+ is fully integrated with the WordPress REST API.",
+      "verdict": "partial",
+      "why": "Quote says WC integrates with WP REST API; no open-source or store-data claim."
+    },
+    {
+      "field": "auth",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "You may use HTTP Basic Auth by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password.",
+      "verdict": "supports",
+      "why": "Quote states HTTP Basic with Consumer Key/Secret, the key auth part."
+    },
+    {
+      "field": "auth",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "You must use OAuth 1.0a \"one-legged\" authentication to ensure REST API credentials cannot be intercepted by an attacker.",
+      "verdict": "supports",
+      "why": "Quote states OAuth 1.0a one-legged for the HTTP case, the key detail."
+    },
+    {
+      "field": "access",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "WooCommerce includes two ways to authenticate with the WP REST API.",
+      "verdict": "no",
+      "why": "Quote only says two auth methods exist; nothing on self-serve keys or no approval."
+    },
+    {
+      "field": "api",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "The current WP REST API integration version is `v3` which takes a first-order position in endpoints.",
+      "verdict": "partial",
+      "why": "Quote confirms v3 is current; endpoint list and breadth not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.woocommerce.com/docs/features/mcp/",
+      "quote": "The MCP implementation in WooCommerce is currently in developer preview.",
+      "verdict": "partial",
+      "why": "Quote confirms an MCP implementation in WooCommerce, in preview; vendor-official status and URL not shown."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.woocommerce.com/docs/features/mcp/",
+      "quote": "Remote HTTP connections authenticate using a WordPress username and an Application Password.",
+      "verdict": "supports",
+      "why": "Quote states remote MCP auth uses WordPress username and Application Password."
+    }
+  ]
+}

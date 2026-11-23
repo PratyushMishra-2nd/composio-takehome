@@ -1,0 +1,100 @@
+  #001 Salesforce: cached
+  #004 Attio: ok
+  #002 HubSpot: ok
+  #007 Zoho CRM: ok
+  #005 Twenty: ok
+  #006 Podio: ok
+  #003 Pipedrive: ok
+  #008 Close: ok
+  #010 DealCloud: ok
+  #011 Zendesk: ok
+  #012 Intercom: ok
+  #009 Copper: ok
+  #013 Freshdesk: ok
+  #014 Front: ok
+  #016 LiveAgent: ok
+  #017 Plain: ok
+  #015 Pylon: ok
+  #018 Help Scout: ok
+  #019 Gorgias: ok
+  #020 Gladly: ok
+  #022 Twilio: ok
+  #021 Slack: ok
+  #023 Zoho Cliq: ok
+  #025 Pumble: ok
+  #024 Lark (Larksuite): ok
+  #026 Discord: ok
+  #028 WhatsApp Business: ok
+  #027 Telegram: ok
+  #029 Aircall: ok
+  #030 Vonage: ok
+  #031 Google Ads: ok
+  #032 Meta Ads: ok
+  #034 GoHighLevel: ok
+  #035 Mailchimp: ok
+  #033 LinkedIn Ads: ok
+  #037 systeme.io: ok
+  #036 Klaviyo: ok
+  #038 Pinterest: ok
+  #040 SendGrid: ok
+  #039 Threads (Meta): ok
+  #041 Shopify: ok
+  #042 WooCommerce: ok
+  #044 Salesforce Commerce Cloud: ok
+  #043 BigCommerce: ok
+  #050 fanbasis: no verified quotes
+  #046 Squarespace: ok
+  #045 Magento (Adobe Commerce): ok
+  #049 Amazon Selling Partner: ok
+  #047 Ecwid: ok
+  #051 DataForSEO: ok
+  #048 Gumroad: ok
+  #053 Ahrefs: ok
+  #052 SE Ranking: ok
+  #054 MrScraper: ok
+  #057 Bright Data: ok
+  #055 Apify: ok
+  #058 Sherlock: ok
+  #056 Firecrawl: ok
+  #059 Waterfall.io: ok
+  #060 Clay: ok
+  #061 GitHub: ok
+  #062 Vercel: ok
+  #064 Cloudflare: ok
+  #063 Netlify: ok
+  #065 Supabase: ok
+  #066 Neo4j: ok
+  #067 Snowflake: ok
+  #068 MongoDB Atlas: ok
+  #069 Datadog: ok
+  #071 Notion: ok
+  #070 Sentry: ok
+  #074 Jira: ok
+  #072 Airtable: ok
+  #073 Linear: ok
+  #076 Monday.com: ok
+  #075 Asana: ok
+  #077 ClickUp: ok
+  #078 Coda: ok
+  #080 Harvest: ok
+  #079 Smartsheet: ok
+  #081 Stripe: ok
+  #082 Plaid: ok
+  #083 Binance: ok
+  #084 Paygent Connect: ok
+  #085 iPayX: ok
+  #086 QuickBooks: ok
+  #087 Xero: ok
+  #088 Brex: ok
+  #090 PitchBook: ok
+  #089 Ramp: ok
+  #091 NotebookLM: ok
+  #094 Consensus: ok
+  #093 Fathom: ok
+  #092 Otter AI: ok
+  #095 Reducto: ok
+  #096 Devin: ok
+  #098 Mermaid CLI: ok
+  #099 YouTube Transcript: ok
+  #097 higgsfield: ok
+  #100 Grain: ok

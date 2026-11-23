@@ -1,0 +1,35 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "Authenticate with Bright Data using 1 of 2 methods: API Access with an API key or Native Access with proxy username and password.",
+      "verdict": "partial",
+      "why": "Quote states 2 auth methods: API key and proxy username/password. Claim's api_key/basic match; bearer_token and no-OAuth2 not stated."
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/brightdata/brightdata-mcp/main/README.md",
+      "quote": "New accounts get 5,000 free requests per month.",
+      "verdict": "partial",
+      "why": "Quote gives 5,000 free requests/month. Self-serve, no-card, and pay-as-you-go not stated."
+    },
+    {
+      "field": "api",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "How do I relay the API key within a request?",
+      "verdict": "no",
+      "why": "Quote is a question about relaying API key. Says nothing about API breadth or products."
+    },
+    {
+      "field": "mcp",
+      "url": "https://raw.githubusercontent.com/brightdata/brightdata-mcp/main/README.md",
+      "quote": "Two deployment options: a hosted remote server (one URL, no installation) or a local instance via `npx @brightdata/mcp`.",
+      "verdict": "partial",
+      "why": "Quote shows hosted remote and npx local options. Package name matches. Existence as vendor-official and GitHub URL not stated."
+    }
+  ]
+}

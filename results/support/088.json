@@ -1,0 +1,63 @@
+{
+  "id": 88,
+  "app": "Brex",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.brex.com/guides/authentication",
+      "quote": "generate a user token from your Brex dashboard and pass it along in your API call headers.",
+      "verdict": "partial",
+      "why": "Supports bearer token part only; says nothing about oauth2 or the admin-creates-token detail."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "quote": "For all other APIs, you will implement the Authorization Code Grant",
+      "verdict": "partial",
+      "why": "Shows Authorization Code Grant for other APIs, i.e. oauth2 exists; the rest of the claim is not covered."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "quote": "If you are using the onboarding API, you will generate a Client Credentials Grant as there is no existing Brex client involved.",
+      "verdict": "partial",
+      "why": "Supports Client Credentials use for onboarding API only; does not cover the full auth method list."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.brex.com/guides/quickstart",
+      "quote": "This guide assumes you are a Brex customer with admin access to your dashboard.",
+      "verdict": "partial",
+      "why": "Assumes a customer with admin access; related to customer_account gate but not stating it is required or the agreement part."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "quote": "to be issued a client ID and client secret for partner authentication.",
+      "verdict": "partial",
+      "why": "Says partner client ID and secret are issued; does not say they come from developer support or name the multi-tenant gate."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.brex.com/openapi/team_api",
+      "quote": "The team API lets you manage users, departments, locations, and cards.",
+      "verdict": "partial",
+      "why": "Team API manages users, departments, locations, cards; covers part of listed scope, not REST/OpenAPI or other APIs."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.brex.com/docs/mcp",
+      "quote": "The server is hosted at `https://api.brex.com/mcp` and supports any MCP-compatible client.",
+      "verdict": "supports",
+      "why": "States server hosted at the exact URL and is MCP-compatible; vendor-official is implied by the vendor's own hosting, not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.brex.com/docs/mcp",
+      "quote": "MCP clients that support OAuth will automatically initiate a browser-based authorization flow when you first connect.",
+      "verdict": "partial",
+      "why": "Describes OAuth browser flow for MCP clients; implies a server exists but does not establish existence or official status."
+    }
+  ]
+}

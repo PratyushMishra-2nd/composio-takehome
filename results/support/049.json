@@ -1,0 +1,14 @@
+{
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "mcp",
+      "url": "https://github.com/amzn/selling-partner-api-samples",
+      "quote": "selling partner api samples",
+      "verdict": "no",
+      "why": "Quote is a bare title fragment. Doesn't state MCP server exists, vendor-official, or give the URL."
+    }
+  ]
+}

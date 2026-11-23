@@ -1,0 +1,70 @@
+{
+  "id": 27,
+  "app": "Telegram",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "description",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
+      "verdict": "partial",
+      "why": "Quote covers HTTP Bot API only; says nothing on MTProto user API or messaging scope."
+    },
+    {
+      "field": "auth",
+      "url": "https://core.telegram.org/bots",
+      "quote": "To get started, message @BotFather on Telegram to register your bot and receive its authentication token.",
+      "verdict": "partial",
+      "why": "Quote shows BotFather issues bot token; no mention of URL embedding, user-account API, or other auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://core.telegram.org/api/obtaining_api_id",
+      "quote": "You will get basic addresses as well as the api_id and api_hash parameters required for user authorization.",
+      "verdict": "partial",
+      "why": "Quote names api_id/api_hash for user authorization; no my.telegram.org source, session string, or OAuth detail."
+    },
+    {
+      "field": "access",
+      "url": "https://core.telegram.org/bots",
+      "quote": "The Telegram Bot Platform hosts more than 10 million bots and is free for both users and developers.",
+      "verdict": "partial",
+      "why": "Quote says platform is free for users and developers; no self-serve credential signup or Stars detail."
+    },
+    {
+      "field": "access",
+      "url": "https://core.telegram.org/api",
+      "quote": "You are welcome to use both APIs free of charge.",
+      "verdict": "partial",
+      "why": "Quote says both APIs free of charge; does not state self-serve credential gate."
+    },
+    {
+      "field": "api",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "All queries to the Telegram Bot API must be served over HTTPS and need to be presented in this form:",
+      "verdict": "partial",
+      "why": "Quote supports HTTPS requirement only; no 100+ methods, SDK, or bot-visibility limits."
+    },
+    {
+      "field": "api",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "We support GET and POST HTTP methods.",
+      "verdict": "partial",
+      "why": "Quote supports GET/POST methods only; rest of claim (breadth, SDK, restrictions) unsupported."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/chigwell/telegram-mcp",
+      "quote": "It exposes Telegram account, chat, message, contact, media, folder, and admin operations through the Model Context Protocol",
+      "verdict": "partial",
+      "why": "Quote describes an MCP server exposing Telegram operations; does not name the chigwell repo or vendor status."
+    },
+    {
+      "field": "verdict",
+      "url": "https://core.telegram.org/bots/faq",
+      "quote": "By default, bots are able to message their users at no cost",
+      "verdict": "no",
+      "why": "Quote is about free bot messaging cost; says nothing about verdict build_now or blockers."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": 82,
+  "app": "Plaid",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://plaid.com/docs/quickstart/",
+      "quote": "You'll need API keys, which you can receive by signing up in the Dashboard.",
+      "verdict": "partial",
+      "why": "Shows API keys issued via Dashboard signup; says nothing about header/body methods or other auth."
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/pricing/",
+      "quote": "Our Free Trial allows you to make API calls using live data.",
+      "verdict": "partial",
+      "why": "Says Free Trial makes live-data calls; no mention of self-serve gating or US/Canada limits."
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/pricing/",
+      "quote": "Sandbox is always free.",
+      "verdict": "partial",
+      "why": "Says Sandbox is free; does not cover the live-credential gate or Pay as You Go."
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/pricing/",
+      "quote": "Month to month with no commitment. No caps on usage. Only pay for what you use.",
+      "verdict": "partial",
+      "why": "Month-to-month, no commitment, pay-per-use; no $0/month or Dashboard-keys statement."
+    },
+    {
+      "field": "api",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "The Plaid API is JSON over HTTP.",
+      "verdict": "partial",
+      "why": "Confirms JSON over HTTP (REST-like); says nothing about breadth or product count."
+    },
+    {
+      "field": "mcp",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "quote": "The **Dashboard MCP server** is a remote MCP server hosted by Plaid.",
+      "verdict": "supports",
+      "why": "States the Dashboard MCP server is a remote server hosted by Plaid, i.e. exists and is vendor-official."
+    },
+    {
+      "field": "mcp",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "quote": "Your team must be approved for Production access with at least one Plaid product to use the MCP server.",
+      "verdict": "partial",
+      "why": "Implies the MCP server is usable with Production approval; does not directly state it exists or is official."
+    }
+  ]
+}

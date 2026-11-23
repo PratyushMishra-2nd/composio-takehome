@@ -1,0 +1,63 @@
+{
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/tenant_access_token_internal.md",
+      "quote": "自建应用通过此接口获取 `tenant_access_token`。",
+      "verdict": "partial",
+      "why": "Quote says custom apps get tenant_access_token here; no bearer or oauth2 mention."
+    },
+    {
+      "field": "auth",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/authentication-management/access-token/get-user-access-token.md",
+      "quote": "OAuth 令牌接口，可用于获取 <code>user_access_token</code> 以及 <code>refresh_token</code>。",
+      "verdict": "partial",
+      "why": "Quote covers OAuth token endpoint giving user_access_token and refresh_token; not the full method list."
+    },
+    {
+      "field": "auth",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/authentication-management/access-token/get-user-access-token.md",
+      "quote": "本接口实现遵循 [RFC 6749 - The OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749)",
+      "verdict": "partial",
+      "why": "Quote says the interface follows RFC 6749; does not name auth-code flow or bearer."
+    },
+    {
+      "field": "access",
+      "url": "https://open.larksuite.com/llms.txt",
+      "quote": "企业自建应用：由企业内部人员或企业授权的开发人员进行开发，只能在同一企业内发布和使用。",
+      "verdict": "partial",
+      "why": "Quote says custom apps are same-enterprise only; says nothing about admin approval or free access."
+    },
+    {
+      "field": "access",
+      "url": "https://open.larksuite.com/llms.txt",
+      "quote": "出于安全考虑，你需要为应用申请相应的权限，并且由企业管理员审核通过后，应用才可以进行后续的 API 调用或事件监听。",
+      "verdict": "supports",
+      "why": "Quote states scope permissions need enterprise admin approval before API calls work."
+    },
+    {
+      "field": "api",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/tenant_access_token_internal.md",
+      "quote": "HTTP URL | https://open.larksuite.com/open-apis/auth/v3/tenant_access_token/internal",
+      "verdict": "no",
+      "why": "Quote is a bare URL for one endpoint; no REST surface, websocket, SDK or breadth info."
+    },
+    {
+      "field": "mcp",
+      "url": "https://raw.githubusercontent.com/larksuite/lark-openapi-mcp/main/README.md",
+      "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool designed to help users quickly connect to the Feishu/Lark platform and enable efficient collaboration between AI Agents and Feishu/Lark.",
+      "verdict": "supports",
+      "why": "Quote calls it the official Feishu/Lark OpenAPI MCP; GitHub URL not shown but key part matches."
+    },
+    {
+      "field": "verdict",
+      "url": "https://open.larksuite.com/llms.txt",
+      "quote": "应用商店应用：由第三方服务商开发，在Lark应用中心发布，所有Lark租户均可安装和使用。",
+      "verdict": "partial",
+      "why": "Quote says Store apps publish on Lark app center for all tenants; no verdict or blockers stated."
+    }
+  ]
+}

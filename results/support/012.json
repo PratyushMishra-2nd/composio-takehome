@@ -1,0 +1,49 @@
+{
+  "id": 12,
+  "app": "Intercom",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "OAuth is for if you're building a public app that accesses other people's Intercom data.",
+      "verdict": "partial",
+      "why": "States OAuth for public apps only; says nothing about bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/setting-up-oauth",
+      "quote": "you are required to set up OAuth.",
+      "verdict": "partial",
+      "why": "Says OAuth is required; does not name bearer_token or the public-app scope."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "simply provide it as an `Authorization:Bearer` header in your requests",
+      "verdict": "partial",
+      "why": "States the Bearer header method only; oauth2 half of the claim is unsupported."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+      "quote": "Development workspaces are free and intended for development purposes only.",
+      "verdict": "no",
+      "why": "Quote covers free dev workspaces and their limits; says nothing about admin approval."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.intercom.com/docs/references/introduction",
+      "quote": "This API reference is auto-generated from an OpenAPI specification.",
+      "verdict": "partial",
+      "why": "Confirms OpenAPI generation only; no REST, resource-group breadth, or regional hosts."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.intercom.com/docs/guides/mcp",
+      "quote": "Intercom hosts a remote MCP server that follows the authenticated remote MCP specification",
+      "verdict": "supports",
+      "why": "Intercom hosts a remote MCP server per the spec; existence and vendor ownership stated. URL not in quote."
+    }
+  ]
+}

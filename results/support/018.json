@@ -1,0 +1,63 @@
+{
+  "id": 18,
+  "app": "Help Scout",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.",
+      "verdict": "partial",
+      "why": "Quote states OAuth 2.0 only. Nothing on api_key or basic."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.helpscout.com/docs-api/",
+      "quote": "The API key is passed via HTTP Basic Authentication and goes in the username field.",
+      "verdict": "supports",
+      "why": "Quote directly states API key sent via HTTP Basic, key in username."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "quote": "Create one by navigating to Your Profile > My apps and click Create My App.",
+      "verdict": "no",
+      "why": "Quote describes self-serve app creation. Says nothing about a paid-plan gate."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.helpscout.com/article/1140-mailbox-api",
+      "quote": "The Free plan does not include access to the API or integrations.",
+      "verdict": "supports",
+      "why": "Quote states Free plan lacks API access. That is the paid-plan gate."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.helpscout.com/mailbox-api/",
+      "quote": "This is an HTTPS-only API, with OAuth 2 authentication and CORS support running at:",
+      "verdict": "partial",
+      "why": "Quote shows HTTPS-only API with OAuth 2 and CORS. Cut off before endpoints, breadth, or REST."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+      "quote": "Set the remote MCP server URL to `https://mcp.helpscout.net/mcp`",
+      "verdict": "partial",
+      "why": "Quote gives the MCP URL, so existence is supported. Vendor-official status is not stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+      "quote": "The connector is read-only.",
+      "verdict": "no",
+      "why": "Read-only note is about capability. Does not show the server exists or is official."
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "Want to trial the Pro plan? Talk to our sales team.",
+      "verdict": "no",
+      "why": "Sales-contact trial CTA. Says nothing about verdict, plan blockers, or MCP read-only."
+    }
+  ]
+}

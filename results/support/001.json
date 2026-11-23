@@ -1,0 +1,42 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+      "quote": "After reviewing and selecting an OAuth authorization flow, apply it to your external client app or connected app.",
+      "verdict": "partial",
+      "why": "Confirms OAuth flow applied via external/connected app; says nothing on jwt or session_login."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+      "quote": "Creating connected apps is restricted as of Spring '26. You can continue to use existing connected apps during and after Spring '26.",
+      "verdict": "partial",
+      "why": "States connected-app creation restriction from Spring '26; a detail, not the auth-methods claim."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+      "quote": "For details about each supported flow, see OAuth Authorization Flows in Salesforce Help.",
+      "verdict": "no",
+      "why": "Only points to OAuth flow docs; no API types listed."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide",
+      "quote": "hosted servers are intended only for customers with Flex Credits and you may be billed for server usage.",
+      "verdict": "no",
+      "why": "About Flex Credits billing for hosted servers; says nothing on self-serve free access."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide",
+      "quote": "Salesforce Hosted MCP Servers",
+      "verdict": "no",
+      "why": "Bare title fragment; does not show server exists, vendor-official, or the URL."
+    }
+  ]
+}

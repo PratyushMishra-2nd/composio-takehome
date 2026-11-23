@@ -1,0 +1,56 @@
+{
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md",
+      "quote": "Service accounts are the recommended method to manage authentication to the Atlas Administration API.",
+      "verdict": "partial",
+      "why": "Says service accounts recommended for auth; claim lists both oauth2 and api_key."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md",
+      "quote": "API keys are a legacy method of authenticating to the Atlas Administration API that uses HTTP Digest Authentication.",
+      "verdict": "partial",
+      "why": "Says API keys are legacy Digest auth; supports api_key part only, not full claim."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md",
+      "quote": "Service accounts provide improved security over API (Application Programming Interface) keys by using the industry standard OAuth 2.0 protocol with the Client Credentials flow.",
+      "verdict": "partial",
+      "why": "States service accounts use OAuth 2.0 client credentials; covers oauth2 only."
+    },
+    {
+      "field": "access",
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "quote": "You can create a service account in MongoDB Atlas and use its credentials for authentication.",
+      "verdict": "partial",
+      "why": "Says you can create a service account and use its credentials; no free-tier or signup claim."
+    },
+    {
+      "field": "api",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md",
+      "quote": "The Atlas Administration API doesn't provide access to the data stored in your clusters.",
+      "verdict": "partial",
+      "why": "States Admin API lacks cluster data access; no REST, versioning, or breadth details."
+    },
+    {
+      "field": "api",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md",
+      "quote": "Many Atlas Administration API endpoint URLs (Uniform Resource Locators) follow the format of `/api/atlas/<version>/groups/<GROUP-ID>/`, where `<GROUP-ID>` is your project ID.",
+      "verdict": "partial",
+      "why": "Shows /api/atlas/<version>/groups URL format; no v2, Accept header, or breadth coverage."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "quote": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters.",
+      "verdict": "partial",
+      "why": "Describes an MCP server for MongoDB and Atlas; does not say vendor-official or give the URL."
+    }
+  ]
+}

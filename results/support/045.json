@@ -1,0 +1,56 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Third-party applications authenticate with OAuth 1.0a.",
+      "verdict": "partial",
+      "why": "States OAuth 1.0a only; does not list the other claimed methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Administrators and customers are authenticated with login credentials.",
+      "verdict": "partial",
+      "why": "Supports the login-credential token path only; not the full method set."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "In Adobe Commerce as a Cloud Service, you must use Adobe Identity Management Service (IMS) to authenticate your requests.",
+      "verdict": "partial",
+      "why": "Confirms IMS auth for SaaS; does not mention bearer tokens or other methods."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Mobile applications authenticate using tokens.",
+      "verdict": "no",
+      "why": "Mobile token auth says nothing about free self-serve credential access."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Adobe Commerce provides a wide range of REST API endpoints",
+      "verdict": "partial",
+      "why": "Shows broad REST coverage; says nothing about GraphQL or base URL."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Primarily the Cloud Service REST API differs in that it includes a smaller subset of endpoints.",
+      "verdict": "partial",
+      "why": "Supports the SaaS smaller-endpoint-subset sub-claim only."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+      "quote": "IDE integration for Commerce development tasks, documentation-aware assistance",
+      "verdict": "partial",
+      "why": "Describes an IDE developer-agent tool; never says MCP server or vendor-official."
+    }
+  ]
+}

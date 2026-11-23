@@ -1,0 +1,63 @@
+{
+  "id": 30,
+  "app": "Vonage",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "Vonage APIs support different authentication methods depending on which product you are using:",
+      "verdict": "partial",
+      "why": "Says auth methods vary by product; doesn't name basic, jwt, or bearer_token."
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "For most use-cases we recommend JWT Authentication.",
+      "verdict": "partial",
+      "why": "Recommends JWT only; doesn't cover basic or bearer_token or the full method list."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "To work with our APIs, you will need to sign up for an account.",
+      "verdict": "partial",
+      "why": "Sign-up required is part of self-serve access; free tier and pay-per-request not stated."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "We'll give you some free credit when you first open your account",
+      "verdict": "partial",
+      "why": "Free credit on new accounts matches part of claim; self-serve gate and pricing not covered."
+    },
+    {
+      "field": "api",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "Vonage provides a suite of APIs that enable you to communicate with your customers using your preferred channels.",
+      "verdict": "partial",
+      "why": "Says there is a suite of APIs; no REST, websocket, SDK, or breadth detail."
+    },
+    {
+      "field": "description",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "Vonage provides a suite of APIs that enable you to communicate with your customers using your preferred channels.",
+      "verdict": "partial",
+      "why": "Generic communications suite; no mention of SMS, voice, verification, video, or numbers."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.vonage.com/en/mcp-server/overview",
+      "quote": "The Vonage MCP Server enables AI agents and developer tools to discover, describe, and use Vonage capabilities",
+      "verdict": "partial",
+      "why": "States the MCP server exists; vendor-official status and URL not in quote."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "For most use-cases we recommend JWT Authentication.",
+      "verdict": "no",
+      "why": "Quote is about recommending JWT; says nothing about a build_now verdict or blockers."
+    }
+  ]
+}

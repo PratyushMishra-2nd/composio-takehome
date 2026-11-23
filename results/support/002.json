@@ -1,0 +1,49 @@
+{
+  "id": 2,
+  "app": "HubSpot",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview.md",
+      "quote": "If you plan to distribute your app to multiple accounts (either through listing on the HubSpot Marketplace or by managing specific authorized accounts), your app must be built using OAuth authentication.",
+      "verdict": "supports",
+      "why": "Quote states multi-account distribution must use OAuth, matching the claim's key part."
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview",
+      "quote": "As of October 26, 2026, legacy private apps can no longer be created.",
+      "verdict": "supports",
+      "why": "Quote states legacy private apps can no longer be created from Oct 26, 2026."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview",
+      "quote": "You must be a super admin to access private apps in your HubSpot account.",
+      "verdict": "partial",
+      "why": "Super-admin requirement is consistent with admin gating, but doesn't cover approval or self-serve signup."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.hubspot.com/docs/guides/api/overview",
+      "quote": "The 2026-09 APIs use a date-based versioning scheme (e.g., `/crm/2026-09/`).",
+      "verdict": "partial",
+      "why": "Quote gives date-based versioning only; no REST host, breadth, or SDK support."
+    },
+    {
+      "field": "api",
+      "url": "https://developers.hubspot.com/docs/guides/api/overview",
+      "quote": "All APIs, whether legacy, new, or beta, use the same root path as before: `https://api.hubapi.com/`.",
+      "verdict": "partial",
+      "why": "Quote gives the api.hubapi.com root path only; no breadth, versioning, or SDK support."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+      "quote": "PKCE is required for authenticating with HubSpot's MCP server.",
+      "verdict": "partial",
+      "why": "Quote implies HubSpot's own MCP server exists, but is about PKCE and gives no URL."
+    }
+  ]
+}

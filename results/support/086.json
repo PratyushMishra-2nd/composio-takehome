@@ -1,0 +1,70 @@
+{
+  "id": 86,
+  "app": "QuickBooks",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+      "quote": "If you only want to read your own company's data, you still need to set up an app — Intuit does not offer per-user API keys.",
+      "verdict": "partial",
+      "why": "Implies no per-user keys, but never states OAuth2 as the auth method."
+    },
+    {
+      "field": "auth",
+      "url": "https://raw.githubusercontent.com/intuit/oauth-jsclient/master/README.md",
+      "quote": "`com.intuit.quickbooks.accounting` - for accounting scope include `OAuthClient.scopes.Accounting`",
+      "verdict": "partial",
+      "why": "Names the accounting scope string only; doesn't state the auth method."
+    },
+    {
+      "field": "auth",
+      "url": "https://raw.githubusercontent.com/intuit/oauth-jsclient/master/README.md",
+      "quote": "A Node.js client for Intuit's OAuth 2.0 implementation.",
+      "verdict": "partial",
+      "why": "Says Intuit has an OAuth 2.0 client library, not that the API uses oauth2."
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+      "quote": "The Intuit Developer Portal rejects http://localhost redirect URIs in production mode.",
+      "verdict": "no",
+      "why": "Redirect URI rule in production mode; says nothing about approval or access gating."
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/intuit/oauth-jsclient/master/README.md",
+      "quote": "`sandbox` - for authorizing in sandbox.",
+      "verdict": "no",
+      "why": "Sandbox authorization fragment; nothing on production keys or approval."
+    },
+    {
+      "field": "api",
+      "url": "https://raw.githubusercontent.com/intuit/QuickBooks-V3-Java-SDK/master/README.md",
+      "quote": "The QuickBooks Online Java SDK provides a set of Java class libraries that make it easier to call QuickBooks Online APIs",
+      "verdict": "no",
+      "why": "Java SDK description; no REST breadth, entity count, or tool count."
+    },
+    {
+      "field": "api",
+      "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+      "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients.",
+      "verdict": "no",
+      "why": "Marketing line about MCP integration; no REST entity breadth or 145-tool count."
+    },
+    {
+      "field": "mcp",
+      "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+      "quote": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company.",
+      "verdict": "partial",
+      "why": "Describes an OAuth2-authenticated server, implying it exists; no vendor-official statement."
+    },
+    {
+      "field": "mcp",
+      "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+      "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online",
+      "verdict": "partial",
+      "why": "Confirms a comprehensive QBO MCP server exists; does not say Intuit/vendor-official."
+    }
+  ]
+}

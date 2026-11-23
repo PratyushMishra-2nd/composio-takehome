@@ -1,0 +1,49 @@
+{
+  "id": 17,
+  "app": "Plain",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://www.plain.com/docs/api-reference/graphql/authentication",
+      "quote": "To call the API as a user in your workspace, use an OAuth app.",
+      "verdict": "partial",
+      "why": "Supports only the OAuth part of the auth-method list; api_key and bearer_token unaddressed."
+    },
+    {
+      "field": "auth",
+      "url": "https://www.plain.com/docs/api-reference/graphql/authentication",
+      "quote": "Each API key carries its own fine-grained permissions.",
+      "verdict": "partial",
+      "why": "Supports per-key fine-grained permissions detail only; not the auth method list."
+    },
+    {
+      "field": "api",
+      "url": "https://www.plain.com/docs/api-reference/graphql/introduction",
+      "quote": "This means that there are no limitations in what can be done via the API vs the UI.",
+      "verdict": "supports",
+      "why": "Directly states no API limitations versus the UI, the claim's key point."
+    },
+    {
+      "field": "api",
+      "url": "https://www.plain.com/docs/api-reference/graphql/introduction",
+      "quote": "Plain itself is built on this same GraphQL API.",
+      "verdict": "partial",
+      "why": "Supports UI built on the API; does not establish the no-limitations or endpoint details."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.plain.com/docs/integrations/mcp-server.md",
+      "quote": "Once connected, your AI client can do almost anything you can do in Plain, across nearly 400 tools.",
+      "verdict": "partial",
+      "why": "Implies a working AI-client MCP server, but not vendor-official status or the URL."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.plain.com/docs/integrations/mcp-server.md",
+      "quote": "You authenticate with your existing Plain account, so the MCP server has the same permissions as your user.",
+      "verdict": "partial",
+      "why": "Describes MCP auth and permissions; does not establish existence, vendor-official status, or URL."
+    }
+  ]
+}

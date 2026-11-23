@@ -1,0 +1,49 @@
+{
+  "id": 25,
+  "app": "Pumble",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://pumble.com/help/integrations/api-keys-integration",
+      "quote": "This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests.",
+      "verdict": "partial",
+      "why": "States API key generation only; says nothing about 'other' auth methods."
+    },
+    {
+      "field": "auth",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+      "quote": "The x-app-token/xpat token is the **App key** you receive when you create an app from scratch.",
+      "verdict": "partial",
+      "why": "Identifies x-app-token as App key; doesn't list auth methods or api_key."
+    },
+    {
+      "field": "access",
+      "url": "https://pumble.com/help/integrations/api-keys-integration",
+      "quote": "Available on all plans",
+      "verdict": "partial",
+      "why": "'Available on all plans' covers Free; no self-serve or any-member install detail."
+    },
+    {
+      "field": "api",
+      "url": "https://pumble.com/help/integrations/api-keys-integration",
+      "quote": "The full list of available actions is available in the Swagger documentation.",
+      "verdict": "partial",
+      "why": "Points to full Swagger action list; says nothing about breadth being narrow."
+    },
+    {
+      "field": "api",
+      "url": "https://pumble.com/help/integrations/api-keys-integration",
+      "quote": "The rate limit is up to 1000 requests per minute per user.",
+      "verdict": "partial",
+      "why": "Rate limit is a detail of the claim; doesn't support rest or narrow breadth."
+    },
+    {
+      "field": "mcp",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+      "quote": "The list of available MCP tools is dynamic and depends entirely on the specific scopes you selected when creating an app.",
+      "verdict": "partial",
+      "why": "Describes scope-dependent MCP tools; doesn't show server exists, vendor-official, or URL."
+    }
+  ]
+}

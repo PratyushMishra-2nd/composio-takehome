@@ -1,0 +1,63 @@
+{
+  "id": 14,
+  "app": "Front",
+  "model": "haiku",
+  "items": [
+    {
+      "field": "auth",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "The Core API uses Bearer tokens to authenticate its user.",
+      "verdict": "partial",
+      "why": "Confirms bearer_token only; says nothing about oauth2."
+    },
+    {
+      "field": "auth",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "There are two ways to get a Bearer token — through API tokens in your settings or through an OAuth implementation",
+      "verdict": "supports",
+      "why": "States two ways to get Bearer token: API tokens or OAuth implementation."
+    },
+    {
+      "field": "auth",
+      "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+      "quote": "You can use OAuth to authorize requests to the Core API",
+      "verdict": "partial",
+      "why": "Confirms OAuth for Core API only; bearer_token not stated."
+    },
+    {
+      "field": "auth",
+      "url": "https://dev.frontapp.com/docs/oauth",
+      "quote": "Front's OAuth implementation only supports the authorization code grant type",
+      "verdict": "partial",
+      "why": "About OAuth grant type; related but doesn't state auth methods list."
+    },
+    {
+      "field": "access",
+      "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+      "quote": "By default, apps are private to the Front instance they are created in.",
+      "verdict": "no",
+      "why": "Speaks to app visibility scope; says nothing about admin approval gating credentials."
+    },
+    {
+      "field": "access",
+      "url": "https://dev.frontapp.com/docs/partnering-with-front",
+      "quote": "We are currently an open integration platform and approve the vast majority of integrations submitted to us.",
+      "verdict": "partial",
+      "why": "Mentions approving integrations, but not admin approval gating credentials."
+    },
+    {
+      "field": "api",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "The Core API uses Bearer tokens to authenticate its user.",
+      "verdict": "no",
+      "why": "Only Bearer auth sentence; no REST, breadth, or resource coverage stated."
+    },
+    {
+      "field": "mcp",
+      "url": "https://dev.frontapp.com/docs/mcp-server",
+      "quote": "Agents authenticate as a specific Front user, with permissions matching that user's role (user-scoped authorization).",
+      "verdict": "partial",
+      "why": "Describes agent user-scoped auth; doesn't confirm server exists, vendor-official, or URL."
+    }
+  ]
+}
