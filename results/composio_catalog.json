@@ -1,0 +1,2589 @@
+{
+  "1": {
+    "app": "Salesforce",
+    "toolkits_returned": [
+      "salesforce"
+    ],
+    "matched_toolkits": [
+      "salesforce"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SALESFORCE_POST_UI_API_LIST_RECORDS"
+    ],
+    "related_tools": [
+      "SALESFORCE_GET_LIST_VIEW_RECORDS_BY_NAME",
+      "SALESFORCE_GET_UI_API_LIST_INFO_RECENT",
+      "SALESFORCE_GET_LIST_VIEW_RECORDS_BY_ID"
+    ],
+    "toolkit_description": "Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "salesforce"
+    ]
+  },
+  "2": {
+    "app": "HubSpot",
+    "toolkits_returned": [
+      "hubspot"
+    ],
+    "matched_toolkits": [
+      "hubspot"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "HUBSPOT_READ_APAGE_OF_OBJECTS_BY_TYPE"
+    ],
+    "related_tools": [
+      "HUBSPOT_READ_ASSOCIATIONS_BATCH",
+      "HUBSPOT_SEARCH_CRM_OBJECTS_BY_CRITERIA",
+      "HUBSPOT_READ_ALL_PROPERTIES_FOR_OBJECT_TYPE"
+    ],
+    "toolkit_description": "HubSpot is an inbound marketing, sales, and customer service platform integrating CRM, email automation, and analytics to facilitate lead nurturing and seamless customer experiences",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "hubspot"
+    ]
+  },
+  "3": {
+    "app": "Pipedrive",
+    "toolkits_returned": [
+      "pipedrive"
+    ],
+    "matched_toolkits": [
+      "pipedrive"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PIPEDRIVE_GET_ALL_LEADS"
+    ],
+    "related_tools": [
+      "PIPEDRIVE_GET_ONE_LEAD",
+      "PIPEDRIVE_GET_ALL_FILTERS",
+      "PIPEDRIVE_UPDATE_LEAD"
+    ],
+    "toolkit_description": "Pipedrive is a sales management tool built around pipeline visualization, lead tracking, activity reminders, and automation to keep deals progressing",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "pipedrive"
+    ]
+  },
+  "4": {
+    "app": "Attio",
+    "toolkits_returned": [
+      "attio"
+    ],
+    "matched_toolkits": [
+      "attio"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "ATTIO_LIST_RECORDS"
+    ],
+    "related_tools": [
+      "ATTIO_LIST_OBJECTS",
+      "ATTIO_QUERY_RECORDS",
+      "ATTIO_FIND_RECORD"
+    ],
+    "toolkit_description": "Attio is a fully customizable workspace for your team's relationships and workflows.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "attio"
+    ]
+  },
+  "5": {
+    "app": "Twenty",
+    "toolkits_returned": [
+      "twenty"
+    ],
+    "matched_toolkits": [
+      "twenty"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "TWENTY_LIST_RECORDS"
+    ],
+    "related_tools": [
+      "TWENTY_GET_RECORD",
+      "TWENTY_UPDATE_RECORD",
+      "TWENTY_LIST_FIELDS"
+    ],
+    "toolkit_description": "The #1 Open-Source CRM. Modern, powerful, affordable platform to manage your customer relationships.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "twenty"
+    ]
+  },
+  "6": {
+    "app": "Podio",
+    "toolkits_returned": [
+      "podio"
+    ],
+    "matched_toolkits": [
+      "podio"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PODIO_LIST_ITEMS"
+    ],
+    "related_tools": [
+      "PODIO_GET_ITEM",
+      "PODIO_LIST_APPS",
+      "PODIO_FILTER_ITEMS_BY_VIEW"
+    ],
+    "toolkit_description": "Podio is a collaborative work platform for managing app-based workflows, items, tasks, files, comments, and related business data.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "podio"
+    ]
+  },
+  "7": {
+    "app": "Zoho CRM",
+    "toolkits_returned": [
+      "zoho"
+    ],
+    "matched_toolkits": [
+      "zoho"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "ZOHO_SEARCH_ZOHO_RECORDS",
+      "ZOHO_GET_ZOHO_RECORDS",
+      "ZOHO_GET_MODULE_FIELDS"
+    ],
+    "related_tools": [
+      "ZOHO_LIST_MODULES",
+      "ZOHO_GET_RELATED_LISTS",
+      "ZOHO_UPDATE_ZOHO_RECORD"
+    ],
+    "toolkit_description": "Zoho is a suite of cloud applications including CRM, email marketing, and collaboration tools, enabling businesses to automate and scale operations",
+    "guidance": "IMPORTANT: Follow the recommended plan below. Extract steps before execution, adapt to your current context, execute sequentially with current_step parameter, and check known pitfalls to avoid errors.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "zoho"
+    ]
+  },
+  "8": {
+    "app": "Close",
+    "toolkits_returned": [
+      "close"
+    ],
+    "matched_toolkits": [
+      "close"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "CLOSE_LIST_LEADS"
+    ],
+    "related_tools": [
+      "CLOSE_GET_LEAD",
+      "CLOSE_SEARCH_DATA",
+      "CLOSE_UPDATE_LEAD"
+    ],
+    "toolkit_description": "Close is a CRM platform designed to help businesses manage and streamline their sales processes, including calling, email automation, and predictive dialers.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "close"
+    ]
+  },
+  "9": {
+    "app": "Copper",
+    "toolkits_returned": [
+      "copper"
+    ],
+    "matched_toolkits": [
+      "copper"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "COPPER_GET_RECORD",
+      "COPPER_SEARCH_LEADS"
+    ],
+    "related_tools": [
+      "COPPER_SEARCH_PEOPLE",
+      "COPPER_SEARCH_COMPANIES",
+      "COPPER_GET_PERSON_BY_EMAIL",
+      "COPPER_LIST_LEAD_STATUSES",
+      "COPPER_GET_LEAD"
+    ],
+    "toolkit_description": "Copper is a customer relationship management platform for managing contacts, companies, leads, opportunities, projects, tasks, activities, files, and webhooks.",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "copper"
+    ]
+  },
+  "10": {
+    "app": "DealCloud",
+    "toolkits_returned": [
+      "apollo",
+      "clay"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "APOLLO_GET_DEAL",
+      "APOLLO_LIST_DEALS",
+      "CLAY_SEARCH_PEOPLE_OR_COMPANIES"
+    ],
+    "related_tools": [
+      "APOLLO_UPDATE_DEALS",
+      "APOLLO_CREATE_DEAL",
+      "APOLLO_LIST_NOTES",
+      "CLAY_CONTINUE_SEARCH"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "apollo",
+      "clay",
+      "gleif"
+    ]
+  },
+  "11": {
+    "app": "Zendesk",
+    "toolkits_returned": [
+      "zendesk"
+    ],
+    "matched_toolkits": [
+      "zendesk"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "ZENDESK_LIST_ZENDESK_TICKETS"
+    ],
+    "related_tools": [
+      "ZENDESK_GET_ZENDESK_TICKET_BY_ID",
+      "ZENDESK_REPLY_ZENDESK_TICKET",
+      "ZENDESK_UPDATE_ZENDESK_TICKET",
+      "ZENDESK_SEARCH_ZENDESK"
+    ],
+    "toolkit_description": "Zendesk provides customer support software with ticketing, live chat, and knowledge base features, enabling efficient helpdesk operations and customer engagement",
+    "guidance": "IMPORTANT: Follow the recommended plan below. Extract steps before execution, adapt to your current context, execute sequentially with current_step parameter, and check known pitfalls to avoid errors.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "zendesk"
+    ]
+  },
+  "12": {
+    "app": "Intercom",
+    "toolkits_returned": [
+      "intercom"
+    ],
+    "matched_toolkits": [
+      "intercom"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "INTERCOM_LIST_CONTACTS"
+    ],
+    "related_tools": [
+      "INTERCOM_SEARCH_CONTACTS",
+      "INTERCOM_GET_A_CONTACT",
+      "INTERCOM_UPDATE_CONTACT"
+    ],
+    "toolkit_description": "Intercom provides live chat, messaging, and customer engagement tools, enabling businesses to drive conversions, handle support, and personalize communication at scale",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "intercom"
+    ]
+  },
+  "13": {
+    "app": "Freshdesk",
+    "toolkits_returned": [
+      "freshdesk"
+    ],
+    "matched_toolkits": [
+      "freshdesk"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "FRESHDESK_GET_TICKETS"
+    ],
+    "related_tools": [
+      "FRESHDESK_VIEW_TICKET",
+      "FRESHDESK_GET_SEARCH",
+      "FRESHDESK_UPDATE_TICKET"
+    ],
+    "toolkit_description": "Freshdesk provides customer support software with ticketing, knowledge base, and automation features for efficient helpdesk operations and better customer experiences",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "freshdesk"
+    ]
+  },
+  "14": {
+    "app": "Front",
+    "toolkits_returned": [
+      "front"
+    ],
+    "matched_toolkits": [
+      "front"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "FRONT_LIST_CONVERSATIONS"
+    ],
+    "related_tools": [
+      "FRONT_SEARCH_CONVERSATIONS",
+      "FRONT_GET_CONVERSATION",
+      "FRONT_LIST_CONVERSATION_MESSAGES"
+    ],
+    "toolkit_description": "Front is a shared inbox and collaboration platform that centralizes customer communications from multiple channels, enabling teams to manage emails, chats, and more",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "front"
+    ]
+  },
+  "15": {
+    "app": "Pylon",
+    "toolkits_returned": [
+      "pylon_mcp"
+    ],
+    "matched_toolkits": [
+      "pylon_mcp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PYLON_MCP_SEARCH_ACCOUNTS"
+    ],
+    "related_tools": [
+      "PYLON_MCP_GET_ACCOUNT",
+      "PYLON_MCP_SEARCH_ISSUES"
+    ],
+    "toolkit_description": "Pylon is an AI-native B2B customer support platform that unifies ticketing, chat, knowledge base, and account intelligence across channels like Slack Connect, Microsoft Teams, email, and in-app chat.",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "pylon_mcp"
+    ]
+  },
+  "16": {
+    "app": "LiveAgent",
+    "toolkits_returned": [
+      "elevenlabs",
+      "agent_mail"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "ELEVENLABS_LIST_WORKSPACE_TICKETS",
+      "AGENT_MAIL_LIST_LIST_ENTRIES",
+      "ELEVENLABS_LIST_AGENT_TICKETS"
+    ],
+    "related_tools": [
+      "ELEVENLABS_GET_TRIAGE_TICKET",
+      "ELEVENLABS_UPDATE_TRIAGE_TICKET",
+      "AGENT_MAIL_DELETE_LIST_ENTRY",
+      "AGENT_MAIL_CREATE_LIST_ENTRY",
+      "ELEVENLABS_GET_AGENT_DETAILS"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "agent_mail",
+      "elevenlabs"
+    ]
+  },
+  "17": {
+    "app": "Plain",
+    "toolkits_returned": [
+      "plain"
+    ],
+    "matched_toolkits": [
+      "plain"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PLAIN_QUERY_THREADS"
+    ],
+    "related_tools": [
+      "PLAIN_LIST_THREADS_RICH",
+      "PLAIN_GET_THREAD_BY_ID",
+      "PLAIN_TRANSITION_THREAD_STATUS"
+    ],
+    "toolkit_description": "Plain is a collaborative support platform for B2B support teams, offering a modern, AI-powered interface to consolidate support channels and assist customers efficiently.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "plain"
+    ]
+  },
+  "18": {
+    "app": "Help Scout",
+    "toolkits_returned": [
+      "help_scout"
+    ],
+    "matched_toolkits": [
+      "help_scout"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "HELP_SCOUT_LIST_CONVERSATIONS"
+    ],
+    "related_tools": [
+      "HELP_SCOUT_GET_CONVERSATION",
+      "HELP_SCOUT_LIST_THREADS",
+      "HELP_SCOUT_LIST_INBOXES"
+    ],
+    "toolkit_description": "Help Scout provides customer support software with shared inbox, knowledge base, and customer management tools",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "help_scout"
+    ]
+  },
+  "19": {
+    "app": "Gorgias",
+    "toolkits_returned": [
+      "gorgias"
+    ],
+    "matched_toolkits": [
+      "gorgias"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "GORGIAS_LIST_TICKETS"
+    ],
+    "related_tools": [
+      "GORGIAS_GET_TICKET",
+      "GORGIAS_UPDATE_TICKET",
+      "GORGIAS_LIST_VIEW_ITEMS"
+    ],
+    "toolkit_description": "Gorgias is a helpdesk and live chat platform specializing in e-commerce, offering automated support, order management, and unified customer communication",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "gorgias"
+    ]
+  },
+  "20": {
+    "app": "Gladly",
+    "toolkits_returned": [
+      "helpdesk"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "HELPDESK_LIST_TICKETS"
+    ],
+    "related_tools": [
+      "HELPDESK_LIST_AGENTS",
+      "HELPDESK_LIST_TEAMS"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "agent_mail",
+      "gemini",
+      "getanyapi",
+      "helpdesk",
+      "ploid",
+      "taskrabbit_mcp",
+      "tavily"
+    ]
+  },
+  "21": {
+    "app": "Slack",
+    "toolkits_returned": [
+      "slack"
+    ],
+    "matched_toolkits": [
+      "slack"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SLACK_LIST_ALL_CHANNELS"
+    ],
+    "related_tools": [
+      "SLACK_LIST_CONVERSATIONS",
+      "SLACK_FIND_CHANNELS",
+      "SLACK_RETRIEVE_CONVERSATION_INFORMATION"
+    ],
+    "toolkit_description": "Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work - all within a secure, enterprise-grade enviro",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "slack"
+    ]
+  },
+  "22": {
+    "app": "Twilio",
+    "toolkits_returned": [
+      "twilio"
+    ],
+    "matched_toolkits": [
+      "twilio"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "TWILIO_LIST_CALL"
+    ],
+    "related_tools": [
+      "TWILIO_FETCH_CALL",
+      "TWILIO_LIST_CALL_EVENT",
+      "TWILIO_LIST_ACCOUNT"
+    ],
+    "toolkit_description": "Use shared API_KEY credentials for production account REST and all 45 triggers; per-connection BASIC for account administration and cross-account tools; or account S2S OAuth for mapped actions.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "twilio"
+    ]
+  },
+  "23": {
+    "app": "Zoho Cliq",
+    "toolkits_returned": [
+      "zoho_cliq"
+    ],
+    "matched_toolkits": [
+      "zoho_cliq"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "ZOHO_CLIQ_LIST_DATABASE_RECORDS"
+    ],
+    "related_tools": [
+      "ZOHO_CLIQ_UPDATE_DATABASE_RECORD",
+      "ZOHO_CLIQ_GET_DATABASE_RECORD"
+    ],
+    "toolkit_description": "Team communication and collaboration platform by Zoho with channels, bots, and integrations",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "zoho_cliq"
+    ]
+  },
+  "24": {
+    "app": "Lark (Larksuite)",
+    "toolkits_returned": [
+      "lark"
+    ],
+    "matched_toolkits": [
+      "lark"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "LARK_DOCS_SEARCH_RECORDS"
+    ],
+    "related_tools": [
+      "LARK_DOCS_LIST_ALL_TABLES",
+      "LARK_DOCS_LIST_FIELDS",
+      "LARK_DOCS_UPDATE_RECORDS"
+    ],
+    "toolkit_description": "Enterprise collaboration platform with messaging, video conferencing, calendar, and document management",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "lark"
+    ]
+  },
+  "25": {
+    "app": "Pumble",
+    "toolkits_returned": [
+      "pumble"
+    ],
+    "matched_toolkits": [
+      "pumble"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PUMBLE_LIST_CHANNELS"
+    ],
+    "related_tools": [
+      "PUMBLE_LIST_CHANNEL_MESSAGES",
+      "PUMBLE_SEND_MESSAGE"
+    ],
+    "toolkit_description": "Pumble is a team communication platform for channels, direct messages, scheduled messages, and workspace collaboration.",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "pumble"
+    ]
+  },
+  "26": {
+    "app": "Discord",
+    "toolkits_returned": [
+      "discordbot"
+    ],
+    "matched_toolkits": [
+      "discordbot"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "DISCORDBOT_SEARCH_GUILD_MESSAGES",
+      "DISCORDBOT_LIST_MESSAGES",
+      "DISCORDBOT_GET_MESSAGE"
+    ],
+    "related_tools": [
+      "DISCORDBOT_GET_CONNECTED_GUILD",
+      "DISCORDBOT_LIST_GUILD_CHANNELS",
+      "DISCORDBOT_BULK_DELETE_MESSAGES",
+      "DISCORDBOT_CREATE_MESSAGE",
+      "DISCORDBOT_UPDATE_MESSAGE"
+    ],
+    "toolkit_description": "Discordbot refers to automated programs on Discord servers, performing tasks like moderation, music playback, and user engagement to enhance community interactions",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "cloudflare_api_key",
+      "discordbot",
+      "elevenlabs",
+      "mistral_ai",
+      "openai",
+      "tik_hub"
+    ]
+  },
+  "27": {
+    "app": "Telegram",
+    "toolkits_returned": [
+      "telegram"
+    ],
+    "matched_toolkits": [
+      "telegram"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "TELEGRAM_GET_UPDATES"
+    ],
+    "related_tools": [
+      "TELEGRAM_SEND_MESSAGE",
+      "TELEGRAM_ANSWER_CALLBACK_QUERY",
+      "TELEGRAM_GET_CHAT_HISTORY"
+    ],
+    "toolkit_description": "Telegram is a cloud-based messaging app with a focus on security and speed. Build bots to send messages, manage chats, and interact with users.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "telegram"
+    ]
+  },
+  "28": {
+    "app": "WhatsApp Business",
+    "toolkits_returned": [
+      "whatsapp"
+    ],
+    "matched_toolkits": [
+      "whatsapp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "WHATSAPP_GET_MESSAGE_HISTORY"
+    ],
+    "related_tools": [
+      "WHATSAPP_GET_MESSAGE_HISTORY_EVENTS",
+      "WHATSAPP_GET_PHONE_NUMBERS",
+      "WHATSAPP_SEND_MESSAGE"
+    ],
+    "toolkit_description": "Enables interaction with customers through the WhatsApp Business API for messaging and automation. Only supports WhatsApp Business accounts, not WhatsApp Personal accounts.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "whatsapp"
+    ]
+  },
+  "29": {
+    "app": "Aircall",
+    "toolkits_returned": [
+      "aircall"
+    ],
+    "matched_toolkits": [
+      "aircall"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "AIRCALL_LIST_CALLS"
+    ],
+    "related_tools": [
+      "AIRCALL_GET_CALL",
+      "AIRCALL_SEARCH_CALLS",
+      "AIRCALL_TAG_CALL"
+    ],
+    "toolkit_description": "Aircall is a cloud-based phone and call-center platform. This toolkit manages users, teams, phone numbers, calls, contacts, and tags on a single Aircall company account via the Public API.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "aircall"
+    ]
+  },
+  "30": {
+    "app": "Vonage",
+    "toolkits_returned": [
+      "hunter",
+      "sentfromai",
+      "openai"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "HUNTER_LIST_MESSAGES",
+      "SENTFROMAI_SEARCH_MESSAGES",
+      "OPENAI_LIST_CONVERSATION_ITEMS"
+    ],
+    "related_tools": [
+      "HUNTER_LIST_LEADS",
+      "HUNTER_LIST_SEQUENCES",
+      "HUNTER_UPDATE_LEAD",
+      "SENTFROMAI_GET_MESSAGE",
+      "SENTFROMAI_LIST_INBOXES",
+      "OPENAI_GET_CONVERSATION_ITEM"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 9 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "api_ninjas",
+      "cloudflare_api_key",
+      "elevenlabs",
+      "gleif",
+      "hunter",
+      "mistral_ai",
+      "openai",
+      "sentfromai"
+    ]
+  },
+  "31": {
+    "app": "Google Ads",
+    "toolkits_returned": [
+      "googleads",
+      "gmail",
+      "googledrive"
+    ],
+    "matched_toolkits": [
+      "googleads"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "GOOGLEADS_SEARCH_GAQL"
+    ],
+    "related_tools": [
+      "GOOGLEADS_SEARCH_STREAM_GAQL",
+      "GOOGLEADS_SEARCH_GOOGLE_ADS_FIELDS",
+      "GOOGLEADS_LIST_ACCESSIBLE_CUSTOMERS",
+      "GMAIL_SEARCH_PEOPLE",
+      "GMAIL_FETCH_EMAILS",
+      "GOOGLEDRIVE_ADD_FILE_SHARING_PREFERENCE"
+    ],
+    "toolkit_description": "Google Ads, is an online advertising platform developed by Google, where advertisers bid to display brief advertisements, service offerings, product listings, and videos to web users.",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "gmail",
+      "googleads",
+      "googledrive"
+    ]
+  },
+  "32": {
+    "app": "Meta Ads",
+    "toolkits_returned": [
+      "metaads"
+    ],
+    "matched_toolkits": [
+      "metaads"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "METAADS_LIST_ADS"
+    ],
+    "related_tools": [
+      "METAADS_GET_AD_ACCOUNTS",
+      "METAADS_GET_INSIGHTS",
+      "METAADS_GET_OBJECT"
+    ],
+    "toolkit_description": "Create, edit and get insights from ads across Meta technologies, including Facebook, Instagram, Messenger, WhatsApp and more.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "metaads"
+    ]
+  },
+  "33": {
+    "app": "LinkedIn Ads",
+    "toolkits_returned": [
+      "linkedin_ads"
+    ],
+    "matched_toolkits": [
+      "linkedin_ads"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "LINKEDIN_ADS_SEARCH_CAMPAIGNS",
+      "LINKEDIN_ADS_SEARCH_AD_ACCOUNTS"
+    ],
+    "related_tools": [
+      "LINKEDIN_ADS_SEARCH_CREATIVES",
+      "LINKEDIN_ADS_GET_AD_ANALYTICS",
+      "LINKEDIN_ADS_GET_AD_ACCOUNT",
+      "LINKEDIN_ADS_LIST_CONVERSION_RULES"
+    ],
+    "toolkit_description": "LinkedIn Marketing and Advertising API for managing ad campaigns, analytics, and organization social content",
+    "guidance": "Found 6 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "linkedin_ads"
+    ]
+  },
+  "34": {
+    "app": "GoHighLevel",
+    "toolkits_returned": [
+      "highlevel_mcp"
+    ],
+    "matched_toolkits": [
+      "highlevel_mcp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "HIGHLEVEL_MCP_CONTACTS_GET_CONTACTS"
+    ],
+    "related_tools": [
+      "HIGHLEVEL_MCP_CONTACTS_GET_CONTACT",
+      "HIGHLEVEL_MCP_CONTACTS_UPDATE_CONTACT"
+    ],
+    "toolkit_description": "HighLevel MCP lets authorized agents work with contacts, conversations, calendars, opportunities, and other location-scoped HighLevel resources.",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "highlevel_mcp"
+    ]
+  },
+  "35": {
+    "app": "Mailchimp",
+    "toolkits_returned": [
+      "mailchimp"
+    ],
+    "matched_toolkits": [
+      "mailchimp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "MAILCHIMP_GET_AUDIENCES_CONTACTS"
+    ],
+    "related_tools": [
+      "MAILCHIMP_GET_AUDIENCES_CONTACTS_DETAIL",
+      "MAILCHIMP_GET_LISTS_INFO",
+      "MAILCHIMP_UPDATE_AUDIENCES_CONTACTS"
+    ],
+    "toolkit_description": "Mailchimp is an email marketing and automation platform providing campaign templates, audience segmentation, and performance analytics to drive engagement and conversions",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "mailchimp"
+    ]
+  },
+  "36": {
+    "app": "Klaviyo",
+    "toolkits_returned": [
+      "klaviyo"
+    ],
+    "matched_toolkits": [
+      "klaviyo"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "KLAVIYO_GET_LISTS"
+    ],
+    "related_tools": [
+      "KLAVIYO_GET_LIST",
+      "KLAVIYO_GET_LIST_PROFILES"
+    ],
+    "toolkit_description": "Klaviyo is a data-driven email and SMS marketing platform that allows e-commerce brands to deliver targeted messages, track conversions, and scale customer relationships",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "klaviyo"
+    ]
+  },
+  "37": {
+    "app": "systeme.io",
+    "toolkits_returned": [
+      "getanyapi",
+      "semrush"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "GETANYAPI_LINKEDIN_ADS",
+      "SEMRUSH_MAP_RANK_TRACKER_LIST_CAMPAIGNS",
+      "GETANYAPI_FACEBOOK_ADS_SEARCH"
+    ],
+    "related_tools": [
+      "GETANYAPI_GET_API_CONTRACT",
+      "GETANYAPI_LINKEDIN_ADS_SEARCH",
+      "GETANYAPI_LINKEDIN_AD",
+      "SEMRUSH_MAP_RANK_TRACKER_GET_CAMPAIGN",
+      "SEMRUSH_MAP_RANK_TRACKER_UPDATE_CAMPAIGN",
+      "GETANYAPI_FACEBOOK_AD_DETAILS_FULL"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 9 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "brightdata",
+      "contactout",
+      "getanyapi",
+      "hunter",
+      "semrush",
+      "strale",
+      "tomba"
+    ]
+  },
+  "38": {
+    "app": "Pinterest",
+    "toolkits_returned": [
+      "pinterest"
+    ],
+    "matched_toolkits": [
+      "pinterest"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PINTEREST_LIST_PINS"
+    ],
+    "related_tools": [
+      "PINTEREST_LIST_BOARDS",
+      "PINTEREST_GET_PIN",
+      "PINTEREST_LIST_BOARD_SECTIONS"
+    ],
+    "toolkit_description": "Pinterest is a visual discovery platform for finding ideas like recipes, home and style inspiration, and more.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "pinterest"
+    ]
+  },
+  "39": {
+    "app": "Threads (Meta)",
+    "toolkits_returned": [
+      "threads"
+    ],
+    "matched_toolkits": [
+      "threads"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "THREADS_LIST_MY_POSTS"
+    ],
+    "related_tools": [
+      "THREADS_GET_POST_INSIGHTS",
+      "THREADS_LIST_POST_REPLIES"
+    ],
+    "toolkit_description": "Threads is Meta's social network for publishing posts, managing replies, discovering public content, and analyzing profile and post performance.",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "threads"
+    ]
+  },
+  "40": {
+    "app": "SendGrid",
+    "toolkits_returned": [
+      "sendgrid"
+    ],
+    "matched_toolkits": [
+      "sendgrid"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SENDGRID_FILTER_ALL_MESSAGES"
+    ],
+    "related_tools": [
+      "SENDGRID_FILTER_MESSAGES_BY_MESSAGE_ID",
+      "SENDGRID_REQUEST_CSV"
+    ],
+    "toolkit_description": "SendGrid is a cloud-based email delivery platform providing transactional and marketing email services, with APIs for integration, analytics, and scalability",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "sendgrid"
+    ]
+  },
+  "41": {
+    "app": "Shopify",
+    "toolkits_returned": [
+      "shopify"
+    ],
+    "matched_toolkits": [
+      "shopify"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SHOPIFY_GET_PRODUCTS_PAGINATED"
+    ],
+    "related_tools": [
+      "SHOPIFY_GRAPH_QL_PRODUCTS",
+      "SHOPIFY_BULK_QUERY_OPERATION",
+      "SHOPIFY_GET_PRODUCT"
+    ],
+    "toolkit_description": "Shopify is an e-commerce platform. This toolkit is GraphQL-first for new Admin API automations while retaining legacy REST compatibility actions for older workflows and numeric-ID interoperability",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "shopify"
+    ]
+  },
+  "42": {
+    "app": "WooCommerce",
+    "toolkits_returned": [
+      "just_one_api",
+      "getanyapi"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+      "GETANYAPI_SHOPIFY_SEARCH",
+      "JUST_ONE_API_1688_SEARCH_ITEM_LIST"
+    ],
+    "related_tools": [
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V2",
+      "GETANYAPI_GET_API_CONTRACT",
+      "GETANYAPI_SHOPIFY_PRODUCT",
+      "JUST_ONE_API_1688_GET_ITEM_DETAIL"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "brightdata",
+      "elevenlabs",
+      "getanyapi",
+      "just_one_api",
+      "photoroom"
+    ]
+  },
+  "43": {
+    "app": "BigCommerce",
+    "toolkits_returned": [
+      "bigcommerce"
+    ],
+    "matched_toolkits": [
+      "bigcommerce"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "BIGCOMMERCE_LIST_PRODUCTS"
+    ],
+    "related_tools": [
+      "BIGCOMMERCE_GET_PRODUCT",
+      "BIGCOMMERCE_UPDATE_PRODUCTS",
+      "BIGCOMMERCE_LIST_ALL_CATEGORIES"
+    ],
+    "toolkit_description": "Manage BigCommerce stores, catalogs, orders, customers, channels, content, and settings through the Store Management APIs.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "bigcommerce"
+    ]
+  },
+  "44": {
+    "app": "Salesforce Commerce Cloud",
+    "toolkits_returned": [
+      "just_one_api"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V1",
+      "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V2",
+      "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST"
+    ],
+    "related_tools": [
+      "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL",
+      "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL_FULL_COVERAGE",
+      "JUST_ONE_API_TAOBAO_GET_ITEM_COMMENT",
+      "JUST_ONE_API_TAOBAO_GET_SOCIAL_FEED",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "cloudflare_api_key",
+      "getanyapi",
+      "gleif",
+      "inspo_mcp",
+      "just_one_api",
+      "strale"
+    ]
+  },
+  "45": {
+    "app": "Magento (Adobe Commerce)",
+    "toolkits_returned": [
+      "getanyapi",
+      "just_one_api"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "GETANYAPI_SHOPIFY_SEARCH",
+      "JUST_ONE_API_DOUYIN_EC_SEARCH_ITEM_LIST",
+      "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST"
+    ],
+    "related_tools": [
+      "GETANYAPI_GET_API_CONTRACT",
+      "GETANYAPI_SHOPIFY_PRODUCT",
+      "GETANYAPI_SHOPIFY_PRODUCTS",
+      "JUST_ONE_API_DOUYIN_EC_GET_ITEM_DETAIL",
+      "JUST_ONE_API_DOUYIN_EC_GET_ITEM_SKU_INFO",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 9 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "agent_mail",
+      "getanyapi",
+      "inspo_mcp",
+      "just_one_api",
+      "strale"
+    ]
+  },
+  "46": {
+    "app": "Squarespace",
+    "toolkits_returned": [
+      "getanyapi",
+      "just_one_api"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "GETANYAPI_SHOPIFY_SEARCH",
+      "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST"
+    ],
+    "related_tools": [
+      "GETANYAPI_GET_API_CONTRACT",
+      "GETANYAPI_SHOPIFY_PRODUCT",
+      "GETANYAPI_SHOPIFY_PRODUCTS",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V2"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "cloudflare_api_key",
+      "getanyapi",
+      "inspo_mcp",
+      "just_one_api",
+      "ploid"
+    ]
+  },
+  "47": {
+    "app": "Ecwid",
+    "toolkits_returned": [
+      "getanyapi",
+      "just_one_api"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "GETANYAPI_SHOPIFY_SEARCH",
+      "JUST_ONE_API_DOUYIN_EC_SEARCH_ITEM_LIST",
+      "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST"
+    ],
+    "related_tools": [
+      "GETANYAPI_GET_API_CONTRACT",
+      "GETANYAPI_SHOPIFY_PRODUCT",
+      "GETANYAPI_SHOPIFY_PRODUCTS",
+      "JUST_ONE_API_DOUYIN_EC_GET_ITEM_DETAIL",
+      "JUST_ONE_API_DOUYIN_EC_GET_ITEM_SKU_INFO",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 9 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "getanyapi",
+      "inspo_mcp",
+      "just_one_api"
+    ]
+  },
+  "48": {
+    "app": "Gumroad",
+    "toolkits_returned": [
+      "gumroad"
+    ],
+    "matched_toolkits": [
+      "gumroad"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "GUMROAD_LIST_PRODUCTS"
+    ],
+    "related_tools": [
+      "GUMROAD_GET_PRODUCT",
+      "GUMROAD_UPDATE_PRODUCT"
+    ],
+    "toolkit_description": "Gumroad simplifies selling digital goods, physical products, and memberships by offering a streamlined checkout, marketing tools, and direct payout options",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "gumroad"
+    ]
+  },
+  "49": {
+    "app": "Amazon Selling Partner",
+    "toolkits_returned": [
+      "just_one_api",
+      "getanyapi"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "JUST_ONE_API_AMAZON_SEARCH_PRODUCTS",
+      "GETANYAPI_AMAZON_SELLER_PRODUCTS",
+      "JUST_ONE_API_AMAZON_GET_PRODUCT_DETAIL"
+    ],
+    "related_tools": [
+      "JUST_ONE_API_AMAZON_GET_PRODUCT_TOP_REVIEWS",
+      "JUST_ONE_API_AMAZON_GET_CATEGORY_PRODUCTS",
+      "JUST_ONE_API_AMAZON_GET_BEST_SELLERS",
+      "GETANYAPI_GET_API_CONTRACT",
+      "GETANYAPI_AMAZON_OFFERS"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "brightdata",
+      "dataforseo",
+      "getanyapi",
+      "gleif",
+      "just_one_api",
+      "openweb_ninja"
+    ]
+  },
+  "50": {
+    "app": "fanbasis",
+    "toolkits_returned": [
+      "just_one_api"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V1",
+      "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+      "JUST_ONE_API_DOUYIN_EC_SEARCH_ITEM_LIST"
+    ],
+    "related_tools": [
+      "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL",
+      "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V2",
+      "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL_FULL_COVERAGE",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1",
+      "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V2",
+      "JUST_ONE_API_DOUYIN_EC_GET_ITEM_DETAIL"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 9 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "getanyapi",
+      "just_one_api",
+      "tik_hub"
+    ]
+  },
+  "51": {
+    "app": "DataForSEO",
+    "toolkits_returned": [
+      "dataforseo"
+    ],
+    "matched_toolkits": [
+      "dataforseo"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "DATAFORSEO_LIST_SERP_TASKS_READY"
+    ],
+    "related_tools": [
+      "DATAFORSEO_GET_SERP_GOOGLE_ORGANIC_TASK_ADVANCED_BY_ID",
+      "DATAFORSEO_LIST_SERP_GOOGLE_ORGANIC_TASKS_READY",
+      "DATAFORSEO_CREATE_SERP_GOOGLE_ORGANIC_TASK_POST"
+    ],
+    "toolkit_description": "SEO data and analytics platform providing SERP data, backlinks, keywords, and competitive intelligence",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "dataforseo"
+    ]
+  },
+  "52": {
+    "app": "SE Ranking",
+    "toolkits_returned": [
+      "mrscraper",
+      "serpapi"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "MRSCRAPER_LIST_RESULTS",
+      "SERPAPI_SEARCH"
+    ],
+    "related_tools": [
+      "MRSCRAPER_GET_RESULT",
+      "MRSCRAPER_CREATE_AI_SCRAPER",
+      "MRSCRAPER_RERUN_AI_SCRAPER",
+      "SERPAPI_GOOGLE_LIGHT_SEARCH",
+      "SERPAPI_BING_SEARCH"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "getanyapi",
+      "mrscraper",
+      "semrush",
+      "serpapi",
+      "strale"
+    ]
+  },
+  "53": {
+    "app": "Ahrefs",
+    "toolkits_returned": [
+      "ahrefs"
+    ],
+    "matched_toolkits": [
+      "ahrefs"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "AHREFS_FETCH_ALL_BACKLINKS"
+    ],
+    "related_tools": [
+      "AHREFS_FETCH_BROKEN_BACKLINKS_DATA",
+      "AHREFS_RETRIEVE_ANCHOR_DATA",
+      "AHREFS_FETCH_SITE_EXPLORER_REFERRING_DOMAINS"
+    ],
+    "toolkit_description": "Ahrefs is an SEO and marketing platform offering site audits, keyword research, content analysis, and competitive insights to improve search rankings and drive organic traffic",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "ahrefs"
+    ]
+  },
+  "54": {
+    "app": "MrScraper",
+    "toolkits_returned": [
+      "mrscraper"
+    ],
+    "matched_toolkits": [
+      "mrscraper"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "MRSCRAPER_LIST_RESULTS"
+    ],
+    "related_tools": [
+      "MRSCRAPER_GET_RESULT",
+      "MRSCRAPER_CREATE_AI_SCRAPER",
+      "MRSCRAPER_RERUN_AI_SCRAPER"
+    ],
+    "toolkit_description": "MrScraper provides web scraping APIs for structured extraction, search results, marketplace data, travel data, and web unblocking.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "mrscraper"
+    ]
+  },
+  "55": {
+    "app": "Apify",
+    "toolkits_returned": [
+      "apify"
+    ],
+    "matched_toolkits": [
+      "apify"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "APIFY_GET_DATASET_ITEMS",
+      "APIFY_DATASET_GET"
+    ],
+    "related_tools": [
+      "APIFY_DATASETS_GET",
+      "APIFY_GET_RUN_DATASET_ITEMS",
+      "APIFY_ACTOR_RUN_GET",
+      "APIFY_GET_RUN_DEFAULT_DATASET",
+      "APIFY_DATASET_STATISTICS_GET"
+    ],
+    "toolkit_description": "Apify is a platform for building, deploying, and managing web scraping and automation tools, known as Actors.",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "apify"
+    ]
+  },
+  "56": {
+    "app": "Firecrawl",
+    "toolkits_returned": [
+      "firecrawl"
+    ],
+    "matched_toolkits": [
+      "firecrawl"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "FIRECRAWL_SCRAPE"
+    ],
+    "related_tools": [
+      "FIRECRAWL_SEARCH",
+      "FIRECRAWL_BATCH_SCRAPE",
+      "FIRECRAWL_MAP_MULTIPLE_URLS_BASED_ON_OPTIONS"
+    ],
+    "toolkit_description": "Firecrawl automates web crawling and data extraction, enabling organizations to gather content, index sites, and gain insights from online sources at scale",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "firecrawl"
+    ]
+  },
+  "57": {
+    "app": "Bright Data",
+    "toolkits_returned": [
+      "brightdata"
+    ],
+    "matched_toolkits": [
+      "brightdata"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "BRIGHTDATA_DATASET_LIST",
+      "BRIGHTDATA_FILTER_DATASET",
+      "BRIGHTDATA_GET_DATASET_METADATA"
+    ],
+    "related_tools": [
+      "BRIGHTDATA_SEARCH_DATASET",
+      "BRIGHTDATA_GET_SNAPSHOT_STATUS",
+      "BRIGHTDATA_GET_SNAPSHOT_RESULTS"
+    ],
+    "toolkit_description": "Bright Data provides the world's #1 web data platform with Web Unlocker for bypassing anti-bot systems, SERP API for search engine data, and pre-made scrapers for popular websites. Collect any web data at scale.",
+    "guidance": "Found 6 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "brightdata"
+    ]
+  },
+  "58": {
+    "app": "Sherlock",
+    "toolkits_returned": [
+      "limadata",
+      "icypeas"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "LIMADATA_SEARCH_WEB",
+      "ICYPEAS_RETRIEVE_SEARCH_RESULTS"
+    ],
+    "related_tools": [
+      "LIMADATA_EXTRACT_WEB_PAGES",
+      "LIMADATA_RESEARCH_WEB",
+      "LIMADATA_ENRICH_COMPANY",
+      "ICYPEAS_FIND_SINGLE_EMAIL",
+      "ICYPEAS_BULK_EMAIL_SEARCH"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "getanyapi",
+      "icypeas",
+      "limadata",
+      "strale"
+    ]
+  },
+  "59": {
+    "app": "Waterfall.io",
+    "toolkits_returned": [
+      "brightdata",
+      "limadata"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "BRIGHTDATA_SCRAPE_DATA_SYNC",
+      "LIMADATA_SEARCH_WEB",
+      "LIMADATA_EXTRACT_WEB_PAGES"
+    ],
+    "related_tools": [
+      "BRIGHTDATA_GET_SNAPSHOT_RESULTS",
+      "BRIGHTDATA_GET_SNAPSHOT_STATUS",
+      "BRIGHTDATA_CRAWL_API",
+      "LIMADATA_RESEARCH_WEB",
+      "LIMADATA_ENRICH_COMPANY"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "brightdata",
+      "companyenrich",
+      "excalidraw_mcp",
+      "limadata",
+      "orgo",
+      "predict_leads",
+      "strale",
+      "thecompaniesapi"
+    ]
+  },
+  "60": {
+    "app": "Clay",
+    "toolkits_returned": [
+      "clay"
+    ],
+    "matched_toolkits": [
+      "clay"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "CLAY_SEARCH_PEOPLE_OR_COMPANIES",
+      "CLAY_CONTINUE_SEARCH"
+    ],
+    "related_tools": [
+      "CLAY_GET_SEARCH_QUERY_REFERENCE",
+      "CLAY_RUN_ROUTINE"
+    ],
+    "toolkit_description": "Clay is a go-to-market data enrichment and workflow automation platform for searching people and companies, running routines, and querying workspace tables.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "clay"
+    ]
+  },
+  "61": {
+    "app": "GitHub",
+    "toolkits_returned": [
+      "github"
+    ],
+    "matched_toolkits": [
+      "github"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "GITHUB_LIST_REPOSITORIES"
+    ],
+    "related_tools": [
+      "GITHUB_LIST_REPOSITORIES_FOR_THE_AUTHENTICATED_USER",
+      "GITHUB_GET_A_REPOSITORY",
+      "GITHUB_FIND_REPOSITORIES"
+    ],
+    "toolkit_description": "GitHub is a code hosting platform for version control and collaboration, offering Git-based repository management, issue tracking, and continuous integration features",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "github"
+    ]
+  },
+  "62": {
+    "app": "Vercel",
+    "toolkits_returned": [
+      "vercel"
+    ],
+    "matched_toolkits": [
+      "vercel"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "VERCEL_GET_PROJECTS"
+    ],
+    "related_tools": [
+      "VERCEL_GET_PROJECT2",
+      "VERCEL_GET_DEPLOYMENTS",
+      "VERCEL_GET_TEAMS"
+    ],
+    "toolkit_description": "Vercel is a platform for frontend frameworks and static sites, enabling developers to host websites and web services that deploy instantly, scale automatically, and require minimal configuration.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "vercel"
+    ]
+  },
+  "63": {
+    "app": "Netlify",
+    "toolkits_returned": [
+      "netlify_mcp"
+    ],
+    "matched_toolkits": [
+      "netlify_mcp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "NETLIFY_MCP_NETLIFY_PROJECT_SERVICES_READER"
+    ],
+    "related_tools": [
+      "NETLIFY_MCP_NETLIFY_PROJECT_SERVICES_UPDATER",
+      "NETLIFY_MCP_NETLIFY_DEPLOY_SERVICES_READER",
+      "NETLIFY_MCP_NETLIFY_TEAM_SERVICES_READER"
+    ],
+    "toolkit_description": "Deploy, inspect, and manage Netlify sites, builds, environment configuration, and development workflows through Netlify's hosted MCP server.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "netlify_mcp"
+    ]
+  },
+  "64": {
+    "app": "Cloudflare",
+    "toolkits_returned": [
+      "cloudflare"
+    ],
+    "matched_toolkits": [
+      "cloudflare"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "CLOUDFLARE_LIST_DNS_RECORDS"
+    ],
+    "related_tools": [
+      "CLOUDFLARE_LIST_ZONES",
+      "CLOUDFLARE_UPDATE_DNS_RECORD",
+      "CLOUDFLARE_DELETE_DNS_RECORD"
+    ],
+    "toolkit_description": "Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "cloudflare"
+    ]
+  },
+  "65": {
+    "app": "Supabase",
+    "toolkits_returned": [
+      "supabase"
+    ],
+    "matched_toolkits": [
+      "supabase"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SUPABASE_RUN_READ_ONLY_QUERY",
+      "SUPABASE_GET_TABLE_SCHEMAS",
+      "SUPABASE_LIST_TABLES"
+    ],
+    "related_tools": [
+      "SUPABASE_SELECT_FROM_TABLE",
+      "SUPABASE_BETA_RUN_SQL_QUERY",
+      "SUPABASE_LIST_ALL_PROJECTS",
+      "SUPABASE_GENERATE_TYPESCRIPT_TYPES",
+      "SUPABASE_GET_PROJECT_LOGS"
+    ],
+    "toolkit_description": "Supabase is an open-source backend-as-a-service providing a Postgres database, authentication, storage, and real-time subscription APIs for building modern applications",
+    "guidance": "IMPORTANT: Follow the recommended plan below. Extract steps before execution, adapt to your current context, execute sequentially with current_step parameter, and check known pitfalls to avoid errors.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "supabase"
+    ]
+  },
+  "66": {
+    "app": "Neo4j",
+    "toolkits_returned": [
+      "neo4j"
+    ],
+    "matched_toolkits": [
+      "neo4j"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "NEO4J_LIST_INSTANCES_BETA",
+      "NEO4J_LIST_PROJECTS",
+      "NEO4J_GET_INSTANCE_BETA"
+    ],
+    "related_tools": [
+      "NEO4J_UPDATE_INSTANCE_BETA",
+      "NEO4J_LIST_SNAPSHOTS",
+      "NEO4J_GET_PROJECT",
+      "NEO4J_GET_PROJECT_BETA",
+      "NEO4J_CREATE_INSTANCE_BETA"
+    ],
+    "toolkit_description": "Graph database platform for connected data and real-time analytics",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "cloudflare_api_key",
+      "getanyapi",
+      "gleif",
+      "neo4j",
+      "ploid",
+      "strale"
+    ]
+  },
+  "67": {
+    "app": "Snowflake",
+    "toolkits_returned": [
+      "snowflake"
+    ],
+    "matched_toolkits": [
+      "snowflake"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SNOWFLAKE_EXECUTE_SQL"
+    ],
+    "related_tools": [
+      "SNOWFLAKE_CHECK_STATEMENT_STATUS",
+      "SNOWFLAKE_CANCEL_STATEMENT_EXECUTION",
+      "SNOWFLAKE_SHOW_DATABASES"
+    ],
+    "toolkit_description": "Snowflake is a cloud-based data warehouse offering elastic scaling, secure data sharing, and SQL analytics across multiple cloud environments",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "snowflake"
+    ]
+  },
+  "68": {
+    "app": "MongoDB Atlas",
+    "toolkits_returned": [
+      "mongodb"
+    ],
+    "matched_toolkits": [
+      "mongodb"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "MONGODB_LIST_GROUPS",
+      "MONGODB_LIST_ORGS",
+      "MONGODB_LIST_GROUP_PROCESS_DATABASES"
+    ],
+    "related_tools": [
+      "MONGODB_GET_ORG_GROUPS",
+      "MONGODB_GET_GROUP",
+      "MONGODB_LIST_GROUP_CLUSTERS",
+      "MONGODB_GET_ORG",
+      "MONGODB_GET_ORG_SETTINGS",
+      "MONGODB_LIST_GROUP_PROCESSES"
+    ],
+    "toolkit_description": "Administer MongoDB Atlas organizations, projects, clusters, users, networking, backups, and related cloud resources with an Atlas OAuth service account.",
+    "guidance": "Found 9 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "brightdata",
+      "context_dev",
+      "mistral_ai",
+      "mongodb",
+      "ploid",
+      "strale"
+    ]
+  },
+  "69": {
+    "app": "Datadog",
+    "toolkits_returned": [
+      "datadog"
+    ],
+    "matched_toolkits": [
+      "datadog"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "DATADOG_LIST_HOSTS"
+    ],
+    "related_tools": [
+      "DATADOG_GET_TAGS",
+      "DATADOG_LIST_METRICS",
+      "DATADOG_LIST_ALL_TAGS"
+    ],
+    "toolkit_description": "Datadog offers monitoring, observability, and security for cloud-scale applications, unifying metrics, logs, and traces to help teams detect issues and optimize performance",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "datadog"
+    ]
+  },
+  "70": {
+    "app": "Sentry",
+    "toolkits_returned": [
+      "sentry"
+    ],
+    "matched_toolkits": [
+      "sentry"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SENTRY_GET_PROJECT_EVENTS",
+      "SENTRY_GET_PROJECT_LIST"
+    ],
+    "related_tools": [
+      "SENTRY_RETRIEVE_PROJECT_EVENT_BY_ID",
+      "SENTRY_RETRIEVE_ORGANIZATION_PROJECTS",
+      "SENTRY_RETRIEVE_ORGANIZATION_EVENTS",
+      "SENTRY_ACCESS_PROJECT_INFORMATION",
+      "SENTRY_RETRIEVE_PROJECT_ISSUES_LIST"
+    ],
+    "toolkit_description": "Integrate Sentry to manage your error tracking and monitoring.",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "sentry"
+    ]
+  },
+  "71": {
+    "app": "Notion",
+    "toolkits_returned": [
+      "notion"
+    ],
+    "matched_toolkits": [
+      "notion"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "NOTION_QUERY_DATABASE"
+    ],
+    "related_tools": [
+      "NOTION_QUERY_DATABASE_WITH_FILTER",
+      "NOTION_SEARCH_NOTION_PAGE",
+      "NOTION_UPDATE_ROW_DATABASE"
+    ],
+    "toolkit_description": "Notion centralizes notes, docs, wikis, and tasks in a unified workspace, letting teams build custom workflows for collaboration and knowledge management",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "notion"
+    ]
+  },
+  "72": {
+    "app": "Airtable",
+    "toolkits_returned": [
+      "airtable"
+    ],
+    "matched_toolkits": [
+      "airtable"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "AIRTABLE_GET_BASE_SCHEMA",
+      "AIRTABLE_LIST_RECORDS"
+    ],
+    "related_tools": [
+      "AIRTABLE_LIST_BASES",
+      "AIRTABLE_GET_RECORD",
+      "AIRTABLE_GET_USER_INFO"
+    ],
+    "toolkit_description": "Airtable merges spreadsheet functionality with database power, enabling teams to organize projects, track tasks, and collaborate through customizable views, automation, and integrations for data management",
+    "guidance": "IMPORTANT: Follow the recommended plan below. Extract steps before execution, adapt to your current context, execute sequentially with current_step parameter, and check known pitfalls to avoid errors.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "airtable"
+    ]
+  },
+  "73": {
+    "app": "Linear",
+    "toolkits_returned": [
+      "linear"
+    ],
+    "matched_toolkits": [
+      "linear"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "LINEAR_LIST_LINEAR_ISSUES"
+    ],
+    "related_tools": [
+      "LINEAR_GET_LINEAR_ISSUE",
+      "LINEAR_UPDATE_ISSUE",
+      "LINEAR_LIST_LINEAR_PROJECTS"
+    ],
+    "toolkit_description": "Linear is a streamlined issue tracking and project planning tool for modern teams, featuring fast workflows, keyboard shortcuts, and GitHub integrations",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "linear"
+    ]
+  },
+  "74": {
+    "app": "Jira",
+    "toolkits_returned": [
+      "jira"
+    ],
+    "matched_toolkits": [
+      "jira"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "JIRA_SEARCH_ISSUES"
+    ],
+    "related_tools": [
+      "JIRA_SEARCH_FOR_ISSUES_USING_JQL_GET",
+      "JIRA_GET_ISSUE",
+      "JIRA_EDIT_ISSUE"
+    ],
+    "toolkit_description": "A tool for bug tracking, issue tracking, and agile project management.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "jira"
+    ]
+  },
+  "75": {
+    "app": "Asana",
+    "toolkits_returned": [
+      "asana"
+    ],
+    "matched_toolkits": [
+      "asana"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "ASANA_GET_MULTIPLE_TASKS"
+    ],
+    "related_tools": [
+      "ASANA_GET_TASKS_FROM_A_PROJECT",
+      "ASANA_GET_A_TASK",
+      "ASANA_GET_MULTIPLE_PROJECTS"
+    ],
+    "toolkit_description": "Tool to help teams organize, track, and manage their work.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "asana"
+    ]
+  },
+  "76": {
+    "app": "Monday.com",
+    "toolkits_returned": [
+      "monday"
+    ],
+    "matched_toolkits": [
+      "monday"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "MONDAY_ITEMS_PAGE"
+    ],
+    "related_tools": [
+      "MONDAY_BOARDS",
+      "MONDAY_LIST_ITEMS_BY_COLUMN_VALUES",
+      "MONDAY_COLUMNS"
+    ],
+    "toolkit_description": "monday.com is a customizable work management platform for project planning, collaboration, and automation, supporting agile, sales, marketing, and more",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "monday"
+    ]
+  },
+  "77": {
+    "app": "ClickUp",
+    "toolkits_returned": [
+      "clickup"
+    ],
+    "matched_toolkits": [
+      "clickup"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "CLICKUP_GET_FILTERED_TEAM_TASKS"
+    ],
+    "related_tools": [
+      "CLICKUP_GET_TASK",
+      "CLICKUP_GET_AUTHORIZED_TEAMS_WORKSPACES",
+      "CLICKUP_GET_TASK_COMMENTS"
+    ],
+    "toolkit_description": "ClickUp unifies tasks, docs, goals, and chat in a single platform, allowing teams to plan, organize, and collaborate across projects with customizable workflows",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "clickup"
+    ]
+  },
+  "78": {
+    "app": "Coda",
+    "toolkits_returned": [
+      "coda"
+    ],
+    "matched_toolkits": [
+      "coda"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "CODA_LIST_TABLE_ROWS",
+      "CODA_LIST_TABLES"
+    ],
+    "related_tools": [
+      "CODA_GET_A_ROW",
+      "CODA_LIST_COLUMNS",
+      "CODA_UPSERT_ROWS",
+      "CODA_LIST_AVAILABLE_DOCS",
+      "CODA_GET_A_TABLE"
+    ],
+    "toolkit_description": "Collaborative workspace platform that transforms documents into powerful tools for team productivity and project management",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "coda"
+    ]
+  },
+  "79": {
+    "app": "Smartsheet",
+    "toolkits_returned": [
+      "smartsheet"
+    ],
+    "matched_toolkits": [
+      "smartsheet"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "SMARTSHEET_GET_SHEET"
+    ],
+    "related_tools": [
+      "SMARTSHEET_LIST_SHEETS",
+      "SMARTSHEET_UPDATE_ROWS",
+      "SMARTSHEET_GET_ROW"
+    ],
+    "toolkit_description": "Smartsheet is a collaborative work management platform for organizing projects, sheets, reports, dashboards, workflows, and teams.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "smartsheet"
+    ]
+  },
+  "80": {
+    "app": "Harvest",
+    "toolkits_returned": [
+      "harvest"
+    ],
+    "matched_toolkits": [
+      "harvest"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "HARVEST_LIST_INVOICES"
+    ],
+    "related_tools": [
+      "HARVEST_GET_INVOICE",
+      "HARVEST_LIST_INVOICE_PAYMENTS",
+      "HARVEST_LIST_CLIENTS"
+    ],
+    "toolkit_description": "Harvest is a time-tracking and invoicing tool designed for teams and freelancers, helping them log billable hours, manage projects, and streamline payments",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "harvest"
+    ]
+  },
+  "81": {
+    "app": "Stripe",
+    "toolkits_returned": [
+      "stripe_mcp"
+    ],
+    "matched_toolkits": [
+      "stripe_mcp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "STRIPE_MCP_STRIPE_API_READ"
+    ],
+    "related_tools": [
+      "STRIPE_MCP_LIST_AVAILABLE_ACCOUNTS_OR_ORGS",
+      "STRIPE_MCP_STRIPE_API_SEARCH",
+      "STRIPE_MCP_STRIPE_API_WRITE"
+    ],
+    "toolkit_description": "Work with Stripe customers, products, payments, and related account resources.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "stripe_mcp"
+    ]
+  },
+  "82": {
+    "app": "Plaid",
+    "toolkits_returned": [
+      "plaid"
+    ],
+    "matched_toolkits": [
+      "plaid"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PLAID_GET_TRANSACTIONS"
+    ],
+    "related_tools": [
+      "PLAID_SYNC_TRANSACTIONS",
+      "PLAID_REFRESH_TRANSACTIONS",
+      "PLAID_GET_ACCOUNTS"
+    ],
+    "toolkit_description": "Plaid provides financial data aggregation and banking APIs for applications to connect with users' bank accounts",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "plaid"
+    ]
+  },
+  "83": {
+    "app": "Binance",
+    "toolkits_returned": [
+      "serpapi"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "SERPAPI_FINANCE_SEARCH"
+    ],
+    "related_tools": [
+      "SERPAPI_NEWS_SEARCH",
+      "SERPAPI_SEARCH"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "serpapi",
+      "surf",
+      "twelve_data"
+    ]
+  },
+  "84": {
+    "app": "Paygent Connect",
+    "toolkits_returned": [
+      "serpapi",
+      "api_ninjas",
+      "openweb_ninja"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "SERPAPI_FINANCE_SEARCH",
+      "API_NINJAS_GET_SWIFT_CODE",
+      "OPENWEB_NINJA_SEARCH_FINANCIAL_SECURITIES"
+    ],
+    "related_tools": [
+      "SERPAPI_NEWS_SEARCH",
+      "SERPAPI_SEARCH",
+      "API_NINJAS_SEARCH_ROUTING_NUMBERS",
+      "API_NINJAS_SCREEN_SANCTIONS",
+      "OPENWEB_NINJA_GET_FINANCE_STOCK_QUOTE"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "api_ninjas",
+      "brightdata",
+      "browser_use",
+      "gleif",
+      "openweb_ninja",
+      "ploid",
+      "serpapi"
+    ]
+  },
+  "85": {
+    "app": "iPayX",
+    "toolkits_returned": [
+      "icypeas"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "ICYPEAS_FIND_COMPANIES",
+      "ICYPEAS_RETRIEVE_SEARCH_RESULTS"
+    ],
+    "related_tools": [
+      "ICYPEAS_COUNT_COMPANIES",
+      "ICYPEAS_FIND_COMPANY_URL",
+      "ICYPEAS_FIND_PEOPLE",
+      "ICYPEAS_FIND_SINGLE_EMAIL",
+      "ICYPEAS_BULK_EMAIL_SEARCH"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "browser_use",
+      "getanyapi",
+      "icypeas",
+      "scrapecreators",
+      "strale"
+    ]
+  },
+  "86": {
+    "app": "QuickBooks",
+    "toolkits_returned": [
+      "quickbooks"
+    ],
+    "matched_toolkits": [
+      "quickbooks"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "QUICKBOOKS_QUERY_ENTITIES"
+    ],
+    "related_tools": [
+      "QUICKBOOKS_QUERY_INVOICES",
+      "QUICKBOOKS_QUERY_BILLS"
+    ],
+    "toolkit_description": "Quickbooks is a cloud-based accounting software that helps you manage your finances, track your income and expenses, and get insights into your business",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "quickbooks"
+    ]
+  },
+  "87": {
+    "app": "Xero",
+    "toolkits_returned": [
+      "xero"
+    ],
+    "matched_toolkits": [
+      "xero"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "XERO_LIST_INVOICES"
+    ],
+    "related_tools": [
+      "XERO_GET_INVOICE",
+      "XERO_GET_CONNECTIONS",
+      "XERO_POST_INVOICE_UPDATE"
+    ],
+    "toolkit_description": "Xero is a cloud-based accounting software for small businesses, providing invoicing, bank reconciliation, bookkeeping, and financial reporting in real time",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "xero"
+    ]
+  },
+  "88": {
+    "app": "Brex",
+    "toolkits_returned": [
+      "brex"
+    ],
+    "matched_toolkits": [
+      "brex"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "BREX_LIST_CARD_ACCOUNTS"
+    ],
+    "related_tools": [
+      "BREX_LIST_CARD_STATEMENTS",
+      "BREX_GET_CARD_TRANSACTIONS"
+    ],
+    "toolkit_description": "Brex provides corporate credit cards, spend management, and financial tools tailored for startups and tech businesses to optimize cash flow, accounting, and growth",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "brex"
+    ]
+  },
+  "89": {
+    "app": "Ramp",
+    "toolkits_returned": [
+      "ramp"
+    ],
+    "matched_toolkits": [
+      "ramp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "RAMP_GET_ALL_TRANSACTIONS"
+    ],
+    "related_tools": [
+      "RAMP_GET_TRANSACTION",
+      "RAMP_POST_ACCOUNTING_CODINGS"
+    ],
+    "toolkit_description": "Ramp is a platform that helps you manage your finances, track your income and expenses, and get insights into your business",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "ramp"
+    ]
+  },
+  "90": {
+    "app": "PitchBook",
+    "toolkits_returned": [
+      "pitchbook"
+    ],
+    "matched_toolkits": [
+      "pitchbook"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "PITCHBOOK_SEARCH_COMPANIES"
+    ],
+    "related_tools": [
+      "PITCHBOOK_GET_COMPANY",
+      "PITCHBOOK_GET_BULK_COMPANY",
+      "PITCHBOOK_GET_LOOKUP_TABLES"
+    ],
+    "toolkit_description": "PitchBook provides private-market data on companies, deals, funds, investors, people, and service providers through its contracted REST API.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "pitchbook"
+    ]
+  },
+  "91": {
+    "app": "NotebookLM",
+    "toolkits_returned": [
+      "notebook_lm"
+    ],
+    "matched_toolkits": [
+      "notebook_lm"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "NOTEBOOK_LM_GET_NOTEBOOK",
+      "NOTEBOOK_LM_LIST_RECENT_NOTEBOOKS"
+    ],
+    "related_tools": [
+      "NOTEBOOK_LM_GET_SOURCE",
+      "NOTEBOOK_LM_CREATE_AUDIO_OVERVIEW",
+      "NOTEBOOK_LM_CREATE_NOTEBOOK",
+      "NOTEBOOK_LM_DELETE_NOTEBOOKS",
+      "NOTEBOOK_LM_ADD_TEXT_SOURCES"
+    ],
+    "toolkit_description": "NotebookLM Enterprise is Google's licensed, source-grounded notebook service for organizing sources in global-location deployments.",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "notebook_lm"
+    ]
+  },
+  "92": {
+    "app": "Otter AI",
+    "toolkits_returned": [
+      "otter_ai_mcp"
+    ],
+    "matched_toolkits": [
+      "otter_ai_mcp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "OTTER_AI_MCP_OTTER_FETCH",
+      "OTTER_AI_MCP_OTTER_SEARCH"
+    ],
+    "related_tools": [
+      "OTTER_AI_MCP_OTTER_GET_USER_INFO"
+    ],
+    "toolkit_description": "Otter.ai MCP lets agents retrieve the authenticated user's profile, search authorized meetings and conversations, and fetch complete transcripts for analysis and summarization.",
+    "guidance": "Found 3 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "otter_ai_mcp"
+    ]
+  },
+  "93": {
+    "app": "Fathom",
+    "toolkits_returned": [
+      "fathom"
+    ],
+    "matched_toolkits": [
+      "fathom"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "FATHOM_LIST_MEETINGS"
+    ],
+    "related_tools": [
+      "FATHOM_LIST_TEAMS",
+      "FATHOM_LIST_TEAM_MEMBERS",
+      "FATHOM_GET_RECORDING_SUMMARY",
+      "FATHOM_GET_RECORDING_TRANSCRIPT",
+      "FATHOM_CREATE_WEBHOOK",
+      "FATHOM_DELETE_WEBHOOK"
+    ],
+    "toolkit_description": "AI meeting assistant that records, transcribes, and summarizes meetings",
+    "guidance": "IMPORTANT: Follow the recommended plan below. Extract steps before execution, adapt to your current context, execute sequentially with current_step parameter, and check known pitfalls to avoid errors.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "fathom"
+    ]
+  },
+  "94": {
+    "app": "Consensus",
+    "toolkits_returned": [
+      "consensus"
+    ],
+    "matched_toolkits": [
+      "consensus"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "CONSENSUS_SEARCH_PAPERS"
+    ],
+    "related_tools": [],
+    "toolkit_description": "Consensus provides evidence-based search across scientific research papers.",
+    "guidance": "Found 1 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "consensus"
+    ]
+  },
+  "95": {
+    "app": "Reducto",
+    "toolkits_returned": [
+      "openai",
+      "akta",
+      "limadata"
+    ],
+    "matched_toolkits": [],
+    "in_composio": false,
+    "primary_tools": [
+      "OPENAI_LIST_INPUT_ITEMS",
+      "AKTA_GET_NEWS_ARTICLES",
+      "LIMADATA_RESEARCH_WEB"
+    ],
+    "related_tools": [
+      "OPENAI_CREATE_RESPONSE",
+      "OPENAI_GET_RESPONSE",
+      "AKTA_SEARCH_NEWS",
+      "AKTA_SEARCH_COMPANIES",
+      "LIMADATA_SEARCH_WEB"
+    ],
+    "toolkit_description": "",
+    "guidance": "Found 8 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 2,
+    "toolkits_returned_all": [
+      "akta",
+      "limadata",
+      "mathpix",
+      "openai",
+      "pdf_co",
+      "predict_leads",
+      "strale"
+    ]
+  },
+  "96": {
+    "app": "Devin",
+    "toolkits_returned": [
+      "devin_mcp"
+    ],
+    "matched_toolkits": [
+      "devin_mcp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "DEVIN_MCP_LIST_WIKI_REPOS",
+      "DEVIN_MCP_ASK_WIKI_QUESTION"
+    ],
+    "related_tools": [
+      "DEVIN_MCP_READ_WIKI_STRUCTURE",
+      "DEVIN_MCP_READ_WIKI_CONTENTS",
+      "DEVIN_MCP_GENERATE_WIKI"
+    ],
+    "toolkit_description": "AI-powered access to GitHub repository documentation and codebase analysis, including private repositories, via Devin.",
+    "guidance": "Found 5 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "devin_mcp"
+    ]
+  },
+  "97": {
+    "app": "higgsfield",
+    "toolkits_returned": [
+      "higgsfield"
+    ],
+    "matched_toolkits": [
+      "higgsfield"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "HIGGSFIELD_GENERATE_IMAGE_WITH_REFERENCES",
+      "HIGGSFIELD_GENERATE_VIDEO_FROM_IMAGE",
+      "HIGGSFIELD_GENERATE_SOUL_V2_IMAGE"
+    ],
+    "related_tools": [
+      "HIGGSFIELD_GET_REQUEST_STATUS",
+      "HIGGSFIELD_GENERATE_SEEDANCE_2_5_IMAGE_VIDEO",
+      "HIGGSFIELD_GENERATE_SOUL_STANDARD_IMAGE",
+      "HIGGSFIELD_ESTIMATE_SOUL_V2_COST"
+    ],
+    "toolkit_description": "Higgsfield AI provides asynchronous image and video generation APIs powered by multiple creative AI models.",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 1,
+    "toolkits_returned_all": [
+      "gleif",
+      "higgsfield",
+      "ploid",
+      "predict_leads"
+    ]
+  },
+  "98": {
+    "app": "Mermaid CLI",
+    "toolkits_returned": [
+      "gleif",
+      "mermaid_chart_mcp"
+    ],
+    "matched_toolkits": [
+      "mermaid_chart_mcp"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "GLEIF_EXPORT_LEI_RECORDS",
+      "GLEIF_GET_LEI_RECORD",
+      "MERMAID_CHART_MCP_VALIDATE_AND_RENDER_MERMAID_DIAGRAM"
+    ],
+    "related_tools": [
+      "GLEIF_SEARCH_LEI_RECORDS",
+      "GLEIF_LIST_REFERENCE_DATA",
+      "GLEIF_GET_LEI_ISSUER_FOR_RECORD",
+      "GLEIF_GET_PARENT_INFORMATION"
+    ],
+    "toolkit_description": "Validates Mermaid syntax, renders diagrams as high-quality SVG, and displays them in an interactive UI for preview, zoom, and real-time iteration.",
+    "guidance": "Found 7 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "gleif",
+      "mermaid_chart_mcp"
+    ]
+  },
+  "99": {
+    "app": "YouTube Transcript",
+    "toolkits_returned": [
+      "youtube_transcript"
+    ],
+    "matched_toolkits": [
+      "youtube_transcript"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "YOUTUBE_TRANSCRIPT_GET_STORED_TRANSCRIPT",
+      "YOUTUBE_TRANSCRIPT_LIST_STORED_TRANSCRIPTS"
+    ],
+    "related_tools": [
+      "YOUTUBE_TRANSCRIPT_GET_VIDEO_TRANSCRIPT",
+      "YOUTUBE_TRANSCRIPT_LIST_TRANSCRIPT_LANGUAGES",
+      "YOUTUBE_TRANSCRIPT_GET_VIDEO_TRANSCRIPTS_BATCH"
+    ],
+    "toolkit_description": "Retrieve and store captions for one video or a bounded batch, read job and batch status, access stored transcripts and languages, and resolve playlist or channel video metadata through the YouTube Transcript REST API.",
+    "guidance": "Found 5 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "youtube_transcript"
+    ]
+  },
+  "100": {
+    "app": "Grain",
+    "toolkits_returned": [
+      "grain"
+    ],
+    "matched_toolkits": [
+      "grain"
+    ],
+    "in_composio": true,
+    "primary_tools": [
+      "GRAIN_LIST_RECORDINGS"
+    ],
+    "related_tools": [
+      "GRAIN_GET_RECORDING",
+      "GRAIN_GET_RECORDING_TRANSCRIPT",
+      "GRAIN_LIST_REFERENCE_DATA"
+    ],
+    "toolkit_description": "Grain records, transcribes, and organizes meetings so teams can review conversations, share insights, and manage meeting content.",
+    "guidance": "Found 4 tools for this query. Look at the schemas to know how to use them.",
+    "phrasing": 0,
+    "toolkits_returned_all": [
+      "grain"
+    ]
+  }
+}

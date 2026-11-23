@@ -33,6 +33,8 @@ def main():
     redo2 = load_json("results/redo_pass2.json", {})  # claim-coverage round, re-researched in pass 3
     redo3 = load_json("results/redo_gate_audit.json", {})  # gate audit on every self-serve app, pass 4
     acc = load_json("results/accuracy.json", None)
+    cat = load_json("results/composio_catalog.json", {})
+    issues = load_json("results/outreach_issues.json", {})
     human = load_json("results/human_review.json", {})
 
     apps = []
@@ -59,6 +61,9 @@ def main():
             "rechecked": i in p2,
             "changed": changed,
             "human": human.get(str(i)),
+            "composio": {"in_catalog": cat.get(str(i), {}).get("in_composio"), "toolkits": cat.get(str(i), {}).get("matched_toolkits", []),
+                         "tools": (cat.get(str(i), {}).get("primary_tools", []) + cat.get(str(i), {}).get("related_tools", []))[:6]},
+            "tracker_issue": (issues.get(str(i)) or {}).get("url"),
             "seconds": rec.get("seconds"),
         })
 
@@ -84,7 +89,11 @@ def main():
         "verdict": verdict_c.most_common(),
         "mcp_any": sum(a["mcp_exists"] for a in apps),
         "mcp_official": sum(a["mcp_official"] for a in apps),
-        "composio_listed": sum(1 for a in apps if (a["checks"]["composio"] or {}).get("listed")),
+        "composio_listed": sum(1 for a in apps if a["composio"]["in_catalog"]),
+        "composio_gaps": [{"id": a["id"], "app": a["app"], "category": a["category"], "verdict": a["verdict"], "access": a["access"], "blocker": a["blocker"]}
+                          for a in sorted(apps, key=lambda a: ["build_now", "build_with_caveat", "needs_outreach", "not_buildable"].index(a["verdict"]))
+                          if a["composio"]["in_catalog"] is False],
+        "tracker_issues": sum(1 for a in apps if a["tracker_issue"]),
         "by_category": {c: dict(v) for c, v in by_cat.items()},
         "blockers": [{"id": a["id"], "app": a["app"], "verdict": a["verdict"], "access": a["access"], "blocker": a["blocker"]}
                      for a in apps if a["verdict"] != "build_now"],

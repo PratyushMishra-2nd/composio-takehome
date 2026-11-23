@@ -38,12 +38,24 @@ data/apps.csv ──► agent/research.py ──► results/pass1/*.json
                   agent/adjudicate.py (third check rules on every remaining disagreement)
                          │
                          ▼
+                  Composio MCP (connect.composio.dev/mcp)
+                   agent/composio_catalog.py  COMPOSIO_SEARCH_TOOLS per app -> in catalog or gap (3 phrasings)
+                   agent/outreach.py          COMPOSIO_MULTI_EXECUTE_TOOL -> GITHUB_CREATE_AN_ISSUE
+                                              one approval-tracker issue per gated app (repo Issues tab)
+                         │
+                         ▼
                   agent/build.py ──► docs/data.json ──► docs/index.html
 ```
 
 ## Run it
 
-Requirements: Python 3.10+, the [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) logged in (`claude` on PATH). No API keys: research runs through the CLI's own login, and every verification source is public.
+Requirements: Python 3.10+, the [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) logged in (`claude` on PATH), and for the Composio steps a Composio key in `.env`:
+
+```
+COMPOSIO_API_KEY=ck_...      # composio.dev dashboard; used as Bearer token for https://connect.composio.dev/mcp
+```
+
+Research runs through the Claude Code CLI's own login; the verification sources are public; the Composio steps go through Composio's MCP server (`agent/composio_mcp.py` is a ~60-line client). The tracker step needs GitHub connected once in Composio (`COMPOSIO_MANAGE_CONNECTIONS`, one OAuth click).
 
 ```bash
 python agent/research.py --pass try --ids 61          # one app (GitHub), ~40 s
@@ -57,6 +69,8 @@ python agent/research.py --pass pass4 --redo results/redo_gate_audit.json   # ga
 python agent/verify.py   --pass final
 python agent/score.py                                 # accuracy vs the blind sample check
 python agent/adjudicate.py && python agent/score.py   # third check on disagreements
+python agent/composio_catalog.py --all                # Composio coverage via MCP -> results/composio_catalog.json
+python agent/outreach.py --dry-run                    # preview approval-tracker issues; drop --dry-run to create them
 python agent/build.py                                 # docs/data.json
 python -m http.server -d docs 8000                    # open http://localhost:8000
 ```
@@ -75,11 +89,19 @@ Results are cached per app, so a re-run only researches missing apps. Delete `re
 | `data/gold.csv`, `data/GOLD_GUIDE.md` | Blind reference check on the 20-app sample (independent model, never saw agent output), and the rules used |
 | `agent/adjudicate.py` | Third check: rules on each remaining agent-vs-reference disagreement |
 | `agent/score.py` | Field-level accuracy of pass 1 and final vs the reference set, plus adjudicated accuracy |
+| `agent/composio_mcp.py` | Minimal client for Composio's MCP server |
+| `agent/composio_catalog.py` | Which of the 100 apps already have a Composio toolkit (gap backlog) |
+| `agent/outreach.py` | Opens one GitHub issue per gated app via Composio (approval tracker) |
 | `agent/build.py` | Merges everything into `docs/data.json` (also the machine-readable export) |
 | `results/` | Raw per-app outputs for every pass, verifier reports, accuracy |
+
+## Where Composio is used, and where it is not
+
+- **Used:** the catalog check, which asks Composio's tool router for every app, and the approval tracker, which creates GitHub issues through Composio's GitHub toolkit. Both go through Composio's MCP server.
+- **Not used:** the research workers search the web with Claude Code's built-in WebSearch/WebFetch. Routing them through Composio's search toolkits (Exa/Tavily/Firecrawl) is a one-line `--mcp-config` change, but it would have meant re-running all 100 apps against the starter credit inside the 8-hour window.
 
 ## Known limits
 
 - The quote check uses a plain HTTP fetch. JS-rendered or bot-protected docs show up as "unreadable", not as wrong.
-- The Composio catalog check guesses the slug from the app name, so a miss means "not under the obvious slug", not "absent".
+- The Composio catalog check uses semantic tool search: an app counts as a gap only after 3 phrasings fail to return a toolkit whose name matches. A gap is therefore "not found by the router", not proof of absence.
 - The access taxonomy was revised after pass 1 (`customer_account` was split out of `admin_approval`). Every pass 1 app in the old bucket was re-researched under the new definitions.

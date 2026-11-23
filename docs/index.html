@@ -74,6 +74,7 @@ tr.detail td{background:#f6f5f1;padding:14px 16px}
 .step b{display:block;margin-bottom:4px}
 .step span{color:var(--ink2);font-size:13px}
 .step.h{border-color:var(--s2);border-width:2px}
+.step.c{border-color:var(--s1);border-width:2px}
 .arrow{align-self:center;color:var(--muted);font-size:20px}
 .human{border-left:4px solid var(--s2)}
 code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px}
@@ -94,7 +95,7 @@ pre{background:#11110f;color:#f0efec;border-radius:8px;padding:14px;overflow:aut
   <h1>100 apps, one agent: what it takes to turn an app into an agent toolkit</h1>
   <p class="lede" id="lede">An agent researched auth, access gates, API surface and MCP coverage for 100 apps, citing a verbatim quote for every answer. Non-LLM checks, targeted re-research and a blind sample check measured how far to trust it, including one loop that made things worse and was rolled back.</p>
   <div class="meta">Composio · AI Product Ops Intern take-home · Pratyush Mishra · <span id="gen"></span> · <a href="data.json">data.json</a> (all fields, for agents) · <a href="https://github.com/PratyushMishra-2nd/composio-takehome">source repo</a></div>
-  <nav class="toc"><a href="#patterns">Patterns</a><a href="#matrix">Matrix</a><a href="#findings">All 100 apps</a><a href="#agent">The agent</a><a href="#verify">Verification</a><a href="#run">Run it</a></nav>
+  <nav class="toc"><a href="#patterns">Patterns</a><a href="#matrix">Matrix</a><a href="#composio">Composio backlog</a><a href="#findings">All 100 apps</a><a href="#agent">The agent</a><a href="#verify">Verification</a><a href="#run">Run it</a></nav>
   <div class="tiles" id="tiles"></div>
 </header>
 
@@ -113,6 +114,15 @@ pre{background:#11110f;color:#f0efec;border-radius:8px;padding:14px;overflow:aut
   <div class="grid2" style="margin-top:14px">
     <div class="card"><p class="chart-title">Auth methods offered</p><p class="chart-sub">Apps offering each method (one app can offer several)</p><div id="authbars"></div></div>
     <div class="card"><p class="chart-title">Gate to working credentials</p><p class="chart-sub">Most restrictive gate a developer hits</p><div id="accessbars"></div></div>
+  </div>
+</section>
+
+<section id="composio">
+  <h2>What this means for Composio <small>checked through Composio's own MCP</small></h2>
+  <p class="sub" id="comp-sub"></p>
+  <div class="grid2">
+    <div class="card"><p class="chart-title">Toolkit gaps, ranked by how easy they are</p><p class="chart-sub">Apps from the list that Composio's tool router (<code>COMPOSIO_SEARCH_TOOLS</code>) did not resolve to a toolkit, after 3 phrasings each</p><div id="gaps"></div></div>
+    <div class="card"><p class="chart-title">Approval tracker, opened by the agent</p><p class="chart-sub">One GitHub issue per gated app, created through Composio (<code>COMPOSIO_MULTI_EXECUTE_TOOL</code> → <code>GITHUB_CREATE_AN_ISSUE</code>) with gate, evidence and next step</p><div id="tracker"></div></div>
   </div>
 </section>
 
@@ -137,7 +147,9 @@ pre{background:#11110f;color:#f0efec;border-radius:8px;padding:14px;overflow:aut
     <div class="step"><b>3 · Verifier (no LLM)</b><span>Re-fetches every cited page and checks the quote is really there; checks auth against APIs.guru OpenAPI specs, MCP claims against the official MCP registry, and buildability against Composio's own toolkit catalog; checks for contradictions.</span></div><div class="arrow">→</div>
     <div class="step"><b>4 · Targeted re-research</b><span>Apps with any failed check go back to a worker with the exact disputes listed, then get verified again (2 rounds).</span></div><div class="arrow">→</div>
     <div class="step h"><b>5 · Blind sample check</b><span>20 apps (2 per category, seed 42) researched independently by a different model that never saw the agent's answers. It scores pass 1 and the final pass; its error classes became new verifier rules for all 100.</span></div><div class="arrow">→</div>
-    <div class="step"><b>6 · Build</b><span><code>build.py</code> merges everything into <code>data.json</code>, which this page renders.</span></div>
+    <div class="step c"><b>6 · Composio catalog check</b><span>Every app is searched in Composio's tool router over MCP to find out whether a toolkit already exists. This yields the gap backlog.</span></div><div class="arrow">→</div>
+    <div class="step c"><b>7 · Approval tracker</b><span>For each gated app, the agent opens a GitHub issue through Composio's GitHub toolkit, so the follow-up queue exists from the moment research ends.</span></div><div class="arrow">→</div>
+    <div class="step"><b>8 · Build</b><span><code>build.py</code> merges everything into <code>data.json</code>, which this page renders.</span></div>
   </div>
   <div class="card human" style="margin-top:14px" id="humans"></div>
 </section>
@@ -185,7 +197,7 @@ fetch('data.json').then(r=>r.json()).then(D=>{
   const tiles=[
     [n,'apps researched by the agent, every answer with a cited quote'],
     [buildNow+' / '+n,'could ship as an agent toolkit today with self-serve credentials'],
-    [P.mcp_any+' / '+n,'already have an MCP server ('+P.mcp_official+' vendor-official)'],
+    [P.composio_gaps.length+' gaps',"not yet in Composio's catalog; "+P.composio_gaps.filter(g=>g.verdict==='build_now').length+' of them are build-now (checked via Composio MCP)'],
     acc&&acc.pass1.overall!=null?[Math.round(acc.pass1.overall*100)+'% → '+Math.round(acc.final.overall*100)+'%','field accuracy on a blind 20-app check, pass 1 → after the verification loop'+(acc.adjudicated?` (${Math.round(acc.adjudicated.overall*100)}% after a third check on disagreements)`:'')]:[V.pass1_flagged,'apps flagged by automatic checks and re-researched'],
   ];
   $('#tiles').innerHTML=tiles.map(t=>`<div class="card tile"><div class="n">${t[0]}</div><div class="l">${t[1]}</div></div>`).join('');
@@ -231,20 +243,27 @@ fetch('data.json').then(r=>r.json()).then(D=>{
       <p><b>Independent checks</b><br>
       APIs.guru OpenAPI: ${g?`${esc(g.key)} declares ${g.auth.length?g.auth.map(x=>AUL[x]).join(', '):'no auth scheme'}`:'<span class="unk">no spec in directory</span>'}<br>
       MCP registry: ${m?(m.official.length?`vendor-namespaced: ${esc(m.official.slice(0,2).join(', '))}`:`${m.count} search hits, none vendor-namespaced`):'<span class="unk">n/a</span>'}<br>
-      Composio catalog: ${c&&c.listed?`<span class="ok">listed</span> (${esc(c.title)})`:'<span class="unk">not found under /toolkits/'+esc(c&&c.slug)+'</span>'}
+      Composio tool router: ${a.composio.in_catalog?`<span class="ok">toolkit ${esc(a.composio.toolkits.join(', '))}</span> (${esc(a.composio.tools.slice(0,3).join(', '))})`:'<span class="bad">no toolkit found (gap)</span>'}${a.tracker_issue?`<br>Approval tracker: <a href="${a.tracker_issue}" target="_blank" rel="noopener">${a.tracker_issue.split('/').slice(-2).join(' #')}</a>`:''}
       ${a.human?`<br><b>Human check:</b> ${esc(a.human)}`:''}</p>
     </div></div>`}
   function render(){
     const q=$('#q').value.toLowerCase(),fc=$('#fcat').value,fv=$('#fver').value,fa=$('#facc').value;
     const rows=A.filter(a=>(!fc||a.category===fc)&&(!fv||a.verdict===fv)&&(!fa||a.access===fa)&&(!q||JSON.stringify([a.app,a.category,a.blocker,a.description]).toLowerCase().includes(q)));
-    $('#tbl').innerHTML='<tr><th>#</th><th>App</th><th>Category</th><th>Auth</th><th>Gate</th><th>API</th><th>MCP</th><th>Verdict</th><th>Main blocker</th><th>Checks</th></tr>'+
+    $('#tbl').innerHTML='<tr><th>#</th><th>App</th><th>Category</th><th>Auth</th><th>Gate</th><th>API</th><th>MCP</th><th>Verdict</th><th>Composio</th><th>Main blocker</th><th>Checks</th></tr>'+
       rows.map(a=>{const ver=a.evidence.filter(e=>e.status==='verified').length;
-        return `<tr class="row" data-id="${a.id}"><td>${a.id}</td><td><b>${esc(a.app)}</b></td><td>${esc(a.category)}</td><td>${a.auth_methods.map(x=>`<span class="tag">${AUL[x]}</span>`).join('')}</td><td>${AL[a.access]}</td><td>${a.api_types.join('/')} · ${a.api_breadth}</td><td>${a.mcp_exists?(a.mcp_official?'official':'community'):'—'}</td><td><span class="pill v-${a.verdict}">${VL[a.verdict]}</span></td><td>${esc(a.blocker||'—')}</td><td title="quotes verified on page / cited">${ver}/${a.evidence.length}${a.changed.length?' · fixed':''}${a.open_issues.length?' · ⚠':''}</td></tr>`}).join('');
+        return `<tr class="row" data-id="${a.id}"><td>${a.id}</td><td><b>${esc(a.app)}</b></td><td>${esc(a.category)}</td><td>${a.auth_methods.map(x=>`<span class="tag">${AUL[x]}</span>`).join('')}</td><td>${AL[a.access]}</td><td>${a.api_types.join('/')} · ${a.api_breadth}</td><td>${a.mcp_exists?(a.mcp_official?'official':'community'):'—'}</td><td><span class="pill v-${a.verdict}">${VL[a.verdict]}</span></td><td>${a.composio.in_catalog?'listed':'<b>gap</b>'}${a.tracker_issue?` · <a href="${a.tracker_issue}" target="_blank" rel="noopener" onclick="event.stopPropagation()">tracker</a>`:''}</td><td>${esc(a.blocker||'—')}</td><td title="quotes verified on page / cited">${ver}/${a.evidence.length}${a.changed.length?' · fixed':''}${a.open_issues.length?' · ⚠':''}</td></tr>`}).join('');
     $('#count').textContent=`${rows.length} of ${n} apps shown. Checks = quotes found on the cited page / quotes cited; "fixed" = corrected by the verification loop; ⚠ = an automatic check still disagrees.`;
     document.querySelectorAll('tr.row').forEach(tr=>tr.onclick=()=>{const nx=tr.nextElementSibling;if(nx&&nx.classList.contains('detail')){nx.remove();return}
-      const a=A.find(x=>x.id==tr.dataset.id);tr.insertAdjacentHTML('afterend',`<tr class="detail"><td colspan="10">${detail(a)}</td></tr>`)});
+      const a=A.find(x=>x.id==tr.dataset.id);tr.insertAdjacentHTML('afterend',`<tr class="detail"><td colspan="11">${detail(a)}</td></tr>`)});
   }
   ['#q','#fcat','#fver','#facc'].forEach(s=>$(s).addEventListener('input',render));render();
+
+  // composio section
+  const G=P.composio_gaps;
+  $('#comp-sub').innerHTML=`${P.composio_listed} of ${n} apps already resolve to a Composio toolkit. The useful output for Composio is the other ${G.length}: a build backlog ranked by the research, plus a tracker for the ${P.tracker_issues} apps where shipping depends on someone else's approval. <a href="https://github.com/PratyushMishra-2nd/composio-takehome/issues" target="_blank" rel="noopener">Open the tracker on GitHub</a>.`;
+  $('#gaps').innerHTML='<table><tr><th>App</th><th>Verdict</th><th>Why</th></tr>'+G.map(g=>`<tr><td><b>${esc(g.app)}</b><br><span class="note">${esc(g.category)}</span></td><td><span class="pill v-${g.verdict}">${VL[g.verdict]}</span>${g.app==='Ecwid'?'<br><span class="note">disputed: sample check says paid plan</span>':''}</td><td>${esc(g.blocker||'Self-serve credentials, documented API: ready to build.')}</td></tr>`).join('')+'</table>';
+  const T=A.filter(a=>a.tracker_issue);const tc={};T.forEach(a=>tc[a.access]=(tc[a.access]||0)+1);
+  $('#tracker').innerHTML=`<p class="note" style="margin-top:0">${Object.entries(tc).map(([k,v])=>`${v} × ${AL[k]}`).join(' · ')}</p><table><tr><th>App</th><th>Gate</th><th>Issue</th></tr>`+T.map(a=>`<tr><td>${esc(a.app)}${a.composio.in_catalog?' <span class="tag">in Composio</span>':''}</td><td>${AL[a.access]}</td><td><a href="${a.tracker_issue}" target="_blank" rel="noopener">#${a.tracker_issue.split('/').pop()}</a></td></tr>`).join('')+'</table><p class="note">Several gated apps are already Composio toolkits (Pylon, Brex, PitchBook), so these gates have been cleared before. The tracker records how, so it can be done faster next time.</p>';
 
   // humans
   $('#humans').innerHTML=HUMANS(D);
@@ -276,12 +295,14 @@ function HEADLINES(D){const P=D.patterns,n=P.n,c=Object.fromEntries(P.verdict),a
     [`The blocker is almost never the API. It is getting credentials that other people's accounts can use.`,`Every app but one has a documented API. What separates them is the gate: ${ac.self_serve_free||0} give free self-serve credentials, and the rest hit vendor app review (${ac.admin_approval||0}), trial-only access (${ac.self_serve_trial||0}), a paid plan (${ac.paid_plan||0}), customer-only accounts (${ac.customer_account||0}) or a partnership (${ac.partner_gated||0}). For a toolkit, the real question is "can strangers connect it?", not "can I get a key?".`],
     [`Friction concentrates in sales-led vertical SaaS and ad platforms`,`Dev/infra (${now('Developer, Infra and Data platforms')}/10 build now) and productivity (${now('Productivity and Project Management')}/10) are easy wins. Support (${now('Support and Helpdesk')}/10), finance (${now('Finance and Fintech')}/10) and marketing/ads (${now('Marketing, Ads, Email and Social')}/10) are where the work is. Support and finance tools are often customer-only, which means outreach (DealCloud, Gladly, Pylon, Brex, PitchBook). Ad platforms are buildable but sit behind app review or a developer token (Google Ads, Meta Ads, LinkedIn Ads): approvals that someone has to chase.`],
     [`A toolkit needs both auth modes: ${P.both} apps offer OAuth2 and a static key/token`,`OAuth2 is offered by ${au.oauth2||0} of ${n}, but only ${P.oauth_only} are OAuth-only. ${P.key_only} are key/token-only, concentrated in newer API-first tools: data/SEO/scraping and AI-native apps (2/10 OAuth in each).`],
-    [`MCP is no longer the differentiator: ${P.mcp_any} of ${n} already have a server, ${P.mcp_official} vendor-official`,`Existence is table stakes. The value is in what this page measures: auth handled for many users, approvals cleared, and coverage verified. ${P.composio_listed} of the 100 already resolve to a Composio toolkit page.`],
+    [`MCP is no longer the differentiator: ${P.mcp_any} of ${n} already have a server, ${P.mcp_official} vendor-official`,`Existence is table stakes. The value is in what this page measures: auth handled for many users, approvals cleared, and coverage verified. ${P.composio_listed} of the 100 already resolve to a Composio toolkit.`],
+    [`For Composio: ${P.composio_gaps.length} gaps, ${P.composio_gaps.filter(g=>g.verdict==='build_now').length} of them buildable today`,`Checked against Composio's own tool router over MCP. The quickest additions are ${P.composio_gaps.filter(g=>g.verdict==='build_now').map(g=>g.app).join(', ')}. The ecommerce long tail (WooCommerce, Magento, Squarespace, Ecwid, Amazon SP-API) is the biggest cluster of gaps, and most of it is per-store credentials or app review, not missing APIs.`],
   ]}
 function HUMANS(D){const V=D.verification;return `<b>Where a human (or a human decision) was needed</b><ul>
   <li><b>Defining the taxonomy.</b> After pass 1, customer-only apps (no public signup, credentials only inside a paying account) were lumped together with app-review gates. A new <code>customer_account</code> gate was added, and every app in the old bucket was re-researched. The agent is only as consistent as these definitions, and gate classification stayed the hardest field.</li>
   <li><b>Choosing which loops to keep.</b> Every loop was scored. The claim-coverage rules raised auth accuracy, so they were kept. The gate audit lowered accuracy, so it was rolled back (see Verification).</li>
   <li><b>The sample check.</b> The 20-app reference set was produced by an independent model researching blind, not by hand, because of the 8-hour window. Pratyush reviews the reference set and every disagreement before submission. Treat it as a strong second opinion, not ground truth.</li>
+  <li><b>Connecting accounts.</b> One OAuth click to connect GitHub to Composio so the agent could open the tracker issues. The agent never sends email or contacts vendors on its own.</li>
   <li><b>JS-rendered and bot-protected docs.</b> ${(V.final_quotes||{}).unreadable+(V.final_quotes||{}).fetch_failed||0} cited pages could not be re-fetched by plain HTTP, so their quotes stay unverified and are marked that way, not counted as right.</li></ul>`}
 function VERIFY_SUB(D){const V=D.verification;return `Four layers. (1) Automatic, non-LLM checks on all ${D.patterns.n} apps after every pass: quote on page, APIs.guru, the MCP registry, the Composio catalog, and consistency rules. (2) Targeted re-research of flagged apps in two rounds (${V.pass1_flagged}, then ${V.round2_flagged}), ${V.changed_apps} apps changed, ${V.changed_fields} fields corrected. (3) A blind independent check on a seeded sample of 20, used to score every pass. (4) A third check that rules on each remaining disagreement.`}
 function MISSES_NOTE(D){const E=D.verification.experiment_gate_audit;return `<p class="note" style="margin-top:12px"><b>A loop that made it worse, and was rolled back.</b> ${E?`A "gate audit" re-researched all ${E.apps} self-serve apps, asking specifically about public-app review and paid plans. Accuracy on the sample <b>fell to ${Math.round(E.overall*100)}%</b> (access ${Math.round(E.field_accuracy.access*100)}%, verdict ${Math.round(E.field_accuracy.verdict*100)}%). The pointed prompt over-found gates (HubSpot became "app review", DataForSEO "paid plan"), and full re-research brought back OAuth over-claims that round 2 had fixed. Its output is kept in <code>results/experiment_gate_audit/</code>. Caveat: keeping or rolling back a loop was decided on the same 20-app sample, so the final number carries some selection bias.`:''}</p>

@@ -1,0 +1,202 @@
+{
+  "3": {
+    "app": "Pipedrive",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/3",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "10": {
+    "app": "DealCloud",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/4",
+    "ok": true,
+    "labels": [
+      "gate:customer_account",
+      "verdict:needs_outreach",
+      "composio:gap"
+    ]
+  },
+  "15": {
+    "app": "Pylon",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/1",
+    "ok": true,
+    "labels": [
+      "composio:listed",
+      "gate:customer_account",
+      "verdict:needs_outreach"
+    ]
+  },
+  "19": {
+    "app": "Gorgias",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/2",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "20": {
+    "app": "Gladly",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/5",
+    "ok": true,
+    "labels": [
+      "gate:customer_account",
+      "verdict:needs_outreach",
+      "composio:gap"
+    ]
+  },
+  "29": {
+    "app": "Aircall",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/7",
+    "ok": true,
+    "labels": [
+      "composio:listed",
+      "gate:customer_account",
+      "verdict:needs_outreach"
+    ]
+  },
+  "31": {
+    "app": "Google Ads",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/8",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "32": {
+    "app": "Meta Ads",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/6",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "33": {
+    "app": "LinkedIn Ads",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/9",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "34": {
+    "app": "GoHighLevel",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/10",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "38": {
+    "app": "Pinterest",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/14",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "39": {
+    "app": "Threads (Meta)",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/13",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:listed"
+    ]
+  },
+  "44": {
+    "app": "Salesforce Commerce Cloud",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/12",
+    "ok": true,
+    "labels": [
+      "gate:customer_account",
+      "verdict:needs_outreach",
+      "composio:gap"
+    ]
+  },
+  "46": {
+    "app": "Squarespace",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/11",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:gap"
+    ]
+  },
+  "49": {
+    "app": "Amazon Selling Partner",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/15",
+    "ok": true,
+    "labels": [
+      "gate:admin_approval",
+      "verdict:build_with_caveat",
+      "composio:gap"
+    ]
+  },
+  "59": {
+    "app": "Waterfall.io",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/18",
+    "ok": true,
+    "labels": [
+      "verdict:needs_outreach",
+      "composio:gap",
+      "gate:partner_gated"
+    ]
+  },
+  "84": {
+    "app": "Paygent Connect",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/17",
+    "ok": true,
+    "labels": [
+      "verdict:build_with_caveat",
+      "gate:customer_account",
+      "composio:gap"
+    ]
+  },
+  "88": {
+    "app": "Brex",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/16",
+    "ok": true,
+    "labels": [
+      "composio:listed",
+      "gate:customer_account",
+      "verdict:needs_outreach"
+    ]
+  },
+  "89": {
+    "app": "Ramp",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/19",
+    "ok": true,
+    "labels": [
+      "verdict:build_with_caveat",
+      "composio:listed",
+      "gate:customer_account"
+    ]
+  },
+  "90": {
+    "app": "PitchBook",
+    "url": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/20",
+    "ok": true,
+    "labels": [
+      "composio:listed",
+      "verdict:needs_outreach",
+      "gate:partner_gated"
+    ]
+  }
+}

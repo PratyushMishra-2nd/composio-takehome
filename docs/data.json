@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23 18:05 IST",
+ "generated": "2026-11-23 18:16 IST",
  "patterns": {
   "n": 100,
   "auth": [
@@ -93,7 +93,162 @@
   ],
   "mcp_any": 98,
   "mcp_official": 85,
-  "composio_listed": 65,
+  "composio_listed": 81,
+  "composio_gaps": [
+   {
+    "id": 30,
+    "app": "Vonage",
+    "category": "Communications and Messaging",
+    "verdict": "build_now",
+    "access": "self_serve_free",
+    "blocker": ""
+   },
+   {
+    "id": 37,
+    "app": "systeme.io",
+    "category": "Marketing, Ads, Email and Social",
+    "verdict": "build_now",
+    "access": "self_serve_free",
+    "blocker": ""
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "category": "Ecommerce",
+    "verdict": "build_now",
+    "access": "self_serve_free",
+    "blocker": ""
+   },
+   {
+    "id": 50,
+    "app": "fanbasis",
+    "category": "Ecommerce",
+    "verdict": "build_now",
+    "access": "self_serve_free",
+    "blocker": ""
+   },
+   {
+    "id": 83,
+    "app": "Binance",
+    "category": "Finance and Fintech",
+    "verdict": "build_now",
+    "access": "self_serve_free",
+    "blocker": "Per-user key creation needs deposit plus identity verification. HMAC deprecated, so asymmetric signing (Ed25519/RSA) should be supported. Not OAuth, so users must paste keys."
+   },
+   {
+    "id": 95,
+    "app": "Reducto",
+    "category": "AI, Research and Media-native",
+    "verdict": "build_now",
+    "access": "self_serve_free",
+    "blocker": ""
+   },
+   {
+    "id": 16,
+    "app": "LiveAgent",
+    "category": "Support and Helpdesk",
+    "verdict": "build_with_caveat",
+    "access": "self_serve_trial",
+    "blocker": "API key auth only, per-tenant base URL (user must supply domain + key); no permanent free tier (30-day trial, then paid). Full endpoint docs gated behind login to an account."
+   },
+   {
+    "id": 42,
+    "app": "WooCommerce",
+    "category": "Ecommerce",
+    "verdict": "build_with_caveat",
+    "access": "self_serve_free",
+    "blocker": "No OAuth2. Users must supply store URL plus consumer key/secret. Store must serve HTTPS for Basic auth. The official MCP is in developer preview, needs the MCP Adapter plugin, and authenticates with Application Passwords."
+   },
+   {
+    "id": 45,
+    "app": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "verdict": "build_with_caveat",
+    "access": "self_serve_free",
+    "blocker": "Per-merchant instance with no central OAuth2 app registry. Self-hosted auth is OAuth 1.0a/HMAC or token-based, so it needs a custom base URL plus token. SaaS uses IMS. Adobe's official MCP servers are developer/docs tools, not store-data tools. Community MCP servers exist (StackOne, CData, Cequence)."
+   },
+   {
+    "id": 46,
+    "app": "Squarespace",
+    "category": "Ecommerce",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": "A public multi-tenant integration needs a Squarespace-reviewed OAuth client. The self-serve API-key path needs the paid Commerce Advanced plan and covers one site. The official MCP's Commerce tools are limited to Claude and ChatGPT."
+   },
+   {
+    "id": 49,
+    "app": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "verdict": "build_with_caveat",
+    "access": "admin_approval",
+    "blocker": "Public multi-tenant use needs a developer profile approved by Amazon and app review. Credentials are not instant for end users, though private apps can self-authorize. Doc pages could not be fetched this run, so claims are unverified."
+   },
+   {
+    "id": 52,
+    "app": "SE Ranking",
+    "category": "Data, SEO and Scraping",
+    "verdict": "build_with_caveat",
+    "access": "paid_plan",
+    "blocker": "API needs a paid subscription or purchased credits; no free self-serve API tier. Official MCP already exists."
+   },
+   {
+    "id": 84,
+    "app": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "verdict": "build_with_caveat",
+    "access": "customer_account",
+    "blocker": "No Paygent-specific developer docs found, so the NMI link is unverified. Live keys need a merchant account, and users must supply their own gateway host and key. Only an unofficial, read-only community MCP exists, built for NMI-family gateways."
+   },
+   {
+    "id": 85,
+    "app": "iPayX",
+    "category": "Finance and Fintech",
+    "verdict": "build_with_caveat",
+    "access": "self_serve_free",
+    "blocker": "Narrow API (about 3-6 endpoints), tiny free quota, and inconsistent docs (endpoints, prices, MCP URL differ across pages). Self-serve keys exist, so buildable but low value."
+   },
+   {
+    "id": 10,
+    "app": "DealCloud",
+    "category": "CRM and Sales",
+    "verdict": "needs_outreach",
+    "access": "customer_account",
+    "blocker": "No self-serve signup or developer sandbox. API credentials exist only inside a licensed DealCloud customer site, so building and testing needs a customer or partner tenant."
+   },
+   {
+    "id": 20,
+    "app": "Gladly",
+    "category": "Support and Helpdesk",
+    "verdict": "needs_outreach",
+    "access": "customer_account",
+    "blocker": "No self-serve signup or sandbox. API tokens exist only inside an existing customer's Gladly tenant, so we would need a customer account or partner access first."
+   },
+   {
+    "id": 44,
+    "app": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "verdict": "needs_outreach",
+    "access": "customer_account",
+    "blocker": "No self-serve credentials: SLAS and Account Manager API clients require an existing B2C Commerce tenant/instance; Salesforce docs could not be fetched to confirm any free sandbox."
+   },
+   {
+    "id": 59,
+    "app": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "verdict": "needs_outreach",
+    "access": "partner_gated",
+    "blocker": "Credentials are sales-gated: no self-serve key and no public pricing. Composio would need a partnership or test key before building."
+   },
+   {
+    "id": 58,
+    "app": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "verdict": "not_buildable",
+    "access": "no_public_api",
+    "blocker": "No hosted API or credentials; local CLI only. Needs sandbox execution or third-party wrapper; not a standard OAuth/API-key integration."
+   }
+  ],
+  "tracker_issues": 20,
   "by_category": {
    "CRM and Sales": {
     "build_now": 7,
@@ -1094,6 +1249,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "salesforce"
+    ],
+    "tools": [
+     "SALESFORCE_POST_UI_API_LIST_RECORDS",
+     "SALESFORCE_GET_LIST_VIEW_RECORDS_BY_NAME",
+     "SALESFORCE_GET_UI_API_LIST_INFO_RECENT",
+     "SALESFORCE_GET_LIST_VIEW_RECORDS_BY_ID"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 37
   },
   {
@@ -1197,6 +1365,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "hubspot"
+    ],
+    "tools": [
+     "HUBSPOT_READ_APAGE_OF_OBJECTS_BY_TYPE",
+     "HUBSPOT_READ_ASSOCIATIONS_BATCH",
+     "HUBSPOT_SEARCH_CRM_OBJECTS_BY_CRITERIA",
+     "HUBSPOT_READ_ALL_PROPERTIES_FOR_OBJECT_TYPE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 57
   },
   {
@@ -1330,6 +1511,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "pipedrive"
+    ],
+    "tools": [
+     "PIPEDRIVE_GET_ALL_LEADS",
+     "PIPEDRIVE_GET_ONE_LEAD",
+     "PIPEDRIVE_GET_ALL_FILTERS",
+     "PIPEDRIVE_UPDATE_LEAD"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/3",
    "seconds": 85
   },
   {
@@ -1446,6 +1640,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "attio"
+    ],
+    "tools": [
+     "ATTIO_LIST_RECORDS",
+     "ATTIO_LIST_OBJECTS",
+     "ATTIO_QUERY_RECORDS",
+     "ATTIO_FIND_RECORD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 58
   },
   {
@@ -1570,6 +1777,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "twenty"
+    ],
+    "tools": [
+     "TWENTY_LIST_RECORDS",
+     "TWENTY_GET_RECORD",
+     "TWENTY_UPDATE_RECORD",
+     "TWENTY_LIST_FIELDS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 52
   },
   {
@@ -1673,6 +1893,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "podio"
+    ],
+    "tools": [
+     "PODIO_LIST_ITEMS",
+     "PODIO_GET_ITEM",
+     "PODIO_LIST_APPS",
+     "PODIO_FILTER_ITEMS_BY_VIEW"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 55
   },
   {
@@ -1788,6 +2021,21 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "zoho"
+    ],
+    "tools": [
+     "ZOHO_SEARCH_ZOHO_RECORDS",
+     "ZOHO_GET_ZOHO_RECORDS",
+     "ZOHO_GET_MODULE_FIELDS",
+     "ZOHO_LIST_MODULES",
+     "ZOHO_GET_RELATED_LISTS",
+     "ZOHO_UPDATE_ZOHO_RECORD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 54
   },
   {
@@ -1925,6 +2173,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "close"
+    ],
+    "tools": [
+     "CLOSE_LIST_LEADS",
+     "CLOSE_GET_LEAD",
+     "CLOSE_SEARCH_DATA",
+     "CLOSE_UPDATE_LEAD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 44
   },
   {
@@ -2026,6 +2287,21 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "copper"
+    ],
+    "tools": [
+     "COPPER_GET_RECORD",
+     "COPPER_SEARCH_LEADS",
+     "COPPER_SEARCH_PEOPLE",
+     "COPPER_SEARCH_COMPANIES",
+     "COPPER_GET_PERSON_BY_EMAIL",
+     "COPPER_LIST_LEAD_STATUSES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 60
   },
   {
@@ -2139,6 +2415,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "APOLLO_GET_DEAL",
+     "APOLLO_LIST_DEALS",
+     "CLAY_SEARCH_PEOPLE_OR_COMPANIES",
+     "APOLLO_UPDATE_DEALS",
+     "APOLLO_CREATE_DEAL",
+     "APOLLO_LIST_NOTES"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/4",
    "seconds": 58
   },
   {
@@ -2255,6 +2544,20 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "zendesk"
+    ],
+    "tools": [
+     "ZENDESK_LIST_ZENDESK_TICKETS",
+     "ZENDESK_GET_ZENDESK_TICKET_BY_ID",
+     "ZENDESK_REPLY_ZENDESK_TICKET",
+     "ZENDESK_UPDATE_ZENDESK_TICKET",
+     "ZENDESK_SEARCH_ZENDESK"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 60
   },
   {
@@ -2367,6 +2670,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "intercom"
+    ],
+    "tools": [
+     "INTERCOM_LIST_CONTACTS",
+     "INTERCOM_SEARCH_CONTACTS",
+     "INTERCOM_GET_A_CONTACT",
+     "INTERCOM_UPDATE_CONTACT"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 40
   },
   {
@@ -2475,6 +2791,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "freshdesk"
+    ],
+    "tools": [
+     "FRESHDESK_GET_TICKETS",
+     "FRESHDESK_VIEW_TICKET",
+     "FRESHDESK_GET_SEARCH",
+     "FRESHDESK_UPDATE_TICKET"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 90
   },
   {
@@ -2619,6 +2948,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "front"
+    ],
+    "tools": [
+     "FRONT_LIST_CONVERSATIONS",
+     "FRONT_SEARCH_CONVERSATIONS",
+     "FRONT_GET_CONVERSATION",
+     "FRONT_LIST_CONVERSATION_MESSAGES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 70
   },
   {
@@ -2758,6 +3100,18 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "pylon_mcp"
+    ],
+    "tools": [
+     "PYLON_MCP_SEARCH_ACCOUNTS",
+     "PYLON_MCP_GET_ACCOUNT",
+     "PYLON_MCP_SEARCH_ISSUES"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/1",
    "seconds": 36
   },
   {
@@ -2852,6 +3206,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "ELEVENLABS_LIST_WORKSPACE_TICKETS",
+     "AGENT_MAIL_LIST_LIST_ENTRIES",
+     "ELEVENLABS_LIST_AGENT_TICKETS",
+     "ELEVENLABS_GET_TRIAGE_TICKET",
+     "ELEVENLABS_UPDATE_TRIAGE_TICKET",
+     "AGENT_MAIL_DELETE_LIST_ENTRY"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 71
   },
   {
@@ -3004,6 +3371,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "plain"
+    ],
+    "tools": [
+     "PLAIN_QUERY_THREADS",
+     "PLAIN_LIST_THREADS_RICH",
+     "PLAIN_GET_THREAD_BY_ID",
+     "PLAIN_TRANSITION_THREAD_STATUS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 43
   },
   {
@@ -3146,6 +3526,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "help_scout"
+    ],
+    "tools": [
+     "HELP_SCOUT_LIST_CONVERSATIONS",
+     "HELP_SCOUT_GET_CONVERSATION",
+     "HELP_SCOUT_LIST_THREADS",
+     "HELP_SCOUT_LIST_INBOXES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 82
   },
   {
@@ -3273,6 +3666,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "gorgias"
+    ],
+    "tools": [
+     "GORGIAS_LIST_TICKETS",
+     "GORGIAS_GET_TICKET",
+     "GORGIAS_UPDATE_TICKET",
+     "GORGIAS_LIST_VIEW_ITEMS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/2",
    "seconds": 88
   },
   {
@@ -3405,6 +3811,16 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "HELPDESK_LIST_TICKETS",
+     "HELPDESK_LIST_AGENTS",
+     "HELPDESK_LIST_TEAMS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/5",
    "seconds": 123
   },
   {
@@ -3528,6 +3944,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "slack"
+    ],
+    "tools": [
+     "SLACK_LIST_ALL_CHANNELS",
+     "SLACK_LIST_CONVERSATIONS",
+     "SLACK_FIND_CHANNELS",
+     "SLACK_RETRIEVE_CONVERSATION_INFORMATION"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 42
   },
   {
@@ -3650,6 +4079,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "twilio"
+    ],
+    "tools": [
+     "TWILIO_LIST_CALL",
+     "TWILIO_FETCH_CALL",
+     "TWILIO_LIST_CALL_EVENT",
+     "TWILIO_LIST_ACCOUNT"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 53
   },
   {
@@ -3751,6 +4193,18 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "zoho_cliq"
+    ],
+    "tools": [
+     "ZOHO_CLIQ_LIST_DATABASE_RECORDS",
+     "ZOHO_CLIQ_UPDATE_DATABASE_RECORD",
+     "ZOHO_CLIQ_GET_DATABASE_RECORD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 50
   },
   {
@@ -3888,6 +4342,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "lark"
+    ],
+    "tools": [
+     "LARK_DOCS_SEARCH_RECORDS",
+     "LARK_DOCS_LIST_ALL_TABLES",
+     "LARK_DOCS_LIST_FIELDS",
+     "LARK_DOCS_UPDATE_RECORDS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 36
   },
   {
@@ -3983,6 +4450,18 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "pumble"
+    ],
+    "tools": [
+     "PUMBLE_LIST_CHANNELS",
+     "PUMBLE_LIST_CHANNEL_MESSAGES",
+     "PUMBLE_SEND_MESSAGE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 53
   },
   {
@@ -4087,6 +4566,21 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "discordbot"
+    ],
+    "tools": [
+     "DISCORDBOT_SEARCH_GUILD_MESSAGES",
+     "DISCORDBOT_LIST_MESSAGES",
+     "DISCORDBOT_GET_MESSAGE",
+     "DISCORDBOT_GET_CONNECTED_GUILD",
+     "DISCORDBOT_LIST_GUILD_CHANNELS",
+     "DISCORDBOT_BULK_DELETE_MESSAGES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 47
   },
   {
@@ -4215,6 +4709,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "telegram"
+    ],
+    "tools": [
+     "TELEGRAM_GET_UPDATES",
+     "TELEGRAM_SEND_MESSAGE",
+     "TELEGRAM_ANSWER_CALLBACK_QUERY",
+     "TELEGRAM_GET_CHAT_HISTORY"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 69
   },
   {
@@ -4329,6 +4836,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "whatsapp"
+    ],
+    "tools": [
+     "WHATSAPP_GET_MESSAGE_HISTORY",
+     "WHATSAPP_GET_MESSAGE_HISTORY_EVENTS",
+     "WHATSAPP_GET_PHONE_NUMBERS",
+     "WHATSAPP_SEND_MESSAGE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 69
   },
   {
@@ -4468,6 +4988,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "aircall"
+    ],
+    "tools": [
+     "AIRCALL_LIST_CALLS",
+     "AIRCALL_GET_CALL",
+     "AIRCALL_SEARCH_CALLS",
+     "AIRCALL_TAG_CALL"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/7",
    "seconds": 79
   },
   {
@@ -4588,6 +5121,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "HUNTER_LIST_MESSAGES",
+     "SENTFROMAI_SEARCH_MESSAGES",
+     "OPENAI_LIST_CONVERSATION_ITEMS",
+     "HUNTER_LIST_LEADS",
+     "HUNTER_LIST_SEQUENCES",
+     "HUNTER_UPDATE_LEAD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 42
   },
   {
@@ -4701,6 +5247,21 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "googleads"
+    ],
+    "tools": [
+     "GOOGLEADS_SEARCH_GAQL",
+     "GOOGLEADS_SEARCH_STREAM_GAQL",
+     "GOOGLEADS_SEARCH_GOOGLE_ADS_FIELDS",
+     "GOOGLEADS_LIST_ACCESSIBLE_CUSTOMERS",
+     "GMAIL_SEARCH_PEOPLE",
+     "GMAIL_FETCH_EMAILS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/8",
    "seconds": 41
   },
   {
@@ -4816,6 +5377,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "metaads"
+    ],
+    "tools": [
+     "METAADS_LIST_ADS",
+     "METAADS_GET_AD_ACCOUNTS",
+     "METAADS_GET_INSIGHTS",
+     "METAADS_GET_OBJECT"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/6",
    "seconds": 41
   },
   {
@@ -4943,6 +5517,21 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "linkedin_ads"
+    ],
+    "tools": [
+     "LINKEDIN_ADS_SEARCH_CAMPAIGNS",
+     "LINKEDIN_ADS_SEARCH_AD_ACCOUNTS",
+     "LINKEDIN_ADS_SEARCH_CREATIVES",
+     "LINKEDIN_ADS_GET_AD_ANALYTICS",
+     "LINKEDIN_ADS_GET_AD_ACCOUNT",
+     "LINKEDIN_ADS_LIST_CONVERSION_RULES"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/9",
    "seconds": 57
   },
   {
@@ -5057,6 +5646,18 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "highlevel_mcp"
+    ],
+    "tools": [
+     "HIGHLEVEL_MCP_CONTACTS_GET_CONTACTS",
+     "HIGHLEVEL_MCP_CONTACTS_GET_CONTACT",
+     "HIGHLEVEL_MCP_CONTACTS_UPDATE_CONTACT"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/10",
    "seconds": 50
   },
   {
@@ -5171,6 +5772,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "mailchimp"
+    ],
+    "tools": [
+     "MAILCHIMP_GET_AUDIENCES_CONTACTS",
+     "MAILCHIMP_GET_AUDIENCES_CONTACTS_DETAIL",
+     "MAILCHIMP_GET_LISTS_INFO",
+     "MAILCHIMP_UPDATE_AUDIENCES_CONTACTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 44
   },
   {
@@ -5286,6 +5900,18 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "klaviyo"
+    ],
+    "tools": [
+     "KLAVIYO_GET_LISTS",
+     "KLAVIYO_GET_LIST",
+     "KLAVIYO_GET_LIST_PROFILES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 51
   },
   {
@@ -5387,6 +6013,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "GETANYAPI_LINKEDIN_ADS",
+     "SEMRUSH_MAP_RANK_TRACKER_LIST_CAMPAIGNS",
+     "GETANYAPI_FACEBOOK_ADS_SEARCH",
+     "GETANYAPI_GET_API_CONTRACT",
+     "GETANYAPI_LINKEDIN_ADS_SEARCH",
+     "GETANYAPI_LINKEDIN_AD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 53
   },
   {
@@ -5515,6 +6154,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "pinterest"
+    ],
+    "tools": [
+     "PINTEREST_LIST_PINS",
+     "PINTEREST_LIST_BOARDS",
+     "PINTEREST_GET_PIN",
+     "PINTEREST_LIST_BOARD_SECTIONS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/14",
    "seconds": 75
   },
   {
@@ -5628,6 +6280,18 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "threads"
+    ],
+    "tools": [
+     "THREADS_LIST_MY_POSTS",
+     "THREADS_GET_POST_INSIGHTS",
+     "THREADS_LIST_POST_REPLIES"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/13",
    "seconds": 42
   },
   {
@@ -5734,6 +6398,18 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "sendgrid"
+    ],
+    "tools": [
+     "SENDGRID_FILTER_ALL_MESSAGES",
+     "SENDGRID_FILTER_MESSAGES_BY_MESSAGE_ID",
+     "SENDGRID_REQUEST_CSV"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 65
   },
   {
@@ -5837,6 +6513,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "shopify"
+    ],
+    "tools": [
+     "SHOPIFY_GET_PRODUCTS_PAGINATED",
+     "SHOPIFY_GRAPH_QL_PRODUCTS",
+     "SHOPIFY_BULK_QUERY_OPERATION",
+     "SHOPIFY_GET_PRODUCT"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 31
   },
   {
@@ -5963,6 +6652,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+     "GETANYAPI_SHOPIFY_SEARCH",
+     "JUST_ONE_API_1688_SEARCH_ITEM_LIST",
+     "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1",
+     "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V2",
+     "GETANYAPI_GET_API_CONTRACT"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 51
   },
   {
@@ -6064,6 +6766,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "bigcommerce"
+    ],
+    "tools": [
+     "BIGCOMMERCE_LIST_PRODUCTS",
+     "BIGCOMMERCE_GET_PRODUCT",
+     "BIGCOMMERCE_UPDATE_PRODUCTS",
+     "BIGCOMMERCE_LIST_ALL_CATEGORIES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 56
   },
   {
@@ -6183,6 +6898,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V1",
+     "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V2",
+     "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+     "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL",
+     "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL_FULL_COVERAGE",
+     "JUST_ONE_API_TAOBAO_GET_ITEM_COMMENT"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/12",
    "seconds": 61
   },
   {
@@ -6337,6 +7065,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "GETANYAPI_SHOPIFY_SEARCH",
+     "JUST_ONE_API_DOUYIN_EC_SEARCH_ITEM_LIST",
+     "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+     "GETANYAPI_GET_API_CONTRACT",
+     "GETANYAPI_SHOPIFY_PRODUCT",
+     "GETANYAPI_SHOPIFY_PRODUCTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 43
   },
   {
@@ -6428,6 +7169,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "GETANYAPI_SHOPIFY_SEARCH",
+     "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+     "GETANYAPI_GET_API_CONTRACT",
+     "GETANYAPI_SHOPIFY_PRODUCT",
+     "GETANYAPI_SHOPIFY_PRODUCTS",
+     "JUST_ONE_API_SHOPEE_GET_ITEM_DETAIL_V1"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/11",
    "seconds": 40
   },
   {
@@ -6540,6 +7294,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "GETANYAPI_SHOPIFY_SEARCH",
+     "JUST_ONE_API_DOUYIN_EC_SEARCH_ITEM_LIST",
+     "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+     "GETANYAPI_GET_API_CONTRACT",
+     "GETANYAPI_SHOPIFY_PRODUCT",
+     "GETANYAPI_SHOPIFY_PRODUCTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 71
   },
   {
@@ -6660,6 +7427,18 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "gumroad"
+    ],
+    "tools": [
+     "GUMROAD_LIST_PRODUCTS",
+     "GUMROAD_GET_PRODUCT",
+     "GUMROAD_UPDATE_PRODUCT"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 72
   },
   {
@@ -6766,6 +7545,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "JUST_ONE_API_AMAZON_SEARCH_PRODUCTS",
+     "GETANYAPI_AMAZON_SELLER_PRODUCTS",
+     "JUST_ONE_API_AMAZON_GET_PRODUCT_DETAIL",
+     "JUST_ONE_API_AMAZON_GET_PRODUCT_TOP_REVIEWS",
+     "JUST_ONE_API_AMAZON_GET_CATEGORY_PRODUCTS",
+     "JUST_ONE_API_AMAZON_GET_BEST_SELLERS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/15",
    "seconds": 53
   },
   {
@@ -6915,6 +7707,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V1",
+     "JUST_ONE_API_SHOPEE_SEARCH_ITEM_LIST",
+     "JUST_ONE_API_DOUYIN_EC_SEARCH_ITEM_LIST",
+     "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL",
+     "JUST_ONE_API_TAOBAO_SEARCH_ITEM_LIST_V2",
+     "JUST_ONE_API_TAOBAO_GET_ITEM_DETAIL_FULL_COVERAGE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 69
   },
   {
@@ -7020,6 +7825,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "dataforseo"
+    ],
+    "tools": [
+     "DATAFORSEO_LIST_SERP_TASKS_READY",
+     "DATAFORSEO_GET_SERP_GOOGLE_ORGANIC_TASK_ADVANCED_BY_ID",
+     "DATAFORSEO_LIST_SERP_GOOGLE_ORGANIC_TASKS_READY",
+     "DATAFORSEO_CREATE_SERP_GOOGLE_ORGANIC_TASK_POST"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 86
   },
   {
@@ -7121,6 +7939,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "MRSCRAPER_LIST_RESULTS",
+     "SERPAPI_SEARCH",
+     "MRSCRAPER_GET_RESULT",
+     "MRSCRAPER_CREATE_AI_SCRAPER",
+     "MRSCRAPER_RERUN_AI_SCRAPER",
+     "SERPAPI_GOOGLE_LIGHT_SEARCH"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 74
   },
   {
@@ -7257,6 +8088,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "ahrefs"
+    ],
+    "tools": [
+     "AHREFS_FETCH_ALL_BACKLINKS",
+     "AHREFS_FETCH_BROKEN_BACKLINKS_DATA",
+     "AHREFS_RETRIEVE_ANCHOR_DATA",
+     "AHREFS_FETCH_SITE_EXPLORER_REFERRING_DOMAINS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 77
   },
   {
@@ -7365,6 +8209,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "mrscraper"
+    ],
+    "tools": [
+     "MRSCRAPER_LIST_RESULTS",
+     "MRSCRAPER_GET_RESULT",
+     "MRSCRAPER_CREATE_AI_SCRAPER",
+     "MRSCRAPER_RERUN_AI_SCRAPER"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 47
   },
   {
@@ -7524,6 +8381,21 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "apify"
+    ],
+    "tools": [
+     "APIFY_GET_DATASET_ITEMS",
+     "APIFY_DATASET_GET",
+     "APIFY_DATASETS_GET",
+     "APIFY_GET_RUN_DATASET_ITEMS",
+     "APIFY_ACTOR_RUN_GET",
+     "APIFY_GET_RUN_DEFAULT_DATASET"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 51
   },
   {
@@ -7627,6 +8499,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "firecrawl"
+    ],
+    "tools": [
+     "FIRECRAWL_SCRAPE",
+     "FIRECRAWL_SEARCH",
+     "FIRECRAWL_BATCH_SCRAPE",
+     "FIRECRAWL_MAP_MULTIPLE_URLS_BASED_ON_OPTIONS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 55
   },
   {
@@ -7729,6 +8614,21 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "brightdata"
+    ],
+    "tools": [
+     "BRIGHTDATA_DATASET_LIST",
+     "BRIGHTDATA_FILTER_DATASET",
+     "BRIGHTDATA_GET_DATASET_METADATA",
+     "BRIGHTDATA_SEARCH_DATASET",
+     "BRIGHTDATA_GET_SNAPSHOT_STATUS",
+     "BRIGHTDATA_GET_SNAPSHOT_RESULTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 19
   },
   {
@@ -7833,6 +8733,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "LIMADATA_SEARCH_WEB",
+     "ICYPEAS_RETRIEVE_SEARCH_RESULTS",
+     "LIMADATA_EXTRACT_WEB_PAGES",
+     "LIMADATA_RESEARCH_WEB",
+     "LIMADATA_ENRICH_COMPANY",
+     "ICYPEAS_FIND_SINGLE_EMAIL"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 35
   },
   {
@@ -7934,6 +8847,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "BRIGHTDATA_SCRAPE_DATA_SYNC",
+     "LIMADATA_SEARCH_WEB",
+     "LIMADATA_EXTRACT_WEB_PAGES",
+     "BRIGHTDATA_GET_SNAPSHOT_RESULTS",
+     "BRIGHTDATA_GET_SNAPSHOT_STATUS",
+     "BRIGHTDATA_CRAWL_API"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/18",
    "seconds": 50
   },
   {
@@ -8046,6 +8972,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "clay"
+    ],
+    "tools": [
+     "CLAY_SEARCH_PEOPLE_OR_COMPANIES",
+     "CLAY_CONTINUE_SEARCH",
+     "CLAY_GET_SEARCH_QUERY_REFERENCE",
+     "CLAY_RUN_ROUTINE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 51
   },
   {
@@ -8168,6 +9107,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "github"
+    ],
+    "tools": [
+     "GITHUB_LIST_REPOSITORIES",
+     "GITHUB_LIST_REPOSITORIES_FOR_THE_AUTHENTICATED_USER",
+     "GITHUB_GET_A_REPOSITORY",
+     "GITHUB_FIND_REPOSITORIES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 50
   },
   {
@@ -8277,6 +9229,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "vercel"
+    ],
+    "tools": [
+     "VERCEL_GET_PROJECTS",
+     "VERCEL_GET_PROJECT2",
+     "VERCEL_GET_DEPLOYMENTS",
+     "VERCEL_GET_TEAMS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 51
   },
   {
@@ -8377,6 +9342,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "netlify_mcp"
+    ],
+    "tools": [
+     "NETLIFY_MCP_NETLIFY_PROJECT_SERVICES_READER",
+     "NETLIFY_MCP_NETLIFY_PROJECT_SERVICES_UPDATER",
+     "NETLIFY_MCP_NETLIFY_DEPLOY_SERVICES_READER",
+     "NETLIFY_MCP_NETLIFY_TEAM_SERVICES_READER"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 14
   },
   {
@@ -8494,6 +9472,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "cloudflare"
+    ],
+    "tools": [
+     "CLOUDFLARE_LIST_DNS_RECORDS",
+     "CLOUDFLARE_LIST_ZONES",
+     "CLOUDFLARE_UPDATE_DNS_RECORD",
+     "CLOUDFLARE_DELETE_DNS_RECORD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 312
   },
   {
@@ -8630,6 +9621,21 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "supabase"
+    ],
+    "tools": [
+     "SUPABASE_RUN_READ_ONLY_QUERY",
+     "SUPABASE_GET_TABLE_SCHEMAS",
+     "SUPABASE_LIST_TABLES",
+     "SUPABASE_SELECT_FROM_TABLE",
+     "SUPABASE_BETA_RUN_SQL_QUERY",
+     "SUPABASE_LIST_ALL_PROJECTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 36
   },
   {
@@ -8752,6 +9758,21 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "neo4j"
+    ],
+    "tools": [
+     "NEO4J_LIST_INSTANCES_BETA",
+     "NEO4J_LIST_PROJECTS",
+     "NEO4J_GET_INSTANCE_BETA",
+     "NEO4J_UPDATE_INSTANCE_BETA",
+     "NEO4J_LIST_SNAPSHOTS",
+     "NEO4J_GET_PROJECT"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 49
   },
   {
@@ -8863,6 +9884,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "snowflake"
+    ],
+    "tools": [
+     "SNOWFLAKE_EXECUTE_SQL",
+     "SNOWFLAKE_CHECK_STATEMENT_STATUS",
+     "SNOWFLAKE_CANCEL_STATEMENT_EXECUTION",
+     "SNOWFLAKE_SHOW_DATABASES"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 35
   },
   {
@@ -8965,6 +9999,21 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "mongodb"
+    ],
+    "tools": [
+     "MONGODB_LIST_GROUPS",
+     "MONGODB_LIST_ORGS",
+     "MONGODB_LIST_GROUP_PROCESS_DATABASES",
+     "MONGODB_GET_ORG_GROUPS",
+     "MONGODB_GET_GROUP",
+     "MONGODB_LIST_GROUP_CLUSTERS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 64
   },
   {
@@ -9122,6 +10171,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "datadog"
+    ],
+    "tools": [
+     "DATADOG_LIST_HOSTS",
+     "DATADOG_GET_TAGS",
+     "DATADOG_LIST_METRICS",
+     "DATADOG_LIST_ALL_TAGS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 83
   },
   {
@@ -9245,6 +10307,21 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "sentry"
+    ],
+    "tools": [
+     "SENTRY_GET_PROJECT_EVENTS",
+     "SENTRY_GET_PROJECT_LIST",
+     "SENTRY_RETRIEVE_PROJECT_EVENT_BY_ID",
+     "SENTRY_RETRIEVE_ORGANIZATION_PROJECTS",
+     "SENTRY_RETRIEVE_ORGANIZATION_EVENTS",
+     "SENTRY_ACCESS_PROJECT_INFORMATION"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 35
   },
   {
@@ -9354,6 +10431,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "notion"
+    ],
+    "tools": [
+     "NOTION_QUERY_DATABASE",
+     "NOTION_QUERY_DATABASE_WITH_FILTER",
+     "NOTION_SEARCH_NOTION_PAGE",
+     "NOTION_UPDATE_ROW_DATABASE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 31
   },
   {
@@ -9478,6 +10568,20 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "airtable"
+    ],
+    "tools": [
+     "AIRTABLE_GET_BASE_SCHEMA",
+     "AIRTABLE_LIST_RECORDS",
+     "AIRTABLE_LIST_BASES",
+     "AIRTABLE_GET_RECORD",
+     "AIRTABLE_GET_USER_INFO"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 33
   },
   {
@@ -9612,6 +10716,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "linear"
+    ],
+    "tools": [
+     "LINEAR_LIST_LINEAR_ISSUES",
+     "LINEAR_GET_LINEAR_ISSUE",
+     "LINEAR_UPDATE_ISSUE",
+     "LINEAR_LIST_LINEAR_PROJECTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 45
   },
   {
@@ -9731,6 +10848,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "jira"
+    ],
+    "tools": [
+     "JIRA_SEARCH_ISSUES",
+     "JIRA_SEARCH_FOR_ISSUES_USING_JQL_GET",
+     "JIRA_GET_ISSUE",
+     "JIRA_EDIT_ISSUE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 52
   },
   {
@@ -9854,6 +10984,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "asana"
+    ],
+    "tools": [
+     "ASANA_GET_MULTIPLE_TASKS",
+     "ASANA_GET_TASKS_FROM_A_PROJECT",
+     "ASANA_GET_A_TASK",
+     "ASANA_GET_MULTIPLE_PROJECTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 43
   },
   {
@@ -9973,6 +11116,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "monday"
+    ],
+    "tools": [
+     "MONDAY_ITEMS_PAGE",
+     "MONDAY_BOARDS",
+     "MONDAY_LIST_ITEMS_BY_COLUMN_VALUES",
+     "MONDAY_COLUMNS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 62
   },
   {
@@ -10106,6 +11262,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "clickup"
+    ],
+    "tools": [
+     "CLICKUP_GET_FILTERED_TEAM_TASKS",
+     "CLICKUP_GET_TASK",
+     "CLICKUP_GET_AUTHORIZED_TEAMS_WORKSPACES",
+     "CLICKUP_GET_TASK_COMMENTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 32
   },
   {
@@ -10223,6 +11392,21 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "coda"
+    ],
+    "tools": [
+     "CODA_LIST_TABLE_ROWS",
+     "CODA_LIST_TABLES",
+     "CODA_GET_A_ROW",
+     "CODA_LIST_COLUMNS",
+     "CODA_UPSERT_ROWS",
+     "CODA_LIST_AVAILABLE_DOCS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 64
   },
   {
@@ -10331,6 +11515,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "smartsheet"
+    ],
+    "tools": [
+     "SMARTSHEET_GET_SHEET",
+     "SMARTSHEET_LIST_SHEETS",
+     "SMARTSHEET_UPDATE_ROWS",
+     "SMARTSHEET_GET_ROW"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 56
   },
   {
@@ -10432,6 +11629,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "harvest"
+    ],
+    "tools": [
+     "HARVEST_LIST_INVOICES",
+     "HARVEST_GET_INVOICE",
+     "HARVEST_LIST_INVOICE_PAYMENTS",
+     "HARVEST_LIST_CLIENTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 48
   },
   {
@@ -10565,6 +11775,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "stripe_mcp"
+    ],
+    "tools": [
+     "STRIPE_MCP_STRIPE_API_READ",
+     "STRIPE_MCP_LIST_AVAILABLE_ACCOUNTS_OR_ORGS",
+     "STRIPE_MCP_STRIPE_API_SEARCH",
+     "STRIPE_MCP_STRIPE_API_WRITE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 39
   },
   {
@@ -10679,6 +11902,19 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "plaid"
+    ],
+    "tools": [
+     "PLAID_GET_TRANSACTIONS",
+     "PLAID_SYNC_TRANSACTIONS",
+     "PLAID_REFRESH_TRANSACTIONS",
+     "PLAID_GET_ACCOUNTS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 48
   },
   {
@@ -10788,6 +12024,16 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "SERPAPI_FINANCE_SEARCH",
+     "SERPAPI_NEWS_SEARCH",
+     "SERPAPI_SEARCH"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 76
   },
   {
@@ -10905,6 +12151,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "SERPAPI_FINANCE_SEARCH",
+     "API_NINJAS_GET_SWIFT_CODE",
+     "OPENWEB_NINJA_SEARCH_FINANCIAL_SECURITIES",
+     "SERPAPI_NEWS_SEARCH",
+     "SERPAPI_SEARCH",
+     "API_NINJAS_SEARCH_ROUTING_NUMBERS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/17",
    "seconds": 73
   },
   {
@@ -11045,6 +12304,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "ICYPEAS_FIND_COMPANIES",
+     "ICYPEAS_RETRIEVE_SEARCH_RESULTS",
+     "ICYPEAS_COUNT_COMPANIES",
+     "ICYPEAS_FIND_COMPANY_URL",
+     "ICYPEAS_FIND_PEOPLE",
+     "ICYPEAS_FIND_SINGLE_EMAIL"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 71
   },
   {
@@ -11178,6 +12450,18 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "quickbooks"
+    ],
+    "tools": [
+     "QUICKBOOKS_QUERY_ENTITIES",
+     "QUICKBOOKS_QUERY_INVOICES",
+     "QUICKBOOKS_QUERY_BILLS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 69
   },
   {
@@ -11292,6 +12576,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "xero"
+    ],
+    "tools": [
+     "XERO_LIST_INVOICES",
+     "XERO_GET_INVOICE",
+     "XERO_GET_CONNECTIONS",
+     "XERO_POST_INVOICE_UPDATE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 76
   },
   {
@@ -11424,6 +12721,18 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "brex"
+    ],
+    "tools": [
+     "BREX_LIST_CARD_ACCOUNTS",
+     "BREX_LIST_CARD_STATEMENTS",
+     "BREX_GET_CARD_TRANSACTIONS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/16",
    "seconds": 47
   },
   {
@@ -11537,6 +12846,18 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "ramp"
+    ],
+    "tools": [
+     "RAMP_GET_ALL_TRANSACTIONS",
+     "RAMP_GET_TRANSACTION",
+     "RAMP_POST_ACCOUNTING_CODINGS"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/19",
    "seconds": 55
   },
   {
@@ -11623,6 +12944,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "pitchbook"
+    ],
+    "tools": [
+     "PITCHBOOK_SEARCH_COMPANIES",
+     "PITCHBOOK_GET_COMPANY",
+     "PITCHBOOK_GET_BULK_COMPANY",
+     "PITCHBOOK_GET_LOOKUP_TABLES"
+    ]
+   },
+   "tracker_issue": "https://github.com/PratyushMishra-2nd/composio-takehome/issues/20",
    "seconds": 41
   },
   {
@@ -11758,6 +13092,21 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "notebook_lm"
+    ],
+    "tools": [
+     "NOTEBOOK_LM_GET_NOTEBOOK",
+     "NOTEBOOK_LM_LIST_RECENT_NOTEBOOKS",
+     "NOTEBOOK_LM_GET_SOURCE",
+     "NOTEBOOK_LM_CREATE_AUDIO_OVERVIEW",
+     "NOTEBOOK_LM_CREATE_NOTEBOOK",
+     "NOTEBOOK_LM_DELETE_NOTEBOOKS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 69
   },
   {
@@ -11871,6 +13220,18 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "otter_ai_mcp"
+    ],
+    "tools": [
+     "OTTER_AI_MCP_OTTER_FETCH",
+     "OTTER_AI_MCP_OTTER_SEARCH",
+     "OTTER_AI_MCP_OTTER_GET_USER_INFO"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 78
   },
   {
@@ -11973,6 +13334,21 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "fathom"
+    ],
+    "tools": [
+     "FATHOM_LIST_MEETINGS",
+     "FATHOM_LIST_TEAMS",
+     "FATHOM_LIST_TEAM_MEMBERS",
+     "FATHOM_GET_RECORDING_SUMMARY",
+     "FATHOM_GET_RECORDING_TRANSCRIPT",
+     "FATHOM_CREATE_WEBHOOK"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 27
   },
   {
@@ -12094,6 +13470,16 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "consensus"
+    ],
+    "tools": [
+     "CONSENSUS_SEARCH_PAPERS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 32
   },
   {
@@ -12187,6 +13573,19 @@
    "rechecked": true,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": false,
+    "toolkits": [],
+    "tools": [
+     "OPENAI_LIST_INPUT_ITEMS",
+     "AKTA_GET_NEWS_ARTICLES",
+     "LIMADATA_RESEARCH_WEB",
+     "OPENAI_CREATE_RESPONSE",
+     "OPENAI_GET_RESPONSE",
+     "AKTA_SEARCH_NEWS"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 23
   },
   {
@@ -12301,6 +13700,20 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "devin_mcp"
+    ],
+    "tools": [
+     "DEVIN_MCP_LIST_WIKI_REPOS",
+     "DEVIN_MCP_ASK_WIKI_QUESTION",
+     "DEVIN_MCP_READ_WIKI_STRUCTURE",
+     "DEVIN_MCP_READ_WIKI_CONTENTS",
+     "DEVIN_MCP_GENERATE_WIKI"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 46
   },
   {
@@ -12449,6 +13862,21 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "higgsfield"
+    ],
+    "tools": [
+     "HIGGSFIELD_GENERATE_IMAGE_WITH_REFERENCES",
+     "HIGGSFIELD_GENERATE_VIDEO_FROM_IMAGE",
+     "HIGGSFIELD_GENERATE_SOUL_V2_IMAGE",
+     "HIGGSFIELD_GET_REQUEST_STATUS",
+     "HIGGSFIELD_GENERATE_SEEDANCE_2_5_IMAGE_VIDEO",
+     "HIGGSFIELD_GENERATE_SOUL_STANDARD_IMAGE"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 67
   },
   {
@@ -12541,6 +13969,21 @@
    "rechecked": false,
    "changed": [],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "mermaid_chart_mcp"
+    ],
+    "tools": [
+     "GLEIF_EXPORT_LEI_RECORDS",
+     "GLEIF_GET_LEI_RECORD",
+     "MERMAID_CHART_MCP_VALIDATE_AND_RENDER_MERMAID_DIAGRAM",
+     "GLEIF_SEARCH_LEI_RECORDS",
+     "GLEIF_LIST_REFERENCE_DATA",
+     "GLEIF_GET_LEI_ISSUER_FOR_RECORD"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 40
   },
   {
@@ -12647,6 +14090,20 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "youtube_transcript"
+    ],
+    "tools": [
+     "YOUTUBE_TRANSCRIPT_GET_STORED_TRANSCRIPT",
+     "YOUTUBE_TRANSCRIPT_LIST_STORED_TRANSCRIPTS",
+     "YOUTUBE_TRANSCRIPT_GET_VIDEO_TRANSCRIPT",
+     "YOUTUBE_TRANSCRIPT_LIST_TRANSCRIPT_LANGUAGES",
+     "YOUTUBE_TRANSCRIPT_GET_VIDEO_TRANSCRIPTS_BATCH"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 30
   },
   {
@@ -12795,6 +14252,19 @@
     }
    ],
    "human": null,
+   "composio": {
+    "in_catalog": true,
+    "toolkits": [
+     "grain"
+    ],
+    "tools": [
+     "GRAIN_LIST_RECORDINGS",
+     "GRAIN_GET_RECORDING",
+     "GRAIN_GET_RECORDING_TRANSCRIPT",
+     "GRAIN_LIST_REFERENCE_DATA"
+    ]
+   },
+   "tracker_issue": null,
    "seconds": 68
   }
  ]
