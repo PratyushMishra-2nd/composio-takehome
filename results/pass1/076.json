@@ -1,0 +1,71 @@
+{
+  "id": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "hint": "developer.monday.com",
+  "model": "sonnet",
+  "seconds": 49,
+  "cost_usd": 0.20899566999999997,
+  "turns": 7,
+  "result": {
+    "app": "Monday.com",
+    "description": "Work management platform for boards, items, workflows, CRM and project tracking, with a GraphQL platform API.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 auth-code for apps (legacy flow: non-expiring tokens, no refresh; newer OAuth 2.1 with refresh tokens announced). Personal V2 API token for own-account use, sent in Authorization header.",
+    "access": "self_serve_free",
+    "access_detail": "Free developer account lets anyone create an app and get OAuth credentials and a personal token. Docs do not state plan restrictions or a review requirement for private use. Marketplace listing for public apps likely needs review, not verified in the docs read.",
+    "api_types": [
+      "graphql",
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "GraphQL endpoint https://api.monday.com/v2. It covers boards, items, columns, users, teams, workspaces, docs, updates, webhooks, tags and notifications. Scoped OAuth permissions are available. Breadth is inferred from the scope list. I did not count endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.monday.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.monday.com/apps/docs/oauth",
+        "quote": "Tokens do not expire and are valid until the user uninstalls your app."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "If you don't have a monday.com account yet, create a free developer account"
+      },
+      {
+        "field": "api",
+        "url": "https://developer.monday.com/apps/docs/oauth",
+        "quote": "OAuth scopes define what your app can and cannot do."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.monday.com/apps/docs/mcp-servers",
+        "quote": "monday.com provides two MCP servers:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.monday.com/apps/docs/monday-apps-mcp",
+        "quote": "The monday apps MCP uses your existing API token for authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

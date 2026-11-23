@@ -1,0 +1,69 @@
+{
+  "id": 91,
+  "app": "NotebookLM",
+  "category": "AI, Research and Media-native",
+  "hint": "cloud.google.com/gemini (Enterprise API)",
+  "model": "sonnet",
+  "seconds": 65,
+  "cost_usd": 0.21086689999999997,
+  "turns": 6,
+  "result": {
+    "app": "NotebookLM",
+    "description": "AI research/notes tool grounding answers in user sources; enterprise edition (Gemini Notebook Enterprise) exposes a Preview REST API on Google Cloud Discovery Engine.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Google user OAuth2 access token (gcloud auth print-access-token as Bearer). Needs authenticated user account with a Gemini Notebook Enterprise license plus Cloud NotebookLM User IAM role. Service accounts not documented as supported.",
+    "access": "paid_plan",
+    "access_detail": "Enterprise API needs Google Cloud project, purchased Gemini Notebook Enterprise license (standalone or via Gemini Enterprise) assigned to user, and IAM role. Consumer NotebookLM has no public API. API is v1alpha Preview (Pre-GA terms). Pricing not on pages read.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "v1alpha at discoveryengine.googleapis.com. Notebooks: create, get, listRecentlyViewed, batchDelete, share. Sources: batchCreate, uploadFile, get, batchDelete. Audio overviews: create, delete (one per notebook). No documented chat/query, video overview, mind map, or report methods.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+    "verdict": "build_with_caveat",
+    "blocker": "Paid enterprise license required, user-credential OAuth only, API narrow and v1alpha Preview. Consumer NotebookLM has no official API; community MCPs use unofficial browser-session auth.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "Gemini Notebook Enterprise is a highly compliant, enterprise-ready version of Gemini Notebook."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "this page require an authenticated user account with an active Gemini Notebook Enterprise license."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "You can purchase Gemini Notebook Enterprise as a standalone product or as part of Gemini Enterprise."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks-sources",
+        "quote": "Pre-GA features are available \"as is\" and might have limited support."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-audio-overview",
+        "quote": "At a time, a given notebook can have only one audio overview."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pypi.org/project/notebooklm-mcp-server/",
+        "quote": "MCP server for NotebookLM (notebooklm.google.com)"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

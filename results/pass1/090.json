@@ -1,0 +1,63 @@
+{
+  "id": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "hint": "pitchbook.com (research API)",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.22277017,
+  "turns": 8,
+  "result": {
+    "app": "PitchBook",
+    "description": "Market intelligence platform for private and public capital markets (VC, PE, M&A, companies, investors, funds, deals); data licensed via Direct Data API.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Static API key sent as 'Authorization: PB-Token <key>' (per third-party Frontegg docs; no OAuth). Base URL api.pitchbook.com. Official docs sit behind login, so scheme is not confirmed on a public vendor page.",
+    "access": "partner_gated",
+    "access_detail": "API is a paid, contract-gated add-on with no free tier. Keys are issued by PitchBook's Direct Data team or an account manager. Existing customers can request access from Plugins & Apps in the platform. A sandbox with a separate key reportedly exists, but it is also provisioned by PitchBook.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Public API v2 / Direct Data covers companies, investors, funds, deals, people and related datasets. The docs are only visible to customers (a Postman-hosted copy exists but I could not verify it is official). Calls return 402 when the paid balance runs out. The pitchbook.com help pages returned 403 to my fetch, so those details came from search snippets and Frontegg.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://premium.mcp.pitchbook.com/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve credentials: the API needs a paid PitchBook contract plus Direct Data team provisioning, and docs are behind login. A vendor-hosted Premium MCP (OAuth) exists but also requires a PitchBook Premium subscription.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook.md",
+        "quote": "PitchBook authenticates with a static API key sent on every request, so there is no OAuth flow."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook.md",
+        "quote": "API access is a paid, contract-gated add-on with no free tier"
+      },
+      {
+        "field": "description",
+        "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook.md",
+        "quote": "PitchBook (a Morningstar company) is a market intelligence platform for private and public capital markets"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook.md",
+        "quote": "fail with `402 Payment Required` when the balance runs out."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pitchbook.com/help/getting-started-with-pitchbook-premium-connector",
+        "quote": "Premium Connector"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "low",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "hint": "usepylon.com",
+  "model": "sonnet",
+  "seconds": 36,
+  "cost_usd": 0.163449445,
+  "turns": 6,
+  "result": {
+    "app": "Pylon",
+    "description": "B2B support platform (Slack/Teams/email shared channels, ticketing, account management, AI agents) with a REST API for issues, accounts, contacts.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "REST API: admin-created Bearer API token (non-expiring, role-scoped). OAuth2 exists only for the hosted MCP server (Member/Admin seat), not the public REST API.",
+    "access": "customer_account",
+    "access_detail": "No public self-serve signup or free plan. Pricing page CTAs are 'Book a demo'/'Talk to sales'; trials only via a sales rep; annual contracts with minimum seats. Tokens come from inside an existing paying (or sales-provisioned trial) workspace, created by an Admin. REST API is included in all tiers; Sandbox is Enterprise only.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST API at api.usepylon.com (US) / api.eu.usepylon.com (EU), with SDKs for TypeScript, Python and Go plus an experimental CLI. Covers issues, accounts, contacts and more. Endpoint list is in the API reference, which I did not fetch, so breadth is an estimate.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.usepylon.com",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve signup or free sandbox. Working credentials need an existing Pylon customer workspace (sales-led trial or paid contract) and an Admin to create the token. Composio would need a partner or test account from Pylon.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+        "quote": "The Pylon API uses Bearer authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+        "quote": "Only Admins can create and manage API tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://www.usepylon.com/pricing",
+        "quote": "Your sales representative will work with you on setting up the demo organization."
+      },
+      {
+        "field": "access",
+        "url": "https://www.usepylon.com/pricing",
+        "quote": "Standard contracts are annual."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+        "quote": "Pylon's API can be used to programmatically access and take action on data within Pylon."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.usepylon.com/articles/2407390554-connecting-to-the-pylon-mcp-server",
+        "quote": "The Pylon MCP server at https://mcp.usepylon.com provides AI tools access to your Pylon data."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.usepylon.com/articles/2407390554-connecting-to-the-pylon-mcp-server",
+        "quote": "The Pylon MCP server only supports OAuth authentication. API key authentication is not currently available."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

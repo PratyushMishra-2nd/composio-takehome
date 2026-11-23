@@ -1,0 +1,64 @@
+{
+  "id": 48,
+  "app": "Gumroad",
+  "category": "Ecommerce",
+  "hint": "gumroad.com/api",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.22231506,
+  "turns": 9,
+  "result": {
+    "app": "Gumroad",
+    "description": "Platform for creators to sell digital products, memberships and subscriptions directly to customers.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 authorization-code flow (token exchange at gumroad.com/oauth/token) for registered apps acting on other users' accounts; personal access token generated in Settings > Advanced for own account. Token sent as Bearer header; non-expiring until revoked.",
+    "access": "self_serve_free",
+    "access_detail": "Any Gumroad account can create an application in Settings > Advanced and generate an access token; no plan or approval gate found. Gumroad's own docs pages are JS-rendered and could not be fetched directly, so this rests on the MCP README and search-result summaries of the docs.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST v2 at api.gumroad.com/v2. Core objects (from knowledge, not verified on page): products, variant categories/variants, offer codes, custom fields, sales, subscribers, licenses (verify/enable/disable), resource subscriptions (webhooks), user. Roughly 30-40 endpoints, no payouts or broad admin surface.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/rmarescu/gumroad-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://github.com/rmarescu/gumroad-mcp",
+        "quote": "A Model Context Protocol (MCP) server implementation for Gumroad API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/rmarescu/gumroad-mcp",
+        "quote": "This repository was archived by the owner on Oct 15, 2026. It is now read-only."
+      },
+      {
+        "field": "auth",
+        "url": "https://github.com/rmarescu/gumroad-mcp",
+        "quote": "Gumroad API requires authentication"
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/rmarescu/gumroad-mcp",
+        "quote": "A Gumroad account with API access"
+      },
+      {
+        "field": "api",
+        "url": "https://github.com/rmarescu/gumroad-mcp",
+        "quote": "gumroad_get_offer_codes"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "low",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+results/cache/
+results/test/
+results/try/
+__pycache__/
+*.err.txt

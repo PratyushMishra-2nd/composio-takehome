@@ -1,0 +1,74 @@
+{
+  "id": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "hint": "api-docs.ecwid.com",
+  "model": "sonnet",
+  "seconds": 53,
+  "cost_usd": 0.20764886999999999,
+  "turns": 6,
+  "result": {
+    "app": "Ecwid",
+    "description": "Ecwid by Lightspeed: cloud ecommerce platform that adds an online store to any website, social page, or multiple sites at once.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 for public/external apps (client_id + client_secret, POST /api/oauth/token/{store_id}). Custom (private) app skips OAuth and uses a store-specific secret token, sent as Authorization: Bearer. Tokens don't expire.",
+    "access": "paid_plan",
+    "access_detail": "Only stores on paid plans can use the API. Ecwid gives developers a free paid-plan upgrade, for example when building a public App Market app. A custom app is created automatically for any store owner who opens the app dashboard. Listing a public app on the App Market needs Ecwid app validation. OAuth for external (non-App-Market) apps looks self-serve. The api-docs.ecwid.com pages redirect to docs.ecwid.com, so those pages were not verified.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v3 under /api/v3/{storeId}/. It covers store profile and settings, products and variations, categories, orders, abandoned carts, customers and groups, discounts, coupons and promotions, reviews, payment and shipping methods, and reports. Limit is 600 requests per minute per token. Public and secret token types. Breadth is inferred from the docs overview cards, not a full endpoint count.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://zapier.com/mcp/ecwid",
+    "verdict": "build_with_caveat",
+    "blocker": "The API needs a paid store plan. Developers can get a free upgrade, but it is a manual request. Tokens are per store, so a multi-tenant public app needs an Ecwid-approved App Market app, or external-app OAuth. There is no official MCP server.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/api-reference",
+        "quote": "We use OAuth 2.0 authorization simplified for single-store customizations, JSON-formatted data, and a clear structure."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/get-started/api-glossary",
+        "quote": "Every application has two API keys: `client_id` (app ID) and `client_secret` (app secret)."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+        "quote": "Only stores on paid plans can access API."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+        "quote": "Ecwid provides a **free upgrade to a paid plan** if you:"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ecwid.com/api-reference",
+        "quote": "Ecwid REST API allows you to access and manage any store data, payment and shipping methods, and storefront settings."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ecwid.com/api-reference",
+        "quote": "We accept up to **600 requests per minute** **per token**."
+      },
+      {
+        "field": "mcp",
+        "url": "https://zapier.com/mcp/ecwid",
+        "quote": "Ecwid by Lightspeed is a cloud online store builder which lets you instantly launch an online store on any website, Facebook page, or multiple sites simultaneously."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

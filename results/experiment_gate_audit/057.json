@@ -1,0 +1,76 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "hint": "brightdata.com",
+  "model": "sonnet",
+  "seconds": 56,
+  "cost_usd": 0.17362817,
+  "turns": 6,
+  "result": {
+    "app": "Bright Data",
+    "description": "Web data platform: proxy networks, Web Unlocker, SERP API, Scraper APIs, ready-made datasets and browser automation for scraping public web data.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "basic"
+    ],
+    "auth_detail": "REST API at api.brightdata.com uses an account API key sent as 'Authorization: Bearer <token>'. A default key is created at signup. Only account admins can create keys. Proxy and Scraping Browser products use zone username/password (basic).",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit. (1) No app review, listing or partner status is needed. Each customer uses their own account API key. Only admins can create keys, but that is an account role, not a vendor review, so it does not count as a gate. (2) No paid plan is needed to start. The free tier gives 5,000 monthly credits/requests with no credit card. Past the free tier requests stop unless funds are deposited. Residential proxies and the Unlocker in native proxy mode need an SSL certificate or KYC. The REST API route with a Bearer key does not.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Scraper API (100+ prebuilt site scrapers, sync and async), Scraper Studio, Web Unlocker API, SERP API, Browser API, Datasets, Business Search, Media Data API, Web Archive, zone and account management, plus proxy networks. SDKs and CLI also exist. OpenAPI specs are published for SERP and Unlocker.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/brightdata/brightdata-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "This `<token>` is your **API key**, which is required for every API request."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "We create a default key for you upon account creation automatically."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.brightdata.com/introduction",
+        "quote": "5,000 free credits per month, no credit card required."
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "No credit card or commitment required to start."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.brightdata.com/introduction",
+        "quote": "Scrape any site, buy ready-made datasets. Thousands of pre-built scrapers, one API key."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "Free tier: 5,000 requests per month."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

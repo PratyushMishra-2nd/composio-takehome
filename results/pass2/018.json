@@ -1,0 +1,75 @@
+{
+  "id": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "hint": "helpscout.com",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.23539930499999998,
+  "turns": 8,
+  "result": {
+    "app": "Help Scout",
+    "description": "Customer support software: shared inbox, help desk, live chat, and Docs knowledge base for support teams.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "Mailbox API v2: OAuth2 (Authorization Code for integrations used by other users, Client Credentials for internal). Docs API v1: per-user API key sent via HTTP Basic (key as username, dummy password).",
+    "access": "self_serve_free",
+    "access_detail": "OAuth apps are created self-serve under Your Profile > My apps, with no app review. API access is a plan feature. The pricing page lists \"API access\" with rate limits of 200, 400 and 800 calls/minute. These likely map to Standard, Plus and Pro, but the page text does not confirm this, and it is unclear whether the Free plan includes API access. Help Scout's MCP docs say API-backed features are on Standard, Plus and Pro. Standard and Plus have a 15-day free trial with no credit card, and Pro needs sales. So a developer can get working credentials through the trial, and ongoing use probably needs a paid plan. Whether the Free plan has API access could not be confirmed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Mailbox API v2 (https://api.helpscout.net/v2) covers conversations, threads, customers, inboxes, organizations, tags, teams, users, webhooks, workflows, ratings and reports. Docs API v1 (https://docsapi.helpscout.net/v1) covers articles, collections, categories, sites, redirects and assets.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.helpscout.net/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "API access is plan-gated. Standard and Plus have a 15-day trial, and the Free plan's API access is unconfirmed. The official MCP server is read-only.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+        "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.helpscout.com/docs-api/",
+        "quote": "The API key is passed via HTTP Basic Authentication and goes in the username field."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+        "quote": "Create one by navigating to Your Profile > My apps and click Create My App."
+      },
+      {
+        "field": "access",
+        "url": "https://www.helpscout.com/pricing/",
+        "quote": "Want to trial the Pro plan? Talk to our sales team."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.helpscout.com/mailbox-api/",
+        "quote": "Welcome to the second generation of our Inbox API. This is an HTTPS-only API, with OAuth 2 authentication and CORS support running at:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+        "quote": "This integration is available on the Standard, Plus, and Pro plans"
+      },
+      {
+        "field": "mcp",
+        "url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp/",
+        "quote": "the first generally available version of MCP is intentionally read-only."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

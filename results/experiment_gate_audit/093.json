@@ -1,0 +1,80 @@
+{
+  "id": 93,
+  "app": "Fathom",
+  "category": "AI, Research and Media-native",
+  "hint": "fathom.video",
+  "model": "sonnet",
+  "seconds": 23,
+  "cost_usd": 0.1626879,
+  "turns": 4,
+  "result": {
+    "app": "Fathom",
+    "description": "AI meeting assistant that records, transcribes and summarizes calls (Zoom/Meet/Teams) and extracts action items.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Per-user API key (X-Api-Key header) generated in User Settings > API Access; OAuth2 (Bearer) for public multi-user apps, registered via self-serve marketplace app form.",
+    "access": "self_serve_free",
+    "access_detail": "API keys and webhooks included on all plans, including free. Each end user can self-generate their own key, so no review gate. OAuth app registration is self-serve (2 min); review mentioned applies to marketplace promotion/listing, docs not stating review blocks other users connecting. Minor uncertainty on OAuth review.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "Base https://api.fathom.ai/external/v1. About 12 endpoints: list meetings, meeting types, recording summary/transcript (sync or async via destination_url), request/get download, teams, team members, users, create/delete webhook. Official TypeScript and Python SDKs. OAuth apps cannot use include_summary/include_transcript on /meetings; must use /recordings endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.fathom.ai/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.fathom.ai/quickstart.md",
+        "quote": "Head to the API Access section of your User Settings and generate an API key."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.fathom.ai/faq.md",
+        "quote": "Use OAuth if you’re building an app that other Fathom users will install so they can connect their own accounts."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.fathom.ai/faq.md",
+        "quote": "Yes. API access—keys and webhooks— are included on all plans. Generate a key in User Settings → API Access."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.fathom.ai/oauth.md",
+        "quote": "Configure your redirects and receive your OAuth credentials. (2 mins)"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.fathom.ai/quickstart.md",
+        "quote": "curl https://api.fathom.ai/external/v1/meetings \\"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.fathom.ai/mcp-docs/index.md",
+        "quote": "Fathom now offers an official MCP (Model Context Protocol) server, allowing you to connect your Fathom meeting data to AI assistants like ChatGPT, Claude, and more."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.fathom.ai/mcp-docs/index.md",
+        "quote": "**MCP server URL:** `https://api.fathom.ai/mcp`"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.fathom.ai/oauth.md",
+        "quote": "They are subject to review to ensure the best experience for all users."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

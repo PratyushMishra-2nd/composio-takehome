@@ -1,0 +1,74 @@
+{
+  "id": 29,
+  "app": "Aircall",
+  "category": "Communications and Messaging",
+  "hint": "aircall.io",
+  "model": "sonnet",
+  "seconds": 61,
+  "cost_usd": 0.22232733,
+  "turns": 7,
+  "result": {
+    "app": "Aircall",
+    "description": "Cloud-based business phone and call-center platform with calls, SMS/messaging, contacts, and AI conversation intelligence.",
+    "auth_methods": [
+      "basic",
+      "oauth2"
+    ],
+    "auth_detail": "Basic Auth with API ID + token generated in the Aircall Dashboard for a single account (private apps). OAuth 2.0 only for approved tech partners building public apps; credentials are issued after partner approval.",
+    "access": "admin_approval",
+    "access_detail": "Basic API keys are self-serve from the dashboard of an existing Aircall account (no plan restriction found in docs; role and plan not stated). OAuth for multi-customer apps needs Tech Partner Program application plus review (1-5 business days). Composio-style multi-tenant toolkit needs OAuth, so it needs partner approval.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at api.aircall.io/v1 plus webhooks. Resource groups: users, teams, calls (search, transfer, comment, tag, recordings), conversations, conversation intelligence, messaging (SMS/WhatsApp), contacts, tags, numbers, campaigns, AI voice agent, analytics exports, company, integrations. Rate limit 120 req/min. Some features (AI Assist, Analytics+, AI voice agent) are entitlement-gated.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://lobehub.com/mcp/themobilefirstco-aircall-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "Single-account API-key toolkit buildable now. Multi-tenant OAuth needs Aircall Tech Partner Program approval. No official Aircall-hosted MCP server found (Aircall consumes partner MCPs instead).",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.aircall.io/docs/authentication",
+        "quote": "Aircall supports two ways to authenticate with the REST API: Basic Authentication and OAuth."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.aircall.io/docs/authentication",
+        "quote": "Basic Authentication lets you authenticate requests with an `API ID` and `token` that you generate from your Aircall Dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.aircall.io/docs/plan-your-integration",
+        "quote": "OAuth is required for public apps."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.aircall.io/docs/plan-your-integration",
+        "quote": "If approved, you'll receive your developer account and OAuth credentials to start building"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.aircall.io/api-references",
+        "quote": "Aircall Public API is a classic REST API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.aircall.io/docs/how-to-register",
+        "quote": "Registering an MCP with Aircall makes your tools and resources available to every Aircall AI customer"
+      },
+      {
+        "field": "mcp",
+        "url": "https://lobehub.com/mcp/themobilefirstco-aircall-mcp-server",
+        "quote": "This MCP server is NOT built, maintained, or endorsed by Aircall."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

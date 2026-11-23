@@ -1,0 +1,78 @@
+{
+  "id": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "hint": "developer.atlassian.com",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.21157152999999998,
+  "turns": 7,
+  "result": {
+    "app": "Jira",
+    "description": "Atlassian's issue and project tracking tool for software and business teams.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "api_key"
+    ],
+    "auth_detail": "OAuth 2.0 (3LO) authorization code grant is recommended, with scopes, using an app made in the Atlassian developer console. Basic auth with email plus API token works for scripts and single-account use. Passwords are deprecated. Forge and Connect apps are separate options.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can create an OAuth 2.0 app in the developer console and an API token in their account for free. A Jira Cloud site is needed, and a free plan exists. Marketplace listing needs review, but that is not required to use the API. Rate limits and some MCP features vary by plan.",
+    "api_types": [
+      "rest",
+      "graphql",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Jira Cloud Platform REST API v3 covers issues, projects, search (JQL), users, workflows, fields, permissions, webhooks and more. Jira Software (Agile) and Jira Service Management have separate REST APIs. The Atlassian GraphQL gateway exists but I could not confirm it from the pages I fetched. The REST v3 intro page returned no usable text, so breadth rests on prior knowledge.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/security-for-other-integrations/",
+        "quote": "This is the recommended method."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/security-for-other-integrations/",
+        "quote": "Basic authentication uses an API token to authenticate the client."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/security-for-other-integrations/",
+        "quote": "Authorization for OAuth 2.0 authorization code grants is implemented via scopes."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+        "quote": "Basic auth requires API tokens."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+        "quote": "The Jira REST API is protected by the same restrictions that apply in the standard Jira web interface."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+        "quote": "The server initiates a secure OAuth 2.1 authorization flow (or accepts an API token for headless authentication)."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+        "quote": "Some tools consume Rovo credits."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

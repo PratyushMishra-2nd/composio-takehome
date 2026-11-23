@@ -1,0 +1,58 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "hint": "coda.io/developers",
+  "model": "sonnet",
+  "seconds": 53,
+  "cost_usd": 0.14576406000000003,
+  "turns": 6,
+  "result": {
+    "app": "Coda",
+    "description": "Coda (now Superhuman Docs) is a collaborative doc/table/app workspace combining docs, spreadsheets and automations.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "auth_detail": "Per-user API token sent as Authorization: Bearer. No third-party OAuth found in readable docs (unconfirmed, not ruled out). Each end user can generate own token.",
+    "access": "self_serve_free",
+    "access_detail": "API free in free and paid workspaces. Per-user tokens, no app review/publishing found. Caveat: actions follow token owner's workspace role (e.g. Doc Maker needed to create docs). Plans page content not readable; pricing not verified beyond the docs statement.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST v1 at https://coda.io/apis/v1: docs, pages, tables, rows, formulas, controls, permissions, analytics. Rate limits: read 100/6s, write 10/6s, doc content write 5/10s, list docs 4/6s. Docs moved to docs.superhuman.com (coda.io 307-redirects). Breadth inferred from community MCP's ~54 tools plus docs; endpoint list not fully read (page truncated).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.superhuman.com/resources/guides/getting_started_with_coda_mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "headers = {'Authorization': 'Bearer <your API token>'}"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We do not currently support client libraries apart from Google Apps Script."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "If you plan to integrate Superhuman Docs with an AI tool, you may also want to consider using the Superhuman Docs MCP server"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

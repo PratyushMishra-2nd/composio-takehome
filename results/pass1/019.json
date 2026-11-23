@@ -1,0 +1,64 @@
+{
+  "id": 19,
+  "app": "Gorgias",
+  "category": "Support and Helpdesk",
+  "hint": "gorgias.com",
+  "model": "sonnet",
+  "seconds": 59,
+  "cost_usd": 0.22247983999999998,
+  "turns": 7,
+  "result": {
+    "app": "Gorgias",
+    "description": "Ecommerce-focused customer support helpdesk (tickets, customers, macros, integrations) with a REST API.",
+    "auth_methods": [
+      "basic",
+      "oauth2"
+    ],
+    "auth_detail": "Private apps: HTTP Basic with account email + API key (key created in Settings > REST API). Public apps: OAuth2 auth-code (client_id/secret from partner account; 24h access token, non-expiring refresh token; scopes). Per-account subdomain base URL.",
+    "access": "admin_approval",
+    "access_detail": "API key is self-serve for a Gorgias account admin (7-day free trial, no card). But a multi-tenant OAuth2 public app must be approved by Gorgias before it appears in the helpdesk app list. API plan restriction not confirmed on the pricing page.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at https://{subdomain}.gorgias.com/api with OAuth2 scopes (customers, tickets, integrations, etc.). The scope list suggests core helpdesk objects are covered. I did not fetch the full endpoint list, so breadth is inferred.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.gorgias.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Public OAuth2 app needs Gorgias approval. Until then, use per-account API key (Basic auth). Vendor MCP claim comes from search snippets (Merge and Ringly), not from Gorgias docs, which returned 404.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+        "quote": "Please remember that the API key authentication method can be used only for private apps."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+        "quote": "If you plan to build a public app you have to use OAuth2."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.gorgias.com/docs/oauth2-authentication-for-creating-apps-with-gorgias",
+        "quote": "In order to be able to have an approved public app with Gorgias, it is required that the app is using OAuth2 for authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+        "quote": "As an admin, you can easily generate and revoke your access token in the settings of your account."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.gorgias.com/llms.txt",
+        "quote": "OAuth2 scopes allow to limit your app's access to Gorgias user’s account data."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "low"
+    }
+  }
+}

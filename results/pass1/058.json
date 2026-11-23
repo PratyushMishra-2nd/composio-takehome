@@ -1,0 +1,68 @@
+{
+  "id": 58,
+  "app": "Sherlock",
+  "category": "Data, SEO and Scraping",
+  "hint": "github.com/sherlock-project/sherlock",
+  "model": "sonnet",
+  "seconds": 35,
+  "cost_usd": 0.16954414,
+  "turns": 5,
+  "result": {
+    "app": "Sherlock",
+    "description": "Open-source Python CLI that hunts down social media accounts by username across 400+ sites.",
+    "auth_methods": [
+      "none"
+    ],
+    "auth_detail": "No hosted API, so no auth. Local CLI only; runs on user's machine. Hosted wrappers (Apify) use Apify tokens, not Sherlock's.",
+    "access": "no_public_api",
+    "access_detail": "Sherlock is a MIT-licensed CLI (pipx/pip/docker install). No vendor-hosted REST API or API keys exist. Toolkit would need to run the CLI/library in a sandbox or use third-party hosted wrappers (Apify actors).",
+    "api_types": [
+      "cli_only"
+    ],
+    "api_breadth": "none",
+    "api_notes": "Only CLI: `sherlock user1 user2`, options for output files, proxy, timeout, site filters, --json/--local site data. No network API. Third-party Apify actors expose hosted API (paid Apify account).",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp",
+    "verdict": "not_buildable",
+    "blocker": "No hosted API or credentials; local CLI only. Needs sandbox execution or third-party wrapper; not a standard OAuth/API-key integration.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "Hunt down social media accounts by username across social networks"
+      },
+      {
+        "field": "auth",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "pipx install sherlock-project"
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "MIT © Sherlock Project"
+      },
+      {
+        "field": "api",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "sherlock user1 user2 user3"
+      },
+      {
+        "field": "mcp",
+        "url": "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp",
+        "quote": "Sherlock MCP Server"
+      },
+      {
+        "field": "verdict",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "Accounts found will be stored in an individual text file with the corresponding username (e.g `user123.txt`)."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

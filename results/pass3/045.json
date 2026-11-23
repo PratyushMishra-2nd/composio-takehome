@@ -1,0 +1,77 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "hint": "developer.adobe.com/commerce",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.164879215,
+  "turns": 6,
+  "result": {
+    "app": "Magento (Adobe Commerce)",
+    "description": "Ecommerce platform (Magento Open Source / Adobe Commerce) for storefronts, catalog, orders, customers, with REST and GraphQL APIs.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "hmac_signature",
+      "basic"
+    ],
+    "auth_detail": "Self-hosted/PaaS: OAuth 1.0a (HMAC-signed, per-integration consumer key/secret; counts as hmac_signature, not OAuth2), plus admin/customer token endpoints (username/password -> bearer token) and integration access tokens used as bearer. SaaS (Commerce as a Cloud Service): Adobe IMS OAuth server-to-server / user auth issuing bearer access tokens; legacy token generation not supported there.",
+    "access": "self_serve_free",
+    "access_detail": "No central developer signup. Credentials come from the merchant's own instance: Admin creates an Integration (consumer key/secret, access token) or uses admin/customer token endpoints. Magento Open Source is free to self-host (the developer runs their own store). Adobe Commerce is licensed and SaaS needs an Adobe account/IMS project. End-user connection means each merchant supplies store URL plus credentials. Not verified from fetched docs that Open Source is free (general knowledge).",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST covers products, orders, customers, carts, inventory, etc. GraphQL covers storefront functionality. The SaaS REST API has a smaller subset of endpoints. Base URL is per-store, so the toolkit needs a base-URL parameter.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+    "verdict": "build_with_caveat",
+    "blocker": "Per-merchant instance with no central OAuth2 app registry. Self-hosted auth is OAuth 1.0a/HMAC or token-based, so it needs a custom base URL plus token. SaaS uses IMS. Adobe's official MCP servers are developer/docs tools, not store-data tools. Community MCP servers exist (StackOne, CData, Cequence).",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "Third-party applications authenticate with OAuth 1.0a."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "Administrators and customers are authenticated with login credentials."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "In Adobe Commerce as a Cloud Service, you must use Adobe Identity Management Service (IMS) to authenticate your requests."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "Mobile applications authenticate using tokens."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "Adobe Commerce provides a wide range of REST API endpoints"
+      },
+      {
+        "field": "api",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "Primarily the Cloud Service REST API differs in that it includes a smaller subset of endpoints."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+        "quote": "IDE integration for Commerce development tasks, documentation-aware assistance"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

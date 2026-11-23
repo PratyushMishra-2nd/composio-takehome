@@ -1,0 +1,65 @@
+{
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "hint": "developer.salesforce.com/docs/commerce",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.19026734500000003,
+  "turns": 6,
+  "result": {
+    "app": "Salesforce Commerce Cloud",
+    "description": "Enterprise ecommerce platform (B2C Commerce, plus B2B Commerce) for storefronts, catalog, baskets, orders, customers and promotions.",
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "bearer_token"
+    ],
+    "auth_detail": "B2C SCAPI Admin APIs: Account Manager API client with OAuth2 client_credentials only, JWT bearer token. Shopper APIs: separate SLAS (OAuth 2.1; public/private clients, PKCE guest or registered login). Legacy OCAPI also uses Account Manager tokens.",
+    "access": "customer_account",
+    "access_detail": "No public signup or free tier found. Account Manager API clients and SLAS clients exist only inside a licensed customer org/realm. Sandboxes (on-demand) are provisioned within a customer realm. Credentials also need per-instance config (scopes, SLAS client, site IDs). Could not fetch the official pages (403) to confirm a free developer sandbox; none was found via search. Low confidence.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "B2C Commerce API (SCAPI): Shopper APIs (products, baskets, orders, customers, search, etc.) and Admin APIs (catalogs, products, inventory, promotions, orders, etc.), plus legacy OCAPI and Custom APIs. Per-tenant base URLs (short code, org ID). Separate B2B/D2C Commerce on Salesforce core has its own REST APIs.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/mcp-dx-intro.html",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve or free sandbox: credentials exist only inside a licensed B2C Commerce customer realm (Account Manager + per-instance setup). Official MCP (@salesforce/b2c-dx-mcp, developer preview) targets developer tooling, not store operations; community MCPs exist (brinzl/commercecloud-mcp-server, sfcc-dev-mcp).",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/mcp-dx-intro.html",
+        "quote": "Build B2C Storefronts Faster with the B2C DX MCP Server (Developer Preview)"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/brinzl/commercecloud-mcp-server",
+        "quote": "commercecloud mcp server"
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+        "quote": "Authorization for SCAPI Admin APIs"
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html",
+        "quote": "Authorization for Shopper APIs"
+      },
+      {
+        "field": "api",
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-solutions/guide/scapi-get-started.html",
+        "quote": "Get Started with the B2C Commerce API"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

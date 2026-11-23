@@ -1,0 +1,77 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "developers.cloudflare.com/api",
+  "model": "sonnet",
+  "seconds": 59,
+  "cost_usd": 0.23321351499999998,
+  "turns": 7,
+  "result": {
+    "app": "Cloudflare",
+    "description": "Global edge network platform: CDN, DNS, security/WAF, Zero Trust, and developer platform (Workers, R2, D1, etc.), all manageable via one public API.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "API tokens (user or account-owned, Bearer) are the recommended method; legacy Global API key (email + key headers) and Origin CA keys; self-managed OAuth2 clients for third-party apps (launched June 2026).",
+    "access": "self_serve_free",
+    "access_detail": "Free account signup works. Create API tokens in the dashboard. OAuth is available on all plans incl. Free; apps start private, and public use needs client domain verification, with no manual Cloudflare review mentioned. Some products (e.g. Workers features) may need paid plans; free-plan token creation is not explicitly stated on the pages read.",
+    "api_types": [
+      "rest",
+      "graphql",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v4 covers hundreds of operations across Accounts, Zones, DNS, Cache, Load Balancers, Workers, R2, Zero Trust and more. Official SDKs: TypeScript, Python, Go, Terraform provider. GraphQL Analytics API at api.cloudflare.com/client/v4/graphql.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+        "quote": "Whenever possible, use API tokens to interact with the Cloudflare API."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.cloudflare.com/fundamentals/oauth/",
+        "quote": "OAuth 2.0 enables applications to obtain limited access to user accounts on an HTTP service."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.cloudflare.com/changelog/post/2026-06-03-public-oauth-clients/",
+        "quote": "Before an application can be made public, you must verify the client domain."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.cloudflare.com/changelog/post/2026-06-03-public-oauth-clients/",
+        "quote": "Applications start with `private` visibility."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.cloudflare.com/analytics/graphql-api/",
+        "quote": "The GraphQL Analytics API provides data regarding HTTP requests passing through Cloudflare's network"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+        "quote": "Product specific Cloudflare MCP servers."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+        "quote": "Best when you want broad access across Cloudflare's APIs through code execution."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

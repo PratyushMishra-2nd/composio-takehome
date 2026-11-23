@@ -1,0 +1,69 @@
+{
+  "id": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "hint": "api-docs.ecwid.com",
+  "model": "sonnet",
+  "seconds": 71,
+  "cost_usd": 0.196476065,
+  "turns": 8,
+  "result": {
+    "app": "Ecwid",
+    "description": "Ecwid (by Lightspeed) is a cloud ecommerce platform that adds an online store to any website or social channel.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 authorization-code flow for public apps. Custom apps (own store) skip OAuth and use the secret_token/public_token that Ecwid generates. Tokens are sent as Authorization: Bearer and do not expire.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone who creates an Ecwid store gets a custom app and both tokens. Ecwid creates the custom app the first time a user opens the app dashboard in Ecwid admin. No docs page I read requires a paid plan or approval for this, and I did not check Ecwid's pricing page. Publishing a public app to the App Market probably involves Ecwid review. I did not read the \"Launch apps\" pages, so that part is unverified. A custom app or sandbox store is enough to build against.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v3 (/api/v3/{storeId}/...). It covers store profile and reports, orders and abandoned carts, products with variations and reviews, customers and groups, categories, and discounts and coupons. Rate limit is 600 requests per minute per token. There is no test mode, so use a separate test store.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://glama.ai/mcp/connectors/io.usefulapi/ecwid",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "quote": "Ecwid uses OAuth 2.0 to provide secure access to the store data for public apps."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "quote": "If you customize your own store, however, you can skip OAuth and easily get an access token for your store."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "quote": "After signing up with Ecwid and getting a custom app, you already have two tokens:"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/get-started/api-glossary",
+        "quote": "Ecwid creates one custom app for any user who visits the app dashboard in Ecwid admin for the first time."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ecwid.com/api-reference",
+        "quote": "We accept up to 600 requests per minute per token."
+      },
+      {
+        "field": "mcp",
+        "url": "https://glama.ai/mcp/connectors/io.usefulapi/ecwid",
+        "quote": "Read store products, orders, customers, categories and coupons; adjust inventory and update orders."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

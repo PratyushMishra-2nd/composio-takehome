@@ -1,0 +1,74 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "hint": "fanbasis.com",
+  "model": "sonnet",
+  "seconds": 69,
+  "cost_usd": 0.21727316499999996,
+  "turns": 10,
+  "result": {
+    "app": "fanbasis",
+    "description": "Creator-economy commerce platform (FanBasis, rebranded Commas) for checkout, subscriptions, invoices, customers and payments.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Public API uses x-api-key header, with per-key scopes and separate production and sandbox keys. Official MCP uses an OAuth login flow. The API's 401 message also mentions a Bearer token.",
+    "access": "self_serve_free",
+    "access_detail": "Keys are created in the dashboard under Account → API Keys. A separate sandbox dashboard issues sandbox keys. I found no plan or approval gate in the docs. A seller account is needed, and I did not check whether signup or the API is plan-restricted.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Base URL https://www.fanbasis.com/public-api/. Resources: checkout sessions (including embedded), customers and payment methods/charge, discount codes, invoices, products, subscribers, subscriptions and proration, transactions and refunds, and webhook subscriptions. The docs page references hundreds of method/path mentions. The docs are at commasdocs.com, a JS-rendered page (fbnewapi.netlify.app redirects there). The brand was reportedly renamed from FanBasis to Commas, per a third-party source I did not verify.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.fanbasis.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://commasdocs.com/",
+        "quote": "Everything you need to collect payments, manage subscriptions, and automate your business with the Commas API."
+      },
+      {
+        "field": "auth",
+        "url": "https://commasdocs.com/",
+        "quote": "Every API request must include your API key in the x-api-key header."
+      },
+      {
+        "field": "access",
+        "url": "https://commasdocs.com/",
+        "quote": "Log into your Commas dashboard and go to Account → API Keys. Copy your API key."
+      },
+      {
+        "field": "access",
+        "url": "https://commasdocs.com/",
+        "quote": "Each environment needs its own API key registered against your account"
+      },
+      {
+        "field": "api",
+        "url": "https://commasdocs.com/",
+        "quote": "Complete API reference for the Commas API. Checkout sessions, webhooks, customers, subscriptions, discount codes, and more."
+      },
+      {
+        "field": "mcp",
+        "url": "https://commasdocs.com/",
+        "quote": "Connect Claude, ChatGPT, or Grok directly to your Commas account via MCP."
+      },
+      {
+        "field": "mcp",
+        "url": "https://commasdocs.com/",
+        "quote": "Paste the server URL: https://www.fanbasis.com/mcp"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "hint": "developer.intuit.com",
+  "model": "sonnet",
+  "seconds": 79,
+  "cost_usd": 0.23562513999999993,
+  "turns": 11,
+  "result": {
+    "app": "QuickBooks",
+    "description": "Intuit's cloud accounting software (QuickBooks Online) for small businesses, with a REST Accounting API for invoices, bills, customers, payments, and reports.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 authorization-code flow through the Intuit Developer portal (client ID/secret, redirect URIs, refresh tokens). Intuit's own MCP server README lists \"OAuth 2.0 Authentication\". No API-key or personal-token option.",
+    "access": "admin_approval",
+    "access_detail": "Developer signup is free and sandbox keys are self-serve. Production keys need Intuit approval. Intuit reviews every app that connects to a production QuickBooks Online company, listed or not, via an App Assessment and Compliance Questionnaire. The review gate decides this, not price. The free Builder tier has $0 monthly fee and a 500,000 CorePlus credit cap, and Core calls are uncapped. A paid tier only lifts the cap. I could not fetch the official Intuit pages because they render client-side, so the review gate and Builder-tier details rest on Apideck's summaries of Intuit's rules. The sandbox claim comes from search snippets only.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "QuickBooks Online Accounting REST API (JSON). Covers about 29 entity types with CRUD and query, plus financial reports. Intuit's MCP README says \"145 total tools, 29 entity types with CRUD and search, and 11 financial reports\". There are also separate Payments APIs. Since Intuit's App Partner Program began in 2025, calls are metered as Core (free) and CorePlus (capped in the Builder tier).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "Intuit must review and approve the app (the compliance questionnaire) before production keys work for other customers' companies. The sandbox works without approval. Builder-tier credit caps also apply.",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://developers.apideck.com/connectors/intuit-enterprise-suite/docs/application_owner+app_compliance",
+        "quote": "Intuit reviews every app that connects to a production QuickBooks Online or Intuit Enterprise Suite company"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.apideck.com/connectors/intuit-enterprise-suite/docs/application_owner+app_compliance",
+        "quote": "Fill out the App Assessment and Compliance Questionnaire to get your app certified."
+      },
+      {
+        "field": "access",
+        "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+        "quote": "CorePlus API Credits: 500,000 per month"
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "OAuth 2.0 Authentication"
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online"
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

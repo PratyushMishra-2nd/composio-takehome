@@ -1,0 +1,77 @@
+{
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.snowflake.com",
+  "model": "sonnet",
+  "seconds": 64,
+  "cost_usd": 0.16038818500000002,
+  "turns": 5,
+  "result": {
+    "app": "Snowflake",
+    "description": "Cloud data platform (warehouse, lakehouse, AI) queried and managed via SQL and REST APIs.",
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "SQL API/REST APIs: OAuth (custom/partner security integrations), key-pair JWT, programmatic access tokens (PAT, bearer; default 15-day expiry, network policy needed by default), workload identity federation. Each account is customer-specific (per-account hostname).",
+    "access": "paid_plan",
+    "access_detail": "No app review gate: any account admin creates own OAuth security integration or PAT. But no permanent free tier: 30-day/credit-limited trial, then account suspended until upgraded to paid with credit card. Dev needs trial or paid account; end users need paid Snowflake accounts.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "SQL API (submit/status/cancel statements, most DDL/DML) plus Snowflake REST APIs (OpenAPI-compliant) covering ~20 resource areas: accounts, users, roles, grants, warehouses, databases, schemas, tables, stages, tasks, Cortex AI, etc. Not 100% parity with SQL. Account-specific base URL.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No free tier after 30-day trial; per-account hostname/instance required; PAT/OAuth setup needs account admin.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.snowflake.com/en/user-guide/programmatic-access-tokens",
+        "quote": "You can use a programmatic access token to authenticate to the following Snowflake endpoints:"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.snowflake.com/en/user-guide/oauth-custom",
+        "quote": "Only account administrators (users with the ACCOUNTADMIN role) or a role with the global CREATE INTEGRATION privilege"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+        "quote": "To reactivate a suspended trial account, add a credit card if one isn’t already on file, and then upgrade to a paid account."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+        "quote": "At the end of the trial, the account is suspended."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+        "quote": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+        "quote": "The Snowflake REST APIs suite of APIs enables developers to build end-to-end automation and integration with Snowflake resources."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+        "quote": "Snowflake-managed MCP server"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

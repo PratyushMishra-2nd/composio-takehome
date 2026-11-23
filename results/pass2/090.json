@@ -1,0 +1,64 @@
+{
+  "id": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "hint": "pitchbook.com (research API)",
+  "model": "sonnet",
+  "seconds": 32,
+  "cost_usd": 0.17431230999999997,
+  "turns": 6,
+  "result": {
+    "app": "PitchBook",
+    "description": "Private and public capital markets data platform (companies, deals, investors, funds) with a contract-only Direct Data API and a Premium MCP connector.",
+    "auth_methods": [
+      "api_key",
+      "other"
+    ],
+    "auth_detail": "Per third-party docs: API key or token sent as `Authorization: PB-Token {key}`, issued by PitchBook's Direct Data team under contract. PitchBook's official pages were not fetchable (403), so this is unconfirmed first-party. The MCP connector uses a browser sign-in.",
+    "access": "partner_gated",
+    "access_detail": "The API is sold as a separate product on a standalone contract. Credentials are provisioned by the Direct Data team. The endpoint reference sits behind platform login, and rate limits and pricing are not published. A developer sandbox may be arranged only through the Direct Data team.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at api.pitchbook.com (Direct Data, credit-based). Likely covers companies, deals, investors and funds, but the endpoint reference is private. Breadth could not be verified from public docs, so this is a best estimate.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://premium.mcp.pitchbook.com/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "The API needs a standalone PitchBook contract and credits. Docs are private and there is no self-serve signup or public sandbox. The official MCP connector needs a PitchBook Premium subscription.",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://pitchbook.com/help/pitchbook-api",
+        "quote": "Our API is a separate offering from the PitchBook Platform that requires a standalone contract agreement."
+      },
+      {
+        "field": "api",
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "Documentation is private. The endpoint reference and request shapes sit behind platform login, so evaluation requires a contract."
+      },
+      {
+        "field": "auth",
+        "url": "https://dlthub.com/context/source/pitchbook-api",
+        "quote": "PitchBook uses an API key sent as Authorization: PB-Token {key}, not a bearer token."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pitchbook.com/help/getting-started-with-pitchbook-premium-connector",
+        "quote": "PitchBook Premium Connector, built on MCP server technology"
+      },
+      {
+        "field": "verdict",
+        "url": "https://scrapegraphai.com/blog/pitchbook-api",
+        "quote": "PitchBook provisions access with an API key or authentication token and does not publish fixed API prices or a complete public request example."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "low",
+      "mcp": "medium"
+    }
+  }
+}

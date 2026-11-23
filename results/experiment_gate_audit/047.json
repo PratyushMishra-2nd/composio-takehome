@@ -1,0 +1,79 @@
+{
+  "id": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "hint": "api-docs.ecwid.com",
+  "model": "sonnet",
+  "seconds": 81,
+  "cost_usd": 0.16431241500000002,
+  "turns": 5,
+  "result": {
+    "app": "Ecwid",
+    "description": "Ecwid (by Lightspeed) is an ecommerce platform that adds an online store to any existing website or social channel, with a REST API to manage store data.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 for public apps, which get per-store access tokens. A merchant can also use a private custom app's secret token, generated in the Ecwid admin app dashboard. Tokens are sent as bearer tokens, and passing them in query params was discontinued in March 2025.",
+    "access": "admin_approval",
+    "access_detail": "Two gates. (1) Plan: \"Only stores on paid plans can access API.\" Free upgrades are available for test stores on request by email. (2) Public OAuth apps used by other merchants must pass submission, review and validation, publish to the App Market, and the developer must sign a partner contract. Private custom apps skip review but \"cannot be installed in other stores\". A merchant could paste their own custom-app token into a toolkit, but that still needs a paid plan. The pricing page shows no free tier.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covers store profile and reports, orders, products (variations, media, reviews), categories, customers and groups, discounts and coupons, shipping and payment options, staff, app storage, batch requests, and more. Rate limit is 600 requests per minute per token.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/HelpCode-ai/anythingmcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Merchants need a paid Ecwid plan to use the API. A public OAuth app for other merchants needs App Market review and a partner contract. Without that, only merchant-pasted custom-app tokens work.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.ecwid.com/api-reference/rest-api/rest-api-overview.md",
+        "quote": "Ecwid REST API allows you to access and manage any store data, payment and shipping methods, and storefront settings."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/api-reference/rest-api/rest-api-overview.md",
+        "quote": "We use OAuth 2.0 authorization simplified for single-store customizations, JSON-formatted data, and a clear structure."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/get-started/api-glossary.md",
+        "quote": "There are two tokens:  secret_token and public_token."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+        "quote": "Only stores on paid plans can access API."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/develop-apps/private-and-public-ecwid-apps.md",
+        "quote": "Such an app is only available in your store, it cannot be installed in other stores or become paid and published."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/launch-apps/faq-about-public-applications.md",
+        "quote": "An app must follow a standard publication path from submission to its review."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ecwid.com/api-reference/rest-api/rest-api-overview.md",
+        "quote": "We accept up to 600 requests per minute per token."
+      },
+      {
+        "field": "mcp",
+        "url": "https://anythingmcp.com/de/guides/ecwid-to-mcp",
+        "quote": "AnythingMCP is open source under AGPL-3.0 and includes an Ecwid connector."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

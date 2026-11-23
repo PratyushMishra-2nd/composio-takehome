@@ -1,0 +1,76 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.datadoghq.com/api",
+  "model": "sonnet",
+  "seconds": 85,
+  "cost_usd": 0.262307915,
+  "turns": 8,
+  "result": {
+    "app": "Datadog",
+    "description": "Cloud observability and security platform: infrastructure monitoring, APM, logs, metrics, dashboards, monitors, incidents, synthetics, RUM.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2",
+      "other"
+    ],
+    "auth_detail": "Classic: API key (DD-API-KEY) for writes/intake plus application key (DD-APPLICATION-KEY) for reads; per-org/user keys, not per-end-user OAuth. Newer: personal access tokens, service access tokens, workload identity federation (AWS GA). Blog (Jun 2026) says OAuth client support planned later this year; app keys become legacy after Q3 2026 but keep working.",
+    "access": "self_serve_trial",
+    "access_detail": "14-day free trial with signup, no credit card. A free tier of Infrastructure Monitoring (up to 5 Basic hosts) reportedly exists, but that is unverified verbatim. API plan restriction not found on trial or pricing pages. API and app keys are created in any org. Per-end-user OAuth for third-party apps not yet confirmed available.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "HTTP REST API, v1 and v2, roughly 179 API sections (Monitors, Dashboards, Logs, Metrics, Synthetics, RUM, Security Monitoring, Incidents, etc., by manual count of the API index). Official client libraries in Java, Python, Ruby, Go, TypeScript, Rust. Site-specific base URLs per region.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.datadoghq.com/mcp_server/",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that write data require reporting access and require an `API key`."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that read data require full access and also require an `application key`."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.datadoghq.com/blog/datadog-api-authentication",
+        "quote": "OAuth client support is planned for release later this year."
+      },
+      {
+        "field": "access",
+        "url": "https://datadoghq.com/trial",
+        "quote": "No credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "The Datadog API is an HTTP REST API."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "Use the Datadog API to access the Datadog platform programmatically."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.datadoghq.com/mcp_server/",
+        "quote": "The MCP Server forwards the authenticated user's own credentials to Datadog APIs."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

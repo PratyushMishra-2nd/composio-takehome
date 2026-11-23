@@ -1,0 +1,49 @@
+{
+  "id": 84,
+  "app": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "hint": "paygent (NMI-powered)",
+  "model": "sonnet",
+  "seconds": 67,
+  "cost_usd": 0.27203748000000005,
+  "turns": 10,
+  "result": {
+    "app": "Paygent Connect",
+    "description": "Paygent-branded payment gateway (hint: NMI-powered); a Connect product for marketplace payments, split payments and vendor onboarding is claimed on gopaygent.com. Vendor docs could not be verified.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Unverified. The gopaygent.com homepage sample reportedly sends a Bearer key with a pgt_live_ prefix. If the product is NMI-based, auth would be an NMI security key (private API key). I could not read the docs.",
+    "access": "admin_approval",
+    "access_detail": "Unverified. I could not read signup or pricing pages. If NMI-powered, working keys normally need a merchant gateway account, which a reseller or ISO provisions and underwrites. Connect marketplace payouts probably need onboarding or approval.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Search snippets say gopaygent.com offers REST APIs, with documentation, an API Reference and webhooks linked from the homepage. A /v1/payments endpoint and payment intents appear in the sample. The docs hostnames did not resolve or render, because the sites are JavaScript apps. Breadth is a guess. If the product is NMI-based, the NMI Payment API and v4 REST API cover payments, vault, recurring and reporting. The Japanese Paygent Co. is an unrelated company.",
+    "mcp_exists": false,
+    "mcp_official": false,
+    "mcp_url": "",
+    "verdict": "needs_outreach",
+    "blocker": "Product identity and docs are ambiguous. Several unrelated companies use the Paygent name. gopaygent.com and pay-gent.com render only their titles through fetch, so no developer docs were readable. The NMI link is unconfirmed. Contact the vendor to get docs and sandbox keys before building.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://www.gopaygent.com/",
+        "quote": "Paygent | The Premier Stripe & PayPal Alternative for API Payments"
+      },
+      {
+        "field": "api",
+        "url": "https://www.pay-gent.com/",
+        "quote": "Paygent — Modern Payment Infrastructure for Fintech"
+      }
+    ],
+    "confidence": {
+      "auth": "low",
+      "access": "low",
+      "api": "low",
+      "mcp": "low"
+    }
+  }
+}

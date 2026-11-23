@@ -1,0 +1,94 @@
+{
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "hint": "ipayx.ai/docs",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.22736560000000003,
+  "turns": 8,
+  "result": {
+    "app": "iPayX",
+    "description": "FINTRAC-registered FX forensic audit layer: compares a bank's applied FX rate to live mid-market, returning FX score, spread and hidden fees via API and MCP.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "API key (prefix ipx_live_) sent as Authorization: Bearer; OpenAPI also lists Supabase JWT. Generated in the iPayX dashboard. Some MCP tools are public with per-IP rate limits and need no key.",
+    "access": "paid_plan",
+    "access_detail": "Keyed REST API sits behind paid API plans: pricing page lists Developer $99/mo (100 audits, sandbox), Starter $499, Pro $1,499, Scale $4,999. I found no free key tier. Each end user would need their own paid key. A small unauthenticated MCP/REST surface (3 free audits per IP per month, free rate lookup) exists, but it is IP rate-limited and unfit for per-user connections. No app review or partner status is required to connect. I could only read the pricing and API docs pages as client-rendered JS, not as server text, so the plan details come from the page bundle.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "OpenAPI 3.1 documents three endpoints: /fx-audit-engine (audit of up to 500 transactions), /fetch-spot-rate and /roi-calculator. The server is a Supabase edge function host, and llms.txt also lists api.ipayx.ai/functions/v1/fx-audit-engine. Docs mention webhooks. The API does a single FX-audit job, so it is narrow.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.ipayx.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Narrow API (about 3 endpoints) with keys sold only on paid plans from $99/mo. Only a free, IP-limited public tier works without a key. The docs are client-rendered and there is no standalone developer reference.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://www.ipayx.ai/llms.txt",
+        "quote": "FINTRAC-registered (MSB C10001283) FX forensic audit layer. Real-time foreign-exchange auditing API and MCP server for AI agents, Canadian CFOs, and fintechs."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.ipayx.ai/.well-known/mcp.json",
+        "quote": "full_forensic_fx_report requires a Bearer API key from https://www.ipayx.ai/developers. Pass as: Authorization: Bearer <ipx_live_...>"
+      },
+      {
+        "field": "auth",
+        "url": "https://www.ipayx.ai/.well-known/openapi.json",
+        "quote": "Supabase JWT or iPayX API key (ipx_live_...)"
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/llms.txt",
+        "quote": "Pricing](/pricing) — Forensic Pack from $297, API plans from $99/mo."
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "Developer — $99/mo · 100 audits/mo · sandbox"
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/llms.txt",
+        "quote": "No API key required; shares the free allowance of 3 audits per IP per month."
+      },
+      {
+        "field": "api",
+        "url": "https://www.ipayx.ai/llms.txt",
+        "quote": "POST https://api.ipayx.ai/functions/v1/fx-audit-engine"
+      },
+      {
+        "field": "api",
+        "url": "https://www.ipayx.ai/.well-known/openapi.json",
+        "quote": "Forensic FX audit infrastructure for AI agents and fintechs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.ipayx.ai/llms.txt",
+        "quote": "Endpoint: https://mcp.ipayx.ai/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/iPAYX-Technologies/mcp-fx-audit/main/README.md",
+        "quote": "**Live endpoint:** `https://mcp.ipayx.ai/mcp`"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.ipayx.ai/.well-known/mcp.json",
+        "quote": "check_fx_mid_market_rate, audit_fx_transaction and compare_fx_sources are public (rate-limited per IP)."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": 17,
+  "app": "Plain",
+  "category": "Support and Helpdesk",
+  "hint": "plain.com",
+  "model": "sonnet",
+  "seconds": 101,
+  "cost_usd": 0.2887523,
+  "turns": 8,
+  "result": {
+    "app": "Plain",
+    "description": "API-first B2B customer support platform (Slack, Teams, Discord, email, in-app chat) with AI agent and workflows.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Machine user API keys sent as 'Authorization: Bearer plainApiKey_xxx' with fine-grained permissions; OAuth apps for calling the API as a workspace user.",
+    "access": "self_serve_trial",
+    "access_detail": "Pricing page: Foundation $45/user/month (billed annually), Horizon $99/user/month, Frontier custom. 7-day free trial, no credit card required. No permanent free tier found, so a developer needs a trial or paid workspace to get a working API key. API access does not appear to be plan-gated beyond that.",
+    "api_types": [
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Single GraphQL API. Plain's own app is built on it, so docs say there are no limitations on what can be done. Also a GraphQL SDK (TypeScript). Webhooks exist. I did not count endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.plain.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No free tier: only a 7-day trial, then paid per-user plan. Otherwise self-serve API keys and OAuth apps work.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.plain.com/docs/graphql/authentication",
+        "quote": "A machine user can have several API keys, so you can rotate them without downtime."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.plain.com/docs/graphql/authentication",
+        "quote": "Authorization: Bearer plainApiKey_xxx"
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "Three plans for B2B support teams: Foundation at $45/user/month, Horizon at $99/user/month, and custom Frontier."
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "7-day free trial, no credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://www.plain.com/docs/graphql/introduction",
+        "quote": "Plain itself is built on this same GraphQL API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/docs/integrations/mcp-server",
+        "quote": "Connect Claude Code, Cursor, or any MCP client to your Plain workspace over the Model Context Protocol."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/docs/integrations/mcp-server",
+        "quote": "The MCP server uses the same auth."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

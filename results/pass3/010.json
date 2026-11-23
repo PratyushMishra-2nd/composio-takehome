@@ -1,0 +1,70 @@
+{
+  "id": 10,
+  "app": "DealCloud",
+  "category": "CRM and Sales",
+  "hint": "api.docs.dealcloud.com",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.18275551499999998,
+  "turns": 7,
+  "result": {
+    "app": "DealCloud",
+    "description": "Intapp DealCloud: CRM and deal management platform for private capital, investment banking and professional services firms.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "Public REST API: OAuth2 Client Credentials (token endpoint POST {baseUrl}/api/rest/v1/oauth/token, client_id plus API key/secret, scopes such as data and user_management). Bearer token expires after 15 minutes. The MCP server uses a separate per-user OAuth flow with discovery and no client ID or secret.",
+    "access": "customer_account",
+    "access_detail": "No public signup, free tier or sandbox found. Each DealCloud site has its own API base URL and Swagger page. Credentials come from API Keys settings inside an existing, sales-led customer site, so an admin of a licensed tenant has to issue them. I did not fetch the API Keys page, so how credentials are issued is partly inferred from integrator docs.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST areas: Authentication, User Management, Schema, Data, Backups, Publications, Relationship Intelligence and Schema Contracts, about 60 doc sub-pages. Per-site Swagger. The GraphQL-style query tools (introspect, execute_query) appear in the MCP server's tool list. The REST docs do not state GraphQL support.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.docs.dealcloud.com/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve signup or developer sandbox. API credentials exist only inside a licensed DealCloud customer site, so building and testing needs a customer or partner tenant.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token"
+      },
+      {
+        "field": "auth",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the flow."
+      },
+      {
+        "field": "access",
+        "url": "https://api.docs.dealcloud.com/docs/",
+        "quote": "Each DealCloud site provides an interactive Swagger page for testing API calls."
+      },
+      {
+        "field": "api",
+        "url": "https://api.docs.dealcloud.com/docs/",
+        "quote": "This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints."
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.docs.dealcloud.com/mcp/authentication",
+        "quote": "DealCloud MCP uses OAuth to authenticate, letting AI assistants connect on behalf of an individual user."
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.docs.dealcloud.com/mcp/tools",
+        "quote": "To enable write tools, go to **Tools > MCP Servers**, edit the MCP Server, and turn on the **Enable Write Tools** toggle."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

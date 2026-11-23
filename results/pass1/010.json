@@ -1,0 +1,79 @@
+{
+  "id": 10,
+  "app": "DealCloud",
+  "category": "CRM and Sales",
+  "hint": "api.docs.dealcloud.com",
+  "model": "sonnet",
+  "seconds": 65,
+  "cost_usd": 0.23813814500000002,
+  "turns": 8,
+  "result": {
+    "app": "DealCloud",
+    "description": "Intapp DealCloud is a CRM and deal-management platform for investment banks, PE and other financial-services firms.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "REST API: each user creates an API key (client id + secret) in their Profile, then exchanges it via OAuth2 client-credentials at the tenant's /api/rest/v1/oauth/token for a 15-minute bearer token with scopes (data, user_management, publish, ri_import, backup). The MCP server uses separate per-user OAuth with discovery and no client id or secret.",
+    "access": "admin_approval",
+    "access_detail": "No public signup or free tier. Credentials only exist inside a customer's DealCloud tenant, so a customer admin must put the user in a group with the \"API\" site-area capability before that user can create a key. Docs do not state a plan restriction, but DealCloud is enterprise-licensed. The MCP server requires a \"DealCloud with Celeste\" license plus the Manage MCP Servers and MCP Access capabilities.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Seven functional areas: Authentication, User Management, Schema, Data, Backups, Publications, Relationship Intelligence. The sidebar also lists Schema Contracts, Files, Merge, Template Reports, Cells, Rows, History and Delete. Each tenant exposes Swagger at https://{host}/swagger. The base URL is tenant-specific, so each user must supply their own host.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.docs.dealcloud.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No self-serve developer access. Every user needs a licensed DealCloud tenant, an admin to enable API access, and their own tenant host URL. Toolkit testing needs a customer or partner sandbox. The MCP server is per-tenant and needs the Celeste license.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://api.docs.dealcloud.com/docs",
+        "quote": "Our APIs are organized into functional areas."
+      },
+      {
+        "field": "auth",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token"
+      },
+      {
+        "field": "auth",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the flow."
+      },
+      {
+        "field": "access",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions."
+      },
+      {
+        "field": "api",
+        "url": "https://api.docs.dealcloud.com/docs",
+        "quote": "Each DealCloud site provides an interactive Swagger page for testing API calls."
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.docs.dealcloud.com/mcp/authentication",
+        "quote": "DealCloud MCP uses OAuth to authenticate, letting AI assistants connect on behalf of an individual user."
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+        "quote": "DealCloud provides a default MCP Server out-of-the-box without any configuration required."
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.docs.dealcloud.com/mcp",
+        "quote": "Every action and response honors individual users permissions."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

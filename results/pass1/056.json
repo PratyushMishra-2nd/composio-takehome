@@ -1,0 +1,71 @@
+{
+  "id": 56,
+  "app": "Firecrawl",
+  "category": "Data, SEO and Scraping",
+  "hint": "firecrawl.dev",
+  "model": "sonnet",
+  "seconds": 55,
+  "cost_usd": 0.20580054500000003,
+  "turns": 6,
+  "result": {
+    "app": "Firecrawl",
+    "description": "Web data API for AI agents: search, scrape, crawl, map, extract and interact with web pages, returning clean Markdown or structured JSON.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "API key (fc-...) sent as Authorization: Bearer header. OAuth for apps lets users connect their own Firecrawl account. Some scrape/search endpoints work keyless with limits.",
+    "access": "self_serve_free",
+    "access_detail": "Free plan, no credit card: 1,000 credits/month, 2 concurrent requests. Paid plans (Hobby $19/mo, Standard $99/mo) for higher limits. Dashboard signup gives API key immediately.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at https://api.firecrawl.dev (v1/v2). Endpoints: scrape, crawl, map, search, extract, batch scrape, agent, interact, parse, monitor, credit usage. Official SDKs exist. Focused on web-data, not broad object model.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.firecrawl.dev/introduction",
+        "quote": "Firecrawl is the context API for AI agents. Search, scrape, and interact with the live web to get clean Markdown or structured data."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "The header should contain `Bearer fc-123456789`, where `fc-123456789` represents your API Key."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "To let users connect their own Firecrawl account to your app instead, use OAuth for apps."
+      },
+      {
+        "field": "access",
+        "url": "https://www.firecrawl.dev/pricing",
+        "quote": "Firecrawl gives you 1,000 free credits every month, which covers about 1,000 pages, and no card is required."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "Map\" (\"Get a complete list of URLs from any website quickly and reliably."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "quote": "Official Firecrawl MCP server, the context API for AI agents"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

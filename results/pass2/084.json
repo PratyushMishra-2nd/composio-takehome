@@ -1,0 +1,63 @@
+{
+  "id": 84,
+  "app": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "hint": "paygent (NMI-powered)",
+  "model": "sonnet",
+  "seconds": 39,
+  "cost_usd": 0.20124859999999997,
+  "turns": 7,
+  "result": {
+    "app": "Paygent Connect",
+    "description": "White-label payment gateway (NMI-powered) for card processing, vault/recurring billing and reporting; the API is NMI's Payment API.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Merchant-generated private security key (Settings > Security Keys, \"API\" permission) sent as security_key form field on the Payment API/Query API. v4 API uses a key in the Authorization header. No OAuth.",
+    "access": "customer_account",
+    "access_detail": "Keys are created inside an existing merchant gateway account. The brand \"Paygent Connect\" has no findable public developer portal or signup. NMI is a white-label gateway sold through channel partners and ISOs. A key from a sandbox account does not work on the standard gateway. A public free signup could not be confirmed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "NMI Payment API (Classic, form-encoded POST: auth, sale, credit, void, refund, validate), Customer Vault, recurring billing, Query API for reporting, plus an in-progress v4 API. The coverage is NMI's, not a Paygent-specific API. I could not confirm that Paygent Connect exposes it directly, and no Paygent-branded docs were found.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://enterprisedna.co/directories/mcp/praveendias1180-easypaydirect-mcp",
+    "verdict": "needs_outreach",
+    "blocker": "No public Paygent Connect developer docs or signup were found. Credentials only exist inside a merchant account provisioned by Paygent or its NMI reseller. The brand-to-NMI mapping is unverified. Building on generic NMI is possible but needs a test account.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.nmi.com/reference/process",
+        "quote": "To obtain an API key from your NMI gateway, first click on settings."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.nmi.com/reference/introduction",
+        "quote": "401 Unauthorized - a missing API Key or an invalid API Key was sent in the request."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.nmi.com/docs/creating-and-managing-security-keys-1",
+        "quote": "If you are an existing NMI partner, you can generate a new security key within the Merchant Portal."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.nmi.com/reference/process",
+        "quote": "The transaction type must be one of auth, sale, credit, offline, or validate."
+      },
+      {
+        "field": "mcp",
+        "url": "https://enterprisedna.co/directories/mcp/praveendias1180-easypaydirect-mcp",
+        "quote": "It works with any NMI white-label gateway if pointed at that gateway's host."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

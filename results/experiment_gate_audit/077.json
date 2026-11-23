@@ -1,0 +1,79 @@
+{
+  "id": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "hint": "clickup.com/api",
+  "model": "sonnet",
+  "seconds": 57,
+  "cost_usd": 0.14701630999999998,
+  "turns": 5,
+  "result": {
+    "app": "ClickUp",
+    "description": "Work management platform for tasks, docs, goals, time tracking and team collaboration.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "Personal API token (pk_, never expires) for individual use; OAuth2 authorization code grant for apps used by others. OAuth app creation limited to Workspace owners/admins. Access token currently does not expire.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit: (1) No app review/listing/partner status found in auth docs. Users authorize Workspaces themselves via the auth URL; personal tokens are per-user self-created. Docs mention no review step. (2) API not paywalled: rate-limit table lists FreeForever at 100 req/min, so the free plan has API access. Some endpoints vary by plan, and rate limits rise on higher tiers. Creating an OAuth app needs Workspace owner/admin, which a free account holder is by default on their own Workspace.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Public REST API v2, with some v3 endpoints (docs say the rest is being moved to v3). Covers tasks, lists, folders, spaces, docs, time tracking, comments, goals, webhooks and more. Some endpoints depend on plan. Rate limits per token: 100/min on Free, Unlimited and Business; 1,000 on Business Plus; 10,000 on Enterprise. Breadth is from general knowledge of the API reference. The fetched pages did not list endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "Use a personal API token for individual or testing purposes. Personal tokens begin with `pk_`."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "For apps or integrations that other people use, use the OAuth flow, allowing users to authorize Workspaces for your app."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "Only Workspace owners or admins can create OAuth apps."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.clickup.com/docs/rate-limits",
+        "quote": "These limits apply to both personal and OAuth tokens and vary by Workspace Plan of the Workspace hosting the token."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.clickup.com/docs/Getting%20Started",
+        "quote": "API endpoints vary depending on your plan."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.clickup.com/docs/general-v2-v3-api",
+        "quote": "The ClickUp API docs include both v2 and v3 versions, which leads to some terminology differences."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+        "quote": "Our MCP server URL is `https://mcp.clickup.com/mcp`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+        "quote": "We only support OAuth for authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

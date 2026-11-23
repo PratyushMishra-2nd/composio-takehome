@@ -1,0 +1,71 @@
+{
+  "id": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "hint": "stripe.com/docs/api",
+  "model": "sonnet",
+  "seconds": 39,
+  "cost_usd": 0.12347655499999999,
+  "turns": 4,
+  "result": {
+    "app": "Stripe",
+    "description": "Online payments platform: payments, billing, subscriptions, invoicing, payouts, Connect marketplaces, and more, exposed via API.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Secret/restricted API keys sent as Bearer or Basic auth for own account; OAuth (Connect, standard accounts) to act on connected users' accounts, though not recommended for new Connect platforms; Stripe Apps use OAuth too. MCP server uses OAuth or restricted API key.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can sign up free and get test-mode keys immediately; no setup or monthly fees, pay-as-you-go. Live mode needs account activation (business verification). Connect OAuth needs a Connect platform profile.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Large REST API (hundreds of endpoints: customers, payment intents, charges, subscriptions, invoices, products, prices, refunds, payouts, Connect, Treasury, Issuing, Billing etc.), webhooks, official SDKs in many languages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.stripe.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API and search the Stripe knowledge base, including documentation and support articles."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "Use OAuth for interactive MCP clients."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.stripe.com/api/authentication",
+        "quote": "The Stripe API uses API keys to authenticate requests."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.stripe.com/connect/oauth-standard-accounts",
+        "quote": "Use the OAuth connection flow to allow a Stripe user to connect to your platform."
+      },
+      {
+        "field": "access",
+        "url": "https://stripe.com/pricing",
+        "quote": "Stripe does not charge setup fees, monthly fees, or any other hidden fees like closure fees."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.stripe.com/api/authentication",
+        "quote": "The Stripe API uses API keys to authenticate requests."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

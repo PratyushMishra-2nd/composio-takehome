@@ -1,0 +1,85 @@
+{
+  "id": 56,
+  "app": "Firecrawl",
+  "category": "Data, SEO and Scraping",
+  "hint": "firecrawl.dev",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.135680825,
+  "turns": 4,
+  "result": {
+    "app": "Firecrawl",
+    "description": "Web data API for AI agents: search, scrape, crawl, map, and extract clean Markdown or structured data from the live web.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Per-user API key (fc-...) sent as Authorization: Bearer. Also an OAuth 2.1 server (PKCE S256, dynamic client registration) so apps can connect users' accounts; client_id needs no Firecrawl approval.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit (1): no app review, listing, or partner status. OAuth docs say a client_id needs no Firecrawl approval, and users can also create their own API key at /app/api-keys. (2): the free plan is $0 with no card and gives 1,000 credits/month (low rate limits, 2 concurrent). The docs say free signup gives direct API access. Pay-as-you-go and higher limits need paid plans, but API access does not.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at api.firecrawl.dev. Endpoints: scrape, crawl, map, search, extract, plus agent, interact/browser sandbox, parse, and webhooks. Focused scraping surface (about 10-20 endpoints), not a broad CRUD product.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.firecrawl.dev/introduction",
+        "quote": "Firecrawl is the context API for AI agents."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "The header should contain `Bearer fc-123456789`, where `fc-123456789` represents your API Key."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.firecrawl.dev/oauth.md",
+        "quote": "Firecrawl runs an OAuth 2.1 authorization server."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.firecrawl.dev/oauth.md",
+        "quote": "Your app needs a `client_id`. There are two ways to get one, and neither needs approval from Firecrawl."
+      },
+      {
+        "field": "access",
+        "url": "https://www.firecrawl.dev/pricing",
+        "quote": "Firecrawl gives you 1,000 free credits every month, which covers about 1,000 pages, and no card is required."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.firecrawl.dev/introduction",
+        "quote": "Create a free account for direct API access and higher limits"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.firecrawl.dev/introduction",
+        "quote": "Search, scrape, and interact with the live web to get clean Markdown or structured data."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "quote": "A Model Context Protocol (MCP) server that brings Firecrawl, the context API for AI agents, to MCP-compatible clients"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.firecrawl.dev/mcp-server",
+        "quote": "Set up Firecrawl MCP with keyless access, account sign-in, or an API key."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

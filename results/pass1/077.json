@@ -1,0 +1,89 @@
+{
+  "id": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "hint": "clickup.com/api",
+  "model": "sonnet",
+  "seconds": 32,
+  "cost_usd": 0.2187876,
+  "turns": 7,
+  "result": {
+    "app": "ClickUp",
+    "description": "Work management platform for tasks, docs, goals, time tracking and team collaboration.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 authorization-code for apps used by others (token currently non-expiring); personal API token (pk_...) in Authorization header for individual/testing use.",
+    "access": "self_serve_free",
+    "access_detail": "Any ClickUp user can generate a personal token; a Workspace owner/admin creates OAuth apps in Settings > Apps with no review. API works on all plans including Free Forever (100 req/min per token; higher on paid plans).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v2 plus newer v3 endpoints, with an OpenAPI spec and llms.txt index. Covers tasks, lists, folders, spaces, comments, time tracking, docs, goals, webhooks, custom fields and more. I did not count endpoints exactly; the \"broad\" rating is a judgement from the doc index.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.clickup.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.clickup.com/docs/authentication.md",
+        "quote": "Authenticate to the ClickUp API using a personal token or OAuth."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.clickup.com/docs/authentication.md",
+        "quote": "Only Workspace owners or admins can create OAuth apps."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.clickup.com/docs/rate-limits.md",
+        "quote": "| FreeForever | 100 |"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.clickup.com/docs/authentication.md",
+        "quote": "Use a personal API token for individual or testing purposes. Personal tokens begin with `pk_`."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.clickup.com/llms.txt",
+        "quote": "ClickUp API empowers you to create custom workflows, integrate seamlessly with your favorite tools, and scale your processes by mapping them directly to ClickUp."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.clickup.com/llms.txt",
+        "quote": "[OpenAPI Specification](https://developer.clickup.com/docs/open-api-spec.md): Access and use the OpenAPI specification for the ClickUp API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://clickup.com/blog/how-to-use-clickup-mcp-server/",
+        "quote": "Official endpoint https://mcp.clickup.com/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://clickup.com/blog/how-to-use-clickup-mcp-server/",
+        "quote": "Authentication OAuth; API keys and personal access tokens aren’t supported"
+      },
+      {
+        "field": "description",
+        "url": "https://developer.clickup.com/llms.txt",
+        "quote": "ClickUp API empowers you to create custom workflows, integrate seamlessly with your favorite tools, and scale your processes by mapping them directly to ClickUp."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.clickup.com/docs/authentication.md",
+        "quote": "For apps or integrations that other people use, use the [OAuth flow](https://developer.clickup.com/docs/authentication#oauth-flow), allowing users to authorize Workspaces for your app."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

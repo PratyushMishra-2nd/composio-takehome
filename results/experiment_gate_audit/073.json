@@ -1,0 +1,84 @@
+{
+  "id": 73,
+  "app": "Linear",
+  "category": "Productivity and Project Management",
+  "hint": "developers.linear.app",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.12303611500000003,
+  "turns": 3,
+  "result": {
+    "app": "Linear",
+    "description": "Product development and issue tracking system for teams and agents.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 (auth-code, Bearer access token) for multi-workspace apps; personal API keys (Authorization header, no Bearer prefix) that each user creates themselves.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit (1): docs show no app review required for other workspaces to authorize an OAuth2 app; directory listing is optional marketing only. Absence-based, not explicit confirmation. Free-plan users cannot manage third-party apps, but can use personal API keys. Gate audit (2): API and webhook access included on all tiers incl. Free; no paid requirement.",
+    "api_types": [
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Single GraphQL endpoint https://api.linear.app/graphql with full introspection; queries and mutations cover issues, teams, projects, cycles, comments etc. Webhooks supported. Rate limits are standard on Free/Basic, 2x on the next tier, 5x on the top tier.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.linear.app/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://linear.app/developers/graphql",
+        "quote": "The Linear API supports personal API keys and OAuth2 authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://linear.app/developers/oauth-2-0-authentication",
+        "quote": "Linear supports OAuth2 authentication, which is recommended if you’re building applications to integrate with Linear."
+      },
+      {
+        "field": "access",
+        "url": "https://linear.app/pricing",
+        "quote": "API and webhook access | Included | Included | Included | Included"
+      },
+      {
+        "field": "access",
+        "url": "https://linear.app/developers/integration-directory.md",
+        "quote": "You can also build your own integrations and submit them to the directory."
+      },
+      {
+        "field": "api",
+        "url": "https://linear.app/developers/graphql",
+        "quote": "Linear's public API is built using GraphQL."
+      },
+      {
+        "field": "api",
+        "url": "https://linear.app/developers/graphql",
+        "quote": "It supports introspection so you can query the whole schema."
+      },
+      {
+        "field": "mcp",
+        "url": "https://linear.app/docs/mcp",
+        "quote": "Read-write access is provided through `https://mcp.linear.app/mcp` by default."
+      },
+      {
+        "field": "description",
+        "url": "https://linear.app",
+        "quote": "The product development system for teams and agents"
+      },
+      {
+        "field": "verdict",
+        "url": "https://linear.app/pricing",
+        "quote": "Free for everyone"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

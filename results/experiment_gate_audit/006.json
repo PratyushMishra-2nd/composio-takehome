@@ -1,0 +1,80 @@
+{
+  "id": 6,
+  "app": "Podio",
+  "category": "CRM and Sales",
+  "hint": "podio.com",
+  "model": "sonnet",
+  "seconds": 60,
+  "cost_usd": 0.189969895,
+  "turns": 7,
+  "result": {
+    "app": "Podio",
+    "description": "Podio (now owned by Progress) is a customizable work-management and CRM platform where teams build apps, workspaces and workflows.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "other"
+    ],
+    "auth_detail": "OAuth2 with client_id/secret from a self-serve API key. Four flows: server-side (preferred), client-side, username/password, and app auth (app ID + app token, single app). App tokens can also be fetched programmatically only on request to Podio.",
+    "access": "self_serve_free",
+    "access_detail": "Any user, free or paid, creates API keys in account settings with no review step. The FAQ says the API works on free accounts, and the pricing page lists 1000 calls/hour on the Free plan. Paid plans only add higher rate limits through API add-ons. End users connect with their own Podio login through OAuth, so the developer's app needs no listing, review or partner status. Two caveats: some destructive operations (deleting workspaces or apps) need an elevated trust level, and programmatic app-token access needs a request to Podio. The free plan caps items at 100 per organization. Podio's hybrid pricing change took effect for existing customers on 1 Sept 2026. I did not confirm how it affects the free plan.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covers items, apps, workspaces/spaces, organizations, tasks, contacts, files, comments, hooks and more. Rate limits are 250 calls/hour for resource-intensive calls and 1,000/hour for all others. API add-ons raise these limits on paid plans.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.podio.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.podio.com/authentication",
+        "quote": "Use app authentication if you only need to interact with a single Podio app"
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.podio.com/authentication",
+        "quote": "This is the preferred way of authenticating for web apps."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.podio.com/api-key",
+        "quote": "You just have to sign in or sign up with Podio, and go to the API key tab in your settings."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.podio.com/index/faq",
+        "quote": "The Podio API is available to use for both paid and free Podio accounts."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.podio.com/index/faq",
+        "quote": "Paid accounts have an additional capability of upgrading to higher API rate limits by purchasing an API Add-on."
+      },
+      {
+        "field": "api",
+        "url": "https://www.progress.com/podio/documentation/using-podio/upgrade-and-billing/podio-hybrid-pricing-faq",
+        "quote": "Limit B: 1,000 API calls per hour for all other API calls."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide.md",
+        "quote": "The Podio MCP Server is currently in beta and is intended for evaluation and testing."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide.md",
+        "quote": "For production use, we recommend connecting with your API key."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

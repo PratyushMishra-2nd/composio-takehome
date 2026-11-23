@@ -1,0 +1,79 @@
+{
+  "id": 34,
+  "app": "GoHighLevel",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "highlevel.stoplight.io",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.20631168,
+  "turns": 7,
+  "result": {
+    "app": "GoHighLevel",
+    "description": "All-in-one CRM, marketing automation, funnels, calendars, conversations and payments platform for agencies and SMBs (HighLevel / LeadConnector).",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 Authorization Code Grant for Marketplace apps (access token ~24h, refresh token up to 1 year). Private Integration Tokens (static bearer tokens, scoped, per agency or sub-account) for internal use. Legacy v1 API keys are deprecated.",
+    "access": "admin_approval",
+    "access_detail": "Marketplace developer account is created automatically, with no manual signup form. You still need a HighLevel agency or sub-account to create apps and Private Integrations. I did not find a plan restriction or pricing on the docs pages, and the account's trial/paid status was not verified. Private apps are capped at 5 unique agency installs. Beyond that, the app must be published Public (listed, installable once approved) or go through Security Review.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v2 (versions v3, 2023-02-21, 2021-07-28, 2021-04-15) at services.leadconnectorhq.com. It covers contacts, conversations, calendars, opportunities, payments, forms, workflows, users, custom fields, tags, snapshots and more. Access is at location (sub-account) and agency level. Webhooks cover 50+ events.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Requires a HighLevel agency or sub-account to get credentials. Public distribution needs Marketplace approval or Security Review beyond 5 agency installs. Plan or trial requirements were not verified.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md",
+        "quote": "HighLevel supports the **Authorization Code Grant** flow with v2 APIs."
+      },
+      {
+        "field": "auth",
+        "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+        "quote": "Private Integrations, to put it simply, are static/fixed OAuth2 Access Tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://gohighlevelassist.freshdesk.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+        "quote": "Private apps are limited to 5 unique Agency installs."
+      },
+      {
+        "field": "access",
+        "url": "https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md",
+        "quote": "Public Apps: Visible and installable by all users once approved."
+      },
+      {
+        "field": "access",
+        "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+        "quote": "By default, all agency admins can create and manage Private Integrations."
+      },
+      {
+        "field": "api",
+        "url": "https://marketplace.gohighlevel.com/docs/",
+        "quote": "Complete REST API documentation for the HighLevel CRM platform."
+      },
+      {
+        "field": "mcp",
+        "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+        "quote": "Claude connects to `https://services.leadconnectorhq.com/mcp/anthropic/v2`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+        "quote": "There’s no key to create, paste, or rotate."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

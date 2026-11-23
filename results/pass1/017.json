@@ -1,0 +1,64 @@
+{
+  "id": 17,
+  "app": "Plain",
+  "category": "Support and Helpdesk",
+  "hint": "plain.com",
+  "model": "sonnet",
+  "seconds": 54,
+  "cost_usd": 0.206728605,
+  "turns": 7,
+  "result": {
+    "app": "Plain",
+    "description": "API-first customer support platform for B2B teams (threads, customers, workflows, SLAs, help center, AI agents).",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "Workspace API keys (tied to machine users, fine-grained permissions) sent as Authorization: Bearer. No third-party OAuth app flow documented for the GraphQL API; hosted MCP uses OAuth for individual users only.",
+    "access": "self_serve_trial",
+    "access_detail": "Keys are created in a Plain workspace (Settings → API Keys / Machine Users). Pricing lists API under 'Developer platform'; 7-day no-card free trial, then paid per-seat plans (Foundation ~$45/user/mo billed annually). Not confirmed whether API is on every plan; no free tier found. Each end user would supply their own workspace key.",
+    "api_types": [
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Single GraphQL endpoint https://core-api.uk.plain.com/graphql/v1 (POST only) with public schema; Plain's own app is built on it. TypeScript SDK, webhooks and events also available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.plain.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.plain.com/docs/graphql/introduction.md",
+        "quote": "Authorization: Bearer YOUR_TOKEN"
+      },
+      {
+        "field": "api",
+        "url": "https://www.plain.com/docs/graphql/introduction.md",
+        "quote": "Plain itself is built on this same GraphQL API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/docs/agents/mcp-server.md",
+        "quote": "You authenticate with your existing Plain account, so the MCP server has the same permissions as your user."
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.plain.com/article/does-the-plain-mcp-server-support-api-key-authentication-h7d83qtfdzxo4h49x4oyklwx",
+        "quote": "supports OAuth only."
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "Foundation is $45/user/month, Horizon is $99/user/month, and Frontier is custom."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

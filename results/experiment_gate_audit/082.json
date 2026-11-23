@@ -1,0 +1,78 @@
+{
+  "id": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "hint": "plaid.com/docs",
+  "model": "sonnet",
+  "seconds": 42,
+  "cost_usd": 0.14544803499999998,
+  "turns": 5,
+  "result": {
+    "app": "Plaid",
+    "description": "Financial data network API: connect bank accounts and fetch transactions, balances, identity, income, and payments/transfers data.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Team client_id + secret (per environment) sent in JSON body or PLAID-CLIENT-ID / PLAID-SECRET headers. Per-user access_token comes from Link flow (link_token -> public_token -> access_token). Dashboard MCP mints a short-lived OAuth token via client_credentials.",
+    "access": "admin_approval",
+    "access_detail": "Signup and Sandbox are free self-serve, but live bank data for end users needs Production access, which must be requested via the Dashboard. Plaid reviews Production requests, and the docs fetched do not describe the review in detail. The review is stated from general knowledge, not verified in the fetched pages. Production is then billed pay-as-you-go ($0/month base). A US/Canada free trial exists for live data. Some products (Layer, Signal, Transfer, Protect) are not on Pay as You Go and need a sales conversation.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "JSON over HTTP, all POST. About 22 products (Auth, Balance, Identity, Transactions, Investments, Liabilities, Assets, Income, Transfer, Signal and others), with an OpenAPI spec at github.com/plaid/plaid-openapi. Sandbox and Production hosts. The Link UI is required for end-user bank connection.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://plaid.com/docs/resources/mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "Production access needs Plaid approval via the Dashboard, so other customers' live bank connections are gated on Plaid's review. Sandbox works immediately. Link UI integration is needed for user onboarding.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "Almost all Plaid API endpoints require a `client_id` and `secret`."
+      },
+      {
+        "field": "auth",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "These may be sent either in the request body or in the headers `PLAID-CLIENT-ID` and `PLAID-SECRET`."
+      },
+      {
+        "field": "access",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "You can request Production API access via the Dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://plaid.com/pricing/",
+        "quote": "Sandbox is always free."
+      },
+      {
+        "field": "access",
+        "url": "https://plaid.com/pricing/",
+        "quote": "Our Free Trial allows you to make API calls using live data."
+      },
+      {
+        "field": "api",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "The Plaid API is JSON over HTTP. Requests are POST requests, and responses are JSON,"
+      },
+      {
+        "field": "mcp",
+        "url": "https://plaid.com/docs/resources/mcp/",
+        "quote": "Plaid offers two Model Context Protocol (MCP) servers"
+      },
+      {
+        "field": "mcp",
+        "url": "https://plaid.com/docs/resources/mcp/",
+        "quote": "Your team must be approved for Production access with at least one Plaid product to use the MCP server."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

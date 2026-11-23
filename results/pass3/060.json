@@ -1,0 +1,68 @@
+{
+  "id": 60,
+  "app": "Clay",
+  "category": "Data, SEO and Scraping",
+  "hint": "clay.com",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.17690595,
+  "turns": 7,
+  "result": {
+    "app": "Clay",
+    "description": "GTM data enrichment and prospecting platform; Public API runs searches, routines, tables, audiences, signals, workflows.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Personal API key in `clay-api-key` header, tied to user and workspace. Create via UI (API and CLI → API keys) or `clay api-keys create`. No OAuth documented for third-party apps (rate-limits page mentions \"OAuth credentials\" in passing).",
+    "access": "self_serve_free",
+    "access_detail": "Per Clay University, developer platform available on all plans incl. Free and trial. Plan limits: search results per request/year scale by plan; structured table queries (Tables) are Enterprise only. Rate limit 300 req/min per workspace. Docs themselves don't state plan gating; the all-plans claim comes from Clay University.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Base https://api.clay.com/public/v0, OpenAPI at developers.clay.com/openapi.json. Resources: Searches (companies/people), Routines (batch runs, JSONL), Tables (Enterprise), Audiences, Signals, Workflows (alpha), Credits, Me, Webhooks. Also a clay CLI and agent plugin. Table row reads and enrichment-by-table are limited; not a classic full CRUD of Clay tables on non-Enterprise.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.clay.com/use-cases/agent-workflows.md",
+    "verdict": "build_with_caveat",
+    "blocker": "Caveats: API is new (beta/alpha parts), table access Enterprise-only, search credit/volume limits by plan, API-key only (no OAuth for end users). Official MCP exists per docs but no dedicated setup/URL page found; mcp.clay.earth is a different product (Clay personal CRM).",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.clay.com/public-api/authentication.md",
+        "quote": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.clay.com/public-api/quickstart.md",
+        "quote": "There are two ways to use Clay as a developer: install the agent plugin to build with Clay inside your coding agent, or call the Public API directly from your own applications and services."
+      },
+      {
+        "field": "description",
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "Find companies and people in Clay's proprietary GTM database."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.clay.com/use-cases/agent-workflows.md",
+        "quote": "Use MCP to call Clay functions from a coding agent like Claude Code, Codex, or Cursor."
+      },
+      {
+        "field": "access",
+        "url": "https://university.clay.com/docs/clay-api-cli",
+        "quote": "The developer platform is available across all Clay plans, including free and trial plans."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.clay.com/public-api/rate-limits.md",
+        "quote": "The default limit is **300 requests per minute per workspace** (about 5 requests per second), shared across all API keys and OAuth credentials in the workspace."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "low"
+    }
+  }
+}

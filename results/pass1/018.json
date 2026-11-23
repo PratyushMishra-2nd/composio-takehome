@@ -1,0 +1,60 @@
+{
+  "id": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "hint": "helpscout.com",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.22930920000000002,
+  "turns": 8,
+  "result": {
+    "app": "Help Scout",
+    "description": "Shared-inbox customer support platform (email, chat, knowledge base) with conversations, customers, and reporting.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "Inbox/Mailbox API 2.0: OAuth2 (auth-code for multi-account apps, client-credentials for single account) with app created under Profile > My apps. Separate Docs API: per-user API key sent as HTTP Basic username with dummy password.",
+    "access": "self_serve_trial",
+    "access_detail": "Developers create OAuth apps self-serve in their own Help Scout account; no app review found for creating apps. Help Scout is a paid product (Standard/Plus/Pro, trial-based, no free tier), so working credentials need a trial or paid account. Reports endpoints are Plus/Pro only. Not verified: whether the API is plan-gated on Standard.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Inbox API 2.0 (https://api.helpscout.net/v2, HAL+JSON): conversations and threads, customers, mailboxes/folders/fields/saved replies, tags, users, teams, workflows, reports (Plus/Pro), webhooks. Rate limit 200 req/min. Separate Docs API (KB) with API-key Basic auth.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "No free tier; credentials need a trial or paid account. Reports need Plus/Pro. Docs API uses a separate API-key auth from the OAuth2 Inbox API.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.helpscout.com/llms.txt",
+        "quote": "**Authentication:** OAuth 2.0 (Authorization Code & Client Credentials flows)"
+      },
+      {
+        "field": "api",
+        "url": "https://developer.helpscout.com/llms.txt",
+        "quote": "The primary REST API for managing Help Scout conversations, customers, and support operations."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.helpscout.com/llms.txt",
+        "quote": "### Reports (Plus/Pro Plans)"
+      },
+      {
+        "field": "mcp",
+        "url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp/",
+        "quote": "With Help Scout's MCP server, AI assistants like Claude, ChatGPT, and Cursor can securely retrieve the customer knowledge already stored in your Help Scout account."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "low",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

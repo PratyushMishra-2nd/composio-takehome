@@ -1,0 +1,69 @@
+{
+  "id": 53,
+  "app": "Ahrefs",
+  "category": "Data, SEO and Scraping",
+  "hint": "ahrefs.com/api",
+  "model": "sonnet",
+  "seconds": 38,
+  "cost_usd": 0.2156854,
+  "turns": 7,
+  "result": {
+    "app": "Ahrefs",
+    "description": "SEO platform for backlink, keyword, rank tracking, site audit and SERP data, exposed via API v3.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "API v3: workspace API key sent as Authorization: Bearer. OAuth2 only via Ahrefs Connect (app must be approved/activated) and the hosted MCP.",
+    "access": "paid_plan",
+    "access_detail": "API on eligible paid plans (Lite+); other plans get only limited free test queries. Only workspace owners/admins create keys. Extra units are Enterprise-only. OAuth public apps via Ahrefs Connect need approval and activation.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "API v3 covers Site Explorer, Keywords Explorer, SERP Overview, Rank Tracker, Site Audit, Batch Analysis, Brand Radar, Social Media Management, Content Helper, management and usage endpoints. Unit-metered, min 50 units per request.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.ahrefs.com/mcp/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No free tier: users need a paid Lite+ plan, and the API key is created by a workspace admin. Per-user OAuth needs Ahrefs Connect approval. The official MCP forbids use through custom scripts or bridges.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.ahrefs.com/api/docs/api-keys-creation-and-management.md",
+        "quote": "Provide it in the Authorization header when making requests: `Authorization: Bearer YOUR_API_KEY`."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ahrefs.com/api/docs/introduction.md",
+        "quote": "Ahrefs API is available on [eligible paid plans](https://ahrefs.com/pricing). On all other plans, you'll still have access to a [limited set of free test queries](./free-test-queries.md)."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ahrefs.com/ahrefs-connect/docs/api-guide.md",
+        "quote": "Once your app is approved and activated, production requests will consume units according to the normal cost rules."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ahrefs.com/api/docs/introduction.md",
+        "quote": "Currently, API v3 allows you to pull data from the Site Explorer, Keywords Explorer, SERP Overview, Rank Tracker, Site Audit, Brand Radar, Social Media Management and Content Helper endpoints"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+        "quote": "Ahrefs provides a hosted MCP server that allows users with a Lite plan or higher to connect their Ahrefs account to supported AI tools."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+        "quote": "Using the external MCP endpoint via custom scripts, bridges, or standalone HTTP/JSON-RPC clients is **unsupported and not permitted.**"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

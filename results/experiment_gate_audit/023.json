@@ -1,0 +1,63 @@
+{
+  "id": 23,
+  "app": "Zoho Cliq",
+  "category": "Communications and Messaging",
+  "hint": "zoho.com/cliq",
+  "model": "sonnet",
+  "seconds": 37,
+  "cost_usd": 0.18330520000000003,
+  "turns": 8,
+  "result": {
+    "app": "Zoho Cliq",
+    "description": "Team chat and collaboration platform from Zoho with channels, DMs, meetings, bots and a developer platform.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 only (auth-code, plus Self Client via Zoho API Console; per-DC accounts domains). Scopes like ZohoCliq.Channels.READ, ZohoCliq.Messages.CREATE. No API key.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone registers a client in the Zoho API Console free; Cliq has a Free plan and the pricing page lists Developer platform/API support as a feature row without plan gating on the REST API. No vendor review needed for other orgs' users to authorize an OAuth client (Zoho consent screen); Marketplace listing optional. Caveat: some admin-level endpoints need org admin, and extra features (external channels, etc.) are on paid tiers. Plan-level API limits not fully verified.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v2 covers channels, chats, messages, users, teams, threads, bots, calls, files, and more, with Postman collection and OpenAPI spec. Regional data-center domains required (zoho.com, .eu, .in, etc.).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+        "quote": "Zoho Cliq's Rest API's follows the OAuth 2.0 protocol to authorize and authenticate requests."
+      },
+      {
+        "field": "api",
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+        "quote": "Each API must include an OAuth token in order to receive a success response."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/cliq/pricing.html",
+        "quote": "Developer platform"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/cliq/mcp-server.html",
+        "quote": "The Cliq MCP Server exposes Cliq's core capabilities as standardized tools, so MCP-compatible AI clients can read context, take action, and coordinate work across Zoho and third-party systems."
+      },
+      {
+        "field": "description",
+        "url": "https://www.zoho.com/cliq/pricing.html",
+        "quote": "Connect better, work smarter: Your all-in-one UCaaS solution for modern teams."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

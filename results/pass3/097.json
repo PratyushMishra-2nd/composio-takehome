@@ -1,0 +1,89 @@
+{
+  "id": 97,
+  "app": "higgsfield",
+  "category": "AI, Research and Media-native",
+  "hint": "higgsfield.ai/cli (content suite)",
+  "model": "sonnet",
+  "seconds": 67,
+  "cost_usd": 0.180658005,
+  "turns": 6,
+  "result": {
+    "app": "higgsfield",
+    "description": "AI image and video generation platform; exposes a pay-as-you-go async REST API over 50+ generative models, plus an MCP server and CLI.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "REST API: key ID + secret pair sent as 'Authorization: Key ID:SECRET' (legacy hf-api-key/hf-secret headers also accepted). Docs mention no OAuth for the REST API. The hosted MCP server and CLI use a browser sign-in/authorization flow tied to a user account (OAuth-style per secondary sources, not confirmed by vendor text). It needs a paid subscription and is a separate product from the API.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can sign up for an API account (individual or company), then register a payment method and fund a prepaid USD balance. Billing is pay-as-you-go with a $5 minimum top-up and no plan or subscription. There is no free tier, but access is open and self-serve. MCP and CLI need an active paid subscription instead.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "One authenticated, asynchronous API for generating images and videos. Submit a request to a per-model endpoint, then poll status by request ID. 50+ models. Python and TypeScript SDKs are available. It is a generation-only surface, with no broad account or project object management.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.higgsfield.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "API requires prepaid funding ($5 minimum), with no free tier. Auth is a key ID + secret pair, so OAuth2 is not offered for the REST API. The OAuth-style MCP/CLI path needs a paid subscription. The API surface is generation-only.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.higgsfield.ai/docs/authentication.md",
+        "quote": "Each credential consists of a key ID and a secret."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.higgsfield.ai/docs/authentication.md",
+        "quote": "Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET"
+      },
+      {
+        "field": "access",
+        "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+        "quote": "Billing is pay-as-you-go from a US dollar balance, and the minimum top-up is $5."
+      },
+      {
+        "field": "access",
+        "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+        "quote": "Sign up for an API account, either as an individual or as a company."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.higgsfield.ai/docs",
+        "quote": "Generate images and videos through one authenticated, asynchronous API."
+      },
+      {
+        "field": "api",
+        "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+        "quote": "One API key unlocks every model in the API catalog: 50+ current video and image models,"
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent",
+        "quote": "Name it Higgsfield and paste the MCP server URL: `https://mcp.higgsfield.ai/mcp`"
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent",
+        "quote": "An active paid subscription is required."
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/cli",
+        "quote": "Authenticate: run `higgsfield auth login` and complete the sign-in in the browser it opens."
+      },
+      {
+        "field": "verdict",
+        "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+        "quote": "No plan or subscription is involved: fund the balance, send requests at the rates listed in the catalog,"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

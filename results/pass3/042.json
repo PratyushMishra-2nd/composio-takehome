@@ -1,0 +1,74 @@
+{
+  "id": 42,
+  "app": "WooCommerce",
+  "category": "Ecommerce",
+  "hint": "woocommerce.com/document/woocommerce-rest-api",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.12945323000000003,
+  "turns": 4,
+  "result": {
+    "app": "WooCommerce",
+    "description": "Open-source WordPress ecommerce plugin; REST API exposes store data (orders, products, customers, coupons, etc.) per self-hosted store.",
+    "auth_methods": [
+      "basic",
+      "hmac_signature"
+    ],
+    "auth_detail": "No OAuth2 on the REST API. HTTPS: HTTP Basic with Consumer Key/Secret. HTTP: OAuth 1.0a one-legged (HMAC signature scheme, not OAuth2). The MCP server uses WordPress Application Passwords, not OAuth2 or REST keys.",
+    "access": "self_serve_free",
+    "access_detail": "Self-hosted plugin. Store owner generates consumer key/secret in their own store admin, with no vendor approval. Each store has its own base URL and credentials. Pricing/plan gating was not checked, so the free-access claim is inferred from the self-hosted model.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST v3 at /wp-json/wc/v3/. Covers coupons, customers, orders, order notes, refunds, products, variations, categories, tags, reviews, reports, tax, webhooks, settings, payment gateways, shipping zones, system status, data.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "No OAuth2. Users must supply store URL plus consumer key/secret. Store must serve HTTPS for Basic auth. The official MCP is in developer preview, needs the MCP Adapter plugin, and authenticates with Application Passwords.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+        "quote": "WooCommerce (WC) 2.6+ is fully integrated with the WordPress REST API."
+      },
+      {
+        "field": "auth",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+        "quote": "You may use HTTP Basic Auth by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password."
+      },
+      {
+        "field": "auth",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+        "quote": "You must use OAuth 1.0a \"one-legged\" authentication to ensure REST API credentials cannot be intercepted by an attacker."
+      },
+      {
+        "field": "access",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+        "quote": "WooCommerce includes two ways to authenticate with the WP REST API."
+      },
+      {
+        "field": "api",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+        "quote": "The current WP REST API integration version is `v3` which takes a first-order position in endpoints."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.woocommerce.com/docs/features/mcp/",
+        "quote": "The MCP implementation in WooCommerce is currently in developer preview."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.woocommerce.com/docs/features/mcp/",
+        "quote": "Remote HTTP connections authenticate using a WordPress username and an Application Password."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

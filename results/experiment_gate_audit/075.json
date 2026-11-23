@@ -1,0 +1,80 @@
+{
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "hint": "developers.asana.com",
+  "model": "sonnet",
+  "seconds": 38,
+  "cost_usd": 0.1572075,
+  "turns": 5,
+  "result": {
+    "app": "Asana",
+    "description": "Work management platform for teams to plan, track and automate tasks, projects, and portfolios.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "OAuth2 auth-code (app registered in developer console; also OIDC) for multi-user apps; Personal Access Token (Bearer header) that any user self-creates; Service Accounts (Enterprise tier, super admin only).",
+    "access": "self_serve_free",
+    "access_detail": "Free dev console signup; each user can mint a PAT free, and the Free tier has API access (150 req/min). OAuth app can be created without review and used in own org; to let users in any other workspace connect via OAuth, app must be submitted for review and published. Per-user PATs avoid that gate. Service Accounts need Enterprise.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covers tasks, projects, sections, portfolios, goals, users, workspaces, teams, custom fields, attachments, webhooks, events, batch, search, etc. Rate limit 150/min Free, 1500/min Paid. OpenAPI spec and SDKs available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.asana.com/v2/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Public multi-tenant OAuth distribution (any workspace) requires Asana app review/publish; PAT path works self-serve with no review. Service Accounts Enterprise-only.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "Service Accounts are an Enterprise tier feature and can only be created by Asana super admins"
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/oauth",
+        "quote": "The endpoint for token exchange is POST https://app.asana.com/-/oauth_token"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/publish-your-app.md",
+        "quote": "Make your app available to users in any Asana workspace, beyond your own organization or development environment"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/publish-your-app.md",
+        "quote": "If you're building an internal tool or testing your integration, you can create and use an OAuth app without submitting it for review."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/rate-limits",
+        "quote": "Limits are based on minute-long windows and differ depending on whether the domain is free or paid (see pricing for available tiers)."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.asana.com/docs/personal-access-token",
+        "quote": "generating a PAT allows you to access (i.e., make requests to) the Asana REST API upon successful authentication."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.asana.com/docs/using-asanas-mcp-server.md",
+        "quote": "The Asana MCP V2 server is available at: `https://mcp.asana.com/v2/mcp`."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

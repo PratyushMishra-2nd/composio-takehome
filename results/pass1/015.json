@@ -1,0 +1,59 @@
+{
+  "id": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "hint": "usepylon.com",
+  "model": "sonnet",
+  "seconds": 44,
+  "cost_usd": 0.204452165,
+  "turns": 7,
+  "result": {
+    "app": "Pylon",
+    "description": "B2B support platform (Slack/Teams/email-based helpdesk) with issues, accounts, contacts, knowledge base, and AI agents.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "auth_detail": "Admin-created API token sent as Authorization: Bearer. Tokens do not expire. No OAuth2 for the public REST API; the official MCP server is OAuth-only.",
+    "access": "self_serve_free",
+    "access_detail": "Any Pylon workspace Admin can create a token in Settings > API Tokens. No docs page found stating a paid-plan gate. Pylon itself is sales-led, so a workspace is needed first. Plan restrictions were not confirmed.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at api.usepylon.com (US) and api.eu.usepylon.com (EU). Covers issues, customers/accounts, contacts, knowledge base, and more, with an API reference for all endpoints. SDKs for TypeScript, Python and Go, plus an experimental CLI. A community server claims 114 endpoints (unverified). Endpoint count not stated in the official docs.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.usepylon.com",
+    "verdict": "build_with_caveat",
+    "blocker": "Auth is a bearer token created by a workspace Admin, which is a manual step for each user. Whether the API needs a paid plan is not documented. A user must already be a Pylon customer.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+        "quote": "The Pylon API uses Bearer authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+        "quote": "Only Admins can create and manage API tokens."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+        "quote": "Check out our API Reference for specifications on all endpoints."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.usepylon.com/articles/2407390554-connecting-to-the-pylon-mcp-server",
+        "quote": "The Pylon MCP server only supports OAuth authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

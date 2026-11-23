@@ -1,0 +1,74 @@
+{
+  "id": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "hint": "api-docs.ecwid.com",
+  "model": "sonnet",
+  "seconds": 45,
+  "cost_usd": 0.189998855,
+  "turns": 6,
+  "result": {
+    "app": "Ecwid",
+    "description": "Ecwid by Lightspeed: cloud ecommerce platform that adds an online store to any website or social channel.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 for public apps (code exchange at my.ecwid.com/api/oauth/token). Custom apps for a single store get secret and public access tokens directly, no OAuth. Calls use an Authorization: Bearer header.",
+    "access": "self_serve_free",
+    "access_detail": "Sign up with Ecwid, create a custom app, and copy the tokens from the app's Details page. The pricing page shows no free plan and no API plan restriction. I could not confirm whether the API needs a paid store plan, so treat that as unverified. Listing in the App Market needs Ecwid review.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at docs.ecwid.com/api-reference. It covers products, orders, customers, categories, coupons, inventory and more. Every call takes a store_id path parameter. Rate limit is 600 requests per minute per token. There is no test mode, so use a separate test store.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://zapier.com/mcp/ecwid",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "quote": "Ecwid uses OAuth 2.0 to provide secure access to the store data for public apps."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "quote": "If you customize your own store, however, you can skip OAuth and easily get an access token for your store."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "quote": "After signing up with Ecwid and getting a custom app, you already have two tokens:"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "quote": "Secret token grants full access to REST API (provided the app has all required permissions)"
+      },
+      {
+        "field": "mcp",
+        "url": "https://glama.ai/mcp/connectors/io.usefulapi/ecwid",
+        "quote": "Read store products, orders, customers, categories and coupons; adjust inventory and update orders."
+      },
+      {
+        "field": "mcp",
+        "url": "https://zapier.com/mcp/ecwid",
+        "quote": "Ecwid by Lightspeed is a cloud online store builder which lets you instantly launch an online store on any website"
+      },
+      {
+        "field": "description",
+        "url": "https://zapier.com/mcp/ecwid",
+        "quote": "Ecwid by Lightspeed is a cloud online store builder which lets you instantly launch an online store on any website"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

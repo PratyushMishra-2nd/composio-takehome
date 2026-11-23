@@ -1,0 +1,69 @@
+{
+  "id": 32,
+  "app": "Meta Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.facebook.com/docs/marketing-apis",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.18064632500000005,
+  "turns": 6,
+  "result": {
+    "app": "Meta Ads",
+    "description": "Meta Marketing API: create, manage and report on Facebook and Instagram ad campaigns, audiences, creatives and insights via the Graph API.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 via Facebook Login dialog (scope ads_management / ads_read) gives user access tokens. System user tokens are used for server-to-server access. The ads MCP server also accepts a pre-obtained access token.",
+    "access": "admin_approval",
+    "access_detail": "Anyone can create a Meta app free and get Limited access (the default) for their own ad accounts. To manage other people's ad accounts, the app needs advanced access to ads_read / ads_management, which Meta approves through App Review per permission. Business Verification applies if the app accesses sensitive data. Full access tier also needs 500+ API calls in 15 days with an error rate under 15%.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Marketing API sits on the Graph API (REST-style, versioned). It covers campaigns, ad sets, ads, creatives, custom audiences, insights/reporting, ad accounts and catalogs. Official SDKs exist but are not mentioned on the pages I fetched.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "verdict": "build_with_caveat",
+    "blocker": "Serving other users' ad accounts needs App Review for advanced access to ads_read / ads_management, plus Business Verification where sensitive data is involved. Meta's official MCP tool access is rolling out gradually.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization",
+        "quote": "If you're managing someone's ads, use the `scope` parameter to prompt them for the `ads_management` or `ads_read` permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization",
+        "quote": "Advanced access must be approved through the App Review process on an individual permission and feature basis."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization",
+        "quote": "If your app is managing other people's ad accounts, you need advanced access to the `ads_read` and/or `ads_management` permissions."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization",
+        "quote": "Business apps are subject to an additional layer of Graph API authorization called access levels."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/07/16/meta-ads-mcp-server/",
+        "quote": "Today, we are opening up our ads MCP server to any developer with their own Meta app."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/07/16/meta-ads-mcp-server/",
+        "quote": "we'll be gradually rolling out access to tools available to ad accounts through this integration method."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

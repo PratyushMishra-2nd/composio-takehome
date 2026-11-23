@@ -1,0 +1,75 @@
+{
+  "id": 6,
+  "app": "Podio",
+  "category": "CRM and Sales",
+  "hint": "podio.com",
+  "model": "sonnet",
+  "seconds": 55,
+  "cost_usd": 0.22236166999999998,
+  "turns": 7,
+  "result": {
+    "app": "Podio",
+    "description": "Podio (Progress/Citrix) is a customizable work-management and CRM platform with apps, workspaces, items, tasks and workflows.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "other"
+    ],
+    "auth_detail": "OAuth2 with client ID/secret: server-side, client-side, username/password, and app authentication (app ID + app token). API keys generated self-serve in account settings.",
+    "access": "self_serve_free",
+    "access_detail": "Sign up for Podio, generate an API key in account settings. Free plan includes API access at 1000 calls/hour; higher limits via paid add-ons. No approval step documented.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "43 API areas: Applications, Items, Tasks, Comments, Contacts, Files, Hooks, Spaces, Organizations, Search, Views, Flows, Batch, etc. Rate limit 1000 calls/hour on Free/Plus/Premium; add-ons raise it.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.podio.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.podio.com/authentication",
+        "quote": "The Podio API uses the OAuth2 protocol for authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.podio.com/authentication",
+        "quote": "Your application is assigned a unique identifier, called \"Client ID\", together with a \"Client Secret\"."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.podio.com/api-key",
+        "quote": "You just have to sign in or sign up with Podio, and go to the API key tab in your settings."
+      },
+      {
+        "field": "access",
+        "url": "https://www.progress.com/podio/pricing",
+        "quote": "1000 calls per hour"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.podio.com/doc",
+        "quote": "Our API is split up into different areas, that each contains a subset of methods grouped by functionality."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide.md",
+        "quote": "The Podio MCP Server is currently in beta and is intended for evaluation and testing."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide.md",
+        "quote": "The server is live at https://mcp.podio.com"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

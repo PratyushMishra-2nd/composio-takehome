@@ -1,0 +1,80 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.datadoghq.com/api",
+  "model": "sonnet",
+  "seconds": 83,
+  "cost_usd": 0.17799616499999998,
+  "turns": 8,
+  "result": {
+    "app": "Datadog",
+    "description": "Cloud observability and security platform for monitoring infrastructure, apps, logs, and traces.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "REST API: org API key plus user-owned application key (headers DD-API-KEY / DD-APPLICATION-KEY) for reads. OAuth2 exists in Datadog but client registration goes through the Partner Sandbox/Developer Platform. MCP server prefers OAuth 2.0 and also accepts tokens or key headers (per setup page summary, not verified verbatim).",
+    "access": "self_serve_trial",
+    "access_detail": "Keys can be created by any user in Organization settings, but need a Datadog org. Pricing page offers a free trial and then a Free tier limited to five Basic hosts with 1-day metric retention. Trial or free-tier org is enough for working API keys. OAuth clients for public apps need a Partner Sandbox account.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Public REST API v1/v2 covering metrics, logs, monitors, dashboards, incidents, SLOs, security, synthetics and more. Regional site-specific base URLs (api.datadoghq.com, .eu, us3, us5, ap1, and others).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.datadoghq.com/mcp_server/",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that read data require full access and also require an `application key`."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that write data require reporting access and require an `API key`."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/extend/authorization/oauth2_in_datadog/",
+        "quote": "Learn about how Datadog uses OAuth 2.0."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+        "quote": "Navigate to Organization settings, then click the API keys or Client Tokens tab."
+      },
+      {
+        "field": "access",
+        "url": "https://www.datadoghq.com/pricing/",
+        "quote": "On the Free tier, you get up to five Basic hosts with 1-day metric retention, at no cost."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+        "quote": "Application keys, in conjunction with your organization's API key, give users access to Datadog's programmatic API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.datadoghq.com/mcp_server/",
+        "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.datadoghq.com/mcp_server/",
+        "quote": "The MCP Server has a fair-use burst limit of 50 tool calls per 10 seconds."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

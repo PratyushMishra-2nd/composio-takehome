@@ -1,0 +1,84 @@
+{
+  "id": 12,
+  "app": "Intercom",
+  "category": "Support and Helpdesk",
+  "hint": "intercom.com",
+  "model": "sonnet",
+  "seconds": 54,
+  "cost_usd": 0.15707413,
+  "turns": 5,
+  "result": {
+    "app": "Intercom",
+    "description": "Customer messaging and support platform (inbox, Fin AI agent, help center, tickets, contacts) with a REST API and hosted MCP server.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Access Token (sent as Authorization: Bearer) is auto-issued per app for private apps on your own workspace. OAuth 2.0 auth-code flow is for public apps that access other customers' workspaces. Token exchange is at api.intercom.io/auth/eagle/token. Regional US, EU and AU hosts.",
+    "access": "admin_approval",
+    "access_detail": "A free developer workspace lets anyone build, and a private-app access token needs no review. But for other customers' accounts to connect through OAuth, the app must be public. Intercom must review and approve it first, which takes up to 7 business days. Unlisted public apps need review too. Private apps that access only your own workspace data skip review, but the docs frame that as a paid workspace. Pricing is per seat, with a 14-day trial. No end-user token path was verified as free. Treat the OAuth route as gated by app review.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Versioned REST API (v2.18 in the docs nav). Covers contacts, companies, conversations, tickets, articles and Help Center, events, tags, admins, news items, custom objects and data connectors. OAuth scopes are granular. The REST intro page URL returned 404, so breadth rests on the OAuth scopes table and the MCP tool list.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.intercom.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "A multi-tenant OAuth toolkit needs the Intercom app to pass review as a public app, taking up to 7 business days. Until approved, only private-app access tokens work (customer-supplied tokens or the developer's own workspace). AU workspaces are not supported by the MCP server.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "To access the Intercom API, you have two authentication options depending on whether you app is public or private."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "We provide you with an Access Token as soon as you create an app on your workspace."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app",
+        "quote": "This means that the Intercom team must review and approve your app before it is available to install."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app",
+        "quote": "Both unlisted and listed apps must be submitted for review."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app",
+        "quote": "Private apps that only access your own paid workspace data do not require a review."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+        "quote": "Development workspaces are free and intended for development purposes only."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+        "quote": "You can do this by making a `POST` request to `https://api.intercom.io/contacts`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.intercom.com/docs/guides/mcp",
+        "quote": "The Intercom MCP Server provides 16 tools for interacting with the Intercom API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.intercom.com/docs/guides/mcp",
+        "quote": "The Intercom MCP server is available for US and EU hosted workspaces."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

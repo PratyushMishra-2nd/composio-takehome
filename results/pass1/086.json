@@ -1,0 +1,73 @@
+{
+  "id": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "hint": "developer.intuit.com",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.23070368500000002,
+  "turns": 7,
+  "result": {
+    "app": "QuickBooks",
+    "description": "Intuit's cloud accounting software for small businesses (invoices, bills, customers, payments, reports), exposed via the QuickBooks Online Accounting REST API.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 authorization-code flow (appcenter.intuit.com/connect/oauth2, token at oauth.platform.intuit.com), scope com.intuit.quickbooks.accounting, per-company realmId, refresh tokens. No API-key/basic option for QBO.",
+    "access": "admin_approval",
+    "access_detail": "Dev account and sandbox are free and self-serve. Production keys for connecting real customer companies need Intuit's app review/security questionnaire, and production setup needs a public HTTPS redirect URI. The API is free on the Builder tier ($0, unlimited Core calls, 500k CorePlus credits per month, then blocked). Higher tiers are paid and premium APIs need Silver or above. Intuit's own pages did not load for me, so the review and pricing details come from search snippets and a third-party article.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "QBO Accounting REST/JSON API with query endpoint. It covers about 29 entities (Customer, Invoice, Bill, Vendor, Account, Payment and others) plus about 11 reports. A separate Payments API exists. GET calls are metered as CorePlus under the App Partner Program.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "Intuit app review is required before production keys for real customer companies. The Builder tier caps metered (GET) calls at 500k credits per month.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+        "quote": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company."
+      },
+      {
+        "field": "access",
+        "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+        "quote": "Core API Calls: Unlimited (free)"
+      },
+      {
+        "field": "access",
+        "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+        "quote": "Overage: API calls are **blocked** after exceeding the 500,000 limit"
+      },
+      {
+        "field": "api",
+        "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+        "quote": "The Intuit App Partner Program and its associated pricing structure **only applies to QuickBooks Online (QBO)** integrations."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+        "quote": "The QuickBooks MCP Server lets AI assistants access QuickBooks data via a standard interface."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+        "quote": "this is a local MCP server. It runs as a stdio subprocess on the developer's or partner's machine"
+      },
+      {
+        "field": "verdict",
+        "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+        "quote": "you must register an app on the Intuit Developer Portal"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

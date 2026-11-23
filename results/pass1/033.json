@@ -1,0 +1,73 @@
+{
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "learn.microsoft.com/linkedin/marketing",
+  "model": "sonnet",
+  "seconds": 44,
+  "cost_usd": 0.20510718500000003,
+  "turns": 6,
+  "result": {
+    "app": "LinkedIn Ads",
+    "description": "LinkedIn Marketing/Advertising API: manage ad accounts, campaigns, creatives, targeting and analytics programmatically (Campaign Manager features).",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "3-legged OAuth2 authorization code only; 2-legged client credentials not available for marketing use cases. Requires app approved for Advertising API product.",
+    "access": "admin_approval",
+    "access_detail": "Must apply for Advertising API product on app's Product tab; LinkedIn reviews and approves (can reject). Development tier: reads unlimited, edits up to 5 ad accounts. Standard tier (multi-account campaign mgmt) needs further discretionary approval. Free to use once approved.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Versioned REST APIs (Marketing versions, e.g. 202601 sunsetting 2027-01-15). Covers ad accounts, campaign groups, campaigns, creatives, targeting, reporting/analytics, plus conversions/lead gen in other docs.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://pypi.org/project/linkedin-ads-mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "Advertising API product requires LinkedIn app review/approval; Standard tier upgrade discretionary; data-only upgrade requests rejected. Per-user OAuth only.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+        "quote": "The 2-legged client credentials flow is not available for any marketing use cases."
+      },
+      {
+        "field": "auth",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+        "quote": "All these permission scopes are 3-legged permissions requiring explicit consent from a LinkedIn member."
+      },
+      {
+        "field": "access",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+        "quote": "LinkedIn reserves the right to review applications and select partners at its discretion and a partner might not be upgraded even if they meet these minimum requirements."
+      },
+      {
+        "field": "access",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+        "quote": "LinkedIn has two tiers of access to our Advertising API: Development and Standard."
+      },
+      {
+        "field": "api",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+        "quote": "These APIs provide all features available in LinkedIn Campaign Manager, including creation and management of ad accounts, campaign groups, campaigns, creatives, ad types, and analytics."
+      },
+      {
+        "field": "description",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+        "quote": "The Advertising API enables developers to manage LinkedIn's campaign management platform on behalf of clients through APIs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pypi.org/project/linkedin-ads-mcp/",
+        "quote": "MCP server for the LinkedIn Marketing API that can read and write campaigns, analytics, and creatives from any MCP client."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.datadoghq.com/api",
+  "model": "sonnet",
+  "seconds": 64,
+  "cost_usd": 0.15144436,
+  "turns": 4,
+  "result": {
+    "app": "Datadog",
+    "description": "Cloud observability and security platform: metrics, logs, traces, monitors, dashboards, incidents.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "REST API: DD-API-KEY header plus DD-APPLICATION-KEY header for read/most endpoints. Personal/Service access tokens (bearer) and OAuth 2.0 are supported for the MCP server (per setup page summary, unverified verbatim). Per-site regional base URLs.",
+    "access": "self_serve_trial",
+    "access_detail": "Anyone can sign up for a Datadog org and create API/app keys. Full product is a time-limited trial, then paid; limited free tier exists. Not verified from fetched pages, so confidence is medium or low.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Large public REST API (v1/v2) covering metrics, logs, monitors, dashboards, incidents, SLOs, synthetics, users, security and more. Official client libraries exist. Users must pick the correct regional site (US1, US3, US5, EU1, AP1, AP2, UK1).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.datadoghq.com/mcp_server/",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "Authenticate to the API with an API key using the header `DD-API-KEY`."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "For some endpoints, you also need an Application key, which uses the header `DD-APPLICATION-KEY`."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "All requests to Datadog's API must be authenticated."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that read data require full access and also require an `application key`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.datadoghq.com/mcp_server/",
+        "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.datadoghq.com/mcp_server/",
+        "quote": "The MCP Server has a fair-use burst limit of 50 tool calls per 10 seconds."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "low",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

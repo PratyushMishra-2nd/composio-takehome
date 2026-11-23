@@ -1,0 +1,73 @@
+{
+  "id": 59,
+  "app": "Waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "hint": "waterfall.io (contact/company intel)",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.20970295000000003,
+  "turns": 8,
+  "result": {
+    "app": "Waterfall.io",
+    "description": "B2B contact and company data from 30+ providers via one GTM API: prospecting, contact/phone/company enrichment, email verification, job-change checks.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Static API key in the x-api-key header. Master key needed for sub-key management. No OAuth.",
+    "access": "partner_gated",
+    "access_detail": "No self-serve signup or free tier documented. Keys are requested by contacting the team or booking a call. The team reviews every access request. Pricing is custom, with volume commitments set at contract and no public rate card. A free benchmark is run on the buyer's data before signing. End users would each need their own sales-granted key.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Base URL https://api.waterfall.io. About 13 endpoint groups: Prospector, Search Contact/Company, Contact/Phone/Company Enrichment, Company Reveal, Company Titles, Job Change, Email Verifier, Webhook JWKS, Account Reporting, API key management. Enrichment is async: POST launches and returns a job_id, then GET with job_id fetches results, or a webhook delivers them. Several endpoints are marked Preview.",
+    "mcp_exists": false,
+    "mcp_official": false,
+    "mcp_url": "",
+    "verdict": "needs_outreach",
+    "blocker": "Credentials are sales-gated: no self-serve key and no public pricing. Composio would need a partnership or test key before building.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.waterfall.io/llms.txt",
+        "quote": "One GTM API to find prospects, enrich contacts and companies, verify emails, and check job changes."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.waterfall.io/v1/authentication.md",
+        "quote": "Authenticate data and account API requests with your Waterfall API key in the `x-api-key` header."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.waterfall.io/v1/authentication.md",
+        "quote": "[Contact the team](mailto:support@waterfall.io) for API access and pricing."
+      },
+      {
+        "field": "access",
+        "url": "https://www.waterfall.io/pricing",
+        "quote": "Commitments and minimums are set at contract and depend on volume and term"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.waterfall.io/",
+        "quote": "The Waterfall API is available at `https://api.waterfall.io`."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.waterfall.io/",
+        "quote": "For **async** APIs, the launcher returns a `job_id`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.waterfall.io/llms.txt",
+        "quote": "Run contact and company lookups with an agent, or build Waterfall into your application using the official API skills."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

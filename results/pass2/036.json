@@ -1,0 +1,69 @@
+{
+  "id": 36,
+  "app": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.klaviyo.com",
+  "model": "sonnet",
+  "seconds": 49,
+  "cost_usd": 0.18396023000000003,
+  "turns": 6,
+  "result": {
+    "app": "Klaviyo",
+    "description": "Marketing automation platform for email, SMS and customer data, with a public API for profiles, events, lists, campaigns, flows and catalogs.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Private API key (pk_ prefix, sent as 'Authorization: Klaviyo-API-Key ...', scoped Custom/Read-Only/Full) for single-account use. OAuth2 for apps serving multiple accounts, and required for App Marketplace listing. Public 6-char company_id key for client-side endpoints only.",
+    "access": "self_serve_free",
+    "access_detail": "Any developer can create a Klaviyo test account and generate private API keys, and the docs charge no API usage fees. Keys need an Owner, Admin or Manager role, which the account creator has. Test account billing is still enabled, so sending volume or profile counts can incur plan charges. OAuth for other users' accounts needs a registered app. App Marketplace listing needs Klaviyo review, but is not required to use OAuth. I could not verify the free-tier details with a verbatim quote from a fetched page.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Versioned REST API in JSON:API style, with cursor pagination and filter syntax. It covers profiles, events, lists, segments, campaigns, flows, templates, catalogs, metrics, coupons, tags, reporting and webhooks. There are also client-side endpoints that use the public key.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "Private API keys can be used to read and write data to your Klaviyo account."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "Authorization: Klaviyo-API-Key your-private-api-key"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "To manage API keys, you must have an Owner, Admin, or Manager role on your Klaviyo account."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.klaviyo.com/en/reference/api_overview",
+        "quote": "Our APIs support cursor-based pagination with the query parameter ?page[cursor]."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "quote": "The Klaviyo Model Context Protocol (MCP) server seamlessly integrates with Klaviyo's APIs, enabling AI clients to interact with your Klaviyo data."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "Klaviyo allows you to generate multiple private keys for your applications."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

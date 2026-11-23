@@ -1,0 +1,79 @@
+{
+  "id": 32,
+  "app": "Meta Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.facebook.com/docs/marketing-apis",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.227439,
+  "turns": 10,
+  "result": {
+    "app": "Meta Ads",
+    "description": "Meta Marketing API: programmatically create and manage ad campaigns, ad sets, ads and creatives on Facebook, Instagram, Messenger and WhatsApp, and pull performance insights.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "REST Marketing API: Facebook Login OAuth dialog (facebook.com/vXX/dialog/oauth, scope ads_read/ads_management) yields user access tokens. System user access tokens also work for server-to-server. Tokens sent as Bearer or access_token param. The Ads MCP server also supports OAuth, user token and system user token.",
+    "access": "admin_approval",
+    "access_detail": "Free self-serve developer app gets Limited access by default (heavily rate-limited, dev only, for own ad accounts). To manage other people's ad accounts in production, the app needs Full/Advanced access via App Review for ads_read/ads_management, plus Business Verification and ≥500 successful API calls in 15 days with <15% error rate. Meta must approve before end users can connect.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Graph API based REST (versioned, e.g. v27.0). Covers campaigns, ad sets, ads, creatives, insights/reporting, audiences, catalogs, Business Manager, system users, pixels/datasets.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.facebook.com/ads",
+    "verdict": "build_with_caveat",
+    "blocker": "Public multi-tenant use needs Meta App Review (ads_read/ads_management advanced access) plus Business Verification; until then only own/test ad accounts via Limited access.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview.md",
+        "quote": "Use the Marketing API to automate advertising across Meta technologies. The API provides functions for ad creation, management, and performance analysis."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+        "quote": "If you're managing someone's ads, use the `scope` parameter to prompt them for the `ads_management` or `ads_read` permissions. Your app gets access when they click **Allow**."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-get-started.md",
+        "quote": "You can also use a [system user access token](https://developers.facebook.com/docs/business-management-apis/system-users) to access the ads MCP server"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+        "quote": "Your tier is determined by whether your app has been approved through App Review."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+        "quote": "Heavily rate-limited per ad account. For development only. Not for production apps running for live advertisers."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview.md",
+        "quote": "Access detailed insights and analytics to track ad performance and make data-driven decisions to improve outcomes"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview.md",
+        "quote": "The server is remote-hosted at `https://mcp.facebook.com/ads` and works with any MCP-compatible AI agent."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+        "quote": "Business verification is a process that allows us to verify your identity as a business entity, which we require if your app will access sensitive data."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

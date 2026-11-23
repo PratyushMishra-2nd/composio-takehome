@@ -1,0 +1,71 @@
+{
+  "id": 5,
+  "app": "Twenty",
+  "category": "CRM and Sales",
+  "hint": "twenty.com (open-source CRM)",
+  "model": "sonnet",
+  "seconds": 33,
+  "cost_usd": 0.1756515,
+  "turns": 5,
+  "result": {
+    "app": "Twenty",
+    "description": "Open-source, customizable CRM (cloud or self-hosted) with custom objects, workflows and AI agents.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Workspace API key sent as Bearer token (Settings → Developers → API). OAuth2 auth-code + PKCE and client-credentials, with dynamic client registration (RFC 7591, POST /oauth/register), so no vendor app review.",
+    "access": "self_serve_trial",
+    "access_detail": "No app review or partner gate. OAuth clients self-register via RFC 7591, and API keys are per workspace. Cloud signup starts a 30-day trial, with paid plans at $9, $39 or $50k+ per year. REST/GraphQL API and MCP are listed as included on every plan, so there is no plan-based API restriction. The pricing page shows no permanent free cloud tier, so cloud access after the trial needs a paid plan. Self-hosting the open-source core is free, and that makes free self-serve possible for self-hosters. Rated trial rather than free because the hosted cloud, which most end users would connect, is trial then paid.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Core API (/rest/, /graphql/) does CRUD on all records, including custom objects. Metadata API (/rest/metadata/, /metadata/) manages schema. Each workspace generates its own schema and docs. Batch operations take up to 60 records. Rate limit is 100 requests per minute. Webhooks are available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.twenty.com/developers/extend/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No permanent free cloud tier (30-day trial, then paid). Multi-tenant hosts (workspace subdomains plus self-hosted domains) need a per-user base URL. Rate limit is 100 requests per minute. The schema differs per workspace.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.twenty.com/developers/extend/api.md",
+        "quote": "Create an API key in **Settings → Developers → API → + Create key**."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.twenty.com/developers/extend/oauth.md",
+        "quote": "Twenty supports **dynamic client registration** per [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591). No manual setup needed — register programmatically:"
+      },
+      {
+        "field": "access",
+        "url": "https://twenty.com/pricing",
+        "quote": "Sign up for Cloud in under a minute and start your 30-day trial."
+      },
+      {
+        "field": "access",
+        "url": "https://twenty.com/pricing",
+        "quote": "Self-hosting the open source core is free."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.twenty.com/developers/extend/api.md",
+        "quote": "Both are available as REST and GraphQL."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.twenty.com/developers/extend/mcp.md",
+        "quote": "Twenty exposes an [MCP](https://modelcontextprotocol.io/) server so that AI assistants — Claude Desktop, Claude Code, Cursor, ChatGPT, and others — can read and write your CRM data through natural language."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

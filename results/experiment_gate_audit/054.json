@@ -1,0 +1,75 @@
+{
+  "id": 54,
+  "app": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.mrscraper.com",
+  "model": "sonnet",
+  "seconds": 46,
+  "cost_usd": 0.123556775,
+  "turns": 4,
+  "result": {
+    "app": "MrScraper",
+    "description": "AI-powered web scraping platform that turns websites into structured data via scraper API, web search, workflows and bulk scraping.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "REST API: per-account API token in x-api-token header (created in dashboard); marketplace endpoints use Authorization: Bearer token. OAuth 2.1 only on hosted MCP server, not REST.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit: (1) No app review/publishing/partner status; each end user creates own API token in dashboard, so no gate. (2) Free plan exists, no credit card, with monthly tokens (docs conflict: 100 vs 1,000) and API Tokens listed for Free; docs do not explicitly say Free can call API, but nothing restricts API to paid. Paid Essential $99/mo for volume.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Scraper API (HTML, Markdown, screenshot, JSON/brand), Web Search, plus Platform endpoints for workflows, bulk scraping cancel, results, analytics, subscription-accounts. Individual platform endpoint pages not fully read.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.mrscraper.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.mrscraper.com/docs/api/authentication",
+        "quote": "Include your API token in the `x-api-token` HTTP header on every request:"
+      },
+      {
+        "field": "access",
+        "url": "https://mrscraper.com/pricing",
+        "quote": "Free costs nothing - no credit card required."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "The Free plan includes 100 tokens per month with no credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.mrscraper.com/docs/api/overview",
+        "quote": "All API endpoints require authentication using an API token passed in the `x-api-token` header."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+        "quote": "Official MrScraper MCP server for retrieving web pages, web search, and account usage."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+        "quote": "Connect to the hosted MCP endpoint through Streamable HTTP with OAuth 2.1 browser sign-in."
+      },
+      {
+        "field": "description",
+        "url": "https://docs.mrscraper.com/docs/getting-started/api-token",
+        "quote": "MrScraper uses a token-based system for both usage and authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

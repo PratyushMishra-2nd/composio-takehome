@@ -1,0 +1,64 @@
+{
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "hint": "ipayx.ai/docs",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.15641115,
+  "turns": 4,
+  "result": {
+    "app": "iPayX",
+    "description": "FX audit service that scores a bank's or card network's FX rate against live mid-market, returning a 0-10 score, hidden spread and estimated loss, via REST API and MCP.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Bearer API key in the Authorization header (ipx_live_ production, ipx_test_ sandbox). No OAuth for the API; OAuth2 is only mentioned as \"Coming Q3 2026\" for QuickBooks/Stripe integrations.",
+    "access": "paid_plan",
+    "access_detail": "The public audit page is free with no signup (3 lifetime audits). API keys come from a dashboard after account creation. The developers page lists API tiers from Developer $99/mo, and Enterprise from $100K/yr. Pricing differs across pages and is unconfirmed. Whether a free tier gets a key is unclear. No approval step is documented.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "REST/JSON with OpenAPI 3.1 and HMAC-signed webhooks. /docs/api documents 3 endpoints: POST /audit, GET /rates, POST /audit/document. /developers shows POST /v1/audit and GET/PUT/DELETE /v1/score-config on a different base URL. Docs are inconsistent. https://ipayx.ai/docs returns 404; the real docs are at www.ipayx.ai/docs/api.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.ipayx.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "The API is very narrow (about 3-5 endpoints). Docs are inconsistent on base URLs, MCP URLs and pricing. Working API keys likely need a paid plan from $99/mo, though that is unconfirmed.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://ipayx.ai",
+        "quote": "Our free audit gives you a forensic FX score in 60 seconds. No signup. No credit card."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "Every request requires a Bearer token in the `Authorization` header. Keys start with `ipx_live_`."
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/developers",
+        "quote": "Access your dashboard and generate your production API key."
+      },
+      {
+        "field": "api",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "Run a forensic audit on a single transaction. Returns a 0–10 score, hidden spread vs mid-market, and estimated loss."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.ipayx.ai/developers",
+        "quote": "Officially listed on the MCP Registry (v1.4.0)"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": 60,
+  "app": "Clay",
+  "category": "Data, SEO and Scraping",
+  "hint": "clay.com",
+  "model": "sonnet",
+  "seconds": 69,
+  "cost_usd": 0.17781264500000005,
+  "turns": 6,
+  "result": {
+    "app": "Clay",
+    "description": "GTM data enrichment and prospecting platform that aggregates data providers, search, and AI into tables/workflows for sales teams.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Personal API key sent in the `clay-api-key` header; tied to a Clay user and workspace. No OAuth documented for the Public API (OAuth appears only for MCP-for-Reps client connections).",
+    "access": "self_serve_free",
+    "access_detail": "Each user creates own key in app (API and CLI → API keys) or via CLI; no app review or partner status needed. Clay's university docs say the developer platform is on all plans including free (100 search results/30 days). Pricing FAQ conflicts, tying \"Clay API access\" to Enterprise. Tables endpoint and structured queries are Enterprise-only. Editor/Admin workspace access needed.",
+    "api_types": [
+      "rest",
+      "sdk_only",
+      "cli_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Public API at api.clay.com/public/v0: people/company search, routines, me, and read-only Tables (Enterprise). Also Clay CLI and agent plugin. Newly launched (2026), surface still limited vs the product; table creation and writes not supported.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.clay.com/v3/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Conflicting plan docs on API access; table endpoints Enterprise-only; API surface is narrow/read-focused; MCP endpoint URL unverified on vendor pages.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.clay.com/public-api/authentication",
+        "quote": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.clay.com/public-api/authentication",
+        "quote": "API keys are tied to a Clay user and workspace access."
+      },
+      {
+        "field": "access",
+        "url": "https://university.clay.com/docs/using-clay-as-an-api",
+        "quote": "The developer platform is available across all Clay plans, including free, trial, and Legacy plans."
+      },
+      {
+        "field": "access",
+        "url": "https://university.clay.com/docs/using-clay-as-an-api",
+        "quote": "Structured queries — joins, ranges, and paging past 100 rows — need API table sync, an Enterprise feature."
+      },
+      {
+        "field": "access",
+        "url": "https://www.clay.com/pricing",
+        "quote": "Includes everything in Growth, plus unlimited Audiences across sources, unlimited row bulk enrichment, Clay API access..."
+      },
+      {
+        "field": "api",
+        "url": "https://university.clay.com/docs/using-clay-as-an-api",
+        "quote": "Tables in the Public API is read-only — you can query and read rows, but not create tables..."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "Use Clay with coding agents, MCP clients, local scripts, and JSON-first automations."
+      },
+      {
+        "field": "mcp",
+        "url": "https://university.clay.com/docs/mcp-settings",
+        "quote": "MCP (Model Context Protocol) is how Clay connects your workspace to AI tools like Claude, ChatGPT..."
+      },
+      {
+        "field": "mcp",
+        "url": "https://university.clay.com/docs/using-clay-as-an-api",
+        "quote": "MCP for Reps is a different connection, set up separately by an admin for sellers working in chat apps and coding agents."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": 21,
+  "app": "Slack",
+  "category": "Communications and Messaging",
+  "hint": "slack.com",
+  "model": "sonnet",
+  "seconds": 59,
+  "cost_usd": 0.13556954499999999,
+  "turns": 3,
+  "result": {
+    "app": "Slack",
+    "description": "Team messaging and collaboration platform with channels, DMs, files, workflows and apps.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 install flow yields scoped bot (xoxb), user (xoxp) tokens; app-level tokens (xapp) for Socket Mode. Token rotation optional. Single-workspace custom apps can use their installed token directly.",
+    "access": "self_serve_free",
+    "access_detail": "Any developer can create an app and, after activating public distribution with an OAuth flow, install it into other workspaces as an unlisted app. No Marketplace review is required for installs; Marketplace listing is only recommended for commercial distribution. Free Slack plan exists (up to 10 apps). Caveats (not verified on fetched pages): Slack's 2025 policy throttles conversations.history/replies for commercially distributed non-Marketplace apps. The free-sandbox claim was not verified. The official MCP server is restricted to Marketplace/internal apps.",
+    "api_types": [
+      "rest",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Web API with about 120+ methods across chat, conversations, users, files, reactions, pins, reminders, search, views, canvases, usergroups, workflows and more. Events API and Socket Mode for events. Per-method tiered rate limits, identical across plans.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.slack.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Official MCP server only for Marketplace-published or internal apps. Unlisted distributed apps may face reduced history rate limits (unverified on fetched pages). A Marketplace listing is advisable for commercial scale.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.slack.dev/authentication",
+        "quote": "Understand the different types of tokens your app can use (user tokens, bot tokens, and app tokens)"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.slack.dev/authentication",
+        "quote": "Slack apps use OAuth scopes to govern what they can access."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.slack.dev/distribution/",
+        "quote": "however, apps intended for commercial distribution should be submitted and approved for listing in the Slack Marketplace."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.slack.dev/distribution/",
+        "quote": "Distributing your unlisted app is perfect for when you want to test out your app by running a pilot for early customers;"
+      },
+      {
+        "field": "access",
+        "url": "https://slack.com/pricing",
+        "quote": "Or start with the basics for free, and upgrade at any time."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.slack.dev/reference/methods",
+        "quote": "An API reference for all available Slack Web API methods and their parameters."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.slack.dev/apis/web-api/rate-limits",
+        "quote": "All Slack plans receive the same rate limit tier for each method."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.slack.dev/ai/mcp-server",
+        "quote": "Only apps published in the Slack Marketplace and internal apps can use MCP at this time; unlisted apps are prohibited from using MCP."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.slack.dev/ai/mcp-server",
+        "quote": "Slack supports JSON-RPC 2.0 over Streamable HTTP. All requests should be sent to:"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.slack.dev/distribution/",
+        "quote": "however, apps intended for commercial distribution should be submitted and approved for listing in the Slack Marketplace."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

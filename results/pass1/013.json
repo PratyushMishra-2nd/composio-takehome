@@ -1,0 +1,74 @@
+{
+  "id": 13,
+  "app": "Freshdesk",
+  "category": "Support and Helpdesk",
+  "hint": "freshdesk.com",
+  "model": "sonnet",
+  "seconds": 90,
+  "cost_usd": 0.292137485,
+  "turns": 7,
+  "result": {
+    "app": "Freshdesk",
+    "description": "Cloud customer support helpdesk (ticketing, contacts, companies, knowledge base, SLAs) by Freshworks.",
+    "auth_methods": [
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "API key (per agent, from Profile Settings) sent as HTTP Basic username with dummy password \"X\". No documented OAuth2 flow for the public REST API (Freshworks forum: Basic only). Per-account subdomain base URL.",
+    "access": "paid_plan",
+    "access_detail": "No Free plan API access (Free = 0 calls/min). Growth $19/agent/mo annual is the minimum paid tier; 14-day Enterprise trial gives 50 calls/min. Limits per account: Growth 100, Pro 400, Enterprise 700 calls/min. Self-serve signup, no app review for API-key use.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST v2 at https://{domain}.freshdesk.com/api/v2/. Resources: tickets, conversations, contacts, companies, agents, groups, solutions, discussions, time entries, SLA policies, automations, custom objects, service accounts, audit log, etc. HTTPS only; 429 on over-limit; webhooks count toward the limit.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://support.freshdesk.com/support/solutions/articles/50000014407-mcp-integration-frequently-asked-questions-faq-",
+    "verdict": "build_with_caveat",
+    "blocker": "Free plan has no API access; testing needs a paid plan or 14-day trial. API-key only (no OAuth), and the key is per-subdomain, so the user must supply their domain. Rate limits are low on Growth.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://github.com/effytech/freshdesk_mcp",
+        "quote": "MCP server created for Freshdesk, allowing AI models to interact with Freshdesk modules."
+      },
+      {
+        "field": "auth",
+        "url": "https://support.freshdesk.com/support/solutions/articles/50000014407-mcp-integration-frequently-asked-questions-faq-",
+        "quote": "Freshdesk MCP uses API key authentication."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.freshdesk.com/api/",
+        "quote": "Only SSL calls (HTTPS) will be allowed."
+      },
+      {
+        "field": "access",
+        "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+        "quote": "For every trial period the API limit is 50 per minute."
+      },
+      {
+        "field": "access",
+        "url": "https://www.freshworks.com/freshdesk/pricing/",
+        "quote": "When you sign up, you instantly get access to our Enterprise plan for 14 days."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.freshdesk.com/support/solutions/articles/50000014407-mcp-integration-frequently-asked-questions-faq-",
+        "quote": "MCP is supported only in Freshdesk 2021 and Freshdesk Unified Omni 2026."
+      },
+      {
+        "field": "verdict",
+        "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk",
+        "quote": "The number of API calls you can make is based on your plan."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

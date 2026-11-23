@@ -1,0 +1,73 @@
+{
+  "id": 23,
+  "app": "Zoho Cliq",
+  "category": "Communications and Messaging",
+  "hint": "zoho.com/cliq",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.206937955,
+  "turns": 6,
+  "result": {
+    "app": "Zoho Cliq",
+    "description": "Zoho Cliq is a team chat and collaboration platform with channels, bots, and a developer platform.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 via Zoho API console client registration (Client ID/secret). Scopes use the format service_name.scope_name.operation_type, e.g. ZohoCliq.Messages.CREATE. Access tokens last 1 hour; refresh tokens are supported. Data-center-specific accounts.zoho.{dc} endpoints.",
+    "access": "self_serve_free",
+    "access_detail": "Register a client at the Zoho API console and get a Client ID and secret. The REST docs state no plan restriction, and Cliq has a free plan. I did not check the pricing page, so free-plan API limits are unconfirmed. Multi-data-center handling is needed, with 9 DC domains.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v3 at https://cliq.zoho.com/api/v3, with v2 still available. Covers chats, messages, threads, scheduled messages, channels, reminders, pins, stars, attachments, bots, slash commands, message actions, widgets, datastores, schedulers, extensions, and user settings. Postman collection available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+        "quote": "The first step in using OAuth authentication is registering your app with the Zoho API console."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+        "quote": "Once you register your client, you will get a Client ID and Client secret for your application."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+        "quote": "Once you register your client, you will get a Client ID and Client secret for your application."
+      },
+      {
+        "field": "api",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+        "quote": "v3 introduces CRUD API endpoints for bots, slash commands, message actions, widgets, schedulers, and more, which were not available in v2."
+      },
+      {
+        "field": "api",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+        "quote": "The latest version, v3, is the recommended choice for all new workflows, automations, and integrations."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+        "quote": "Any AI model or agent can use our official MCP server to access your Cliq data and do:"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+        "quote": "Zoho Cliq's REST API is designed based on RESTful architecture principles, enabling seamless communication between your applications and Zoho Cliq."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

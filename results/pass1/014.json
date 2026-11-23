@@ -1,0 +1,80 @@
+{
+  "id": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "hint": "front.com",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.21551564,
+  "turns": 7,
+  "result": {
+    "app": "Front",
+    "description": "Front is a customer operations platform (shared inbox, helpdesk, AI) with a Core API for conversations, contacts, messages and more.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "Core API uses Bearer tokens, obtained either as company-level API tokens (admin creates in settings) or via OAuth2 authorization-code flow (access token 60 min, refresh 6 months). OAuth required for public integrations; MCP server needs OAuth, not API tokens.",
+    "access": "self_serve_trial",
+    "access_detail": "Create a developer app / API token as a Front admin. Docs show no plan restriction on API access. Pricing: free 14-day trial of Professional, no credit card; Starter $25, Professional $65, Enterprise $105 per seat/mo. Public OAuth apps are required for multi-customer integrations (exception needed otherwise); end users authorizing OAuth must be admins. Free trial only; no permanent free tier seen.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Core API covers core data and actions (conversations, messages, contacts, inboxes, tags, teammates, etc.). Full endpoint count not verified from the fetched pages; the reference is at dev.frontapp.com/reference. Rate limits can be raised by an add-on on all plans. Plus Application/Channel APIs.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.frontapp.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Trial-only free access; admin needed to create tokens or authorize OAuth; public OAuth apps need a developer app and may need Front approval or an exception. Otherwise buildable.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "The Core API uses Bearer tokens to authenticate its user."
+      },
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "There are two ways to get a Bearer token — through API tokens in your settings or through an OAuth implementation"
+      },
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/oauth",
+        "quote": "OAuth is required for public integrations available to all Front customers unless you obtain an exception from us."
+      },
+      {
+        "field": "access",
+        "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens",
+        "quote": "You must be an admin to create or manage API tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://front.com/pricing",
+        "quote": "Our free 14-day trial offers all the features available in our Professional plan."
+      },
+      {
+        "field": "api",
+        "url": "https://dev.frontapp.com/docs/core-api-overview",
+        "quote": "The Core API allows you as a Front developer to access core data and actions within Front."
+      },
+      {
+        "field": "mcp",
+        "url": "https://dev.frontapp.com/docs/mcp-server",
+        "quote": "https://mcp.frontapp.com/mcp"
+      },
+      {
+        "field": "description",
+        "url": "https://front.com/pricing",
+        "quote": "The AI customer operations platform."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

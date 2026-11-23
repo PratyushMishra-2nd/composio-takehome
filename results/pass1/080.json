@@ -1,0 +1,69 @@
+{
+  "id": 80,
+  "app": "Harvest",
+  "category": "Productivity and Project Management",
+  "hint": "harvestapp.com (help.getharvest.com/api-v2)",
+  "model": "sonnet",
+  "seconds": 48,
+  "cost_usd": 0.201613515,
+  "turns": 6,
+  "result": {
+    "app": "Harvest",
+    "description": "Time tracking, invoicing and expense/project reporting SaaS.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Personal Access Token (Bearer + Harvest-Account-Id header) created in Harvest ID developers page; OAuth2 auth-code flow for apps used by others (apps registered in Harvest ID). Basic auth dropped in v2.",
+    "access": "self_serve_free",
+    "access_detail": "Docs state no plan restriction. PATs and OAuth2 apps are created self-serve in Harvest ID developers. Any Harvest account (free tier or trial) should work. Exact plan terms not verified on a pricing page.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST/JSON v2: time entries, timers, projects, tasks, clients, contacts, invoices, estimates, expenses, users, company, reports. Rate limit 100 req/15s (reports 100/15min). User-Agent header required.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "The V2 API requires an access token to authenticate requests."
+      },
+      {
+        "field": "auth",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "Implementing a full OAuth2 Authentication flow which allows other people to use your Harvest integrations."
+      },
+      {
+        "field": "access",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "Personal Access Tokens have the `all` scope by default, so you have full access to all of your accounts."
+      },
+      {
+        "field": "api",
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+        "quote": "The Harvest V2 API is a REST API that allows you to interact with your Harvest account programmatically."
+      },
+      {
+        "field": "api",
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+        "quote": "The rate limit for general API requests is 100 requests per 15 seconds."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+        "quote": "Run a time report for a date range, grouped by project, by client, or by person. Each total is split into billable and non-billable hours."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

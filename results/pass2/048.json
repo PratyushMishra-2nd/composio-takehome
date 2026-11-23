@@ -1,0 +1,79 @@
+{
+  "id": 48,
+  "app": "Gumroad",
+  "category": "Ecommerce",
+  "hint": "gumroad.com/api",
+  "model": "sonnet",
+  "seconds": 57,
+  "cost_usd": 0.2577993,
+  "turns": 13,
+  "result": {
+    "app": "Gumroad",
+    "description": "Platform for creators to sell digital goods, memberships and physical products with checkout, payouts and marketing tools.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 auth-code (register app in Settings > Advanced with Redirect URI; refresh_token issued but access_token doesn't expire until revoked). Single-account personal access token generated via \"Generate access token\" button. Scopes like view_profile, view_sales, edit_products, etc.",
+    "access": "self_serve_free",
+    "access_detail": "Any Gumroad account (free to open) can create an application in advanced settings and get OAuth app credentials or a personal access token instantly. No review, plan gate or partnership found. Docs pages are JS-rendered; plan restriction not seen anywhere.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at api.gumroad.com/v2: products (list/get/create/update/delete/enable/disable), variants, offer codes, custom fields, sales (list/refund/ship), subscribers, licenses verify, payouts, user, resource-subscription webhooks. Roughly 40-50 endpoints; core commerce objects covered. Docs at gumroad.com/api are client-rendered so exact endpoint list was confirmed only via secondary sources (Composio toolkit lists 13 tools; community MCP covers products/sales/offer codes). Not a broad 50+ surface, so moderate.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://gumroad.com/claude/v1/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://gumroad.com/help/article/280-create-application-api",
+        "quote": "While we also provide a refresh_token when authenticating a user, we do not expire the access_token until it is revoked manually."
+      },
+      {
+        "field": "auth",
+        "url": "https://gumroad.com/help/article/280-create-application-api",
+        "quote": "To create an application for general use, you'll need to build a Redirect URI handler to generate access tokens for each of your users."
+      },
+      {
+        "field": "access",
+        "url": "https://gumroad.com/help/article/280-create-application-api",
+        "quote": "Instead, use the \"Generate access token\" button to get your access token."
+      },
+      {
+        "field": "api",
+        "url": "https://gumroad.com/help/article/280-create-application-api",
+        "quote": "curl https://api.gumroad.com/v2/products \\ -d \"access_token=ACCESS_TOKEN\" \\ -X GET"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.composio.dev/toolkits/gumroad",
+        "quote": "Gumroad simplifies selling digital goods, physical products, and memberships by offering a streamlined checkout, marketing tools, and direct payout options"
+      },
+      {
+        "field": "mcp",
+        "url": "https://gumroad.com/claude",
+        "quote": "Connect your Gumroad store to Claude. Create product drafts, check sales, and track payouts from your chat."
+      },
+      {
+        "field": "mcp",
+        "url": "https://gumroad.com/claude",
+        "quote": "MCP server URL https://gumroad.com/claude/v1/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/rmarescu/gumroad-mcp",
+        "quote": "A Model Context Protocol (MCP) server implementation for Gumroad, enabling MCP-compatible AI clients like Claude Desktop to interact with Gumroad API."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

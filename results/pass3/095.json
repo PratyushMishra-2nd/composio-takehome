@@ -1,0 +1,60 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "hint": "reducto.ai (document parsing)",
+  "model": "sonnet",
+  "seconds": 23,
+  "cost_usd": 0.1078032,
+  "turns": 4,
+  "result": {
+    "app": "Reducto",
+    "description": "Agentic document platform: parse, extract, split, classify and edit documents (PDFs, images, Office files) via API.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "API key from Studio dashboard, sent as Authorization: Bearer header.",
+    "access": "self_serve_free",
+    "access_detail": "Standard plan is pay-as-you-go self-serve and includes $150 free credits (pricing page also cites 15,000 free credits in structured data). Growth and Enterprise need contact sales but are not required.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST endpoints for parse, extract, split, classify, edit, async jobs, and uploads; Python and Node SDKs.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.reducto.ai/mcp-server/index.md",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://reducto.ai/pricing",
+        "quote": "Standard accounts include $150 in free credits."
+      },
+      {
+        "field": "access",
+        "url": "https://reducto.ai/pricing",
+        "quote": "Standard includes $150 of free usage, then list rates apply."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.reducto.ai/mcp-server/index.md",
+        "quote": "The Reducto MCP server connects AI agents directly to Reducto."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.reducto.ai/llms.txt",
+        "quote": "[Reducto MCP Server](https://docs.reducto.ai/mcp-server/index.md) — Connect AI agents to Reducto via the Model Context Protocol."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

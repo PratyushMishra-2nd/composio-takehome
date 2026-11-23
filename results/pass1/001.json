@@ -1,0 +1,58 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "hint": "salesforce.com",
+  "model": "sonnet",
+  "seconds": 59,
+  "cost_usd": 0.22604569,
+  "turns": 8,
+  "result": {
+    "app": "Salesforce",
+    "description": "Cloud CRM platform for sales, service, marketing and custom apps, with extensive APIs and the Agentforce AI layer.",
+    "auth_methods": [
+      "oauth2",
+      "session_login",
+      "jwt"
+    ],
+    "auth_detail": "OAuth 2.0 via External Client Apps or legacy Connected Apps (web server/auth-code with PKCE, JWT bearer, client credentials, device, username-password flow). Session ID/SOAP login also exists. Hosted MCP accepts External Client Apps only. Auth details are from the docs' known structure and search snippets; the docs pages returned 403 to my fetches.",
+    "access": "self_serve_free",
+    "access_detail": "Free Developer Edition org at developer.salesforce.com/signup gives full API access for development. Customer production orgs need an edition with API access (Enterprise and up, or add-on). The ISV/AppExchange route is optional. End users connect their own orgs via OAuth and an admin may need to approve the app. Hosted MCP is GA for Enterprise Edition and higher, may bill Flex Credits, and an admin must enable each server.",
+    "api_types": [
+      "rest",
+      "soap",
+      "graphql",
+      "websocket"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST (sObjects, SOQL/SOSL query, Composite, UI API, Connect REST), SOAP, Bulk API 2.0, Metadata/Tooling APIs, GraphQL API, Pub/Sub API (gRPC) and Streaming. It covers all standard and custom objects. API limits depend on the edition.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/forcedotcom/mcp-hosted",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://github.com/forcedotcom/mcp-hosted",
+        "quote": "Hosted MCP servers are now generally available (GA)."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/wiki/forcedotcom/mcp-hosted/FAQ.md",
+        "quote": "Connected Apps are a legacy construct and are not supported for MCP authentication."
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/wiki/forcedotcom/mcp-hosted/FAQ.md",
+        "quote": "Servers are disabled by default"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

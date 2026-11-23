@@ -1,0 +1,100 @@
+{
+  "id": 28,
+  "app": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "hint": "developers.facebook.com/docs/whatsapp",
+  "model": "sonnet",
+  "seconds": 63,
+  "cost_usd": 0.204183375,
+  "turns": 7,
+  "result": {
+    "app": "WhatsApp Business",
+    "description": "Meta's WhatsApp Business Platform (Cloud API): send/receive WhatsApp messages and templates, and manage WABAs, phone numbers, and webhooks for businesses.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Developer's own account: temporary token from the app dashboard (expires quickly) or a permanent system-user access token. Other businesses' accounts: Facebook Login for Business / Embedded Signup (Meta OAuth) yields business tokens. Both need the whatsapp_business_management and whatsapp_business_messaging permissions.",
+    "access": "admin_approval",
+    "access_detail": "A dev can sign up free, get a test number and a system-user token, and use their own WABA (test mode, no review). A toolkit that lets other customers' WABAs connect must be a Tech Provider: Meta business verification, then App Review for Advanced access to whatsapp_business_management/messaging. Without Advanced access, calls on WABAs the developer's business doesn't own return error 200. Alternatively, each customer can create their own system-user token in their own Business Manager, which is not gated by review. Not paid-plan gated: there is no subscription. Messaging is billed per delivered message, and the free tier is 1,000 service messages per phone number per month. Marketing, utility and authentication messages are charged. A payment method is needed beyond the free tier. Tech Provider clients add a credit card.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Graph API (REST-style, JSON). It covers messages (text, template, media, interactive), message templates, phone numbers and registration, business profile, WABA management, webhooks and subscriptions, media, QR codes, flows, calling and payments. Incoming messages arrive by webhook only. Graph API also supports its GraphQL-like field expansion, but it is not GraphQL proper.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Multi-tenant use needs Tech Provider status: business verification plus App Review for Advanced access. Messaging is billed per message and needs a payment method. Inbound messages are webhook-only. Meta's official MCP is dev/test-only.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started.md",
+        "quote": "The WhatsApp Cloud API enables you to send messages and receive webhooks—these are the fundamental building blocks for messaging integration."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started.md",
+        "quote": "So you should create a permanent token for use across the WhatsApp Business Platform."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started.md",
+        "quote": "The temporary access token you created to send the `hello_world` template message expires quickly and is not suitable for development purposes."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers",
+        "quote": "Your business must be verified before you can start the app review process."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers",
+        "quote": "Advanced access to `whatsapp_business_management` — required to access your clients' WhatsApp accounts and Messaging accounts."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers",
+        "quote": "Without it, API calls that use this permission on accounts not owned by your business return error code `200`."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+        "quote": "For each business phone number, Meta provides 1,000 free service messages per month, which do not roll over but reset monthly."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+        "quote": "Effective July 1, 2025 – Meta charges on a per-message basis, aligned to industry standards."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started.md",
+        "quote": "This guide helps developers quickly get started with the WhatsApp Cloud API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+        "quote": "Use WhatsApp Business Tools MCP for WhatsApp accounts, phone numbers, templates, webhooks, and test messages."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+        "quote": "This release is built for development and testing workflows, not production sending at scale."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers",
+        "quote": "To become a tech provider you need to verify your business with Meta."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

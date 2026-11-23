@@ -1,0 +1,59 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "hint": "salesforce.com",
+  "model": "sonnet",
+  "seconds": 76,
+  "cost_usd": 0.20150136999999996,
+  "turns": 7,
+  "result": {
+    "app": "Salesforce",
+    "description": "Cloud CRM platform for sales, service and marketing, with a broad programmable API platform (REST, SOAP, Bulk, GraphQL, Metadata, Pub/Sub).",
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "session_login",
+      "other"
+    ],
+    "auth_detail": "OAuth 2.0 via Connected App or External Client App: web-server (auth code + PKCE), JWT bearer, client credentials, device, refresh token. Username-password flow is legacy and discouraged. SOAP login() session ID also works. No static API key. (Official developer.salesforce.com pages returned 403 to the fetcher, so this comes from prior knowledge, not a fetched quote.)",
+    "access": "paid_plan",
+    "access_detail": "Developer can get a free Developer Edition org, which includes API access, to build and test. Customer orgs must be on an API-enabled edition (Enterprise, Unlimited, Performance, Developer). Professional needs the paid Web Services API add-on (about $25/user/month per the Sales Cloud pricing page). Cross-org use: new connected apps are restricted. A customer admin installs the app, or an External Client App is packaged for distribution. AppExchange listing needs a security review, but only for public listing, not for a private install by the customer's admin. Many small-tier customers therefore cannot connect without paying for API access. Developer pages returned 403, so the edition and packaging details are not backed by fetched quotes.",
+    "api_types": [
+      "rest",
+      "soap",
+      "graphql",
+      "websocket"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API with sObject CRUD, SOQL/SOSL, Composite, Bulk API 2.0, Tooling, Metadata, GraphQL API, UI API, Pub/Sub API (gRPC) and Streaming. Covers every standard and custom object. Very broad, with 100+ endpoints. Not verified by fetched quotes (developer.salesforce.com blocked).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/forcedotcom/mcp-hosted",
+    "verdict": "build_with_caveat",
+    "blocker": "Customer orgs need an API-enabled edition (Professional needs a paid add-on). Cross-org OAuth needs an installed or packaged Connected App or External Client App, and new connected app creation is restricted. Salesforce hosted MCP is billed through Flex Credits. Docs pages were not fetchable, so some details are unverified.",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://www.salesforce.com/editions-pricing/sales-cloud/",
+        "quote": "Web Services API |  |  | Additional $25 USD/user/month |  |  |  |"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/forcedotcom/mcp-hosted",
+        "quote": "Hosted MCP servers are now generally available (GA)."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/salesforcecli/mcp",
+        "quote": "The Salesforce DX MCP Server is a specialized Model Context Protocol (MCP) implementation designed to facilitate seamless interaction between large language models (LLMs) and Salesforce orgs."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

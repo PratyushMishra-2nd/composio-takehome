@@ -1,0 +1,79 @@
+{
+  "id": 100,
+  "app": "Grain",
+  "category": "AI, Research and Media-native",
+  "hint": "grain.com (meeting notes)",
+  "model": "sonnet",
+  "seconds": 40,
+  "cost_usd": 0.209887,
+  "turns": 8,
+  "result": {
+    "app": "Grain",
+    "description": "AI meeting recorder that captures, transcribes and summarizes calls, with clips, AI notes and workspace search.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Personal Access Token (user-scoped, grain_pat_ prefix, sent as Bearer), Workspace Access Token (admin-generated, workspace-wide), and OAuth2 auth-code (PKCE per third-party reports) for distributed integrations. The OAuth app registration process was not confirmed.",
+    "access": "self_serve_free",
+    "access_detail": "Personal tokens are available on every plan, including Free. Workspace tokens need a Business or Enterprise plan and an admin. OAuth for apps distributed to other users is described, but how to get client credentials was not found, so a registration or approval step may apply. No sandbox exists.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Public API v2 at developers.grain.com. It covers recordings, transcripts, workspace data and webhooks, with a limit of 300 requests per minute per token. v1 (beta) was sunset in September 2026. Third parties say a Public-Api-Version header is required. The exact endpoint count was not verified because I did not read developers.grain.com directly. Some sources say v2 is read-heavy.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.grain.com/_/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The token has the same permissions as the user who generated it."
+      },
+      {
+        "field": "auth",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Required if you are building an integration to distribute to others."
+      },
+      {
+        "field": "access",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Not for personal API access, which is available on every plan, including Free."
+      },
+      {
+        "field": "access",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Only workspace admins on Business and Enterprise plans can generate API tokens for the workspace."
+      },
+      {
+        "field": "api",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The v1 (beta) API was sunset in September 2026. Use v2 for all integrations."
+      },
+      {
+        "field": "api",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The API allows 300 requests per minute per token."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.grain.com/en/articles/14811968-how-to-use-the-grain-mcp-server",
+        "quote": "Grain's MCP server uses OAuth and HTTPS."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.grain.com/en/articles/14811968-how-to-use-the-grain-mcp-server",
+        "quote": "Grain's MCP (Model Context Protocol) server gives AI assistants direct access to your meetings, transcripts, AI notes, and workspace data."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

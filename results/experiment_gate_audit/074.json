@@ -1,0 +1,85 @@
+{
+  "id": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "hint": "developer.atlassian.com",
+  "model": "sonnet",
+  "seconds": 45,
+  "cost_usd": 0.14643899500000002,
+  "turns": 4,
+  "result": {
+    "app": "Jira",
+    "description": "Atlassian's issue and project tracking tool for software and business teams, with a cloud REST API.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "api_key"
+    ],
+    "auth_detail": "OAuth 2.0 (3LO) is the recommended method for distributed apps. Basic auth uses an account email plus an API token, and Atlassian says to use it for scripts and bots. Forge and Connect apps use their built-in auth. Personal access tokens are Data Center only and were not verified in these docs.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit. (1) Review gate: a 3LO app is private by default, and you must enable sharing to distribute it. Unapproved integrations show users a warning that Atlassian has not reviewed them, but the docs do not make review a precondition for other sites authorizing the app. Users can also create their own API tokens, and per-user tokens are not a gate. (2) Paid plan gate: Jira Cloud is free for up to 10 users with no credit card, and Atlassian gives developers a free developer instance with 5 Jira Software users. I could not read the pricing page, so I did not verify whether REST access is plan-restricted. From memory, the REST API works on Free. Caveat: Atlassian discourages collecting API tokens from customers, so a multi-tenant toolkit should use a shared 3LO app. Optional review is recommended for that.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Jira Cloud REST API v3 covers issues, search/JQL, projects, users, workflows, fields, boards via the Agile API, and webhooks. Forge is also available. I could not fetch the REST v3 intro page, so this breadth rating is from background knowledge rather than a verified quote.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.atlassian.com/v2/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/security-for-other-integrations/",
+        "quote": "This is the recommended method. You should use this for most cases."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+        "quote": "Basic auth requires API tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+        "quote": "If you want to distribute your app to other users, you must enable sharing."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+        "quote": "Users trying to install an unapproved OAuth 2.0 integration are warned that the app has not yet been reviewed by Atlassian."
+      },
+      {
+        "field": "access",
+        "url": "https://www.atlassian.com/try/cloud/signup?bundle=jira-software",
+        "quote": "It's free for up to 10 users - no credit card needed."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.atlassian.com/platform/marketplace/getting-started/",
+        "quote": "If you're already a developer or are thinking about developing for Atlassian, we'll give you a free developer instance to make it easier than ever to develop and test on our Atlassian apps like Jira and Confluence."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+        "quote": "OAuth 2.0 (3LO) allows external applications and services to access Atlassian product APIs on a user's behalf."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+        "quote": "Summarize and search Jira, Jira Service Management, Confluence, Bitbucket, Projects, Goals, and more without switching tools."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+        "quote": "Atlassian MCP is powered by secure OAuth 2.1 authorization, which ensures all actions respect users' existing access controls and permissions."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

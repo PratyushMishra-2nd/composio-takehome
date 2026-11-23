@@ -1,0 +1,89 @@
+{
+  "id": 96,
+  "app": "Devin",
+  "category": "AI, Research and Media-native",
+  "hint": "docs.devin.ai (MCP)",
+  "model": "sonnet",
+  "seconds": 37,
+  "cost_usd": 0.26882090000000003,
+  "turns": 7,
+  "result": {
+    "app": "Devin",
+    "description": "Cognition's autonomous AI software engineer; API creates/manages Devin sessions, knowledge, playbooks, secrets, schedules, and enterprise admin/analytics.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "v3 API: Bearer `cog_` tokens. Service user API key (org or enterprise scoped, created in Settings > Devin API) or per-user Personal Access Token. No OAuth2 for third-party apps. Legacy v1/v2 apk_ keys deprecated.",
+    "access": "self_serve_free",
+    "access_detail": "No app review, listing or partner status: each customer creates own service user key or PAT in their org settings (per-account private tokens, not a gate). Signup self-serve with a Free plan; docs do not state API is restricted to paid plans, but Free is 'limited usage' and the Teams quickstart targets paid Teams orgs, so a paid plan (Pro $20, Teams $80) may be needed for real use/service users. Enterprise-scope endpoints need Enterprise (contact sales); enterprise PATs disabled by default.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "v3 REST at api.devin.ai/v3/organizations/* and /v3/enterprise/*; ~315 API doc pages: sessions (create/list/message/terminate/tags/insights/attachments), Devin Review, knowledge notes, playbooks, secrets, automations/schedules, users/RBAC, analytics, audit logs, billing. Terraform provider exists. Legacy v1/v2 deprecated.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.devin.ai/",
+    "verdict": "build_with_caveat",
+    "blocker": "Auth is user-created cog_ bearer token (no OAuth), plus org ID needed in URLs; plan requirement for API on Free tier unconfirmed; enterprise endpoints need Enterprise plan.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.devin.ai/api-reference/overview.md",
+        "quote": "The Devin API enables you to integrate Devin into your applications, automate workflows, and build powerful tools."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.devin.ai/api-reference/authentication.md",
+        "quote": "All API credentials use the `cog_` prefix format. Include your token in the `Authorization` header of every request:"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.devin.ai/api-reference/authentication.md",
+        "quote": "| **Service User** (non-human) | Service User API Key | For automated integrations and CI/CD pipelines |"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md",
+        "quote": "Go to **Settings > Devin API** in your organization and open the **Service users** tab"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.devin.ai/admin/billing/self-serve.md",
+        "quote": "Devin has four self-serve plans you can sign up for directly at [app.devin.ai](https://app.devin.ai)."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.devin.ai/api-reference/personal-access-tokens.md",
+        "quote": "Personal Access Tokens (PATs) allow human users to authenticate programmatically under their own identity."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.devin.ai/api-reference/overview.md",
+        "quote": "**Base URL:** `https://api.devin.ai/v3/organizations/*`"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.devin.ai/work-with-devin/devin-mcp.md",
+        "quote": "**Base Server URL:** `https://mcp.devin.ai/`"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.devin.ai/work-with-devin/devin-mcp.md",
+        "quote": "Set up the official Devin MCP server so external AI tools can manage sessions, playbooks, knowledge, and repository docs."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.devin.ai/api-reference/overview.md",
+        "quote": "For cross-organization management — analytics, audit logs, user management, billing, and infrastructure. Available to enterprise customers."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

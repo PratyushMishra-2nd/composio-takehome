@@ -1,0 +1,301 @@
+{
+  "gold_apps": 20,
+  "pass1": {
+    "apps": 20,
+    "field_accuracy": {
+      "auth": 0.75,
+      "access": 0.75,
+      "mcp_exists": 1.0,
+      "mcp_official": 1.0,
+      "verdict": 0.95
+    },
+    "auth_strict_set_match": 0.5,
+    "overall": 0.89,
+    "misses": [
+      {
+        "id": 14,
+        "app": "Front",
+        "field": "access",
+        "agent": "self_serve_trial",
+        "human": "admin_approval",
+        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta"
+      },
+      {
+        "id": 15,
+        "app": "Pylon",
+        "field": "access",
+        "agent": "self_serve_free",
+        "human": "customer_account",
+        "note": "No free plan or self-serve signup; trials set up by sales; admin-created API tokens only (no public OAuth app flow)"
+      },
+      {
+        "id": 15,
+        "app": "Pylon",
+        "field": "verdict",
+        "agent": "build_with_caveat",
+        "human": "needs_outreach",
+        "note": "No free plan or self-serve signup; trials set up by sales; admin-created API tokens only (no public OAuth app flow)"
+      },
+      {
+        "id": 23,
+        "app": "Zoho Cliq",
+        "field": "auth",
+        "agent": [
+          "oauth2"
+        ],
+        "human": [
+          "api_key",
+          "oauth2"
+        ],
+        "note": "OAuth via free Zoho API Console; webhook tokens (zapikey query param) count as api_key; multi-DC domains"
+      },
+      {
+        "id": 42,
+        "app": "WooCommerce",
+        "field": "auth",
+        "agent": [
+          "basic",
+          "oauth2",
+          "other"
+        ],
+        "human": [
+          "basic",
+          "hmac_signature"
+        ],
+        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview"
+      },
+      {
+        "id": 51,
+        "app": "DataForSEO",
+        "field": "access",
+        "agent": "self_serve_trial",
+        "human": "self_serve_free",
+        "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial"
+      },
+      {
+        "id": 60,
+        "app": "Clay",
+        "field": "access",
+        "agent": "paid_plan",
+        "human": "self_serve_free",
+        "note": "New developer platform/Public API (clay-api-key header) on all plans incl. free but low free limits; Tables and legacy enrichment API are Enterprise-only"
+      },
+      {
+        "id": 64,
+        "app": "Cloudflare",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key",
+          "bearer_token"
+        ],
+        "note": "API tokens (Bearer) preferred; legacy Global API Key via X-Auth-Key/X-Auth-Email headers; third-party OAuth not generally self-serve"
+      },
+      {
+        "id": 90,
+        "app": "PitchBook",
+        "field": "access",
+        "agent": "partner_gated",
+        "human": "customer_account",
+        "note": "API is a paid add-on set up by Direct Data team for existing customers; no sandbox; official Premium MCP for PitchBook clients"
+      },
+      {
+        "id": 94,
+        "app": "Consensus",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key"
+        ],
+        "note": "API key (sent as Bearer) included on paid plans only; OAuth exists only on the official MCP (mcp.consensus.app) not the REST API"
+      },
+      {
+        "id": 99,
+        "app": "YouTube Transcript",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key"
+        ],
+        "note": "100 free credits no card; API key sent as Bearer (could be labeled bearer_token); MCP uses OAuth"
+      }
+    ]
+  },
+  "final": {
+    "apps": 20,
+    "field_accuracy": {
+      "auth": 0.75,
+      "access": 0.7,
+      "mcp_exists": 1.0,
+      "mcp_official": 1.0,
+      "verdict": 0.8
+    },
+    "auth_strict_set_match": 0.4,
+    "overall": 0.85,
+    "misses": [
+      {
+        "id": 1,
+        "app": "Salesforce",
+        "field": "access",
+        "agent": "paid_plan",
+        "human": "self_serve_free",
+        "note": "Free Developer Edition has API; end-user orgs need an API-enabled edition (Enterprise+ or Professional add-on) and admins must approve uninstalled connected/external client apps"
+      },
+      {
+        "id": 1,
+        "app": "Salesforce",
+        "field": "verdict",
+        "agent": "build_with_caveat",
+        "human": "build_now",
+        "note": "Free Developer Edition has API; end-user orgs need an API-enabled edition (Enterprise+ or Professional add-on) and admins must approve uninstalled connected/external client apps"
+      },
+      {
+        "id": 2,
+        "app": "HubSpot",
+        "field": "access",
+        "agent": "admin_approval",
+        "human": "self_serve_free",
+        "note": "Free developer account; public OAuth apps installable without marketplace listing; private app tokens sent as Bearer"
+      },
+      {
+        "id": 2,
+        "app": "HubSpot",
+        "field": "verdict",
+        "agent": "build_with_caveat",
+        "human": "build_now",
+        "note": "Free developer account; public OAuth apps installable without marketplace listing; private app tokens sent as Bearer"
+      },
+      {
+        "id": 15,
+        "app": "Pylon",
+        "field": "auth",
+        "agent": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "bearer_token"
+        ],
+        "note": "No free plan or self-serve signup; trials set up by sales; admin-created API tokens only (no public OAuth app flow)"
+      },
+      {
+        "id": 23,
+        "app": "Zoho Cliq",
+        "field": "auth",
+        "agent": [
+          "oauth2"
+        ],
+        "human": [
+          "api_key",
+          "oauth2"
+        ],
+        "note": "OAuth via free Zoho API Console; webhook tokens (zapikey query param) count as api_key; multi-DC domains"
+      },
+      {
+        "id": 42,
+        "app": "WooCommerce",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "basic",
+          "oauth2",
+          "other"
+        ],
+        "human": [
+          "basic",
+          "hmac_signature"
+        ],
+        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview"
+      },
+      {
+        "id": 47,
+        "app": "Ecwid",
+        "field": "access",
+        "agent": "admin_approval",
+        "human": "paid_plan",
+        "note": "Only paid stores can access API (free test-store upgrade on request); public app secret issued by Ecwid team on registration; only third-party MCPs"
+      },
+      {
+        "id": 51,
+        "app": "DataForSEO",
+        "field": "access",
+        "agent": "paid_plan",
+        "human": "self_serve_free",
+        "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial"
+      },
+      {
+        "id": 51,
+        "app": "DataForSEO",
+        "field": "verdict",
+        "agent": "build_with_caveat",
+        "human": "build_now",
+        "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial"
+      },
+      {
+        "id": 64,
+        "app": "Cloudflare",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key",
+          "bearer_token"
+        ],
+        "note": "API tokens (Bearer) preferred; legacy Global API Key via X-Auth-Key/X-Auth-Email headers; third-party OAuth not generally self-serve"
+      },
+      {
+        "id": 90,
+        "app": "PitchBook",
+        "field": "access",
+        "agent": "partner_gated",
+        "human": "customer_account",
+        "note": "API is a paid add-on set up by Direct Data team for existing customers; no sandbox; official Premium MCP for PitchBook clients"
+      },
+      {
+        "id": 99,
+        "app": "YouTube Transcript",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key"
+        ],
+        "note": "100 free credits no card; API key sent as Bearer (could be labeled bearer_token); MCP uses OAuth"
+      },
+      {
+        "id": 99,
+        "app": "YouTube Transcript",
+        "field": "access",
+        "agent": "self_serve_trial",
+        "human": "self_serve_free",
+        "note": "100 free credits no card; API key sent as Bearer (could be labeled bearer_token); MCP uses OAuth"
+      },
+      {
+        "id": 99,
+        "app": "YouTube Transcript",
+        "field": "verdict",
+        "agent": "build_with_caveat",
+        "human": "build_now",
+        "note": "100 free credits no card; API key sent as Bearer (could be labeled bearer_token); MCP uses OAuth"
+      }
+    ]
+  }
+}

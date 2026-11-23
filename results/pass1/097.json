@@ -1,0 +1,71 @@
+{
+  "id": 97,
+  "app": "higgsfield",
+  "category": "AI, Research and Media-native",
+  "hint": "higgsfield.ai/cli (content suite)",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.20759133,
+  "turns": 7,
+  "result": {
+    "app": "higgsfield",
+    "description": "Higgsfield is an AI image and video generation platform that gives access to 50+ models, with a REST API, MCP server and CLI.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "The REST API uses a key ID and secret sent as 'Authorization: Key ID:SECRET', created in the console. The MCP server and CLI use a browser sign-in (OAuth-like) and bill plan credits. The docs don't use the word OAuth for MCP.",
+    "access": "paid_plan",
+    "access_detail": "The API needs a payment method and a prepaid USD balance, with a $5 minimum top-up. No free key tier. Keys are self-serve in the console once funded. MCP and CLI need a Higgsfield account and spend plan credits.",
+    "api_types": [
+      "rest",
+      "sdk_only",
+      "cli_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Async generation API: submit to /<provider>/<model>/<variant>, then poll GET /requests/{id}/status, or cancel. Webhooks and an OpenAPI spec are listed in the docs index. Python and TypeScript SDKs exist. Covers 50+ image and video models. There is no public balance or credits endpoint. Webhooks, rate limits and the OpenAPI spec were not read in full.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.higgsfield.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "The API is paid-only (prepaid balance, $5 minimum). Auth is a key ID plus secret, not OAuth. The API is separate from plan credits, so MCP and CLI users spend different money.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.higgsfield.ai/docs/authentication.md",
+        "quote": "Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.higgsfield.ai/docs/authentication.md",
+        "quote": "Each credential consists of a key ID and a secret."
+      },
+      {
+        "field": "access",
+        "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+        "quote": "the minimum top-up is $5."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.higgsfield.ai",
+        "quote": "GET /requests/{id}/status"
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/enterprise-help-center/platform/integrations",
+        "quote": "Paste **https://mcp.higgsfield.ai/mcp** and click **Connect**."
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/enterprise-help-center/platform/integrations",
+        "quote": "No API key needed."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "gold_apps": 20,
+  "pass1": {
+    "apps": 20,
+    "field_accuracy": {
+      "auth": 0.75,
+      "access": 0.75,
+      "mcp_exists": 1.0,
+      "mcp_official": 1.0,
+      "verdict": 0.95
+    },
+    "auth_strict_set_match": 0.5,
+    "overall": 0.89,
+    "misses": [
+      {
+        "id": 14,
+        "app": "Front",
+        "field": "access",
+        "agent": "self_serve_trial",
+        "human": "admin_approval",
+        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta"
+      },
+      {
+        "id": 15,
+        "app": "Pylon",
+        "field": "access",
+        "agent": "self_serve_free",
+        "human": "customer_account",
+        "note": "No free plan or self-serve signup; trials set up by sales; admin-created API tokens only (no public OAuth app flow)"
+      },
+      {
+        "id": 15,
+        "app": "Pylon",
+        "field": "verdict",
+        "agent": "build_with_caveat",
+        "human": "needs_outreach",
+        "note": "No free plan or self-serve signup; trials set up by sales; admin-created API tokens only (no public OAuth app flow)"
+      },
+      {
+        "id": 23,
+        "app": "Zoho Cliq",
+        "field": "auth",
+        "agent": [
+          "oauth2"
+        ],
+        "human": [
+          "api_key",
+          "oauth2"
+        ],
+        "note": "OAuth via free Zoho API Console; webhook tokens (zapikey query param) count as api_key; multi-DC domains"
+      },
+      {
+        "id": 42,
+        "app": "WooCommerce",
+        "field": "auth",
+        "agent": [
+          "basic",
+          "oauth2",
+          "other"
+        ],
+        "human": [
+          "basic",
+          "hmac_signature"
+        ],
+        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview"
+      },
+      {
+        "id": 51,
+        "app": "DataForSEO",
+        "field": "access",
+        "agent": "self_serve_trial",
+        "human": "self_serve_free",
+        "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial"
+      },
+      {
+        "id": 60,
+        "app": "Clay",
+        "field": "access",
+        "agent": "paid_plan",
+        "human": "self_serve_free",
+        "note": "New developer platform/Public API (clay-api-key header) on all plans incl. free but low free limits; Tables and legacy enrichment API are Enterprise-only"
+      },
+      {
+        "id": 64,
+        "app": "Cloudflare",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key",
+          "bearer_token"
+        ],
+        "note": "API tokens (Bearer) preferred; legacy Global API Key via X-Auth-Key/X-Auth-Email headers; third-party OAuth not generally self-serve"
+      },
+      {
+        "id": 90,
+        "app": "PitchBook",
+        "field": "access",
+        "agent": "partner_gated",
+        "human": "customer_account",
+        "note": "API is a paid add-on set up by Direct Data team for existing customers; no sandbox; official Premium MCP for PitchBook clients"
+      },
+      {
+        "id": 94,
+        "app": "Consensus",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key"
+        ],
+        "note": "API key (sent as Bearer) included on paid plans only; OAuth exists only on the official MCP (mcp.consensus.app) not the REST API"
+      },
+      {
+        "id": 99,
+        "app": "YouTube Transcript",
+        "field": "auth",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "api_key"
+        ],
+        "note": "100 free credits no card; API key sent as Bearer (could be labeled bearer_token); MCP uses OAuth"
+      }
+    ]
+  },
+  "final": {
+    "apps": 20,
+    "field_accuracy": {
+      "auth": 0.9,
+      "access": 0.75,
+      "mcp_exists": 1.0,
+      "mcp_official": 1.0,
+      "verdict": 0.85
+    },
+    "auth_strict_set_match": 0.6,
+    "overall": 0.9,
+    "misses": [
+      {
+        "id": 14,
+        "app": "Front",
+        "field": "access",
+        "agent": "self_serve_free",
+        "human": "admin_approval",
+        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "admin_approval",
+          "reason": "A free developer account lets anyone build, but apps stay private to the Front instance that created them. Letting other customers connect one requires publishing it, which means Front tests it and may also run a security or legal review. That is the vendor-review gate the admin_approval definition describes.",
+          "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+          "quote": "If you want to make an app available for all Front customers to use, you must publish your app."
+        }
+      },
+      {
+        "id": 14,
+        "app": "Front",
+        "field": "verdict",
+        "agent": "build_now",
+        "human": "build_with_caveat",
+        "note": "Free developer environment; distributing an OAuth app to other customers goes through Front partner review (partners@front.com); MCP server in beta",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "build_with_caveat",
+          "reason": "Front gives a free developer account, and an admin can create API tokens and private apps with no review, so it is buildable. But an agent toolkit used by other customers must be a published OAuth app, and publishing goes through Front's testing and approval. The schema lists \"app review for public use\" under build_with_caveat.",
+          "url": "https://dev.frontapp.com/docs/partnering-with-front",
+          "quote": "Once your integration has been technically approved, our team will use the image and marketing details you submit in the form to launch your integration"
+        }
+      },
+      {
+        "id": 15,
+        "app": "Pylon",
+        "field": "auth",
+        "agent": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "human": [
+          "bearer_token"
+        ],
+        "note": "No free plan or self-serve signup; trials set up by sales; admin-created API tokens only (no public OAuth app flow)",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "['bearer_token']",
+          "reason": "Pylon's public REST API authentication page documents only admin-created Bearer API tokens and never mentions OAuth. OAuth 2.0 appears only on the hosted MCP server page, which is a separate integration rather than the public API, and A's own note admits this.",
+          "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+          "quote": "The Pylon API uses Bearer authentication. This means you'll need to pass your API token in the header of your request:"
+        }
+      },
+      {
+        "id": 23,
+        "app": "Zoho Cliq",
+        "field": "auth",
+        "agent": [
+          "oauth2"
+        ],
+        "human": [
+          "api_key",
+          "oauth2"
+        ],
+        "note": "OAuth via free Zoho API Console; webhook tokens (zapikey query param) count as api_key; multi-DC domains",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "['api_key', 'oauth2']",
+          "reason": "Besides OAuth 2.0, Zoho Cliq lets each user generate static Webhook Tokens. These are passed as a zapikey query parameter on its api/v2 endpoints so third-party apps can post to channels and bots. That counts as a static key/token, which A missed.",
+          "url": "https://www.zoho.com/cliq/help/platform/webhook-tokens.html",
+          "quote": "Webhook Tokens are unique authentication keys designed for individual users on the Cliq platform."
+        }
+      },
+      {
+        "id": 24,
+        "app": "Lark (Larksuite)",
+        "field": "access",
+        "agent": "self_serve_free",
+        "human": "admin_approval",
+        "note": "Custom apps per tenant need tenant-admin approval; multi-tenant store apps need Lark launch review; tenant_access_token from app id/secret sent as Bearer",
+        "adjudication": {
+          "ruling": "neither",
+          "correct_value": "partner_gated",
+          "reason": "A free custom app only works inside the tenant that built it. For users in other tenants to connect, you need a Store app, and Lark's docs say only accounts with ISV (service-provider) qualification can create one. That qualification is a partner application, which is a stricter gate than self_serve_free (A) or app review alone (B).",
+          "url": "https://open.larksuite.com/llms.txt",
+          "quote": "在开发者后台，根据实际需求，创建自建应用或者商店应用。（仅拥有 ISV 资质的用户可以创建商店应用）"
+        }
+      },
+      {
+        "id": 42,
+        "app": "WooCommerce",
+        "field": "verdict",
+        "agent": "build_with_caveat",
+        "human": "build_now",
+        "note": "Self-hosted per-store base URL; consumer key/secret via Basic over HTTPS or OAuth1.0a one-legged signature over HTTP; official MCP is developer preview",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "build_now",
+          "reason": "Store admins generate the consumer key and secret themselves in WP admin, with no partner program, app review or paid plan, and anyone can stand up a free self-hosted test store. None of the build_with_caveat triggers apply: the REST API is broad. A's reasons are real friction (no OAuth2, a per-store URL, an MCP still in preview) but are not caveats under these definitions.",
+          "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/#authentication",
+          "quote": "Then click the \"Generate API Key\" button and WooCommerce will generate REST API keys for the selected user."
+        }
+      },
+      {
+        "id": 47,
+        "app": "Ecwid",
+        "field": "access",
+        "agent": "self_serve_free",
+        "human": "paid_plan",
+        "note": "Only paid stores can access API (free test-store upgrade on request); public app secret issued by Ecwid team on registration; only third-party MCPs",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "paid_plan",
+          "reason": "Ecwid's dev-environment docs say API access requires a paid store plan. A developer can get a free upgrade only by emailing support, so working keys are not self-serve free. A missed this because it did not check plan requirements.",
+          "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+          "quote": "Only stores on paid plans can access API."
+        }
+      },
+      {
+        "id": 47,
+        "app": "Ecwid",
+        "field": "verdict",
+        "agent": "build_now",
+        "human": "build_with_caveat",
+        "note": "Only paid stores can access API (free test-store upgrade on request); public app secret issued by Ecwid team on registration; only third-party MCPs",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "build_with_caveat",
+          "reason": "Ecwid's dev-environment page says the API works only on paid-plan stores. A free test store needs a manual upgrade, which you get by emailing Ecwid. That is the \"paid plan\" limit the build_with_caveat definition describes, not self-serve build_now. Once the store is upgraded, a custom app's credentials are generated automatically in the dashboard, so it falls short of needs_outreach.",
+          "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+          "quote": "Only stores on paid plans can access API."
+        }
+      },
+      {
+        "id": 51,
+        "app": "DataForSEO",
+        "field": "access",
+        "agent": "self_serve_trial",
+        "human": "self_serve_free",
+        "note": "Free signup with $1 credit then pay-as-you-go ($50 min top-up); arguably self_serve_trial",
+        "adjudication": {
+          "ruling": "reference",
+          "correct_value": "self_serve_free",
+          "reason": "Any registered user gets working credentials free, plus a free Sandbox for API testing. The $1 credit has no stated time limit, so it is free credit, not a time-limited trial. The $50 top-up is the cost of production usage, not the gate to getting credentials.",
+          "url": "https://dataforseo.com/pricing",
+          "quote": "You can also test API integration for free using the DataForSEO Sandbox."
+        }
+      },
+      {
+        "id": 90,
+        "app": "PitchBook",
+        "field": "access",
+        "agent": "partner_gated",
+        "human": "customer_account",
+        "note": "API is a paid add-on set up by Direct Data team for existing customers; no sandbox; official Premium MCP for PitchBook clients",
+        "adjudication": {
+          "ruling": "both_defensible",
+          "correct_value": "customer_account",
+          "reason": "PitchBook's docs say existing clients request API access from inside the Platform (Plugins & Apps, via the Direct Data team or account manager), which fits customer_account. They also call the API a separate offering that needs its own contract, which means going through sales and fits partner_gated. Slight lean to customer_account. Caveat: no pages were opened directly; evidence comes from search-result summaries, and the URL for the quoted sentence is a best guess.",
+          "url": "https://pitchbook.com/help/PitchBook-api",
+          "quote": "Or if you're a PitchBook client, you can also head to the Plugins & Apps section from the My PitchBook section of the left-hand sidebar on the PitchBook Platform and choose PitchBook API."
+        }
+      }
+    ]
+  },
+  "adjudicated": {
+    "overall": 0.91,
+    "agent_wrong": 9,
+    "rulings": {
+      "reference": 8,
+      "neither": 1,
+      "both_defensible": 1
+    }
+  }
+}

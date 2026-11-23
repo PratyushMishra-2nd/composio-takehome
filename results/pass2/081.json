@@ -1,0 +1,82 @@
+{
+  "id": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "hint": "stripe.com/docs/api",
+  "model": "sonnet",
+  "seconds": 37,
+  "cost_usd": 0.14634566999999998,
+  "turns": 4,
+  "result": {
+    "app": "Stripe",
+    "description": "Online payments platform: payments, billing/subscriptions, invoicing, payouts, Connect marketplaces, and more via API.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Secret/restricted API keys sent via HTTP Basic Auth (key as username) or Bearer header. OAuth 2.0 for Stripe Apps and Connect platforms to act on behalf of other accounts.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can create a Stripe account and get test-mode (sandbox) keys without charge; no fees until live payments are processed. OAuth for Connect/Apps is self-serve; publishing a Stripe App to the marketplace needs Stripe review. Free signup not directly quoted from docs, so access confidence is medium.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Resource-oriented REST API with JSON responses and form-encoded requests; hundreds of endpoints across Payments, Billing, Invoicing, Connect, Issuing, Treasury, Tax, Radar, etc. Official SDKs in many languages. Webhooks supported.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.stripe.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.stripe.com/api",
+        "quote": "Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.stripe.com/api/authentication",
+        "quote": "The Stripe API authenticates requests using HTTP Basic Auth."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.stripe.com/stripe-apps/api-authentication",
+        "quote": "Use industry standard OAuth 2.0 to generate access tokens to interact with the Stripe API."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.stripe.com/api/authentication",
+        "quote": "Test mode secret keys start with `sk_test_` and have unrestricted access to their sandboxes."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.stripe.com/api",
+        "quote": "Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "claude mcp add --transport http stripe https://mcp.stripe.com/"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "Use OAuth for interactive MCP clients. OAuth lets you authorise and revoke a client without sharing an API key."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.stripe.com/api/authentication",
+        "quote": "If you need to authenticate using bearer auth (for example, for a cross-origin request), use `-H \"Authorization: Bearer <<YOUR_SECRET_KEY>>\"` instead of `-u <<YOUR_SECRET_KEY>>`."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

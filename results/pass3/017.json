@@ -1,0 +1,80 @@
+{
+  "id": 17,
+  "app": "Plain",
+  "category": "Support and Helpdesk",
+  "hint": "plain.com",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.142448715,
+  "turns": 5,
+  "result": {
+    "app": "Plain",
+    "description": "B2B customer support platform (Slack/email/chat threads, customers, tiers, workflows) with a GraphQL API that matches its UI.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Machine-user API keys sent as `Authorization: Bearer plainApiKey_xxx`, with fine-grained per-key permissions. Per the auth docs, an OAuth app is used to call the API as a workspace user. The official MCP server is OAuth only.",
+    "access": "self_serve_trial",
+    "access_detail": "Pricing page shows a 7-day free trial with no credit card, then Foundation $45, Horizon $99 or custom Frontier per user per month. The page lists \"API, Webhooks, Events, MCP, Custom channels\" under the developer platform but does not say which plan includes them. I found no plan restriction on the API. Keys come from Settings → Machine users & agents.",
+    "api_types": [
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "One GraphQL endpoint (POST https://core-api.uk.plain.com/graphql/v1) with a public schema. Plain's UI is built on it, so the API has no limitations compared with the UI. The docs cover only the most used operations. A TypeScript SDK and webhooks exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.plain.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Free access is a 7-day trial only. The pricing page does not say which paid plan includes API access. The vendor's own MCP server does not accept API keys (OAuth only).",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.plain.com/docs/api-reference/graphql/authentication",
+        "quote": "To call the API as a user in your workspace, use an OAuth app."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.plain.com/docs/api-reference/graphql/authentication",
+        "quote": "Each API key carries its own fine-grained permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "Start with a 7-day free trial, no credit card required."
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "Foundation is $45/user/month, Horizon is $99/user/month, and Frontier is custom."
+      },
+      {
+        "field": "api",
+        "url": "https://www.plain.com/docs/api-reference/graphql/introduction",
+        "quote": "This means that there are no limitations in what can be done via the API vs the UI."
+      },
+      {
+        "field": "api",
+        "url": "https://www.plain.com/docs/api-reference/graphql/introduction",
+        "quote": "Plain itself is built on this same GraphQL API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/docs/integrations/mcp-server.md",
+        "quote": "Once connected, your AI client can do almost anything you can do in Plain, across nearly 400 tools."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/docs/integrations/mcp-server.md",
+        "quote": "You authenticate with your existing Plain account, so the MCP server has the same permissions as your user."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

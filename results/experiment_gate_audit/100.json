@@ -1,0 +1,84 @@
+{
+  "id": 100,
+  "app": "Grain",
+  "category": "AI, Research and Media-native",
+  "hint": "grain.com (meeting notes)",
+  "model": "sonnet",
+  "seconds": 57,
+  "cost_usd": 0.17412998000000002,
+  "turns": 6,
+  "result": {
+    "app": "Grain",
+    "description": "AI meeting recorder and notetaker that captures, transcribes and summarizes calls, with a public API and a hosted MCP server.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Personal Access Token (grain_pat_..., scope personal, no expiry, sent as Authorization: Bearer). Workspace Access Token (admin-generated, workspace scope). OAuth2 Authorization Code + PKCE for distributed integrations. Client_id is obtained manually, or via CIMD for public clients. Workspace scope for OAuth clients needs Grain verification.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit. (1) Each end user can create their own PAT in account settings, which doesn't count as a gate. It is available on every plan including Free. OAuth personal scope shows no approval queue in the docs. Client credentials are issued manually, and CIMD public clients skip registration. Only the workspace scope needs Grain verification, plus a Business or Enterprise plan for workspace tokens. (2) Core API access via PAT is not paid-gated. Workspace tokens are paid-gated (Business/Enterprise). There is no sandbox, but a free account works.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST v2 at https://api.grain.com/_/public-api/v2/. It needs a Public-Api-Version header. The docs conflict on the current version: the support article says 2025-10-31 and the dev overview example uses 2026-10-01. It covers recordings, transcripts, AI notes, participants, tags, teams, meeting types, uploads, sharing, downloads (video, JSON, text, VTT, SRT) and webhooks. Rate limit is 300 requests per minute per token. The v1 beta API was sunset. I did not read the full endpoint list page, so breadth is estimated.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.grain.com/_/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.grain.com/authentication.html",
+        "quote": "Public clients, such as MCP clients and native apps, can skip Step 1 by using an HTTPS URL as their client_id."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.grain.com/authentication.html",
+        "quote": "Workspace Access Token (WAT): grants access to all data in the workspace, regardless of which user owns it."
+      },
+      {
+        "field": "access",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Available on every plan, including Free."
+      },
+      {
+        "field": "access",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Requires admin access to generate and is available on Business and Enterprise plans."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.grain.com/authentication.html",
+        "quote": "The workspace scope is only available to clients verified by Grain."
+      },
+      {
+        "field": "api",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The API allows 300 requests per minute per token."
+      },
+      {
+        "field": "api",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Connect Grain to your own tools and workflows with the Grain public API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.grain.com/mcp",
+        "quote": "Any MCP client that can send custom headers can connect with a Personal Access Token instead of OAuth."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.grain.com/en/articles/14811968-how-to-use-the-grain-mcp-server",
+        "quote": "Connect Grain to Claude or ChatGPT and query your meeting data with natural language."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

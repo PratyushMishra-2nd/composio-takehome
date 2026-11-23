@@ -1,0 +1,75 @@
+{
+  "id": 55,
+  "app": "Apify",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.apify.com",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.158681305,
+  "turns": 4,
+  "result": {
+    "app": "Apify",
+    "description": "Cloud platform for web scraping and automation: run Actors (serverless scrapers/tools), store data in datasets/key-value stores, and browse Actors in Apify Store.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Personal API token from Console Integrations page, sent as Bearer header (recommended) or ?token= query param. OAuth is documented only for the MCP server connection, not the REST API. Also x402/Skyfire payment credentials for agentic pay-per-call.",
+    "access": "self_serve_free",
+    "access_detail": "Free plan ($0, $5 monthly usage, no credit card) with token creation in Console. Pricing page does not explicitly state free-plan API access, but the free plan covers most platform features. Paid plans: Starter $19, Scale $199, Business $999.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v2 with full OpenAPI schema (YAML/JSON). Covers Actors, versions, builds, runs, tasks, webhooks, schedules, Store, logs, users, usage, datasets, key-value stores, request queues. Official Node.js and Python clients. Rate limit 250k req/min global, 60 req/s per resource.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.apify.com",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "Add the token to your request's Authorization header as Bearer <token>."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "You can create an API token on the Integrations page in the Apify Console."
+      },
+      {
+        "field": "access",
+        "url": "https://apify.com/pricing",
+        "quote": "No credit card is required."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "The API is organized around RESTful HTTP endpoints."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "You can download the complete OpenAPI schema of Apify API in the YAML or JSON formats."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.apify.com/platform/integrations/mcp",
+        "quote": "The Apify MCP server is an open-source project."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.apify.com/platform/integrations/mcp",
+        "quote": "On first connection, your browser opens so you can sign in to Apify and approve access."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

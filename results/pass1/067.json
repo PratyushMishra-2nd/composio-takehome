@@ -1,0 +1,77 @@
+{
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.snowflake.com",
+  "model": "sonnet",
+  "seconds": 35,
+  "cost_usd": 0.2238163,
+  "turns": 7,
+  "result": {
+    "app": "Snowflake",
+    "description": "Cloud data platform (AI Data Cloud) for data warehousing, lakes, analytics, and AI workloads.",
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "REST/SQL APIs accept key-pair JWT, Snowflake OAuth / External OAuth, programmatic access tokens (PAT, sent as Bearer), and workload identity federation. OAuth needs a security integration set up per account by an admin; no global app registry.",
+    "access": "self_serve_trial",
+    "access_detail": "Every customer has own account URL. Free 30-day trial (about $400 credit), email only. After trial a credit card/paid account is needed. AI features are off on trials until a card is added. Creating OAuth integrations needs ACCOUNTADMIN or similar.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "SQL API runs any SQL statement, so effectively whole product. Snowflake REST APIs (OpenAPI) manage accounts, users, roles, grants, warehouses, databases, schemas, tables, dynamic tables, etc. Also Cortex REST APIs, Snowpipe REST. Connectors/drivers for many languages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Per-account base URL and per-account OAuth security integration (admin setup); trial lapses without paid account. Otherwise self-serve.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+        "quote": "When you send a request, the request must include authentication information using either of the following:"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+        "quote": "**Comprehensive authentication:** Snowflake OAuth by default, with optional External OAuth so MCP clients can authenticate against your organization's identity provider."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+        "quote": "To sign\nup for a trial account, all you need is a valid email address; no payment information or other qualifying information is required."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+        "quote": "The trial continues for 30 days (from the sign-up date) or until you've depleted your free usage balance, whichever occurs first."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+        "quote": "These REST APIs are compliant with the [OpenAPI specification](https://spec.openapis.org/oas/v3.1.0)."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+        "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts without needing to deploy separate infrastructure."
+      },
+      {
+        "field": "description",
+        "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+        "quote": "A Snowflake trial account lets you evaluate/test Snowflake's full range of innovative and powerful features with no cost or contractual obligations."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

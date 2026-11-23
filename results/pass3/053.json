@@ -1,0 +1,80 @@
+{
+  "id": 53,
+  "app": "Ahrefs",
+  "category": "Data, SEO and Scraping",
+  "hint": "ahrefs.com/api",
+  "model": "sonnet",
+  "seconds": 77,
+  "cost_usd": 0.21785726500000002,
+  "turns": 7,
+  "result": {
+    "app": "Ahrefs",
+    "description": "SEO platform for backlink, keyword, site audit, rank tracking and AI-search data, exposed via the Ahrefs API v3.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "API v3 uses an account-generated API key sent as Authorization: Bearer. Ahrefs Connect (REST API v3 on behalf of users) uses OAuth 2.0 Auth Code + PKCE, 1-year access tokens, no refresh tokens; it needs Ahrefs approval, so it is not open to every developer.",
+    "access": "paid_plan",
+    "access_detail": "Direct API keys come from a paid Ahrefs subscription, where workspace owners and admins create them. Ahrefs help center says plans from Lite include API units, but it also says new applications may need Enterprise (search summary, not verified verbatim). Multi-user OAuth (Ahrefs Connect) needs an application and verification before going live. Free public endpoints need no key. The hosted MCP needs Lite or higher.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Base https://api.ahrefs.com/v3/{tool}/{endpoint}. GET endpoints return JSON. Tool groups: Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, SERP Overview, Batch Analysis, Brand Radar, Web Analytics, GSC Insights and more. OpenAPI spec at /openapi.json. Requests consume API units (50-unit minimum).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.ahrefs.com/mcp/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Credentials need a paid Ahrefs plan (Lite or higher; Enterprise may be needed for new apps). The OAuth route for end users needs Ahrefs Connect approval, so API key (bearer) is the practical self-managed path.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "send your API key as a bearer token in the Authorization: Bearer <API_KEY> header."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.ahrefs.com/ahrefs-connect/docs/oauth-guide.md",
+        "quote": "Ahrefs Connect uses OAuth 2.0 Authorization Code Flow with Proof Key for Code Exchange (PKCE)."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ahrefs.com/ahrefs-connect/docs/approval-process.md",
+        "quote": "When your integration is ready, you'll need to submit it for verification before it can go live."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+        "quote": "The remote MCP server is available on paid plans starting from Lite."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "Ahrefs API v3 gives programmatic access to Ahrefs' SEO, marketing, and AI-search data"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ahrefs.com/llms.txt",
+        "quote": "Most requests consume API units; the minimum cost of any billable request is 50 units."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+        "quote": "Streamable HTTP: https://api.ahrefs.com/mcp/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+        "quote": "The external MCP server is not a general-purpose programmatic API."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

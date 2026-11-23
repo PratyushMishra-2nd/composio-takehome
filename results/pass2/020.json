@@ -1,0 +1,68 @@
+{
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "hint": "gladly.com",
+  "model": "sonnet",
+  "seconds": 38,
+  "cost_usd": 0.175324905,
+  "turns": 6,
+  "result": {
+    "app": "Gladly",
+    "description": "Customer service platform (people-centered helpdesk) unifying voice, SMS, email, chat and social conversations around a customer profile.",
+    "auth_methods": [
+      "basic"
+    ],
+    "auth_detail": "Basic auth: username = agent email, password = API token. Token created by a user with the API User permission (More settings > API Tokens). No OAuth documented. Token is tied to one org/environment and has unrestricted access.",
+    "access": "customer_account",
+    "access_detail": "Tokens exist only inside an existing paying Gladly org; an admin must grant a user the API User permission. No public signup or free trial. Sandbox (*.gladly.qa) must be bought/requested via the CSM or support. Request-demo is the only entry.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST v1 at https://{org}.gladly.com/api/v1. Resources: agents, answers, business hours, communications (SMS/email), conversations (items, notes, replies, topics, redact), customers, tasks, topics, inboxes, teams, events, export, reports, proactive conversations, webhooks, user identity JWT, organization. Plus Lookup API and webhooks.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://www.stackone.com/connectors/gladly/mcp/",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve signup or free sandbox. Credentials only exist inside a customer account; sandbox is a paid add-on arranged via Gladly CSM/support. Need a design-partner account or sandbox from Gladly.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Gladly API uses token-based Basic Authentication. API tokens are associated with designated Gladly users."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "To create and use an API token, your user must have the API User permission."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Clients can access the REST API via HTTPS at your organization's Gladly domain (e.g. https://{organization}.gladly.com)."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "We'll enable the Gladly API in a separate sandbox environment"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.stackone.com/connectors/gladly/mcp/",
+        "quote": "Gladly MCP server"
+      },
+      {
+        "field": "verdict",
+        "url": "https://help.gladly.com/developer-tutorials/docs/setup-and-testing",
+        "quote": "contact your Gladly CSM or support team"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

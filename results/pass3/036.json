@@ -1,0 +1,79 @@
+{
+  "id": 36,
+  "app": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.klaviyo.com",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.17319679499999996,
+  "turns": 6,
+  "result": {
+    "app": "Klaviyo",
+    "description": "Marketing automation platform for email, SMS and customer data, with a REST API for profiles, events, lists, flows, campaigns and more.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "REST API supports OAuth 2.0 authorization code flow with PKCE (Bearer access token; apps created at manage-apps by owner/admin/manager; unlisted apps installable via installation URL) and private API key (Authorization: Klaviyo-API-Key pk_...). Public key (company ID) is for client-side endpoints only.",
+    "access": "self_serve_free",
+    "access_detail": "Free Klaviyo plan exists (250 profiles, 500 emails/month). Private API keys and OAuth app creation are self-serve for owner/admin/manager roles. App Marketplace listing needs review, but an unlisted OAuth app can be shared via installation URL. Pricing page does not state API access per plan, so free-plan API access is not confirmed there.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "JSON:API-style REST with revision header, cursor pagination, filters, sparse fieldsets. Scope groups cover Accounts, Campaigns, Catalogs, Coupons, Events, Flows, Forms, Images, Lists, Metrics, Profiles, Reporting, Reviews, Segments, Subscriptions, Tags, Templates, Tracking Settings, Web Feeds and more.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+        "quote": "Your app must use OAuth in order to be considered for Klaviyo’s App Marketplace."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+        "quote": "For company-scoped apps, access tokens and refresh tokens grant access to a Klaviyo account."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "Private keys will have the prefix pk_ followed by a longer alphanumeric string."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+        "quote": "Note that only owner, admin, and manager roles can create OAuth apps in Klaviyo."
+      },
+      {
+        "field": "access",
+        "url": "https://www.klaviyo.com/pricing",
+        "quote": "500 emails per month to 250 active profiles"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.klaviyo.com/en/reference/api_overview",
+        "quote": "All new API endpoints are rate limited on a per-account basis"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "quote": "The Klaviyo Model Context Protocol (MCP) server seamlessly integrates with Klaviyo’s APIs,"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "quote": "configure your MCP client for the remote-hosted server (recommended) or the local server"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

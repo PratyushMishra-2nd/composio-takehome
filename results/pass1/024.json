@@ -1,0 +1,82 @@
+{
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "hint": "open.larksuite.com",
+  "model": "sonnet",
+  "seconds": 62,
+  "cost_usd": 0.21255104,
+  "turns": 6,
+  "result": {
+    "app": "Lark (Larksuite)",
+    "description": "Enterprise collaboration suite (messaging, calendar, docs, video meetings, approvals, tasks, email) with a broad Open Platform API; international sibling of Feishu.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "tenant_access_token (app identity, from App ID + App Secret) for automated actions. user_access_token via standard OAuth 2.0 authorization-code flow (refresh tokens supported). Calls sent as Bearer tokens.",
+    "access": "admin_approval",
+    "access_detail": "Create a self-built app free in the developer console and get credentials. Scopes marked as needing review need tenant admin approval. Self-built apps work only in their own tenant. To serve other tenants, a store app is needed, which requires ISV qualification, Lark listing review, and per-tenant admin install approval. Free signup was not confirmed on the pages read, and no pricing page was checked.",
+    "api_types": [
+      "rest",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST OpenAPI covers contacts, messaging, group chat, cloud docs, calendar, video conferencing, attendance, approval, bots, tasks, email, OKR, minutes and admin. Event subscriptions and callbacks are supported, including long-connection mode. Official SDKs exist for Go, Python, Java and Node. No exact endpoint count was stated.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Per-tenant admin approval is needed for sensitive scopes. A multi-tenant public app needs ISV qualification and Lark review. Developer docs are partly Chinese-only. Region split (Lark vs Feishu domains) must be handled.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "Lark是先进企业协作与管理平台，一站式整合了即时消息、日历、云文档、视频会议等功能"
+      },
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "获取 user_access_token 是标准的 OAuth 2.0"
+      },
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "该访问凭证适用于无需用户登录的自动化操作"
+      },
+      {
+        "field": "access",
+        "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes.md",
+        "quote": "应用开发者申请的权限需要通过 租户管理员 的审核。"
+      },
+      {
+        "field": "access",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "仅拥有 ISV 资质的用户可以创建商店应用"
+      },
+      {
+        "field": "api",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "应用商店应用：由第三方服务商开发，在Lark应用中心发布，所有Lark租户均可安装和使用。"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/larksuite/lark-openapi-mcp",
+        "quote": "This tool is currently in Beta stage."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/larksuite/lark-openapi-mcp",
+        "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool designed to help users quickly connect to the Feishu/Lark platform"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

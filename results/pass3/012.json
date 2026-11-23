@@ -1,0 +1,69 @@
+{
+  "id": 12,
+  "app": "Intercom",
+  "category": "Support and Helpdesk",
+  "hint": "intercom.com",
+  "model": "sonnet",
+  "seconds": 40,
+  "cost_usd": 0.12095693000000002,
+  "turns": 4,
+  "result": {
+    "app": "Intercom",
+    "description": "Customer messaging and support platform (inbox, help desk, Fin AI agent, help center) with a REST API for contacts, conversations, tickets and more.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 authorization-code flow is required for public apps that access other people's Intercom data (authorize at app.intercom.com/oauth, exchange code at api.intercom.io/auth/eagle/token). Private apps use a workspace access token sent as an Authorization: Bearer header.",
+    "access": "self_serve_free",
+    "access_detail": "Free development workspace via public developer signup lets a developer build and publish a public OAuth app. Dev workspaces are US-only, limited in features, and can't be converted to production. Private apps (access token) target a paid workspace, and the docs don't name a plan tier. The docs don't mention an app review gate for connecting public apps.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Versioned REST API (v2.18), generated from OpenAPI. About 40 resource groups: Admins, Articles, Companies, Contacts, Conversations, Data Attributes, Data Events, Data Export, Help Center, Messages, News, Segments, Tags, Teams, Tickets, Ticket Types, Visitors, Fin Agent API, Reporting Data Export. Regional hosts: US, EU and AU.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.intercom.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "OAuth is for if you're building a public app that accesses other people's Intercom data."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/setting-up-oauth",
+        "quote": "you are required to set up OAuth."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "simply provide it as an `Authorization:Bearer` header in your requests"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+        "quote": "Development workspaces are free and intended for development purposes only."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.intercom.com/docs/references/introduction",
+        "quote": "This API reference is auto-generated from an OpenAPI specification."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.intercom.com/docs/guides/mcp",
+        "quote": "Intercom hosts a remote MCP server that follows the authenticated remote MCP specification"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

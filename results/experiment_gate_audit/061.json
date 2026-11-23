@@ -1,0 +1,78 @@
+{
+  "id": 61,
+  "app": "GitHub",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.github.com/rest",
+  "model": "sonnet",
+  "seconds": 21,
+  "cost_usd": 0.1107009,
+  "turns": 3,
+  "result": {
+    "app": "GitHub",
+    "description": "Code hosting and developer collaboration platform (repos, issues, PRs, Actions, orgs) with REST and GraphQL APIs.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "jwt",
+      "basic",
+      "other"
+    ],
+    "auth_detail": "OAuth2 via OAuth Apps (web flow, device flow) and GitHub Apps (user-to-server OAuth, installation tokens via app JWT); fine-grained and classic personal access tokens sent as bearer; GITHUB_TOKEN in Actions. Basic auth with PAT also works.",
+    "access": "self_serve_free",
+    "access_detail": "Any free GitHub account can register an OAuth App or GitHub App and create PATs. No Marketplace listing, app review or paid plan needed for other users/orgs to authorize or install; org owners may restrict third-party apps, but that is an org setting, not vendor review. Some features (e.g. private-repo advanced security, enterprise endpoints) are plan-gated, but core API is free.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API (versioned, OpenAPI described, hundreds of endpoints: repos, issues, PRs, actions, orgs, users, checks, packages, etc.) plus GraphQL v4 API and webhooks.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/github/github-mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "You can create a personal access token, generate a token with a GitHub App, or use the built-in GITHUB_TOKEN in a GitHub Actions work"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps",
+        "quote": "Both OAuth apps and GitHub Apps use OAuth 2.0."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps",
+        "quote": "GitHub Apps can act on behalf of a user, similar to an OAuth app, or as themselves, which is beneficial for automations that do not require user input."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.github.com/en/graphql/overview/about-the-graphql-api",
+        "quote": "GitHub chose GraphQL because it offers significantly more flexibility for our integrators."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "Many REST API endpoints require authentication or return additional information if you are authenticated."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/github/github-mcp-server",
+        "quote": "The remote GitHub MCP Server is hosted by GitHub and provides the easiest method for getting up and running."
+      },
+      {
+        "field": "description",
+        "url": "https://github.com/github/github-mcp-server",
+        "quote": "This gives AI agents, assistants, and chatbots the ability to read repositories and code files, manage issues and PRs, analyze code, and automate workflows."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": 94,
+  "app": "Consensus",
+  "category": "AI, Research and Media-native",
+  "hint": "consensus.app (OAuth requested)",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.20309322000000002,
+  "turns": 7,
+  "result": {
+    "app": "Consensus",
+    "description": "AI research search engine over 400M+ peer-reviewed papers, with a REST API and hosted MCP server.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "REST API: per-user API key from the consensus.app API & MCP dashboard, sent in the x-api-key header. Hosted MCP server uses OAuth, where each user signs in with their own account. No OAuth for the REST API is documented.",
+    "access": "self_serve_free",
+    "access_detail": "Every plan includes API access, and the Free plan has 30 calls a month. Paid plans offer 500 or 2,000 calls, plus Custom for Enterprise, at 1 req/s. Overage is $0.05 per call on paid plans. Keys are created self-serve in the dashboard. The API and MCP share one monthly pool. Full-text excerpts need a paid plan.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "Endpoints from the GitHub README: GET /v1/search (semantic paper search), POST /v1/threads, GET /v1/threads, GET /v1/threads/{thread_id} and POST /v1/threads/{thread_id}/interactions. /v1/quick_search is deprecated and will be removed on 2027-02-07. Base URL is https://api.consensus.app. I could not read the docs.consensus.app pages (HTTP 403), so this comes from the official GitHub README and search snippets.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.consensus.app/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "The API is narrow: search plus threads only. The free tier is 30 calls a month. Key auth is per user, so a single OAuth flow for the REST API is not available. MCP OAuth uses DCR, and Composio-managed OAuth is reportedly unavailable. The docs pages returned 403 for me, so some limits are unverified.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://github.com/Consensus-NLP/consensus-api",
+        "quote": "Authenticate every request with your key in the `x-api-key` header."
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/Consensus-NLP/consensus-api",
+        "quote": "The Free plan includes 30 calls a month, so you can make a request in a couple of minutes."
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/Consensus-NLP/consensus-api",
+        "quote": "Every plan includes API access."
+      },
+      {
+        "field": "api",
+        "url": "https://github.com/Consensus-NLP/consensus-api",
+        "quote": "Base URL `https://api.consensus.app`."
+      },
+      {
+        "field": "api",
+        "url": "https://github.com/Consensus-NLP/consensus-api",
+        "quote": "It's deprecated and will be removed on 2027-02-07."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Consensus-NLP/consensus-api",
+        "quote": "https://mcp.consensus.app/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://consensus.app/home/mcp/",
+        "quote": "open the listing, then click Connect and verify your account."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

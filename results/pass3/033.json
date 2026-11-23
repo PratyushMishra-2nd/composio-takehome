@@ -1,0 +1,83 @@
+{
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "learn.microsoft.com/linkedin/marketing",
+  "model": "sonnet",
+  "seconds": 57,
+  "cost_usd": 0.19650441000000002,
+  "turns": 7,
+  "result": {
+    "app": "LinkedIn Ads",
+    "description": "LinkedIn Marketing/Advertising APIs to create and manage ad campaigns, report performance, manage leads and audiences.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 3-legged (member authorization, authorization code flow) only. Marketing APIs do not support 2-legged client credentials. Docs mention no API key. The APIs.guru API-key scheme could not be confirmed in vendor docs, so it is not listed.",
+    "access": "admin_approval",
+    "access_detail": "Create an app in the Developer Portal, then apply for the Advertising API product from its Product tab. LinkedIn reviews and approves the application, and use cases are restricted. Every app starts in the Development tier. Standard tier needs a separate support-ticket request and LinkedIn can decline it.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Versioned REST (Rest.li) API on Microsoft Learn covering campaigns, creatives, audiences, reporting, leads, conversions and more. Old monthly versions are sunset regularly. The API surface was not counted endpoint by endpoint.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Each developer must get Advertising API product approval from LinkedIn before the app works. Production use for many accounts needs Standard tier, which LinkedIn grants at its discretion. Only 3-legged OAuth works.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+        "quote": "The LinkedIn API uses OAuth 2.0 for member (user) authorization and API authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+        "quote": "Not all APIs support Application Authorization. For example, Marketing APIs you must use Member Authorization explained above."
+      },
+      {
+        "field": "access",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+        "quote": "Visit your app's Product tab in the Developer Portal to apply for the Advertising API product."
+      },
+      {
+        "field": "access",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+        "quote": "LinkedIn reserves the right to review applications and select partners at its discretion and a partner might not be upgraded even if they meet these minimum requirements."
+      },
+      {
+        "field": "access",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+        "quote": "All applications start with Development tier. You must apply separately to upgrade to the Standard tier."
+      },
+      {
+        "field": "api",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+        "quote": "The platform offers APIs to create LinkedIn marketing campaigns, to report campaign performance, to manage leads, and to grow a company Page."
+      },
+      {
+        "field": "description",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+        "quote": "With Advertising APIs, streamline your campaign management, audience targeting, and track performance to optimize advertising efforts."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+        "quote": "MCP server for the LinkedIn Marketing API — campaigns, analytics, creatives, from any MCP client. MIT."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+        "quote": "There's no official LinkedIn MCP."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

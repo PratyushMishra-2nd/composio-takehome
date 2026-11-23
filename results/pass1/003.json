@@ -1,0 +1,74 @@
+{
+  "id": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "hint": "pipedrive.com",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.21227912499999999,
+  "turns": 7,
+  "result": {
+    "app": "Pipedrive",
+    "description": "Sales-focused CRM for managing deals, contacts, pipelines and activities.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "OAuth 2.0 auth-code for apps registered in Developer Hub (client_id/secret); personal API token via x-api-token header for single account.",
+    "access": "self_serve_free",
+    "access_detail": "Developer sandbox account via form gives Developer Hub access and OAuth client_id/secret for private/dev apps. Publishing publicly on Marketplace requires app approval. Sandbox deleted if inactive. No plan restriction on API found in pages read (not proof of absence).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST JSON, v1 and v2 OpenAPI specs. Covers Deals, Persons, Organizations, Leads, Activities, Pipelines, Products, Projects, Webhooks, Users, etc. Official SDKs (Node etc.).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.pipedrive.ai/mcp",
+    "verdict": "build_now",
+    "blocker": "Public distribution of own OAuth app needs Marketplace approval; otherwise none.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+        "quote": "The API token must be provided in the `x-api-token` header for all requests"
+      },
+      {
+        "field": "auth",
+        "url": "https://pipedrive.readme.io/docs/marketplace-registering-the-app",
+        "quote": "where you’ll get your `client_id` and `client_secret`."
+      },
+      {
+        "field": "access",
+        "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+        "quote": "Fill in the form here to get access to your developer sandbox account!"
+      },
+      {
+        "field": "access",
+        "url": "https://pipedrive.readme.io/docs/marketplace-registering-the-app",
+        "quote": "To be published on the Marketplace, your app needs to pass our app approval process."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "quote": "This API uses a JSON format for output and is capable of handling CORS (Cross-Origin Resource Sharing) requests."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+        "quote": "Pipedrive MCP is available to customers on all Pipedrive plans."
+      },
+      {
+        "field": "verdict",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+        "quote": "Keep in mind that an API token is tied to a specific user and company, giving access to all user's data."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "hint": "coda.io/developers",
+  "model": "sonnet",
+  "seconds": 90,
+  "cost_usd": 0.213300785,
+  "turns": 7,
+  "result": {
+    "app": "Coda",
+    "description": "All-in-one collaborative doc platform (now branded Superhuman Docs) combining documents, tables, automations and apps.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "REST API v1: per-user API token sent as Authorization Bearer header (no OAuth for REST API). The official hosted MCP server uses OAuth 2 (or an MCP-restricted personal access token), per a secondary source.",
+    "access": "self_serve_free",
+    "access_detail": "API is free for all users in free and paid workspaces. Creating docs requires Doc Maker/Admin role. Rate limits apply (e.g. 100 reads/6s, 10 writes/6s). MCP free-plan quota reportedly limited (unverified).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST v1 at https://coda.io/apis/v1 with OpenAPI spec. Groups: Folders, Docs (CRUD, permissions, publishing), Pages (incl. content export), Tables, Columns, Rows (list/upsert/update/delete, push button), Formulas and Controls (read only), Automations (trigger only), Account, Analytics, mutation status. Writes are async (202 + requestId). Docs moved to docs.superhuman.com after rebrand.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.superhuman.com/apis/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "The API token is invalid or has expired."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "This API uses a base path of `https://coda.io/apis/v1`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "If you plan to integrate Superhuman Docs with an AI tool, you may also want to consider using the Superhuman Docs MCP server."
+      },
+      {
+        "field": "mcp",
+        "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+        "quote": "Under the hood, Superhuman Docs runs an MCP server built on the open Model Context Protocol standard, giving AI clients tools to work directly in your docs."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "hint": "ipayx.ai/docs",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.15508279999999997,
+  "turns": 6,
+  "result": {
+    "app": "iPayX",
+    "description": "Forensic FX audit engine: detects hidden bank spreads vs mid-market rates on currency transactions, via REST API and MCP server.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Static API key (prefix ipx_live_) generated in dashboard, sent as Authorization: Bearer header. No OAuth.",
+    "access": "paid_plan",
+    "access_detail": "Free tier gives only 3 audits (pricing page says lifetime; MCP tool text says per IP per month). Production API plans: Developer $99/mo sandbox, Starter $499/mo, up to $4,999/mo, Enterprise from $100K/yr; banks contact sales. No KYC/approval seen for key generation. Pricing pages inconsistent.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "3 endpoints: POST /audit, GET /rates, POST /audit/document. Webhooks HMAC-SHA256 signed. Base URL is a Supabase functions URL; api.ipayx.ai custom domain 'coming soon'. Docs show two different base paths (fx-public-api-v1 vs fx-audit-engine).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.ipayx.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Narrow API (3 endpoints); real use needs paid plan after 3 free audits; docs/pricing inconsistent; vendor claims unverified.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://www.ipayx.ai/developers",
+        "quote": "MCP-native FX audit engine."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.ipayx.ai/developers",
+        "quote": "Authenticate using a Bearer token from your backend."
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/pricing",
+        "quote": "You have 3 free audits."
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/developers",
+        "quote": "Generate and manage your key in the Dashboard."
+      },
+      {
+        "field": "api",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "Detect hidden bank spreads vs mid-market benchmark on any currency transaction."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.ipayx.ai/developers",
+        "quote": "MCP-native FX audit engine."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

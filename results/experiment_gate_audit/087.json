@@ -1,0 +1,84 @@
+{
+  "id": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "hint": "developer.xero.com",
+  "model": "sonnet",
+  "seconds": 49,
+  "cost_usd": 0.19317838499999998,
+  "turns": 10,
+  "result": {
+    "app": "Xero",
+    "description": "Cloud accounting platform for small businesses (invoicing, bank reconciliation, payroll, reporting) with a public developer API.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 authorization code (with PKCE) for public apps connecting many Xero orgs. Custom Connections (client ID and secret, client-credentials style) are for a single organisation. The Xero OAuth2 and custom-connections pages did not render, so these flows are not verified from Xero's own pages. The MCP README confirms the custom-connection and bearer-token modes.",
+    "access": "paid_plan",
+    "access_detail": "Since the tiered model (from March 2026) a developer can sign up free on the Starter tier (\"No charge\"). Starter is capped at 5 connections, so end customers beyond the fifth need a paid tier. Core ($35 AUD/mo, 50 connections) has no certification prerequisite and is paid, and Core and Starter cannot be listed in the Xero App Store. Plus ($245 AUD/mo, 1,000 connections) and above require App Certification. Advanced and Enterprise also require a security assessment, and Enterprise requires an App Store listing. Connections are capped at the tier maximum until the tier's requirements are met. Starter also has a 1,000 calls/day limit. No separate cap for uncertified apps was found. Whether a free demo org exists is unconfirmed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST/JSON. Xero's documentation covers Accounting (invoices, contacts, accounts, bank transactions, journals, reports, credit notes, quotes, payments) and Payroll. The MCP README covers only those two families. Files, Assets, Projects and Bank Feeds were not verified, and the Xero API pages did not render for the fetcher. Journals, the XPM API and bulk connections are Advanced tier only. The OpenAPI spec is published at github.com/XeroAPI/Xero-OpenAPI.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/XeroAPI/xero-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "Self-serve free Starter allows only 5 connections. Beyond that, Core is a paid tier ($35 AUD/mo, up to 50 connections). Reaching 1,000 or more connections needs App Certification and a paid tier. Custom Connections (single org) are a possible route for individual customers, but their cost and availability were not verified.",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Connections (maximum) | 5 | 50 | 1000 | 10,000 | No limit"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Monthly Tier Fee | No charge | $35 AUD | $245 AUD | $1445 AUD | Price on Application"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Prerequisites | | | App Certification | App Certification | App Certification"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+        "quote": "The Starter tier has unlimited data access to enable early innovation but is capped at 5 connections."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+        "quote": "Your connections are capped at the tier maximums until you meet that tier's requirements."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+        "quote": "A Xero App Store listing is required for the Enterprise tier, recommended but optional for the Plus and Advanced tiers, and not available for the Starter and Core tiers."
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+        "quote": "This is a Model Context Protocol (MCP) server implementation for Xero."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+        "quote": "There are 2 modes of authentication supported in the Xero MCP server:"
+      },
+      {
+        "field": "api",
+        "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+        "quote": "Journals, XPM API and Bulk Connections are only available starting at the Advanced tier."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

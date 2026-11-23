@@ -1,0 +1,76 @@
+{
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "hint": "close.com",
+  "model": "sonnet",
+  "seconds": 49,
+  "cost_usd": 0.14396179,
+  "turns": 5,
+  "result": {
+    "app": "Close",
+    "description": "Sales CRM for SMBs with built-in calling, email, SMS, pipelines and automation.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "API key sent via HTTP Basic (key as username, empty password), created per user in Settings → Developer → API Keys. OAuth2 auth-code flow with Bearer tokens; app created self-serve in Settings → Developer → OAuth Apps; refresh via offline_access.",
+    "access": "self_serve_trial",
+    "access_detail": "Gate audit: (1) OAuth apps private by default (own org only); public use by other orgs needs vendor review, but each end user can self-create an API key, which is not a gate. (2) No free plan; 14-day no-card trial. High-volume API access not included on Solo plan, included on Essentials+. REST API stated as available; trial API access not explicitly confirmed. Developer needs trial or paid account; no separate sandbox found.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covering leads, contacts, opportunities, activities (calls/email/SMS), custom fields, smart views, sequences, webhooks etc. Endpoint-specific rate limits, no daily quota or per-request fees.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.close.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No free plan (14-day trial only); public OAuth app for other orgs requires Close review; per-user API keys avoid this. Solo plan lacks high-volume API access.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/",
+        "quote": "API keys for scripts or OAuth 2.0 for user-facing integrations."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/topics/authentication/",
+        "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.close.com/integrations/publish",
+        "quote": "We'll review your app and reply by email."
+      },
+      {
+        "field": "access",
+        "url": "https://www.close.com/pricing",
+        "quote": "Close doesn't have a free plan, but you can try it free for 14 days with no credit card."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.close.com/api/overview/oauth-authentication",
+        "quote": "OAuth apps are Private by default, meaning only members of your own Close organization can authorize them."
+      },
+      {
+        "field": "api",
+        "url": "https://www.close.com/pricing",
+        "quote": "Yes. Close provides a REST API for building custom integrations."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.close.com/mcp",
+        "quote": "Close's MCP server is officially supported across the Claude ecosystem."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

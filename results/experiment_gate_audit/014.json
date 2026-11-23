@@ -1,0 +1,90 @@
+{
+  "id": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "hint": "front.com",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.18790021999999998,
+  "turns": 7,
+  "result": {
+    "app": "Front",
+    "description": "Shared inbox and customer operations platform that centralizes email, chat, SMS and social conversations for team collaboration and support.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Core API uses Bearer tokens, from company-level API tokens (admin-created) or OAuth2 authorization-code grant (60 min access token, 6 month refresh). MCP server uses OAuth 2.1+PKCE with a client id/secret and no dynamic client registration.",
+    "access": "admin_approval",
+    "access_detail": "A free developer account exists and apps are private to the creating Front instance by default. To offer an OAuth app to all Front customers, the app must be published, which means notifying Front's team through the Partnering with Front process (the review criteria were not read). Front requires public integrations to use OAuth unless it grants an exception, so end users cannot simply paste their own API tokens in a multi-tenant toolkit. Admin-created API tokens work per company with no review. The pages I read state no paid-plan requirement for API access. Pricing page: Starter $25/seat/mo, Professional $65, Enterprise $105, with a 14-day free trial. OAuth authorizers must be company admins, except for the MCP server, which any teammate can authorize.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Core API at https://api2.frontapp.com, JSON over HTTP, covering contacts, conversations, messages, comments, events, tags, inboxes, channels, teammates and more. It has overall and burst rate limits, with a paid rate-limit add-on on all plans. Application Channels and a separate Admin MCP also exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.frontapp.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Publishing an OAuth app to all Front customers requires notifying Front's team (the review process is on the Partnering with Front page, which was not read). Until then the app is private to one instance, or admins must supply their own API tokens or OAuth app credentials.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "There are two ways to get a Bearer token — through API tokens in your settings or through an OAuth implementation."
+      },
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/oauth",
+        "quote": "End users authorizing OAuth apps must be admins. This applies to both private and public OAuth apps."
+      },
+      {
+        "field": "access",
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "If you want to make an app available for all Front customers to use, you must publish your app."
+      },
+      {
+        "field": "access",
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "By default, apps are private to the Front instance they are created in."
+      },
+      {
+        "field": "access",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "OAuth is required for public integrations available to all Front customers unless you obtain an exception from us."
+      },
+      {
+        "field": "access",
+        "url": "https://dev.frontapp.com/docs/core-api-getting-started",
+        "quote": "If you don’t already have access to a Front account, [create a developer account]"
+      },
+      {
+        "field": "api",
+        "url": "https://dev.frontapp.com/reference/introduction",
+        "quote": "Here is Front's Core API, a backend API that gives comprehensive control over all entities in Front from Contacts to Comments."
+      },
+      {
+        "field": "api",
+        "url": "https://dev.frontapp.com/reference/introduction",
+        "quote": "API calls will always work with `https://api2.frontapp.com` as the base URL."
+      },
+      {
+        "field": "mcp",
+        "url": "https://dev.frontapp.com/docs/mcp-server",
+        "quote": "Front does not support Dynamic Client Registration."
+      },
+      {
+        "field": "mcp",
+        "url": "https://dev.frontapp.com/docs/oauth",
+        "quote": "any Front teammate can authorize it."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

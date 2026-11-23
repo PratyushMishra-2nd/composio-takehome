@@ -1,0 +1,79 @@
+{
+  "id": 88,
+  "app": "Brex",
+  "category": "Finance and Fintech",
+  "hint": "developer.brex.com",
+  "model": "sonnet",
+  "seconds": 47,
+  "cost_usd": 0.15034002000000002,
+  "turns": 4,
+  "result": {
+    "app": "Brex",
+    "description": "Unified spend platform: corporate cards, expense management, reimbursements, travel, bill pay and bank accounts.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Customers: user token created in the dashboard, sent as a Bearer token, scoped at creation, expires after 90 days unused. Partners: OAuth2 Authorization Code (all APIs except onboarding, PKCE optional, 1h access tokens, rotating 90-day refresh tokens) and Client Credentials (Onboarding API only).",
+    "access": "customer_account",
+    "access_detail": "No public developer signup and no sandbox usable with customer tokens. User tokens come from an existing Brex customer's dashboard, created by an account admin or card admin after the developer API agreement is accepted. Staging is not a sandbox and won't work with customer tokens. A multi-tenant OAuth app needs a client ID and secret issued by Brex developer support, which makes it partner-gated.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST APIs with OpenAPI specs: Accounting, Budgets, Expenses, Fields, Onboarding (partners only), Payments (vendors, ACH, wires, checks), Team (users, cards, departments, locations, cost centers, legal entities), Transactions (accounts, statements), Travel and Webhooks. Fine-grained scopes. Only the Team API page was read in full. The other API pages were not read individually.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.brex.com/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve developer credentials or sandbox. Testing needs an existing Brex customer account with admin access. A shared OAuth app needs a client ID and secret from Brex developer support.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.brex.com/docs/authentication",
+        "quote": "To start making calls to Brex APIs, generate a user token from your Brex dashboard and pass it along in your API call headers."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.brex.com/guides/partner_authentication",
+        "quote": "For all other APIs, you will implement the Authorization Code Grant, which implements a web-based redirection flow to request permission from the Brex client to access their account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.brex.com/guides/partner_authentication",
+        "quote": "Please [contact our developer support team](/docs/support) to be issued a client ID and client secret for partner authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.brex.com/guides/quickstart",
+        "quote": "This guide assumes you are a Brex customer with admin access to your dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.brex.com/guides/roles_permissions_scopes",
+        "quote": "Most Brex APIs require a Brex admin to grant access."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.brex.com/openapi/team_api",
+        "quote": "The team API lets you manage users, departments, locations, and cards."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.brex.com/docs/mcp",
+        "quote": "The Brex MCP server lets AI assistants interact directly with your Brex account."
+      },
+      {
+        "field": "description",
+        "url": "https://developer.brex.com/",
+        "quote": "[Brex](https://www.brex.com) is the first fully unified spend platform — with global corporate cards, expense management, reimbursements, travel, and bill pay."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

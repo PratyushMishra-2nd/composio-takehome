@@ -1,0 +1,73 @@
+{
+  "id": 52,
+  "app": "SE Ranking",
+  "category": "Data, SEO and Scraping",
+  "hint": "seranking.com/api",
+  "model": "sonnet",
+  "seconds": 74,
+  "cost_usd": 0.22806439000000003,
+  "turns": 7,
+  "result": {
+    "app": "SE Ranking",
+    "description": "All-in-one SEO platform (rank tracking, keyword research, backlinks, site audits, AI search visibility) with Data, Project, Local Marketing and SE Visible APIs.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Single API key from account dashboard, sent as 'Authorization: Token KEY' header (or apikey query param); one key covers Data and Project API. Hosted MCP additionally supports OAuth 2.1 with dynamic client registration, or X-Api-Key header.",
+    "access": "paid_plan",
+    "access_detail": "Key is self-serve generated in the dashboard, but needs a subscription: every paid plan includes monthly Data API credits, Project API included in plans, or standalone/credit-pack purchase (from $50 for 250k credits). No documented free API trial; MCP page mentions 100K free credits start, terms unclear.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Data API: Backlinks, Domain Analysis, Keyword Research, AI Search, Website Audit, Account. Project API: project mgmt, keyword/URL groups, competitors, analytics traffic, marketing plan, audit, backlink checker, AI results tracker. Plus Local Marketing API and SE Visible API (beta). Base https://api.seranking.com. Credits billed only on 2xx.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.seranking.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "API needs a paid subscription or purchased credits; no free self-serve API tier. Official MCP already exists.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://seranking.com/api/data/getting-started/",
+        "quote": "Include an `Authorization` header in your request, with the value `Token YOUR_API_KEY`."
+      },
+      {
+        "field": "auth",
+        "url": "https://seranking.com/api/how-to-get-api/",
+        "quote": "A single API key authenticates every endpoint across the Data API and the Project API."
+      },
+      {
+        "field": "access",
+        "url": "https://seranking.com/api/how-to-get-api/",
+        "quote": "every current subscription plan includes a monthly credit allowance."
+      },
+      {
+        "field": "access",
+        "url": "https://seranking.com/api/how-to-get-api/",
+        "quote": "Credit packs that never expire. From $50 for 250,000 credits, with no limit on how many you buy."
+      },
+      {
+        "field": "api",
+        "url": "https://seranking.com/api/api-credits-system/",
+        "quote": "Only successful HTTP 2xx responses consume credits."
+      },
+      {
+        "field": "mcp",
+        "url": "https://seranking.com/api/integrations/mcp/",
+        "quote": "This transport uses OAuth 2.1 with dynamic client registration for authentication"
+      },
+      {
+        "field": "mcp",
+        "url": "https://seranking.com/api/integrations/mcp/",
+        "quote": "API access lives with the master account, not with sub-accounts."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

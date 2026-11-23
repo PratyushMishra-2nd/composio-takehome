@@ -1,0 +1,77 @@
+{
+  "id": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "hint": "developer.bigcommerce.com",
+  "model": "sonnet",
+  "seconds": 63,
+  "cost_usd": 0.1654029,
+  "turns": 6,
+  "result": {
+    "app": "BigCommerce",
+    "description": "SaaS ecommerce platform (hosted storefronts, catalog, orders, checkout, customers) with REST and GraphQL APIs.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "Store-level API account: merchant creates client ID/secret + static access token (sent as X-Auth-Token). App-level: modified OAuth2 auth-code grant, per-store access token. Account-level tokens also exist. Storefront GraphQL uses JWT bearer tokens.",
+    "access": "admin_approval",
+    "access_detail": "Gate 1: store-level API accounts are created by each merchant themselves (no review), but a multi-tenant OAuth toolkit where other merchants click-install needs app-level OAuth, and the docs say only an app approved for public availability can generate tokens on behalf of other store owners; Marketplace submission has a $99 review fee and needs a Partner ID assigned after approval. Gate 2: dev needs a store to test; free 15-day trial and partner sandbox exist, but end merchants need a paid BigCommerce plan after trial to keep an active store. So not purely self-serve. Per-merchant self-created API tokens would be self-serve, but OAuth app flow for others requires approval.",
+    "api_types": [
+      "rest",
+      "graphql",
+      "websocket"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Large REST surface (V2/V3: catalog, orders, customers, carts, checkout, payments, promotions, shipping, webhooks, themes, scripts) plus GraphQL Storefront and Admin GraphQL. Base https://api.bigcommerce.com/stores/{hash}.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/isaacgounton/bigcommerce-api-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Public multi-merchant OAuth requires Marketplace app approval ($99 fee, Partner ID); otherwise users paste store hash + store-level token. Official MCP is docs-only, not store operations; store-ops MCPs are community.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.bigcommerce.com/docs/start/authentication/api-accounts",
+        "quote": "BigCommerce offers three types of OAuth-based API accounts to developers who wish to use BigCommerce’s REST APIs: store-level credentials, app-level credentials, and account-level credentials."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.bigcommerce.com/docs/integrations/apps/guide/auth",
+        "quote": "However, when an app is approved to be publicly available for additional stores to install, it can generate access_token s on behalf of store owners and authorized users."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.bigcommerce.com/docs/integrations/apps/guide/publishing",
+        "quote": "A payment window opens for the $99 review and listing fee."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.bigcommerce.com/docs/start/authentication/api-accounts",
+        "quote": "Merchants generate single-store API credentials when they create API accounts in their store control panel, in the Settings > Store-level API accounts menu."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.bigcommerce.com/docs/start",
+        "quote": "Complete REST and GraphQL API docs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.bigcommerce.com/docs/start",
+        "quote": "Connect Cursor, Claude, or Codex to the BigCommerce developer docs via MCP."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/isaacgounton/bigcommerce-api-mcp",
+        "quote": "bigcommerce-api-mcp"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

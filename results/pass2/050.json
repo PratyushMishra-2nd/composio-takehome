@@ -1,0 +1,68 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "hint": "fanbasis.com",
+  "model": "sonnet",
+  "seconds": 48,
+  "cost_usd": 0.15970840000000003,
+  "turns": 7,
+  "result": {
+    "app": "fanbasis",
+    "description": "Fanbasis (Commas) is a creator commerce and payments platform with checkout sessions, subscriptions, invoices, products, customers, discount codes and webhooks.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Per-account API key sent in the x-api-key header. Keys carry scopes. Production and sandbox keys are separate. The 401 message also mentions a Bearer token option. The MCP server uses an OAuth login flow, but that is for MCP clients, not the REST API.",
+    "access": "self_serve_free",
+    "access_detail": "Keys are created in the dashboard under Account → API Keys, with a separate sandbox dashboard at sandbox.commas.net. The docs show no plan gate, app review or sales step for API keys. I found no pricing page, so I could not confirm whether the API is restricted by plan. Rate limits vary by account and need a support request.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST under https://www.fanbasis.com/public-api/. I found about 40 paths, covering checkout-sessions (including embedded), transactions, customers (charge and payment-methods), products (create, subscriptions, transactions), subscribers, invoices (mark-paid, resend, void), discount-codes and webhook-subscriptions (with a test endpoint). Sandbox environment available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.fanbasis.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Every API request must include your API key in the"
+      },
+      {
+        "field": "access",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Each environment needs its own API key registered against your account"
+      },
+      {
+        "field": "access",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Create production keys in your Commas dashboard and sandbox keys in the"
+      },
+      {
+        "field": "api",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Complete API reference for the Commas API. Checkout sessions, webhooks, customers, subscriptions, discount codes, and more."
+      },
+      {
+        "field": "mcp",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Connect Claude, ChatGPT, or Grok directly to your Commas account via MCP."
+      },
+      {
+        "field": "mcp",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Paste the server URL:"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

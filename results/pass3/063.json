@@ -1,0 +1,64 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.netlify.com/api",
+  "model": "sonnet",
+  "seconds": 14,
+  "cost_usd": 0.10539959999999998,
+  "turns": 3,
+  "result": {
+    "app": "Netlify",
+    "description": "Web platform for building, deploying and scaling web apps with serverless functions, edge logic and continuous deployment.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 (auth-code, client id/secret) required for public integrations; personal access tokens (Bearer) for own account/team use.",
+    "access": "self_serve_free",
+    "access_detail": "Free plan exists on pricing page, credit-based, no sales gate. Anyone can sign up, create personal access tokens and register OAuth apps in the UI.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Netlify REST API (OpenAPI spec) covers sites, deploys, builds, env vars, DNS, forms, functions, hooks, teams/accounts, members, etc. Plus CLI and JS client.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "If you’re making a public integration with Netlify for others to enjoy, you must use OAuth2."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Authorization: Bearer <YOUR_PERSONAL_ACCESS_TOKEN>"
+      },
+      {
+        "field": "access",
+        "url": "https://www.netlify.com/pricing/",
+        "quote": "Build and deploy free forever."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Netlify uses OAuth2 for authentication"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+        "quote": "Connect to the Netlify MCP server to equip your agent with the best of Netlify expertise and the Netlify CLI."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

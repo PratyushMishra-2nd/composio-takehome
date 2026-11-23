@@ -1,0 +1,65 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "hint": "zendesk.com",
+  "model": "sonnet",
+  "seconds": 56,
+  "cost_usd": 0.22807117500000001,
+  "turns": 7,
+  "result": {
+    "app": "Zendesk",
+    "description": "Customer service and support ticketing platform with help center, messaging, voice, and AI agents.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "OAuth2 access tokens preferred (Bearer, scopes; global OAuth clients for multi-customer apps). API tokens via Basic auth (email/token:api_token) are deprecated. Password Basic auth only if enabled in Admin Center.",
+    "access": "self_serve_trial",
+    "access_detail": "No free plan. Free 14-day trial (Suite Professional features, no card) for dev; sponsored non-expiring dev account (up to 5 agents) only for Marketplace partners. Sandbox needs paid Growth+/Enterprise plan. Customers on paid plans get API access; extra API volume needs 10+ agents. Public OAuth apps use global OAuth clients (may need Zendesk approval for Marketplace listing).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST APIs by product: Ticketing (tickets, users, orgs, views, macros, triggers), Help Center, Messaging, Voice, Live Chat, Sales CRM, Custom Data/Sunshine, AI Agents, Apps. Hundreds of endpoints. Rate limits per plan (~700 rpm cited by third party).",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/michaelrice/zendesk-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No permanent free tier; trial is 14 days. API token auth deprecated, must use OAuth. Official MCP status unverified (a blog claims first-party MCP launched Apr 2026 for ChatGPT-style use; general server reportedly unshipped).",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Zendesk supports using OAuth access tokens to authenticate API requests."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Basic authentication is used for API tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+        "quote": "You can try out the Zendesk platform with a free, 14-day trial account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+        "quote": "Unlike a trial account, a sponsored account does not expire after 14 days."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.zendesk.com/api-reference/",
+        "quote": "Most of our APIs are organized by product capabilities."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "low"
+    }
+  }
+}

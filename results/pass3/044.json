@@ -1,0 +1,63 @@
+{
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "hint": "developer.salesforce.com/docs/commerce",
+  "model": "sonnet",
+  "seconds": 61,
+  "cost_usd": 0.19464245000000002,
+  "turns": 7,
+  "result": {
+    "app": "Salesforce Commerce Cloud",
+    "description": "Enterprise ecommerce platform (B2C Commerce) with headless Shopper and Admin APIs (SCAPI) plus legacy OCAPI for storefront and back-office automation.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "SCAPI Shopper APIs: OAuth2 via SLAS (Shopper Login), public/private clients, JWT access tokens (~30 min). SCAPI Admin APIs: OAuth2 client credentials from an Account Manager API client (oauth2/access_token). Based on Salesforce doc search summaries; docs pages returned 403 to the fetcher, so not verbatim-verified.",
+    "access": "customer_account",
+    "access_detail": "Credentials (SLAS client, Account Manager API client) only exist within an existing B2C Commerce tenant/instance (sandbox or realm) that a customer or partner provisions. No public self-serve signup found. The official MCP page says connected tasks need an instance hostname and Account Manager sign-in. Could not fetch the getting-started page (403) to confirm any free sandbox path.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "SCAPI (Shopper + Admin REST APIs) plus legacy OCAPI. The official MCP page cites nearly 600 Salesforce Commerce API operations.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve credentials: SLAS and Account Manager API clients require an existing B2C Commerce tenant/instance; Salesforce docs could not be fetched to confirm any free sandbox.",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+        "quote": "The B2C MCP server connects your AI assistant to Salesforce B2C Commerce tools, documentation, and workflow skills."
+      },
+      {
+        "field": "mcp",
+        "url": "https://cdn.jsdelivr.net/npm/@salesforce/b2c-dx-mcp@3.15.0/README.md",
+        "quote": "Connect your AI assistant to Salesforce B2C Commerce tools, documentation, and workflow skills."
+      },
+      {
+        "field": "auth",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+        "quote": "Shopper APIs run as a guest shopper with your SLAS client."
+      },
+      {
+        "field": "access",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+        "quote": "Deploying code and reading logs need only your instance hostname"
+      },
+      {
+        "field": "api",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+        "quote": "nearly 600 Salesforce Commerce API operations"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

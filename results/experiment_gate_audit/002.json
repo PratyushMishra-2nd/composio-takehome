@@ -1,0 +1,65 @@
+{
+  "id": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "hint": "hubspot.com",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.21725180000000005,
+  "turns": 7,
+  "result": {
+    "app": "HubSpot",
+    "description": "CRM platform for marketing, sales, service and CMS, with a broad public REST API for CRM objects and more.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 is required for multi-account apps. Static auth tokens and service keys (bearer tokens) are single-account only. Developer API key (hapikey) is only for a few developer-level endpoints. Legacy private-app tokens and API keys are deprecated.",
+    "access": "admin_approval",
+    "access_detail": "Developer accounts and app creation are self-serve. Private distribution is capped at 10 allowlisted accounts. A marketplace-distribution OAuth app is capped at 25 installs until HubSpot lists it, and listing needs Marketplace review. Per-user static tokens and service keys are single-account and need no review. Beyond 25 customers, an agent toolkit needs the HubSpot Marketplace review. I did not confirm the pricing page. The CRM APIs are generally available on free CRM accounts, but I have not cited that.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Date-versioned REST API at api.hubapi.com (2026-03, 2026-09). It covers CRM objects (contacts, companies, deals, tickets, custom objects, and many more), CMS, marketing, conversations and webhooks. Hundreds of endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.hubspot.com",
+    "verdict": "build_with_caveat",
+    "blocker": "A public multi-tenant OAuth app is limited to 25 installs until it passes HubSpot Marketplace listing review. Private distribution is limited to 10 accounts.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview.md",
+        "quote": "If you plan to distribute your app to multiple accounts (either through listing on the HubSpot Marketplace or by managing specific authorized accounts), your app must be built using OAuth authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/manage-apps-in-hubspot.md",
+        "quote": "can be installed in up to 25 accounts (not including developer test accounts)."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/manage-apps-in-hubspot.md",
+        "quote": "For apps with a `private` distribution, you can install your app in a maximum of 10 HubSpot accounts."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.hubspot.com/docs/api/overview.md",
+        "quote": "All APIs, whether legacy, new, or beta, use the same root path as before: `https://api.hubapi.com/`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.hubspot.com/docs/build-with-ai/remote-mcp-server.md",
+        "quote": "The remote HubSpot MCP server is a publicly hosted endpoint for connecting external AI tools and applications to HubSpot's CRM."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

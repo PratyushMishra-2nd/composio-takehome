@@ -1,0 +1,74 @@
+{
+  "id": 96,
+  "app": "Devin",
+  "category": "AI, Research and Media-native",
+  "hint": "docs.devin.ai (MCP)",
+  "model": "sonnet",
+  "seconds": 46,
+  "cost_usd": 0.19687838500000004,
+  "turns": 6,
+  "result": {
+    "app": "Devin",
+    "description": "Autonomous AI software engineer (Cognition) with a v3 REST API to manage sessions, knowledge, playbooks and secrets, plus an official hosted MCP server.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "API v3 uses cog_-prefixed credentials sent as Bearer: service user API keys (recommended for automation) or personal access tokens (act as the user). Legacy apk_ keys are deprecated. No OAuth2 for third-party apps documented.",
+    "access": "self_serve_free",
+    "access_detail": "Docs name no plan gate for org-scoped service users or PATs. The service user is created under Settings > Devin API. The pricing page has a Free plan and a \"Devin API\" row, but the cell values did not extract, so free-tier API access is unconfirmed. Enterprise endpoints (/v3/enterprise/*) need an enterprise-scoped service user, and PATs are disabled by default under an enterprise policy. Usage is billed at API pricing. Treat as likely self-serve, with moderate uncertainty on whether a paid plan is needed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "v3 REST. The organization scope (/v3/organizations/*) covers sessions (create, list, status, messages), knowledge, playbooks and secrets. The enterprise scope (/v3/enterprise/*) covers orgs, consumption, audit logs and analytics. v1 and v2 are legacy.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.devin.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Free-tier API access is unconfirmed, as the pricing table did not render. Auth is a static key or PAT only, with no OAuth for end users. Enterprise endpoints need an enterprise account.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.devin.ai/api-reference/authentication",
+        "quote": "All API credentials use the `cog_` prefix format."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.devin.ai/api-reference/authentication",
+        "quote": "Personal Access Tokens (PATs) allow human users to authenticate programmatically under their own identity."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.devin.ai/api-reference/authentication",
+        "quote": "Service users are non-human accounts designed for API integrations."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.devin.ai/api-reference/authentication",
+        "quote": "Legacy API keys are deprecated. Use API v3 with service user authentication."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.devin.ai/api-reference/v3/usage-examples",
+        "quote": "This page provides code examples for common API use cases."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+        "quote": "Set up the official Devin MCP server so external AI tools can manage sessions, playbooks, knowledge, and repository docs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+        "quote": "To use the Devin MCP server, you need a Devin API key:"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

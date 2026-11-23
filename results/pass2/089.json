@@ -1,0 +1,73 @@
+{
+  "id": 89,
+  "app": "Ramp",
+  "category": "Finance and Fintech",
+  "hint": "docs.ramp.com",
+  "model": "sonnet",
+  "seconds": 55,
+  "cost_usd": 0.186126005,
+  "turns": 7,
+  "result": {
+    "app": "Ramp",
+    "description": "Corporate card, spend management, bill pay and accounting automation platform for businesses.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 only. Client Credentials (Basic auth client_id:secret) for own-business server-to-server; Authorization Code (+ Refresh Token) for apps used by other Ramp businesses. Separate apps/tokens for sandbox and production.",
+    "access": "customer_account",
+    "access_detail": "Developer apps are created in Company → Developer inside a Ramp dashboard by an admin, so credentials need an existing Ramp customer account. Sandbox (demo-api.ramp.com) is available by request via a 'Get Sandbox Access' page. Some scopes/endpoints need a plan feature (403 without it); cards:read_vault is for approved integrators only; some scopes are partner-only. Public/multi-tenant apps (ramp.com/integrations) go through Ramp partner program. Sandbox request terms and cost not verified.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST Developer API v1 with OpenAPI spec. Scopes cover accounting, approvals, audit logs, bank accounts, bills, budgets, cards, cashbacks, custom records, departments, funds, merchants, payments, purchase orders, receipts, reimbursements, spend programs, statements, transactions, transfers, treasury, trips, users, vendors. Webhooks supported.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.ramp.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No public signup: credentials require a Ramp customer account with admin access (or sandbox request). Multi-tenant OAuth apps for other businesses need Ramp partner approval; some scopes plan- or partner-gated. Also, vendor-official MCP exists.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+        "quote": "Ramp uses OAuth 2.0."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+        "quote": "Use this flow for server-to-server integrations with your own Ramp business."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+        "quote": "This guide assumes you are a Ramp customer with **admin** access to your dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+        "quote": "Some endpoints also require a Ramp plan feature and return `403` without it, even with the right scope."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ramp.com/llms-guides/sandbox.txt",
+        "quote": "The Ramp sandbox is a testing environment where developers and partners can safely build, test, and experiment"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.ramp.com/llms.txt",
+        "quote": "The API exposes Custom Records, Webhooks for event-driven integrations, and the full Ramp data model."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.ramp.com/llms-guides/mcp.txt",
+        "quote": "Ramp runs two MCP servers, one for your Ramp account and one for Ramp Data benchmarks."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

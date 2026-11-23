@@ -1,0 +1,76 @@
+{
+  "id": 26,
+  "app": "Discord",
+  "category": "Communications and Messaging",
+  "hint": "discord.com",
+  "model": "sonnet",
+  "seconds": 46,
+  "cost_usd": 0.15369017499999998,
+  "turns": 5,
+  "result": {
+    "app": "Discord",
+    "description": "Chat, voice and community platform; its public API lets bots and OAuth2 apps read and send messages and manage servers, channels, roles and members.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 authorization-code grant gives Bearer user tokens, with refresh. The bot flow uses a per-app bot token (sent as `Authorization: Bot <token>`) after a server admin adds the bot via the scope=bot invite. A client-credentials grant also exists. OAuth2 token endpoints take HTTP Basic client auth.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit (1): Anyone can register an app in the Developer Portal. The docs list no fee, and I found no paid-plan requirement. The user-token scopes useful for agents (identify, guilds, email and similar) need no review. A small set of scopes needs Discord approval, and the docs mark them \"only available to approved partners\": rpc, dm_channels.read, messages.read and a few others. Bot-based message reading and member listing do not use these. Bots in 100 or more servers need app verification and approved privileged intents. The support article on this was blocked (403), so that is from my own knowledge and is not quoted. Message-content and member intents are the limit for large multi-tenant use. Gate audit (2): no paid tier found.",
+    "api_types": [
+      "rest",
+      "websocket"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at https://discord.com/api/v10 (v9 also available). It covers guilds, channels, messages, threads, roles, members, webhooks, interactions and application commands, scheduled events, invites, emoji, stickers, audit log and users. The real-time Gateway (WebSocket) delivers events. Some message content and member events need privileged intents.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/SaseQ/discord-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Bot-token access needs a server admin to invite the bot. Apps in 100 or more servers need Discord verification and approval for privileged intents. Some scopes are partner-only.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "Bot users are automatically added to all apps, and are authenticated using the bot token found in your app's settings."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "The authorization code grant is what most developers will recognize as \"standard OAuth2\""
+      },
+      {
+        "field": "access",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "Some scopes require approval from Discord to use."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.discord.com/developers/resources/application",
+        "quote": "Intent required for bots in 100 or more servers to receive"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.discord.com/developers/reference",
+        "quote": "Omitting the version number from the route will route requests to the current default version (marked below)."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/SaseQ/discord-mcp",
+        "quote": "A MCP server for the Discord integration. Enable your AI assistants to seamlessly interact with Discord."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/barryyip0625/mcp-discord",
+        "quote": "Implement Discord MCP server enabling AI assistants to interact with the Discord platform."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

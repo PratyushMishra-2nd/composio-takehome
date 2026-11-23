@@ -1,0 +1,70 @@
+{
+  "id": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "hint": "developers.notion.com",
+  "model": "sonnet",
+  "seconds": 31,
+  "cost_usd": 0.2021191,
+  "turns": 5,
+  "result": {
+    "app": "Notion",
+    "description": "All-in-one workspace for notes, docs, wikis, databases and project/task management.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 for public/OAuth integrations (per-user tokens, page picker); static internal connection token and user-scoped personal access token (PAT), both sent as Authorization: Bearer. Notion-Version header required.",
+    "access": "self_serve_free",
+    "access_detail": "Create connections in the Developer portal, free. Public OAuth integrations usable in any workspace without review; security review needed only for optional Marketplace listing. Internal connection creation needs workspace owner; a free personal workspace works. PAT default on Free plan is workspace owners only. Enterprise-only: SCIM/Admin APIs.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at https://api.notion.com, versioned via Notion-Version (2026-03-11). ~200 reference pages: pages, databases/data sources, blocks, comments, users, search, file uploads, webhooks, views, plus Admin and SCIM (Enterprise). Official JS SDK; Postman collection.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.notion.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.notion.com/docs/authorization",
+        "quote": "Authenticate Notion API requests with personal access tokens, internal connection tokens, or OAuth integration OAuth flows."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.notion.com/guides/connections-and-tokens/public-integrations/overview.md",
+        "quote": "You can create and use a public connection without listing it."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.notion.com/guides/connections-and-tokens/public-integrations/overview.md",
+        "quote": "A public integration is an OAuth integration that users can install in any Notion workspace."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.notion.com/reference/intro",
+        "quote": "Send requests over HTTPS to `https://api.notion.com`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp.md",
+        "quote": "The remote server URL is `https://mcp.notion.com/mcp`."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.notion.com/docs/getting-started",
+        "quote": "Use a public integration so users in any workspace can authorize your app through OAuth."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

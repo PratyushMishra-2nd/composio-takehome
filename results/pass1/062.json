@@ -1,0 +1,70 @@
+{
+  "id": 62,
+  "app": "Vercel",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "vercel.com/docs/rest-api",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.22704764000000002,
+  "turns": 8,
+  "result": {
+    "app": "Vercel",
+    "description": "Frontend cloud platform for deploying and hosting web apps, with projects, deployments, domains, env vars, edge config, and storage managed via API.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Access token (personal/team-scoped) sent as Authorization: Bearer for direct use. OAuth2 via Sign in with Vercel / Integrations (client ID + secret from dashboard) gives 1h bearer access token plus 30-day rotating refresh token.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone with a Vercel account can create an access token in the dashboard and register an OAuth app/integration from the dashboard. Docs do not state any plan restriction for REST API; not confirmed whether Hobby can use every endpoint. Some endpoints (teams, Enterprise features) are plan-dependent.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Public REST API at api.vercel.com covering deployments, projects, domains, DNS, env vars, teams, edge config, logs, firewall, auth tokens, etc. Official TypeScript SDK @vercel/sdk. Endpoint count not counted precisely, but surface is wide.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.vercel.com",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://vercel.com/docs/rest-api/getting-started",
+        "quote": "Confirm that `VERCEL_TOKEN` is set and the header uses `Authorization: Bearer <token>`."
+      },
+      {
+        "field": "auth",
+        "url": "https://vercel.com/docs/sign-in-with-vercel",
+        "quote": "Vercel's IdP uses the OAuth 2.0 authorization framework, a widely adopted industry standard for securing and delegating access to resources on behalf of users."
+      },
+      {
+        "field": "access",
+        "url": "https://vercel.com/docs/sign-in-with-vercel",
+        "quote": "For users to be able to use Sign in with Vercel in your application, they must have a Vercel account."
+      },
+      {
+        "field": "api",
+        "url": "https://vercel.com/docs/rest-api/getting-started",
+        "quote": "Use a Vercel access token to call the Vercel REST API with `curl`, then make the same request with `@vercel/sdk`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+        "quote": "Vercel MCP is Vercel's official MCP server. It's a remote MCP with OAuth that gives AI tools secure access to your Vercel projects available at:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+        "quote": "Vercel MCP is available on all plans and your use is subject to Vercel's AI Product Terms."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

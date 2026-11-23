@@ -1,0 +1,76 @@
+{
+  "id": 22,
+  "app": "Twilio",
+  "category": "Communications and Messaging",
+  "hint": "twilio.com",
+  "model": "sonnet",
+  "seconds": 76,
+  "cost_usd": 0.18065488000000002,
+  "turns": 6,
+  "result": {
+    "app": "Twilio",
+    "description": "Cloud communications platform with APIs for SMS, voice, WhatsApp, email, verify and more.",
+    "auth_methods": [
+      "basic",
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "HTTP Basic with API Key SID/secret (preferred) or Account SID/Auth Token. Each end user can create own API key. OAuth2 (Client Credentials account-level; Authorization Code for org-level apps) also exists, plus legacy Connect apps; OAuth docs not fully verified.",
+    "access": "self_serve_free",
+    "access_detail": "Free trial signup without credit card (email + phone verification). Trial API keys work, but only to 5 verified recipients, sign-up country only, 30-day expiry. Upgrade removes verified-recipient limit. Per-account API keys that users create themselves, so no app review/ISV gate for Basic/API-key auth. No paid plan needed for API access. Unverified: whether OAuth Authorization Code apps need Twilio review.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST over HTTPS (api.twilio.com/2010-04-01 plus many product subdomains) covering messaging, voice, verify, conversations, lookups, usage, etc. SDKs in many languages. Whole API exposed via OpenAPI.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/twilio-labs/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+        "quote": "To authenticate requests to the Twilio APIs, use HTTP Basic authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.twilio.com/docs/iam/api-keys",
+        "quote": "API keys are the preferred way to authenticate with Twilio's REST APIs."
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+        "quote": "You can sign up for a Twilio free trial account without a credit card."
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+        "quote": "You can send messages and make calls only to verified phone numbers."
+      },
+      {
+        "field": "api",
+        "url": "https://www.twilio.com/docs/usage/api",
+        "quote": "The Twilio APIs are organized around REST."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/twilio-labs/mcp",
+        "quote": "This implementation allows you to expose Twilio's APIs to AI assistants and other tools that support the MCP protocol."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+        "quote": "Verified recipient restrictions are removed."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

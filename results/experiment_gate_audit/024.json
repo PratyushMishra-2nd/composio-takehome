@@ -1,0 +1,82 @@
+{
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "hint": "open.larksuite.com",
+  "model": "sonnet",
+  "seconds": 79,
+  "cost_usd": 0.18618643,
+  "turns": 6,
+  "result": {
+    "app": "Lark (Larksuite)",
+    "description": "Collaboration suite (messaging, docs, calendar, approval, base) with an Open Platform REST API for building bots and apps.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "App ID + App Secret exchanged for app_access_token or tenant_access_token (about 2h, sent as Bearer). user_access_token comes from an OAuth2 authorization-code flow with a configured redirect URL. Store apps also need app_ticket pushes.",
+    "access": "admin_approval",
+    "access_detail": "Custom apps are self-serve but work in one tenant only. Each new version and scope change needs approval from that tenant's admin. Serving other customers' tenants needs a store app, listed in the App Center and built by an ISV. I did not fetch the store listing review page. I found no plan or pricing restriction on API access, but I did not confirm there is none. The Lark-domain app-type pages returned no content, so the app-type and review quotes come from the Feishu China docs. Lark may differ.",
+    "api_types": [
+      "rest",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Large REST surface at open.larksuite.com/open-apis (im, bitable, approval, calendar, docs, contacts and more). Event subscriptions can use WebSocket. Official SDKs are available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Multi-tenant OAuth for other customers' workspaces needs a store app (ISV listing and review). Without it, each customer must create a custom app and supply their own App ID and Secret, and their admin must approve the scopes.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide",
+        "quote": "获取 user_access_token 的方式同时适用于企业自建应用和商店应用。"
+      },
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide",
+        "quote": "user_access_token 的有效期为两小时左右，过期后，需要刷新后再使用。"
+      },
+      {
+        "field": "access",
+        "url": "https://open.feishu.cn/document/home/app-types-introduction/overview",
+        "quote": "企业自建应用：由企业内部人员或企业授权的开发人员进行开发，只能在同一企业内发布和使用。"
+      },
+      {
+        "field": "access",
+        "url": "https://open.feishu.cn/document/home/app-types-introduction/overview",
+        "quote": "商店应用：由第三方服务商开发，在飞书应用中心发布，所有飞书企业均可安装和使用。"
+      },
+      {
+        "field": "access",
+        "url": "https://open.feishu.cn/document/home/intro-to-custom-app-review",
+        "quote": "都需要发布新的应用版本，并且通过企业管理员的审核后才能生效。"
+      },
+      {
+        "field": "api",
+        "url": "https://github.com/larksuite/lark-openapi-mcp",
+        "quote": "The tool encapsulates Feishu/Lark Open Platform API interfaces as MCP tools"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/larksuite/lark-openapi-mcp",
+        "quote": "This tool is currently in Beta stage."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/larksuite/lark-openapi-mcp",
+        "quote": "Obtain the App ID and App Secret, which will be used for API authentication"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

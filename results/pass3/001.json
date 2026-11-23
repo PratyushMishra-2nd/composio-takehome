@@ -1,0 +1,69 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "hint": "salesforce.com",
+  "model": "sonnet",
+  "seconds": 37,
+  "cost_usd": 0.17035969,
+  "turns": 7,
+  "result": {
+    "app": "Salesforce",
+    "description": "Cloud CRM platform for sales, service, marketing and custom apps, with APIs over standard and custom objects.",
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "session_login"
+    ],
+    "auth_detail": "REST API needs an OAuth 2.0 flow via an external client app (new) or connected app (legacy; new creation restricted since Spring '26). Flows: web server (auth code, refresh tokens), user-agent, JWT bearer, client credentials, device, asset token. Session ID/SOAP login legacy. Only the web server, user-agent, asset token and refresh-token flows were confirmed via search snippets. JWT bearer and client credentials are from prior knowledge, not verified.",
+    "access": "self_serve_free",
+    "access_detail": "Free Developer Edition org via signup gives API access and lets you create external client apps/connected apps. Production orgs need an edition with API access (Enterprise+, or Professional with add-on). Developer.salesforce.com blocked automated fetch (403), so the signup page was not read directly. The free Developer Edition claim rests on prior knowledge. Hosted MCP servers are billed for Flex Credits customers.",
+    "api_types": [
+      "rest",
+      "soap",
+      "graphql",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API (sObjects CRUD, SOQL/SOSL, composite, describe), SOAP, Bulk API 2.0, GraphQL API, Pub/Sub and Streaming, Metadata and Tooling APIs, Connect REST. Covers all standard and custom objects.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+        "quote": "After reviewing and selecting an OAuth authorization flow, apply it to your external client app or connected app."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+        "quote": "Creating connected apps is restricted as of Spring '26. You can continue to use existing connected apps during and after Spring '26."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+        "quote": "For details about each supported flow, see OAuth Authorization Flows in Salesforce Help."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide",
+        "quote": "hosted servers are intended only for customers with Flex Credits and you may be billed for server usage."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide",
+        "quote": "Salesforce Hosted MCP Servers"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

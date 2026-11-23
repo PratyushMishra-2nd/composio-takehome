@@ -1,0 +1,90 @@
+{
+  "id": 65,
+  "app": "Supabase",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "supabase.com/docs",
+  "model": "sonnet",
+  "seconds": 40,
+  "cost_usd": 0.12457871499999998,
+  "turns": 3,
+  "result": {
+    "app": "Supabase",
+    "description": "Open-source Postgres backend platform (database, auth, storage, edge functions, realtime) with a Management API for projects and orgs.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Management API: personal access token (user-generated, custom expiry) or OAuth2 (auth code, PKCE recommended, short-lived scoped tokens). Per-project Data API uses project API keys (Settings > API Keys).",
+    "access": "self_serve_free",
+    "access_detail": "Free plan exists. PATs are user-generated. OAuth apps are created self-serve in org settings > OAuth Apps > Add application. No review, approval or partner step is documented, and no plan requirement is stated for the Management API or OAuth apps. The integration guide says \"published\" without describing any review, so this is not fully certain. Only the experimental Branching MCP tools require a paid plan.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Management API (api.supabase.com, OpenAPI spec at api.supabase.com/api/v1-json) covers projects, organizations, auth config, database, edge functions, storage, secrets, domains, billing and OAuth. Rate limit is 120 req/min. The per-project Data API is REST via PostgREST at https://<project_ref>.supabase.co/rest/v1/. GraphQL (pg_graphql) was not verified on the fetched page.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.supabase.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API."
+      },
+      {
+        "field": "auth",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user"
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-integration",
+        "quote": "In your organization's settings, navigate to the OAuth Apps tab."
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/pricing",
+        "quote": "Supabase offers four plans: Free, Pro, Team, and Enterprise."
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/pricing",
+        "quote": "All plans include unlimited API requests."
+      },
+      {
+        "field": "api",
+        "url": "https://supabase.com/docs/guides/api",
+        "quote": "Supabase provides a RESTful API using PostgREST, a thin API layer on top of Postgres."
+      },
+      {
+        "field": "api",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "All API requests must be authenticated and made over HTTPS."
+      },
+      {
+        "field": "mcp",
+        "url": "https://supabase.com/docs/guides/getting-started/mcp",
+        "quote": "The hosted Supabase MCP server is available at https://mcp.supabase.com/mcp."
+      },
+      {
+        "field": "mcp",
+        "url": "https://supabase.com/docs/guides/getting-started/mcp",
+        "quote": "The MCP server repository is available at github.com/supabase/mcp."
+      },
+      {
+        "field": "verdict",
+        "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-integration",
+        "quote": "Fill in the required details and click Confirm."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "hint": "coda.io/developers",
+  "model": "sonnet",
+  "seconds": 66,
+  "cost_usd": 0.21569368000000003,
+  "turns": 7,
+  "result": {
+    "app": "Coda",
+    "description": "Collaborative doc/database/automation platform (Coda, now Superhuman Docs) with a REST API for docs, pages, tables, rows and more.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "auth_detail": "Personal API token generated in account settings, sent as Authorization: Bearer. No OAuth documented for the public REST API.",
+    "access": "self_serve_free",
+    "access_detail": "Docs say API is free in free and paid workspaces. Token owner's workspace role limits actions (e.g. createDoc needs Doc Maker/Admin). Per-user rate limits apply.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST v1 (v1.7.0) at coda.io/apis/v1: docs, pages, tables, rows, formulas, controls, permissions, analytics, etc. Rate limits: read 100/6s, write 10/6s, doc content write 5/10s, list docs 4/6s. Docs now hosted at docs.superhuman.com (rebrand).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.superhuman.com/resources/guides/getting_started_with_coda_mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "The Superhuman Docs API is a RESTful API that lets you programmatically interact with data in Superhuman Docs"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "headers = {'Authorization': 'Bearer <your API token>'}"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "This API uses a base path of `https://coda.io/apis/v1`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "If you plan to integrate Superhuman Docs with an AI tool, you may also want to consider using the Superhuman Docs MCP server."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

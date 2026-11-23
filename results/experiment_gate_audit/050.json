@@ -1,0 +1,37 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "hint": "fanbasis.com",
+  "model": "sonnet",
+  "seconds": 70,
+  "cost_usd": 0.22332296000000004,
+  "turns": 11,
+  "result": {
+    "app": "fanbasis",
+    "description": "Creator-monetization and checkout platform (subscriptions, products, payments) with a public REST API for checkout sessions, subscribers, customers, webhooks and discount codes.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Per-creator API key sent in x-api-key header, scoped by area (checkout-sessions, payments/transactions, webhooks, customers). Base URL https://www.fanbasis.com/public-api/. No OAuth found. Source is search snippets of the FanBasis GitHub repo and a third-party mirror. Page fetches failed, so unverified.",
+    "access": "self_serve_free",
+    "access_detail": "UNVERIFIED. Per-account keys that each creator generates appear to be the gate, so there is no app review or partner program. A key from one creator cannot touch another creator's sessions. I could not read the pricing page (403) or the dashboard docs, so I could not rule out a paid-plan requirement or find the key-creation steps. Gate-audit questions (1) and (2) are only partly answered: nothing found suggests review or ISV status, and no paid-plan statement was found.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Per snippets: checkout sessions (create/get/delete, embedded checkout), subscribers, subscriptions, customers, discount codes, products, transactions, refunds, disputes, webhooks (subscription and payment events). Official @fanbasis/checkout-sdk (TypeScript) with sandbox and production environments. Endpoint count unverified.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://zapier.com/mcp/fanbasis",
+    "verdict": "build_with_caveat",
+    "blocker": "Official docs and pricing could not be fetched (403/404), so plan gating and key-creation steps are unconfirmed. The only MCP is Zapier's generic one, not vendor-official.",
+    "evidence": [],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

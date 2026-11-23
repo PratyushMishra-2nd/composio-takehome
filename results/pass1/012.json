@@ -1,0 +1,75 @@
+{
+  "id": 12,
+  "app": "Intercom",
+  "category": "Support and Helpdesk",
+  "hint": "intercom.com",
+  "model": "sonnet",
+  "seconds": 48,
+  "cost_usd": 0.20403047499999996,
+  "turns": 6,
+  "result": {
+    "app": "Intercom",
+    "description": "Customer messaging and support platform (inbox, help center, AI agent Fin) with a public REST API for contacts, conversations, tickets, articles and more.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Access Token (bearer) for private apps on your own workspace; OAuth2 required for public apps accessing other workspaces. Both sent as Authorization: Bearer.",
+    "access": "admin_approval",
+    "access_detail": "Private app: access token from Developer Hub, no review. Public/multi-tenant app (what Composio would need): free US-only development workspace, OAuth setup, Intercom review before publishing. Dev workspaces free but limited. Docs state no paid-plan requirement for API. Custom OAuth redirect URIs for MCP need support allowlisting.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at https://api.intercom.io, versioned via Intercom-Version header (e.g. 2.11, plus preview). Covers contacts, conversations, companies, articles, tickets, etc. (breadth from general knowledge; docs pages fetched only showed Contacts example). Official SDKs exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.intercom.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Public OAuth app needs Intercom review before other customers can connect; dev workspace is US-only. Private token path is self-serve.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/",
+        "quote": "To access the Intercom API, you have two authentication options depending on whether you app is public or private."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/",
+        "quote": "An Access Token is issued to the teammate who installed the app on the workspace, or who last regenerated the token."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+        "quote": "Development workspaces are free and intended for development purposes only."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs",
+        "quote": "You can build a private app using your Access Token and it does not require a review."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.intercom.com/docs",
+        "quote": "Development workspaces are only available for the US region."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.intercom.com/docs/guides/mcp",
+        "quote": "The Intercom MCP server is available for US and EU hosted workspaces."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.intercom.com/docs/guides/mcp",
+        "quote": "The Intercom MCP Server provides 16 tools for interacting with the Intercom API."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

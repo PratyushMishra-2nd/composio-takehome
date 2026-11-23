@@ -1,0 +1,199 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "app",
+    "description",
+    "auth_methods",
+    "auth_detail",
+    "access",
+    "access_detail",
+    "api_types",
+    "api_breadth",
+    "api_notes",
+    "mcp_exists",
+    "mcp_official",
+    "mcp_url",
+    "verdict",
+    "blocker",
+    "evidence",
+    "confidence"
+  ],
+  "properties": {
+    "app": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "description": "One line: what the app does."
+    },
+    "auth_methods": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "oauth2",
+          "api_key",
+          "basic",
+          "bearer_token",
+          "jwt",
+          "hmac_signature",
+          "session_login",
+          "none",
+          "other"
+        ]
+      },
+      "description": "Every auth method a third-party developer can use for the public API."
+    },
+    "auth_detail": {
+      "type": "string",
+      "description": "Short detail, e.g. 'OAuth2 auth-code for public apps; private app token for single account'."
+    },
+    "access": {
+      "type": "string",
+      "enum": [
+        "self_serve_free",
+        "self_serve_trial",
+        "paid_plan",
+        "admin_approval",
+        "customer_account",
+        "partner_gated",
+        "no_public_api"
+      ],
+      "description": "Most restrictive gate a developer hits to get WORKING credentials for a toolkit that end users can connect. self_serve_free = anyone can sign up and get keys free (free tier or free developer account/sandbox); self_serve_trial = anyone can sign up but only via a time-limited trial; paid_plan = public signup exists but API access needs a paid tier; admin_approval = developer can build, but the vendor must review/verify the app (or grant a developer token) before other users can connect it; customer_account = no public signup or developer sandbox: credentials only exist inside an existing (usually sales-led) customer account; partner_gated = partnership program, application, or contact-sales required for API access; no_public_api = no documented public API."
+    },
+    "access_detail": {
+      "type": "string"
+    },
+    "api_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "rest",
+          "graphql",
+          "soap",
+          "websocket",
+          "sdk_only",
+          "cli_only",
+          "none"
+        ]
+      }
+    },
+    "api_breadth": {
+      "type": "string",
+      "enum": [
+        "broad",
+        "moderate",
+        "narrow",
+        "none"
+      ],
+      "description": "broad = most product objects covered (50+ endpoints); moderate = core objects; narrow = a handful of endpoints; none."
+    },
+    "api_notes": {
+      "type": "string"
+    },
+    "mcp_exists": {
+      "type": "boolean",
+      "description": "Any MCP server exists (official or credible community)."
+    },
+    "mcp_official": {
+      "type": "boolean",
+      "description": "An MCP server published by the vendor itself exists."
+    },
+    "mcp_url": {
+      "type": "string",
+      "description": "URL of the best MCP server found, or empty string."
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "build_now",
+        "build_with_caveat",
+        "needs_outreach",
+        "not_buildable"
+      ],
+      "description": "build_now = a developer could ship an agent toolkit today with self-serve creds; build_with_caveat = buildable but limited (narrow API, paid plan, app review for public use); needs_outreach = partnership/sales/approval needed first; not_buildable = no usable API. Rule: customer_account or partner_gated with no free developer sandbox => needs_outreach."
+    },
+    "blocker": {
+      "type": "string",
+      "description": "Main blocker if not build_now, else empty string."
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "field",
+          "url",
+          "quote"
+        ],
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "description",
+              "auth",
+              "access",
+              "api",
+              "mcp",
+              "verdict"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string",
+            "description": "Exact sentence copied verbatim from that URL (max ~200 chars). Must appear on the page."
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "auth",
+        "access",
+        "api",
+        "mcp"
+      ],
+      "properties": {
+        "auth": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "access": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "api": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "mcp": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
+      }
+    }
+  }
+}

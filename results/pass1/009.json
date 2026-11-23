@@ -1,0 +1,69 @@
+{
+  "id": 9,
+  "app": "Copper",
+  "category": "CRM and Sales",
+  "hint": "copper.com",
+  "model": "sonnet",
+  "seconds": 60,
+  "cost_usd": 0.223684865,
+  "turns": 7,
+  "result": {
+    "app": "Copper",
+    "description": "Copper is a CRM for Google Workspace users that manages leads, contacts, companies, opportunities, projects, tasks and activities.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "API key (headers X-PW-AccessToken, X-PW-Application: developer_api, X-PW-UserEmail), admin-generated. OAuth2 authorization-code with client_id/client_secret, but the app must be registered by emailing Copper partners. The only scope is developer/v1/all.",
+    "access": "self_serve_free",
+    "access_detail": "API keys are self-serve. An admin generates one in the app, and Copper has a no-credit-card free trial. No page states a plan restriction for API access; the pricing page lists an \"API & Embedded integration SDK\" row but plan columns were not confirmed. OAuth for multi-tenant public apps needs manual registration via partners@copper.com. Per-user API keys are enough to build a toolkit.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST Developer API v1 covers Account/Users, Leads (convert, upsert, bulk), People, Companies, Opportunities (pipelines, stages, loss reasons), Projects, Tags, Tasks, Activities, Custom Fields, Field Layouts, Related Items, File Upload and Webhooks. Rate limit is 180 requests per minute, plus 3 requests per second for bulk endpoints.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://www.copper.com/mcp",
+    "verdict": "build_now",
+    "blocker": "Minor: OAuth needs manual app registration with Copper partners. API key auth is available self-serve. The official MCP is a Claude-only, read-only beta that is not yet live.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.copper.com/introduction/oauth/index.html",
+        "quote": "To use OAuth2.0 with Copper, you must first register your application."
+      },
+      {
+        "field": "access",
+        "url": "https://support.copper.com/en/articles/8823347-generating-an-api-key",
+        "quote": "Only Admin users are able to generate API Keys."
+      },
+      {
+        "field": "access",
+        "url": "https://www.copper.com/pricing",
+        "quote": "Start free, no credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.copper.com/introduction/requests.html",
+        "quote": "All API calls are limited to 180 requests per minute."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.copper.com/mcp",
+        "quote": "Yes. Copper is launching an official MCP server, built and hosted by Copper. The beta launches in November 2026."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

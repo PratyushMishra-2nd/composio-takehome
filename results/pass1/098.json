@@ -1,0 +1,64 @@
+{
+  "id": 98,
+  "app": "Mermaid CLI",
+  "category": "AI, Research and Media-native",
+  "hint": "github.com/mermaid-js/mermaid-cli",
+  "model": "sonnet",
+  "seconds": 40,
+  "cost_usd": 0.17246878499999999,
+  "turns": 5,
+  "result": {
+    "app": "Mermaid CLI",
+    "description": "Command-line tool (mmdc) that renders Mermaid diagram definitions into SVG/PNG/PDF files; also has a Node.js API.",
+    "auth_methods": [
+      "none"
+    ],
+    "auth_detail": "Local CLI/library with no accounts, API keys or auth. Open-source (MIT) and runs on the user's machine.",
+    "access": "self_serve_free",
+    "access_detail": "Free open-source npm package or Docker image, with no signup. It needs a local Node runtime and headless Chromium (Puppeteer), so a hosted toolkit would have to run it in a sandbox or container.",
+    "api_types": [
+      "cli_only",
+      "sdk_only"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "No REST or web API. The `mmdc` CLI takes a Mermaid definition file or stdin and writes SVG/PNG/PDF. It also converts Mermaid blocks in Markdown. Options include custom CSS, icon packs and PNG size. The Node API is a single `run(input, output, opts)` function, and the README says it is not covered by semver.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://mcpservers.org/servers/tci-nebula/mermaid-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No hosted API. It is a local CLI that needs Node and Chromium, so a toolkit would need a sandboxed runtime to render. Community MCP servers exist, but there is no official one.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "This is a command-line interface (CLI) for mermaid."
+      },
+      {
+        "field": "access",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "npm install -g @mermaid-js/mermaid-cli"
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It's possible to call `mermaid-cli` via a Node.JS API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcpservers.org/servers/tci-nebula/mermaid-mcp",
+        "quote": "Mermaid Render"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

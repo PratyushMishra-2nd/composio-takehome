@@ -1,0 +1,90 @@
+{
+  "id": 73,
+  "app": "Linear",
+  "category": "Productivity and Project Management",
+  "hint": "developers.linear.app",
+  "model": "sonnet",
+  "seconds": 45,
+  "cost_usd": 0.19989421999999998,
+  "turns": 6,
+  "result": {
+    "app": "Linear",
+    "description": "Work-management tool for issues, projects, cycles and initiatives, with a public GraphQL API, webhooks, OAuth apps and a hosted MCP server.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 authorization code (recommended, Bearer token; actor=user or app, plus client-credentials tokens with the app actor). Personal API key goes raw in the Authorization header with no Bearer prefix.",
+    "access": "self_serve_free",
+    "access_detail": "API and webhook access is included on every plan, including Free. Admins and permitted Members create personal API keys in Settings. OAuth apps are registered in Linear settings. No app review is needed to use OAuth. Creating webhooks needs admin permissions.",
+    "api_types": [
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "One GraphQL endpoint at https://api.linear.app/graphql with introspection. It covers issues, projects, cycles, teams, comments, labels, users and initiatives. Webhooks and a typed TypeScript SDK (@linear/sdk) are also available. No REST API. I took the breadth of object coverage from the docs and the SDK description. I did not count every endpoint.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.linear.app/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://linear.app/developers/oauth-2-0-authentication",
+        "quote": "Linear supports OAuth2 authentication, which is recommended if you’re building applications to integrate with Linear."
+      },
+      {
+        "field": "auth",
+        "url": "https://linear.app/developers/graphql",
+        "quote": "The Linear API supports personal API keys and OAuth2 authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://linear.app/developers/oauth-2-0-authentication",
+        "quote": "Client-credentials tokens use the `app` actor, are valid for 30 days, and do not include a refresh token."
+      },
+      {
+        "field": "access",
+        "url": "https://linear.app/docs/api-and-webhooks",
+        "quote": "Admins and permitted Members can create personal API keys from _Settings > Account > Security & Access._"
+      },
+      {
+        "field": "access",
+        "url": "https://linear.app/pricing",
+        "quote": "API and webhook access | Included | Included | Included | Included"
+      },
+      {
+        "field": "api",
+        "url": "https://linear.app/developers/graphql",
+        "quote": "To authenticate your requests, you need to pass the API key with header: `Authorization: <API_KEY>`"
+      },
+      {
+        "field": "api",
+        "url": "https://linear.app/docs/api-and-webhooks",
+        "quote": "Linear's GraphQL API and webhooks lets you extend Linear's functionality beyond what we provide out of the box."
+      },
+      {
+        "field": "mcp",
+        "url": "https://linear.app/docs/mcp",
+        "quote": "Read-write access is provided through `https://mcp.linear.app/mcp` by default."
+      },
+      {
+        "field": "mcp",
+        "url": "https://linear.app/docs/mcp",
+        "quote": "The interactive setup flow uses OAuth 2.1 with dynamic client registration."
+      },
+      {
+        "field": "verdict",
+        "url": "https://linear.app/pricing",
+        "quote": "Free for everyone"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

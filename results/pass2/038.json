@@ -1,0 +1,74 @@
+{
+  "id": 38,
+  "app": "Pinterest",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.pinterest.com",
+  "model": "sonnet",
+  "seconds": 54,
+  "cost_usd": 0.19651339,
+  "turns": 7,
+  "result": {
+    "app": "Pinterest",
+    "description": "Visual discovery platform; API v5 lets apps manage Pins, Boards, analytics, and ads/catalogs for users via OAuth.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 authorization-code flow (redirect URI exact match) with token refresh. 24h test tokens for Trial apps. Client-credentials not confirmed.",
+    "access": "admin_approval",
+    "access_detail": "Free developer signup, but Pinterest must approve the app for Trial access. Trial is sandbox-like: daily rate limits, Pins/Boards visible only to the creator. Production use needs Standard access via a demo-video review that shows the OAuth flow. Apps registered on or after 2026-09-14 may hit 403 PINNER_DATA_ACCESS_DENIED without user authorization.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v5 covers Pins, Boards, user account, pin analytics, ads (campaigns, ad groups, audiences), catalogs, and conversions. Python SDK exists.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "Each app needs Pinterest approval for Trial access. Standard access (needed for other users in production) needs a demo-video review. The official MCP page looks pre-launch. Community servers such as terryso/mcp-pinterest exist.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+        "quote": "Exchange the authorization code for an access token"
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+        "quote": "Test tokens expire after 24 hours and allow you to explore certain endpoints faster."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+        "quote": "Application requests are reviewed by Pinterest."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "The Pinterest API v5 significantly increases the scope of what is possible for you to create as a developer."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+        "quote": "Be the first to know when it launches."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+        "quote": "OAuth 2.0 authorization and granular permissions keep credentials protected and access appropriately controlled."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

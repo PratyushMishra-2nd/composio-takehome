@@ -1,0 +1,68 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "hint": "developer.adobe.com/commerce",
+  "model": "sonnet",
+  "seconds": 24,
+  "cost_usd": 0.135378,
+  "turns": 5,
+  "result": {
+    "app": "Magento (Adobe Commerce)",
+    "description": "Ecommerce platform (Adobe Commerce / Magento Open Source) with per-store REST, GraphQL and SOAP web APIs for catalog, orders, customers and more.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "session_login",
+      "other"
+    ],
+    "auth_detail": "Per-store. Integrations (System > Extensions > Integrations) use OAuth 1.0a (docs call it OAuth-based; the integration's access token can be used directly as a bearer token). Admin/customer username+password are exchanged at the token endpoint for a bearer token. Session login is also supported. Adobe Commerce as a Cloud Service (SaaS) uses Adobe IMS OAuth server-to-server.",
+    "access": "self_serve_free",
+    "access_detail": "No vendor app review, listing or partner status. Each merchant admin creates an Integration in their own store and grants ACL resources, so end-user-created per-account tokens are not a gate. Magento Open Source is free but self-hosted; Adobe Commerce is licensed/paid. There is no central API host (base URL differs per store) and no shared developer sandbox, though a dev can run Open Source locally for free. Caveat: I did not confirm the pricing page. Treat the paid-license status of Adobe Commerce as unverified.",
+    "api_types": [
+      "rest",
+      "graphql",
+      "soap"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST, GraphQL and SOAP cover catalog, inventory, customers, carts, orders, invoices, shipments, CMS, promotions and more. Webhooks are not supported in the core web API framework. Endpoints are store-specific.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/boldcommerce/magento2-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Self-hosted, per-merchant base URL and credentials. The user must supply a store URL and an integration token. There is no central OAuth app or sandbox. OAuth 1.0a is awkward, so the integration access token is the practical path. No webhooks.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+        "quote": "Third-party applications use OAuth-based authentication to access the web APIs."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+        "quote": "The token service returns a unique authentication token in exchange for a username and password for an admin or customer account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+        "quote": "All acl.xml files across all modules are consolidated to build an ACL tree, which is used to select allowed Admin role resources or third-party integration access ( System > Extension > Integration > Add New Integration > Available APIs )."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "quote": "The system does not currently support webhooks."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/boldcommerce/magento2-mcp",
+        "quote": "A MCP server for Magento 2"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

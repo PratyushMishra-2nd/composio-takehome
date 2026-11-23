@@ -1,0 +1,69 @@
+{
+  "id": 9,
+  "app": "Copper",
+  "category": "CRM and Sales",
+  "hint": "copper.com",
+  "model": "sonnet",
+  "seconds": 62,
+  "cost_usd": 0.2357514,
+  "turns": 15,
+  "result": {
+    "app": "Copper",
+    "description": "Copper is a CRM built around Google Workspace. It manages contacts, companies, leads, opportunities, projects, tasks and activities.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Per-user API key sent in headers (X-PW-AccessToken plus the user's email), generated in System settings > API Keys. OAuth2.0 is described as the preferred approach for partner integrations. The OAuth doc pages gave no readable text, so I could not confirm how OAuth client credentials are obtained.",
+    "access": "self_serve_trial",
+    "access_detail": "Each end user can generate their own API key in their Copper account, with no app review or listing. This is not a gate under audit rule 1. Copper has no free tier. It offers a trial (\"Start free, no credit card required\") and then paid plans from $23-29 per seat per month, so a Copper account is needed. The pricing page does not say API access is limited to higher plans. The developer docs did not mention a plan restriction or a developer sandbox. OAuth for multi-tenant apps may need partner onboarding with Copper. That is unverified, because the OAuth pages did not render text.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "The REST Developer API covers account/users, leads, people, companies, opportunities, projects, tasks, activities, custom fields, pipelines, webhooks and related items. It has search endpoints and bulk endpoints. The rate limit is 180 requests per minute, with an extra 3 requests per second on bulk APIs.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/OfirOhan/copper-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Credentials need a paid or trial Copper account, with no free tier. Per-user API keys work for self-serve. OAuth for multi-tenant use may need partner arrangement with Copper, which I could not confirm. No official MCP server found.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0 ."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "API Keys are suitable for individual users, while OAuth2.0 is the preferred approach for partner integrations."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "To generate an API token, in the Copper web app go to System settings > API Keys and click the 'GENERATE API KEY'"
+      },
+      {
+        "field": "access",
+        "url": "https://www.copper.com/pricing",
+        "quote": "Start free, no credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.copper.com/introduction/requests.html",
+        "quote": "All API calls are limited to 180 requests per minute."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/OfirOhan/copper-mcp",
+        "quote": "MCP server for Copper CRM: let Claude, Cursor and other AI agents search contacts and deals, review the pipeline, and log notes and tasks. Unofficial."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

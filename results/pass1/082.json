@@ -1,0 +1,74 @@
+{
+  "id": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "hint": "plaid.com/docs",
+  "model": "sonnet",
+  "seconds": 48,
+  "cost_usd": 0.200814455,
+  "turns": 6,
+  "result": {
+    "app": "Plaid",
+    "description": "Financial data API: link bank accounts and fetch auth, balances, transactions, identity, investments, liabilities, income, and payments.",
+    "auth_methods": [
+      "api_key",
+      "other"
+    ],
+    "auth_detail": "Per-team client_id plus per-environment secret, sent in the PLAID-CLIENT-ID and PLAID-SECRET headers or as body fields. End users connect banks through Plaid Link, which issues a per-Item access_token. Plaid itself does not offer OAuth2 for third-party apps. The Dashboard MCP server uses its own auth.",
+    "access": "self_serve_free",
+    "access_detail": "Dashboard signup gives keys. Sandbox is always free. A US/Canada Free Trial makes live-data calls. Pay as You Go is $0/month with no minimum. Production access is requested in the Dashboard, and some products (e.g. Transfer) are not on Pay as You Go and are Custom-plan only. Production approval is a light gate but not instant for every product.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "JSON over HTTP. Products include Auth, Balance, Identity, Transactions, Investments, Liabilities, Assets, Income, Enrich, Signal, Transfer, Identity Verification, Monitor, Layer, and more. Official SDKs exist for several languages. I did not verify the endpoint count; the product list comes from the pricing page.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://plaid.com/docs/resources/mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "The flow needs Plaid Link (a client-side UI) to get an access_token per end user, so a pure agent flow is awkward. Production access needs approval, and some products are plan-gated. The official MCP server is Dashboard diagnostics only, not data access, and needs Production approval.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://plaid.com/docs/quickstart/",
+        "quote": "You'll need API keys, which you can receive by signing up in the Dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://plaid.com/pricing/",
+        "quote": "Our Free Trial allows you to make API calls using live data."
+      },
+      {
+        "field": "access",
+        "url": "https://plaid.com/pricing/",
+        "quote": "Sandbox is always free."
+      },
+      {
+        "field": "access",
+        "url": "https://plaid.com/pricing/",
+        "quote": "Month to month with no commitment. No caps on usage. Only pay for what you use."
+      },
+      {
+        "field": "api",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "The Plaid API is JSON over HTTP."
+      },
+      {
+        "field": "mcp",
+        "url": "https://plaid.com/docs/resources/mcp/",
+        "quote": "The **Dashboard MCP server** is a remote MCP server hosted by Plaid."
+      },
+      {
+        "field": "mcp",
+        "url": "https://plaid.com/docs/resources/mcp/",
+        "quote": "Your team must be approved for Production access with at least one Plaid product to use the MCP server."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

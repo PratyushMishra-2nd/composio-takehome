@@ -1,0 +1,79 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "neo4j.com/docs/api",
+  "model": "sonnet",
+  "seconds": 51,
+  "cost_usd": 0.13262047000000002,
+  "turns": 5,
+  "result": {
+    "app": "Neo4j",
+    "description": "Graph database platform; Aura cloud service with Aura API for managing instances, Query API for Cypher over HTTP.",
+    "auth_methods": [
+      "oauth2",
+      "basic"
+    ],
+    "auth_detail": "Aura API: user-created OAuth2 client credentials (client ID/secret) exchanged at /oauth/token via HTTP Basic for 1-hour Bearer token. Database access (Query API/Bolt): database username/password.",
+    "access": "self_serve_free",
+    "access_detail": "Each user creates own Aura API credentials in console; all tiers allowed, linked to user account. AuraDB Free is $0 with no card, rate limited to 25 req/min. No app review or listing needed; per-account tokens users create themselves.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Aura API (api.neo4j.io) covers instance provisioning/management. Query API runs Cypher over HTTPS (supersedes HTTP API, which is not available on Aura). Bolt drivers also exist. Query API auth sub-pages not read.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/neo4j/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "The Aura API uses OAuth 2.0 for API authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "Authentication to the token endpoint uses HTTP Basic Authentication"
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "All tiers can create Aura API credentials."
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "API credentials are linked to the user account, inheriting its capabilities and roles."
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/pricing/",
+        "quote": "No credit card or other payment method required"
+      },
+      {
+        "field": "api",
+        "url": "https://neo4j.com/docs/aura/api/overview/",
+        "quote": "The Aura API allows you to programmatically perform actions on your Aura instances"
+      },
+      {
+        "field": "api",
+        "url": "https://neo4j.com/docs/query-api/current/",
+        "quote": "The Query API allows to execute Cypher statements against a Neo4j server through HTTP requests."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/neo4j/mcp",
+        "quote": "Neo4j official MCP Server"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": 37,
+  "app": "systeme.io",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "systeme.io (funnel builder)",
+  "model": "sonnet",
+  "seconds": 53,
+  "cost_usd": 0.20547184999999998,
+  "turns": 6,
+  "result": {
+    "app": "systeme.io",
+    "description": "All-in-one marketing platform: sales funnels, email marketing, courses, contacts/CRM, automations, payments.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Public API: per-account API key in X-API-Key header only (no OAuth). MCP server uses separate MCP key (X-MCP-Key header or mcpKey param), 90-day max expiry, OAuth not yet supported.",
+    "access": "self_serve_free",
+    "access_detail": "Key created in account Settings > MCP & API keys (up to 3 public API keys). Free plan never expires, no card needed; no plan restriction stated for API/MCP, though pricing page API rate-limit row per plan was unreadable. Keys are per-account, so end users paste their own key (no OAuth).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at api.systeme.io/api. Reference groups: Automation, Booking Calendar, Community, Contact, ContactField, Domains, Files, Funnels, Mailing, Page Editor, Payment, SMS, School, Subscription, Tag, Webhook, Workflows, Workspace.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.systeme.io/docs/mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "your only option right now is to attach your API key to the `X-API-Key` header of each request."
+      },
+      {
+        "field": "access",
+        "url": "https://systeme.io/pricing",
+        "quote": "The free plan never expires and does not require a credit card."
+      },
+      {
+        "field": "access",
+        "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+        "quote": "You can create up to **3 API keys** per account."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "manage contacts, tags, and a variety of other operations integral to our platform."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.systeme.io/docs/mcp-server",
+        "quote": "To authenticate with the MCP server, you must use your MCP key."
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+        "quote": "This is an **initial release implementation** and does not yet support the recommended authentication method (OAuth)."
+      },
+      {
+        "field": "description",
+        "url": "https://systeme.io/mcp",
+        "quote": "The MCP server is a powerful feature included in all systeme.io plans."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

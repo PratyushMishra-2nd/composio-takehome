@@ -1,0 +1,69 @@
+{
+  "id": 25,
+  "app": "Pumble",
+  "category": "Communications and Messaging",
+  "hint": "pumble.com",
+  "model": "sonnet",
+  "seconds": 53,
+  "cost_usd": 0.20239969,
+  "turns": 6,
+  "result": {
+    "app": "Pumble",
+    "description": "Team chat/messaging app (Slack alternative) with free unlimited users, channels, DMs and integrations.",
+    "auth_methods": [
+      "api_key",
+      "other"
+    ],
+    "auth_detail": "API addon generates a per-user API key (Api-Key header, per search snippet). Pumble Apps give app key + user/bot tokens (used as x-app-token and token headers on MCP). No documented public OAuth2 for third-party developers (OAuth2 on pricing page is SSO only).",
+    "access": "self_serve_free",
+    "access_detail": "API key addon available on all plans, including Free; any Owner/Admin/Member can install and generate a key. Free plan caps connected apps/integrations at 3; unclear whether API addon counts toward it. Apps can be created from scratch in workspace settings.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "API-key REST (Swagger) covers send/reply/delete messages, reactions, create channel, list channel messages, list user's channels and DMs; 1000 req/min per user. Pumble Apps/SDK plus MCP expose ~20 scope-gated tools (search_messages, schedule_message, etc.). Swagger page not directly fetched, so endpoint count unverified.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.pumble.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No OAuth2 for third-party apps; auth is per-user API key or app key + user/bot tokens, so end users must generate credentials manually. API-key surface is narrow.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://pumble.com/help/integrations/api-keys-integration",
+        "quote": "This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests."
+      },
+      {
+        "field": "auth",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+        "quote": "The x-app-token/xpat token is the **App key** you receive when you create an app from scratch."
+      },
+      {
+        "field": "access",
+        "url": "https://pumble.com/help/integrations/api-keys-integration",
+        "quote": "Available on all plans"
+      },
+      {
+        "field": "api",
+        "url": "https://pumble.com/help/integrations/api-keys-integration",
+        "quote": "The full list of available actions is available in the Swagger documentation."
+      },
+      {
+        "field": "api",
+        "url": "https://pumble.com/help/integrations/api-keys-integration",
+        "quote": "The rate limit is up to 1000 requests per minute per user."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+        "quote": "The list of available MCP tools is dynamic and depends entirely on the specific scopes you selected when creating an app."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

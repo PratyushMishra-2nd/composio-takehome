@@ -1,0 +1,81 @@
+{
+  "id": 35,
+  "app": "Mailchimp",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "mailchimp.com/developer",
+  "model": "sonnet",
+  "seconds": 66,
+  "cost_usd": 0.17152994999999996,
+  "turns": 6,
+  "result": {
+    "app": "Mailchimp",
+    "description": "Email marketing and automation platform (Intuit Mailchimp) with audiences, campaigns, automations, reports and e-commerce via the Marketing API.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Per-account API key (Basic with any username, or Bearer) for own account; OAuth2 authorization-code flow via Registered Apps to act on behalf of other Mailchimp users. Datacenter-specific base URL.",
+    "access": "self_serve_free",
+    "access_detail": "Docs state OAuth 2 needs only \"A Mailchimp account\" and app registration via \"Register An App\" in Registered Apps; no review/approval/publishing step or paid plan is documented. Users with Manager permissions can generate their own API keys. A Free plan (under 250 contacts) exists; docs do not restrict API to paid plans (not explicitly confirmed for Free plan; pricing page does not mention API gating). Note: new API keys expire after 1 year from June 22, 2026.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Marketing API v3.0 REST at https://api.mailchimp.com/3.0/ covering lists/audiences, members, campaigns, automations, reports, templates, e-commerce, etc.; plus separate Transactional (Mandrill) API. Official SDKs exist (TypeScript, Python, Go, Java, etc.).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mailchimp.com/developer/_mcp/server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://mailchimp.com/developer/marketing/api/",
+        "quote": "Authorization using a Mailchimp API key (a.k.a. Bearer token)"
+      },
+      {
+        "field": "auth",
+        "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+        "quote": "This page walks through implementing OAuth 2 so your application can access the Marketing API on behalf of other Mailchimp users."
+      },
+      {
+        "field": "access",
+        "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+        "quote": "Click Register An App"
+      },
+      {
+        "field": "access",
+        "url": "https://mailchimp.com/pricing/",
+        "quote": "Under 250 contacts? It's free."
+      },
+      {
+        "field": "access",
+        "url": "https://mailchimp.com/help/about-api-keys/",
+        "quote": "Users with Manager permissions can generate their own API keys."
+      },
+      {
+        "field": "api",
+        "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+        "quote": "The root url for the API is `https://api.mailchimp.com/3.0/`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md",
+        "quote": "This searches documentation, not your Mailchimp account."
+      },
+      {
+        "field": "mcp",
+        "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md",
+        "quote": "Query these docs from an AI agent through the Model Context Protocol."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

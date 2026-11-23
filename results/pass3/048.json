@@ -1,0 +1,74 @@
+{
+  "id": 48,
+  "app": "Gumroad",
+  "category": "Ecommerce",
+  "hint": "gumroad.com/api",
+  "model": "sonnet",
+  "seconds": 72,
+  "cost_usd": 0.199640295,
+  "turns": 8,
+  "result": {
+    "app": "Gumroad",
+    "description": "Platform for creators to sell digital products, memberships and courses directly to customers.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "REST API: OAuth2 for multi-user apps (create application in Gumroad settings, get Application ID/Secret, request scopes like view_sales) plus a personal access token generated from your own application for single-account use. Confirmed via n8n credential docs and Nango links; Gumroad's own API page is JS-rendered and could not be read directly.",
+    "access": "self_serve_free",
+    "access_detail": "Any Gumroad account holder can create an application in settings and get an app ID/secret and access token, with no plan fee or review. Verified only through third-party docs (n8n); vendor help article body was not readable.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST API at gumroad.com/api covers products, sales, subscribers, licenses, offer codes, variant categories, custom fields, resource subscriptions (webhooks) and user. Endpoint list and scopes are from memory and search snippets, because the vendor page could not be rendered. Treat them as unverified. Gumroad also has an official CLI (antiwork/gumroad-cli).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://gumroad.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.n8n.io/integrations/credentials/gumroad",
+        "quote": "Create an application to generate an access token."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.n8n.io/integrations/credentials/gumroad",
+        "quote": "Gumroad generates an **Application ID** and **Application Secret**."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.n8n.io/integrations/credentials/gumroad",
+        "quote": "Create an application to generate an access token."
+      },
+      {
+        "field": "api",
+        "url": "https://nango.dev/docs/integrations/all/gumroad.md",
+        "quote": "[Web API docs (their REST API)](https://app.gumroad.com/api#api-methods)"
+      },
+      {
+        "field": "mcp",
+        "url": "https://gumroad.com/mcp",
+        "quote": "Every assistant connects to its own URL and asks for OAuth access to your Gumroad account."
+      },
+      {
+        "field": "mcp",
+        "url": "https://gumroad.com/mcp",
+        "quote": "Model Context Protocol (MCP) lets your AI assistant work with your store."
+      },
+      {
+        "field": "verdict",
+        "url": "https://gumroad.com/mcp",
+        "quote": "Available now in Claude's connector directory."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

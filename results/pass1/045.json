@@ -1,0 +1,73 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "hint": "developer.adobe.com/commerce",
+  "model": "sonnet",
+  "seconds": 42,
+  "cost_usd": 0.20643281500000005,
+  "turns": 6,
+  "result": {
+    "app": "Magento (Adobe Commerce)",
+    "description": "Ecommerce platform (Adobe Commerce / Magento Open Source, plus SaaS \"Commerce as a Cloud Service\") for catalog, orders, customers, and storefronts.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "session_login",
+      "other"
+    ],
+    "auth_detail": "Per-store, not a central OAuth app. On-prem/PaaS: OAuth 1.0a for third-party integrations (consumer key/secret created in Admin), admin/customer login-for-token (bearer, admin token valid 4h), integration access token as bearer is off by default (oauth/consumer/enable_integration_as_bearer). SaaS: OAuth2 client_credentials via Adobe IMS (scope commerce.accs).",
+    "access": "self_serve_free",
+    "access_detail": "Magento Open Source is free and self-hosted. Credentials come from the merchant's own Admin (create an integration), so there is no vendor signup or app review. Adobe Commerce is a paid licence, and the SaaS edition needs an Adobe account and a tenant. Each end user must supply their own store URL and credentials, so there is no single shared OAuth app. Open Source cost was not confirmed from the fetched pages.",
+    "api_types": [
+      "rest",
+      "graphql",
+      "soap"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Docs say REST, GraphQL and SOAP are supported, and the APIs perform \"a wide array of tasks\". They cover catalog, orders, customers, carts, inventory and more. There are no webhooks. The SaaS edition has a separate REST surface.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+    "verdict": "build_with_caveat",
+    "blocker": "Auth and base URL are per-merchant. Users must create an integration or token in their own store, and SaaS and on-prem differ. OAuth 1.0a signing is awkward, and bearer use of integration tokens is off by default. The official Adobe MCP is a developer-tooling server for building apps, not a store-operations server. Store-operations MCPs are third-party (StackOne, CData).",
+    "evidence": [
+      {
+        "field": "api",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "quote": "Support for GraphQL, REST (Representational State Transfer) and SOAP (Simple Object Access Protocol)."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "quote": "Third-party applications authenticate with OAuth 1.0a."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/server-to-server",
+        "quote": "To authenticate with the Adobe Commerce as a Cloud Service REST APIs, you need to generate an IMS access token using your client credentials."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "quote": "If you are using session-based or OAuth authentication, you do not need to create the new user in the Admin."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+        "quote": "Adobe provides Commerce development MCPs and skills so you can build and maintain Adobe Developer App Builder applications for Adobe Commerce with less friction."
+      },
+      {
+        "field": "description",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "quote": "The APIs can be used to perform a wide array of tasks."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

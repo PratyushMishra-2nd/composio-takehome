@@ -1,0 +1,81 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "hint": "brightdata.com",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.20822341000000005,
+  "turns": 6,
+  "result": {
+    "app": "Bright Data",
+    "description": "Web data platform: proxy networks, Web Unlocker, SERP API, scraping browser, scrapers and ready-made datasets.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "basic",
+      "oauth2"
+    ],
+    "auth_detail": "REST API: account API key sent as Authorization: Bearer <token>. Proxy network: username/password (native access). OAuth 2.1 (PKCE, scope mcp) exists only for the remote MCP server, not the REST API.",
+    "access": "self_serve_free",
+    "access_detail": "Signup is self-serve and a default API key is created with the account. Usage is pay-as-you-go. The MCP README says new accounts get 5,000 free requests a month with no credit card required. Some products (residential network, Web Unlocker without an SSL certificate) may need KYC. I did not find a minimum deposit.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "API-access products: Web Unlocker, SERP, Scraping Browser, Scrapers, Functions (Scraper Studio) and Marketplace/Datasets. Proxy networks use native proxy credentials. The search snippets also mention account-management and proxy-management API pages, but I did not read those pages. The API reference introduction page returned the authentication content.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/brightdata/brightdata-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "An API key is a secure hashed token used to authenticate with Bright Data API."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "This <token> is your API key, which is required for every API request."
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "New accounts get 5,000 free requests per month."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "Required to access without KYC the residential network & unlocker."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "This <token> is your API key, which is required for every API request."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.brightdata.com/ai/mcp-server/remote/oauth",
+        "quote": "The Bright Data MCP server accepts two authentication methods."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "Free tier: 5,000 requests per month."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.brightdata.com/ai/mcp-server/remote/oauth",
+        "quote": "OAuth 2.1 is an additional method, not a replacement."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

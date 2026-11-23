@@ -1,0 +1,70 @@
+{
+  "id": 65,
+  "app": "Supabase",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "supabase.com/docs",
+  "model": "sonnet",
+  "seconds": 25,
+  "cost_usd": 0.17918050000000002,
+  "turns": 5,
+  "result": {
+    "app": "Supabase",
+    "description": "Open-source Postgres development platform: managed database, auth, storage, edge functions, realtime, and a Management API for projects.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key",
+      "jwt"
+    ],
+    "auth_detail": "Management API: OAuth2 auth-code (apps act for users; token endpoint api.supabase.com/v1/oauth/token, refresh tokens) or Personal Access Token (full-privilege, plus scoped PATs in alpha), both sent as Bearer. Per-project data APIs (PostgREST/Auth/Storage) use project API keys (anon/publishable, service_role/secret) and user JWTs.",
+    "access": "self_serve_free",
+    "access_detail": "Free signup gives PATs and the ability to register OAuth apps (organization settings) with no review gate. Free plan projects have usable APIs; limits/pausing on free tier, higher quotas on paid plans. Plan pricing page not fetched directly.",
+    "api_types": [
+      "rest",
+      "graphql",
+      "websocket",
+      "sdk_only",
+      "cli_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Management API (api.supabase.com/v1, REST/OpenAPI) covers projects, orgs, branches, secrets, edge functions, SQL query, auth config, etc. Each project also exposes auto-generated REST (PostgREST), optional GraphQL (pg_graphql), Realtime websockets, Storage and Auth APIs. Official SDKs in many languages and a CLI.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.supabase.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://supabase.com/docs/guides/platform/personal-access-tokens",
+        "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API."
+      },
+      {
+        "field": "auth",
+        "url": "https://supabase.com/docs/guides/platform/oauth-apps/authorize-an-oauth-app",
+        "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access to their account without requiring their credentials."
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/docs/guides/platform/management-api",
+        "quote": "All API requests require an access token to be included in the Authorization header"
+      },
+      {
+        "field": "api",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "Management API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+        "quote": "The Supabase MCP server is hosted at https://mcp.supabase.com/mcp and supports the Streamable HTTP transport with OAuth authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

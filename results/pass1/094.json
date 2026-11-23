@@ -1,0 +1,75 @@
+{
+  "id": 94,
+  "app": "Consensus",
+  "category": "AI, Research and Media-native",
+  "hint": "consensus.app (OAuth requested)",
+  "model": "sonnet",
+  "seconds": 63,
+  "cost_usd": 0.22221007999999998,
+  "turns": 6,
+  "result": {
+    "app": "Consensus",
+    "description": "AI-powered academic search engine that finds, ranks and synthesizes peer-reviewed research with cited answers.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "REST API: API key (docs conflict on header: Authorization Bearer vs x-api-key). OAuth 2.1 (auth code + PKCE, DCR) only for the MCP server, not documented for REST. Anonymous rate-limited MCP tier also exists.",
+    "access": "paid_plan",
+    "access_detail": "API keys issued from org subscription page; API included on every paid plan (Pro, Deep, Teams, Enterprise). Free plan API access unverified. Per-plan quotas live on docs.consensus.app, which returned 403 to automated fetch. Enterprise via contact sales.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "Base https://api.consensus.app (from a curl example). Known: GET /v1/search (paper search), POST /v1/threads (async research agent, deep mode). llms-full.txt mentions paper detail, synthesis and Consensus Meter endpoints with no paths. OpenAPI at docs.consensus.app/openapi.json not fetched. Docs host blocked, so the endpoint list is unverified.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.consensus.app/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "REST API needs a paid plan for the API key, so end users need paid orgs. The only OAuth is on the MCP server (DCR; Composio-managed OAuth reportedly unavailable). The API surface is narrow and docs were not fully verifiable (header format conflict, docs 403).",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://consensus.app/llms.txt",
+        "quote": "Consensus is an AI-powered scientific search engine that finds, ranks, and synthesizes peer-reviewed research"
+      },
+      {
+        "field": "auth",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Sent as `Authorization: Bearer <key>` on every request"
+      },
+      {
+        "field": "auth",
+        "url": "https://consensus.app/llms.txt",
+        "quote": "First-class MCP server with OAuth 2.1 and dynamic client registration, plus a REST API."
+      },
+      {
+        "field": "access",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Issued from the organization subscription page at https://consensus.app/subscription/api/"
+      },
+      {
+        "field": "access",
+        "url": "https://consensus.app/home/api/",
+        "quote": "Included on every paid plan, and Deep includes 5x the usage of Pro."
+      },
+      {
+        "field": "api",
+        "url": "https://consensus.app/home/api/",
+        "quote": "Bring up-to-date, peer-reviewed citations into your workflows."
+      },
+      {
+        "field": "mcp",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Endpoint: https://mcp.consensus.app/mcp"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "low",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": 91,
+  "app": "NotebookLM",
+  "category": "AI, Research and Media-native",
+  "hint": "cloud.google.com/gemini (Enterprise API)",
+  "model": "sonnet",
+  "seconds": 69,
+  "cost_usd": 0.17905717000000002,
+  "turns": 6,
+  "result": {
+    "app": "NotebookLM",
+    "description": "Google's AI research notebook tool (NotebookLM Enterprise, renamed Gemini Notebook Enterprise) that generates insights and summaries from user documents.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "auth_detail": "Enterprise REST API takes a Google Cloud access token (Authorization: Bearer from gcloud auth print-access-token) for a licensed user with the Cloud NotebookLM User IAM role. The docs I read never mention OAuth2 or service accounts. Google Cloud tokens are OAuth-based underneath, but I did not verify any NotebookLM-specific OAuth flow, so OAuth2 is dropped. Workforce Identity Federation and Cloud Identity are supported for user identity.",
+    "access": "paid_plan",
+    "access_detail": "Needs a Google Cloud project, the Discovery Engine API, and a NotebookLM Enterprise license per user. Subscriptions start at 15 licenses. A 14-day free trial tier exists, and the paid tier is monthly or annual and billed to Cloud Billing. REST methods need an authenticated user account with an active license. The API is v1alpha and pre-GA. I could not read the pricing page (404), so no prices are confirmed. The consumer NotebookLM app has no public API.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "REST under discoveryengine.googleapis.com (v1alpha), with regional endpoints us/eu/global. The notebook page documents notebooks.create, get, listRecentlyViewed, batchDelete and share. A separate page covers adding sources, which I did not read. Audio overviews are not mentioned on the pages I read. The API is pre-GA and may change.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+    "verdict": "build_with_caveat",
+    "blocker": "Enterprise-only: the API needs a paid NotebookLM Enterprise subscription (minimum 15 licenses) or a 14-day trial, plus a Google Cloud project. It is v1alpha with a narrow surface. The consumer product has no public API. The community MCP servers use undocumented internal APIs and browser cookies, and Google publishes no MCP server.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Gemini Notebook Enterprise is a powerful tool for generating insights and summaries from your documents."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "-H \"Authorization:Bearer $(gcloud auth print-access-token)\""
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Grant the Cloud NotebookLM User role (`roles/discoveryengine.notebookLmUser`) to your user account."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+        "quote": "A subscription contains at least 15 licenses and can contain up to 5,000 licenses."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+        "quote": "The paid tier: You can buy a monthly subscription or a year-long subscription."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Pre-GA features are available \"as is\" and might have limited support."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+        "quote": "This MCP and CLI use **internal APIs** that:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+        "quote": "Use at your own risk for personal/experimental purposes."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

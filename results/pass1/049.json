@@ -1,0 +1,48 @@
+{
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "hint": "developer-docs.amazon.com/sp-api",
+  "model": "sonnet",
+  "seconds": 47,
+  "cost_usd": 0.217618835,
+  "turns": 7,
+  "result": {
+    "app": "Amazon Selling Partner",
+    "description": "Amazon Selling Partner API (SP-API): REST APIs for sellers and vendors to manage orders, listings, catalog, FBA inventory, reports, finances and more on Amazon marketplaces.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "Login with Amazon (LWA) OAuth 2.0. Public apps use the full authorization-code flow to get a per-seller refresh token. Private apps self-authorize in the developer console to get a refresh token for the developer's own account. The refresh token is exchanged at api.amazon.com/auth/o2/token for an access token. Refresh tokens must be renewed annually. SigV4 AWS signing is no longer required.",
+    "access": "admin_approval",
+    "access_detail": "You need a seller or vendor account, and the primary account user must register as an SP-API developer by choosing roles. Private apps self-authorize for your own account only. A multi-tenant toolkit used by other sellers needs a public app with OAuth, which requires developer profile approval and, for restricted data (PII) roles, extra Amazon review and security assessment. Amazon has also announced a developer subscription fee and usage fees, which I could not verify from the vendor pages. The developer-docs pages redirected to a different host and could not be fetched, so these details come from search summaries.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Per search results and the SDK/samples repo: dozens of REST API families, including Orders, Catalog Items, Listings Items, FBA Inventory, Reports, Finances, Feeds, Notifications, A+ Content, Shipping, Vendor APIs and Data Kiosk (GraphQL-style analytics). There are regional endpoints (NA, EU, FE). Rate limits are per operation. Amazon maintains an official SDK and Swagger models.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/amzn/selling-partner-api-samples",
+    "verdict": "build_with_caveat",
+    "blocker": "Multi-tenant use requires a public SP-API app, which needs Amazon developer registration and approval and possibly fees. Restricted roles need extra review. Private self-authorized apps work only for a single account.",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://github.com/amzn/selling-partner-api-samples",
+        "quote": "This repository contains sample solutions, developer tools (including MCP servers and a local sandbox)."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/amzn/selling-partner-api-samples",
+        "quote": "A local MCP server that bundles SP-API developer tools into a single npm package"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

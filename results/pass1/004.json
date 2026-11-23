@@ -1,0 +1,80 @@
+{
+  "id": 4,
+  "app": "Attio",
+  "category": "CRM and Sales",
+  "hint": "attio.com",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.20601049,
+  "turns": 6,
+  "result": {
+    "app": "Attio",
+    "description": "Attio is a customizable, AI-native CRM platform for managing pipeline, deals and accounts.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 for multi-workspace apps; API key (access token) from app developer settings for single workspace. Both sent as Bearer token. Workspace-level OAuth tokens need workspace admin.",
+    "access": "self_serve_free",
+    "access_detail": "API and webhooks and MCP are listed on every plan including Free (up to 3 users). Unpublished OAuth apps can be installed in up to 25 workspaces; a published/approved release is implied for wider distribution (details unverified). Workspace admin approves user scopes on install.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Public REST API, JSON over HTTPS, with guides for rate limiting, webhooks, filtering, pagination. Rate limits: Read 100 req/s, Write 25 req/s. Endpoint group list not directly verified from fetched pages; MCP tool groups cover records/objects, lists, notes, tasks etc. Breadth rated from general knowledge of the Attio API reference (objects, records, lists, entries, notes, tasks, comments, webhooks, meetings).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.attio.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+        "quote": "You should prefer the OAuth 2.0 flow if building an app for multiple workspaces."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+        "quote": "If you only need a token for a single workspace, you can generate an API key in the developer settings page of your apps."
+      },
+      {
+        "field": "access",
+        "url": "https://attio.com/pricing",
+        "quote": "Yes. The Free plan costs nothing for up to three users."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+        "quote": "An unpublished app can be installed in up to 25 workspaces."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.attio.com/rest-api/overview.md",
+        "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.attio.com/mcp/overview",
+        "quote": "Attio MCP is Attio's hosted MCP server that gives AI tools secure access to your Attio workspace."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.attio.com/mcp/overview",
+        "quote": "Attio MCP uses OAuth authentication, so you simply log in with your Attio account—no API keys required."
+      },
+      {
+        "field": "description",
+        "url": "https://attio.com/",
+        "quote": "Attio is the platform that builds pipeline, advances deals, and grows accounts around the clock."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

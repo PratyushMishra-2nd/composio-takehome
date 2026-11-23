@@ -1,0 +1,80 @@
+{
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "hint": "close.com",
+  "model": "sonnet",
+  "seconds": 45,
+  "cost_usd": 0.258986905,
+  "turns": 6,
+  "result": {
+    "app": "Close",
+    "description": "CRM for sales teams with built-in calling, email, SMS, and an AI teammate to qualify and follow up with leads.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "API key sent via HTTP Basic (key as username, empty password) for internal scripts; OAuth 2.0 for user-facing integrations. The MCP server also accepts OAuth 2.0 DCR or a Close-API-Key header.",
+    "access": "self_serve_trial",
+    "access_detail": "There is no free plan. Anyone can sign up for a 14-day trial with no credit card. The pricing page says API access is not included on the Solo plan and is included on Essentials, Growth and Scale, so ongoing use needs a paid plan above Solo. OAuth app registration is self-serve in the Close account; no app review was found. I did not fetch the OAuth page, so that part is unconfirmed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at https://api.close.com/api/v1. It covers the core CRM objects (leads, contacts, opportunities, activities, and more) plus integration features such as webhooks.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.close.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "There is no free tier and the Solo plan excludes API access. A developer can use the 14-day trial, but ongoing use needs a paid plan above Solo.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://www.close.com/",
+        "quote": "Close is the CRM with a built-in AI teammate that works with your team to call leads, qualify prospects"
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/",
+        "quote": "API keys for scripts or OAuth 2.0 for user-facing integrations."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/topics/authentication/",
+        "quote": "API keys use HTTP Basic client side authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://www.close.com/pricing",
+        "quote": "Close doesn't have a free plan, but you can try it free for 14 days with no credit card."
+      },
+      {
+        "field": "access",
+        "url": "https://www.close.com/pricing",
+        "quote": "Build custom integrations, AI agents, and automations with generous rate limits, no daily API request quota, and no per-request fees."
+      },
+      {
+        "field": "api",
+        "url": "https://www.close.com/pricing",
+        "quote": "Yes. Close provides a REST API for building custom integrations, connecting your applications, and automating sales processes."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.close.com/pricing",
+        "quote": "Every Close plan includes access to our MCP server, which lets you connect compatible AI assistants and agents to your CRM."
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.close.com/integrations/close-mcp-server",
+        "quote": "Connect ChatGPT, Claude, or another MCP client to Close's remote MCP server at mcp.close.com/mcp"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

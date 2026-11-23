@@ -1,0 +1,94 @@
+{
+  "id": 100,
+  "app": "Grain",
+  "category": "AI, Research and Media-native",
+  "hint": "grain.com (meeting notes)",
+  "model": "sonnet",
+  "seconds": 68,
+  "cost_usd": 0.17590599,
+  "turns": 6,
+  "result": {
+    "app": "Grain",
+    "description": "AI meeting recorder/notes platform; public API reads and manages recordings, transcripts, highlights, uploads, and webhooks.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "REST API v2: OAuth2 Authorization Code with required PKCE (client_id/secret requested manually; public clients such as MCP and native apps can use an HTTPS URL as client_id). Personal Access Token (any plan) and Workspace Access Token (admin only, Business/Enterprise), both sent as Authorization: Bearer plus a Public-Api-Version header. The `workspace` OAuth scope needs a client verified by Grain.",
+    "access": "self_serve_free",
+    "access_detail": "A PAT is available on every plan including Free, so a developer can self-serve it. For end-user connect via OAuth, confirmed docs: HTTPS-URL client_id for public clients with no approval needed; server-side clients need a client_id and secret requested manually (undocumented process). The workspace scope and the WAT need a Business/Enterprise plan, and the OAuth workspace scope also needs Grain verification. No sandbox.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST v2 under api.grain.com/_/public-api/v2. Covers recordings (list/get/rename/download), transcripts (JSON/txt/vtt/srt), tags, sharing, clips, stories, playlists CRUD, uploads, webhooks (hooks), users, teams, meeting types, and token-info. Rate limit 300 requests/min per token. v1 beta sunset.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.grain.com/_/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Server-side OAuth client credentials are requested manually from Grain; the workspace scope needs Grain verification; the workspace token needs a Business/Enterprise plan. PAT is self-serve on any plan.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developers.grain.com/",
+        "quote": "The Grain API lets you read and manage recordings, highlights, uploads, and more."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.grain.com/authentication.html",
+        "quote": "The API supports a standard OAuth2 Authorization Code flow, including the PKCE extension"
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.grain.com/authentication.html",
+        "quote": "At least one redirect URI is required to register a new client."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.grain.com/authentication.html",
+        "quote": "Public clients, such as MCP clients and native apps, can skip Step 1 by using an HTTPS URL as their client_id."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.grain.com/authentication.html",
+        "quote": "The `workspace` scope is only available to clients verified by Grain."
+      },
+      {
+        "field": "access",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Available on every plan, including Free."
+      },
+      {
+        "field": "access",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Requires admin access to generate and is available on Business and Enterprise plans."
+      },
+      {
+        "field": "api",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The Grain API lets developers read meeting data, manage recordings, and receive real-time events"
+      },
+      {
+        "field": "api",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "The API allows 300 requests per minute per token."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.grain.com/mcp/claude-setup.html",
+        "quote": "Integration URL: https://api.grain.com/_/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.grain.com/mcp/claude-setup.html",
+        "quote": "Any MCP client that can send custom headers can connect with a Personal Access Token instead of OAuth."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

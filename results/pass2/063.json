@@ -1,0 +1,69 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.netlify.com/api",
+  "model": "sonnet",
+  "seconds": 37,
+  "cost_usd": 0.1483142,
+  "turns": 4,
+  "result": {
+    "app": "Netlify",
+    "description": "Web hosting and deployment platform: atomic deploys, serverless functions, forms, DNS, and more.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Personal access token (generated in user settings) sent as Authorization: Bearer header for single-account use. OAuth2 authorization-code (app client key and secret, registered in user settings) required for public integrations.",
+    "access": "self_serve_free",
+    "access_detail": "A Free plan exists at $0. Anyone can sign up, generate a PAT, or register an OAuth app in user settings with no review. Docs say OAuth2 is required for public integrations, but OAuth app registration is self-serve. Free plan has a 300 credit limit.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at https://api.netlify.com/api/v1/ with a public OpenAPI spec at open-api.netlify.com. Covers sites, deploys, forms, DNS, snippets, and more. Go and JS clients generated from the spec.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/netlify/netlify-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api/get-started/",
+        "quote": "To authenticate API requests, include the token in the authorization header:"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api/get-started/",
+        "quote": "If you’re making a public integration with Netlify for others to enjoy, you must use OAuth2."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.netlify.com/api/get-started/",
+        "quote": "You can register a new application in your Netlify user settings for OAuth applications."
+      },
+      {
+        "field": "access",
+        "url": "https://www.netlify.com/pricing/",
+        "quote": "Free — $0 forever"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.netlify.com/api/get-started/",
+        "quote": "Use the Netlify REST API to manage atomic deploys of your sites and apps, manage form submissions, inject JavaScript snippets, manage DNS, and so much more."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+        "quote": "Netlify offers an MCP server, which you can connect to through a connector, plugin, or your agent."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

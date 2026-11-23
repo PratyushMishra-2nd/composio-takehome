@@ -1,0 +1,84 @@
+{
+  "id": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "hint": "pipedrive.com",
+  "model": "sonnet",
+  "seconds": 85,
+  "cost_usd": 0.18144469500000004,
+  "turns": 6,
+  "result": {
+    "app": "Pipedrive",
+    "description": "Sales-focused CRM and pipeline management platform for managing deals, contacts, leads and activities.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "REST API supports OAuth 2.0 authorization code flow (required for Marketplace apps; tokens from oauth.pipedrive.com, Bearer access token, refresh tokens) and a per-user personal API token (sent as api_token / x-api-token) for single-account use.",
+    "access": "admin_approval",
+    "access_detail": "Developer sandbox account via a signup form gives Developer Hub access; testing works only for sandbox users. Private apps can be shared with any company via direct install link without review. Public Marketplace listing needs app approval (up to ~21 business days). Personal API tokens work in any account where admin permits API use. Sandbox pricing not stated; pricing page was 403, so plan-gating of API unverified.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v1 and v2 with OpenAPI specs; about 50 endpoint groups (Activities, Deals, Leads, Persons, Organizations, Products, Pipelines, Projects, Users, Webhooks, OAuth 2.0). JSON output. Official Node.js and PHP clients.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.pipedrive.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Public multi-tenant OAuth app needs Pipedrive Marketplace app approval for listing (private apps shareable by install link); sandbox-account request needed. API-token auth works immediately for single accounts.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+        "quote": "Authorization via OAuth 2.0 is a well-known and stable way to get fine-grained access to an API."
+      },
+      {
+        "field": "auth",
+        "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+        "quote": "Using OAuth 2.0 is necessary for developing apps that are available in the Pipedrive Marketplace."
+      },
+      {
+        "field": "auth",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+        "quote": "The API token must be provided in the x-api-token header for all requests, for example:"
+      },
+      {
+        "field": "access",
+        "url": "https://pipedrive.readme.io/docs/marketplace-registering-the-app",
+        "quote": "To be published on the Marketplace, your app needs to pass our app approval process."
+      },
+      {
+        "field": "access",
+        "url": "https://pipedrive.readme.io/docs/marketplace-app-approval-process",
+        "quote": "Submitting the app is unnecessary if it's only used internally."
+      },
+      {
+        "field": "access",
+        "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+        "quote": "Fill in the form here to get access to your developer sandbox account!"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "quote": "This API uses a JSON format for output and is capable of handling CORS (Cross-Origin Resource Sharing) requests."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+        "quote": "Pipedrive MCP is built and maintained by Pipedrive, requires no coding, and works with real-time CRM data."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.pipedrive.com/en/features/mcp-server",
+        "quote": "Pipedrive is an official connector in Claude and ChatGPT."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

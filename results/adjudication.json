@@ -1,0 +1,72 @@
+{
+  "14:access": {
+    "ruling": "reference",
+    "correct_value": "admin_approval",
+    "reason": "A free developer account lets anyone build, but apps stay private to the Front instance that created them. Letting other customers connect one requires publishing it, which means Front tests it and may also run a security or legal review. That is the vendor-review gate the admin_approval definition describes.",
+    "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+    "quote": "If you want to make an app available for all Front customers to use, you must publish your app."
+  },
+  "14:verdict": {
+    "ruling": "reference",
+    "correct_value": "build_with_caveat",
+    "reason": "Front gives a free developer account, and an admin can create API tokens and private apps with no review, so it is buildable. But an agent toolkit used by other customers must be a published OAuth app, and publishing goes through Front's testing and approval. The schema lists \"app review for public use\" under build_with_caveat.",
+    "url": "https://dev.frontapp.com/docs/partnering-with-front",
+    "quote": "Once your integration has been technically approved, our team will use the image and marketing details you submit in the form to launch your integration"
+  },
+  "15:auth": {
+    "ruling": "reference",
+    "correct_value": "['bearer_token']",
+    "reason": "Pylon's public REST API authentication page documents only admin-created Bearer API tokens and never mentions OAuth. OAuth 2.0 appears only on the hosted MCP server page, which is a separate integration rather than the public API, and A's own note admits this.",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "The Pylon API uses Bearer authentication. This means you'll need to pass your API token in the header of your request:"
+  },
+  "23:auth": {
+    "ruling": "reference",
+    "correct_value": "['api_key', 'oauth2']",
+    "reason": "Besides OAuth 2.0, Zoho Cliq lets each user generate static Webhook Tokens. These are passed as a zapikey query parameter on its api/v2 endpoints so third-party apps can post to channels and bots. That counts as a static key/token, which A missed.",
+    "url": "https://www.zoho.com/cliq/help/platform/webhook-tokens.html",
+    "quote": "Webhook Tokens are unique authentication keys designed for individual users on the Cliq platform."
+  },
+  "24:access": {
+    "ruling": "neither",
+    "correct_value": "partner_gated",
+    "reason": "A free custom app only works inside the tenant that built it. For users in other tenants to connect, you need a Store app, and Lark's docs say only accounts with ISV (service-provider) qualification can create one. That qualification is a partner application, which is a stricter gate than self_serve_free (A) or app review alone (B).",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "在开发者后台，根据实际需求，创建自建应用或者商店应用。（仅拥有 ISV 资质的用户可以创建商店应用）"
+  },
+  "42:verdict": {
+    "ruling": "reference",
+    "correct_value": "build_now",
+    "reason": "Store admins generate the consumer key and secret themselves in WP admin, with no partner program, app review or paid plan, and anyone can stand up a free self-hosted test store. None of the build_with_caveat triggers apply: the REST API is broad. A's reasons are real friction (no OAuth2, a per-store URL, an MCP still in preview) but are not caveats under these definitions.",
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/#authentication",
+    "quote": "Then click the \"Generate API Key\" button and WooCommerce will generate REST API keys for the selected user."
+  },
+  "47:access": {
+    "ruling": "reference",
+    "correct_value": "paid_plan",
+    "reason": "Ecwid's dev-environment docs say API access requires a paid store plan. A developer can get a free upgrade only by emailing support, so working keys are not self-serve free. A missed this because it did not check plan requirements.",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+    "quote": "Only stores on paid plans can access API."
+  },
+  "47:verdict": {
+    "ruling": "reference",
+    "correct_value": "build_with_caveat",
+    "reason": "Ecwid's dev-environment page says the API works only on paid-plan stores. A free test store needs a manual upgrade, which you get by emailing Ecwid. That is the \"paid plan\" limit the build_with_caveat definition describes, not self-serve build_now. Once the store is upgraded, a custom app's credentials are generated automatically in the dashboard, so it falls short of needs_outreach.",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+    "quote": "Only stores on paid plans can access API."
+  },
+  "51:access": {
+    "ruling": "reference",
+    "correct_value": "self_serve_free",
+    "reason": "Any registered user gets working credentials free, plus a free Sandbox for API testing. The $1 credit has no stated time limit, so it is free credit, not a time-limited trial. The $50 top-up is the cost of production usage, not the gate to getting credentials.",
+    "url": "https://dataforseo.com/pricing",
+    "quote": "You can also test API integration for free using the DataForSEO Sandbox."
+  },
+  "90:access": {
+    "ruling": "both_defensible",
+    "correct_value": "customer_account",
+    "reason": "PitchBook's docs say existing clients request API access from inside the Platform (Plugins & Apps, via the Direct Data team or account manager), which fits customer_account. They also call the API a separate offering that needs its own contract, which means going through sales and fits partner_gated. Slight lean to customer_account. Caveat: no pages were opened directly; evidence comes from search-result summaries, and the URL for the quoted sentence is a best guess.",
+    "url": "https://pitchbook.com/help/PitchBook-api",
+    "quote": "Or if you're a PitchBook client, you can also head to the Plugins & Apps section from the My PitchBook section of the left-hand sidebar on the PitchBook Platform and choose PitchBook API."
+  }
+}

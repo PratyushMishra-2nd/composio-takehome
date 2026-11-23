@@ -1,0 +1,70 @@
+{
+  "id": 93,
+  "app": "Fathom",
+  "category": "AI, Research and Media-native",
+  "hint": "fathom.video",
+  "model": "sonnet",
+  "seconds": 27,
+  "cost_usd": 0.19732470000000002,
+  "turns": 6,
+  "result": {
+    "app": "Fathom",
+    "description": "AI meeting recorder that records, transcribes and summarizes video calls (Zoom, Meet, Teams) and exposes the meeting data via API.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Per-user API key (X-Api-Key header) generated in User Settings → API Access; OAuth 2.0 for apps other Fathom users install (Bearer token). Per FAQ, OAuth apps can't use include_summary/include_transcript on /meetings.",
+    "access": "self_serve_free",
+    "access_detail": "API keys and webhooks are included on all plans (including free); generate key in User Settings → API Access. Keys are per user, no org-level keys. OAuth app registration process for third parties not verified in docs (marketplace/registered app per third-party sources).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at https://api.fathom.ai/external/v1. Endpoints: GET /meetings, recording summary/transcript, recording download (POST) and download status, /teams, /team_members, /users, /meeting_types, webhook create/delete. Mostly read-only. TypeScript and Python SDKs. Rate limit 60 calls/60s; heavy endpoints 30/60s.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.fathom.ai/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developers.fathom.ai/mcp-docs.md",
+        "quote": "Fathom now offers an official MCP (Model Context Protocol) server, allowing you to connect your Fathom meeting data to AI assistants like ChatGPT, Claude, and more."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.fathom.ai/api-overview.md",
+        "quote": "All REST API resources are authenticated with API keys generated via the Fathom website's settings area."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.fathom.ai/faq.md",
+        "quote": "Use **OAuth** if you’re building an app that other Fathom users will install so they can connect their own accounts."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.fathom.ai/faq.md",
+        "quote": "Yes. API access—keys and webhooks— are included on all plans. Generate a key in User Settings → API Access."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.fathom.ai/api-overview.md",
+        "quote": "This documentation describes Fathom's REST API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.fathom.ai/mcp-docs.md",
+        "quote": "**MCP server URL:** `https://api.fathom.ai/mcp`"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

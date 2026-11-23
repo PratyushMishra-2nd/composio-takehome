@@ -1,0 +1,76 @@
+{
+  "id": 41,
+  "app": "Shopify",
+  "category": "Ecommerce",
+  "hint": "shopify.dev",
+  "model": "sonnet",
+  "seconds": 82,
+  "cost_usd": 0.1581916,
+  "turns": 7,
+  "result": {
+    "app": "Shopify",
+    "description": "Ecommerce platform for merchants to run online stores; exposes Admin, Storefront and Customer Account APIs for apps.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 authorization code grant, token exchange for embedded apps, and client credentials for apps on own-org stores. These issue offline or online access tokens, sent as X-Shopify-Access-Token. Existing admin-created custom apps keep a static Admin API access token. New ones are made in the Dev Dashboard.",
+    "access": "admin_approval",
+    "access_detail": "Dev accounts and development stores are free, so a developer can build and test with no cost. For other merchants to connect through OAuth, the app needs public distribution, which means registering for the App Store (one-time fee) and passing Shopify App Review. Custom distribution skips review but only reaches a single store per install link, or one Plus organization's stores. From 2026-11-20 it also needs an IP allowlist for stores outside the developer's org. Protected customer data fields need separate approval for public apps. The merchant's own store plan is the merchant's cost, not the developer's.",
+    "api_types": [
+      "graphql",
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "The Admin GraphQL API is the primary API and covers products, orders, customers, inventory, fulfillment, discounts, metafields and more. The REST Admin API is legacy as of 2024-10-01, and new public apps must use GraphQL. There are also the Storefront API, Customer Account API, Payments Apps API and webhooks. Admin API is versioned quarterly.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://shopify.dev/docs/apps/build/devmcp",
+    "verdict": "build_with_caveat",
+    "blocker": "A multi-merchant OAuth toolkit needs the app to pass Shopify App Review and public distribution. Until then it works only for dev stores, the developer's org stores, or one custom-distribution install per store. The official Shopify MCP servers are for developer docs and the Storefront and Customer Account surfaces, not general Admin API access.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+        "quote": "Attribute actions to a specific staff member and enforce per-user permissions using online access tokens."
+      },
+      {
+        "field": "auth",
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/generate-app-access-tokens-admin",
+        "quote": "A moved app works the same and keeps its installation, access token, and access scopes."
+      },
+      {
+        "field": "access",
+        "url": "https://shopify.dev/docs/apps/launch/distribution",
+        "quote": "Public distribution also requires registering for the Shopify App Store, which has a one-time fee."
+      },
+      {
+        "field": "access",
+        "url": "https://shopify.dev/docs/apps/launch/distribution/select-distribution-method",
+        "quote": "A custom app can be installed on multiple stores when those stores belong to the same Plus organization."
+      },
+      {
+        "field": "access",
+        "url": "https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements",
+        "quote": "The Shopify App Review team can reject an app at their discretion if it doesn't meet the set standards."
+      },
+      {
+        "field": "api",
+        "url": "https://shopify.dev/docs/api/admin-rest",
+        "quote": "The REST Admin API is a legacy API as of October 1, 2024."
+      },
+      {
+        "field": "mcp",
+        "url": "https://shopify.dev/docs/apps/build/devmcp",
+        "quote": "If you prefer MCP, you can connect to Shopify's developer resources through the Dev MCP server. The server runs locally and doesn't require authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

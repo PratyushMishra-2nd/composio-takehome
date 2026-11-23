@@ -1,0 +1,70 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "neo4j.com/docs/api",
+  "model": "sonnet",
+  "seconds": 49,
+  "cost_usd": 0.22079322499999998,
+  "turns": 7,
+  "result": {
+    "app": "Neo4j",
+    "description": "Graph database platform (self-managed and Aura cloud) queried with Cypher; offers Aura management API and HTTP Query API.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "bearer_token"
+    ],
+    "auth_detail": "Aura management API: OAuth2 client-credentials (client ID/secret via Basic to /oauth/token, returns 1h Bearer token). Query API (per-database HTTP): Basic (db user/password) or Bearer (SSO/OIDC token on Enterprise/Aura SSO). Official MCP supports Basic and Bearer.",
+    "access": "self_serve_free",
+    "access_detail": "Free AuraDB signup; Neo4j Community Edition free to self-host. Docs say all tiers can create Aura API credentials (a secondary docs version mentions billing info needed for Free/Professional - inconsistent). Query API works on any instance with DB user creds.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Two REST surfaces: Aura API (api.neo4j.io: instances, snapshots, projects/tenants, etc.) and Query API (HTTP Cypher execution + transactions against a database). Bolt drivers also exist but are not REST. Per-user DB URL means connection config (host) is user-specific, which complicates a generic toolkit; Cypher gives a broad data surface.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/neo4j/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "The Aura API uses OAuth 2.0 for API authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://neo4j.com/docs/query-api/current/authentication-authorization",
+        "quote": "Both *basic* and *bearer* authentication are supported."
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "All tiers can create Aura API credentials."
+      },
+      {
+        "field": "api",
+        "url": "https://neo4j.com/docs/query-api/current/",
+        "quote": "The Query API allows to execute Cypher statements against a Neo4j server through HTTP requests."
+      },
+      {
+        "field": "api",
+        "url": "https://neo4j.com/docs/aura/api/overview/",
+        "quote": "The base URL for the Aura API is `https://api.neo4j.io`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/neo4j/mcp",
+        "quote": "Neo4j MCP gives AI assistants and LLM-powered tools direct, structured access to your Neo4j graph database."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

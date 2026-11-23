@@ -1,0 +1,75 @@
+{
+  "id": 83,
+  "app": "Binance",
+  "category": "Finance and Fintech",
+  "hint": "binance-docs.github.io",
+  "model": "sonnet",
+  "seconds": 76,
+  "cost_usd": 0.219734325,
+  "turns": 6,
+  "result": {
+    "app": "Binance",
+    "description": "Global crypto exchange; public APIs for spot/futures/margin trading, market data, wallet, earn and more.",
+    "auth_methods": [
+      "api_key",
+      "hmac_signature"
+    ],
+    "auth_detail": "API key in X-MBX-APIKEY header plus signature on signed endpoints. Key types: Ed25519 (recommended), RSA (2048/4096), HMAC (deprecated). No OAuth for third-party developer access to user accounts found; users create own keys.",
+    "access": "self_serve_free",
+    "access_detail": "Create key in Binance account API Management. Needs 2FA, a deposit of any amount to activate account, and identity verification. No paid plan or app review found. Spot testnet (testnet.binance.vision) available via GitHub login with fake funds. Each end user supplies own key; trading disabled by default until enabled.",
+    "api_types": [
+      "rest",
+      "websocket"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Product lines: Spot, USDⓈ-M and COIN-M Futures, Options, Margin, Wallet, Convert, Portfolio Margin, Algo/Copy Trading, Staking, Simple Earn, Binance Pay and more. REST plus WebSocket API and streams. Rate limits are per IP. Official connectors in Python, JS, Java, Go, Rust.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://agent.binance.com/mcp/agentic",
+    "verdict": "build_now",
+    "blocker": "Per-user key creation needs deposit plus identity verification. HMAC deprecated, so asymmetric signing (Ed25519/RSA) should be supported. Not OAuth, so users must paste keys.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+        "quote": "We recommend to use Ed25519 API keys as it should provide the best performance and security out of all supported key types."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+        "quote": "We support HMAC, RSA, and Ed25519 keys. For more information, please see API Key types."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+        "quote": "API keys can be created on the API Management page of your Binance account."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+        "quote": "By default, an API key cannot `TRADE`. You need to enable trading in API Management first."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-api-information",
+        "quote": "The limits on the API are based on the IPs, not the API keys."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.binance.com/en/docs/agent-native/overview",
+        "quote": "Connect AI agents and coding assistants over the Model Context Protocol — for trading or for documentation lookup."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.binance.com/en/docs/agent-native/mcp-server",
+        "quote": "Connect your AI agent to Binance with a single URL."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": 35,
+  "app": "Mailchimp",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "mailchimp.com/developer",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.200862745,
+  "turns": 6,
+  "result": {
+    "app": "Mailchimp",
+    "description": "Email marketing and audience-management platform: lists/audiences, campaigns, automations, templates, reports, e-commerce.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "bearer_token"
+    ],
+    "auth_detail": "API key (own account) or OAuth2 auth-code access token (other users' accounts). Both sent via HTTP Basic (any username, token as password) or Bearer. OAuth tokens don't expire. Base URL is datacenter-specific, found via the OAuth metadata endpoint.",
+    "access": "self_serve_free",
+    "access_detail": "Any Mailchimp account (including free) can create an API key and register an OAuth app on the Registered Apps page, getting a client_id and client_secret instantly. No app review found for OAuth apps. Free-plan feature limits (e.g. automations) may restrict some endpoints. Not confirmed against the pricing page.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Marketing API v3.0 REST at https://{dc}.api.mailchimp.com/3.0/. Root endpoint links to all resources. Breadth (lists, campaigns, automations, templates, reports, ecommerce, batch ops, webhooks) is from prior knowledge; I didn't verify it on the docs. Separate Transactional (Mandrill) API exists. No client-side CORS.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mailchimp.com/developer/_mcp/server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication.md",
+        "quote": "You can use either HTTP Basic Authentication or Bearer Authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://mailchimp.com/developer/marketing/build/start-developing/set-up-an-oauth-app.md",
+        "quote": "An API key, if you want to test against your own account first"
+      },
+      {
+        "field": "api",
+        "url": "https://mailchimp.com/developer/marketing/api/root/",
+        "quote": "List API root resources"
+      },
+      {
+        "field": "mcp",
+        "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md",
+        "quote": "This searches documentation, not your Mailchimp account."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

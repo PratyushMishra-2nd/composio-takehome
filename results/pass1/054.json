@@ -1,0 +1,74 @@
+{
+  "id": 54,
+  "app": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.mrscraper.com",
+  "model": "sonnet",
+  "seconds": 47,
+  "cost_usd": 0.161792245,
+  "turns": 4,
+  "result": {
+    "app": "MrScraper",
+    "description": "AI-powered web scraping platform: give a URL and prompt, get JSON/CSV; also HTML/Markdown scrape, screenshots, web search, and managed scrapers via REST API.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "API token created in dashboard (API Tokens > New Token), sent in `x-api-token` header; marketplace endpoints use `Authorization: Bearer <token>`. OAuth 2.1 only for the hosted MCP server, not the REST API.",
+    "access": "self_serve_free",
+    "access_detail": "Free plan with no credit card (docs say 100 tokens/month; plan table says 1,000 — inconsistent). Pro (200k tokens, residential proxies) and Enterprise are paid. Token creation is self-serve in dashboard.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST/JSON. Platform API at api.app.mrscraper.com/api/v1 and scraper API at api.mrscraper.com. Covers scrape HTML/Markdown/JSON, screenshot, brand, web search, listing page, sitemap; AI and manual scraper create/rerun/bulk rerun/self-heal; workflow; results; analytics; account/subscription. Individual endpoint pages not read; list from llms.txt. SDKs for Python, Node, LangChain, plus CLI.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.mrscraper.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.mrscraper.com/docs/api/authentication",
+        "quote": "Include your API token in the `x-api-token` HTTP header on every request."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.mrscraper.com/docs/api/authentication",
+        "quote": "authenticate using the standard RFC 6750 `Authorization` header with a Bearer token."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "The Free plan includes **100 tokens per month** with no credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.mrscraper.com/docs/api/overview",
+        "quote": "Built on REST principles"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+        "quote": "Use this exact URL, including the `/mcp` path."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+        "quote": "API keys remain supported for clients without OAuth."
+      },
+      {
+        "field": "description",
+        "url": "https://docs.mrscraper.com/llms.txt",
+        "quote": "just a URL and a prompt"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

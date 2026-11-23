@@ -1,0 +1,72 @@
+pass4: 71 apps, model=sonnet, workers=7
+  #005 Twenty: ok
+  #007 Zoho CRM: ok
+  #008 Close: ok
+  #002 HubSpot: ok
+  #006 Podio: ok
+  #004 Attio: ok
+  #001 Salesforce: ok
+  #009 Copper: ok
+  #016 LiveAgent: ok
+  #012 Intercom: ok
+  #014 Front: ok
+  #011 Zendesk: ok
+  #017 Plain: ok
+  #021 Slack: ok
+  #023 Zoho Cliq: ok
+  #026 Discord: ok
+  #025 Pumble: ok
+  #022 Twilio: ok
+  #027 Telegram: ok
+  #024 Lark (Larksuite): ok
+  #028 WhatsApp Business: ok
+  #036 Klaviyo: ok
+  #037 systeme.io: ok
+  #035 Mailchimp: ok
+  #030 Vonage: ok
+  #042 WooCommerce: ok
+  #040 SendGrid: ok
+  #045 Magento (Adobe Commerce): ok
+  #041 Shopify: ok
+  #043 BigCommerce: ok
+  #054 MrScraper: ok
+  #051 DataForSEO: ok
+  #050 fanbasis: ok
+  #055 Apify: ok
+  #047 Ecwid: ok
+  #061 GitHub: ok
+  #056 Firecrawl: ok
+  #057 Bright Data: ok
+  #065 Supabase: ok
+  #063 Netlify: ok
+  #060 Clay: ok
+  #064 Cloudflare: ok
+  #066 Neo4j: ok
+  #062 Vercel: ok
+  #070 Sentry: ok
+  #067 Snowflake: ok
+  #071 Notion: ok
+  #068 MongoDB Atlas: ok
+  #069 Datadog: ok
+  #073 Linear: ok
+  #072 Airtable: ok
+  #074 Jira: ok
+  #075 Asana: ok
+  #076 Monday.com: ok
+  #077 ClickUp: ok
+  #080 Harvest: ok
+  #078 Coda: ok
+  #082 Plaid: ok
+  #093 Fathom: ok
+  #081 Stripe: ok
+  #083 Binance: ok
+  #085 iPayX: ok
+  #087 Xero: ok
+  #048 Gumroad: ok
+  #096 Devin: ok
+  #095 Reducto: ok
+  #098 Mermaid CLI: ok
+  #086 QuickBooks: ok
+  #097 higgsfield: ok
+  #099 YouTube Transcript: ok
+  #100 Grain: ok

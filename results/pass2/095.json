@@ -1,0 +1,90 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "hint": "reducto.ai (document parsing)",
+  "model": "sonnet",
+  "seconds": 30,
+  "cost_usd": 0.1636018,
+  "turns": 5,
+  "result": {
+    "app": "Reducto",
+    "description": "Agentic document platform that parses, extracts, splits, classifies and edits PDFs, spreadsheets, images and office files into structured data via API.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "API key created in Reducto Studio, sent as Authorization: Bearer header. OAuth device-code flow exists only for CLI/MCP login, which just obtains an API key. No third-party OAuth app flow.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can sign up at studio.reducto.ai and create an API key. Standard plan is pay-as-you-go and includes free starter credits (pricing page: $150 / 15,000 free credits). Growth and Enterprise are contact-sales but not needed.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST endpoints: /parse, /extract, /split, /classify, /edit, plus async variants and GET /job/{job_id}, upload, and webhooks. OpenAPI schema is published. Python/Node SDKs and a CLI exist. Focused on document processing, so the surface is a few dozen endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.reducto.ai/mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.reducto.ai/mcp-server/index.md",
+        "quote": "Add this block to your MCP client config and replace `your-api-key` with a key from [studio.reducto.ai/api-keys](https://studio.reducto.ai/api-keys):"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.reducto.ai/quickstart/index.md",
+        "quote": "Create an API key in Reducto Studio (https://studio.reducto.ai) under API Keys."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.reducto.ai/quickstart/index.md",
+        "quote": "Sign up for a free account without leaving the docs."
+      },
+      {
+        "field": "access",
+        "url": "https://reducto.ai/pricing",
+        "quote": "Pay-as-you-go per-product pricing with 15,000 free credits"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.reducto.ai/agent-guide/index.md",
+        "quote": "Pull specific fields from documents into structured JSON using a schema."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.reducto.ai/agent-guide/index.md",
+        "quote": "Async endpoints return a `job_id` immediately and process in the background."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.reducto.ai/mcp-server/index.md",
+        "quote": "The Reducto MCP server connects AI agents directly to Reducto."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.reducto.ai/mcp-server/index.md",
+        "quote": "The hosted server runs at `https://mcp.reducto.ai/mcp`."
+      },
+      {
+        "field": "description",
+        "url": "https://docs.reducto.ai/llms.txt",
+        "quote": "Reducto turns PDFs, spreadsheets, images, and office files into structured data."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.reducto.ai/quickstart/index.md",
+        "quote": "Store it as `REDUCTO_API_KEY`."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.netlify.com/api",
+  "model": "sonnet",
+  "seconds": 59,
+  "cost_usd": 0.131369925,
+  "turns": 4,
+  "result": {
+    "app": "Netlify",
+    "description": "Hosting and deployment platform for web sites and apps (builds, deploys, functions, DNS, forms).",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 auth-code (app registered in user settings, authorize at app.netlify.com/authorize) for public integrations; personal access token sent as Bearer header for own account.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can register an OAuth app in user settings and each user can create a PAT. Docs show no app review/approval step for other users to authorize. Free plan ($0 forever) lists \"Deploy from AI, Git, or API\"; no paid-plan API restriction found on pricing page. Review step not explicitly ruled out (docs page partially read).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST/JSON OpenAPI spec v2.63.1 at api.netlify.com/api/v1. Groups: user accounts, sites, env vars, files, domains/DNS, SNI certs, deploys, builds, dev servers, agent runners, webhooks/notifications, functions, database, forms, split tests, large media, identity.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/netlify/netlify-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "If you're making a public integration with Netlify for others to enjoy, you must use OAuth2."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Use your PAT for manual authentication in shell scripts or commands that use the Netlify API."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "You can register a new application in your Netlify user settings for OAuth applications."
+      },
+      {
+        "field": "access",
+        "url": "https://www.netlify.com/pricing/",
+        "quote": "Deploy from AI, Git, or API."
+      },
+      {
+        "field": "api",
+        "url": "https://open-api.netlify.com/",
+        "quote": "This is a REST-style API that uses JSON for serialization and OAuth 2 for authentication."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+        "quote": "Netlify offers an MCP server, which you can connect to through a connector, plugin, or your agent."
+      },
+      {
+        "field": "description",
+        "url": "https://open-api.netlify.com/",
+        "quote": "Netlify is a hosting service for the programmable web."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

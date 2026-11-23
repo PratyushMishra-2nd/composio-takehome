@@ -1,0 +1,48 @@
+pass2: 47 apps, model=sonnet, workers=6
+  #008 Close: ok
+  #001 Salesforce: ok
+  #011 Zendesk: ok
+  #012 Intercom: ok
+  #010 DealCloud: ok
+  #018 Help Scout: ok
+  #020 Gladly: ok
+  #017 Plain: ok
+  #024 Lark (Larksuite): ok
+  #028 WhatsApp Business: ok
+  #019 Gorgias: ok
+  #031 Google Ads: ok
+  #029 Aircall: ok
+  #033 LinkedIn Ads: ok
+  #032 Meta Ads: ok
+  #034 GoHighLevel: ok
+  #036 Klaviyo: ok
+  #038 Pinterest: ok
+  #045 Magento (Adobe Commerce): ok
+  #040 SendGrid: ok
+  #043 BigCommerce: ok
+  #044 Salesforce Commerce Cloud: ok
+  #039 Threads (Meta): ok
+  #046 Squarespace: ok
+  #047 Ecwid: ok
+  #057 Bright Data: ok
+  #049 Amazon Selling Partner: ok
+  #050 fanbasis: ok
+  #048 Gumroad: ok
+  #060 Clay: ok
+  #063 Netlify: ok
+  #065 Supabase: ok
+  #070 Sentry: ok
+  #081 Stripe: ok
+  #069 Datadog: ok
+  #084 Paygent Connect: ok
+  #085 iPayX: ok
+  #078 Coda: ok
+  #090 PitchBook: ok
+  #088 Brex: ok
+  #086 QuickBooks: ok
+  #089 Ramp: ok
+  #095 Reducto: ok
+  #092 Otter AI: ok
+  #094 Consensus: ok
+  #096 Devin: ok
+  #064 Cloudflare: ok

@@ -1,0 +1,73 @@
+{
+  "id": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "hint": "developer.xero.com",
+  "model": "sonnet",
+  "seconds": 76,
+  "cost_usd": 0.22473709,
+  "turns": 10,
+  "result": {
+    "app": "Xero",
+    "description": "Cloud accounting software for small businesses; its API exposes accounting, payroll, and related data.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 only. Auth code (with PKCE for public clients) for multi-org apps. Client credentials grant only for Custom Connections (single org, premium paid option). No API keys or basic auth.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can register an app in the developer portal. The Starter tier is free with a max of 5 connections. Core is $35 AUD/month for 50 connections. Plus and above need App Certification. Custom Connections (client credentials, single org) is a paid premium option. Journals, XPM and bulk connections need a security assessment and use-case approval.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Accounting API (invoices, contacts, accounts, bank transactions, manual journals, reports) with an OpenAPI spec. The pricing page also lists Open APIs, Webhooks, a Journal endpoint and the XPM API. The MCP README also covers payroll (employees, leave, timesheets). The Files, Assets and Projects API families were not verified from readable pages. Usage is metered per app tier.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/XeroAPI/xero-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "The free Starter tier allows only 5 connections. Scaling needs a paid plan, and Plus or above needs App Certification. Custom Connections are paid.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/XeroAPI/xero-node/master/README.md",
+        "quote": "All API requests go through Xero's OAuth2.0 gateway and require a valid `access_token` to be set on the `client` which appends the `access_token` [JWT](https://jwt.io/) to the header of each request."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/XeroAPI/xero-node/master/README.md",
+        "quote": "A custom connection uses OAuth2.0's [`client_credentials`](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) grant which eliminates the step of exchanging the temporary code for a token set."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/pricing",
+        "quote": "App pricing is a flat monthly fee based on plan and includes a set allotment of data consumption via the Xero APIs."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/pricing",
+        "quote": "Connections (maximum) | 5 | 50 | 1000 | 10,000 | No Limit"
+      },
+      {
+        "field": "api",
+        "url": "https://developer.xero.com/pricing",
+        "quote": "The XPM API allows third-party apps and developers to programmatically connect to and interact with the data and functionality within a Xero Practice Manager account."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/XeroAPI/xero-mcp-server",
+        "quote": "This is a Model Context Protocol (MCP) server implementation for Xero."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/XeroAPI/xero-mcp-server",
+        "quote": "Xero OAuth2 authentication with custom connections"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

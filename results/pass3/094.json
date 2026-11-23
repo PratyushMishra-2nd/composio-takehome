@@ -1,0 +1,74 @@
+{
+  "id": 94,
+  "app": "Consensus",
+  "category": "AI, Research and Media-native",
+  "hint": "consensus.app (OAuth requested)",
+  "model": "sonnet",
+  "seconds": 32,
+  "cost_usd": 0.18332589999999999,
+  "turns": 8,
+  "result": {
+    "app": "Consensus",
+    "description": "AI-powered scientific research search engine (consensus.app) that finds, summarizes and cites peer-reviewed papers, with a Consensus Meter.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "REST API: org-scoped API key sent as Authorization: Bearer. OAuth 2.1 (Auth Code + PKCE, dynamic client registration) applies only to the MCP server, not the REST API, so oauth2 is dropped from REST auth methods.",
+    "access": "paid_plan",
+    "access_detail": "REST API keys are issued from the organization subscription page; quotas scoped to org subscription (Teams/Enterprise tiers, contact sales for Enterprise). No evidence of a free self-serve REST key. Free tier exists only for the MCP server. Exact REST gating not confirmed because docs.consensus.app is behind Cloudflare challenge.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "Versioned JSON REST endpoints for search, paper detail, synthesis and Consensus Meter. Read-only research surface. Full reference at docs.consensus.app could not be fetched (Cloudflare challenge).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.consensus.app/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "REST API key appears tied to an organization subscription (paid/enterprise), not free self-serve. OAuth exists only via the MCP server, so an OAuth-based toolkit would have to go through MCP (free tier available, dynamic client registration). Narrow read-only surface.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Sent as `Authorization: Bearer <key>` on every request"
+      },
+      {
+        "field": "auth",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Authorization Code flow with PKCE"
+      },
+      {
+        "field": "access",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Issued from the organization subscription page at https://consensus.app/subscription/api/"
+      },
+      {
+        "field": "access",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Pricing and request quotas are scoped to organization subscriptions; see the docs for the current schema and limits."
+      },
+      {
+        "field": "api",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "It exposes search, paper detail, synthesis, and the Consensus Meter as stable, versioned JSON endpoints with bearer-token authentication."
+      },
+      {
+        "field": "mcp",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "OAuth-based authentication, dynamic client registration, streaming-friendly."
+      },
+      {
+        "field": "description",
+        "url": "https://consensus.app/llms-full.txt",
+        "quote": "Consensus is an AI-powered search engine for scientific research that helps users find, synthesize, and cite peer-reviewed papers."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": 34,
+  "app": "GoHighLevel",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "highlevel.stoplight.io",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.26556430000000003,
+  "turns": 10,
+  "result": {
+    "app": "GoHighLevel",
+    "description": "All-in-one CRM, marketing automation and agency white-label platform (HighLevel) covering contacts, conversations, calendars, pipelines, funnels, email/SMS, social planner, payments.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 auth-code flow for marketplace apps (multi-account, webhooks); Private Integration Token (static bearer, scoped, single account/agency) for internal use. Legacy API keys (v1) are end-of-life. All v2 calls need a Version header.",
+    "access": "admin_approval",
+    "access_detail": "Developer account is free self-serve and private OAuth apps can be built at once. But private apps are capped at 5 agencies; wider use needs public marketplace review (Loom demo, scope justification) or a Security Review. Testing needs a HighLevel account, which is paid after a trial. I did not verify pricing. PIT is self-serve but tied to the user's own HighLevel account.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v2 at services.leadconnectorhq.com. Covers contacts, conversations, calendars, opportunities, invoices, payments, social planner, locations, workflows and more. Official PHP and Python SDKs exist. Breadth is inferred from the MCP's 700+ actions across 38 features; I did not count endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Distributing to many agencies needs a public marketplace app with review; private apps cap at 5 agencies. Users need a paid HighLevel account (pricing unverified).",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://marketplace.gohighlevel.com/docs/Authorization/authorization_doc.md",
+        "quote": "HighLevel currently supports two types of authorization:"
+      },
+      {
+        "field": "auth",
+        "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+        "quote": "Private Integrations, to put it simply, are static/fixed OAuth2 Access Tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md",
+        "quote": "Cap: A Private app may be installed in up to 5 Agencies."
+      },
+      {
+        "field": "access",
+        "url": "https://marketplace.gohighlevel.com/docs/oauth/CreateDeveloperAccount.md",
+        "quote": "Click Sign Up to create a developer account."
+      },
+      {
+        "field": "api",
+        "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+        "quote": "Private Integrations allow you to build powerful custom integrations between your HighLevel account and any other third-party app."
+      },
+      {
+        "field": "api",
+        "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+        "quote": "More than 700 actions across 38 HighLevel features give you room to hand off everyday work:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://marketplace.gohighlevel.com/docs/other/mcp.md",
+        "quote": "No API key to create or paste. Sign in with your HighLevel login, connect your sub-account, and try your first request."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "hint": "airtable.com/developers",
+  "model": "sonnet",
+  "seconds": 62,
+  "cost_usd": 0.17474438000000003,
+  "turns": 6,
+  "result": {
+    "app": "Airtable",
+    "description": "Cloud database/spreadsheet hybrid for building collaborative apps, workflows and automations on structured data.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 integrations (self-registered at /create/oauth, auth-code flow) for multi-user apps; personal access tokens (Bearer) created per user at /create/tokens.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit (1): any developer registers OAuth integration self-serve; to let other users authorize, only support email, privacy policy URL and ToS URL are needed. No Airtable review/approval step found in docs. End users can also create their own PATs. (2): pricing page states no API plan restriction; MCP docs say available on all plans (free included). Rate limits only (5 req/s per base); Airtable reserves right to tier limits by plan. Enterprise admins may restrict third-party integrations in their own orgs, and some endpoints (Enterprise API) need Enterprise plan, but core API is not gated.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST JSON API: records CRUD, bases, tables, fields/schema (metadata), webhooks, comments, plus Enterprise API endpoints. Rate limit 5 req/s per base, 50 req/s per PAT user; 429 then 30s wait. Official airtable.js client.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.airtable.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://airtable.com/developers/web/guides/oauth-integrations",
+        "quote": "You can access the OAuth integrations panel at /create/oauth."
+      },
+      {
+        "field": "auth",
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "The personal access tokens panel can be accessed at /create/tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://airtable.com/developers/web/guides/oauth-integrations",
+        "quote": "This will enable other users to authorize your integration."
+      },
+      {
+        "field": "access",
+        "url": "https://airtable.com/developers/agents/mcp/getting-started",
+        "quote": "The server is available to all users on all plans."
+      },
+      {
+        "field": "api",
+        "url": "https://airtable.com/developers/web/api/introduction",
+        "quote": "The API closely follows REST semantics, uses JSON to encode objects, and relies on standard HTTP codes to signal operation outcomes."
+      },
+      {
+        "field": "api",
+        "url": "https://airtable.com/developers/web/api/rate-limits",
+        "quote": "The API is limited to 5 requests per second per base."
+      },
+      {
+        "field": "mcp",
+        "url": "https://airtable.com/developers/agents/mcp/getting-started",
+        "quote": "Airtable's MCP server lets you connect AI tools directly to your Airtable bases."
+      },
+      {
+        "field": "verdict",
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "Personal access tokens can be used to make requests to all public Airtable API endpoints, including endpoints that were previously limited in availability such as the Metadata API endpoints."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

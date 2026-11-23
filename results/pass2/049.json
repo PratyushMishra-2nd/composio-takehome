@@ -1,0 +1,68 @@
+{
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "hint": "developer-docs.amazon.com/sp-api",
+  "model": "sonnet",
+  "seconds": 53,
+  "cost_usd": 0.20119499000000002,
+  "turns": 7,
+  "result": {
+    "app": "Amazon Selling Partner",
+    "description": "Amazon Selling Partner API (SP-API) lets sellers and vendors programmatically manage orders, listings, catalog, inventory, fulfillment, reports and finances on Amazon marketplaces.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "Login with Amazon (LWA) OAuth2 authorization-code flow. The seller authorizes the app and the app gets a long-lived refresh token, then exchanges it for a 1-hour LWA access token. Private apps self-authorize with up to 10 refresh tokens. Restricted operations use grantless or restricted data tokens. The seller must reauthorize every 365 days.",
+    "access": "admin_approval",
+    "access_detail": "Developer must register a developer profile with Amazon. A private app for your own seller account can be self-authorized with no listing. Public apps that other sellers connect need Amazon review and approval (app listing, and extra review for restricted roles such as PII). A seller or vendor account is required. Verified only from search snippets and the GitHub repo, because the docs host redirected to a malformed domain and could not be fetched. Access confidence is medium to low.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST APIs by region. They cover Orders, Catalog Items, Listings, Feeds, Reports, FBA Inventory, Finances, Fulfillment Inbound/Outbound, Notifications, Product Pricing, Data Kiosk (GraphQL queries) and Vendor APIs. Amazon's sample repo describes 304 operations across 40+ services.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/amzn/selling-partner-api-samples/tree/main/1-sp-api-application-setup/sp-api-dev-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Multi-tenant use needs a public SP-API app approved by Amazon (developer registration, app review, restricted-role review). Sellers must reauthorize every 365 days. Private-app self-authorization works for a single seller account. The Amazon MCP is sample code, not a supported product.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/self-authorization",
+        "quote": "This process generates an LWA refresh token with a maximum of 10 authorizations per application."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+        "quote": "A Login with Amazon (LWA) access token authorizes your application to take certain actions on behalf of a selling partner."
+      },
+      {
+        "field": "access",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/self-authorization",
+        "quote": "Before doing this you must register as a developer and register your application."
+      },
+      {
+        "field": "access",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview",
+        "quote": "The selling partner must reauthorize your application every 365 days, and your application must store the new refresh token that the reauthorization returns."
+      },
+      {
+        "field": "api",
+        "url": "https://github.com/amzn/selling-partner-api-samples",
+        "quote": "This repository contains sample solutions, developer tools (including MCP servers and a local sandbox), and code recipes for the Selling Partner API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/amzn/selling-partner-api-samples/tree/main/1-sp-api-application-setup/sp-api-dev-mcp",
+        "quote": "A local MCP server for SP-API that bundles multiple developer tools into a single npm package."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

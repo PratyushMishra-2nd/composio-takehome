@@ -1,0 +1,70 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "hint": "reducto.ai (document parsing)",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.16931469500000002,
+  "turns": 7,
+  "result": {
+    "app": "Reducto",
+    "description": "Document AI API that parses PDFs/images/spreadsheets into structured output, extracts fields to JSON schema, splits and edits documents.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "Per-organization API key created in Studio (Owner role only), sent as Bearer token / REDUCTO_API_KEY. No OAuth2 documented.",
+    "access": "self_serve_free",
+    "access_detail": "Self-serve signup in Studio. Standard pay-as-you-go plan includes the Parse, Extract, Edit, Split APIs and 15,000 free credits for new customers. No app review, no marketplace listing. Each end user or org makes its own key. Growth/Enterprise are sales-led but add features and discounts, not API access. Credit amount conflicts across pages ($150 vs 15,000 credits); free credits may be one-time, so ongoing use is pay-as-you-go.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST API with Python/Node SDKs. Core endpoints: Parse, Extract, Split, Edit, upload, async jobs, pipelines/workflows, batch, usage export (separate personal Studio key). Focused on document processing, so few objects but well documented. Could not fetch the exact endpoint list from the docs; breadth is inferred from pricing and SDK pages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.reducto.ai/mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.reducto.ai/studio-account",
+        "quote": "You must be an **Owner** in your organization to create and manage API keys."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.reducto.ai/sdk/python/overview.md",
+        "quote": "The Python and Node.js SDKs automatically read `REDUCTO_API_KEY` from the environment."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.reducto.ai/reference/pricing-migration",
+        "quote": "Yes. New customers will still have 15,000 credits to use."
+      },
+      {
+        "field": "access",
+        "url": "https://reducto.ai/pricing.md",
+        "quote": "Includes 15,000 free credits."
+      },
+      {
+        "field": "api",
+        "url": "https://reducto.ai/pricing.md",
+        "quote": "Parse, Extract, Edit, and Split APIs"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.reducto.ai/mcp-server",
+        "quote": "https://mcp.reducto.ai/mcp"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

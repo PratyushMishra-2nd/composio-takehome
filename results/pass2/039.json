@@ -1,0 +1,73 @@
+{
+  "id": 39,
+  "app": "Threads (Meta)",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.facebook.com/docs/threads",
+  "model": "sonnet",
+  "seconds": 77,
+  "cost_usd": 0.179270035,
+  "turns": 5,
+  "result": {
+    "app": "Threads (Meta)",
+    "description": "Meta's text-based social network; the Threads API lets apps publish posts, read media and profiles, moderate replies, and get insights.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth2 authorization-code flow (threads.com/oauth/authorize, graph.threads.com/oauth/access_token). Short-lived tokens last 1 hour and can be exchanged for 60-day long-lived tokens, which can be refreshed. Scopes: threads_basic, threads_content_publish, threads_read_replies, threads_manage_replies, threads_manage_insights.",
+    "access": "admin_approval",
+    "access_detail": "Creating a Meta developer app is free and self-serve. Users with a Threads Tester role on the app can grant permissions right away, so dev and testing work with no review. Other users can connect only after each permission passes Meta App Review and the app is published. Advanced Access also needs Business Verification (from the permissions page; the Threads-specific review requirements were not fully verified).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Graph-style REST on graph.threads.com. Covers single and carousel post publishing, media and profile retrieval, reply moderation, mentions, insights, webhooks, keyword search, oEmbed and web intents. A Postman collection is provided. Media for publishing must be hosted at a public URL.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/MetaThreads/meta-threads-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Meta App Review (plus Business Verification for Advanced Access) is needed before arbitrary end users can connect. Tester-role users work without review.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developers.facebook.com/docs/threads",
+        "quote": "Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "Short-lived tokens that have not expired can be exchanged for long-lived access tokens, which are valid for 60 days."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "each permission must first be approved through the App Review process, and your app must be published."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "Threads testers can grant your app these permissions at any time."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/docs/threads",
+        "quote": "Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pypi.org/project/meta-threads-mcp/",
+        "quote": "Unofficial MCP server for Meta's Threads API with tools for creating text, image, and video posts, reply management, insights, and publishing quota tracking."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "To access the Threads API, create an app and pick the Threads use case."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

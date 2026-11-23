@@ -1,0 +1,84 @@
+{
+  "id": 38,
+  "app": "Pinterest",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.pinterest.com",
+  "model": "sonnet",
+  "seconds": 75,
+  "cost_usd": 0.17304389,
+  "turns": 7,
+  "result": {
+    "app": "Pinterest",
+    "description": "Visual discovery and social platform; API v5 lets apps manage pins, boards, ads, catalogs and analytics for users and businesses.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "REST API v5 uses OAuth 2.0: authorization code grant (full capabilities, user auth) and client credentials (limited, app-only, needs 2FA). Refresh tokens are continuous (60-day expiry). Trial-approved apps can also generate a 24-hour test access token without the OAuth flow.",
+    "access": "admin_approval",
+    "access_detail": "Free to register, but Pinterest reviews every app. Approved apps get Trial access, where pins and boards are sandbox-only and visible just to their creator. Standard access, needed to serve other users, requires a separate review with a demo video of the OAuth flow.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v5. OAuth scope table covers ads, billing, biz_access, boards, catalogs, pins and user_accounts, each with read and write scopes. Breadth is inferred from the scope table. The v5 overview page returned only site navigation, so I did not read the endpoint list. Trial access has per-day rate limits. Apps registered on or after 2026-09-14 may get 403 PINNER_DATA_ACCESS_DENIED for boards and pins of non-business users without Pinterest authorization.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "Pinterest must approve each app for Trial access, then review it again for Standard access, which needs a demo video of the OAuth flow, before other users can connect. Trial content stays sandbox-only. Details of the official MCP server (endpoint, auth, availability) were not verified.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+        "quote": "Our implementation of grant types and access tokens follows OAuth 2.0 specifications."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+        "quote": "This grant type is designed for situations when the client (your app) is acting on its own behalf, not a user."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+        "quote": "Once your app is approved for Trial access you can generate a token to test the API without setting up the Oauth flow."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+        "quote": "Application requests are reviewed by Pinterest."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "Your app must already be approved for Trial access and comply with our Developer Guidelines."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "Prepare a video recording of your app completing an action using the Pinterest API."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+        "quote": "Pinterest API services are only available to authenticated and authorized users."
+      },
+      {
+        "field": "mcp",
+        "url": "https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358.md",
+        "quote": "Pinterest is bringing its data and Ads capabilities directly into the AI tools teams already use."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

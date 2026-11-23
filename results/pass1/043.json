@@ -1,0 +1,65 @@
+{
+  "id": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "hint": "developer.bigcommerce.com",
+  "model": "sonnet",
+  "seconds": 78,
+  "cost_usd": 0.259868195,
+  "turns": 9,
+  "result": {
+    "app": "BigCommerce",
+    "description": "SaaS ecommerce platform for merchants: catalog, orders, customers, carts, checkout, storefront, plus B2B Edition.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth-based API accounts. Store-level accounts give a static access_token created in the control panel. App-level accounts come from the Developer Portal and use an OAuth install flow per store. Account-level accounts are used for the GraphQL Account API. Tokens are sent in the X-Auth-Token header. Legacy Basic-auth accounts are no longer issued.",
+    "access": "self_serve_free",
+    "access_detail": "A store owner can create a store-level API account in any store, including a free trial store, so a developer gets a token with no review. Partners can also create sandbox stores in the Partner Portal. Listing a public app on the marketplace needs BigCommerce app review. The trial length (15 days) and whether a credit card is required are unverified, and sources conflict. I found no plan restriction on the API.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST Management API (V2 and V3) covers catalog, orders, customers, carts, checkout, pricing, promotions, webhooks and scripts. REST Storefront and GraphQL Storefront APIs cover shopper-side data. There is also a GraphQL Admin API, a GraphQL Account API and a B2B Edition REST API. Breadth is from search results and the API accounts page table, not a full endpoint count.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.bigcommerce.com/beta/mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
+        "quote": "BigCommerce no longer issues legacy API Accounts to new stores."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
+        "quote": "Rewrite your HTTP request headers to use the `X-Auth-Token` header to pass the API account's `access_token` instead of the `Authorization` header."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.bigcommerce.com/docs/start/about/sandboxes",
+        "quote": "Sandbox stores are intended for developing and testing apps."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.bigcommerce.com/docs/rest-management",
+        "quote": "using the REST Storefront API, the REST Management API, or the GraphQL Storefront API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.bigcommerce.com/beta/mcp-server",
+        "quote": "BigCommerce MCP Server"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "low"
+    }
+  }
+}

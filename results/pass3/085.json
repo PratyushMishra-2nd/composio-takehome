@@ -1,0 +1,75 @@
+{
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "hint": "ipayx.ai/docs",
+  "model": "sonnet",
+  "seconds": 71,
+  "cost_usd": 0.164214455,
+  "turns": 5,
+  "result": {
+    "app": "iPayX",
+    "description": "FINTRAC-registered forensic FX audit engine that detects hidden bank spreads vs mid-market rates on currency transactions, via REST API, webhooks and MCP server.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "API key sent as `Authorization: Bearer ipx_live_...` (production) or `ipx_test_...` (sandbox). Keys are server-side, generated in the dashboard. Webhooks signed HMAC-SHA256 (x-ipayx-signature). No OAuth.",
+    "access": "self_serve_free",
+    "access_detail": "Self-serve signup at ipayx.ai/auth, key generated in dashboard. Free tier is tiny (3 lifetime audits on pricing page; MCP docs say 10 audits/day per key). Credit Pack $99 for 100 audits, Unlimited $299/mo. Developers page lists API plans from $99/mo (100 audits, sandbox) up to Enterprise $100K/yr. Pages conflict on free limits and prices, so exact gating is unclear.",
+    "api_types": [
+      "rest",
+      "websocket"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "docs/api lists 3 endpoints (POST /audit, GET /rates, POST /audit/document) plus an audit.completed webhook. Developers page lists POST /v1/audit and GET/PUT/DELETE /v1/score-config. Base is a Supabase edge function URL; api.ipayx.ai is \"coming soon\". Docs conflict between pages. The /docs root returns 404. The REST surface is a handful of endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.ipayx.ai/docs/mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "Narrow API (about 3-6 endpoints), tiny free quota, and inconsistent docs (endpoints, prices, MCP URL differ across pages). Self-serve keys exist, so buildable but low value.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "The forensic FX audit engine that powers iPayX."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "Every request requires a Bearer token in the"
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/pricing",
+        "quote": "100 audits. Never expire. Use them at your own pace."
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/pricing",
+        "quote": "Unlimited audits. For teams running audits every week."
+      },
+      {
+        "field": "api",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "Live mid-market rates from Twelve Data."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.ipayx.ai/docs/mcp-server",
+        "quote": "Score any FX transaction 1-10 with a qualitative verdict."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.ipayx.ai/docs/mcp-server",
+        "quote": "Fetch the live mid-market reference rate for a currency pair."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

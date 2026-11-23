@@ -1,0 +1,82 @@
+{
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "hint": "open.larksuite.com",
+  "model": "sonnet",
+  "seconds": 36,
+  "cost_usd": 0.1632508,
+  "turns": 7,
+  "result": {
+    "app": "Lark (Larksuite)",
+    "description": "Enterprise collaboration suite (IM, calendar, docs, base, video meetings, approvals) with an Open Platform REST API for building bots and apps.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "App credentials (app_id + app_secret) exchanged at POST /open-apis/auth/v3/tenant_access_token/internal for a 2h tenant_access_token (custom app; Store apps use app_access_token and tenant_access_token via a separate endpoint). User identity: standard OAuth 2.0 authorization-code flow (RFC 6749) via /authen/v2/oauth/token returning user_access_token and refresh_token. All calls use Authorization: Bearer.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can log in to the Lark Open Platform, create a custom app and get app_id/app_secret for their own tenant, free. Scopes must be approved by the tenant admin. Distributing a Store app to other tenants needs Lark app review and listing. Custom apps are limited to the tenant they were built in, so a multi-tenant product has to go through the Store app route.",
+    "api_types": [
+      "rest",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Large REST surface: IM messages and chats, contacts, calendar, docs/docx, drive, sheets, Base (bitable), wiki, approval, task, VC meetings, mail, attendance, and more. Event subscription via webhook or long connection (websocket). Official SDKs for Node, Python, Java and Go. Full docs ship as markdown with an llms.txt.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Per-tenant admin approval of scopes. Multi-tenant OAuth distribution needs a Store app with review. Separate Feishu (China) and Lark (international) domains.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/document/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/tenant_access_token_internal.md",
+        "quote": "自建应用通过此接口获取 `tenant_access_token`。"
+      },
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/authentication-management/access-token/get-user-access-token.md",
+        "quote": "OAuth 令牌接口，可用于获取 <code>user_access_token</code> 以及 <code>refresh_token</code>。"
+      },
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/authentication-management/access-token/get-user-access-token.md",
+        "quote": "本接口实现遵循 [RFC 6749 - The OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749)"
+      },
+      {
+        "field": "access",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "企业自建应用：由企业内部人员或企业授权的开发人员进行开发，只能在同一企业内发布和使用。"
+      },
+      {
+        "field": "access",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "出于安全考虑，你需要为应用申请相应的权限，并且由企业管理员审核通过后，应用才可以进行后续的 API 调用或事件监听。"
+      },
+      {
+        "field": "api",
+        "url": "https://open.larksuite.com/document/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/tenant_access_token_internal.md",
+        "quote": "HTTP URL | https://open.larksuite.com/open-apis/auth/v3/tenant_access_token/internal"
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/larksuite/lark-openapi-mcp/main/README.md",
+        "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool designed to help users quickly connect to the Feishu/Lark platform and enable efficient collaboration between AI Agents and Feishu/Lark."
+      },
+      {
+        "field": "verdict",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "应用商店应用：由第三方服务商开发，在Lark应用中心发布，所有Lark租户均可安装和使用。"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

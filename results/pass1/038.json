@@ -1,0 +1,74 @@
+{
+  "id": 38,
+  "app": "Pinterest",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.pinterest.com",
+  "model": "sonnet",
+  "seconds": 61,
+  "cost_usd": 0.20604742,
+  "turns": 6,
+  "result": {
+    "app": "Pinterest",
+    "description": "Visual discovery and social platform; API v5 lets apps read/create Pins, boards, ads, audiences, catalogs and pull analytics.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 authorization-code flow with access/refresh tokens for users. Trial apps can also generate 24-hour test tokens without the OAuth flow. Client-credentials not documented on the pages read.",
+    "access": "admin_approval",
+    "access_detail": "Need a Pinterest business account and a registered app. Pinterest reviews the app before granting Trial access. Trial is sandbox-limited: Pins and boards are visible only to their creator. Upgrading to Standard needs a second review with a video of the OAuth flow. Community reports say Trial reviews often sit pending for a week or more. Apps registered on or after 2026-09-14 may get 403 PINNER_DATA_ACCESS_DENIED for non-business users without Pinterest authorization.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "API v5 covers Pins, boards, pin analytics, ads, audiences and catalogs, with read and create operations. REST is inferred (the pages never use the word). Trial access is rate limited per day per app; Standard is per minute per user per app. A Python SDK exists. I did not read the endpoint reference itself.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/terryso/mcp-pinterest",
+    "verdict": "build_with_caveat",
+    "blocker": "Every developer app needs Pinterest review (business account, OAuth demo video) for Trial, then another review for Standard. Trial is sandbox-only, so end-user connections work only after Standard approval.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.pinterest.com/docs/getting-started/",
+        "quote": "Build a working authentication flow based on OAuth 2"
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.pinterest.com/docs/getting-started/",
+        "quote": "Test tokens expire after 24 hours and allow you to explore certain endpoints faster."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "Prepare a video recording of your app completing an action using the Pinterest API."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/getting-started/",
+        "quote": "Application requests are reviewed by Pinterest."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "The Pinterest API v5 significantly increases the scope of what is possible for you to create as a developer."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/terryso/mcp-pinterest",
+        "quote": "Searched the web for Pinterest MCP servers. No vendor-official one found. The developers.pinterest.com docs pages read do not mention MCP. Community servers exist: terryso/mcp-pinterest (search and image download only), pinterest-mcp-docker, @cesteral/pinterest-mcp (ads)."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

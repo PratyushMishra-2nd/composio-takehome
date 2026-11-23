@@ -1,0 +1,82 @@
+{
+  "id": 61,
+  "app": "GitHub",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.github.com/rest",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.1651343,
+  "turns": 3,
+  "result": {
+    "app": "GitHub",
+    "description": "Developer platform for hosting Git repositories, collaborating on code, issues/PRs, CI (Actions) and software delivery.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "jwt",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 web flow for OAuth Apps and GitHub Apps (user access tokens); personal access tokens (classic and fine-grained); GitHub App installation tokens via JWT signed with app private key.",
+    "access": "self_serve_free",
+    "access_detail": "Free account gives full API access. OAuth Apps and GitHub Apps are self-registered in developer settings with no GitHub review. Orgs may restrict third-party OAuth app access (org owner approval to grant access to org data), but that is per-org, not a gate for the developer.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covers hundreds of endpoints (repos, issues, PRs, actions, orgs, users, checks, packages, etc.); GraphQL v4 API offers precise data fetching. Rate limits apply; webhooks supported.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/github/github-mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "You can also create an OAuth token with an OAuth app to access the REST API."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "You can create a personal access token, generate a token with a GitHub App"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.github.com/en/get-started/learning-about-github/githubs-plans",
+        "quote": "GitHub offers free and paid plans for storing and collaborating on code."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps",
+        "quote": "If your GitHub App is **public**, other accounts can also install it."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api",
+        "quote": "You can use GitHub's API to build scripts and applications that automate processes"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.github.com/en/graphql/overview/about-the-graphql-api",
+        "quote": "The GitHub GraphQL API offers flexibility and the ability to define precisely the data you want to fetch."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/github/github-mcp-server",
+        "quote": "The GitHub MCP Server connects AI tools directly to GitHub's platform."
+      },
+      {
+        "field": "description",
+        "url": "https://docs.github.com/en/get-started/start-your-journey/about-github-and-git",
+        "quote": "GitHub is a platform that supports your entire software development process"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

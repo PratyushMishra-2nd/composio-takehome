@@ -1,0 +1,71 @@
+{
+  "id": 41,
+  "app": "Shopify",
+  "category": "Ecommerce",
+  "hint": "shopify.dev",
+  "model": "sonnet",
+  "seconds": 31,
+  "cost_usd": 0.2016346,
+  "turns": 6,
+  "result": {
+    "app": "Shopify",
+    "description": "Ecommerce platform for merchants to build online stores, sell products, manage orders, inventory, customers and payments.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 auth-code flow for public/custom apps built in Dev Dashboard (merchants approve scopes at install); Admin-created custom apps get a static Admin API access token sent in X-Shopify-Access-Token header; Storefront API uses its own tokens.",
+    "access": "self_serve_free",
+    "access_detail": "Free Dev Dashboard / Partner account plus a development store allows building and testing with real tokens. Custom apps on a single store are self-serve with merchant approval. Distributing public apps to arbitrary merchants requires Shopify App Store review; protected customer data scopes need extra approval. Not verified from a pricing page.",
+    "api_types": [
+      "graphql",
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "GraphQL Admin API is primary and covers products, orders, customers, inventory, fulfillment, discounts, etc. REST Admin API is legacy since Oct 2024. Also Storefront API, webhooks. Some newer features are GraphQL-only.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://shopify.dev/docs/apps/build/devmcp",
+    "verdict": "build_now",
+    "blocker": "Per-store OAuth app install; public distribution needs App Store review. Official MCP is dev-docs/schema focused, not store operations.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization/legacy/admin-custom-apps",
+        "quote": "If you need a new app, use Dev Dashboard to create one with a proper OAuth flow."
+      },
+      {
+        "field": "auth",
+        "url": "https://shopify.dev/docs/api/usage/access-scopes",
+        "quote": "For a new app, declare the scopes it needs and deploy your app. Merchants approve the scopes when they install it."
+      },
+      {
+        "field": "access",
+        "url": "https://shopify.dev/docs/api/usage/access-scopes",
+        "quote": "Shopify grants access scopes only to public or custom apps."
+      },
+      {
+        "field": "api",
+        "url": "https://shopify.dev/docs/api/admin-rest",
+        "quote": "The REST Admin API is a legacy API as of October 1, 2024. Starting April 1, 2025, all new public apps must be built exclusively with the GraphQL Admin API."
+      },
+      {
+        "field": "api",
+        "url": "https://shopify.dev/docs/api/admin-rest",
+        "quote": "Some newer platform features may only be available in GraphQL."
+      },
+      {
+        "field": "mcp",
+        "url": "https://shopify.dev/docs/apps/build/devmcp",
+        "quote": "The server runs locally and doesn't require authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

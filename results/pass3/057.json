@@ -1,0 +1,60 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "hint": "brightdata.com",
+  "model": "sonnet",
+  "seconds": 19,
+  "cost_usd": 0.11423130000000001,
+  "turns": 4,
+  "result": {
+    "app": "Bright Data",
+    "description": "Web data platform: proxy networks, Web Unlocker, SERP API, Scraper APIs, scraping browser and datasets for web scraping at scale.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "basic"
+    ],
+    "auth_detail": "REST API uses account API key sent as Bearer token. Native proxy access uses zone username/password (Basic proxy auth). No OAuth2.",
+    "access": "self_serve_free",
+    "access_detail": "Self-serve signup. MCP free tier of 5,000 requests/month, no credit card. Beyond that pay-as-you-go with deposited funds. Direct API products (proxies, SERP, scrapers) are pay-as-you-go; trial credits are typically available.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST APIs for Web Unlocker/Request, SERP, Web Scraper API (trigger/snapshot), datasets, zone and account management, scraping browser (CDP/WebSocket), plus proxy interface.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/brightdata/brightdata-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "Authenticate with Bright Data using 1 of 2 methods: API Access with an API key or Native Access with proxy username and password."
+      },
+      {
+        "field": "access",
+        "url": "https://raw.githubusercontent.com/brightdata/brightdata-mcp/main/README.md",
+        "quote": "New accounts get 5,000 free requests per month."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "How do I relay the API key within a request?"
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/brightdata/brightdata-mcp/main/README.md",
+        "quote": "Two deployment options: a hosted remote server (one URL, no installation) or a local instance via `npx @brightdata/mcp`."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

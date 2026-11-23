@@ -1,0 +1,79 @@
+{
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "hint": "gladly.com",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.21958260500000001,
+  "turns": 7,
+  "result": {
+    "app": "Gladly",
+    "description": "Customer service platform (Gladly) that unifies voice, SMS, email, chat and social conversations around the customer, with a REST API, webhooks and App Platform.",
+    "auth_methods": [
+      "basic",
+      "api_key"
+    ],
+    "auth_detail": "REST API uses token-based HTTP Basic auth: username = Gladly user email, password = API token generated in Gladly UI for a user with the API User permission. Tokens are per-environment (sandbox vs production). OAuth only for installable App Platform apps (per Supergood, secondary source).",
+    "access": "admin_approval",
+    "access_detail": "No public signup or free tier: Gladly is a sales-led paid product. Token is created self-serve inside an existing Gladly org by an admin-granted API User permission. A developer needs a customer account (or sandbox at {org}.gladly.qa) first; no plan restriction on API found in docs, and no pricing page checked. End users who are Gladly customers can connect with own tokens.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST resource groups: Agents, Answers (public + management), Audiences, Business Hours, Communications (send SMS/email), Conversations (items, notes, reply, media, redact), Customers, Endpoints, Events, Export, Inboxes, Organization, Proactive Conversations, Reports, Tasks, Teams, Topics, User Identity JWT, Webhooks (up to 50). Also Lookup API (Gladly calls your service), Chat SDKs, App Platform.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://www.stackone.com/connectors/gladly/mcp/",
+    "verdict": "build_with_caveat",
+    "blocker": "No self-serve developer signup; need a paying Gladly customer org (or sandbox from Gladly) to get tokens. Basic auth with email+token requires org subdomain too. No official MCP.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Gladly API uses token-based Basic Authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "To create and use an API token, your user must have the API User permission."
+      },
+      {
+        "field": "access",
+        "url": "https://help.gladly.com/implementation/docs/get-your-api-tokens",
+        "quote": "These can be created within the Gladly UI, for users who have the `API User` role."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "An API token can be used to perform any API request without restriction."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.gladly.com/",
+        "quote": "Looking to extend Gladly, use Gladly's REST APIs, receive notifications with webhooks"
+      },
+      {
+        "field": "mcp",
+        "url": "https://supergood.ai/api-report-card/gladly",
+        "quote": "No official or community MCP server was found for Gladly."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.stackone.com/connectors/gladly/mcp/",
+        "quote": "StackOne offers a managed Gladly MCP server with 65 pre-built actions"
+      },
+      {
+        "field": "verdict",
+        "url": "https://supergood.ai/api-report-card/gladly",
+        "quote": "API tokens are issued from account settings for any user holding the API User permission."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

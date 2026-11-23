@@ -1,0 +1,73 @@
+{
+  "id": 97,
+  "app": "higgsfield",
+  "category": "AI, Research and Media-native",
+  "hint": "higgsfield.ai/cli (content suite)",
+  "model": "sonnet",
+  "seconds": 61,
+  "cost_usd": 0.17823288999999998,
+  "turns": 6,
+  "result": {
+    "app": "higgsfield",
+    "description": "Generative AI image/video platform (Soul, Seedance and about 40 other models) with a pay-per-generation REST API, CLI and hosted MCP.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "REST API: key ID + secret pair from the Higgsfield Console, sent as `Authorization: Key ID:SECRET` (legacy hf-api-key/hf-secret headers also work). Server-side only. Hosted MCP/CLI use a browser sign-in with the user's own Higgsfield account. No third-party OAuth app registration documented for the REST API.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit (1): no app review, listing or partner status is documented. Each end user creates their own key pair in the Console, which does not count as a gate. Gate audit (2): no subscription or paid plan is required. Billing is pay-per-generation against an account balance, so generation needs credits (the launch offer asks for a card and $15). The pricing page was truncated, so \"no subscriptions\" and \"no manual review\" come from a summary and are not verified quotes. Key creation is free and the playground is reportedly free.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Base URL https://api.higgsfield.ai, with an OpenAPI-generated reference. Per-model generation endpoints (for example POST /higgsfield-ai/soul/v2/standard and POST /bytedance/seedance-2.0/text-to-video), about 42 models mostly image and video. Shared endpoints for request status and cancel (GET /requests/{id}/status). Python SDK higgsfield-client. Generation-focused, with no account-management objects. I did not read the full endpoint list.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.higgsfield.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Usage needs a funded credit balance. Keys are server-side only with no third-party OAuth, so end users must paste their own key pair. Narrow generation-only surface.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.higgsfield.ai/docs/authentication.md",
+        "quote": "Each credential consists of a key ID and a secret."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.higgsfield.ai/docs/authentication.md",
+        "quote": "Do not call the API directly from browser or mobile application code."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.higgsfield.ai/docs/quickstart.md",
+        "quote": "API credentials grant access to your account and its balance."
+      },
+      {
+        "field": "access",
+        "url": "https://higgsfield.ai/higgsfield-api",
+        "quote": "Sign up for 15% off all sale models - then raise your favorites up to 75%, plus $15 on your balance."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.higgsfield.ai/docs/api-reference/overview.md",
+        "quote": "The API reference is generated from the public OpenAPI specification."
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/CLI",
+        "quote": "Add the Higgsfield MCP server URL in your agent's settings and authenticate through your Higgsfield account."
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/CLI",
+        "quote": "Higgsfield tools use the same credit system as the Higgsfield platform."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

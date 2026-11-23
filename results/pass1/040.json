@@ -1,0 +1,64 @@
+{
+  "id": 40,
+  "app": "SendGrid",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "sendgrid.com",
+  "model": "sonnet",
+  "seconds": 37,
+  "cost_usd": 0.21466617000000005,
+  "turns": 7,
+  "result": {
+    "app": "SendGrid",
+    "description": "Twilio SendGrid: cloud email delivery API for transactional and marketing email, with templates, contacts, stats and webhooks.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "Scoped API key sent as Authorization: Bearer header. Keys are created per account in the SendGrid UI or via the API Keys endpoints. No OAuth2 for third-party developers (Basic auth with username 'apikey' is only mentioned in search snippets, not confirmed on the fetched page).",
+    "access": "self_serve_trial",
+    "access_detail": "Free signup with no card gets a 60-day trial limited to 100 emails/day. After that a paid plan is needed (Essentials from $19.95/mo). The older permanent free tier has been replaced. Users bring their own API key, so connecting users works once their account is active.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "v3 Web API covers mail send, templates, contacts and lists, marketing campaigns and singlesends, suppressions, stats, API keys, subusers, domain/sender authentication, webhooks and more. Some endpoints need specific scopes or higher plans (for example subusers).",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/deyikong/sendgrid-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+        "quote": "To use an API key, include an `Authorization` header with the value `Bearer <YOUR_API_KEY_HERE>` in your request."
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/en-us/products/email-api/pricing.md",
+        "quote": "Free trial lets you send 100 emails/day for 60 days"
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/en-us/products/email-api/pricing.md",
+        "quote": "Essentials plan starts at $19.95 per month"
+      },
+      {
+        "field": "api",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+        "quote": "The SendGrid v3 Web API provides a REST interface to send email at scale and ensure your application can handle high volumes."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/deyikong/sendgrid-mcp",
+        "quote": "deyikong/sendgrid-mcp: community server with 58 tools. No official Twilio MCP server found in search results (Merge page says none offered)."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

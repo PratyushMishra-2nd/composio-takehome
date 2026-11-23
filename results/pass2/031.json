@@ -1,0 +1,79 @@
+{
+  "id": 31,
+  "app": "Google Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.google.com/google-ads",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.142097225,
+  "turns": 3,
+  "result": {
+    "app": "Google Ads",
+    "description": "Google's advertising platform; API manages Google Ads accounts, campaigns, ad groups, keywords, assets and reporting.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 only (scope https://www.googleapis.com/auth/adwords), user auth-code or service account. Developer tokens reportedly sunset 2026-09-09; access now gated by Cloud project access level (Test/Explorer/Basic/Standard).",
+    "access": "admin_approval",
+    "access_detail": "Cloud project starts with Test access (test accounts only). Explorer (2,880 ops/day, production accounts) via automated review in most cases; Basic needs brand verification; Standard needs manual review. Google Ads account needed to use it. Sensitive-scope OAuth app verification likely needed for public multi-user apps (not verified from page).",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Google Ads API callable via gRPC or REST; official client libraries (gRPC-based). Covers account, campaign, ad group, keyword, asset, conversion management and GAQL reporting (search/searchStream) across the full account hierarchy.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/googleads/google-ads-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Access-level review: Explorer is automated but low-quota; Basic/Standard need brand verification/manual review for higher volume. Developer-token sunset claim (page dated after 2026-09) should be rechecked.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developers.google.com/google-ads/api/docs/start",
+        "quote": "You can build software that manages accounts from the customer level down to the keyword level."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+        "quote": "Just like other Google APIs, Google Ads API uses the OAuth 2.0 protocol for authentication and authorization."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+        "quote": "Developer tokens were sunset on September 9, 2026."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+        "quote": "After you've enabled Google Ads API, your Google Cloud project is granted Test access."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+        "quote": "Completing brand verification for your Google Cloud project is a prerequisite to apply for Basic access level."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+        "quote": "If you need Standard access, you need a manual review."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.google.com/google-ads/api/rest/overview",
+        "quote": "The Google Ads API can be called either using gRPC or REST."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/googleads/google-ads-mcp",
+        "quote": "The Google Ads MCP Server exposes MCP Tools and MCP Resources backed by the Google Ads API."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

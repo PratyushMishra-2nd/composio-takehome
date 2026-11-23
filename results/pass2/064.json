@@ -1,0 +1,70 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "developers.cloudflare.com/api",
+  "model": "sonnet",
+  "seconds": 312,
+  "cost_usd": 0.1825605,
+  "turns": 3,
+  "result": {
+    "app": "Cloudflare",
+    "description": "Global network platform for CDN, DNS, security, Zero Trust, and developer services (Workers, R2, etc.), managed via REST API.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Scoped API tokens (Account or User tokens, Bearer) are the recommended method; legacy Global API Key via X-Auth-Email/X-Auth-Key headers. Cloudflare's own MCP servers use OAuth, but no public OAuth app registration for third-party developers.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can sign up for a free Cloudflare account and create API tokens in the dashboard. Some product endpoints require paid plans, but core API access is free.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covers 2,500+ endpoints across DNS, Workers, R2, Zero Trust and more; separate GraphQL Analytics API; OpenAPI schema available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.cloudflare.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+        "quote": "The Cloudflare API MCP server ↗︎ at https://mcp.cloudflare.com/mcp is the only MCP server you need to work with Cloudflare."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+        "quote": "Cloudflare offers the following MCP servers."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+        "quote": "Add a token name to describe why or how the token is used."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.cloudflare.com/fundamentals/api/",
+        "quote": "Use the following resources to learn more about Cloudflare's REST API:"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.cloudflare.com/analytics/graphql-api/",
+        "quote": "GraphQL differs from a traditional API: it has one single endpoint:"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+        "quote": "Anyone with this token can perform the authorized actions against the resources that the token has access to."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": 48,
+  "app": "Gumroad",
+  "category": "Ecommerce",
+  "hint": "gumroad.com/api",
+  "model": "sonnet",
+  "seconds": 339,
+  "cost_usd": 0.2656587,
+  "turns": 3,
+  "result": {
+    "app": "Gumroad",
+    "description": "E-commerce platform for creators to sell digital products, memberships and more, with a REST API for products, sales, subscribers, payouts, licenses and webhooks.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 (Doorkeeper) authorization-code flow with scopes (view_public, view_profile, edit_products, view_sales, mark_sales_as_shipped, refund_sales, edit_sales, view_payouts, account). Any seller can also create an application in Settings > Advanced and click \"Generate access token\" for a personal bearer token.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit: (1) No app review, publishing, verification or partner/ISV status found for OAuth apps. Any seller creates an OAuth application in settings, and other sellers can authorize it or generate their own access token. That is self-serve. (2) No paid plan is needed. Gumroad has no monthly fee and takes a cut per sale, so a free account gets API access. A caveat: I could not load the live docs page, so the lack of an app-review step is inferred from the open-source repo and not stated outright in the docs.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST API v2 at api.gumroad.com. The repo has ~100 api/v2 files and about 24 documented endpoint groups. Resources include products, offer codes, variants, custom fields, covers, sales, subscribers, licenses, payouts, resource subscriptions (webhooks) and user info. The live docs page renders client-side, so I read the open-source repo's docs components.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/antiwork/gumroad/blob/main/app/controllers/api/v2/mcp_controller.rb",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/app/javascript/components/ApiDocumentation/Authentication.tsx",
+        "quote": "to get the token you will use with the API."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/app/helpers/oauth_scope_helper.rb",
+        "quote": "\"view_sales\" => \"See your sales data.\","
+      },
+      {
+        "field": "access",
+        "url": "https://gumroad.com/pricing",
+        "quote": "Unlike other platforms, Gumroad doesn't charge you a monthly fee"
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/app/helpers/oauth_scope_helper.rb",
+        "quote": "\"edit_products\" => \"Create new products and edit your existing products.\","
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/app/controllers/api/v2/mcp_controller.rb",
+        "quote": "class Api::V2::McpController < Api::V2::BaseController"
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.github.com/search/repositories?q=gumroad+mcp",
+        "quote": "MCP server for the Gumroad API — products, sales and payouts as tools for Claude and other MCP clients. Python / FastMCP."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

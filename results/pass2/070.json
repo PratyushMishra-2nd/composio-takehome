@@ -1,0 +1,85 @@
+{
+  "id": 70,
+  "app": "Sentry",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.sentry.io/api",
+  "model": "sonnet",
+  "seconds": 32,
+  "cost_usd": 0.13763285,
+  "turns": 3,
+  "result": {
+    "app": "Sentry",
+    "description": "Application monitoring and error tracking platform that surfaces errors, performance issues and traces for developers.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Bearer auth tokens (organization tokens via internal integration, personal user tokens with scopes); OAuth2 authorization code grant for third-party apps (access tokens expire after 30 days, refresh tokens). Legacy API keys disabled for new accounts.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can sign up at sentry.io, create an internal integration or personal token in the UI, and call the API. A free Developer plan exists; the pricing page feature table has an API row that may differ by plan, so the free-tier API limit is not fully confirmed. Public OAuth apps are created from organization settings.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST web API covering organizations, projects, issues, events, releases, teams, members, alerts, replays, monitors and more. Full OpenAPI reference at docs.sentry.io/api.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.sentry.dev/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://mcp.sentry.dev/",
+        "quote": "Connects AI assistants to Sentry for searching errors, analyzing performance, triaging issues, reading documentation, and managing projects — all via the Model Context Protocol."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "For third-party applications that need to access Sentry on behalf of users, Sentry supports OAuth2 with the authorization code grant type."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "These auth tokens can be created within Sentry on the \"User settings\" page (User settings > Personal Tokens) and assigned specific scopes."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "You can create authentication tokens within Sentry by creating an internal integration."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.sentry.io/api/guides/create-auth-token/",
+        "quote": "To use Sentry's APIs, you must have an authentication token."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.sentry.io/api/",
+        "quote": "The Sentry web API is used to access the Sentry platform programmatically."
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcp.sentry.dev/",
+        "quote": "The base MCP server address is: `https://mcp.sentry.dev/mcp`"
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcp.sentry.dev/",
+        "quote": "All connections use OAuth."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "API keys are a legacy means of authenticating. They will still be supported but are disabled for new accounts."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

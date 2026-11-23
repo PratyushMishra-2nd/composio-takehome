@@ -1,0 +1,73 @@
+{
+  "id": 16,
+  "app": "LiveAgent",
+  "category": "Support and Helpdesk",
+  "hint": "liveagent.com",
+  "model": "sonnet",
+  "seconds": 38,
+  "cost_usd": 0.20591659999999998,
+  "turns": 8,
+  "result": {
+    "app": "LiveAgent",
+    "description": "Help desk platform (QualityUnit) unifying email, live chat, calls and social tickets in one shared inbox, with AI agents.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "REST API v3 uses a per-account API key sent in an `apikey` header; admins create keys with per-key permissions under Configuration > System > API. v1 uses a separate key. OAuth 2.1 and bearer token exist only for the built-in MCP server, not the REST API.",
+    "access": "paid_plan",
+    "access_detail": "No app review, listing or partner status is needed. Each customer admin creates their own API key on their own account, so that is not a gate. There is no permanent free plan: the only free option is a 30-day no-card trial, and the free-plan page is just the trial signup. After the trial, the API needs a paid plan (Starter and up). The pricing page lists an \"API keys\" row on every tier, but I could not extract per-tier API availability beyond that, so it is not confirmed that every tier includes API access. The built-in MCP server for external tools is Business and Enterprise only.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v3 covers tickets, customers, agents, departments, knowledge base, calls, chat and more. The reference is Swagger-style and is opened from the agent panel (admin only), and there are generated SDKs (Python and others). API v1 is legacy. I did not open the live reference to count endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+    "verdict": "build_with_caveat",
+    "blocker": "No free tier: developers get a 30-day trial only, then need a paid plan. Per-account API key means no OAuth for end users. Docs sit behind an admin login.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://support.liveagent.com/741982-API-key",
+        "quote": "Your API key has to be set in header of your requests:"
+      },
+      {
+        "field": "auth",
+        "url": "https://support.liveagent.com/741982-API-key",
+        "quote": "When adding a new API key in v3 you have an option to define permissions for this key"
+      },
+      {
+        "field": "access",
+        "url": "https://www.liveagent.com/pricing/",
+        "quote": "30 days free, no credit card"
+      },
+      {
+        "field": "access",
+        "url": "https://www.liveagent.com/free-plan/",
+        "quote": "Try LiveAgent free for 30 days"
+      },
+      {
+        "field": "api",
+        "url": "https://support.liveagent.com/741982-API-key",
+        "quote": "To access the API v1 section click the Settings for API v1 link under the API v3 header."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.liveagent.com/pricing/",
+        "quote": "Business and Enterprise: connect LiveAgent’s MCP server to external AI tools such as Claude."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/QualityUnit/liveagent-mcp-server",
+        "quote": "An MCP (Model Context Protocol) server that provides access to LiveAgent API functionality, enabling AI assistants to interact with your LiveAgent helpdesk system."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": 36,
+  "app": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.klaviyo.com",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.1853505,
+  "turns": 7,
+  "result": {
+    "app": "Klaviyo",
+    "description": "Marketing automation platform for email, SMS and customer data/profiles, with flows, campaigns, lists and segments.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "Private API key (scoped, per-account, user-created, server-side), OAuth2 (auth code + PKCE, for partner apps), and public key (company ID) for client-side endpoints only.",
+    "access": "self_serve_free",
+    "access_detail": "Each end user can create a scoped private API key in their own account, with no review, and Klaviyo has a free plan. For OAuth, an unreviewed app can still be installed by any customer; Klaviyo shows a warning until the app is approved. The 5-install and security-review requirements apply only to App Marketplace listing, not to connecting accounts. I did not verify that API access is available on the free plan, so paid_plan is not fully ruled out; this is likely but not confirmed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "JSON:API-style REST with dated revisions (current 2026-10-15) and an OpenAPI spec. Covers profiles, events, lists, segments, campaigns, flows, templates, catalogs, metrics, coupons, reviews and more. The Conversations API is gated.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "Klaviyo provides 3 methods of authentication including private key authentication and OAuth (used to call server-side APIs) and public key authentication (used to call client-side APIs)."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.klaviyo.com/en/docs/submit_your_app_for_review",
+        "quote": "While customers and testers can still install and use your app, having your app approved by Klaviyo will remove this warning and allow for easy discoverability within the App Marketplace."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "Private API keys can be used to read and write data to your Klaviyo account."
+      },
+      {
+        "field": "access",
+        "url": "https://www.klaviyo.com/pricing",
+        "quote": "Klaviyo Pricing | Start Free with Email & SMS"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.klaviyo.com/en/reference/api_overview",
+        "quote": "Every endpoint in the Klaviyo REST API, with its authentication, parameters, request and response bodies, and an example request."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "quote": "Get AI assistance with your Klaviyo data using Klaviyo's MCP server."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

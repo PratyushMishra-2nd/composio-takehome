@@ -1,0 +1,73 @@
+{
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "learn.microsoft.com/linkedin/marketing",
+  "model": "sonnet",
+  "seconds": 48,
+  "cost_usd": 0.170566565,
+  "turns": 5,
+  "result": {
+    "app": "LinkedIn Ads",
+    "description": "LinkedIn Marketing/Advertising API: manage ad accounts, campaigns, creatives, analytics, conversions, lead sync and audiences on LinkedIn.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "Only 3-legged OAuth2 (member authorization, scopes like r_ads, rw_ads, r_ads_reporting). 2-legged client credentials explicitly unavailable for marketing. Docs list no API key or static bearer token; the APIs.guru API-key scheme is not backed by the vendor docs, so not counted (only OAuth access tokens are used).",
+    "access": "admin_approval",
+    "access_detail": "Developer app must be accepted into the Marketing Developer Platform / Advertising API program (Development Tier, up to 5 ad accounts, no account creation via API) via LinkedIn's application review before any marketing calls work. Private APIs (Matched Audiences, Audience Insights, Media Planning, Company Intelligence) need additional approval. No fee, but vendor review is required. Application process details are on the developer portal, which was not fetched.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST (Rest.li, versioned monthly; Marketing version 202601 sunsets 2027-01-15). Covers Ad Campaigns/Creatives, Ad Analytics, Conversions, Lead Sync, DMP Segments, plus Community Management, Audience Insights, Media Planning, Company Intelligence.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+    "verdict": "needs_outreach",
+    "blocker": "LinkedIn must approve the developer app for the Advertising API / Marketing Developer Platform before working credentials exist; OAuth member consent is also required for each end user.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+        "quote": "The 2-legged client credentials flow is not available for any marketing use cases."
+      },
+      {
+        "field": "auth",
+        "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+        "quote": "For example, Marketing APIs you must use Member Authorization explained above."
+      },
+      {
+        "field": "access",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+        "quote": "Once your application has been accepted into the Development Tier, you can manage and view your Ad Accounts from the developer portal."
+      },
+      {
+        "field": "access",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+        "quote": "Matched Audiences, Audience Insights, Media Planning API, and Company Intelligence API are private APIs and require additional approval."
+      },
+      {
+        "field": "api",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+        "quote": "Build functionality for scalable ads management with Ad Campaigns and Creatives APIs."
+      },
+      {
+        "field": "api",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+        "quote": "Use the Ad Analytics API to pull campaign analytics data for measuring their performance."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pypi.org/project/linkedin-ads-mcp/",
+        "quote": "linkedin ads mcp"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": 62,
+  "app": "Vercel",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "vercel.com/docs/rest-api",
+  "model": "sonnet",
+  "seconds": 101,
+  "cost_usd": 0.170480465,
+  "turns": 4,
+  "result": {
+    "app": "Vercel",
+    "description": "Frontend cloud platform for deploying web apps; REST API manages projects, deployments, domains, env vars, DNS, teams.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Access tokens (personal/team/project scoped) passed as Bearer header; OAuth2 via Sign in with Vercel apps (bearer access token, 1h) and Integrations (client ID/secret + redirect code exchange).",
+    "access": "self_serve_free",
+    "access_detail": "Each user creates own access token at vercel.com/account/tokens; no plan requirement stated on the docs. Hobby plan is free. Sign in with Vercel apps are created from team Settings > Apps with no review, and by default any Vercel account can sign in to them, so end users can connect without vendor approval. Only Marketplace/published Integrations need review; not required for the OAuth app path. Docs are silent on plan limits for Sign in with Vercel app creation (absence of evidence). Some teams require 2FA/SAML for scoped tokens.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Reference has many categories: Deployments, Domains, DNS, Environment, Access Groups, Billing, Drains, Feature Flags, Integrations, Marketplace, Checks, User, Auth tokens, etc. SDK available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.vercel.com",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://vercel.com/docs/accounts/access-tokens",
+        "quote": "Pass the token as a Bearer token in the `Authorization` header of your request."
+      },
+      {
+        "field": "auth",
+        "url": "https://vercel.com/docs/sign-in-with-vercel",
+        "quote": "Access Token: A bearer token your application uses to call the Vercel REST API for the permissions the user grants."
+      },
+      {
+        "field": "access",
+        "url": "https://vercel.com/docs/sign-in-with-vercel/manage-from-dashboard",
+        "quote": "By default, anyone with a Vercel account can complete Sign in with Vercel for your app."
+      },
+      {
+        "field": "access",
+        "url": "https://vercel.com/docs/integrations/create-integration",
+        "quote": "Once your integration is approved, you can share it for users to install"
+      },
+      {
+        "field": "access",
+        "url": "https://vercel.com/pricing",
+        "quote": "Hobby is free, and the first deploy does not need an account."
+      },
+      {
+        "field": "api",
+        "url": "https://vercel.com/docs/rest-api",
+        "quote": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests."
+      },
+      {
+        "field": "mcp",
+        "url": "https://vercel.com/docs/mcp/vercel-mcp",
+        "quote": "Vercel MCP is Vercel's official MCP server."
+      },
+      {
+        "field": "mcp",
+        "url": "https://vercel.com/docs/mcp/vercel-mcp",
+        "quote": "Vercel MCP is available on all plans and your use is subject to Vercel's AI Product Terms."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

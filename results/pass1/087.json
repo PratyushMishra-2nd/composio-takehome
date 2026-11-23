@@ -1,0 +1,68 @@
+{
+  "id": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "hint": "developer.xero.com",
+  "model": "sonnet",
+  "seconds": 55,
+  "cost_usd": 0.23326076,
+  "turns": 8,
+  "result": {
+    "app": "Xero",
+    "description": "Cloud accounting platform for small businesses (invoicing, bank reconciliation, payroll, reporting) with a public developer API.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 authorization code (with PKCE for public clients) for multi-org apps. Custom Connections use client credentials for a single org. No API key or basic auth. Official MCP server supports custom connection client ID/secret or a bearer token. Auth-flow detail comes from my knowledge and the MCP README, because the OAuth doc pages did not render.",
+    "access": "self_serve_free",
+    "access_detail": "New apps default to the free Starter tier (5 connections, 1,000 calls per org per day). The 6th connection needs payment details and moves the app to Core (AUD 35/mo, 50 connections). Above 50 connections needs App Certification (Plus, AUD 245/mo). Above 1,000 also needs a security assessment. Enterprise is price on application. Custom Connections are excluded from the new pricing and stay on existing terms. Pricing figures come from model-extracted page summaries.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST/JSON. Families include Accounting, Payroll (AU/NZ/UK), Files, Assets, Projects, Bank Feeds, Finance, and Practice Manager. The Journals endpoint, XPM API and Bulk Connections need a security assessment and start at the Advanced tier. This family list is from my knowledge, because the API doc pages did not render. Webhooks exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/XeroAPI/xero-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "Free Starter tier caps at 5 connections. Going past 5 needs a paid plan, and past 50 needs App Certification. Sensitive endpoints (Journals) need a security assessment.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developer.xero.com/",
+        "quote": "Get started with our APIs and developer tools to create powerful integrations for small business."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+        "quote": "There are 2 modes of authentication supported in the Xero MCP server"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+        "quote": "New apps created in the Xero Developer portal will default to the Starter tier."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+        "quote": "In order to add a 6th connection, you will need to first add your payment details."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.xero.com/",
+        "quote": "Tools and resources to help you build and test your Xero integration faster."
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/HEAD/README.md",
+        "quote": "This is a Model Context Protocol (MCP) server implementation for Xero."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

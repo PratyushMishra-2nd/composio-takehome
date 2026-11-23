@@ -1,0 +1,68 @@
+{
+  "id": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "hint": "zoho.com/crm",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.12756475,
+  "turns": 4,
+  "result": {
+    "app": "Zoho CRM",
+    "description": "Cloud CRM for sales: leads, contacts, deals, accounts, pipelines and automation, with a REST API and extensible modules.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 only. Register a client in the Zoho API Console (server-based, client-based, mobile, non-browser or Self Client) to get a Client ID and secret. Access tokens last 1 hour. Refresh tokens last until revoked. Each customer org authorizes the app itself, and data-center-specific domains apply.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can register an OAuth client in the Zoho API Console with no review. The docs I fetched say nothing about Marketplace listing or app review for other orgs to connect, and no such gate was found. That is an absence of evidence, not a confirmed negative. API access is not paid-only: the Free edition gets 5000 API credits and 5 concurrent calls, and higher editions get more. Free tier caps are low but usable. Not checked: the pricing page, the OAuth web-server-applications page, and whether Free edition API access has been narrowed since. Self-serve is therefore medium confidence.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "API v8 has Metadata, Core (CRUD on all modules), Composite (up to 5 calls per request), Bulk, Notification (webhooks) and Query (COQL, SQL-like SELECT) APIs. Each API call costs 1 credit, with per-edition daily credit and concurrency limits.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.zoho.com/mcp/",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+        "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.zoho.com/accounts/protocol/oauth-setup.html",
+        "quote": "To access the resources of Zoho using the various Zoho APIs, you will need to register your application with Zoho first."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+        "quote": "Free Edition | 5000 credits | 5000 credits"
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/accounts/protocol/oauth-setup.html",
+        "quote": "On successful registration of your application, you will get a Client ID and Client secret."
+      },
+      {
+        "field": "api",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+        "quote": "Perform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/mcp/",
+        "quote": "MCP integrates with many Zoho apps, including CRM, Mail, Calendar, Desk, Cliq, Projects, and WorkDrive."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

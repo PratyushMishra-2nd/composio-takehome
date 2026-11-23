@@ -1,0 +1,68 @@
+{
+  "id": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.dataforseo.com",
+  "model": "sonnet",
+  "seconds": 61,
+  "cost_usd": 0.21405512999999998,
+  "turns": 4,
+  "result": {
+    "app": "DataForSEO",
+    "description": "Pay-as-you-go REST APIs for SEO and web data: SERP, keywords, backlinks, on-page, content analysis, labs, merchant, app data, AI optimization.",
+    "auth_methods": [
+      "basic"
+    ],
+    "auth_detail": "HTTP Basic auth with API login and an auto-generated API password from the API Access dashboard. No OAuth. Each user creates their own credentials.",
+    "access": "paid_plan",
+    "access_detail": "Free signup gives $1 trial credit and a free Sandbox that returns dummy data only. Real data needs a paid balance; minimum top-up is $50, and funds don't expire. There is no app review, partner or ISV gate: each end user creates their own API login and password, so no vendor approval is needed. The only gate is the paid balance (no subscription).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST/JSON; supports live and task-based (post/get) modes. Products: SERP, AI Optimization, Keywords Data, DataForSEO Labs, Backlinks, OnPage, Content Analysis, Merchant, App Data, Domain Analytics, Business Data. Hundreds of endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/dataforseo/mcp-server-typescript",
+    "verdict": "build_with_caveat",
+    "blocker": "Live data needs a paid balance (minimum $50 top-up). Free tier is $1 trial credit and a dummy-data Sandbox only. No approval gate.",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://dataforseo.com/pricing",
+        "quote": "Yes. The minimum account top-up is $50."
+      },
+      {
+        "field": "access",
+        "url": "https://dataforseo.com/pricing",
+        "quote": "The Sandbox provides sample responses for testing, while trial credit lets you test paid API functionality."
+      },
+      {
+        "field": "access",
+        "url": "https://dataforseo.com/pricing",
+        "quote": "Add funds to your account and pay for API services as you use them."
+      },
+      {
+        "field": "mcp",
+        "url": "https://dataforseo.com/model-context-protocol",
+        "quote": "Point your MCP-compatible client to the official DataForSEO remote endpoint:"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.dataforseo.com/v3/auth/",
+        "quote": "DataForSEO is using the Basic Authentication, which makes it possible to call our APIs with almost any programming language"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.dataforseo.com/v3/",
+        "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

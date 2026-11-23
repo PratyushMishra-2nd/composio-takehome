@@ -1,0 +1,70 @@
+{
+  "id": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "hint": "developer.monday.com",
+  "model": "sonnet",
+  "seconds": 55,
+  "cost_usd": 0.182289215,
+  "turns": 6,
+  "result": {
+    "app": "Monday.com",
+    "description": "Work OS for boards, items, docs and workflows for project management and team collaboration.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Personal V2 API token (Authorization header, per user, all scopes); OAuth 2.0 auth-code at auth.monday.com for apps (bearer tokens, scopes like boards:read/write; legacy non-expiring tokens, new OAuth 2.1 with refresh tokens).",
+    "access": "self_serve_free",
+    "access_detail": "Each end user can create their own personal token, no review, and the API is described as free across all plans (Free tier daily limit 200 calls). Free developer/sandbox accounts exist for building. OAuth apps are a possible gate: official docs say unlisted apps are not visible outside the owner's account unless shared, and the Marketplace needs review. Community posts conflict on whether an unlisted OAuth app can be installed by other accounts. I couldn't confirm that from official docs (the app-review pages returned 404). Per-user tokens avoid the gate.",
+    "api_types": [
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Single GraphQL endpoint https://api.monday.com/v2 with full schema (boards, items, columns, users, workspaces, docs, updates, webhooks, teams, tags). Rate limits per tier: daily 200 (Free) to 25,000 (Enterprise); API add-on available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/mondaycom/monday-ai/tree/master/packages/monday-api-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Multi-tenant OAuth for other customers' accounts may need app sharing or Marketplace review (unconfirmed in official docs). Free-plan daily call limit is low (200). Personal-token auth works without review.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "The monday.com platform API utilizes **personal V2 API tokens** to authenticate requests and identify the user making the call."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.monday.com/apps/docs/oauth",
+        "quote": "OAuth 2.0 is a protocol that lets your app request authorization to read or modify data in a user's monday account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.monday.com/api-reference/docs/developer-sandbox",
+        "quote": "A **developer account** (also called a **sandbox account**) is a free monday.com account designed for building and testing monday apps and API integrations."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+        "quote": "The daily call limit helps prevent disruptions caused by excessive load from individual accounts, maintains the API service as a free feature across all plans..."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+        "quote": "The monday.com API is built with GraphQL, a flexible query language that allows you to return as much or as little data as you need."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.monday.com/apps/docs/mondaycom-mcp-integration",
+        "quote": "The monday.com MCP server integration connects your preferred AI agent with your monday.com boards..."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

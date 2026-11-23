@@ -1,0 +1,79 @@
+{
+  "id": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "hint": "front.com",
+  "model": "sonnet",
+  "seconds": 70,
+  "cost_usd": 0.13579461,
+  "turns": 4,
+  "result": {
+    "app": "Front",
+    "description": "Shared inbox and customer operations platform that unifies email, chat, SMS and social conversations with team collaboration and automation.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Core REST API (api2.frontapp.com) takes Bearer tokens, obtained either from company-level API tokens (admin-created) or from OAuth2 authorization-code flow. OAuth2 applies to the Core API itself, not only MCP; it is required for public integrations. The MCP server separately uses OAuth 2.1 with no dynamic client registration.",
+    "access": "self_serve_free",
+    "access_detail": "Company admin creates API tokens or private OAuth apps in Settings > Developers with no plan requirement found in the docs. Private apps need no review. Publishing a public app to all customers goes through a submission and testing step, though Front says it approves the vast majority of submissions. A Front workspace is needed, and the pricing page was not confirmed to show API access per plan.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Core API covers conversations, messages, drafts, contacts, inboxes, channels, tags, teammates, comments, rules and more. Also has Channel API, Application webhooks and Plugin SDK. Rate limits apply, with a paid add-on for increases.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.frontapp.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "The Core API uses Bearer tokens to authenticate its user."
+      },
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "There are two ways to get a Bearer token — through API tokens in your settings or through an OAuth implementation"
+      },
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "You can use OAuth to authorize requests to the Core API"
+      },
+      {
+        "field": "auth",
+        "url": "https://dev.frontapp.com/docs/oauth",
+        "quote": "Front's OAuth implementation only supports the authorization code grant type"
+      },
+      {
+        "field": "access",
+        "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+        "quote": "By default, apps are private to the Front instance they are created in."
+      },
+      {
+        "field": "access",
+        "url": "https://dev.frontapp.com/docs/partnering-with-front",
+        "quote": "We are currently an open integration platform and approve the vast majority of integrations submitted to us."
+      },
+      {
+        "field": "api",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "The Core API uses Bearer tokens to authenticate its user."
+      },
+      {
+        "field": "mcp",
+        "url": "https://dev.frontapp.com/docs/mcp-server",
+        "quote": "Agents authenticate as a specific Front user, with permissions matching that user's role (user-scoped authorization)."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

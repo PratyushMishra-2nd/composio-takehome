@@ -1,0 +1,68 @@
+{
+  "id": 99,
+  "app": "YouTube Transcript",
+  "category": "AI, Research and Media-native",
+  "hint": "transcriptapi.com",
+  "model": "sonnet",
+  "seconds": 30,
+  "cost_usd": 0.1452745,
+  "turns": 5,
+  "result": {
+    "app": "YouTube Transcript",
+    "description": "TranscriptAPI: REST API and hosted MCP server to fetch YouTube video transcripts, search videos, and browse channels and playlists.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "auth_detail": "REST API: API key sent as Authorization: Bearer header; keys come from the dashboard. OAuth 2.1 is offered only on the hosted MCP server (Claude/ChatGPT clients), not the REST API, so oauth2 is dropped from the REST auth methods.",
+    "access": "self_serve_free",
+    "access_detail": "Self-serve signup; new accounts get 100 free credits, no card required. Paid plan $5/month for 1,000 credits ($54/year) for more volume.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Base https://transcriptapi.com/api/v2. About 14 endpoints under /youtube: transcript, info, video metadata, search, channel resolve/info/search/videos/playlists/posts/sections/latest, playlist videos. Credit-metered (1 credit per call, some free). Swagger UI available.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://transcriptapi.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://transcriptapi.com/docs/llms-small.txt",
+        "quote": "The API uses Bearer token authentication. Include your API key in the `Authorization` header of every request:"
+      },
+      {
+        "field": "auth",
+        "url": "https://transcriptapi.com/docs/mcp/",
+        "quote": "Authentication: OAuth 2.1 (Claude, ChatGPT) or an API key sent as a Bearer token (OpenAI Agent Builder and other clients)."
+      },
+      {
+        "field": "access",
+        "url": "https://transcriptapi.com/pricing",
+        "quote": "You can start for free: new accounts get 100 free credits, no card required, and one transcript costs one credit."
+      },
+      {
+        "field": "api",
+        "url": "https://transcriptapi.com/docs/llms-small.txt",
+        "quote": "All API requests are made to: https://transcriptapi.com/api/v2"
+      },
+      {
+        "field": "mcp",
+        "url": "https://transcriptapi.com/pricing",
+        "quote": "Yes. TranscriptAPI runs an MCP server at https://transcriptapi.com/mcp."
+      },
+      {
+        "field": "description",
+        "url": "https://transcriptapi.com/docs/llms-small.txt",
+        "quote": "Extract YouTube video transcripts with a simple API call or through Model Context Protocol"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

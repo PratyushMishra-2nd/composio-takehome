@@ -1,0 +1,73 @@
+{
+  "id": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.dataforseo.com",
+  "model": "sonnet",
+  "seconds": 86,
+  "cost_usd": 0.22548482499999997,
+  "turns": 6,
+  "result": {
+    "app": "DataForSEO",
+    "description": "Pay-as-you-go API platform selling SEO and business data: SERP, keywords, backlinks, on-page, labs, domain analytics, content analysis, and more.",
+    "auth_methods": [
+      "basic"
+    ],
+    "auth_detail": "REST API accepts HTTP Basic only: API login plus an auto-generated API password (not the account password), sent in the Authorization header. OAuth 2.0 applies only to the HTTP MCP server transport, not the REST API.",
+    "access": "self_serve_trial",
+    "access_detail": "Free signup gives a $1 trial credit. Full use needs a $50 minimum top-up. Pricing is pay-as-you-go with no subscription, and balance never expires. Treated as trial-gated, since real usage means a prepaid deposit.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST/JSON with many API families: SERP, AI Optimization, Keywords Data, Domain Analytics, DataForSEO Labs, Backlinks, OnPage, Content Analysis, Merchant, App Data (plus Business Data per summary). Supports live and task-based endpoints. The auth page quote below comes from a model summary, not verbatim page text.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/dataforseo/mcp-server-typescript",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.dataforseo.com/v3/auth/",
+        "quote": "Basic authentication is the only way to access DataForSEO API"
+      },
+      {
+        "field": "access",
+        "url": "https://dataforseo.com/pricing",
+        "quote": "Yes. The minimum account top-up is $50."
+      },
+      {
+        "field": "access",
+        "url": "https://dataforseo.com/pricing",
+        "quote": "use your $1 trial credit available to new accounts"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.dataforseo.com/v3/",
+        "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service."
+      },
+      {
+        "field": "mcp",
+        "url": "https://dataforseo.com/seo-mcp-server",
+        "quote": "The server is open source at github.com/dataforseo/mcp-server-typescript."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/dataforseo/mcp-server-typescript",
+        "quote": "MCP server and CLI for LLM agents to browse DataForSEO API documentation and make authenticated API requests."
+      },
+      {
+        "field": "verdict",
+        "url": "https://dataforseo.com/pricing",
+        "quote": "DataForSEO uses a pay-as-you-go pricing model with no subscriptions or recurring fees."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

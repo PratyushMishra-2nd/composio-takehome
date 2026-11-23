@@ -1,0 +1,65 @@
+{
+  "id": 25,
+  "app": "Pumble",
+  "category": "Communications and Messaging",
+  "hint": "pumble.com",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.199209245,
+  "turns": 9,
+  "result": {
+    "app": "Pumble",
+    "description": "Team chat/messaging app (Slack alternative) by CAKE.com with channels, DMs, and a public API plus app SDK.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Two routes. (1) API-key addon: each user installs the API addon and generates keys, sent as an API key header. (2) Pumble Apps SDK OAuth2 auth-code flow: the app id is the clientId, and the code is exchanged at https://api-ga.pumble.com/oauth2/access for accessToken and botToken. Tokens need no refresh.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit. (1) Review: no doc found requiring app review, publishing, or partner status for other workspaces to install an OAuth app. The authorize/install link works from Configure Apps or any external site. The only gate is that a workspace Owner or Admin must install apps (or approve member requests), which is a normal per-customer install, not a vendor review. The API-key route is per-user self-serve. I did not fetch the 'Publishing to CAKE.com Marketplace' page, so marketplace listing is optional and unverified. (2) Plan: the API addon is 'Available on all plans.' The Free plan allows up to 3 apps/integrations, and it is not stated whether the API addon counts toward that limit. Both routes are free to start. Residual risk: Free plan addon cap (3), and the MCP page states no plan requirement.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "The API-key addon exposes a REST API documented in Swagger: send messages, reactions, and more. The rate limit is 1000 requests/min per user. The Node SDK (pumble-sdk, v0.0.27, TypeScript) uses OAuth2 scopes, events, and slash commands. Breadth is reasonable for messaging but less than Slack's.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.pumble.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "The rate limit is up to 1000 requests per minute per user."
+      },
+      {
+        "field": "access",
+        "url": "https://pumble.com/help/integrations/add-pumble-apps/guide-to-pumble-integrations/",
+        "quote": "Only Owners and Admins can install apps."
+      },
+      {
+        "field": "access",
+        "url": "https://pumble.com/pricing",
+        "quote": "Connect with up to 3 apps & integrations, in addition to free native integrations with Clockify and Plaky."
+      },
+      {
+        "field": "api",
+        "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html",
+        "quote": "Generated access tokens do not need to be refreshed."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+        "quote": "With the Pumble Model Context Protocol (MCP) server, you can connect third-party AI agents"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

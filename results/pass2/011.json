@@ -1,0 +1,80 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "hint": "zendesk.com",
+  "model": "sonnet",
+  "seconds": 60,
+  "cost_usd": 0.299389405,
+  "turns": 7,
+  "result": {
+    "app": "Zendesk",
+    "description": "Customer service and support platform: ticketing, help center, messaging, voice, live chat, sales CRM and AI agents.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "OAuth2 access tokens (Bearer) are preferred. Global OAuth is required for apps distributed to multiple customers. API tokens via Basic auth ({email}/token:{token}) are labelled deprecated.",
+    "access": "self_serve_trial",
+    "access_detail": "Developer docs point to a free 14-day trial account, with no credit card needed. No permanent free developer sandbox was verified. A sponsored-account page link returned 404. I could not confirm which plans include API access. Distributing a global OAuth client to many customers likely needs a Zendesk-side registration; I did not verify this.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Multiple REST API families: Support/Ticketing (tickets, users, organizations, custom objects, workflows), Help Center, Voice, Live Chat, Sales CRM, Custom Data, Conversations/Messaging.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://pypi.org/project/zendesk-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "The trial account is time-limited. OAuth global-client setup is needed for multi-tenant use. API tokens are being phased out. No official, documented vendor MCP server was found.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Zendesk supports using OAuth access tokens to authenticate API requests."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Basic authentication is used for API tokens."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "If you plan on making an app, integration, or bot available to multiple Zendesk customers, you must use global OAuth access tokens to authenticate Zendesk API requests."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.zendesk.com/documentation/",
+        "quote": "Try out the Sunshine Platform with a free, 14-day trial account."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zendesk.com/register/",
+        "quote": "100% free. No credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+        "quote": "You can use the Support API with tickets, users, organizations, custom objects, and manage ticket workflows."
+      },
+      {
+        "field": "mcp",
+        "url": "https://pypi.org/project/zendesk-mcp",
+        "quote": "Zendesk MCP server for Claude Code and other MCP clients"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.zendesk.com/documentation/",
+        "quote": "Try out the Sunshine Platform with a free, 14-day trial account."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

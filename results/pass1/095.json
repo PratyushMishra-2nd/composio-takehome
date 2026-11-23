@@ -1,0 +1,75 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "hint": "reducto.ai (document parsing)",
+  "model": "sonnet",
+  "seconds": 38,
+  "cost_usd": 0.155485525,
+  "turns": 4,
+  "result": {
+    "app": "Reducto",
+    "description": "Agentic document platform: parse, extract, split, classify and edit documents for AI pipelines.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "API key created in Studio, sent as 'Authorization: Bearer $REDUCTO_API_KEY'. No OAuth for third-party apps; single key per account.",
+    "access": "self_serve_free",
+    "access_detail": "Standard pay-as-you-go plan, self-serve signup in Studio, includes $150 free usage, then per-page rates. Growth and Enterprise are contact-sales but not needed for API access. The pricing FAQ was collapsed, so I did not read it.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at platform.reducto.ai. Endpoints: Parse, Extract, Split, Classify, Edit and Pipeline, each with an async variant. Also Upload, Delete upload, Jobs (get, list, cancel, delete), Configure webhook and Version. SDKs for Python, Node.js and Go. I only verified the Parse path.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.reducto.ai/mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.reducto.ai",
+        "quote": "Reducto is the agentic document platform for AI teams who need production-grade document processing at enterprise scale."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.reducto.ai/quickstart",
+        "quote": "This allows the SDK to authenticate automatically without hardcoding the key in your code."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.reducto.ai/mcp-server",
+        "quote": "\"Authorization\": \"Bearer your-api-key\""
+      },
+      {
+        "field": "access",
+        "url": "https://reducto.ai/pricing",
+        "quote": "After your free $150, standard rates apply."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.reducto.ai/quickstart",
+        "quote": "Sign up for a free account without leaving the docs."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.reducto.ai",
+        "quote": "Available in Python, Node.js, Go, and REST, with Studio for visual pipeline building."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.reducto.ai/mcp-server",
+        "quote": "The Reducto MCP server connects AI agents directly to Reducto."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

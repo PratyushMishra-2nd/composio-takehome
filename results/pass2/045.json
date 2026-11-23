@@ -1,0 +1,68 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "hint": "developer.adobe.com/commerce",
+  "model": "sonnet",
+  "seconds": 24,
+  "cost_usd": 0.1374842,
+  "turns": 4,
+  "result": {
+    "app": "Magento (Adobe Commerce)",
+    "description": "Open-source/commercial ecommerce platform (Adobe Commerce) with REST, GraphQL and SOAP APIs for catalog, orders, customers, and carts on self-hosted stores.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "session_login",
+      "other"
+    ],
+    "auth_detail": "Per-store: admin/customer token (username+password exchanged for bearer token), integration OAuth 1.0a (consumer key/secret + access token/secret, created in Admin), session login; Adobe IMS OAuth server-to-server for the SaaS (Cloud Service) edition.",
+    "access": "self_serve_free",
+    "access_detail": "Each merchant store issues its own credentials (Admin > System > Extensions > Integration). Open-source Magento and Adobe Commerce are self-hostable, so a developer can get working creds free on their own instance. No central app review. Every customer has a different store URL (per-tenant base URL).",
+    "api_types": [
+      "rest",
+      "graphql",
+      "soap"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST and GraphQL cover catalog, inventory, customers, carts, orders, invoices, shipments, CMS, etc. SOAP also exists. Tenant-specific base URL needed.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/boldcommerce/magento2-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Self-hosted per-tenant stores: user must supply store base URL and create an Admin integration or token; OAuth 1.0a plus token variants differ by PaaS/SaaS edition.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+        "quote": "Third-party applications use OAuth-based authentication to access the web APIs."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+        "quote": "The token service returns a unique authentication token in exchange for a username and password for an admin or customer account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "quote": "Create a new integration on Admin."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.adobe.com/commerce/webapi/",
+        "quote": "The Web API documentation is divided into three guides: REST, GraphQL, and Getting Started."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/boldcommerce/magento2-mcp",
+        "quote": "boldcommerce/magento2-mcp"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "low"
+    }
+  }
+}

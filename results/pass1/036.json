@@ -1,0 +1,74 @@
+{
+  "id": 36,
+  "app": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.klaviyo.com",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.192739135,
+  "turns": 8,
+  "result": {
+    "app": "Klaviyo",
+    "description": "Marketing automation platform for email, SMS, flows, segmentation and customer data.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Private API key (pk_..., Authorization: Klaviyo-API-Key) for server-side; OAuth2 auth-code + PKCE (Bearer) for apps; public 6-char company ID for client-side /client endpoints.",
+    "access": "self_serve_free",
+    "access_detail": "Free plan exists (250 profiles, 500 emails/mo). Private keys created in Settings > API keys by Owner/Admin/Manager. Docs state no plan restriction, but not explicit for free tier. OAuth apps self-created in Klaviyo; App Marketplace listing needs review + 5 installs, not needed for private use.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST with JSON:API conventions, versioned via revision header, OpenAPI spec at github.com/klaviyo/openapi. Covers profiles, lists, segments, events, metrics, campaigns, flows, forms, reporting. Per-API scopes (e.g. profiles:read, lists:write). Rate limited with 429. Full resource list not verified from fetched pages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.klaviyo.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/reference/api_overview",
+        "quote": "Klaviyo provides 3 methods of authentication including private key authentication and OAuth (used to call server-side APIs) and public key authentication (used to call client-side APIs)."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "When setting up OAuth, you must provide designated scopes for each API authorization request you'll want to make."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.klaviyo.com/en/docs/get_started",
+        "quote": "Log in, grab your API credentials, and start developing."
+      },
+      {
+        "field": "access",
+        "url": "https://www.klaviyo.com/pricing",
+        "quote": "Up to 250 active profiles and 500 emails per month"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.klaviyo.com/en/reference/api_overview",
+        "quote": "If you do not use an API key for your requests, or if you use a key from the wrong account, your call will return an error."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "quote": "Your MCP client can help with a variety of tasks from campaign creation to flow performance reports."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server",
+        "quote": "Our server is compatible with any MCP client that supports remote servers."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

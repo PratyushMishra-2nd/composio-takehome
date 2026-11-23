@@ -1,0 +1,80 @@
+{
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "hint": "developers.asana.com",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.12254005999999999,
+  "turns": 3,
+  "result": {
+    "app": "Asana",
+    "description": "Work management platform for teams to organize tasks, projects, and workflows.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "OAuth 2.0 authorization code grant (recommended for multi-user apps; 1h access tokens + refresh, PKCE for native/localhost); Personal Access Token (bearer); Service Account token (Enterprise only); OpenID Connect for login.",
+    "access": "self_serve_free",
+    "access_detail": "Developer creates OAuth app or PAT in developer console (app.asana.com/0/my-apps). Review not required to obtain a token; App Directory review only for public listing. Free domains have API rate tier (150 req/min) vs paid 1,500/min. Free plan API access implied by rate-limit table, not stated outright.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API is primary platform feature; also webhooks, batch API, app components, SCIM, audit log events. Endpoint count not directly verified but covers tasks, projects, portfolios, goals, custom fields, etc.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.asana.com/v2/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/oauth",
+        "quote": "Asana supports the authorization code grant flow"
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/oauth",
+        "quote": "Asana uses OAuth 2.0 for secure user authorization."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/publish-your-app",
+        "quote": "Submitting your app for review is not required to obtain a token."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/rate-limits",
+        "quote": "Limits are based on minute-long windows and differ depending on whether the domain is free or paid"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.asana.com/docs/overview",
+        "quote": "Asana apps use features like our rest API, app components, and webhooks."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+        "quote": "The Asana MCP V2 server is available at: `https://mcp.asana.com/v2/mcp`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+        "quote": "This server requires authentication with your Asana account."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "hint": "developer.salesforce.com/docs/commerce",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.230942475,
+  "turns": 8,
+  "result": {
+    "app": "Salesforce Commerce Cloud",
+    "description": "Enterprise ecommerce platform (B2C Commerce) with storefront, catalog, basket/order, customer and admin APIs for building headless/composable storefronts.",
+    "auth_methods": [
+      "oauth2",
+      "jwt"
+    ],
+    "auth_detail": "Admin SCAPI: Account Manager API client, OAuth2 client_credentials only (also JWT client auth). Shopper APIs: SLAS client, private client client_credentials for guest, authorization_code_pkce for registered shoppers. Bearer token on calls.",
+    "access": "admin_approval",
+    "access_detail": "No free self-serve signup found. Need licensed B2C Commerce tenant/instance plus Account Manager admin to create API clients and SLAS client (one per instance). Sandbox via customer org. Salesforce docs returned 403 to fetcher, so details come from search summaries and the github.io tooling docs; confidence reduced.",
+    "api_types": [
+      "rest",
+      "sdk_only",
+      "cli_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "SCAPI REST: Shopper APIs (products, baskets, orders, customers, search via SLAS) and Admin APIs (catalogs, products, jobs, sites etc. via Account Manager). Legacy OCAPI also exists. Per-instance base URL (short code + tenant ID) required. Not independently verified from official pages (403).",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Requires a licensed B2C Commerce tenant and Account Manager admin to get credentials; per-tenant base URLs; no free self-serve developer access found. Official MCP is dev-tooling focused (developer preview), not a store-operations toolkit.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+        "quote": "With a client secret configured, the CLI uses client credentials."
+      },
+      {
+        "field": "auth",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+        "quote": "JWT authentication uses a certificate instead of a client secret."
+      },
+      {
+        "field": "access",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+        "quote": "This is configured in the Salesforce Commerce Cloud Account Manager."
+      },
+      {
+        "field": "api",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+        "quote": "Jobs, sites, code version activation, and other API commands use an Account Manager API client."
+      },
+      {
+        "field": "mcp",
+        "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp",
+        "quote": "The B2C MCP server connects your AI assistant to Salesforce B2C Commerce tools, documentation, and workflow skills."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

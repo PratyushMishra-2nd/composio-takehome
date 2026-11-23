@@ -1,0 +1,68 @@
+{
+  "id": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "hint": "developer.intuit.com",
+  "model": "sonnet",
+  "seconds": 64,
+  "cost_usd": 0.215105305,
+  "turns": 8,
+  "result": {
+    "app": "QuickBooks",
+    "description": "Intuit's QuickBooks Online cloud accounting software, with an API for invoices, customers, payments, bills, reports and more.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 authorization-code flow. Developer creates an app on developer.intuit.com to get client ID and secret. Intuit's MCP server README confirms OAuth 2.0 against a QuickBooks Online company. Intuit docs pages were JS-rendered, so the OAuth quote comes from the README.",
+    "access": "self_serve_free",
+    "access_detail": "Free Builder tier: $0/month, unlimited Core calls, 500,000 CorePlus credits/month. Calls are blocked after the cap. Free sandbox company available. Premium APIs (Projects, Custom Fields, Sales Tax, Time with Payroll) need Silver/Gold/Platinum partner tier plus a support ticket. Production keys for apps used by other companies likely need Intuit's app assessment; I could not confirm this from a fetchable page. Pricing evidence is from Apideck (third party), because Intuit's developer pages could not be fetched.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "QuickBooks Online Accounting REST API with CRUD and query for dozens of entities (Invoice, Customer, Bill, Payment, Account and others) plus financial reports. Also Payments API and webhooks. Premium APIs are gated by partner tier.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company."
+      },
+      {
+        "field": "access",
+        "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program.md",
+        "quote": "Completely free and unlimited across all partner tiers"
+      },
+      {
+        "field": "access",
+        "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program.md",
+        "quote": "As of July 17, 2025, Intuit has launched Premium APIs exclusively available to Silver, Gold and Platinum tier partners."
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients."
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online"
+      },
+      {
+        "field": "description",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

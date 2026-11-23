@@ -1,0 +1,69 @@
+{
+  "id": 46,
+  "app": "Squarespace",
+  "category": "Ecommerce",
+  "hint": "developers.squarespace.com",
+  "model": "sonnet",
+  "seconds": 70,
+  "cost_usd": 0.252518665,
+  "turns": 9,
+  "result": {
+    "app": "Squarespace",
+    "description": "Website builder and ecommerce platform; developer APIs cover commerce data (orders, products, inventory, contacts, discounts, transactions) and webhooks.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Site-level API key (Bearer) generated in the merchant's site settings, for custom apps on one site; OAuth 2.0 (auth-code, scoped) for multi-merchant apps, requires registering the OAuth client and getting it reviewed/approved.",
+    "access": "admin_approval",
+    "access_detail": "API keys need the merchant's Commerce Advanced plan (paid). OAuth for third-party apps needs the OAuth client registered and reviewed/approved by Squarespace (approves OAuth connections only; Extensions listing is separate). Webhook Subscriptions API is OAuth-only. Plan requirement for OAuth is not stated on the OAuth page.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at api.squarespace.com. Commerce APIs: Orders, Products, Inventory, Transactions, Contacts, Discounts, Profiles (maintenance; use Contacts), Forms (Zapier only), Webhook Subscriptions, plus Analytics/Websites and Reseller APIs. Create Order limited to 100 req/hour per site with API key.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.squarespace.com/mcp/overview",
+    "verdict": "build_with_caveat",
+    "blocker": "Third-party OAuth needs Squarespace review/approval of the OAuth client; API-key route needs the paid Commerce Advanced plan per site. API is commerce-focused, not site-content editing.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+        "quote": "Depending on your development needs, authenticate requests by using an API key or OAuth access token."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+        "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.squarespace.com/oauth",
+        "quote": "This review only approves your client for OAuth connections with Squarespace."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.squarespace.com/",
+        "quote": "Read and write orders, products, inventory, and transactions"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.squarespace.com/mcp/overview",
+        "quote": "The Squarespace MCP server connects AI assistants to Squarespace."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.squarespace.com/mcp/overview",
+        "quote": "The Commerce tools read and change a website, so they need you to sign in with your Squarespace account."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

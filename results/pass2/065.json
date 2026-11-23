@@ -1,0 +1,65 @@
+{
+  "id": 65,
+  "app": "Supabase",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "supabase.com/docs",
+  "model": "sonnet",
+  "seconds": 31,
+  "cost_usd": 0.13173963,
+  "turns": 3,
+  "result": {
+    "app": "Supabase",
+    "description": "Open-source Postgres backend platform (database, auth, storage, edge functions, realtime) with a Management API for managing projects and orgs.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Management API: personal access token (bearer) for own account, or OAuth2 auth-code for third-party integrations (access+refresh tokens). Per-project data APIs use project anon/service_role API keys or user JWTs.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can sign up free, generate PATs, and register OAuth apps in org settings. Management API has no plan-tier restriction; resources created are billed per pricing. Rate limit 120 req/min.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Management API (api.supabase.com) covers projects, orgs, branches, secrets, edge functions, database config, SQL query, auth config etc. Plus per-project PostgREST auto-generated REST, Auth (GoTrue), Storage, Edge Functions APIs.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.supabase.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API."
+      },
+      {
+        "field": "auth",
+        "url": "https://supabase.com/docs/guides/platform/oauth-apps/authorize-an-oauth-app",
+        "quote": "This guide steps through building a Supabase Integration using OAuth2 and the management API,"
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "All resources created via the API are subject to the pricing detailed on our Pricing pages."
+      },
+      {
+        "field": "api",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "All API requests require an access token to be included in the Authorization header:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+        "quote": "The hosted Supabase MCP server is available at `https://mcp.supabase.com/mcp`."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

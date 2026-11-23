@@ -1,0 +1,70 @@
+{
+  "id": 99,
+  "app": "YouTube Transcript",
+  "category": "AI, Research and Media-native",
+  "hint": "transcriptapi.com",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.16837188000000003,
+  "turns": 8,
+  "result": {
+    "app": "YouTube Transcript (TranscriptAPI)",
+    "description": "Hosted REST API and MCP server that extracts YouTube video transcripts, plus search, channel and playlist listings.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "REST API: per-account API key (sk_ prefix) sent as 'Authorization: Bearer API_KEY'. OAuth 2.1 is offered only on the hosted MCP server (Claude, ChatGPT clients), not as a documented REST developer flow. Each end user creates their own key from the dashboard.",
+    "access": "self_serve_trial",
+    "access_detail": "Gate audit (1): no app review, verification or partner status. Each user signs up and creates their own API key, so connecting other customers' accounts needs no vendor approval. Gate audit (2): signup gives a one-time 100 free credits with no card, and that is enough for working keys. Ongoing use needs the $5/month plan (1,000 credits). Top-ups need an active subscription. Three endpoints (info, channel/resolve, channel/latest) cost no credits. I could not read the pricing section verbatim (the fetch truncated it). The pricing details come from a model-extracted summary, so the free-vs-paid boundary is medium confidence.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Base URL https://transcriptapi.com/api/v2. 13 GET endpoints: transcript, video info and metadata, search, channel resolve/info/search/videos/playlists/posts/sections/latest, playlist videos. Each successful request costs 1 credit (1 per page for listings). Read-only, YouTube-focused. A Swagger page exists.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://transcriptapi.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Credit-metered. Only 100 one-time free credits, then a paid plan ($5/month for 1,000 credits) is needed. Read-only and narrow in scope.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://transcriptapi.com/docs",
+        "quote": "Extract YouTube video transcripts with a simple API call or through Model Context Protocol"
+      },
+      {
+        "field": "auth",
+        "url": "https://transcriptapi.com/docs/llms-full.txt",
+        "quote": "Authorization: Bearer YOUR_API_KEY"
+      },
+      {
+        "field": "access",
+        "url": "https://transcriptapi.com/docs/mcp/",
+        "quote": "New accounts get 100 free credits."
+      },
+      {
+        "field": "access",
+        "url": "https://transcriptapi.com/docs/mcp/",
+        "quote": "Paid plans start at $5 per month for 1,000 credits."
+      },
+      {
+        "field": "api",
+        "url": "https://transcriptapi.com/docs/llms-full.txt",
+        "quote": "https://transcriptapi.com/api/v2"
+      },
+      {
+        "field": "mcp",
+        "url": "https://transcriptapi.com/docs/mcp/",
+        "quote": "TranscriptAPI runs a hosted (remote) MCP server at https://transcriptapi.com/mcp."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

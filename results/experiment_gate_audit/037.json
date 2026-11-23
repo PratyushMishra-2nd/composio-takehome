@@ -1,0 +1,68 @@
+{
+  "id": 37,
+  "app": "systeme.io",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "systeme.io (funnel builder)",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.18614733500000002,
+  "turns": 7,
+  "result": {
+    "app": "systeme.io",
+    "description": "All-in-one marketing platform: funnel builder, email marketing, courses, communities, affiliate, and e-commerce.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Per-account Public API key sent in the X-API-Key header. No OAuth (OAuth only 'planned' for MCP). Each user creates own key (up to 3) in Settings > MCP & API keys.",
+    "access": "self_serve_free",
+    "access_detail": "Any user creates their own API key in account Settings; no app review, partner status, or listing needed. Free plan never expires and needs no credit card. Pricing page extracted no explicit plan restriction on API; only an 'API requests per minute' row (per-plan values not captured), so rate limits differ by tier but no paid gate found. Help article states no plan restriction.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at api.systeme.io/api. Help article lists: contacts, tags, custom fields, newsletters, campaigns, email stats, funnels, price plans/coupons, courses, modules, lectures, communities, automation rules, subscriptions, webhooks, digital/physical products, offers, calendar bookings, SMS templates. Cursor pagination (startingAfter), 429 rate limits with headers.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.systeme.io/docs/mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "To authenticate with the Systeme.io Public API, your only option right now is to attach your API key to the `X-API-Key` header of each request."
+      },
+      {
+        "field": "access",
+        "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+        "quote": "Give your key a name, set an expiration date, and click **Save** (4)."
+      },
+      {
+        "field": "access",
+        "url": "https://systeme.io/pricing",
+        "quote": "The free plan never expires and does not require a credit card."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "Use the `startingAfter` parameter to specify the ID of the last item you received."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.systeme.io/docs/mcp-server",
+        "quote": "The Systeme.io MCP server currently supports **contact and newsletter management**."
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+        "quote": "This is an **initial release implementation** and does not yet support the recommended authentication method (OAuth)."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

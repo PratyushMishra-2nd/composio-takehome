@@ -1,0 +1,80 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "neo4j.com/docs/api",
+  "model": "sonnet",
+  "seconds": 49,
+  "cost_usd": 0.183176475,
+  "turns": 7,
+  "result": {
+    "app": "Neo4j",
+    "description": "Graph database platform; Aura cloud API manages instances and Query API runs Cypher over HTTP.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "bearer_token"
+    ],
+    "auth_detail": "Aura management REST API itself (api.neo4j.io): OAuth 2.0 client-credentials. Client ID/secret from Aura Console go as HTTP Basic to POST /oauth/token. Returns 1-hour bearer token for the Authorization header. Database access (Query API/Bolt): username/password Basic, or bearer token from SSO/OIDC on Enterprise/Aura. MCP server login is separate and not the basis for this.",
+    "access": "self_serve_free",
+    "access_detail": "Aura API credentials creatable on all tiers. AuraDB Free is $0 with no credit card. Free/trial accounts rate-limited to 25 req/min; 125 req/min on paid tiers.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Aura API v1 (api.neo4j.io) manages instances, plus billing endpoints in v2beta1; full endpoint list is in the OpenAPI spec. I did not fetch the spec, so I can't confirm the exact endpoint count. Query API runs Cypher over HTTPS and is enabled by default. I did not read the Query API auth page, so its auth methods come from the MCP docs and general knowledge.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/neo4j/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "The Aura API uses OAuth 2.0 for API authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "Authentication to the token endpoint uses HTTP Basic Authentication, where the client ID and client secret are provided as the username and password, respectively."
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "All tiers can create Aura API credentials."
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/pricing/",
+        "quote": "No credit card or other payment method required"
+      },
+      {
+        "field": "api",
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "The Aura API allows you to programmatically perform actions on your Aura instances without the need to log in to the Console."
+      },
+      {
+        "field": "api",
+        "url": "https://neo4j.com/docs/query-api/current/",
+        "quote": "The Query API allows to execute Cypher statements against a Neo4j server through HTTP requests."
+      },
+      {
+        "field": "mcp",
+        "url": "https://neo4j.com/docs/mcp/current/authentication/",
+        "quote": "The bearer token is obtained from your identity provider and passed to Neo4j for authentication."
+      },
+      {
+        "field": "mcp",
+        "url": "https://neo4j.com/blog/genai/introducing-mcp-for-aura/",
+        "quote": "Authentication runs through the Aura Console using a human-in-the-loop OAuth redirect."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

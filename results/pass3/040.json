@@ -1,0 +1,64 @@
+{
+  "id": 40,
+  "app": "SendGrid",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "sendgrid.com",
+  "model": "sonnet",
+  "seconds": 65,
+  "cost_usd": 0.14363894500000002,
+  "turns": 5,
+  "result": {
+    "app": "SendGrid",
+    "description": "Twilio SendGrid: cloud email delivery platform (transactional and marketing email) with v3 REST API and SMTP relay.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "API keys sent as Bearer token in Authorization header. No OAuth2 for third-party developers (OAuth only for partner/Twilio-reviewed integrations).",
+    "access": "self_serve_trial",
+    "access_detail": "Free plan discontinued; signup gives a 60-day free trial (100 emails/day, no credit card), then paid plan needed. Users bring own API keys.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "v3 REST API at api.sendgrid.com/v3: Mail Send, templates, contacts/lists, marketing campaigns, stats, suppressions, webhooks, API keys, subusers, etc. Also SMTP relay.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://mcpservers.org/servers/Garoth/sendgrid-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No permanent free tier: only a 60-day trial; users need paid plan long-term. API key auth only, no OAuth.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+        "quote": "To use an API key, include an `Authorization` header with the value `Bearer <YOUR_API_KEY_HERE>` in your request."
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+        "quote": "Sign up for a free trial—no credit card required"
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+        "quote": "**Free trial** lets you send 100 emails/day for 60 days"
+      },
+      {
+        "field": "api",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+        "quote": "curl -X \"GET\" \"https://api.sendgrid.com/v3/templates\" -H \"Authorization: Bearer <YOUR_API_KEY_HERE>\" -H \"Content-Type: application/json\""
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcpservers.org/servers/neschadin/sendgrid-mcp",
+        "quote": "not affiliated with, endorsed by, or sponsored by Twilio SendGrid"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

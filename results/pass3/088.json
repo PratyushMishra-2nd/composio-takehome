@@ -1,0 +1,79 @@
+{
+  "id": 88,
+  "app": "Brex",
+  "category": "Finance and Fintech",
+  "hint": "developer.brex.com",
+  "model": "sonnet",
+  "seconds": 47,
+  "cost_usd": 0.1679219,
+  "turns": 6,
+  "result": {
+    "app": "Brex",
+    "description": "Corporate card, spend management and finance platform for businesses (cards, expenses, payments, budgets, team management).",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Customer user token (Bearer), created by an account or card admin in the dashboard. OAuth2 Authorization Code Grant for partner apps acting on other Brex accounts; client ID and secret issued only by contacting developer support. Client Credentials Grant for the onboarding API only.",
+    "access": "customer_account",
+    "access_detail": "User tokens need an existing Brex customer account with admin access and an accepted developer API agreement. No public developer sandbox: staging \"is not a sandbox\". OAuth for multi-tenant apps needs a client ID and secret from Brex developer support. No pricing or plan gate for the API was found.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST/OpenAPI. Team API covers users, locations, departments, titles, cost centers, cards, legal entities, roles and companies. Transactions and Payments APIs also exist. Onboarding, Expenses, Budgets and Webhooks were not verified on the pages read.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.brex.com/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve developer account or sandbox. Credentials exist only inside a Brex customer account, and OAuth for a multi-tenant app needs a client ID and secret from Brex developer support.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.brex.com/guides/authentication",
+        "quote": "generate a user token from your Brex dashboard and pass it along in your API call headers."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.brex.com/guides/partner_authentication",
+        "quote": "For all other APIs, you will implement the Authorization Code Grant"
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.brex.com/guides/partner_authentication",
+        "quote": "If you are using the onboarding API, you will generate a Client Credentials Grant as there is no existing Brex client involved."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.brex.com/guides/quickstart",
+        "quote": "This guide assumes you are a Brex customer with admin access to your dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.brex.com/guides/partner_authentication",
+        "quote": "to be issued a client ID and client secret for partner authentication."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.brex.com/openapi/team_api",
+        "quote": "The team API lets you manage users, departments, locations, and cards."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.brex.com/docs/mcp",
+        "quote": "The server is hosted at `https://api.brex.com/mcp` and supports any MCP-compatible client."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.brex.com/docs/mcp",
+        "quote": "MCP clients that support OAuth will automatically initiate a browser-based authorization flow when you first connect."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

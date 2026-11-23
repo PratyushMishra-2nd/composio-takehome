@@ -1,0 +1,65 @@
+{
+  "id": 40,
+  "app": "SendGrid",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "sendgrid.com",
+  "model": "sonnet",
+  "seconds": 63,
+  "cost_usd": 0.1660591,
+  "turns": 6,
+  "result": {
+    "app": "SendGrid",
+    "description": "Twilio SendGrid: cloud email delivery for transactional and marketing email, with contacts, templates, campaigns and stats APIs.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "API keys (scoped permissions) sent as Bearer token in the Authorization header. No OAuth2 for the public v3 API (OAuth only for partner/Mail partner integrations).",
+    "access": "self_serve_trial",
+    "access_detail": "Pricing page offers a free trial with no credit card; the permanent free tier has been retired, so continued API use needs a paid plan after the trial. Sending also needs sender/domain verification.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "v3 Web API REST: mail send, contacts/lists/segments, marketing campaigns/singlesends, templates, suppressions, stats, API keys, subusers, domain auth, webhooks. SDKs in seven languages.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/deyikong/sendgrid-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No permanent free tier: trial-only self-serve, then paid plan. Auth is API key only (user-supplied, no OAuth). No official vendor MCP found.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+        "quote": "The SendGrid v3 Web API provides a REST interface to send email at scale and ensure your application can handle high volumes."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+        "quote": "Ensure secure, controllable account access with API keys."
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/en-us/sendgrid/pricing",
+        "quote": "Sign up for a free trial—no credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+        "quote": "The SendGrid API endpoints allow you to integrate with your tech stack to send transactional emails, create marketing campaigns, manage your contacts, and monitor the health of your email statistics."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/deyikong/sendgrid-mcp",
+        "quote": "Sendgrid MCP, Contacts, Templates, Campaigns, Stats, etc. more to come. With READ_ONLY option."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

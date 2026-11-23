@@ -1,0 +1,73 @@
+{
+  "id": 39,
+  "app": "Threads (Meta)",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.facebook.com/docs/threads",
+  "model": "sonnet",
+  "seconds": 42,
+  "cost_usd": 0.14213028500000002,
+  "turns": 5,
+  "result": {
+    "app": "Threads (Meta)",
+    "description": "Meta's text-based social network; Threads API lets apps publish posts, manage replies, and read insights on behalf of users.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "Threads user access tokens conforming to OAuth 2.0. Auth-code flow via threads.com/oauth/authorize, code exchanged at graph.threads.com/oauth/access_token for short-lived (1h) token, exchangeable for long-lived (60d, refreshable) token. Scopes: threads_basic, threads_content_publish, threads_manage_replies, threads_read_replies, threads_manage_insights.",
+    "access": "admin_approval",
+    "access_detail": "Free Meta developer account and app. Users with an app role (Threads Tester) can grant permissions in dev mode. Any other end user requires each permission to pass App Review and the app to be published, so a public toolkit needs Meta review.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Graph-style REST at graph.threads.com: publishing (text, image, video, carousel), reply read/manage, deletion, location search, insights, publishing limit check. Limits: 250 API posts/24h, 1000 replies/24h, 500 chars/text post. Keyword search not seen on the fetched pages.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/baguskto/threads-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Meta App Review plus app publishing needed before users without an app role can connect. Dev-mode testers work immediately.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "Short-lived tokens that have not expired can be exchanged for long-lived access tokens, which are valid for 60 days."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "For app users without a role on your app to grant your app these permissions, each permission must first be approved through the App Review process, and your app must be published."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "Threads testers can grant your app these permissions at any time."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/docs/threads/overview",
+        "quote": "Threads profiles are limited to 250 API-published posts within a rolling 24-hour period."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "`threads_manage_insights` — Required for making `GET` calls to insights endpoints."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/baguskto/threads-mcp",
+        "quote": "Presented as a comprehensive server for Meta's Threads API, with analytics and content management."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "low"
+    }
+  }
+}

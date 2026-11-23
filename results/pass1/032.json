@@ -1,0 +1,69 @@
+{
+  "id": 32,
+  "app": "Meta Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.facebook.com/docs/marketing-apis",
+  "model": "sonnet",
+  "seconds": 45,
+  "cost_usd": 0.19808381,
+  "turns": 6,
+  "result": {
+    "app": "Meta Ads",
+    "description": "Meta Marketing API lets developers create, manage and report on Facebook/Instagram ad campaigns, audiences, creatives and catalogs.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 login dialog (scope ads_management/ads_read) yields user access tokens. System user tokens exist for server-to-server use. Official MCP also supports OAuth or user token.",
+    "access": "admin_approval",
+    "access_detail": "Free self-serve app creation. Limited (formerly Standard) access is automatic and works only on your own ad accounts, with low rate limits. Managing other users' ad accounts needs Full (Advanced) access. That needs App Review per permission, Business Verification, and about 500 successful API calls in 15 days.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Graph API based Marketing API (versioned, v27.0 seen). Covers campaigns, ad sets, ads, creatives, audiences, insights/reporting, catalogs, pixels/conversions API, and ad accounts. Rate limits depend on access tier.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.facebook.com/ads",
+    "verdict": "build_with_caveat",
+    "blocker": "Serving other customers' ad accounts requires Meta App Review, Business Verification and Full Access tier. Own-account use works self-serve.",
+    "evidence": [
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+        "quote": "The ads MCP server is a Meta-hosted Model Context Protocol server that lets you manage Meta ads directly from an AI agent."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+        "quote": "The server is remote-hosted at `https://mcp.facebook.com/ads` and works with any MCP-compatible AI agent."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+        "quote": "The authorization process verifies the users and apps that will be accessing the Marketing API and grants them permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+        "quote": "During App Review, your app must also request specific permissions and features."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+        "quote": "Have successfully made at least 500 Marketing API calls in the last 15 days."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+        "quote": "Business apps are subject to an additional layer of Graph API authorization called access levels."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": 83,
+  "app": "Binance",
+  "category": "Finance and Fintech",
+  "hint": "binance-docs.github.io",
+  "model": "sonnet",
+  "seconds": 46,
+  "cost_usd": 0.126810465,
+  "turns": 3,
+  "result": {
+    "app": "Binance",
+    "description": "Crypto exchange with APIs for spot/futures/margin trading, market data, wallet, earn and account management.",
+    "auth_methods": [
+      "api_key",
+      "hmac_signature"
+    ],
+    "auth_detail": "Per-account API keys from API Management page. Key sent in X-MBX-APIKEY header; SIGNED endpoints need HMAC-SHA256, RSA or Ed25519 signature. OAuth2 for third-party apps not confirmed in docs read (docs sidebar lists 'Binance OAuth' but unverified).",
+    "access": "self_serve_free",
+    "access_detail": "Each end user creates own API key in their Binance account; no app review or partner status found for that path. Prereqs: 2FA, identity verification, and a deposit of any amount to Spot account to activate. No fee or paid plan for API found. Deposit/KYC are per-user account requirements, not a vendor review gate. Caveats: regional restrictions (Binance.US separate) not checked; OAuth/Link-style multi-user flows may need partner approval (unverified).",
+    "api_types": [
+      "rest",
+      "websocket"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Product families: Spot, Futures USDⓈ-M and COIN-M, Options, Margin, Wallet, Convert, Portfolio Margin, Algo, Copy Trading, Sub Account, Binance Link, Staking, Simple Earn, C2C, Fiat, Binance Pay. Also WebSocket API/Streams, FIX, SBE.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.binance.com/en/docs/products/spot/rest-api",
+        "quote": "We support HMAC, RSA, and Ed25519 keys."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.binance.com/en/docs/products/spot/rest-api",
+        "quote": "API keys can be created on the API Management page of your Binance account."
+      },
+      {
+        "field": "access",
+        "url": "https://www.binance.com/en/support/faq/detail/360002502072",
+        "quote": "Verify your identity."
+      },
+      {
+        "field": "access",
+        "url": "https://www.binance.com/en/support/faq/detail/360002502072",
+        "quote": "Make a deposit of any amount to your Spot Account to activate your account;"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.binance.com/en/docs/introduction",
+        "quote": "Navigate to the relevant product family first, such as Spot, Futures, Wallet, or other supported areas."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+        "quote": "Connect your AI agent to Binance with a single URL."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

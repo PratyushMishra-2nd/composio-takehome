@@ -1,0 +1,83 @@
+{
+  "id": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "hint": "developer.intuit.com",
+  "model": "sonnet",
+  "seconds": 69,
+  "cost_usd": 0.22600795500000004,
+  "turns": 12,
+  "result": {
+    "app": "QuickBooks",
+    "description": "Intuit QuickBooks Online: cloud accounting software; developer platform exposes Accounting and Payments APIs for third-party apps.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 authorization-code flow against Intuit's authorization server for the Accounting REST API itself (the 'com.intuit.quickbooks.accounting' scope; bearer access token ~60 min, refresh token). Intuit's own oauth-jsclient/SDKs implement it for API calls, and the MCP server merely reuses the same OAuth2 app credentials. No per-user API keys.",
+    "access": "self_serve_free",
+    "access_detail": "Free Intuit developer account gives app creation, development keys and sandbox companies. Production keys for use with other users' live companies require filling Intuit's app questionnaire/assessment (and a compliance review for listing on the App Store). Docs pages were JS-rendered, so this is not verbatim-confirmed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "QBO Accounting REST API with CRUD on ~29 entity types (customers, invoices, bills, payments, etc.), query endpoint, batch, 11+ reports; separate Payments API and other Intuit APIs. Intuit's MCP server wraps 145 tools over it.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "Production use against other users' live companies needs Intuit app review/assessment; refresh tokens rotate; redirect URIs must be https in production.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "If you only want to read your own company's data, you still need to set up an app — Intuit does not offer per-user API keys."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/intuit/oauth-jsclient/master/README.md",
+        "quote": "`com.intuit.quickbooks.accounting` - for accounting scope include `OAuthClient.scopes.Accounting`"
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/intuit/oauth-jsclient/master/README.md",
+        "quote": "A Node.js client for Intuit's OAuth 2.0 implementation."
+      },
+      {
+        "field": "access",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "The Intuit Developer Portal rejects http://localhost redirect URIs in production mode."
+      },
+      {
+        "field": "access",
+        "url": "https://raw.githubusercontent.com/intuit/oauth-jsclient/master/README.md",
+        "quote": "`sandbox` - for authorizing in sandbox."
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/intuit/QuickBooks-V3-Java-SDK/master/README.md",
+        "quote": "The QuickBooks Online Java SDK provides a set of Java class libraries that make it easier to call QuickBooks Online APIs"
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients."
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company."
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+        "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

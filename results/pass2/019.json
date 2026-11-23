@@ -1,0 +1,80 @@
+{
+  "id": 19,
+  "app": "Gorgias",
+  "category": "Support and Helpdesk",
+  "hint": "gorgias.com",
+  "model": "sonnet",
+  "seconds": 88,
+  "cost_usd": 0.257696465,
+  "turns": 8,
+  "result": {
+    "app": "Gorgias",
+    "description": "Ecommerce-focused customer support helpdesk for tickets, customers, macros and automation across email, chat, social and voice.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "API key (sent via HTTP Basic: account email + API key) works only for private apps on a single account. Public apps must use OAuth2 (client_id/client_secret from a partner-portal app, bearer access tokens).",
+    "access": "admin_approval",
+    "access_detail": "Per-account API keys come from Settings → REST API on any Gorgias account (7-day trial, no card needed). A public OAuth2 app that other merchants can install needs a partner-portal app, which Gorgias's tech partnership team reviews before it appears in the helpdesk. Sandbox accounts are Demo accounts by default, and a developer plan requires emailing the tech partners. I did not find any plan restriction on API access.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covers Account, Customers, Custom Fields, Events, Files, Integrations, Jobs, Macros, Rules, Satisfaction Surveys, Search, Statistics, Tags, Teams, Tickets, Ticket Messages, Users, Views, Voice Calls and Widgets. Each key carries the permissions of the user who created it. Webhooks are available through Integrations.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.gorgias.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Buildable today with per-account API keys over Basic auth. A shared one-click OAuth2 app for end users needs Gorgias partner review and approval. The partner sandbox is a Demo account by default.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+        "quote": "Please remember that the API key authentication method can be used only for private apps."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.gorgias.com/docs/oauth2-authentication-for-creating-apps-with-gorgias",
+        "quote": "it is required that the app is using OAuth2 for authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.gorgias.com/docs/5-submit-app-for-review.md",
+        "quote": "Our tech partnership team will review your app to make sure it works properly and is aligned with our expectations."
+      },
+      {
+        "field": "access",
+        "url": "https://www.gorgias.com/pricing",
+        "quote": "No, you don't need to enter payment info to start the Gorgias trial (/signup)."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal.md",
+        "quote": "Currently all new Sandbox accounts are Demo accounts by default."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.gorgias.com/reference/introduction",
+        "quote": "On this page, you'll find the complete REST API reference, examples, definitions of objects, and guides."
+      },
+      {
+        "field": "mcp",
+        "url": "https://updates.gorgias.com/publications/gorgias-mcp-is-now-in-open-beta",
+        "quote": "**Gorgias MCP is in open beta today**, a first-party server that plugs your workspace into Claude, ChatGPT, Cursor, and any MCP-compatible tool."
+      },
+      {
+        "field": "mcp",
+        "url": "https://updates.gorgias.com/publications/gorgias-mcp-is-now-in-open-beta",
+        "quote": "Your Gorgias account. Any plan works. AI Agent is not required. Gorgias MCP is included at no extra cost."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

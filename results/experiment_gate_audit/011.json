@@ -1,0 +1,81 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "hint": "zendesk.com",
+  "model": "sonnet",
+  "seconds": 64,
+  "cost_usd": 0.149388635,
+  "turns": 4,
+  "result": {
+    "app": "Zendesk",
+    "description": "Customer service and helpdesk platform: ticketing, Help Center, messaging, voice, chat and CRM (Sell).",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth access tokens sent as Bearer (recommended). API tokens used via Basic auth ({email}/token:{token}) are marked deprecated and are being retired (README dates 2026-07-28 to 2027-04-30). Local OAuth clients are created per account in Admin Center. Global OAuth clients are needed to serve many customers, and only Zendesk can create them.",
+    "access": "admin_approval",
+    "access_detail": "Gate 1 (multi-customer): a global OAuth client is required and Zendesk must approve it through the Marketplace portal. Developers cannot create their own. Internal-use integrations are exempt. Developer Terms also require submitting apps for review before distribution. Per-account API tokens are being retired, so they are not a durable self-serve path. Gate 2 (plan): no free developer account found, only a 14-day trial of Suite Professional. Ongoing API access needs a paid plan (pricing page lists Team from US$19 per agent per month). Sandbox is listed only under Enterprise. The developer sandbox doc page returned 404, so plan-by-plan API availability is not confirmed. Verdict on access: admin_approval, with paid-plan dependence.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST APIs cover Support tickets, Help Center, Talk/Voice, Chat, Sell CRM, Sunshine/Conversations messaging, custom data, WFM, QA, webhooks and Apps. Rate limits apply. A paid add-on raises them to 2,500 requests per minute.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/reminia/zendesk-mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "To connect other customers' accounts, Zendesk must approve a global OAuth client. The Marketplace app review also applies to distributed apps. Working credentials otherwise need a paid plan or a 14-day trial. API tokens are being retired.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Zendesk supports using OAuth access tokens to authenticate API requests."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Basic authentication is used for API tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.zendesk.com/documentation/marketplace/building-a-marketplace-app/set-up-a-global-oauth-client/",
+        "quote": "You must request a global OAuth client from Zendesk to create global OAuth tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.zendesk.com/documentation/marketplace/building-a-marketplace-app/set-up-a-global-oauth-client/",
+        "quote": "For security reasons, Zendesk doesn't allow developers to create their own global OAuth clients."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zendesk.com/pricing/",
+        "quote": "Default plan: you'll have access to all features on the Zendesk Customer Service Suite Professional plan for 14 days."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zendesk.com/company/agreements-and-terms/zendesk-developer-terms/",
+        "quote": "Licensee must submit its Applications to Zendesk for review in accordance with the Documentation."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.zendesk.com/api-reference/",
+        "quote": "Ticketing"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/reminia/zendesk-mcp-server",
+        "quote": "A Model Context Protocol server for Zendesk."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "low"
+    }
+  }
+}

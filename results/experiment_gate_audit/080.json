@@ -1,0 +1,74 @@
+{
+  "id": 80,
+  "app": "Harvest",
+  "category": "Productivity and Project Management",
+  "hint": "harvestapp.com (help.getharvest.com/api-v2)",
+  "model": "sonnet",
+  "seconds": 37,
+  "cost_usd": 0.13184175999999997,
+  "turns": 4,
+  "result": {
+    "app": "Harvest",
+    "description": "Time tracking, expense, project and invoicing SaaS for teams and freelancers.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Personal Access Token (Bearer, plus Harvest-Account-Id header) created in Harvest ID Developers. OAuth2 authorization code (server-side, refresh tokens) and implicit grant (client-side). Tokens go in Authorization header or query string.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can register an OAuth2 app or create a PAT in Harvest ID Developers. The docs list no app review or approval step and no paid-plan requirement for API access. A Free plan exists ($0 forever, 1 seat, 2 projects) and the pricing page has no API row. The only review-like text is a 'Request new API' link whose purpose the docs don't explain. Free-plan API eligibility was not confirmed explicitly, and the Harvest ID developers page was not read.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v2 covers about 25 resource groups: clients, contacts, company, invoices (messages, payments, categories), estimates, expenses, tasks, time entries, projects (user and task assignments), roles, users (billable and cost rates), reports (time, expense, uninvoiced, profitability), and more. Rate limit is 100 requests per 15 seconds, and a User-Agent header is required.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/taiste/harvest-mcp-server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "The API can be accessed by creating a Personal Access Token from the Developers section of Harvest ID."
+      },
+      {
+        "field": "auth",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "We use the Authorization Code flow for server-side authorization."
+      },
+      {
+        "field": "access",
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+        "quote": "Harvest requires applications to authenticate all requests with OAuth2 or Personal Access Tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://www.getharvest.com/pricing",
+        "quote": "Get started on any plan with a free trial. No credit card required."
+      },
+      {
+        "field": "api",
+        "url": "https://help.getharvest.com/api-v2/",
+        "quote": "This is the current API V2 documentation."
+      },
+      {
+        "field": "api",
+        "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+        "quote": "The rate limit for general API requests is 100 requests per 15 seconds."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/taiste/harvest-mcp-server",
+        "quote": "MCP Server for Harvest."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

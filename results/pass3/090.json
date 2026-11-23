@@ -1,0 +1,58 @@
+{
+  "id": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "hint": "pitchbook.com (research API)",
+  "model": "sonnet",
+  "seconds": 41,
+  "cost_usd": 0.15990430499999997,
+  "turns": 6,
+  "result": {
+    "app": "PitchBook",
+    "description": "Private capital market data platform (companies, deals, investors, funds) with a contract-based REST API.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Static API key sent as `Authorization: PB-Token <key>` header; no OAuth flow. Not a standard bearer token. Separate sandbox key exists.",
+    "access": "partner_gated",
+    "access_detail": "API is a paid, contract-gated add-on with no free tier and no self-serve signup. Keys come from the PitchBook account manager or Direct Data team, or via Plugins & Apps for existing customers. Official docs are behind login (pitchbook.com/help returns 403 to bots).",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "PitchBook Public API v2 at api.pitchbook.com, documented in a public Postman collection. dlt lists search/get endpoints for companies, deals, people, investors, funds. Credit-based usage (402 when credits run out). Full spec only partly public, so breadth is an estimate.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://premium.mcp.pitchbook.com/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve credentials. API needs a paid PitchBook contract plus an account-manager-issued key, so a developer cannot get working credentials without a sales relationship.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook",
+        "quote": "sent on every request as the `Authorization: PB-Token <key>` header"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.frontegg.com/agen-for-work/connectors/marketplace/pitchbook",
+        "quote": "API access is a paid, contract-gated add-on with no free tier"
+      },
+      {
+        "field": "api",
+        "url": "https://dlthub.com/context/source/pitchbook-api",
+        "quote": "a RESTful API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://pitchbook.com/help/getting-started-with-pitchbook-premium-connector",
+        "quote": "built on MCP server technology"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

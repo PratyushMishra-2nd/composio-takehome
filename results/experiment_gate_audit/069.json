@@ -1,0 +1,74 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.datadoghq.com/api",
+  "model": "sonnet",
+  "seconds": 81,
+  "cost_usd": 0.183196615,
+  "turns": 8,
+  "result": {
+    "app": "Datadog",
+    "description": "Cloud observability and security platform: metrics, logs, APM traces, monitors, dashboards, incidents, and more.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Public REST API: API key (write/submit) plus application key (read/manage), both created by each customer in their own org; app keys can be scoped. OAuth2 clients exist but are registered from a Datadog Partner Sandbox account via the Developer Platform.",
+    "access": "self_serve_free",
+    "access_detail": "Each end user creates their own API key and application key in their org; no app review or partner status is needed for that path. Free trial exists, and a Free tier (5 Basic hosts) after the trial. The pricing page text read does not restrict API access by plan. The API/app key path is the one that counts; OAuth needs partner sandbox and publishing, so it is optional. Gate-audit caveat: the middle of the pricing page (about chars 40k-140k) was not read, so a paid-plan API restriction is not fully ruled out.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Large v1/v2 REST API covering metrics, logs, monitors, dashboards, incidents, SLOs, synthetics, security, users/roles, keys, and more. It is multi-site: the base URL varies by Datadog site (US1, US3, US5, EU, AP1, AP2, ...). Official client SDKs exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.datadoghq.com/mcp_server/",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that read data require full access and also require an application key ."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.datadoghq.com/extend/authorization/oauth2_in_datadog/",
+        "quote": "Within your Datadog Partner Sandbox Account, create and configure your OAuth client in the [Developer Platform]."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+        "quote": "If you have the [permission] to create application keys, click New Key."
+      },
+      {
+        "field": "access",
+        "url": "https://www.datadoghq.com/pricing/",
+        "quote": "On the Free tier, you get up to five Basic hosts with 1-day metric retention, at no cost."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that write data require reporting access and require an API key ."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.datadoghq.com/mcp_server/",
+        "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents that support the [Model Context Protocol (MCP)]."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.datadoghq.com/mcp_server/setup.md",
+        "quote": "The app authenticates with your Datadog organization through an OAuth flow."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

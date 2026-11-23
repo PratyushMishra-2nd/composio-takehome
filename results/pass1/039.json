@@ -1,0 +1,73 @@
+{
+  "id": 39,
+  "app": "Threads (Meta)",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.facebook.com/docs/threads",
+  "model": "sonnet",
+  "seconds": 38,
+  "cost_usd": 0.23182660000000002,
+  "turns": 7,
+  "result": {
+    "app": "Threads (Meta)",
+    "description": "Meta's microblogging platform; the Threads API lets apps publish posts, read media/profiles, moderate replies, search keywords and pull insights.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 auth-code via threads.com/oauth/authorize with Threads app ID/secret; short-lived (1h) token exchanged for long-lived (60 days, refreshable). Scopes: threads_basic, threads_content_publish, threads_read_replies, threads_manage_replies, threads_manage_insights.",
+    "access": "admin_approval",
+    "access_detail": "Free self-serve: create Meta developer app with Threads use case. Role-holders/Threads testers can use all permissions immediately. For arbitrary end users, each permission needs Meta App Review and the app must be published (business verification may also apply). No paid plan.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Graph-style REST at graph.threads.com: publishing (text/image/video/carousel), media retrieval, profiles, reply read/manage, mentions, insights, keyword search, webhooks, oEmbed. Focused on the user's own account; no DMs/follows. Rate-limited publishing.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/pegasusheavy/threads-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Third-party end users can only grant permissions after Meta App Review and app publishing; until then only app-role testers work. No official Meta MCP server.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://developers.facebook.com/documentation/threads.md",
+        "quote": "Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/threads/get-started.md",
+        "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/threads/get-started.md",
+        "quote": "For app users without a role on your app to grant your app these permissions, each permission must first be approved through the [App Review](https://developers.facebook.com/documentation/resp-plat-initiatives/individual-processes/app-review) process, and your app must be published."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/threads/get-started.md",
+        "quote": "To access the Threads API, create an app and pick the [Threads use case](https://developers.facebook.com/documentation/development/create-an-app/threads-use-case)."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/documentation/threads.md",
+        "quote": "The Threads API endpoints and their parameters."
+      },
+      {
+        "field": "mcp",
+        "url": "https://raw.githubusercontent.com/pegasusheavy/threads-mcp/main/README.md",
+        "quote": "A powerful Model Context Protocol (MCP) server for integrating with the Threads.com API."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.facebook.com/documentation/threads/get-started.md",
+        "quote": "Short-lived tokens that have not expired can be [exchanged for long-lived access tokens](https://developers.facebook.com/documentation/threads/get-started/long-lived-tokens), which are valid for 60 days."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

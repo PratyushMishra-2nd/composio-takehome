@@ -1,0 +1,81 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "developers.cloudflare.com/api",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.12277559,
+  "turns": 3,
+  "result": {
+    "app": "Cloudflare",
+    "description": "Global edge network and cloud platform: CDN, DNS, security/WAF, Zero Trust, Workers compute, R2 storage, and AI services, all managed via API.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Scoped API tokens (user or account-owned), created by each user in the dashboard and sent as Bearer tokens. This is the main path for third parties. Legacy Global API key (email + key) still works but is not recommended. OAuth exists for Cloudflare's managed MCP servers. I found no documented OAuth app-registration flow for third-party developers.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit (1): each end user creates their own scoped API token in the dashboard. Per the audit rules, private per-account tokens are not a gate. No app review, listing or partner status is needed. Gate audit (2): a Free plan exists ('Start building for free'). The docs I read do not say API access requires a paid plan. Token creation has no plan restriction in the docs. Some product features (for example Enterprise-only zone settings) are plan-limited per endpoint, but the API itself is not paid-gated. I could not quote a page saying the API is free, so confidence is medium.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at api.cloudflare.com/client/v4 covers zones, DNS, Workers, R2, Zero Trust, firewall, and more, with hundreds of endpoints. A separate GraphQL Analytics API sits at /client/v4/graphql. Official SDKs exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.cloudflare.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+        "quote": "Determine if you want a user token or an Account API token."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/keys/",
+        "quote": "Global API key is the previous authorization scheme for interacting with the Cloudflare API."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/account-owned-tokens/",
+        "quote": "Account members may only grant account API tokens permissions which are a subset of their own account permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://www.cloudflare.com/plans/",
+        "quote": "Start building for free"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.cloudflare.com/fundamentals/api/",
+        "quote": "Use the following resources to learn more about Cloudflare's REST API:"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.cloudflare.com/analytics/graphql-api/",
+        "quote": "The GraphQL Analytics API provides data regarding HTTP requests passing through Cloudflare's network"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+        "quote": "The Cloudflare API MCP server at `https://mcp.cloudflare.com/mcp` is the only MCP server you need to work with Cloudflare."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+        "quote": "Create a policy to organize the token's permissions."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

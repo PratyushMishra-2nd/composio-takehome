@@ -1,0 +1,69 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.netlify.com/api",
+  "model": "sonnet",
+  "seconds": 49,
+  "cost_usd": 0.20332086499999996,
+  "turns": 6,
+  "result": {
+    "app": "Netlify",
+    "description": "Web hosting and deployment platform: atomic deploys, forms, functions, DNS, env vars for sites and apps.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 for public integrations (auth-code flow); personal access token (Applications > Personal access tokens) sent as Authorization: Bearer for single-account use.",
+    "access": "self_serve_free",
+    "access_detail": "Free plan ($0 forever) lists API deploys; PAT creation and OAuth app registration are self-serve in the UI. Docs do not state plan restrictions on PAT/API.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at https://api.netlify.com/api/v1/ with OpenAPI spec (open-api.netlify.com). Covers sites, deploys, env vars, files, snippets, forms, hooks, DNS. Rate limit 500 req/min for most requests.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/netlify/netlify-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://docs.netlify.com/api/get-started",
+        "quote": "Use the Netlify REST API to manage atomic deploys of your sites and apps, manage form submissions, inject JavaScript snippets, manage DNS"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api/get-started",
+        "quote": "Netlify uses OAuth2 for authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.netlify.com/api/get-started",
+        "quote": "Use your PAT for manual authentication in shell scripts or commands that use the Netlify API."
+      },
+      {
+        "field": "access",
+        "url": "https://www.netlify.com/pricing/",
+        "quote": "Deploy from AI, Git, or API"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.netlify.com/api/get-started",
+        "quote": "You can browse the OpenAPI reference for the Netlify API to explore available endpoints."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server",
+        "quote": "Netlify offers an MCP server, which you can connect to through a connector, plugin, or your agent."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

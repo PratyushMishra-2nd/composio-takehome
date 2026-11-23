@@ -1,0 +1,82 @@
+{
+  "id": 30,
+  "app": "Vonage",
+  "category": "Communications and Messaging",
+  "hint": "developer.vonage.com",
+  "model": "sonnet",
+  "seconds": 42,
+  "cost_usd": 0.20361824,
+  "turns": 6,
+  "result": {
+    "app": "Vonage",
+    "description": "Communications API platform for SMS, voice, messaging channels (WhatsApp etc.), verification, video, numbers and network APIs.",
+    "auth_methods": [
+      "basic",
+      "jwt",
+      "bearer_token"
+    ],
+    "auth_detail": "API key + secret via HTTP Basic (or SIP Digest); JWT signed with Application private key (recommended, needed for webhooks/ACLs); Video uses bearer token built from JWT. No OAuth2 authorization-code flow for third-party users — creds are per Vonage account/application.",
+    "access": "self_serve_free",
+    "access_detail": "Sign up on dashboard, get API key/secret and create Applications for private keys. Free credit on new account, then pay-per-request. Some channels (WhatsApp, sender IDs, some numbers/regions) need extra registration/approval, but core API access is self-serve. Pricing page returned 403 so trial limits not checked.",
+    "api_types": [
+      "rest",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Many REST APIs: SMS, Messages, Voice, Verify, Number Insight, Numbers, Accounts, Application, Conversation, Reports, Redact, Video, SIP, Identity Insights, network APIs. Webhooks for inbound events. Official SDKs in multiple languages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.vonage.com/en/mcp-server/overview",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "Vonage APIs support different authentication methods depending on which product you are using:"
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "For most use-cases we recommend JWT Authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.vonage.com/en/getting-started/overview",
+        "quote": "To work with our APIs, you will need to sign up for an account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.vonage.com/en/getting-started/overview",
+        "quote": "We'll give you some free credit when you first open your account"
+      },
+      {
+        "field": "api",
+        "url": "https://developer.vonage.com/en/getting-started/overview",
+        "quote": "Vonage provides a suite of APIs that enable you to communicate with your customers using your preferred channels."
+      },
+      {
+        "field": "description",
+        "url": "https://developer.vonage.com/en/getting-started/overview",
+        "quote": "Vonage provides a suite of APIs that enable you to communicate with your customers using your preferred channels."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.vonage.com/en/mcp-server/overview",
+        "quote": "The Vonage MCP Server enables AI agents and developer tools to discover, describe, and use Vonage capabilities"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "For most use-cases we recommend JWT Authentication."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

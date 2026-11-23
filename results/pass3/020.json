@@ -1,0 +1,68 @@
+{
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "hint": "gladly.com",
+  "model": "sonnet",
+  "seconds": 123,
+  "cost_usd": 0.1725765,
+  "turns": 8,
+  "result": {
+    "app": "Gladly",
+    "description": "Customer service platform (people-centered helpdesk) unifying voice, chat, email, SMS and social conversations around customer profiles.",
+    "auth_methods": [
+      "basic"
+    ],
+    "auth_detail": "Token-based Basic Auth: username = agent email, password = API token, over HTTPS. Tokens tied to one user and environment (sandbox vs production); the user needs the API User role. No OAuth2 for third-party use found.",
+    "access": "customer_account",
+    "access_detail": "Tokens are created inside a Gladly tenant by a user with the API User role. No public signup, free tier or developer sandbox found. Credentials exist only inside a paying customer's (sales-led) account, or through a partner arrangement.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API v1 at https://{organization}.gladly.com/api/v1, with OpenAPI spec. Covers customers, conversations, messages, tasks, topics, agents and users, webhooks, reports, exports and organization. Also Lookup API and Glad Hub.",
+    "mcp_exists": false,
+    "mcp_official": false,
+    "mcp_url": "",
+    "verdict": "needs_outreach",
+    "blocker": "No self-serve signup or sandbox. API tokens exist only inside an existing customer's Gladly tenant, so we would need a customer account or partner access first.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://help.gladly.com/developer-tutorials/docs/authentication",
+        "quote": "Perhaps the most familiar authentication option, basic auth (as it is often called) requires an Agent to provide a username and password for a request."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "To create and use an API token, your user must have the API User permission."
+      },
+      {
+        "field": "access",
+        "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md",
+        "quote": "API tokens are required to use Gladly APIs for security and authentication purposes."
+      },
+      {
+        "field": "access",
+        "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md",
+        "quote": "The integration partner should provide the email address to be used with the integration's user account in Gladly."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Download OpenAPI specification:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Gladly API"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "low"
+    }
+  }
+}

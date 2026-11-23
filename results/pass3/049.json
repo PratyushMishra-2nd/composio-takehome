@@ -1,0 +1,58 @@
+{
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "hint": "developer-docs.amazon.com/sp-api",
+  "model": "sonnet",
+  "seconds": 53,
+  "cost_usd": 0.193765645,
+  "turns": 10,
+  "result": {
+    "app": "Amazon Selling Partner",
+    "description": "Amazon Selling Partner API (SP-API): REST APIs for sellers and vendors to manage orders, listings, inventory, reports, feeds, FBA and more.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "Login with Amazon (LWA) OAuth2. Private apps self-authorize in Seller Central and get a refresh token. Public apps use an authorization code flow with website or Appstore authorization. The refresh token is exchanged for an access token at api.amazon.com/auth/o2/token and sent in the x-amz-access-token header. Grantless operations use client credentials. Not verified from fetched pages.",
+    "access": "admin_approval",
+    "access_detail": "There is no API fee. A developer must register a developer profile in Seller Central, and Amazon approves the requested data roles. Private apps (for your own seller account) can self-authorize with no app review. Public apps that other sellers connect need Amazon's app review or vetting, and sellers must reauthorize periodically. This comes from my background knowledge and search snippets, not from fetched pages, so confidence is low.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Many REST APIs: Orders, Listings Items, Catalog Items, Reports, Feeds, FBA Inventory, Fulfillment Inbound/Outbound, Pricing, Finances, Notifications, Vendor APIs and others. Regional endpoints. Some operations are restricted and need a Restricted Data Token.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/amzn/selling-partner-api-samples",
+    "verdict": "build_with_caveat",
+    "blocker": "Public multi-tenant use needs a developer profile approved by Amazon and app review. Credentials are not instant for end users, though private apps can self-authorize. Doc pages could not be fetched this run, so claims are unverified.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer-docs.amazon.com/sp-api/lang-US/docs/self-authorization",
+        "quote": "Authorize Private Applications"
+      },
+      {
+        "field": "access",
+        "url": "https://developer-docs.amazon.com/sp-api/lang-US/docs/authorize-public-applications",
+        "quote": "Authorize Public Applications"
+      },
+      {
+        "field": "api",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/self-authorization",
+        "quote": "self authorization"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/amzn/selling-partner-api-samples",
+        "quote": "selling partner api samples"
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "low",
+      "api": "medium",
+      "mcp": "low"
+    }
+  }
+}

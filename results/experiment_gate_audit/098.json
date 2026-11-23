@@ -1,0 +1,69 @@
+{
+  "id": 98,
+  "app": "Mermaid CLI",
+  "category": "AI, Research and Media-native",
+  "hint": "github.com/mermaid-js/mermaid-cli",
+  "model": "sonnet",
+  "seconds": 29,
+  "cost_usd": 0.134253945,
+  "turns": 5,
+  "result": {
+    "app": "Mermaid CLI",
+    "description": "Open-source local command-line tool (mmdc) that renders Mermaid diagram definition files to SVG/PNG/PDF.",
+    "auth_methods": [
+      "none"
+    ],
+    "auth_detail": "No auth. Runs locally (npm/Docker); no hosted service, accounts or API keys.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit: no vendor app review, listing, partner status or paid plan. Open-source npm package/Docker image, anyone installs free. Caveat: no hosted API, so a Composio toolkit must run mmdc (with headless Chromium) in its own sandbox. No per-user credentials exist to connect.",
+    "api_types": [
+      "cli_only",
+      "sdk_only"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "Only the mmdc CLI and a Node.js `run(input, output, opts)` function (not semver-covered). No REST/GraphQL API. Single operation: render diagram to SVG/PNG/PDF.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://mcp.so/servers/mcp-mermaidjs-server",
+    "verdict": "build_with_caveat",
+    "blocker": "No hosted API or auth; it is a local CLI needing Node and headless Chromium, so it fits a sandboxed executor, not a standard remote-API toolkit. Single render function only.",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output."
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "npm install -g @mermaid-js/mermaid-cli"
+      },
+      {
+        "field": "access",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "docker pull minlag/mermaid-cli"
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "It's possible to call `mermaid-cli` via a Node.JS API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcp.so/servers/mcp-mermaidjs-server",
+        "quote": "mcp mermaidjs server"
+      },
+      {
+        "field": "verdict",
+        "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+        "quote": "This is a command-line interface (CLI) for [mermaid](https://mermaid.js.org/)."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

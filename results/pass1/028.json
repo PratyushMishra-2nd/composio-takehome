@@ -1,0 +1,69 @@
+{
+  "id": 28,
+  "app": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "hint": "developers.facebook.com/docs/whatsapp",
+  "model": "sonnet",
+  "seconds": 58,
+  "cost_usd": 0.21019115499999996,
+  "turns": 7,
+  "result": {
+    "app": "WhatsApp Business",
+    "description": "Meta's WhatsApp Business Platform (Cloud API) lets businesses send/receive WhatsApp messages, manage templates, phone numbers and webhooks programmatically.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Cloud API calls use Bearer access tokens: short-lived user tokens (dev only), long-lived System User tokens for own business, and Business Integration System User tokens via Embedded Signup for Tech Providers/partners serving customers. Facebook Login for Business OAuth is used for onboarding and the Meta MCP.",
+    "access": "admin_approval",
+    "access_detail": "Free self-serve for own WABA: create Meta app, business portfolio, system user token, accept ToS, 2-step verification (test number available). For a multi-tenant toolkit where end users connect their own WABAs, Advanced access via App Review plus Business Verification (and Tech Provider/Embedded Signup) is required. Messaging itself is per-message conversation priced. Review-gate details are from search summary, not verified on a fetched page.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Graph API (graph.facebook.com/vXX.X) REST endpoints: send messages (text/media/template/interactive), message templates, phone numbers, WABA management, business profile, media, QR codes, flows, payments, analytics, subscribed apps/webhooks. Inbound messages via webhooks.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.facebook.com/whatsapp_business_tools",
+    "verdict": "build_with_caveat",
+    "blocker": "Multi-tenant use by end users needs Meta App Review (Advanced access) and Business Verification; Embedded Signup for Tech Provider onboarding. Single-account bearer-token use is self-serve.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+        "quote": "When making API requests, include your token in an authorization request header, preceded by `Bearer`."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+        "quote": "System tokens rely on system users."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+        "quote": "This is because user access tokens expire quickly, so you have to keep generating a new one every few hours."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+        "quote": "curl 'https://graph.facebook.com/v27.0/102290129340398/message_templates'"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+        "quote": "Use WhatsApp Business Tools MCP for WhatsApp accounts, phone numbers, templates, webhooks, and test messages."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+        "quote": "This release is built for development and testing workflows, not production sending at scale."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

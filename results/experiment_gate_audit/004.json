@@ -1,0 +1,85 @@
+{
+  "id": 4,
+  "app": "Attio",
+  "category": "CRM and Sales",
+  "hint": "attio.com",
+  "model": "sonnet",
+  "seconds": 61,
+  "cost_usd": 0.159805245,
+  "turns": 6,
+  "result": {
+    "app": "Attio",
+    "description": "Attio is a CRM and revenue platform with AI agents, workflows, and a public REST API and MCP server.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 Authorization Code (PKCE for user-level tokens) for multi-workspace apps; per-workspace API key created in developer settings. Both sent as Authorization: Bearer token.",
+    "access": "self_serve_free",
+    "access_detail": "Free plan (3 users) shows API and webhooks, MCP and App SDK rows with no restriction (extracted text; inferred). Each user can self-create a workspace API key, so no review gate on that path. OAuth app is unreviewed up to 25 workspaces, with a warning shown at install. Beyond 25, or to remove the warning, the app must be published and Attio review takes up to 1 week. REST API public apps are listed as needing review.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Public REST API with JSON over HTTPS, plus webhooks and an App SDK. The hosted MCP server's tools show data coverage: objects, records, lists, notes, tasks, meetings, call recordings, emails, comments and more. SQL access via API and MCP is Ultra-only. I did not fetch the endpoint reference, so breadth is inferred from the MCP tool list.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.attio.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "A multi-tenant OAuth toolkit needs Attio publication review (up to 1 week) to go past 25 workspaces and drop the unapproved-app warning. The API-key path has no such gate.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "quote": "Attio implements the standard OAuth 2.0 specification, using the Authorization Code Grant Flow"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "quote": "If you only need a token for a single workspace, you can generate an API key in the developer settings page of your apps."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "quote": "An unpublished app can be installed in up to 25 workspaces."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.attio.com/share/the-publication-lifecycle.md",
+        "quote": "Publishing requires a review from the Attio team, which can take up to 1 week."
+      },
+      {
+        "field": "access",
+        "url": "https://attio.com/pricing",
+        "quote": "Yes. The Free plan costs nothing for up to three users."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.attio.com/rest-api/overview",
+        "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.attio.com/mcp/overview",
+        "quote": "Attio MCP is Attio's hosted MCP server that gives AI tools secure access to your Attio workspace."
+      },
+      {
+        "field": "mcp",
+        "url": "https://attio.com/pricing",
+        "quote": "Every plan includes the Attio MCP server, which connects AI tools that support the Model Context Protocol, such as Claude and ChatGPT, to your workspace."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.attio.com/share/the-publication-lifecycle.md",
+        "quote": "To remove these warnings and the installation limit, submit your app for review."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

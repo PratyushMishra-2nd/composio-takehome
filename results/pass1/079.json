@@ -1,0 +1,74 @@
+{
+  "id": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "hint": "smartsheet.com/developers",
+  "model": "sonnet",
+  "seconds": 56,
+  "cost_usd": 0.23427694000000004,
+  "turns": 7,
+  "result": {
+    "app": "Smartsheet",
+    "description": "Work management and collaboration platform with spreadsheet-style sheets, reports, dashboards, and automation.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 (3-legged) for apps registered in Developer Tools (client ID and secret). Personal API access token sent as a Bearer token for single-account use. Separate tokens for Gov and EU regions.",
+    "access": "paid_plan",
+    "access_detail": "API is restricted to Business, Enterprise, or Advanced Work Management plans (the help article lists only Business and Enterprise). The 30-day free trial cannot generate API tokens, and the Free plan closed to new users in Aug 2024. Developer Tools app registration for OAuth is self-serve, but the developer account needs a qualifying paid plan. I did not check whether a Developer Tools app can be registered without one.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at https://api.smartsheet.com/2.0/ with an OpenAPI reference. It covers sheets, rows, columns, cells, attachments, discussions, automation rules, reports, dashboards, folders, workspaces, groups, users and webhooks. The last group is from the agent's summary of the truncated reference page, not verbatim page text. Official SDKs exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+    "verdict": "build_with_caveat",
+    "blocker": "API and MCP need a paid Business, Enterprise or AWM plan. The trial cannot generate tokens, so testing needs a paid account.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+        "quote": "OAuth 2.0 (OAuth) provides a way for your app users to grant limited access to their Smartsheet resources."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+        "quote": "Apply your API access token in the Security tab by selecting the Bearer Token value field"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+        "quote": "The Smartsheet API is restricted to users on Business and Enterprise plans"
+      },
+      {
+        "field": "access",
+        "url": "https://help.smartsheet.com/articles/529590-smartsheet-free-trial-faqs",
+        "quote": "You can't generate API access tokens."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+        "quote": "Welcome to the OpenAPI reference documentation for the Smartsheet API!"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+        "quote": "The Smartsheet MCP server bridges the gap between Smartsheet and AI models, allowing you to:"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+        "quote": "Required plan: Business, Enterprise, or Advanced Work Management"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

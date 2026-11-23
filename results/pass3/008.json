@@ -1,0 +1,71 @@
+{
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "hint": "close.com",
+  "model": "sonnet",
+  "seconds": 44,
+  "cost_usd": 0.161756415,
+  "turns": 6,
+  "result": {
+    "app": "Close",
+    "description": "Close is a CRM for sales teams, with built-in calling, email, SMS, sequences and AI agents.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Two methods apply to the public REST API (api.close.com/api/v1). API key uses HTTP Basic (key as username, empty password). OAuth 2.0 auth-code flow gives Bearer access tokens and refresh tokens. The OAuth docs are in the REST API reference, not the MCP docs, so OAuth is not MCP-only. The MCP server accepts either method.",
+    "access": "self_serve_trial",
+    "access_detail": "Signup is public self-serve, with no sales contact needed. There is a 14-day free trial with no credit card, and Close has no free plan. The pricing page marks high-volume API access \"Not included\" on Solo and \"Included\" on Essentials, Growth and Scale. The pricing page does not say which tier or API level the trial gets. OAuth apps are created in Settings → Developer → OAuth Apps and are private by default, usable by members of your own org. Making an app public or listing it needs a request to Close. Integration partners can request a free dev org by emailing support. The earlier \"sales-led / no public signup\" note was wrong. Access is self-serve, trial-limited and plan-gated for high-volume API use.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API with a full reference covering leads, contacts, opportunities, activities, custom fields, sequences, bulk actions, SMS, reporting and an event log. Webhooks are available. I did not count endpoints, but the stated coverage is wide.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.close.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Trial-only for free access. Solo plan lacks high-volume API access. Third-party OAuth apps are private to the developer's own org until Close approves a public listing. OAuth scopes are limited to all.full_access and offline_access unless requested from support.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/api/overview/oauth-authentication",
+        "quote": "To implement authentication with OAuth 2.0, you need to create an OAuth app to get your Client ID and Client Secret."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/topics/authentication/",
+        "quote": "API keys use HTTP Basic client side authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://www.close.com/pricing",
+        "quote": "No. You can sign up, start a trial, pick a plan, and set up your team without talking to sales."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.close.com/integrations/create-an-oauth-app",
+        "quote": "OAuth apps are Private by default, meaning only members of your own Close organization can authorize them."
+      },
+      {
+        "field": "api",
+        "url": "https://www.close.com/pricing",
+        "quote": "Yes. Close provides a REST API for building custom integrations"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.close.com/mcp",
+        "quote": "The MCP server URL is https://mcp.close.com/mcp and has \"HTTP Streamable\" and \"OAuth 2.0 Dynamic Client Registration (DCR)\" support."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

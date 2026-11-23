@@ -1,0 +1,78 @@
+{
+  "id": 60,
+  "app": "Clay",
+  "category": "Data, SEO and Scraping",
+  "hint": "clay.com",
+  "model": "sonnet",
+  "seconds": 56,
+  "cost_usd": 0.189829815,
+  "turns": 6,
+  "result": {
+    "app": "Clay",
+    "description": "Data enrichment and GTM automation platform: waterfall enrichment across 100+ providers, audiences, tables, and AI agents (Claygent).",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Personal API key in `clay-api-key` header, tied to a Clay user and workspace. Created in app (API and CLI > API keys) or via `clay api-keys create`. No OAuth for the public API documented.",
+    "access": "paid_plan",
+    "access_detail": "Pricing table lists \"Build with Clay via CLI / API\" on every tier including Free (100 search results / 30 days), but pricing FAQ lists \"Clay API access\" under Enterprise. Docs mark only Tables as Enterprise. Free signup likely gets a key with a small quota; some features (Tables, higher volume) are Enterprise. Plan gating is unclear and sources conflict.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "narrow",
+    "api_notes": "Base https://api.clay.com/public/v0. Endpoints: me, credits, searches (query-mode), routines/functions run and batch runs, Audiences privacy deletion, Tables query (Enterprise), workflow runs search (beta). Pagination, errors, rate limits, webhooks docs plus an OpenAPI spec. Not a full CRUD API over tables or rows.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.clay.com/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Plan gating for API is ambiguous (table says Free has API, FAQ says Enterprise); API surface is narrow (searches, routines, credits); Tables is Enterprise-only. Official MCP page gives no public endpoint or auth details.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.clay.com/public-api/authentication.md",
+        "quote": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.clay.com/public-api/authentication.md",
+        "quote": "API keys are tied to a Clay user and workspace access."
+      },
+      {
+        "field": "access",
+        "url": "https://www.clay.com/pricing",
+        "quote": "Includes everything in *Growth*, plus unlimited Audiences across sources, unlimited row bulk enrichment, Clay API access"
+      },
+      {
+        "field": "access",
+        "url": "https://www.clay.com/pricing",
+        "quote": "Build with Clay via CLI / API"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "[Tables (Enterprise)](https://developers.clay.com/tables.md)"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.clay.com/public-api/quickstart.md",
+        "quote": "Requests authenticate with a Clay API key in the `clay-api-key` header."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.clay.com/mcp",
+        "quote": "Prompt ChatGPT, Codex or Claude to use Clay Functions, reason across your Audiences"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.clay.com/pricing",
+        "quote": "Search, enrich, and reach out to leads from your Al chat tool"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

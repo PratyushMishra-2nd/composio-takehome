@@ -1,0 +1,77 @@
+{
+  "id": 30,
+  "app": "Vonage",
+  "category": "Communications and Messaging",
+  "hint": "developer.vonage.com",
+  "model": "sonnet",
+  "seconds": 85,
+  "cost_usd": 0.13121695,
+  "turns": 4,
+  "result": {
+    "app": "Vonage",
+    "description": "Cloud communications platform with APIs for SMS, voice, messaging channels (WhatsApp, RCS, Viber), verification, numbers, and account management.",
+    "auth_methods": [
+      "basic",
+      "jwt",
+      "api_key",
+      "hmac_signature"
+    ],
+    "auth_detail": "API key + secret (HTTP Basic, or body/query params on the SMS API). JWT (RS256) signed with a per-application private key. Signature secret for signed SMS. SIP Trunking uses Digest. No OAuth2 is documented on the auth page.",
+    "access": "self_serve_free",
+    "access_detail": "Free account signup gives an API key and secret immediately, plus €2 test credit. The account starts in DEMO mode, which limits sending to up to 10 verified destination numbers. Adding credit lifts that. Credentials are per account or per application, so each end user creates their own, and no app review or partner status is needed. This was the audit's question on gating, and no gate was found. Paid plan is not required for API access. A top-up is only needed for production sending. The pricing page returned 403, so I could not read it.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "The API index lists Messaging (SMS, Messages), Voice, Verify, Number Insight, Number Management, Account, Application, Reports, Redact, Audit, Pricing, Conversation, Media, Identity Insights and Network APIs. Video is a separate product.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "When you create a Vonage account, an API key and secret will be created for you."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims to be transferred between two parties."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.vonage.com/en/account/guides/dashboard-management",
+        "quote": "When you create your Vonage account you are given €2 free test credit and your account is set in DEMO mode."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.vonage.com/en/account/guides/dashboard-management",
+        "quote": "To move out of the demo mode add credit to your account."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.vonage.com/en/api",
+        "quote": "Make and receive telephone calls to or from anywhere in the world."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+        "quote": "Vonage MCP server with tools to interact with APIs"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.vonage.com/en/tools",
+        "quote": "MCP Server API Bindings"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

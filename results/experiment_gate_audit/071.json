@@ -1,0 +1,74 @@
+{
+  "id": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "hint": "developers.notion.com",
+  "model": "sonnet",
+  "seconds": 43,
+  "cost_usd": 0.2108214,
+  "turns": 8,
+  "result": {
+    "app": "Notion",
+    "description": "All-in-one workspace for docs, wikis, databases, and project/task management, with AI agents.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth 2.0 auth-code for public integrations (any workspace, no review needed to authorize). Internal connection API token and personal access token (PAT) as static Bearer tokens. Each end user can self-create a PAT or internal token. Pages must be shared with the connection.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit (1): Public OAuth integration installable in any workspace; docs say authorization can start as soon as client credentials and redirect URI are set, and Marketplace review is optional (listing only). So no vendor review gate. (2): No paid plan needed. Free plan can create internal connections and PATs (Free plan PAT creation is workspace owners only; user's own free workspace makes them owner). Note: PAT policy on Business and Enterprise is admin-controlled, but OAuth is unaffected.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at api.notion.com, versioned via the Notion-Version header (2026-03-11). Covers pages, databases, blocks, comments, users, search, file uploads, and an Admin API for enterprise. Official JS SDK. Page-level access requires explicit sharing with the connection.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.notion.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.notion.com/guides/authorization/overview.md",
+        "quote": "Both scoped OAuth integrations and public integrations use this flow. You can start authorization as soon as you configure the integration’s client credentials and redirect URI; Marketplace submission or review is not required."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.notion.com/guides/authorization/overview.md",
+        "quote": "A PAT acts as the user who created it and uses that user's permissions in the selected workspace."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.notion.com/guides/connections-and-tokens/public-integrations/overview.md",
+        "quote": "This makes the integration eligible for Marketplace listing, subject to review. Listing is optional."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.notion.com/guides/connections-and-tokens/public-integrations/overview.md",
+        "quote": "A public integration is an OAuth integration that users can install in any Notion workspace."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens.md",
+        "quote": "| Free | Workspace owners only. | Not configurable. |"
+      },
+      {
+        "field": "api",
+        "url": "https://developers.notion.com/reference/intro.md",
+        "quote": "Send requests over HTTPS to `https://api.notion.com`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp.md",
+        "quote": "The remote server URL is `https://mcp.notion.com/mcp`."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

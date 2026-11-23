@@ -1,0 +1,62 @@
+{
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "hint": "open.larksuite.com",
+  "model": "sonnet",
+  "seconds": 33,
+  "cost_usd": 0.18705829999999998,
+  "turns": 6,
+  "result": {
+    "app": "Lark (Larksuite)",
+    "description": "Lark is ByteDance's international workplace suite (messaging, docs, calendar, mail, approval, base, HR) with an Open Platform for building apps and bots.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "Custom apps exchange app_id and app_secret for a tenant_access_token (about 2h, app identity). Store apps get app_access_token plus tenant_access_token. user_access_token comes from standard OAuth 2.0 auth-code flow for user identity. Calls carry the token as a Bearer header.",
+    "access": "admin_approval",
+    "access_detail": "Developer console signup is free and self-serve. A custom app inside your own tenant needs that tenant admin's approval of scopes and release. A store/ISV app for other tenants needs Lark open platform launch review, plus tenant admin install approval. Some scopes can be tested with the developer's user token without review. Pricing-plan restrictions not verified.",
+    "api_types": [
+      "rest",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Large REST surface at open.larksuite.com: IM/messaging, contacts, docs, drive, sheets, base, calendar, mail, approval, VC, tasks, HR and more. Event subscriptions via webhook or long-connection WebSocket. Official SDKs in Go, Java, Python and Node.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Per-tenant admin approval of scopes. Public distribution to other tenants requires Lark store app review. Region split: Feishu (China) vs Lark (international) domains.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://open.larksuite.com/document/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/tenant_access_token_internal.md",
+        "quote": "tenant_access_token_internal"
+      },
+      {
+        "field": "access",
+        "url": "https://larksuite.com/hc/en-US/articles/000472088408-overview-of-app-permissions-and-approval-rules",
+        "quote": "The permissions applied for by the app developer need to be reviewed by the tenant administrator."
+      },
+      {
+        "field": "api",
+        "url": "https://open.larksuite.com/llms.txt",
+        "quote": "Lark Developer"
+      },
+      {
+        "field": "mcp",
+        "url": "https://npmjs.com/package/@larksuiteoapi/lark-mcp",
+        "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool designed to help users quickly connect to the Feishu/Lark platform."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

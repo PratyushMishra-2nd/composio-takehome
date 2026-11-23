@@ -1,0 +1,68 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "hint": "fanbasis.com",
+  "model": "sonnet",
+  "seconds": 185,
+  "cost_usd": 0.40113810499999997,
+  "turns": 20,
+  "result": {
+    "app": "fanbasis",
+    "description": "Merchant-of-Record payments platform for creators/sellers (checkout, subscriptions, refunds); rebranded to Commas in July 2026.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "Static seller API key in the x-api-key header. Keys carry per-resource scopes (e.g. refunds, payments, customers, webhooks). Separate production and sandbox keys. No OAuth.",
+    "access": "self_serve_free",
+    "access_detail": "Seller creates a key in the dashboard under Account → API Keys, and can create sandbox keys in a separate sandbox dashboard. I found no plan gating or approval step, but the docs don't state pricing or eligibility. Rate limits vary by account; one update mentions 10,000 requests per hour. Production use needs a seller account, which the docs don't describe in detail. The official docs site (fanbasis.com/docs) returned 403 to my fetchers, so I read a Netlify-hosted copy (fbnewapi.netlify.app) that a third-party GitHub repo links to as live docs. Treat it as unverified against the official site.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "Base URL https://www.fanbasis.com/public-api (sandbox https://qa.dev-fan-basis.com). Resources: checkout sessions (plus embedded checkout), customers (including charging saved cards), subscribers and subscriptions (including proration), discount codes, products, transactions, refunds and disputes. Also webhooks (13 event types, signed), an npm @fanbasis/checkout-sdk, and a sandbox environment.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.fanbasis.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "FanBasis has rebranded to"
+      },
+      {
+        "field": "auth",
+        "url": "https://raw.githubusercontent.com/Gitmealez/fbnewapi/main/README.md",
+        "quote": "All requests require an API key in the `x-api-key` header:"
+      },
+      {
+        "field": "access",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Each environment needs its own API key registered against your account — a production key will not work in sandbox, and vice versa."
+      },
+      {
+        "field": "api",
+        "url": "https://raw.githubusercontent.com/Gitmealez/fbnewapi/main/README.md",
+        "quote": "Checkout sessions, webhooks, subscriptions, customers, discount codes, transactions, refunds, disputes, and more."
+      },
+      {
+        "field": "mcp",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Connect Claude, ChatGPT, or Grok directly to your Commas account via MCP."
+      },
+      {
+        "field": "mcp",
+        "url": "https://fbnewapi.netlify.app",
+        "quote": "Paste the server URL:"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

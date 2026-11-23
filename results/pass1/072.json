@@ -1,0 +1,84 @@
+{
+  "id": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "hint": "airtable.com/developers",
+  "model": "sonnet",
+  "seconds": 33,
+  "cost_usd": 0.2044246,
+  "turns": 7,
+  "result": {
+    "app": "Airtable",
+    "description": "Low-code cloud database/spreadsheet hybrid platform for building apps, workflows and automations on structured data.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "OAuth2 (registered integration at /create/oauth) for third-party apps acting for other users; personal access tokens (Bearer) for own/single-account use. Legacy API keys dead since 2024-02-01.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can register an OAuth integration or create a PAT self-serve. Only requirement before other users can authorize: privacy policy and ToS URLs. No app review found in the docs. Some admin/enterprise endpoints are Enterprise-only.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST/JSON covers records CRUD, bases and tables and fields schema, webhooks, comments, attachments, collaborators and enterprise admin endpoints. Rate limit 5 req/s per base. Official JS client airtable.js.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.airtable.com/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://airtable.com/developers/web/api/authentication.md",
+        "quote": "We currently support using personal access tokens and OAuth access tokens during the authentication process."
+      },
+      {
+        "field": "auth",
+        "url": "https://airtable.com/developers/web/api/authentication.md",
+        "quote": "Any integrations that allow other users to grant access to Airtable should use OAuth."
+      },
+      {
+        "field": "access",
+        "url": "https://airtable.com/developers/web/guides/oauth-integrations.md",
+        "quote": "You can access the OAuth integrations panel at [/create/oauth](https://airtable.com/create/oauth)."
+      },
+      {
+        "field": "access",
+        "url": "https://airtable.com/developers/web/guides/oauth-integrations.md",
+        "quote": "Most properties are optional, but note that the Privacy policy URL and Terms of service URL must be provided before sharing your"
+      },
+      {
+        "field": "api",
+        "url": "https://airtable.com/developers/web/api/introduction.md",
+        "quote": "The API closely follows REST"
+      },
+      {
+        "field": "api",
+        "url": "https://airtable.com/developers/web/api/rate-limits.md",
+        "quote": "The API is limited to 5 requests per second per base."
+      },
+      {
+        "field": "mcp",
+        "url": "https://airtable.com/developers/agents/mcp/getting-started.md",
+        "quote": "The server is available to all users on all plans."
+      },
+      {
+        "field": "mcp",
+        "url": "https://airtable.com/developers/agents/mcp/getting-started.md",
+        "quote": "Server URL: https://mcp.airtable.com/mcp"
+      },
+      {
+        "field": "description",
+        "url": "https://airtable.com/developers/web/api/introduction.md",
+        "quote": "The Airtable API can be used to integrate your data in Airtable with any external system."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

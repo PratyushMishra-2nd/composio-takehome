@@ -1,0 +1,74 @@
+{
+  "id": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "hint": "developer.monday.com",
+  "model": "sonnet",
+  "seconds": 62,
+  "cost_usd": 0.119637975,
+  "turns": 3,
+  "result": {
+    "app": "Monday.com",
+    "description": "Work management platform for boards, projects, CRM and workflows, with a GraphQL API.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Personal V2 API token sent in the Authorization header (a free developer account can get one). OAuth2 authorization-code flow for apps built in the Developer Center, with auth.monday.com endpoints. The docs say an OAuth 2.1 flow with refresh tokens is newer, and the page describes the legacy flow.",
+    "access": "self_serve_free",
+    "access_detail": "A free developer account gives an API token for testing. OAuth apps are created in the Developer Center. The fetched pages say nothing about marketplace review being required to use OAuth, and I did not find plan restrictions or rate limits. I could not verify those, so access confidence is medium.",
+    "api_types": [
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Single GraphQL endpoint at https://api.monday.com/v2, with queries and mutations. Schema introspection is at /v2/get_schema. The API covers boards, items, users and more. Breadth is inferred from the schema description and reference pages, not counted.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/mondaycom/monday-ai/tree/master/packages/monday-api-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.monday.com/apps/docs/oauth",
+        "quote": "The OAuth request URL is: `https://auth.monday.com/oauth2/authorize`."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.monday.com/apps/docs/oauth",
+        "quote": "The HTTP verb in your request should be POST, and the token URL is `https://auth.monday.com/oauth2/token`."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+        "quote": "Our API uses the following endpoint: `https://api.monday.com/v2`."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+        "quote": "Our GraphQL schema defines the structure of the available API data and contains all of the available queries and mutations."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.monday.com/apps/docs/mondaycom-mcp-integration",
+        "quote": "You can also use the MCP server to build your own AI agents or integrate AI features into your apps."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

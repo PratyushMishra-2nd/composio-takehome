@@ -1,0 +1,58 @@
+{
+  "id": 84,
+  "app": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "hint": "paygent (NMI-powered)",
+  "model": "sonnet",
+  "seconds": 73,
+  "cost_usd": 0.15421819,
+  "turns": 5,
+  "result": {
+    "app": "Paygent Connect",
+    "description": "Paygent Connect appears to be a payment gateway white-labeled on NMI, which handles card and ACH payments, a customer vault, recurring billing and invoicing. I could not confirm this from a Paygent page.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "auth_detail": "NMI API (security) keys. A key is created per user in the Merchant Portal under Settings > Security Keys and inherits that user's permissions. REST v5 sends it in the Authorization header. Classic transact.php and query.php send it as security_key or api_key. Public keys are for client-side use and private keys are for server-side use. No OAuth.",
+    "access": "customer_account",
+    "access_detail": "NMI offers sandbox keys through guide.nmi.com. Live keys need a merchant account on the white-label gateway, which in practice means an existing Paygent merchant account or a sales-led signup. I found no Paygent-specific developer docs, so the tie to NMI is inferred from the hint. Access confidence is low-medium.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "NMI REST v5 covers payments (sale, auth, capture, void, refund), customers (vault), subscriptions, plans, products, invoices and devices. The Classic transact.php and query.php endpoints stay available for existing integrations. Webhooks and merchant account management are also documented. This is NMI's API, not a Paygent-branded one.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://enterprisedna.co/directories/mcp/praveendias1180-easypaydirect-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No Paygent-specific developer docs found, so the NMI link is unverified. Live keys need a merchant account, and users must supply their own gateway host and key. Only an unofficial, read-only community MCP exists, built for NMI-family gateways.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.nmi.com/docs/authentication",
+        "quote": "Authentication across our APIs is done via secure API keys."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.nmi.com/reference/testing-methods",
+        "quote": "Log in to guide.nmi.com to retrieve Sandbox Keys or access the Sandbox Partner and Merchant Portals."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.nmi.com/reference",
+        "quote": "The Classic DirectPost (transact.php) and Query (query.php) endpoints are documented here for existing Classic integrations."
+      },
+      {
+        "field": "mcp",
+        "url": "https://enterprisedna.co/directories/mcp/praveendias1180-easypaydirect-mcp",
+        "quote": "Unofficial and not maintained by the gateway vendor."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "low",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

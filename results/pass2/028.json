@@ -1,0 +1,69 @@
+{
+  "id": 28,
+  "app": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "hint": "developers.facebook.com/docs/whatsapp",
+  "model": "sonnet",
+  "seconds": 55,
+  "cost_usd": 0.211569315,
+  "turns": 7,
+  "result": {
+    "app": "WhatsApp Business",
+    "description": "Meta's WhatsApp Business Platform (Cloud API) for sending and receiving WhatsApp messages, templates and media, and managing business accounts and phone numbers.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Bearer access tokens on graph.facebook.com. A direct developer uses a System User token, which can be non-expiring. Tech Providers use a Business Integration System User token, obtained by implementing Embedded Signup (Facebook Login for Business, OAuth-style code exchange). Short-lived user tokens exist for testing only.",
+    "access": "admin_approval",
+    "access_detail": "Self-serve for your own business: free Meta developer signup, test phone number and temporary token. To let other businesses connect, the app must be a Tech Provider with Embedded Signup. That needs Meta App Review for the permissions and normally Business Verification. Messaging itself is billed per message (utility, authentication, marketing). I did not confirm the exact review requirements on the fetched pages. They are marked \"if applicable\" in the docs.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Cloud API over the Graph API (REST/JSON, versioned, v23.0 or later). It covers messages, media, message templates, phone numbers, WABA management, business profile, webhooks, flows, calling and more. Webhooks are required for inbound messages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Multi-tenant use needs Tech Provider status and Embedded Signup, with Meta App Review and likely Business Verification. Per-message billing applies. Inbound messages need webhooks. Meta's official MCP is aimed at dev and test setup, not production sending.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+        "quote": "user access tokens expire quickly, so you have to keep generating a new one every few hours."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+        "quote": "To generate a Business Integration System User access token, you must implement Embedded Signup"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+        "quote": "View required and optional permissions for this use case and add them to an App Review submission, if applicable."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+        "quote": "This guide helps developers quickly get started with the WhatsApp Cloud API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+        "quote": "This release is built for development and testing workflows, not production sending at scale."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+        "quote": "You sign in with Facebook Login for Business and grant a specific set of scopes"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

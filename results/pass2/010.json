@@ -1,0 +1,85 @@
+{
+  "id": 10,
+  "app": "DealCloud",
+  "category": "CRM and Sales",
+  "hint": "api.docs.dealcloud.com",
+  "model": "sonnet",
+  "seconds": 73,
+  "cost_usd": 0.29724943,
+  "turns": 7,
+  "result": {
+    "app": "DealCloud",
+    "description": "Intapp DealCloud: CRM and deal-management platform for financial services (PE, investment banking, etc.) with a REST API per customer site.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "REST API: OAuth2 Client Credentials. The user enables a per-user API Key in their profile, which serves as the client secret. POST {baseUrl}/api/rest/v1/oauth/token with scopes (data, user_management, publish, ri_import, backup) returns a bearer token that expires in 900s. MCP server: OAuth 2.0 per user via .well-known discovery, with no client ID or secret to create.",
+    "access": "customer_account",
+    "access_detail": "No public signup or developer sandbox found. The API base URL is tenant-specific. An admin must add the API site area to the user's group, and the user then enables an API Key in their profile. This only works inside an existing DealCloud customer site. The docs point users to their admin or DealCloud Customer Success Manager. The MCP server additionally needs the 'DealCloud with Celeste' license plus the MCP Access capability. I did not find a free developer sandbox.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST areas: Schema (entry types, fields, metadata), Data (cells, rows, history, files, delete, merge, template reports), User Management, Publications (event polling), Site Backups, Relationship Intelligence import. Each site serves Swagger at /swagger and an OpenAPI spec at /swagger/current. SDKs exist for Python and C#. The MCP server uses a GraphQL schema. I did not read the pagination, rate-limit or error pages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://api.docs.dealcloud.com/mcp",
+    "verdict": "needs_outreach",
+    "blocker": "There is no self-serve signup or sandbox. Credentials exist only inside an existing customer tenant with admin-granted API access, so a developer needs a DealCloud customer or partner account first. The vendor MCP also needs the paid Celeste license.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token"
+      },
+      {
+        "field": "auth",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the flow."
+      },
+      {
+        "field": "access",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "Scroll down to the API Key section and click Enable."
+      },
+      {
+        "field": "api",
+        "url": "https://api.docs.dealcloud.com/docs",
+        "quote": "This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints."
+      },
+      {
+        "field": "api",
+        "url": "https://api.docs.dealcloud.com/docs",
+        "quote": "Each DealCloud site provides an interactive Swagger page for testing API calls."
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.docs.dealcloud.com/mcp/authentication",
+        "quote": "DealCloud MCP uses OAuth to authenticate, letting AI assistants connect on behalf of an individual user."
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+        "quote": "Copy the MCP endpoint URL from **Tools > MCP Servers** and connect it to your AI client."
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.docs.dealcloud.com/mcp/tools",
+        "quote": "To enable write tools, go to **Tools > MCP Servers**, edit the MCP Server, and turn on the **Enable Write Tools** toggle."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

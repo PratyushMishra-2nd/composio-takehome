@@ -1,0 +1,75 @@
+{
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "hint": "close.com",
+  "model": "sonnet",
+  "seconds": 38,
+  "cost_usd": 0.2839121,
+  "turns": 7,
+  "result": {
+    "app": "Close",
+    "description": "Close is a CRM for sales teams: leads, contacts, opportunities, calling, email/SMS and workflow automation.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "auth_detail": "OAuth2 authorization-code with refresh tokens, for user-facing apps (create an OAuth app in Close settings). API key sent via HTTP Basic (key as username, empty password), per user/org.",
+    "access": "self_serve_trial",
+    "access_detail": "No free plan. Signup gives a 14-day free trial with no card. Keys and OAuth apps are self-serve in Settings → Developer. The pricing FAQ says Close provides a REST API with no published API quota or API fees, and does not mark the API as plan-restricted. An ongoing paid subscription is needed after the trial. No app review is documented for OAuth apps.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at api.close.com/api/v1. Covers leads, contacts, opportunities, activities (calls, email, SMS, notes, meetings), custom fields, and more. Has pagination, a _fields parameter and rate limits. Composio lists 109 tools for the Close MCP. Webhooks exist but were not verified here.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.close.com/mcp",
+    "verdict": "build_now",
+    "blocker": "No permanent free tier: dev testing needs the 14-day trial or a paid seat. Otherwise none.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/api/overview.md",
+        "quote": "**[OAuth 2.0](/api/overview/oauth-authentication)** — Best for user-facing integrations."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.close.com/api/overview/api-key-authentication.md",
+        "quote": "API keys use [HTTP Basic client side authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side)."
+      },
+      {
+        "field": "access",
+        "url": "https://close.com/pricing",
+        "quote": "14-day free trial, no credit card required"
+      },
+      {
+        "field": "access",
+        "url": "https://close.com/pricing",
+        "quote": "Yes. Close provides a REST API for building custom integrations, connecting your applications, and automating sales processes."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.close.com/api/overview.md",
+        "quote": "Close uses industry-standard REST conventions with predictable URL structures, standard HTTP methods, and JSON request/response bodies."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.close.com/mcp.md",
+        "quote": "The MCP server URL is `https://mcp.close.com/mcp` and has \"HTTP Streamable\" and \"OAuth 2.0 Dynamic Client Registration (DCR)\" support."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.close.com/api/overview/oauth-authentication.md",
+        "quote": "To implement authentication with OAuth 2.0, you need to [create an OAuth app](/integrations/create-an-oauth-app) to get your **Client ID** and **Client Secret**."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

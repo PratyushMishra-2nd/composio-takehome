@@ -1,0 +1,64 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "hint": "salesforce.com",
+  "model": "sonnet",
+  "seconds": 45,
+  "cost_usd": 0.31027998,
+  "turns": 7,
+  "result": {
+    "app": "Salesforce",
+    "description": "Cloud CRM platform for sales, service, marketing and custom apps, with extensive APIs over standard and custom objects.",
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "session_login"
+    ],
+    "auth_detail": "OAuth 2.0 via an External Client App (connected app creation restricted since Spring '26): web server/auth-code+PKCE, user-agent, device, refresh token, client credentials, JWT bearer. SOAP API also accepts username+password login for a session ID. Flow list from search results and Trailhead, not page-verified.",
+    "access": "self_serve_free",
+    "access_detail": "Free Developer Edition org at developer.salesforce.com/signup gives working API credentials, with API Enabled on by default. Customer orgs need an edition with API access (Enterprise and up, or an add-on) and an admin to authorize or install the external client app. Hosted MCP servers need Flex Credits and Enterprise Edition or above.",
+    "api_types": [
+      "rest",
+      "soap",
+      "graphql",
+      "websocket",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API covers CRUD, SOQL/SOSL, composite and describe over all standard and custom objects. Also SOAP, Bulk API 2.0, Metadata, Tooling, GraphQL, Connect REST and Pub/Sub (gRPC) APIs. Docs fetch returned 403 here, so breadth is from search snippets and prior knowledge.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org",
+        "quote": "If you already have a Developer Edition organization, verify that your user profile has the API Enabled permission."
+      },
+      {
+        "field": "api",
+        "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org",
+        "quote": "Using a separate org to develop your applications protects your live data during testing."
+      },
+      {
+        "field": "auth",
+        "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+        "quote": "Salesforce CLI is a connected app that you can authenticate, and it requires no work to configure."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/servers-reference.html",
+        "quote": "Salesforce provides a set of standard MCP servers that expose built-in platform and product capabilities, pre-configured with a fixed set of tools."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}

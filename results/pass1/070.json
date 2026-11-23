@@ -1,0 +1,75 @@
+{
+  "id": 70,
+  "app": "Sentry",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.sentry.io/api",
+  "model": "sonnet",
+  "seconds": 84,
+  "cost_usd": 0.23295536500000005,
+  "turns": 7,
+  "result": {
+    "app": "Sentry",
+    "description": "Application monitoring platform for finding and fixing errors, performance issues and bugs in real time.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Bearer auth tokens (org tokens, personal user tokens, internal-integration tokens) sent as Authorization: Bearer. OAuth2 authorization-code grant for public integrations. Legacy API keys exist but are disabled for new accounts.",
+    "access": "self_serve_free",
+    "access_detail": "Free Developer plan with self-serve signup. Internal integration and personal tokens are created in the UI with no review. OAuth apps (public integrations) are self-serve to register. Caveat: pricing page row \"API\" shows No for Developer and Yes for Team and up. The page doesn't say whether that row means REST API access, so confirm before relying on the free tier.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST API at sentry.io/api/0/. About 24 endpoint categories (Organizations, Projects, Teams, Events, Issues, Releases, Crons, Users and others) plus pagination, permissions and rate-limit docs. Self-hosted Sentry is supported via a configurable host.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.sentry.dev/mcp",
+    "verdict": "build_now",
+    "blocker": "Minor: the pricing page lists \"API\" as No on the free Developer plan, so confirm token API access on free accounts. Otherwise none.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "Sentry supports OAuth2 with the authorization code grant type."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "You can create authentication tokens within Sentry by creating an internal integration."
+      },
+      {
+        "field": "access",
+        "url": "https://sentry.io/pricing/",
+        "quote": "Start free on the Developer plan forever, or try Business for 14 days with no credit card."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.sentry.io/api/",
+        "quote": "You can use the APIs to manage account-level resources, like organizations and teams, as well as manage and export data."
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcp.sentry.dev/",
+        "quote": "The base MCP server address is: `https://mcp.sentry.dev/mcp`"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/getsentry/sentry-mcp",
+        "quote": "This repository contains the Sentry CLI, the Sentry MCP server, and shared packages."
+      },
+      {
+        "field": "description",
+        "url": "https://docs.sentry.io/",
+        "quote": "Sentry is an application monitoring platform that helps developers and their agents have the context needed to identify and fix bugs"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

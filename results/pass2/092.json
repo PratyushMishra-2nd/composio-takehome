@@ -1,0 +1,65 @@
+{
+  "id": 92,
+  "app": "Otter AI",
+  "category": "AI, Research and Media-native",
+  "hint": "help.otter.ai (MCP server)",
+  "model": "sonnet",
+  "seconds": 50,
+  "cost_usd": 0.1842379,
+  "turns": 6,
+  "result": {
+    "app": "Otter AI",
+    "description": "AI meeting assistant that records, transcribes and summarizes meetings; offers an Enterprise Public REST API and a hosted read-only MCP server.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "Public REST API: static Bearer API key generated in workspace Developer settings (no OAuth, 2 keys per user). Hosted MCP server: OAuth 2.1 with browser consent.",
+    "access": "paid_plan",
+    "access_detail": "Public API reported as Enterprise-workspace only (Developer tab absent on other plans; account manager may enable). Otter's own help pages returned 403, so gating is confirmed only via third-party Scalekit blog. MCP server works for standard Otter accounts via OAuth, no Enterprise needed.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST at api.otter.ai/v1: conversations (list/retrieve/ingest file), channels/members, audio links, workspace details, webhooks, cursor pagination, 10 req/s. MCP is read-only with 3 tools: search, fetch, get_user_info. Details from third-party sources; Otter docs unreachable.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.otter.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "Full REST API needs Enterprise workspace and static API key; the MCP path is OAuth 2.1 but read-only with only 3 tools. Otter's own docs could not be verified.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+        "quote": "The API does not support OAuth at all; it uses a static Bearer key the user generates in the dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+        "quote": "The Public API is a REST surface at api.otter.ai/v1, available to Enterprise workspaces only."
+      },
+      {
+        "field": "api",
+        "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+        "quote": "The Public API is a REST surface at api.otter.ai/v1, available to Enterprise workspaces only."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+        "quote": "Otter runs a provider-hosted MCP server at mcp.otter.ai/mcp."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+        "quote": "The MCP server uses OAuth 2.1 with a browser consent step, minting a token scoped to what the user authorized."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": 22,
+  "app": "Twilio",
+  "category": "Communications and Messaging",
+  "hint": "twilio.com",
+  "model": "sonnet",
+  "seconds": 53,
+  "cost_usd": 0.225286585,
+  "turns": 7,
+  "result": {
+    "app": "Twilio",
+    "description": "Cloud communications platform with APIs for SMS/MMS/WhatsApp messaging, voice, verification, video, contact center (Flex) and more.",
+    "auth_methods": [
+      "basic",
+      "api_key"
+    ],
+    "auth_detail": "HTTP Basic auth: API key SID + secret (preferred; Main/Standard/Restricted keys) or Account SID + Auth Token (legacy). No OAuth2 for REST APIs; Access Tokens exist only for client-side SDKs.",
+    "access": "self_serve_free",
+    "access_detail": "Free signup, no credit card. Trial lasts 30 days, can message only verified numbers (up to 5), and has restricted message bodies. Upgrade to a paid account lifts the limits. Credentials work immediately.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Each product has its own REST API (Messaging, Voice, Verify, Conversations, Video, Flex, Sync, TaskRouter, Lookup, SendGrid Email, etc.). Twilio says its MCP covers 1,800+ endpoints across 30+ products. Official SDKs in many languages.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.twilio.com/docs/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://www.twilio.com/docs/iam/api-keys",
+        "quote": "API keys are the preferred way to authenticate with Twilio's REST APIs."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+        "quote": "Use your API key SID as the username and your API key secret as the password."
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/docs/usage/trials",
+        "quote": "You can sign up for a Twilio free trial account without a credit card."
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/docs/usage/trials",
+        "quote": "Each account can verify up to 5 recipients."
+      },
+      {
+        "field": "api",
+        "url": "https://www.twilio.com/docs/usage/api",
+        "quote": "each product corresponds to an API."
+      },
+      {
+        "field": "description",
+        "url": "https://www.twilio.com/docs",
+        "quote": "Twilio APIs give you flexibility, global reach, and reliable deliverability to connect with customers anywhere."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.twilio.com/docs/mcp",
+        "quote": "No Account SID, API key, or other credential is required or accepted."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.twilio.com/docs/mcp",
+        "quote": "exposes two tools that work together in a search-then-retrieve workflow"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

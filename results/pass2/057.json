@@ -1,0 +1,80 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "hint": "brightdata.com",
+  "model": "sonnet",
+  "seconds": 44,
+  "cost_usd": 0.14278265499999998,
+  "turns": 5,
+  "result": {
+    "app": "Bright Data",
+    "description": "Web data platform: proxies, Web Unlocker, SERP API, scraping browser, pre-built scrapers and datasets for public web data collection.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "basic"
+    ],
+    "auth_detail": "API key sent as 'Authorization: Bearer <token>' on REST API. Proxy access uses native username/password (brd-customer-ID-zone-NAME:password). Key generated in account settings by admin; default key created at signup.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can sign up; default API key auto-created. MCP free tier 5,000 requests/month, no credit card. Beyond free, pay-as-you-go billing.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST API covers Web Unlocker (POST api.brightdata.com/request), SERP, Scrapers (1,200+ pre-built), Scraping Browser, Functions (Scraper Studio), Marketplace datasets; proxy networks via proxy protocol. Also CLI, Python and JS SDKs.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://github.com/brightdata/brightdata-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "An API key is a secure hashed token used to authenticate with Bright Data API."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "We create a default key for you upon account creation automatically."
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "No credit card or commitment required to start."
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "5,000 free requests per month, renewing on the 1st of each month."
+      },
+      {
+        "field": "api",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "clean JSON from 1,200+ pre-built scrapers"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "The Bright Data MCP server gives AI agents real-time access to public web data."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/brightdata/brightdata-mcp",
+        "quote": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "If you don't see the 'API key' section, switch to an admin account."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

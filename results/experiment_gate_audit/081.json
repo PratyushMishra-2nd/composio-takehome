@@ -1,0 +1,81 @@
+{
+  "id": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "hint": "stripe.com/docs/api",
+  "model": "sonnet",
+  "seconds": 71,
+  "cost_usd": 0.13956885,
+  "turns": 4,
+  "result": {
+    "app": "Stripe",
+    "description": "Payments platform for online and in-person payments, billing, invoicing, payouts, Connect marketplaces, Issuing, Tax and Radar, with a REST API.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "auth_detail": "Secret and restricted API keys (sk_/rk_, sent as bearer or basic auth), where each account owner creates their own restricted key. OAuth 2.0 through Stripe Apps (a public app needs review) or Connect OAuth. The official MCP server accepts OAuth or agent API keys.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit. (1) Review: an end user can create a restricted API key in their own dashboard, so connecting other accounts needs no app review. Only the optional OAuth route through Stripe Apps needs review before public install links work, and that is not required for key-based connections. (2) Paid plan: the pricing page shows no setup or monthly fees, only per-transaction fees. The sandbox is free, and no paid plan is needed for API access. Unconfirmed: the docs do not say in so many words that sandbox keys work before account activation. Cost and review caveats apply to the OAuth path only.",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST, form-encoded requests, JSON responses. It covers customers, charges, PaymentIntents, invoices, subscriptions, products, prices, payment links, disputes, Radar, webhooks, Tax, payouts, balance transactions, Issuing, Connect and Treasury. There are no bulk updates. Official SDKs exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.stripe.com",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.stripe.com/keys",
+        "quote": "API key with permissions you control."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.stripe.com/stripe-apps/api-authentication/oauth",
+        "quote": "Use the industry standard OAuth 2.0 to authenticate requests to the Stripe API on behalf of your users."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.stripe.com/keys",
+        "quote": "Build and test: Create or select a sandbox and use its test keys."
+      },
+      {
+        "field": "access",
+        "url": "https://stripe.com/pricing",
+        "quote": "Stripe does not charge setup fees, monthly fees, or any other hidden fees like closure fees."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.stripe.com/stripe-apps/api-authentication/oauth",
+        "quote": "The public OAuth install links don't work until the app is published."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.stripe.com/api",
+        "quote": "The Stripe API is organized around REST."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "Stripe's MCP server supports two authentication methods:"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.stripe.com/keys",
+        "quote": "API key that has unrestricted permissions on all Stripe APIs."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

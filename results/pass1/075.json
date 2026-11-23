@@ -1,0 +1,75 @@
+{
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "hint": "developers.asana.com",
+  "model": "sonnet",
+  "seconds": 54,
+  "cost_usd": 0.20164014000000002,
+  "turns": 6,
+  "result": {
+    "app": "Asana",
+    "description": "Work management platform for teams to organize tasks, projects, portfolios and goals.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "other"
+    ],
+    "auth_detail": "OAuth2 auth-code (+PKCE, 1h access token + refresh) for multi-user apps; personal access token (bearer) for own/internal use; Service Account token (Enterprise only); OpenID Connect for sign-in.",
+    "access": "self_serve_free",
+    "access_detail": "Create PAT or OAuth app in developer console self-serve; OAuth apps usable by any Asana user. Docs state no plan restriction for the API; service accounts need Enterprise; Enterprise admins can control apps/PATs. View-only license users have limited API access. Plan-level free-tier limits not explicitly confirmed on fetched pages.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST at app.asana.com/api/1.0, JSON. Covers tasks, projects, portfolios, custom fields, webhooks, users, teams, app components, plus audit log and SCIM on Enterprise. Rate limits apply per token.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.asana.com/v2/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API."
+      },
+      {
+        "field": "auth",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "This is the best choice if multiple users need to sign in to your app."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/personal-access-token",
+        "quote": "You can generate a personal access token from the Asana developer console."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "View only license users have limited access to the API."
+      },
+      {
+        "field": "api",
+        "url": "https://developers.asana.com/reference/rest-api-reference",
+        "quote": "The Asana API is a RESTful interface with predictable resource-oriented URLs"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.asana.com/docs/mcp-clients.md",
+        "quote": "Asana's official MCP server lets you interact with your Asana workspace through natural language"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+        "quote": "The Asana V2 MCP server is generally available and uses OAuth for authorization."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": 5,
+  "app": "Twenty",
+  "category": "CRM and Sales",
+  "hint": "twenty.com (open-source CRM)",
+  "model": "sonnet",
+  "seconds": 52,
+  "cost_usd": 0.22344418,
+  "turns": 8,
+  "result": {
+    "app": "Twenty",
+    "description": "Open-source CRM (cloud or self-hosted) with schema-per-workspace REST/GraphQL APIs, OAuth and an official MCP server.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_detail": "API key (created in Settings → Developers → API) sent as 'Authorization: Bearer'. OAuth 2.0 with authorization code + PKCE and client credentials. Clients self-register via RFC 7591 dynamic client registration, with no dashboard setup.",
+    "access": "self_serve_trial",
+    "access_detail": "Cloud has a 30-day free trial with no credit card, then paid per-seat plans (Pro, Organization). API is included in every plan, with rate limits of 50/min (Pro) and 100/min (Organization) per the pricing page. Self-hosting is free and has no gate. So devs can get working credentials self-serve either way.",
+    "api_types": [
+      "rest",
+      "graphql"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Core API does CRUD on records (People, Companies, Opportunities, custom objects) over REST and GraphQL. Metadata API manages objects, fields and relations. Endpoints are generated per workspace schema, so there is no static reference. Batch ops go up to 60 records. Base URL is api.twenty.com for cloud, or your own domain when self-hosted. The fetched pages did not mention webhooks, although the pricing page lists them.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://docs.twenty.com/developers/extend/mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.twenty.com/developers/extend/mcp",
+        "quote": "You have two ways to authenticate your MCP client: **OAuth** (recommended) or **API Key**."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.twenty.com/developers/extend/oauth.md",
+        "quote": "Clients are registered dynamically via RFC 7591 — no manual setup in a dashboard."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+        "quote": "Create an API key in Settings → Developers → API → + Create key."
+      },
+      {
+        "field": "access",
+        "url": "https://twenty.com/pricing",
+        "quote": "Sign up for Cloud in under a minute and start your 30-day trial."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans",
+        "quote": "Host Twenty on your own infrastructure at no cost:"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+        "quote": "Both are available as REST and GraphQL."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+        "quote": "This is how you programmatically change your data model."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.twenty.com/developers/extend/mcp",
+        "quote": "Use your **workspace URL** (the URL you use to access Twenty) as the MCP endpoint."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.twenty.com/developers/extend/oauth.md",
+        "quote": "Request scopes as a space-separated string: scope=api profile"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

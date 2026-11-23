@@ -1,0 +1,86 @@
+{
+  "id": 27,
+  "app": "Telegram",
+  "category": "Communications and Messaging",
+  "hint": "core.telegram.org",
+  "model": "sonnet",
+  "seconds": 69,
+  "cost_usd": 0.21872768999999997,
+  "turns": 6,
+  "result": {
+    "app": "Telegram",
+    "description": "Cloud-based messaging app with a free HTTP Bot API (BotFather tokens) and an MTProto user-account API for sending messages, managing chats, and building bots.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "other"
+    ],
+    "auth_detail": "Bot API: per-bot token from @BotFather, embedded in the URL path (api.telegram.org/bot<token>/METHOD). User-account (MTProto/TDLib) API: api_id + api_hash from my.telegram.org, plus phone-number login and session string. There is no OAuth2 authorization-code flow for third-party access to user accounts. Telegram Login URL authorization exists, but it is for website login, not API access.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can message @BotFather to get a bot token at no cost. The api_id for user accounts is created at my.telegram.org. Both APIs are free. Broadcasting above 30 msgs/sec costs Stars (paid).",
+    "api_types": [
+      "rest",
+      "sdk_only"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "The Bot API is HTTPS (GET/POST) with 100+ methods: messages, media, chats, inline mode, payments, webhooks and getUpdates. The separate MTProto/TDLib API gives full user-account access and is used through SDKs such as Telethon. Bots only see chats they have been added to or messaged in, and cannot start conversations with users.",
+    "mcp_exists": true,
+    "mcp_official": false,
+    "mcp_url": "https://github.com/chigwell/telegram-mcp",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://core.telegram.org/bots/api",
+        "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram."
+      },
+      {
+        "field": "auth",
+        "url": "https://core.telegram.org/bots",
+        "quote": "To get started, message @BotFather on Telegram to register your bot and receive its authentication token."
+      },
+      {
+        "field": "auth",
+        "url": "https://core.telegram.org/api/obtaining_api_id",
+        "quote": "You will get basic addresses as well as the api_id and api_hash parameters required for user authorization."
+      },
+      {
+        "field": "access",
+        "url": "https://core.telegram.org/bots",
+        "quote": "The Telegram Bot Platform hosts more than 10 million bots and is free for both users and developers."
+      },
+      {
+        "field": "access",
+        "url": "https://core.telegram.org/api",
+        "quote": "You are welcome to use both APIs free of charge."
+      },
+      {
+        "field": "api",
+        "url": "https://core.telegram.org/bots/api",
+        "quote": "All queries to the Telegram Bot API must be served over HTTPS and need to be presented in this form:"
+      },
+      {
+        "field": "api",
+        "url": "https://core.telegram.org/bots/api",
+        "quote": "We support GET and POST HTTP methods."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/chigwell/telegram-mcp",
+        "quote": "It exposes Telegram account, chat, message, contact, media, folder, and admin operations through the Model Context Protocol"
+      },
+      {
+        "field": "verdict",
+        "url": "https://core.telegram.org/bots/faq",
+        "quote": "By default, bots are able to message their users at no cost"
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "high",
+      "api": "high",
+      "mcp": "medium"
+    }
+  }
+}

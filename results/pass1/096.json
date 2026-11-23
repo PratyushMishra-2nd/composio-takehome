@@ -1,0 +1,69 @@
+{
+  "id": 96,
+  "app": "Devin",
+  "category": "AI, Research and Media-native",
+  "hint": "docs.devin.ai (MCP)",
+  "model": "sonnet",
+  "seconds": 39,
+  "cost_usd": 0.23954170000000002,
+  "turns": 9,
+  "result": {
+    "app": "Devin",
+    "description": "Devin is Cognition's autonomous AI software engineer. It takes tasks as sessions, writes and runs code, and opens PRs.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key"
+    ],
+    "auth_detail": "Bearer tokens with a cog_ prefix. Service user API key (org or enterprise scope, RBAC role, expiring) for automation. Personal Access Token for acting as a human user. Legacy apk_ keys are deprecated. No OAuth2 for third-party apps was found.",
+    "access": "paid_plan",
+    "access_detail": "Keys are self-serve. An admin provisions a service user under Settings > Devin API in a Devin org, or creates a PAT, and copies the cog_ key. This needs a Devin account and org, and Devin is a paid product. I could not confirm the free or trial terms from the pricing page. Enterprise endpoints (analytics, audit logs, billing) are enterprise-only. Each customer must create their own key, so there is no OAuth app flow.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST v3 at api.devin.ai/v3/organizations/* and /v3/enterprise/*. The organization scope covers sessions, knowledge, playbooks, secrets, schedules and users. The enterprise scope covers analytics, audit logs, user management, billing and service-user keys. I did not count the endpoints.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.devin.ai/mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No OAuth for third parties. Users must paste a cog_ key from a paid Devin org, and enterprise-scope keys also need an X-Org-Id header. I could not confirm the plan gating.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.devin.ai/api-reference/authentication.md",
+        "quote": "All API credentials use the `cog_` prefix format. Include your token in the `Authorization` header of every request:"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.devin.ai/api-reference/authentication.md",
+        "quote": "A **Personal Access Token** authenticates as the **human user** who created it — that user's identity, permissions, and org memberships apply."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md",
+        "quote": "Go to **Settings > Devin API** in your organization and open the **Service users** tab"
+      },
+      {
+        "field": "api",
+        "url": "https://docs.devin.ai/api-reference/overview.md",
+        "quote": "For managing resources within a single organization — sessions, knowledge, playbooks, secrets, and more."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.devin.ai/api-reference/overview.md",
+        "quote": "For cross-organization management — analytics, audit logs, user management, billing, and infrastructure. Available to enterprise customers."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.devin.ai/work-with-devin/devin-mcp.md",
+        "quote": "The Devin MCP server is an authenticated service that provides access to both public and private repositories, plus full platform management capabilities."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "low",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

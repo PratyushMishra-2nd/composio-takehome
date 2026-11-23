@@ -1,0 +1,83 @@
+{
+  "id": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "hint": "zoho.com/crm",
+  "model": "sonnet",
+  "seconds": 54,
+  "cost_usd": 0.22869698,
+  "turns": 7,
+  "result": {
+    "app": "Zoho CRM",
+    "description": "Cloud CRM platform for sales, leads, contacts, deals and automation, with AI features.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "auth_detail": "OAuth 2.0 only. Client types registered in Zoho API Console: server-based, client-based, mobile, self client (backend, no redirect URL), and client credentials flow (one-time tasks, no refresh token). Access token 1h, refresh token long-lived. Multi-data-center accounts URLs.",
+    "access": "self_serve_free",
+    "access_detail": "Register client in Zoho API Console (api-console.zoho.com) with any Zoho account; no approval step found in docs. API available on Free edition (5,000 credits/24h, 5 concurrent). Trial editions have the same limits as paid. Not explicitly stated as free in the register page, so medium confidence. Zoho Marketplace listing needs review, but not required to use the API.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "REST v8 (base https://www.zohoapis.com/crm/v8; per-DC domains). Families: Metadata, Core CRUD on modules, Composite (up to 5 calls), Bulk, Notification (webhooks), Query (COQL). Plus official SDKs (Java, Python, PHP, Node, JS). Credit-based rate limits.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "description",
+        "url": "https://www.zoho.com/crm/",
+        "quote": "Built with AI at its core, Zoho CRM supercharges your business to get ahead without the overhead."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+        "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication."
+      },
+      {
+        "field": "auth",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+        "quote": "Applications that does not have a redirect URL or a web UI, operating solely in the backend without requiring user interaction."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+        "quote": "| Free Edition | 5000 credits | 5000 credits |"
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+        "quote": "The API limits for trial editions are the same as those of their corresponding paid editions."
+      },
+      {
+        "field": "api",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+        "quote": "Perform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints."
+      },
+      {
+        "field": "api",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+        "quote": "Combine up to five API calls in a single request through this API."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+        "quote": "Connect your AI tools to Zoho CRM using the Model Context Protocol (MCP) to perform CRM operations using natural language."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+        "quote": "When you invoke an MCP tool for the first time, the server initiates an OAuth flow."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

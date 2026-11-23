@@ -1,0 +1,68 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "hint": "coda.io/developers",
+  "model": "sonnet",
+  "seconds": 64,
+  "cost_usd": 0.15660633,
+  "turns": 5,
+  "result": {
+    "app": "Coda",
+    "description": "Collaborative doc platform (now Superhuman Docs) combining docs, tables, and automations, with a public REST API and Packs.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "auth_detail": "Per-user API token sent as 'Authorization: Bearer <your API token>'. No OAuth2 for third-party REST API apps found in the docs; Packs OAuth and the MCP login are separate products and not verified here.",
+    "access": "self_serve_free",
+    "access_detail": "Docs say the API is free for all users in free and paid workspaces. Token is generated in account settings. Some actions, such as createDoc, depend on the token owner's workspace role. Because there is no OAuth, end users would paste their own tokens.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "moderate",
+    "api_notes": "REST base https://coda.io/apis/v1. Covers folders, docs, permissions, publishing, pages and content export, tables, columns, rows (CRUD and upsert), buttons, formulas, controls, automations trigger, analytics, and user info. Rate limits: reads 100 per 6s, writes 10 per 6s.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+    "verdict": "build_with_caveat",
+    "blocker": "No documented OAuth2 for the REST API, so users must supply personal API tokens. The auth section of the docs was not fully readable, so OAuth absence is not fully confirmed.",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "headers = {'Authorization': 'Bearer <your API token>'}"
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "401 The API token is invalid or has expired."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "This API uses a base path of `https://coda.io/apis/v1`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+        "quote": "Under the hood, Superhuman Docs runs an MCP server built on the open Model Context Protocol standard, giving AI clients tools to work directly in your docs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/orellazri/coda-mcp",
+        "quote": "This MCP server is not developed or maintained by Coda; it's a community-built project."
+      }
+    ],
+    "confidence": {
+      "auth": "medium",
+      "access": "high",
+      "api": "high",
+      "mcp": "high"
+    }
+  }
+}

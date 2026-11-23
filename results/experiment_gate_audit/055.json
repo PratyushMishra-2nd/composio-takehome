@@ -1,0 +1,70 @@
+{
+  "id": 55,
+  "app": "Apify",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.apify.com",
+  "model": "sonnet",
+  "seconds": 36,
+  "cost_usd": 0.1306436,
+  "turns": 5,
+  "result": {
+    "app": "Apify",
+    "description": "Cloud platform for web scraping, data extraction and automation, running prebuilt or custom \"Actors\" with datasets, storage, scheduling and proxies.",
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "auth_detail": "Per-account personal API token, sent as Authorization: Bearer <token> (or a token query param). Each user creates their own in Console and can scope its permissions. OAuth is documented only for the hosted MCP server (mcp.apify.com), not as a general third-party app OAuth flow for the REST API.",
+    "access": "self_serve_free",
+    "access_detail": "Gate audit. (1) No app review, listing or partner status is needed. Each end user creates their own API token in Apify Console, and the docs describe no marketplace or verification step for token-based integrations. That counts as a private per-account token, so it is not a gate. (2) The free plan includes API access, with usage limits. Free-plan accounts are blocked, not charged, when they hit their limit. The pricing FAQ says no credit card is needed. Paid plans only raise limits. Caveat: Apify Proxy on the free plan works only inside the platform.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Apify API v2 is REST with an OpenAPI spec. It covers Actors, runs, builds, tasks, schedules, datasets, key-value stores, request queues, webhooks, the Store, users and billing. Official JS and Python clients also exist.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mcp.apify.com",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://docs.apify.com/platform/integrations/api",
+        "quote": "To access the Apify API in your integrations, you need to authenticate using your secret API token."
+      },
+      {
+        "field": "auth",
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "Authorization: Bearer xxxxxxx"
+      },
+      {
+        "field": "access",
+        "url": "https://apify.com/pricing",
+        "quote": "No credit card is required."
+      },
+      {
+        "field": "access",
+        "url": "https://apify.com/pricing",
+        "quote": "If you're on the free plan, you'll be blocked until the next billing cycle."
+      },
+      {
+        "field": "api",
+        "url": "https://docs.apify.com/api/v2",
+        "quote": "Get list of Actor OAuth connections"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.apify.com/platform/integrations/mcp",
+        "quote": "The recommended remote connection signs you in with OAuth instead."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "high"
+    }
+  }
+}

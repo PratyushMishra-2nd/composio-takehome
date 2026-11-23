@@ -1,0 +1,64 @@
+{
+  "id": 35,
+  "app": "Mailchimp",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "mailchimp.com/developer",
+  "model": "sonnet",
+  "seconds": 44,
+  "cost_usd": 0.15598798,
+  "turns": 7,
+  "result": {
+    "app": "Mailchimp",
+    "description": "Email marketing platform: audiences, campaigns, automations, templates, reports via Marketing API.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "auth_detail": "OAuth2 authorization-code flow (login.mailchimp.com/oauth2/authorize + /oauth2/token) with non-expiring access tokens, no refresh token, for multi-account apps; API key for own account.",
+    "access": "self_serve_free",
+    "access_detail": "Anyone can create an API key in account or register an OAuth app (client_id/secret) from Registered Apps. Docs reviewed do not state plan restriction on API; free plan availability not confirmed on pages read.",
+    "api_types": [
+      "rest"
+    ],
+    "api_breadth": "broad",
+    "api_notes": "Marketing API v3.0 at https://api.mailchimp.com/3.0/ covers lists/audiences, members, campaigns, automations, templates, reports, etc. Separate Transactional API exists. Official SDKs.",
+    "mcp_exists": true,
+    "mcp_official": true,
+    "mcp_url": "https://mailchimp.com/developer/_mcp/server",
+    "verdict": "build_now",
+    "blocker": "",
+    "evidence": [
+      {
+        "field": "auth",
+        "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication/oauth-2",
+        "quote": "Mailchimp implements the standard authorization code flow"
+      },
+      {
+        "field": "auth",
+        "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+        "quote": "An API key authenticates requests against your own Mailchimp account."
+      },
+      {
+        "field": "access",
+        "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication/oauth-2",
+        "quote": "Mailchimp access tokens have no expiry, so there is no refresh_token"
+      },
+      {
+        "field": "api",
+        "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+        "quote": "https://api.mailchimp.com/3.0/"
+      },
+      {
+        "field": "mcp",
+        "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md",
+        "quote": "This searches documentation, not your Mailchimp account."
+      }
+    ],
+    "confidence": {
+      "auth": "high",
+      "access": "medium",
+      "api": "medium",
+      "mcp": "medium"
+    }
+  }
+}
